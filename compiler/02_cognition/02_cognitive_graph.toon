@@ -1,0 +1,484 @@
+```toon
+spec:
+
+  id: cognitive_graph
+
+  version: 1.0.0
+
+  status: stable
+
+  priority: highest
+
+  module: Cognition
+
+  compiler_stage: Cognitive Representation
+
+  description: >
+    Defines the Universal Cognitive Graph (UCG),
+    the execution model of engineering reasoning.
+    A Cognitive Graph represents thought as a directed,
+    composable graph of cognitive operations connected
+    through evidence, hypotheses, constraints,
+    memories and decisions.
+
+###########################################################
+# PURPOSE
+###########################################################
+
+purpose:
+
+  Represent engineering thinking
+  as an executable graph.
+
+###########################################################
+# PHILOSOPHY
+###########################################################
+
+philosophy:
+
+  Engineers do not think linearly.
+
+  Thinking branches.
+
+  Thinking loops.
+
+  Thinking compares alternatives.
+
+  Thinking revises itself.
+
+###########################################################
+# GRAPH MODEL
+###########################################################
+
+model:
+
+  Observation
+
+      →
+
+  Operations
+
+      →
+
+  Intermediate States
+
+      →
+
+  Decisions
+
+      →
+
+  Reflection
+
+###########################################################
+# GRAPH COMPONENTS
+###########################################################
+
+components:
+
+  Nodes
+
+  Edges
+
+  Context
+
+  Memory
+
+  Evidence
+
+  Constraints
+
+###########################################################
+# NODE TYPES
+###########################################################
+
+nodes:
+
+  Observation
+
+  Question
+
+  Goal
+
+  Constraint
+
+  Memory
+
+  Hypothesis
+
+  Evidence
+
+  Decision
+
+  Tradeoff
+
+  Reflection
+
+  Action
+
+###########################################################
+# OPERATION NODES
+###########################################################
+
+operations:
+
+  Observe
+
+  Compare
+
+  Infer
+
+  Retrieve
+
+  Evaluate
+
+  Simulate
+
+  Predict
+
+  Decide
+
+  Reflect
+
+  Learn
+
+###########################################################
+# EDGE TYPES
+###########################################################
+
+edges:
+
+  depends_on
+
+  supports
+
+  contradicts
+
+  enables
+
+  blocks
+
+  derives
+
+  validates
+
+  refines
+
+  recalls
+
+###########################################################
+# INPUT NODES
+###########################################################
+
+inputs:
+
+  Requirements
+
+  Bugs
+
+  User Requests
+
+  Benchmarks
+
+  Code
+
+  Logs
+
+  Metrics
+
+###########################################################
+# OUTPUT NODES
+###########################################################
+
+outputs:
+
+  Decision
+
+  Plan
+
+  Explanation
+
+  Code
+
+  Architecture
+
+  Lesson
+
+  Memory Update
+
+###########################################################
+# EXECUTION MODES
+###########################################################
+
+execution:
+
+  Sequential
+
+  Parallel
+
+  Recursive
+
+  Iterative
+
+  Opportunistic
+
+###########################################################
+# BRANCHING
+###########################################################
+
+branching:
+
+  Multiple Hypotheses
+
+  Alternative Designs
+
+  Competing Tradeoffs
+
+  Confidence Split
+
+###########################################################
+# LOOP TYPES
+###########################################################
+
+loops:
+
+  Reflection Loop
+
+  Validation Loop
+
+  Debug Loop
+
+  Optimization Loop
+
+  Learning Loop
+
+###########################################################
+# TERMINATION
+###########################################################
+
+termination:
+
+  Objective Achieved
+
+  Constraints Violated
+
+  Confidence Too Low
+
+  User Escalation
+
+  Evidence Exhausted
+
+###########################################################
+# GRAPH ATTRIBUTES
+###########################################################
+
+attributes:
+
+  identity
+
+  objective
+
+  confidence
+
+  complexity
+
+  depth
+
+  width
+
+  branching_factor
+
+###########################################################
+# MEMORY INTEGRATION
+###########################################################
+
+memory:
+
+  Retrieve
+
+  Reinforce
+
+  Update
+
+  Generalize
+
+###########################################################
+# REASONING INTEGRATION
+###########################################################
+
+reasoning:
+
+  Deduction
+
+  Induction
+
+  Abduction
+
+  Analogical
+
+  Counterfactual
+
+###########################################################
+# VALIDATION
+###########################################################
+
+validation:
+
+  Every graph has objective.
+
+  Every node is reachable.
+
+  Every edge has semantics.
+
+  Every decision has evidence.
+
+  Every conclusion has traceability.
+
+###########################################################
+# ENGINEERING EXAMPLES
+###########################################################
+
+examples:
+
+###########################################################
+
+  Example_01:
+
+    Observe
+
+        →
+
+    Retrieve Memory
+
+        →
+
+    Compare
+
+        →
+
+    Infer
+
+        →
+
+    Decision
+
+###########################################################
+
+  Example_02:
+
+    Bug
+
+        →
+
+    Hypothesis A
+
+        →
+
+    Validation
+
+        →
+
+    Reject
+
+        →
+
+    Hypothesis B
+
+###########################################################
+
+  Example_03:
+
+    Requirements
+
+        →
+
+    Architecture
+
+        →
+
+    Tradeoff
+
+        →
+
+    Decision
+
+###########################################################
+
+  Example_04:
+
+    Performance Metric
+
+        →
+
+    Optimization
+
+        →
+
+    Benchmark
+
+        →
+
+    Reflection
+
+###########################################################
+# GRAPH METRICS
+###########################################################
+
+metrics:
+
+  Depth
+
+  Breadth
+
+  Branch Count
+
+  Loop Count
+
+  Average Confidence
+
+  Evidence Density
+
+  Memory Utilization
+
+###########################################################
+# SUCCESS
+###########################################################
+
+success:
+
+  Every engineering thought
+  is represented as a reusable,
+  explainable cognitive graph.
+
+###########################################################
+# GUARANTEES
+###########################################################
+
+guarantees:
+
+  Explainable Reasoning
+
+  Traceable Thinking
+
+  Memory Integration
+
+  Graph Execution
+
+  Deterministic Reconstruction
+
+###########################################################
+# FUTURE
+###########################################################
+
+future:
+
+  probabilistic_graphs: true
+
+  graph_embeddings: true
+
+  graph_search: true
+
+  graph_execution_engine: true
+
+  distributed_reasoning: true
+```

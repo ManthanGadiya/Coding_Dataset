@@ -1,0 +1,349 @@
+documentation_generator:
+
+  metadata:
+
+    id: GEN-012
+
+    title: Documentation Generator
+
+    version: 2.0
+
+    status: Stable
+
+    owner: Generation Engine
+
+    depends_on:
+
+      - compiler/05_generation/08_code_generator.toon
+
+      - compiler/05_generation/09_bug_generator.toon
+
+      - compiler/05_generation/10_test_generator.toon
+
+      - compiler/05_generation/11_review_generator.toon
+
+      - compiler/04_world/15_world_state.toon
+
+      - compiler/01_ontology/20_ontology_rules.toon
+
+    consumed_by:
+
+      - compiler/05_generation/19_dataset_builder.toon
+
+      - compiler/05_generation/20_generation_pipeline.toon
+
+    objective:
+
+      Generate comprehensive engineering documentation that
+      explains intent, architecture, implementation,
+      operation, maintenance, deployment, and future evolution.
+
+
+################################################################################
+# CORE PRINCIPLES
+################################################################################
+
+principles:
+
+  clarity
+
+  completeness
+
+  accuracy
+
+  maintainability
+
+  traceability
+
+  audience_aware
+
+  repository_consistency
+
+  production_focus
+
+  long_term_value
+
+
+################################################################################
+# INPUTS
+################################################################################
+
+inputs:
+
+  implementation
+
+  requirements
+
+  architecture
+
+  review_results
+
+  test_results
+
+  repository_state
+
+  dependency_graph
+
+  engineering_plan
+
+  world_state
+
+
+################################################################################
+# DOCUMENT TYPES
+################################################################################
+
+document_types:
+
+  readme
+
+  api_reference
+
+  architecture_document
+
+  design_decision_record
+
+  developer_guide
+
+  deployment_guide
+
+  operations_manual
+
+  troubleshooting_guide
+
+  migration_guide
+
+  release_notes
+
+  changelog
+
+  onboarding_guide
+
+  runbook
+
+  incident_postmortem
+
+  faq
+
+
+################################################################################
+# DOCUMENT SECTIONS
+################################################################################
+
+sections:
+
+  overview
+
+  objectives
+
+  requirements
+
+  architecture
+
+  implementation
+
+  api
+
+  configuration
+
+  installation
+
+  deployment
+
+  testing
+
+  monitoring
+
+  debugging
+
+  security
+
+  performance
+
+  limitations
+
+  future_work
+
+  references
+
+
+################################################################################
+# TARGET AUDIENCES
+################################################################################
+
+audiences:
+
+  developer
+
+  reviewer
+
+  architect
+
+  operator
+
+  sre
+
+  security_engineer
+
+  product_manager
+
+  new_team_member
+
+  customer
+
+
+################################################################################
+# GENERATED ARTIFACTS
+################################################################################
+
+artifacts:
+
+  markdown
+
+  diagrams
+
+  examples
+
+  tutorials
+
+  code_snippets
+
+  configuration_examples
+
+  sequence_descriptions
+
+  troubleshooting_steps
+
+
+################################################################################
+# ENGINEERING CONTEXT
+################################################################################
+
+context:
+
+  repository_history
+
+  architecture_history
+
+  design_decisions
+
+  technical_debt
+
+  release_history
+
+  ownership
+
+  coding_guidelines
+
+
+################################################################################
+# RANDOMIZATION
+################################################################################
+
+randomization:
+
+  deterministic_seed:
+
+    true
+
+  documentation_style:
+
+    adaptive
+
+  audience_focus:
+
+    enabled
+
+
+################################################################################
+# VALIDATION
+################################################################################
+
+validation:
+
+  reject_if:
+
+    inconsistent_documentation
+
+    undocumented_public_api
+
+    contradictory_information
+
+    missing_required_sections
+
+    architecture_mismatch
+
+    outdated_examples
+
+
+################################################################################
+# OUTPUTS
+################################################################################
+
+outputs:
+
+  generated_documents
+
+  api_reference
+
+  readme
+
+  deployment_docs
+
+  runbook
+
+  troubleshooting_guide
+
+  release_notes
+
+  validation_report
+
+
+################################################################################
+# METRICS
+################################################################################
+
+metrics:
+
+  compute:
+
+    completeness
+
+    clarity
+
+    technical_accuracy
+
+    consistency
+
+    maintainability
+
+    educational_value
+
+    operational_readiness
+
+
+################################################################################
+# SUCCESS METRICS
+################################################################################
+
+success_metrics:
+
+  completeness:
+
+    minimum: 0.99
+
+  consistency:
+
+    minimum: 1.00
+
+  technical_accuracy:
+
+    minimum: 0.99
+
+  operational_readiness:
+
+    minimum: 0.98
+
+  educational_value:
+
+    minimum: 0.98

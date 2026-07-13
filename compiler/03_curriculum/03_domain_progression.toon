@@ -1,0 +1,451 @@
+domain_progression:
+
+  metadata:
+
+    id: CURR-003
+
+    title: Domain Progression
+
+    version: 1.0
+
+    status: Stable
+
+    owner: Curriculum Engine
+
+    depends_on:
+
+      - compiler/01_ontology/04_domains.toon
+      - compiler/03_curriculum/01_learning_order.toon
+      - compiler/03_curriculum/02_skill_progression.toon
+
+    consumed_by:
+
+      - compiler/03_curriculum/04_difficulty_progression.toon
+      - compiler/03_curriculum/09_curriculum_graph.toon
+      - compiler/03_curriculum/10_master_curriculum.toon
+      - compiler/05_generation/19_dataset_builder.toon
+
+    objective:
+
+      Learn engineering domains in an order that maximizes transfer learning,
+      minimizes cognitive load, and progressively builds senior engineering intuition.
+
+
+################################################################################
+# GLOBAL PRINCIPLES
+################################################################################
+
+principles:
+
+  - prerequisite_first
+
+  - maximize_transfer
+
+  - low_context_switching
+
+  - spiral_learning
+
+  - repeated_exposure
+
+  - practical_before_theoretical
+
+  - architecture_after_implementation
+
+  - production_after_design
+
+  - autonomous_after_production
+
+  - continual_reinforcement
+
+
+################################################################################
+# DOMAIN TIERS
+################################################################################
+
+tiers:
+
+################################################################################
+# TIER 0
+################################################################################
+
+  - tier: 0
+
+    name: Foundations
+
+    purpose:
+      Build universal engineering vocabulary.
+
+    domains:
+
+      - Programming Fundamentals
+      - Variables
+      - Types
+      - Operators
+      - Control Flow
+      - Functions
+      - Memory Basics
+      - Debugging Basics
+      - Tooling
+      - Version Control Basics
+
+    exit_requirements:
+
+      - Reads code
+      - Writes small programs
+      - Understands execution flow
+      - Uses Git
+
+
+################################################################################
+# TIER 1
+################################################################################
+
+  - tier: 1
+
+    name: Core Computer Science
+
+    purpose:
+      Build computational thinking.
+
+    domains:
+
+      - Data Structures
+      - Algorithms
+      - Complexity Analysis
+      - Recursion
+      - Dynamic Programming
+      - Hashing
+      - Trees
+      - Graphs
+      - Searching
+      - Sorting
+
+    transfer_targets:
+
+      - Backend
+      - AI
+      - Systems
+      - Databases
+
+
+################################################################################
+# TIER 2
+################################################################################
+
+  - tier: 2
+
+    name: Software Engineering
+
+    purpose:
+      Learn to engineer maintainable software.
+
+    domains:
+
+      - Modular Design
+      - OOP
+      - Functional Programming
+      - Design Patterns
+      - Dependency Injection
+      - SOLID
+      - Testing
+      - Documentation
+      - Refactoring
+      - Code Review
+
+    prerequisite:
+
+      Core Computer Science
+
+
+################################################################################
+# TIER 3
+################################################################################
+
+  - tier: 3
+
+    name: Backend Engineering
+
+    purpose:
+      Build complete services.
+
+    domains:
+
+      - APIs
+      - REST
+      - GraphQL
+      - Authentication
+      - Authorization
+      - Databases
+      - ORMs
+      - Caching
+      - Queues
+      - Async Programming
+
+    integrates:
+
+      - Software Engineering
+      - Algorithms
+      - Networking
+
+
+################################################################################
+# TIER 4
+################################################################################
+
+  - tier: 4
+
+    name: Infrastructure
+
+    purpose:
+      Understand deployment environments.
+
+    domains:
+
+      - Linux
+      - Networking
+      - Docker
+      - Containers
+      - Kubernetes
+      - Cloud
+      - Storage
+      - Observability
+      - Monitoring
+      - CI/CD
+
+
+################################################################################
+# TIER 5
+################################################################################
+
+  - tier: 5
+
+    name: Production Engineering
+
+    purpose:
+      Operate software reliably.
+
+    domains:
+
+      - Performance
+      - Reliability
+      - Incident Response
+      - Logging
+      - Metrics
+      - Distributed Systems
+      - Scalability
+      - Fault Tolerance
+      - Capacity Planning
+
+    prerequisite:
+
+      Infrastructure
+
+
+################################################################################
+# TIER 6
+################################################################################
+
+  - tier: 6
+
+    name: AI Engineering
+
+    purpose:
+      Build intelligent software.
+
+    domains:
+
+      - Machine Learning
+      - Deep Learning
+      - Transformers
+      - Embeddings
+      - Vector Databases
+      - RAG
+      - Fine Tuning
+      - Agents
+      - Tool Use
+      - MCP
+      - Evaluation
+
+    integrates:
+
+      - Backend
+      - Production
+      - Data Engineering
+
+
+################################################################################
+# TIER 7
+################################################################################
+
+  - tier: 7
+
+    name: Autonomous Engineering
+
+    purpose:
+      Build self-improving coding agents.
+
+    domains:
+
+      - Planning
+      - Reflection
+      - Memory
+      - Self Critique
+      - Tool Routing
+      - Workflow Planning
+      - Multi Agent Systems
+      - Long Horizon Reasoning
+      - Autonomous Debugging
+      - Autonomous Review
+
+    mastery:
+
+      Senior AI Engineer
+
+
+################################################################################
+# CROSS DOMAIN REINFORCEMENT
+################################################################################
+
+reinforcement:
+
+  Programming Fundamentals:
+
+    reinforces:
+
+      - Algorithms
+      - Backend
+      - AI
+
+  Algorithms:
+
+    reinforces:
+
+      - Databases
+      - Production
+      - AI
+
+  Software Engineering:
+
+    reinforces:
+
+      - Backend
+      - Infrastructure
+      - Production
+
+  Backend:
+
+    reinforces:
+
+      - AI Engineering
+      - Distributed Systems
+
+  Infrastructure:
+
+    reinforces:
+
+      - Production
+
+  Production:
+
+    reinforces:
+
+      - Autonomous Engineering
+
+  AI Engineering:
+
+    reinforces:
+
+      - Autonomous Engineering
+
+
+################################################################################
+# DOMAIN TRANSITIONS
+################################################################################
+
+transitions:
+
+  - Foundations
+    ->
+    Core Computer Science
+
+  - Core Computer Science
+    ->
+    Software Engineering
+
+  - Software Engineering
+    ->
+    Backend Engineering
+
+  - Backend Engineering
+    ->
+    Infrastructure
+
+  - Infrastructure
+    ->
+    Production Engineering
+
+  - Production Engineering
+    ->
+    AI Engineering
+
+  - AI Engineering
+    ->
+    Autonomous Engineering
+
+
+################################################################################
+# CURRICULUM RULES
+################################################################################
+
+rules:
+
+  - Never introduce a domain before its prerequisites.
+
+  - Revisit earlier domains after every major tier.
+
+  - Mix theory with implementation.
+
+  - Generate cross-domain projects regularly.
+
+  - Reinforce previously mastered domains.
+
+  - Increase architectural complexity gradually.
+
+  - Delay autonomous reasoning until production engineering is mastered.
+
+  - Optimize for engineering intuition rather than memorization.
+
+
+################################################################################
+# SUCCESS METRICS
+################################################################################
+
+success_metrics:
+
+  domain_mastery:
+
+    minimum: 0.90
+
+  prerequisite_satisfaction:
+
+    minimum: 1.00
+
+  transfer_efficiency:
+
+    minimum: 0.85
+
+  reinforcement_rate:
+
+    minimum: 0.70
+
+  architecture_readiness:
+
+    minimum: 0.90
+
+  production_readiness:
+
+    minimum: 0.85
+
+  autonomous_readiness:
+
+    minimum: 0.80

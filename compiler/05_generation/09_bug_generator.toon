@@ -1,0 +1,417 @@
+bug_generator:
+
+  metadata:
+
+    id: GEN-009
+
+    title: Bug Generator
+
+    version: 2.0
+
+    status: Stable
+
+    owner: Generation Engine
+
+    depends_on:
+
+      - compiler/05_generation/08_code_generator.toon
+      - compiler/04_world/15_world_state.toon
+      - compiler/01_ontology/14_failure_types.toon
+      - compiler/02_cognition/13_error_patterns.toon
+      - compiler/01_ontology/20_ontology_rules.toon
+
+    consumed_by:
+
+      - compiler/05_generation/10_test_generator.toon
+      - compiler/05_generation/11_review_generator.toon
+      - compiler/05_generation/18_failure_generator.toon
+      - compiler/05_generation/19_dataset_builder.toon
+
+    objective:
+
+      Generate realistic software defects that naturally emerge
+      from engineering decisions, repository evolution,
+      architectural tradeoffs, operational constraints,
+      and human reasoning errors.
+
+
+################################################################################
+# CORE PRINCIPLES
+################################################################################
+
+principles:
+
+  realism
+
+  causality
+
+  reproducibility
+
+  repository_consistency
+
+  engineering_authenticity
+
+  diversity
+
+  explainability
+
+  production_grounded
+
+
+################################################################################
+# INPUTS
+################################################################################
+
+inputs:
+
+  repository_state
+
+  implementation
+
+  architecture
+
+  dependency_graph
+
+  engineering_plan
+
+  world_state
+
+  historical_changes
+
+  engineering_constraints
+
+  curriculum_node
+
+
+################################################################################
+# BUG CATEGORIES
+################################################################################
+
+bug_categories:
+
+  logic
+
+  concurrency
+
+  memory
+
+  resource_management
+
+  api_contract
+
+  serialization
+
+  validation
+
+  authentication
+
+  authorization
+
+  configuration
+
+  networking
+
+  filesystem
+
+  database
+
+  distributed_system
+
+  performance
+
+  security
+
+  deployment
+
+  infrastructure
+
+  dependency
+
+  observability
+
+
+################################################################################
+# ROOT CAUSES
+################################################################################
+
+root_causes:
+
+  incorrect_assumption
+
+  misunderstood_requirement
+
+  race_condition
+
+  stale_state
+
+  null_reference
+
+  off_by_one
+
+  integer_overflow
+
+  floating_point_precision
+
+  missing_validation
+
+  inconsistent_state
+
+  dependency_upgrade
+
+  api_change
+
+  merge_conflict
+
+  technical_debt
+
+  architectural_violation
+
+  incorrect_refactoring
+
+  caching_error
+
+  timeout
+
+  retry_logic
+
+  resource_leak
+
+
+################################################################################
+# BUG ORIGINS
+################################################################################
+
+origins:
+
+  new_feature
+
+  bug_fix
+
+  refactor
+
+  optimization
+
+  migration
+
+  dependency_update
+
+  infrastructure_change
+
+  configuration_change
+
+  production_hotfix
+
+  experimental_feature
+
+
+################################################################################
+# FAILURE CHARACTERISTICS
+################################################################################
+
+failure_characteristics:
+
+  deterministic
+
+  intermittent
+
+  environment_specific
+
+  load_dependent
+
+  timing_dependent
+
+  data_dependent
+
+  version_specific
+
+  platform_specific
+
+
+################################################################################
+# DEFECT ARTIFACTS
+################################################################################
+
+artifacts:
+
+  faulty_code
+
+  failing_commit
+
+  issue_report
+
+  stack_trace
+
+  logs
+
+  metrics
+
+  crash_dump
+
+  reproduction_steps
+
+  environment_snapshot
+
+
+################################################################################
+# ENGINEERING CONTEXT
+################################################################################
+
+context:
+
+  repository_history
+
+  ownership
+
+  architectural_constraints
+
+  coding_guidelines
+
+  deployment_history
+
+  previous_failures
+
+  technical_debt
+
+  feature_flags
+
+
+################################################################################
+# BUG EVOLUTION
+################################################################################
+
+evolution:
+
+  introduction
+
+  propagation
+
+  detection
+
+  investigation
+
+  mitigation
+
+  root_cause_analysis
+
+  fix
+
+  regression_prevention
+
+
+################################################################################
+# RANDOMIZATION
+################################################################################
+
+randomization:
+
+  deterministic_seed:
+
+    true
+
+  bug_location:
+
+    guided
+
+  severity_distribution:
+
+    realistic
+
+  repository_consistent:
+
+    true
+
+
+################################################################################
+# VALIDATION
+################################################################################
+
+validation:
+
+  reject_if:
+
+    impossible_failure
+
+    architecture_inconsistency
+
+    invalid_repository_state
+
+    unreproducible_bug
+
+    contradictory_logs
+
+    impossible_stacktrace
+
+
+################################################################################
+# OUTPUTS
+################################################################################
+
+outputs:
+
+  injected_bug
+
+  affected_files
+
+  reproduction_steps
+
+  expected_failure
+
+  debugging_metadata
+
+  root_cause
+
+  investigation_trace
+
+  validation_report
+
+
+################################################################################
+# METRICS
+################################################################################
+
+metrics:
+
+  compute:
+
+    realism
+
+    reproducibility
+
+    debugging_difficulty
+
+    engineering_plausibility
+
+    repository_consistency
+
+    root_cause_complexity
+
+    observability_quality
+
+    educational_value
+
+
+################################################################################
+# SUCCESS METRICS
+################################################################################
+
+success_metrics:
+
+  reproducibility:
+
+    minimum: 1.00
+
+  engineering_realism:
+
+    minimum: 0.99
+
+  repository_consistency:
+
+    minimum: 1.00
+
+  debugging_value:
+
+    minimum: 0.98
+
+  causal_consistency:
+
+    minimum: 0.99

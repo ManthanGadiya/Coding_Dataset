@@ -1,0 +1,333 @@
+research_generator:
+
+  metadata:
+
+    id: GEN-005
+
+    title: Research Generator
+
+    version: 1.0
+
+    status: Stable
+
+    owner: Generation Engine
+
+    depends_on:
+
+      - compiler/05_generation/04_constraint_generator.toon
+      - compiler/02_cognition/16_master_cognition.toon
+      - compiler/03_curriculum/10_master_curriculum.toon
+      - compiler/04_world/15_world_state.toon
+
+    consumed_by:
+
+      - compiler/05_generation/08_code_generator.toon
+      - compiler/05_generation/10_test_generator.toon
+      - compiler/05_generation/11_review_generator.toon
+      - compiler/05_generation/18_reflection_generator.toon
+      - compiler/05_generation/19_dataset_builder.toon
+
+    objective:
+
+      Generate structured engineering reasoning artifacts that
+      justify decisions, analyze trade-offs, document planning,
+      and verify solutions while remaining externally observable
+      and reproducible.
+
+
+################################################################################
+# CORE PRINCIPLES
+################################################################################
+
+principles:
+
+  - deterministic
+
+  - reproducible
+
+  - evidence_based
+
+  - engineering_realistic
+
+  - explainable
+
+  - verifiable
+
+  - structured
+
+  - curriculum_aligned
+
+
+################################################################################
+# RESEARCH STAGES
+################################################################################
+
+stages:
+
+  understand_problem
+
+  identify_constraints
+
+  analyze_context
+
+  identify_dependencies
+
+  evaluate_options
+
+  tradeoff_analysis
+
+  solution_selection
+
+  implementation_plan
+
+  risk_analysis
+
+  verification_plan
+
+  reflection
+
+
+################################################################################
+# RESEARCH ARTIFACTS
+################################################################################
+
+artifacts:
+
+  problem_summary
+
+  assumptions
+
+  identified_constraints
+
+  dependency_analysis
+
+  design_rationale
+
+  architecture_notes
+
+  implementation_plan
+
+  testing_strategy
+
+  rollout_strategy
+
+  risk_assessment
+
+  validation_checklist
+
+  lessons_learned
+
+
+################################################################################
+# RESEARCH PATTERNS
+################################################################################
+
+patterns:
+
+  decomposition
+
+  abstraction
+
+  elimination
+
+  root_cause_analysis
+
+  comparative_analysis
+
+  incremental_planning
+
+  hypothesis_testing
+
+  systems_thinking
+
+  cost_benefit_analysis
+
+  failure_analysis
+
+
+################################################################################
+# DECISION MODEL
+################################################################################
+
+decisions:
+
+  architecture
+
+  implementation
+
+  dependency_selection
+
+  testing_strategy
+
+  deployment_strategy
+
+  monitoring
+
+  documentation
+
+  rollback_strategy
+
+
+################################################################################
+# TRADEOFFS
+################################################################################
+
+tradeoffs:
+
+  performance_vs_readability
+
+  speed_vs_quality
+
+  flexibility_vs_simplicity
+
+  scalability_vs_cost
+
+  security_vs_usability
+
+  maintainability_vs_delivery_time
+
+  consistency_vs_innovation
+
+  reliability_vs_complexity
+
+
+################################################################################
+# VERIFICATION
+################################################################################
+
+verification:
+
+  requirements_traceability
+
+  constraint_validation
+
+  dependency_validation
+
+  architecture_validation
+
+  testing_validation
+
+  security_validation
+
+  performance_validation
+
+  deployment_readiness
+
+
+################################################################################
+# OUTPUTS
+################################################################################
+
+outputs:
+
+  engineering_plan
+
+  design_notes
+
+  implementation_rationale
+
+  decision_log
+
+  review_checklist
+
+  verification_summary
+
+  confidence_score
+
+
+################################################################################
+# RANDOMIZATION
+################################################################################
+
+randomization:
+
+  deterministic_seed:
+
+    true
+
+  reasoning_template_variation:
+
+    enabled
+
+  curriculum_guided:
+
+    true
+
+  reproducible:
+
+    true
+
+
+################################################################################
+# VALIDATION
+################################################################################
+
+validation:
+
+  reject_if:
+
+    unsupported_assumptions
+
+    missing_constraints
+
+    invalid_tradeoffs
+
+    inconsistent_plan
+
+    unverifiable_decision
+
+    curriculum_violation
+
+
+################################################################################
+# METRICS
+################################################################################
+
+metrics:
+
+  compute:
+
+    reasoning_quality
+
+    explanation_quality
+
+    engineering_realism
+
+    decision_consistency
+
+    traceability
+
+    verification_coverage
+
+    educational_value
+
+
+################################################################################
+# SUCCESS METRICS
+################################################################################
+
+success_metrics:
+
+  engineering_realism:
+
+    minimum: 0.99
+
+  decision_traceability:
+
+    minimum: 0.98
+
+  verification_quality:
+
+    minimum: 0.98
+
+  curriculum_alignment:
+
+    minimum: 1.00
+
+  explanation_quality:
+
+    minimum: 0.97
+
+  reproducibility:
+
+    minimum: 1.00

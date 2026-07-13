@@ -1,0 +1,587 @@
+```toon id="error_patterns_v1"
+
+spec:
+
+  id: error_patterns
+
+  version: 1.0.0
+
+  status: stable
+
+  priority: highest
+
+  module: Cognition
+
+  compiler_stage: Error Recognition
+
+  description: >
+    Defines the Universal Engineering Error Pattern Model (UEPM).
+    Error Patterns represent recurring cognitive, engineering,
+    architectural, implementation and operational mistakes that
+    repeatedly appear across software systems.
+    Recognizing recurring error patterns enables proactive
+    prevention rather than reactive debugging.
+
+###########################################################
+# PURPOSE
+###########################################################
+
+purpose:
+
+  Detect
+
+  classify
+
+  explain
+
+  predict
+
+  prevent
+
+  engineering mistakes.
+
+###########################################################
+# PHILOSOPHY
+###########################################################
+
+philosophy:
+
+  Errors repeat.
+
+  Mistakes have patterns.
+
+  Prevention is superior
+  to correction.
+
+  Every error teaches
+  reusable engineering knowledge.
+
+###########################################################
+# ERROR PIPELINE
+###########################################################
+
+pipeline:
+
+  Observation
+
+      →
+
+  Pattern Recognition
+
+      →
+
+  Classification
+
+      →
+
+  Root Cause
+
+      →
+
+  Prevention
+
+      →
+
+  Learning
+
+###########################################################
+# ERROR CATEGORIES
+###########################################################
+
+categories:
+
+  Cognitive
+
+  Logical
+
+  Algorithmic
+
+  Implementation
+
+  Concurrency
+
+  Memory
+
+  Performance
+
+  Security
+
+  Architecture
+
+  Infrastructure
+
+  Configuration
+
+  Process
+
+  Organizational
+
+###########################################################
+# COGNITIVE ERRORS
+###########################################################
+
+cognitive:
+
+  Confirmation Bias
+
+  Tunnel Vision
+
+  Overconfidence
+
+  Premature Optimization
+
+  Incorrect Assumptions
+
+  False Analogy
+
+###########################################################
+# LOGICAL ERRORS
+###########################################################
+
+logical:
+
+  Off By One
+
+  Infinite Loop
+
+  Incorrect Condition
+
+  Null Handling
+
+  State Violation
+
+###########################################################
+# ALGORITHMIC ERRORS
+###########################################################
+
+algorithmic:
+
+  Wrong Complexity
+
+  Invalid Data Structure
+
+  Overflow
+
+  Underflow
+
+  Infinite Recursion
+
+###########################################################
+# IMPLEMENTATION ERRORS
+###########################################################
+
+implementation:
+
+  Resource Leak
+
+  Duplicate Logic
+
+  Hidden Coupling
+
+  Tight Coupling
+
+  Dead Code
+
+  Magic Numbers
+
+###########################################################
+# CONCURRENCY ERRORS
+###########################################################
+
+concurrency:
+
+  Race Condition
+
+  Deadlock
+
+  Starvation
+
+  Livelock
+
+  Atomicity Violation
+
+###########################################################
+# MEMORY ERRORS
+###########################################################
+
+memory:
+
+  Memory Leak
+
+  Double Free
+
+  Use After Free
+
+  Buffer Overflow
+
+  Dangling Pointer
+
+###########################################################
+# PERFORMANCE ERRORS
+###########################################################
+
+performance:
+
+  N Plus One Query
+
+  Excessive Allocation
+
+  Cache Thrashing
+
+  Lock Contention
+
+  Busy Waiting
+
+###########################################################
+# SECURITY ERRORS
+###########################################################
+
+security:
+
+  SQL Injection
+
+  Command Injection
+
+  Buffer Overflow
+
+  Weak Authentication
+
+  Missing Authorization
+
+  Secret Exposure
+
+###########################################################
+# ARCHITECTURE ERRORS
+###########################################################
+
+architecture:
+
+  God Object
+
+  Circular Dependency
+
+  Shared Database
+
+  Chatty Services
+
+  Premature Microservices
+
+###########################################################
+# INFRASTRUCTURE ERRORS
+###########################################################
+
+infrastructure:
+
+  Single Point Of Failure
+
+  Missing Backup
+
+  Misconfigured Network
+
+  Resource Exhaustion
+
+###########################################################
+# PROCESS ERRORS
+###########################################################
+
+process:
+
+  Missing Tests
+
+  Missing Documentation
+
+  Manual Deployment
+
+  Poor Monitoring
+
+###########################################################
+# ATTRIBUTES
+###########################################################
+
+attributes:
+
+  identity
+
+  category
+
+  frequency
+
+  severity
+
+  detectability
+
+  reproducibility
+
+  impact
+
+###########################################################
+# ROOT CAUSES
+###########################################################
+
+causes:
+
+  Knowledge Gap
+
+  Wrong Mental Model
+
+  Incorrect Assumption
+
+  Missing Validation
+
+  Human Error
+
+  External Dependency
+
+###########################################################
+# DETECTION METHODS
+###########################################################
+
+detection:
+
+  Static Analysis
+
+  Dynamic Analysis
+
+  Testing
+
+  Benchmark
+
+  Monitoring
+
+  Code Review
+
+  Production Metrics
+
+###########################################################
+# PREVENTION
+###########################################################
+
+prevention:
+
+  Better Design
+
+  Better Tests
+
+  Static Analysis
+
+  Documentation
+
+  Automation
+
+  Education
+
+###########################################################
+# RECOVERY
+###########################################################
+
+recovery:
+
+  Patch
+
+  Refactor
+
+  Rollback
+
+  Redesign
+
+  Hotfix
+
+###########################################################
+# MEMORY INTEGRATION
+###########################################################
+
+memory:
+
+  Store Pattern
+
+  Reinforce Pattern
+
+  Link Similar Errors
+
+  Retrieve Previous Cases
+
+###########################################################
+# REASONING INTEGRATION
+###########################################################
+
+reasoning:
+
+  Pattern Matching
+
+  Analogical Reasoning
+
+  Root Cause Analysis
+
+  Counterfactual Reasoning
+
+###########################################################
+# EKR INTEGRATION
+###########################################################
+
+ekr:
+
+  Every Engineering Knowledge Record
+  records:
+
+    Error Pattern
+
+    Root Cause
+
+    Detection
+
+    Prevention
+
+    Lessons Learned
+
+###########################################################
+# VALIDATION
+###########################################################
+
+validation:
+
+  Every error pattern
+  has evidence.
+
+  Every error
+  has prevention.
+
+  Every error
+  has recovery.
+
+  Every pattern
+  improves future reasoning.
+
+###########################################################
+# ENGINEERING EXAMPLES
+###########################################################
+
+examples:
+
+###########################################################
+
+  Example_01:
+
+    Pattern:
+
+      N Plus One Query
+
+    Detection:
+
+      SQL Profiler
+
+    Prevention:
+
+      Batch Loading
+
+###########################################################
+
+  Example_02:
+
+    Pattern:
+
+      Race Condition
+
+    Detection:
+
+      Thread Sanitizer
+
+    Prevention:
+
+      Proper Synchronization
+
+###########################################################
+
+  Example_03:
+
+    Pattern:
+
+      Premature Optimization
+
+    Detection:
+
+      Benchmark Analysis
+
+    Prevention:
+
+      Measure First
+
+###########################################################
+
+  Example_04:
+
+    Pattern:
+
+      God Object
+
+    Detection:
+
+      High Coupling Metrics
+
+    Prevention:
+
+      Component Decomposition
+
+###########################################################
+# METRICS
+###########################################################
+
+metrics:
+
+  Error Frequency
+
+  Detection Accuracy
+
+  Prevention Rate
+
+  Mean Time To Detect
+
+  Mean Time To Recover
+
+  Repeat Error Rate
+
+###########################################################
+# SUCCESS
+###########################################################
+
+success:
+
+  Engineering systems
+  recognize recurring
+  mistakes early,
+  prevent repetition,
+  and continuously
+  improve engineering quality.
+
+###########################################################
+# GUARANTEES
+###########################################################
+
+guarantees:
+
+  Explicit Error Knowledge
+
+  Root Cause Traceability
+
+  Preventive Engineering
+
+  Reusable Lessons
+
+  Continuous Quality Improvement
+
+###########################################################
+# FUTURE
+###########################################################
+
+future:
+
+  autonomous_pattern_discovery: true
+
+  predictive_error_detection: true
+
+  graph_based_error_propagation: true
+
+  self_correcting_reasoning: true
+
+  organization_specific_patterns: true
+
+```

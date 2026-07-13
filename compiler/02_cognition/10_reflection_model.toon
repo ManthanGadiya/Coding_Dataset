@@ -1,0 +1,506 @@
+```toon id="reflection_model_v1"
+
+spec:
+
+  id: reflection_model
+
+  version: 1.0.0
+
+  status: stable
+
+  priority: highest
+
+  module: Cognition
+
+  compiler_stage: Reflective Cognition
+
+  description: >
+    Defines the Universal Reflection Model (URM) used by the
+    TOON Dataset Compiler. Reflection is the process by which
+    an engineer evaluates completed reasoning, identifies
+    mistakes, extracts reusable lessons, updates engineering
+    memory and continuously improves future decision making.
+    Reflection transforms experience into expertise.
+
+###########################################################
+# PURPOSE
+###########################################################
+
+purpose:
+
+  Learn
+
+  improve
+
+  generalize
+
+  preserve
+
+  engineering experience.
+
+###########################################################
+# PHILOSOPHY
+###########################################################
+
+philosophy:
+
+  Every decision
+  teaches something.
+
+  Every mistake
+  has value.
+
+  Reflection converts
+  experience into knowledge.
+
+  Expertise is accumulated
+  reflection.
+
+###########################################################
+# REFLECTION PIPELINE
+###########################################################
+
+pipeline:
+
+  Outcome
+
+      →
+
+  Compare Expectation
+
+      →
+
+  Detect Differences
+
+      →
+
+  Root Cause Analysis
+
+      →
+
+  Lesson Extraction
+
+      →
+
+  Generalization
+
+      →
+
+  Memory Update
+
+###########################################################
+# INPUTS
+###########################################################
+
+inputs:
+
+  Engineering Decision
+
+  Implementation
+
+  Validation Results
+
+  Production Metrics
+
+  Benchmarks
+
+  Incidents
+
+  User Feedback
+
+  Code Reviews
+
+###########################################################
+# OUTPUTS
+###########################################################
+
+outputs:
+
+  Lesson
+
+  Best Practice
+
+  Anti Pattern
+
+  Updated Memory
+
+  Engineering Guideline
+
+  Knowledge Atom
+
+###########################################################
+# REFLECTION TYPES
+###########################################################
+
+types:
+
+  Success Reflection
+
+  Failure Reflection
+
+  Performance Reflection
+
+  Security Reflection
+
+  Architecture Reflection
+
+  Process Reflection
+
+  Team Reflection
+
+###########################################################
+# REFLECTION QUESTIONS
+###########################################################
+
+questions:
+
+  What happened?
+
+  Why did it happen?
+
+  What assumptions failed?
+
+  What assumptions held?
+
+  What surprised us?
+
+  What would we change?
+
+  What should be reused?
+
+  What should be avoided?
+
+###########################################################
+# ANALYSIS
+###########################################################
+
+analysis:
+
+  Compare Prediction
+
+  Compare Outcome
+
+  Compare Alternatives
+
+  Measure Impact
+
+  Measure Cost
+
+  Measure Risk
+
+###########################################################
+# LESSON EXTRACTION
+###########################################################
+
+lessons:
+
+  Best Practice
+
+  Anti Pattern
+
+  Heuristic
+
+  Rule
+
+  Guideline
+
+  Design Principle
+
+###########################################################
+# GENERALIZATION
+###########################################################
+
+generalization:
+
+  Local
+
+  Project
+
+  Domain
+
+  Cross Domain
+
+  Universal
+
+###########################################################
+# MEMORY OPERATIONS
+###########################################################
+
+memory:
+
+  Reinforce
+
+  Correct
+
+  Merge
+
+  Replace
+
+  Archive
+
+###########################################################
+# COGNITIVE BIASES
+###########################################################
+
+biases:
+
+  Hindsight Bias
+
+  Confirmation Bias
+
+  Outcome Bias
+
+  Survivorship Bias
+
+  Anchoring Bias
+
+###########################################################
+# BIAS MITIGATION
+###########################################################
+
+mitigation:
+
+  Evidence Review
+
+  Independent Analysis
+
+  Alternative Explanations
+
+  Counterfactual Thinking
+
+  Peer Review
+
+###########################################################
+# FAILURE REFLECTION
+###########################################################
+
+failure:
+
+  Root Cause
+
+  Trigger
+
+  Propagation
+
+  Recovery
+
+  Prevention
+
+###########################################################
+# SUCCESS REFLECTION
+###########################################################
+
+success:
+
+  Success Factors
+
+  Repeatability
+
+  Hidden Risks
+
+  Scalability
+
+  Transferability
+
+###########################################################
+# ENGINEERING HEURISTICS
+###########################################################
+
+heuristics:
+
+  Prefer Simplicity
+
+  Measure Before Optimizing
+
+  Fail Fast
+
+  Validate Assumptions
+
+  Document Decisions
+
+###########################################################
+# MEMORY INTEGRATION
+###########################################################
+
+integration:
+
+  Update Semantic Memory
+
+  Update Episodic Memory
+
+  Update Procedural Memory
+
+  Reinforce Mental Models
+
+###########################################################
+# EKR INTEGRATION
+###########################################################
+
+ekr:
+
+  Every Engineering Knowledge Record
+  stores:
+
+    Expected Outcome
+
+    Actual Outcome
+
+    Reflection
+
+    Lessons Learned
+
+    Memory Updates
+
+###########################################################
+# VALIDATION
+###########################################################
+
+validation:
+
+  Every reflection
+  references evidence.
+
+  Every lesson
+  is actionable.
+
+  Every improvement
+  is justified.
+
+  Every reflection
+  updates engineering knowledge.
+
+###########################################################
+# ENGINEERING EXAMPLES
+###########################################################
+
+examples:
+
+###########################################################
+
+  Example_01:
+
+    Expected:
+
+      Query Faster
+
+    Actual:
+
+      45% Faster
+
+    Lesson:
+
+      Composite Index
+      Works Under This Workload
+
+###########################################################
+
+  Example_02:
+
+    Expected:
+
+      Better Scalability
+
+    Actual:
+
+      Operational Complexity Increased
+
+    Lesson:
+
+      Microservices
+      Were Premature
+
+###########################################################
+
+  Example_03:
+
+    Expected:
+
+      Memory Reduction
+
+    Actual:
+
+      Cache Thrashing
+
+    Lesson:
+
+      Working Set
+      Exceeded Cache Capacity
+
+###########################################################
+
+  Example_04:
+
+    Expected:
+
+      Faster Deployment
+
+    Actual:
+
+      Increased Rollbacks
+
+    Lesson:
+
+      Deployment Speed
+      Requires Better Validation
+
+###########################################################
+# METRICS
+###########################################################
+
+metrics:
+
+  Lessons Generated
+
+  Memory Updates
+
+  Reflection Depth
+
+  Improvement Rate
+
+  Repeated Mistakes
+
+  Prevented Failures
+
+###########################################################
+# SUCCESS
+###########################################################
+
+success:
+
+  Every engineering activity
+  improves future engineering
+  through structured reflection.
+
+###########################################################
+# GUARANTEES
+###########################################################
+
+guarantees:
+
+  Continuous Learning
+
+  Explicit Lessons
+
+  Memory Evolution
+
+  Engineering Improvement
+
+  Explainable Experience
+
+###########################################################
+# FUTURE
+###########################################################
+
+future:
+
+  autonomous_reflection: true
+
+  lesson_graphs: true
+
+  reflective_planning: true
+
+  cross_project_learning: true
+
+  lifelong_engineering_growth: true
+
+```

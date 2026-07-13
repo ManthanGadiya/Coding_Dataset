@@ -1,0 +1,514 @@
+```toon
+spec:
+
+  id: cognitive_metrics
+
+  version: 1.0.0
+
+  status: stable
+
+  priority: highest
+
+  module: Cognition
+
+  compiler_stage: Cognitive Evaluation
+
+  description: >
+    Defines the Universal Cognitive Metrics Model (UCMM)
+    used by the TOON Dataset Compiler.
+    Cognitive Metrics quantify the quality, efficiency,
+    explainability and evolution of engineering reasoning.
+    Every cognitive process produces measurable signals that
+    enable evaluation, comparison and continuous improvement.
+
+###########################################################
+# PURPOSE
+###########################################################
+
+purpose:
+
+  Measure
+
+  evaluate
+
+  benchmark
+
+  compare
+
+  optimize
+
+  engineering cognition.
+
+###########################################################
+# PHILOSOPHY
+###########################################################
+
+philosophy:
+
+  Good engineering
+  is measurable.
+
+  Better reasoning
+  produces better metrics.
+
+  Metrics guide
+  continuous improvement.
+
+###########################################################
+# METRIC PIPELINE
+###########################################################
+
+pipeline:
+
+  Cognitive Process
+
+      →
+
+  Signal Collection
+
+      →
+
+  Metric Calculation
+
+      →
+
+  Evaluation
+
+      →
+
+  Feedback
+
+      →
+
+  Improvement
+
+###########################################################
+# METRIC CATEGORIES
+###########################################################
+
+categories:
+
+  Reasoning
+
+  Learning
+
+  Memory
+
+  Decision
+
+  Reflection
+
+  Prediction
+
+  Debugging
+
+  Architecture
+
+###########################################################
+# REASONING METRICS
+###########################################################
+
+reasoning:
+
+  Reasoning Depth
+
+  Branch Count
+
+  Evidence Coverage
+
+  Assumption Count
+
+  Contradiction Detection
+
+  Reasoning Consistency
+
+  Proof Completeness
+
+###########################################################
+# LEARNING METRICS
+###########################################################
+
+learning:
+
+  Learning Rate
+
+  Knowledge Retention
+
+  Transfer Score
+
+  Generalization Score
+
+  Specialization Score
+
+  Capability Growth
+
+###########################################################
+# MEMORY METRICS
+###########################################################
+
+memory:
+
+  Recall Accuracy
+
+  Retrieval Speed
+
+  Reinforcement Rate
+
+  Consolidation Rate
+
+  Memory Density
+
+  Knowledge Reuse
+
+###########################################################
+# DECISION METRICS
+###########################################################
+
+decision:
+
+  Decision Accuracy
+
+  Decision Confidence
+
+  Decision Stability
+
+  Reversal Rate
+
+  Tradeoff Quality
+
+  Alternative Coverage
+
+###########################################################
+# REFLECTION METRICS
+###########################################################
+
+reflection:
+
+  Lesson Quality
+
+  Reflection Depth
+
+  Memory Updates
+
+  Improvement Rate
+
+  Repeated Mistakes
+
+###########################################################
+# PREDICTION METRICS
+###########################################################
+
+prediction:
+
+  Prediction Accuracy
+
+  Calibration Error
+
+  Forecast Reliability
+
+  Confidence Calibration
+
+###########################################################
+# DEBUGGING METRICS
+###########################################################
+
+debugging:
+
+  Root Cause Accuracy
+
+  Time To Root Cause
+
+  Fix Success Rate
+
+  Regression Rate
+
+  False Diagnosis Rate
+
+###########################################################
+# ARCHITECTURE METRICS
+###########################################################
+
+architecture:
+
+  Tradeoff Quality
+
+  Scalability Score
+
+  Maintainability Score
+
+  Simplicity Score
+
+  Modularity Score
+
+###########################################################
+# GLOBAL METRICS
+###########################################################
+
+global:
+
+  Cognitive Efficiency
+
+  Knowledge Density
+
+  Engineering Maturity
+
+  Adaptability
+
+  Explainability
+
+  Robustness
+
+###########################################################
+# SCORING
+###########################################################
+
+scoring:
+
+  Numeric
+
+  Weighted
+
+  Percentile
+
+  Normalized
+
+  Relative
+
+###########################################################
+# AGGREGATION
+###########################################################
+
+aggregation:
+
+  Mean
+
+  Median
+
+  Maximum
+
+  Minimum
+
+  Weighted Average
+
+  Bayesian Aggregation
+
+###########################################################
+# BENCHMARKS
+###########################################################
+
+benchmarks:
+
+  Historical Performance
+
+  Organization Standard
+
+  Industry Standard
+
+  Personal Best
+
+  Expert Baseline
+
+###########################################################
+# QUALITY SIGNALS
+###########################################################
+
+signals:
+
+  Strong Evidence
+
+  Weak Evidence
+
+  Missing Reasoning
+
+  High Confidence
+
+  Low Confidence
+
+  Contradiction
+
+###########################################################
+# FAILURE SIGNALS
+###########################################################
+
+failures:
+
+  Hallucination
+
+  Overconfidence
+
+  Shallow Reasoning
+
+  Missing Tradeoff
+
+  Missing Validation
+
+  Missing Reflection
+
+###########################################################
+# IMPROVEMENT
+###########################################################
+
+improvement:
+
+  Reinforce Strengths
+
+  Correct Weaknesses
+
+  Update Mental Models
+
+  Improve Memory
+
+  Improve Decision Quality
+
+###########################################################
+# EKR INTEGRATION
+###########################################################
+
+ekr:
+
+  Every Engineering Knowledge Record
+  records:
+
+    Reasoning Metrics
+
+    Learning Metrics
+
+    Decision Metrics
+
+    Reflection Metrics
+
+    Overall Cognitive Score
+
+###########################################################
+# VALIDATION
+###########################################################
+
+validation:
+
+  Every metric
+  is measurable.
+
+  Every score
+  is reproducible.
+
+  Every benchmark
+  is documented.
+
+  Every improvement
+  is evidence-based.
+
+###########################################################
+# ENGINEERING EXAMPLES
+###########################################################
+
+examples:
+
+###########################################################
+
+  Example_01:
+
+    Task:
+
+      Debug Memory Leak
+
+    Metrics:
+
+      Root Cause Accuracy
+
+      Time To Root Cause
+
+      Reflection Depth
+
+###########################################################
+
+  Example_02:
+
+    Task:
+
+      Design Cache Layer
+
+    Metrics:
+
+      Tradeoff Quality
+
+      Architecture Score
+
+      Decision Confidence
+
+###########################################################
+
+  Example_03:
+
+    Task:
+
+      Optimize Compiler
+
+    Metrics:
+
+      Prediction Accuracy
+
+      Performance Gain
+
+      Learning Transfer
+
+###########################################################
+
+  Example_04:
+
+    Task:
+
+      Production Incident
+
+    Metrics:
+
+      Recovery Time
+
+      Root Cause Accuracy
+
+      Memory Reinforcement
+
+###########################################################
+# SUCCESS
+###########################################################
+
+success:
+
+  Engineering cognition
+  becomes measurable,
+  explainable,
+  benchmarkable
+  and continuously improving.
+
+###########################################################
+# GUARANTEES
+###########################################################
+
+guarantees:
+
+  Quantifiable Cognition
+
+  Continuous Evaluation
+
+  Explainable Metrics
+
+  Reproducible Measurement
+
+  Capability Tracking
+
+###########################################################
+# FUTURE
+###########################################################
+
+future:
+
+  autonomous_metric_generation: true
+
+  adaptive_benchmarking: true
+
+  graph_based_metrics: true
+
+  organization_specific_metrics: true
+
+  lifelong_capability_tracking: true
+
+```

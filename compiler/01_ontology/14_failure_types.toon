@@ -1,0 +1,687 @@
+```toon id="g7x2pm"
+spec:
+
+  id: failure_types
+
+  version: 1.0.0
+
+  status: stable
+
+  priority: highest
+
+  module: Ontology
+
+  compiler_stage: Knowledge Representation
+
+  description: >
+    Defines the complete ontology of engineering failures.
+    A failure represents the inability of a software system,
+    process, component or engineering decision to satisfy
+    its intended objectives under given conditions.
+    Every Engineering Knowledge Record involving incidents,
+    debugging, optimization or postmortem analysis shall
+    classify failures using this ontology.
+
+###########################################################
+# PURPOSE
+###########################################################
+
+purpose:
+
+  Represent failures as reusable engineering
+  knowledge rather than isolated bugs.
+
+###########################################################
+# PHILOSOPHY
+###########################################################
+
+philosophy:
+
+  Every failure has a cause.
+
+  Every failure leaves evidence.
+
+  Every failure teaches engineering.
+
+  Preventing failures is more valuable
+  than repeatedly fixing them.
+
+###########################################################
+# FAILURE MODEL
+###########################################################
+
+model:
+
+  Trigger
+
+      →
+
+  Failure
+
+      →
+
+  Symptoms
+
+      →
+
+  Detection
+
+      →
+
+  Diagnosis
+
+      →
+
+  Mitigation
+
+      →
+
+  Recovery
+
+      →
+
+  Reflection
+
+###########################################################
+# FAILURE CATEGORIES
+###########################################################
+
+categories:
+
+  Logical
+
+  Algorithmic
+
+  Data
+
+  Memory
+
+  Concurrency
+
+  Performance
+
+  Networking
+
+  Storage
+
+  Security
+
+  Distributed
+
+  Infrastructure
+
+  Configuration
+
+  Human
+
+  Organizational
+
+  Business
+
+  Unknown
+
+###########################################################
+# LOGICAL
+###########################################################
+
+logical:
+
+  Incorrect Condition
+
+  Infinite Loop
+
+  Off By One
+
+  Invalid State
+
+  Null Reference
+
+###########################################################
+# ALGORITHMIC
+###########################################################
+
+algorithmic:
+
+  Incorrect Complexity
+
+  Infinite Recursion
+
+  Overflow
+
+  Underflow
+
+  Numerical Instability
+
+###########################################################
+# DATA
+###########################################################
+
+data:
+
+  Corruption
+
+  Duplicate Data
+
+  Missing Data
+
+  Invalid Schema
+
+  Serialization Error
+
+###########################################################
+# MEMORY
+###########################################################
+
+memory:
+
+  Memory Leak
+
+  Buffer Overflow
+
+  Use After Free
+
+  Double Free
+
+  Dangling Pointer
+
+  Fragmentation
+
+###########################################################
+# CONCURRENCY
+###########################################################
+
+concurrency:
+
+  Deadlock
+
+  Race Condition
+
+  Starvation
+
+  Livelock
+
+  Priority Inversion
+
+###########################################################
+# PERFORMANCE
+###########################################################
+
+performance:
+
+  High Latency
+
+  Throughput Collapse
+
+  Cache Miss Storm
+
+  CPU Saturation
+
+  Memory Pressure
+
+###########################################################
+# NETWORKING
+###########################################################
+
+networking:
+
+  Packet Loss
+
+  DNS Failure
+
+  Connection Timeout
+
+  TLS Failure
+
+  Congestion
+
+###########################################################
+# STORAGE
+###########################################################
+
+storage:
+
+  Disk Full
+
+  Corruption
+
+  IO Failure
+
+  Slow Disk
+
+###########################################################
+# SECURITY
+###########################################################
+
+security:
+
+  Injection
+
+  Privilege Escalation
+
+  Authentication Failure
+
+  Authorization Failure
+
+  Secret Leakage
+
+###########################################################
+# DISTRIBUTED
+###########################################################
+
+distributed:
+
+  Split Brain
+
+  Consensus Failure
+
+  Clock Drift
+
+  Replication Lag
+
+  Partial Failure
+
+###########################################################
+# INFRASTRUCTURE
+###########################################################
+
+infrastructure:
+
+  Node Failure
+
+  Container Crash
+
+  Load Balancer Failure
+
+  Power Loss
+
+  Region Outage
+
+###########################################################
+# CONFIGURATION
+###########################################################
+
+configuration:
+
+  Invalid Configuration
+
+  Version Mismatch
+
+  Missing Dependency
+
+  Incorrect Environment
+
+###########################################################
+# HUMAN
+###########################################################
+
+human:
+
+  Miscommunication
+
+  Wrong Deployment
+
+  Manual Error
+
+  Incorrect Assumption
+
+  Missing Documentation
+
+###########################################################
+# ORGANIZATIONAL
+###########################################################
+
+organizational:
+
+  Ownership Gap
+
+  Poor Planning
+
+  Resource Shortage
+
+  Process Failure
+
+###########################################################
+# FAILURE ATTRIBUTES
+###########################################################
+
+attributes:
+
+  identity
+
+  category
+
+  severity
+
+  frequency
+
+  reproducibility
+
+  detectability
+
+  recoverability
+
+  business_impact
+
+###########################################################
+# SEVERITY
+###########################################################
+
+severity:
+
+  S0
+
+  S1
+
+  S2
+
+  S3
+
+  S4
+
+###########################################################
+# FAILURE LIFECYCLE
+###########################################################
+
+lifecycle:
+
+  Introduced
+
+      →
+
+  Triggered
+
+      →
+
+  Detected
+
+      →
+
+  Diagnosed
+
+      →
+
+  Mitigated
+
+      →
+
+  Resolved
+
+      →
+
+  Prevented
+
+###########################################################
+# ROOT CAUSE
+###########################################################
+
+root_cause:
+
+  Design
+
+  Implementation
+
+  Configuration
+
+  Infrastructure
+
+  Human
+
+  External Dependency
+
+###########################################################
+# DETECTION
+###########################################################
+
+detection:
+
+  Tests
+
+  Monitoring
+
+  Logs
+
+  Metrics
+
+  Tracing
+
+  User Reports
+
+  Benchmarks
+
+###########################################################
+# MITIGATION
+###########################################################
+
+mitigation:
+
+  Retry
+
+  Rollback
+
+  Restart
+
+  Scaling
+
+  Hotfix
+
+  Isolation
+
+  Circuit Breaker
+
+###########################################################
+# RECOVERY
+###########################################################
+
+recovery:
+
+  Automatic
+
+  Manual
+
+  Partial
+
+  Full
+
+###########################################################
+# PREVENTION
+###########################################################
+
+prevention:
+
+  Better Design
+
+  Better Testing
+
+  Static Analysis
+
+  Monitoring
+
+  Documentation
+
+  Training
+
+###########################################################
+# RELATIONSHIPS
+###########################################################
+
+relationships:
+
+  caused_by
+
+  detected_by
+
+  mitigated_by
+
+  prevented_by
+
+  impacts
+
+  propagates_to
+
+  resolved_by
+
+###########################################################
+# EKR INTEGRATION
+###########################################################
+
+ekr:
+
+  Every failure record contains:
+
+    Trigger
+
+    Symptoms
+
+    Evidence
+
+    Root Cause
+
+    Mitigation
+
+    Recovery
+
+    Lessons Learned
+
+###########################################################
+# VALIDATION
+###########################################################
+
+validation:
+
+  Every failure has evidence.
+
+  Every failure has a root cause.
+
+  Every failure has an impact.
+
+  Every failure has a mitigation.
+
+  Every failure produces reusable lessons.
+
+###########################################################
+# ENGINEERING EXAMPLES
+###########################################################
+
+examples:
+
+###########################################################
+
+  Example_01:
+
+    Failure:
+
+      Deadlock
+
+    Cause:
+
+      Circular Wait
+
+    Detection:
+
+      Thread Dump
+
+    Mitigation:
+
+      Lock Ordering
+
+###########################################################
+
+  Example_02:
+
+    Failure:
+
+      Memory Leak
+
+    Cause:
+
+      Lost References
+
+    Detection:
+
+      Heap Profile
+
+    Mitigation:
+
+      Lifetime Analysis
+
+###########################################################
+
+  Example_03:
+
+    Failure:
+
+      API Timeout
+
+    Cause:
+
+      Database Lock
+
+    Detection:
+
+      Distributed Trace
+
+    Mitigation:
+
+      Query Optimization
+
+###########################################################
+
+  Example_04:
+
+    Failure:
+
+      Split Brain
+
+    Cause:
+
+      Network Partition
+
+    Detection:
+
+      Consensus Metrics
+
+    Mitigation:
+
+      Quorum Recovery
+
+###########################################################
+# SUCCESS
+###########################################################
+
+success:
+
+  Every engineering failure becomes
+  reusable engineering knowledge.
+
+###########################################################
+# GUARANTEES
+###########################################################
+
+guarantees:
+
+  Explicit Failure Taxonomy
+
+  Root Cause Preservation
+
+  Explainable Recovery
+
+  Reusable Postmortems
+
+  Production Realism
+
+###########################################################
+# FUTURE
+###########################################################
+
+future:
+
+  failure_prediction: true
+
+  automated_postmortems: true
+
+  causal_failure_graphs: true
+
+  probabilistic_failures: true
+
+  autonomous_recovery: true
+```

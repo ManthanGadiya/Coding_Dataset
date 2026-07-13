@@ -1,0 +1,388 @@
+episode_generator:
+
+  metadata:
+
+    id: GEN-002
+
+    title: Episode Generator
+
+    version: 1.0
+
+    status: Stable
+
+    owner: Generation Engine
+
+    depends_on:
+
+      - compiler/05_generation/01_generation_engine.toon
+      - compiler/03_curriculum/10_master_curriculum.toon
+      - compiler/04_world/15_world_state.toon
+      - compiler/02_cognition/16_master_cognition.toon
+
+    consumed_by:
+
+      - compiler/05_generation/03_task_generator.toon
+      - compiler/05_generation/08_code_generator.toon
+      - compiler/05_generation/15_scenario_generator.toon
+      - compiler/05_generation/19_dataset_builder.toon
+
+    objective:
+
+      Generate complete engineering learning episodes that
+      simulate realistic software development from problem
+      identification through validation and world update.
+
+
+################################################################################
+# CORE PRINCIPLES
+################################################################################
+
+principles:
+
+  - deterministic
+
+  - reproducible
+
+  - curriculum_aligned
+
+  - world_consistent
+
+  - engineering_realistic
+
+  - capability_driven
+
+  - traceable
+
+  - self_contained
+
+
+################################################################################
+# EPISODE STRUCTURE
+################################################################################
+
+episode:
+
+  id
+
+  timestamp
+
+  curriculum_node
+
+  world_snapshot
+
+  engineering_context
+
+  participants
+
+  objective
+
+  artifacts
+
+  evaluation
+
+  world_updates
+
+
+################################################################################
+# EPISODE TYPES
+################################################################################
+
+types:
+
+  feature_development
+
+  bug_fix
+
+  architecture_design
+
+  code_review
+
+  testing
+
+  optimization
+
+  deployment
+
+  production_incident
+
+  documentation
+
+  mentoring
+
+  research
+
+  migration
+
+  security_review
+
+  refactoring
+
+
+################################################################################
+# ENGINEERING CONTEXT
+################################################################################
+
+context:
+
+  company
+
+  project
+
+  repository
+
+  branch
+
+  team
+
+  engineer
+
+  role
+
+  sprint
+
+  milestone
+
+  architecture
+
+  technical_debt
+
+  active_incidents
+
+
+################################################################################
+# TASK FLOW
+################################################################################
+
+workflow:
+
+  identify_problem
+
+  analyze_context
+
+  plan_solution
+
+  implement
+
+  test
+
+  review
+
+  validate
+
+  deploy
+
+  reflect
+
+  update_world
+
+
+################################################################################
+# GENERATED ARTIFACTS
+################################################################################
+
+artifacts:
+
+  task_description
+
+  requirements
+
+  reasoning_trace
+
+  implementation
+
+  tests
+
+  documentation
+
+  review_comments
+
+  deployment_notes
+
+  reflection
+
+  metadata
+
+
+################################################################################
+# REASONING
+################################################################################
+
+reasoning:
+
+  planning
+
+  decomposition
+
+  hypothesis
+
+  tradeoff_analysis
+
+  implementation_strategy
+
+  verification
+
+  reflection
+
+  lessons_learned
+
+
+################################################################################
+# WORLD INTERACTION
+################################################################################
+
+world:
+
+  read:
+
+    repositories
+
+    engineers
+
+    incidents
+
+    projects
+
+    technical_debt
+
+    customer_feedback
+
+  write:
+
+    commits
+
+    pull_requests
+
+    releases
+
+    incidents
+
+    documentation
+
+    metrics
+
+    world_state
+
+
+################################################################################
+# EPISODE LIFECYCLE
+################################################################################
+
+lifecycle:
+
+  initialized
+
+  generated
+
+  validated
+
+  accepted
+
+  exported
+
+  archived
+
+
+################################################################################
+# RANDOMIZATION
+################################################################################
+
+randomization:
+
+  deterministic_seed:
+
+    true
+
+  weighted_sampling:
+
+    true
+
+  reproducible:
+
+    true
+
+  configurable_entropy:
+
+    true
+
+
+################################################################################
+# VALIDATION
+################################################################################
+
+validation:
+
+  reject_if:
+
+    missing_context
+
+    invalid_curriculum
+
+    inconsistent_world
+
+    duplicate_episode
+
+    incomplete_artifacts
+
+    invalid_reasoning
+
+    impossible_history
+
+
+################################################################################
+# METRICS
+################################################################################
+
+metrics:
+
+  compute:
+
+    curriculum_alignment
+
+    engineering_realism
+
+    reasoning_quality
+
+    artifact_completeness
+
+    world_consistency
+
+    replayability
+
+    educational_value
+
+    diversity
+
+
+################################################################################
+# SUCCESS METRICS
+################################################################################
+
+success_metrics:
+
+  curriculum_alignment:
+
+    minimum: 1.00
+
+  world_consistency:
+
+    minimum: 1.00
+
+  engineering_realism:
+
+    minimum: 0.98
+
+  reasoning_quality:
+
+    minimum: 0.96
+
+  artifact_completeness:
+
+    minimum: 0.98
+
+  replayability:
+
+    minimum: 1.00
+
+  duplicate_rate:
+
+    maximum: 0.01

@@ -1,0 +1,596 @@
+```toon id="m8v4qx"
+spec:
+
+  id: tradeoff_types
+
+  version: 1.0.0
+
+  status: stable
+
+  priority: highest
+
+  module: Ontology
+
+  compiler_stage: Knowledge Representation
+
+  description: >
+    Defines the complete ontology of engineering tradeoffs.
+    A tradeoff represents the balancing of competing
+    engineering objectives under a specific set of
+    constraints.
+    Every significant engineering decision should identify
+    the tradeoffs that influenced the chosen solution.
+
+###########################################################
+# PURPOSE
+###########################################################
+
+purpose:
+
+  Represent tradeoffs as first-class engineering
+  knowledge objects that explain why one solution
+  was selected over another.
+
+###########################################################
+# PHILOSOPHY
+###########################################################
+
+philosophy:
+
+  Engineering has no universally optimal solution.
+
+  Every improvement has a cost.
+
+  Every optimization sacrifices something.
+
+  Better engineering comes from understanding
+  tradeoffs, not memorizing patterns.
+
+###########################################################
+# TRADEOFF MODEL
+###########################################################
+
+model:
+
+  Objective
+
+      →
+
+  Constraints
+
+      →
+
+  Alternatives
+
+      →
+
+  Tradeoff Analysis
+
+      →
+
+  Decision
+
+      →
+
+  Consequences
+
+###########################################################
+# TRADEOFF CATEGORIES
+###########################################################
+
+categories:
+
+  Performance
+
+  Reliability
+
+  Availability
+
+  Consistency
+
+  Scalability
+
+  Maintainability
+
+  Simplicity
+
+  Flexibility
+
+  Security
+
+  Privacy
+
+  Cost
+
+  Time
+
+  Memory
+
+  CPU
+
+  Storage
+
+  Network
+
+  Portability
+
+  Compatibility
+
+  Developer Experience
+
+  User Experience
+
+###########################################################
+# PERFORMANCE
+###########################################################
+
+performance:
+
+  Latency
+
+      ↔
+
+  Throughput
+
+  CPU
+
+      ↔
+
+  Memory
+
+  Computation
+
+      ↔
+
+  Storage
+
+###########################################################
+# DISTRIBUTED SYSTEMS
+###########################################################
+
+distributed:
+
+  Consistency
+
+      ↔
+
+  Availability
+
+  Latency
+
+      ↔
+
+  Consistency
+
+  Replication
+
+      ↔
+
+  Storage Cost
+
+  Coordination
+
+      ↔
+
+  Throughput
+
+###########################################################
+# SOFTWARE DESIGN
+###########################################################
+
+design:
+
+  Simplicity
+
+      ↔
+
+  Flexibility
+
+  Generality
+
+      ↔
+
+  Readability
+
+  Reuse
+
+      ↔
+
+  Complexity
+
+  Abstraction
+
+      ↔
+
+  Transparency
+
+###########################################################
+# PERFORMANCE ENGINEERING
+###########################################################
+
+optimization:
+
+  Cache
+
+      ↔
+
+  Consistency
+
+  Compression
+
+      ↔
+
+  CPU
+
+  Prefetching
+
+      ↔
+
+  Memory
+
+  Parallelism
+
+      ↔
+
+  Synchronization
+
+###########################################################
+# SECURITY
+###########################################################
+
+security:
+
+  Security
+
+      ↔
+
+  Usability
+
+  Authentication
+
+      ↔
+
+  Convenience
+
+  Encryption
+
+      ↔
+
+  Performance
+
+  Isolation
+
+      ↔
+
+  Resource Usage
+
+###########################################################
+# DATABASES
+###########################################################
+
+database:
+
+  Normalization
+
+      ↔
+
+  Query Speed
+
+  Indexes
+
+      ↔
+
+  Write Performance
+
+  Consistency
+
+      ↔
+
+  Availability
+
+###########################################################
+# AI ENGINEERING
+###########################################################
+
+ai:
+
+  Accuracy
+
+      ↔
+
+  Latency
+
+  Model Size
+
+      ↔
+
+  Inference Speed
+
+  Generalization
+
+      ↔
+
+  Specialization
+
+  Context Length
+
+      ↔
+
+  Cost
+
+###########################################################
+# DEVOPS
+###########################################################
+
+devops:
+
+  Automation
+
+      ↔
+
+  Control
+
+  Deployment Speed
+
+      ↔
+
+  Risk
+
+  Observability
+
+      ↔
+
+  Infrastructure Cost
+
+###########################################################
+# HUMAN FACTORS
+###########################################################
+
+human:
+
+  Velocity
+
+      ↔
+
+  Code Quality
+
+  Documentation
+
+      ↔
+
+  Development Speed
+
+  Innovation
+
+      ↔
+
+  Stability
+
+###########################################################
+# TRADEOFF ATTRIBUTES
+###########################################################
+
+attributes:
+
+  identity
+
+  competing_objectives
+
+  dominant_objective
+
+  sacrificed_objective
+
+  assumptions
+
+  constraints
+
+  impact
+
+  reversibility
+
+###########################################################
+# ANALYSIS
+###########################################################
+
+analysis:
+
+  Objective
+
+  Alternatives
+
+  Benefits
+
+  Costs
+
+  Risks
+
+  Constraints
+
+  Evidence
+
+  Recommendation
+
+###########################################################
+# CONSEQUENCES
+###########################################################
+
+consequences:
+
+  Immediate
+
+  Short Term
+
+  Long Term
+
+  Technical Debt
+
+  Operational Impact
+
+###########################################################
+# RELATIONSHIPS
+###########################################################
+
+relationships:
+
+  balances
+
+  sacrifices
+
+  favors
+
+  opposes
+
+  depends_on
+
+  influenced_by
+
+  constrained_by
+
+###########################################################
+# EKR INTEGRATION
+###########################################################
+
+ekr:
+
+  Every Engineering Knowledge Record contains:
+
+    Competing Objectives
+
+    Tradeoff Analysis
+
+    Chosen Balance
+
+    Rejected Alternatives
+
+    Expected Consequences
+
+###########################################################
+# VALIDATION
+###########################################################
+
+validation:
+
+  Every tradeoff has
+  competing objectives.
+
+  Every tradeoff has
+  explicit reasoning.
+
+  Every tradeoff references
+  engineering constraints.
+
+  Every tradeoff explains
+  rejected alternatives.
+
+###########################################################
+# ENGINEERING EXAMPLES
+###########################################################
+
+examples:
+
+###########################################################
+
+  Example_01:
+
+    Decision:
+
+      Use Redis Cache
+
+    Gains:
+
+      Lower Latency
+
+    Sacrifice:
+
+      Eventual Consistency
+
+###########################################################
+
+  Example_02:
+
+    Decision:
+
+      Microservices
+
+    Gains:
+
+      Independent Deployment
+
+    Sacrifice:
+
+      Operational Complexity
+
+###########################################################
+
+  Example_03:
+
+    Decision:
+
+      Rust
+
+    Gains:
+
+      Memory Safety
+
+    Sacrifice:
+
+      Learning Curve
+
+###########################################################
+
+  Example_04:
+
+    Decision:
+
+      Large Context Window
+
+    Gains:
+
+      Better Reasoning
+
+    Sacrifice:
+
+      Higher Inference Cost
+
+###########################################################
+# SUCCESS
+###########################################################
+
+success:
+
+  Every engineering decision
+  explains why competing
+  alternatives were rejected.
+
+###########################################################
+# GUARANTEES
+###########################################################
+
+guarantees:
+
+  Explicit Engineering Tradeoffs
+
+  Explainable Decisions
+
+  Context-Aware Optimization
+
+  Reusable Engineering Wisdom
+
+  Production-Oriented Reasoning
+
+###########################################################
+# FUTURE
+###########################################################
+
+future:
+
+  multi_objective_optimization: true
+
+  tradeoff_graphs: true
+
+  adaptive_reasoning: true
+
+  probabilistic_tradeoffs: true
+
+  automated_decision_support: true
+```

@@ -1,0 +1,477 @@
+dataset_balancing:
+
+  metadata:
+
+    id: CURR-007
+
+    title: Dataset Balancing
+
+    version: 1.0
+
+    status: Stable
+
+    owner: Curriculum Engine
+
+    depends_on:
+
+      - compiler/03_curriculum/05_prerequisite_graph.toon
+      - compiler/03_curriculum/06_sampling_strategy.toon
+
+    consumed_by:
+
+      - compiler/03_curriculum/08_spacing_algorithm.toon
+      - compiler/03_curriculum/09_curriculum_graph.toon
+      - compiler/05_generation/19_dataset_builder.toon
+      - compiler/09_optimization/06_balancing_optimizer.toon
+
+    objective:
+
+      Maintain statistical balance across every important
+      curriculum dimension while preserving natural diversity.
+
+
+################################################################################
+# BALANCING PRINCIPLES
+################################################################################
+
+principles:
+
+  - no_domain_dominance
+
+  - no_language_bias
+
+  - no_framework_bias
+
+  - no_company_bias
+
+  - no_region_bias
+
+  - no_difficulty_skew
+
+  - no_reasoning_skew
+
+  - reinforce_underrepresented_concepts
+
+  - maximize_generalization
+
+  - preserve_real_world_distribution
+
+
+################################################################################
+# DOMAIN BALANCING
+################################################################################
+
+domain_balance:
+
+  strategy:
+
+    weighted_equilibrium
+
+  maximum_difference:
+
+    0.05
+
+  balancing_targets:
+
+    Programming Fundamentals
+
+    Algorithms
+
+    Data Structures
+
+    Software Engineering
+
+    Backend Engineering
+
+    Databases
+
+    Networking
+
+    Cloud Engineering
+
+    Distributed Systems
+
+    Production Engineering
+
+    AI Engineering
+
+    Agent Engineering
+
+    Autonomous Engineering
+
+
+################################################################################
+# DIFFICULTY BALANCING
+################################################################################
+
+difficulty_balance:
+
+  Recognition:
+
+    target: 0.12
+
+  Understanding:
+
+    target: 0.18
+
+  Application:
+
+    target: 0.25
+
+  Integration:
+
+    target: 0.20
+
+  System Design:
+
+    target: 0.13
+
+  Production:
+
+    target: 0.08
+
+  Autonomous Engineering:
+
+    target: 0.04
+
+  tolerance:
+
+    0.02
+
+
+################################################################################
+# LANGUAGE BALANCING
+################################################################################
+
+language_balance:
+
+  minimum_languages:
+
+    25
+
+  avoid_dominance:
+
+    true
+
+  representative_languages:
+
+    - C
+    - C++
+    - Rust
+    - Go
+    - Python
+    - Java
+    - Kotlin
+    - JavaScript
+    - TypeScript
+    - Swift
+    - SQL
+    - Bash
+
+
+################################################################################
+# FRAMEWORK BALANCING
+################################################################################
+
+framework_balance:
+
+  avoid_vendor_lock:
+
+    true
+
+  framework_diversity:
+
+    enabled: true
+
+  categories:
+
+    Frontend
+
+    Backend
+
+    Mobile
+
+    AI
+
+    DevOps
+
+    Testing
+
+    Database
+
+
+################################################################################
+# TASK BALANCING
+################################################################################
+
+task_balance:
+
+  implementation:
+
+    target: 0.22
+
+  debugging:
+
+    target: 0.18
+
+  testing:
+
+    target: 0.12
+
+  architecture:
+
+    target: 0.14
+
+  optimization:
+
+    target: 0.08
+
+  documentation:
+
+    target: 0.07
+
+  code_review:
+
+    target: 0.09
+
+  research:
+
+    target: 0.05
+
+  production:
+
+    target: 0.05
+
+
+################################################################################
+# REASONING BALANCING
+################################################################################
+
+reasoning_balance:
+
+  deductive:
+
+    target: 0.20
+
+  inductive:
+
+    target: 0.15
+
+  abductive:
+
+    target: 0.10
+
+  causal:
+
+    target: 0.15
+
+  systems:
+
+    target: 0.15
+
+  probabilistic:
+
+    target: 0.05
+
+  architectural:
+
+    target: 0.10
+
+  strategic:
+
+    target: 0.10
+
+
+################################################################################
+# FAILURE BALANCING
+################################################################################
+
+failure_balance:
+
+  syntax_errors
+
+  logic_errors
+
+  architecture_failures
+
+  concurrency_failures
+
+  security_failures
+
+  performance_failures
+
+  deployment_failures
+
+  production_incidents
+
+  configuration_errors
+
+  dependency_failures
+
+
+################################################################################
+# SAMPLE REWEIGHTING
+################################################################################
+
+reweighting:
+
+  increase_weight_if:
+
+    - underrepresented
+
+    - low_confidence
+
+    - weak_transfer
+
+    - insufficient_examples
+
+  decrease_weight_if:
+
+    - oversampled
+
+    - repetitive
+
+    - highly_correlated
+
+    - redundant
+
+
+################################################################################
+# DIVERSITY CONSTRAINTS
+################################################################################
+
+diversity_constraints:
+
+  maximum_duplicate_similarity:
+
+    0.80
+
+  minimum_domain_entropy:
+
+    0.95
+
+  minimum_language_entropy:
+
+    0.90
+
+  minimum_framework_entropy:
+
+    0.90
+
+  minimum_reasoning_entropy:
+
+    0.92
+
+
+################################################################################
+# DRIFT DETECTION
+################################################################################
+
+drift_detection:
+
+  monitor:
+
+    domain_distribution
+
+    difficulty_distribution
+
+    language_distribution
+
+    framework_distribution
+
+    task_distribution
+
+    reasoning_distribution
+
+  correction:
+
+    automatic_reweighting
+
+
+################################################################################
+# VALIDATION
+################################################################################
+
+validation:
+
+  reject_if:
+
+    - excessive_domain_bias
+
+    - language_monoculture
+
+    - framework_monoculture
+
+    - reasoning_imbalance
+
+    - duplicate_clusters
+
+    - distribution_drift
+
+    - curriculum_violation
+
+
+################################################################################
+# METRICS
+################################################################################
+
+metrics:
+
+  compute:
+
+    domain_entropy
+
+    language_entropy
+
+    framework_entropy
+
+    reasoning_entropy
+
+    difficulty_entropy
+
+    task_entropy
+
+    dataset_gini_index
+
+    kl_divergence
+
+    js_divergence
+
+
+################################################################################
+# SUCCESS METRICS
+################################################################################
+
+success_metrics:
+
+  domain_balance:
+
+    minimum: 0.95
+
+  curriculum_balance:
+
+    minimum: 0.98
+
+  reasoning_balance:
+
+    minimum: 0.95
+
+  language_balance:
+
+    minimum: 0.90
+
+  framework_balance:
+
+    minimum: 0.90
+
+  duplicate_rate:
+
+    maximum: 0.01
+
+  drift_rate:
+
+    maximum: 0.02
+
+  dataset_entropy:
+
+    minimum: 0.95

@@ -1,0 +1,536 @@
+```toon
+spec:
+
+  id: dataset_philosophy
+
+  version: 1.0.0
+
+  status: stable
+
+  priority: highest
+
+  module: Core
+
+  compiler_stage: Foundation
+
+  description: >
+    Defines the philosophical principles governing the construction,
+    evolution, evaluation and maintenance of the TOON dataset.
+    This specification determines what constitutes a high-quality
+    engineering dataset and establishes the standards every generated
+    Engineering Knowledge Record (EKR) must satisfy.
+
+###########################################################
+# PURPOSE
+###########################################################
+
+purpose:
+
+  Build a dataset that teaches models how experienced software
+  engineers think, reason, decide, collaborate, and evolve systems,
+  rather than merely teaching programming syntax.
+
+###########################################################
+# CORE BELIEF
+###########################################################
+
+belief:
+
+  Software engineering is a reasoning discipline.
+
+  Code is one artifact produced by engineering.
+
+  Therefore,
+
+  the dataset must teach engineering,
+
+  not merely programming.
+
+###########################################################
+# DATASET OBJECTIVES
+###########################################################
+
+objectives:
+
+  O01:
+    Teach reasoning.
+
+  O02:
+    Teach decision making.
+
+  O03:
+    Teach architecture.
+
+  O04:
+    Teach debugging.
+
+  O05:
+    Teach optimization.
+
+  O06:
+    Teach production engineering.
+
+  O07:
+    Teach collaboration.
+
+  O08:
+    Teach continuous learning.
+
+###########################################################
+# DATASET PRINCIPLES
+###########################################################
+
+principles:
+
+###########################################################
+
+  P01:
+
+    name:
+      Engineering Before Code
+
+    explanation:
+      Source code is only one representation of engineering knowledge.
+
+###########################################################
+
+  P02:
+
+    name:
+      Context Before Solution
+
+    explanation:
+      Every solution exists because of a specific context.
+
+###########################################################
+
+  P03:
+
+    name:
+      Decisions Before Implementation
+
+    explanation:
+      Models should understand why an implementation exists.
+
+###########################################################
+
+  P04:
+
+    name:
+      Constraints Drive Design
+
+    explanation:
+      Architectures emerge from constraints.
+
+###########################################################
+
+  P05:
+
+    name:
+      Failures Create Knowledge
+
+    explanation:
+      Every failure becomes reusable engineering knowledge.
+
+###########################################################
+
+  P06:
+
+    name:
+      Systems Continuously Evolve
+
+    explanation:
+      Software is never finished.
+
+###########################################################
+
+  P07:
+
+    name:
+      Knowledge Is Connected
+
+    explanation:
+      Engineering concepts form graphs rather than isolated facts.
+
+###########################################################
+
+  P08:
+
+    name:
+      Tradeoffs Are First-Class
+
+    explanation:
+      Every engineering decision has competing alternatives.
+
+###########################################################
+
+  P09:
+
+    name:
+      Uncertainty Is Explicit
+
+    explanation:
+      Unknowns, assumptions and confidence must be represented.
+
+###########################################################
+
+  P10:
+
+    name:
+      Reflection Creates Expertise
+
+    explanation:
+      Lessons learned become reusable knowledge.
+
+###########################################################
+# WHAT THE DATASET MUST TEACH
+###########################################################
+
+teach:
+
+  Languages
+
+  Algorithms
+
+  Data Structures
+
+  Language Semantics
+
+  Runtime Systems
+
+  Operating Systems
+
+  Compilers
+
+  Networking
+
+  Databases
+
+  Distributed Systems
+
+  Security
+
+  Cloud Computing
+
+  Software Architecture
+
+  Design Patterns
+
+  Performance Engineering
+
+  Debugging
+
+  Profiling
+
+  Testing
+
+  CI/CD
+
+  Version Control
+
+  API Design
+
+  Documentation
+
+  Observability
+
+  Production Engineering
+
+  AI Engineering
+
+###########################################################
+# WHAT THE DATASET MUST NEVER BECOME
+###########################################################
+
+avoid:
+
+  Memorized Code
+
+  Boilerplate Collection
+
+  Prompt Library
+
+  StackOverflow Clone
+
+  Documentation Mirror
+
+  Benchmark Overfitting
+
+  Tutorial Collection
+
+###########################################################
+# KNOWLEDGE HIERARCHY
+###########################################################
+
+knowledge:
+
+  Facts
+
+      →
+
+  Concepts
+
+      →
+
+  Mechanisms
+
+      →
+
+  Relationships
+
+      →
+
+  Systems
+
+      →
+
+  Engineering Decisions
+
+      →
+
+  Experience
+
+      →
+
+  Wisdom
+
+###########################################################
+# LEARNING HIERARCHY
+###########################################################
+
+learning:
+
+  Observe
+
+      →
+
+  Understand
+
+      →
+
+  Explain
+
+      →
+
+  Apply
+
+      →
+
+  Analyze
+
+      →
+
+  Evaluate
+
+      →
+
+  Design
+
+      →
+
+  Improve
+
+      →
+
+  Generalize
+
+###########################################################
+# REASONING HIERARCHY
+###########################################################
+
+reasoning:
+
+  Recall
+
+      →
+
+  Connect
+
+      →
+
+  Compare
+
+      →
+
+  Infer
+
+      →
+
+  Predict
+
+      →
+
+  Decide
+
+      →
+
+  Optimize
+
+      →
+
+  Reflect
+
+###########################################################
+# DATASET ATTRIBUTES
+###########################################################
+
+attributes:
+
+  structured
+
+  modular
+
+  graph_native
+
+  explainable
+
+  traceable
+
+  reproducible
+
+  deterministic
+
+  educational
+
+  extensible
+
+  production_oriented
+
+###########################################################
+# EVERY EKR MUST CONTAIN
+###########################################################
+
+mandatory:
+
+  Context
+
+  Objectives
+
+  Constraints
+
+  Assumptions
+
+  Engineering Reasoning
+
+  Alternatives
+
+  Tradeoffs
+
+  Solution
+
+  Validation
+
+  Lessons Learned
+
+  Related Knowledge
+
+###########################################################
+# QUALITY PHILOSOPHY
+###########################################################
+
+quality:
+
+  Better knowledge
+
+      >
+
+  More knowledge
+
+  Better reasoning
+
+      >
+
+  More examples
+
+  Better engineering
+
+      >
+
+  More code
+
+  Better structure
+
+      >
+
+  More tokens
+
+###########################################################
+# SUCCESS DEFINITION
+###########################################################
+
+success:
+
+  The dataset succeeds if a model trained on it can
+
+  Understand systems
+
+  Explain tradeoffs
+
+  Predict failures
+
+  Debug effectively
+
+  Design architectures
+
+  Optimize performance
+
+  Review code
+
+  Learn continuously
+
+  Make defensible engineering decisions
+
+###########################################################
+# DATASET EVOLUTION
+###########################################################
+
+evolution:
+
+  Knowledge continuously expands.
+
+  Engineering practices evolve.
+
+  Programming languages change.
+
+  Frameworks emerge.
+
+  Hardware improves.
+
+  The dataset must evolve while preserving
+  historical engineering knowledge.
+
+###########################################################
+# LONG-TERM VISION
+###########################################################
+
+vision:
+
+  The dataset should become the definitive
+  engineering knowledge corpus for autonomous
+  software engineering systems.
+
+  Future models should learn not only how
+  to write code,
+
+  but how to think,
+
+  collaborate,
+
+  design,
+
+  debug,
+
+  optimize,
+
+  and continuously improve software systems.
+
+###########################################################
+# PHILOSOPHICAL GUARANTEE
+###########################################################
+
+guarantee:
+
+  Every record generated by the TOON Dataset Compiler
+  must increase engineering intelligence rather than
+  merely increasing token count.
+```

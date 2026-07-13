@@ -1,0 +1,423 @@
+difficulty_progression:
+
+  metadata:
+
+    id: CURR-004
+
+    title: Difficulty Progression
+
+    version: 1.0
+
+    status: Stable
+
+    owner: Curriculum Engine
+
+    depends_on:
+
+      - compiler/03_curriculum/01_learning_order.toon
+      - compiler/03_curriculum/02_skill_progression.toon
+      - compiler/03_curriculum/03_domain_progression.toon
+      - compiler/01_ontology/06_difficulty_model.toon
+
+    consumed_by:
+
+      - compiler/03_curriculum/06_sampling_strategy.toon
+      - compiler/03_curriculum/07_dataset_balancing.toon
+      - compiler/03_curriculum/09_curriculum_graph.toon
+      - compiler/05_generation/19_dataset_builder.toon
+
+    objective:
+
+      Progress engineering knowledge through measurable cognitive
+      difficulty while minimizing catastrophic forgetting and maximizing
+      long-term reasoning ability.
+
+
+################################################################################
+# GLOBAL PRINCIPLES
+################################################################################
+
+principles:
+
+  - easy_before_hard
+
+  - mastery_before_advancement
+
+  - reinforce_before_escalation
+
+  - increase_reasoning_before_complexity
+
+  - increase_abstraction_gradually
+
+  - combine_old_and_new_knowledge
+
+  - practical_before_theoretical
+
+  - architecture_after_implementation
+
+  - production_after_architecture
+
+
+################################################################################
+# DIFFICULTY LEVELS
+################################################################################
+
+levels:
+
+  - level: 0
+
+    name: Recognition
+
+    objective:
+
+      Identify concepts.
+
+    abilities:
+
+      - recognize terminology
+      - identify syntax
+      - identify components
+      - recall definitions
+
+    exit_requirements:
+
+      accuracy: 0.95
+
+  - level: 1
+
+    name: Understanding
+
+    objective:
+
+      Explain concepts.
+
+    abilities:
+
+      - explain purpose
+      - compare concepts
+      - describe workflows
+      - predict simple behavior
+
+    exit_requirements:
+
+      accuracy: 0.92
+
+  - level: 2
+
+    name: Application
+
+    objective:
+
+      Apply concepts to solve isolated problems.
+
+    abilities:
+
+      - implement solutions
+      - debug simple failures
+      - modify existing code
+      - write unit tests
+
+    exit_requirements:
+
+      accuracy: 0.90
+
+  - level: 3
+
+    name: Integration
+
+    objective:
+
+      Combine multiple concepts.
+
+    abilities:
+
+      - connect components
+      - integrate APIs
+      - resolve dependency issues
+      - design modules
+
+    exit_requirements:
+
+      accuracy: 0.88
+
+  - level: 4
+
+    name: System Design
+
+    objective:
+
+      Engineer complete systems.
+
+    abilities:
+
+      - architecture design
+      - scalability planning
+      - tradeoff analysis
+      - performance reasoning
+
+    exit_requirements:
+
+      accuracy: 0.86
+
+  - level: 5
+
+    name: Production
+
+    objective:
+
+      Operate real software.
+
+    abilities:
+
+      - incident response
+      - monitoring
+      - deployment
+      - optimization
+      - reliability engineering
+
+    exit_requirements:
+
+      accuracy: 0.84
+
+  - level: 6
+
+    name: Autonomous Engineering
+
+    objective:
+
+      Perform long-horizon engineering tasks.
+
+    abilities:
+
+      - planning
+      - reflection
+      - self critique
+      - autonomous debugging
+      - autonomous review
+      - autonomous architecture
+
+    exit_requirements:
+
+      accuracy: 0.82
+
+
+################################################################################
+# DIFFICULTY DIMENSIONS
+################################################################################
+
+dimensions:
+
+  knowledge:
+
+    description:
+
+      Amount of required knowledge.
+
+    range: 1..10
+
+  reasoning:
+
+    description:
+
+      Multi-step reasoning depth.
+
+    range: 1..10
+
+  abstraction:
+
+    description:
+
+      Conceptual abstraction.
+
+    range: 1..10
+
+  dependencies:
+
+    description:
+
+      Number of prerequisite concepts.
+
+    range: 1..10
+
+  uncertainty:
+
+    description:
+
+      Missing or ambiguous information.
+
+    range: 1..10
+
+  engineering_scope:
+
+    description:
+
+      Breadth of engineering responsibilities.
+
+    range: 1..10
+
+  autonomy:
+
+    description:
+
+      Independence required.
+
+    range: 1..10
+
+
+################################################################################
+# ESCALATION RULES
+################################################################################
+
+escalation:
+
+  increase_only_when:
+
+    - prerequisite_mastered
+    - previous_level_completed
+    - confidence_above_threshold
+    - repeated_success
+
+  never_escalate_when:
+
+    - repeated_failures
+    - prerequisite_missing
+    - unstable_reasoning
+    - low_confidence
+
+
+################################################################################
+# REINFORCEMENT POLICY
+################################################################################
+
+reinforcement:
+
+  after_every_level:
+
+    revisit_previous_levels: true
+
+    minimum_previous_content: 0.30
+
+    cumulative_review: true
+
+    spaced_repetition: true
+
+
+################################################################################
+# DIFFICULTY TRANSITIONS
+################################################################################
+
+transitions:
+
+  Recognition ->
+  Understanding
+
+  Understanding ->
+  Application
+
+  Application ->
+  Integration
+
+  Integration ->
+  System Design
+
+  System Design ->
+  Production
+
+  Production ->
+  Autonomous Engineering
+
+
+################################################################################
+# FAILURE RECOVERY
+################################################################################
+
+failure_policy:
+
+  on_failure:
+
+    - reduce_difficulty
+
+    - identify_missing_prerequisites
+
+    - generate_targeted_examples
+
+    - reinforce_previous_level
+
+    - reassess_before_progression
+
+
+################################################################################
+# COMPLEXITY CURVE
+################################################################################
+
+complexity_curve:
+
+  recognition: low
+
+  understanding: low
+
+  application: medium
+
+  integration: medium_high
+
+  system_design: high
+
+  production: very_high
+
+  autonomous_engineering: expert
+
+
+################################################################################
+# VALIDATION RULES
+################################################################################
+
+validation:
+
+  progression_must_be:
+
+    - monotonic
+
+    - prerequisite_consistent
+
+    - measurable
+
+    - reproducible
+
+    - curriculum_aligned
+
+    - ontology_consistent
+
+
+################################################################################
+# SUCCESS METRICS
+################################################################################
+
+success_metrics:
+
+  mastery_rate:
+
+    minimum: 0.90
+
+  prerequisite_coverage:
+
+    minimum: 1.00
+
+  reinforcement_rate:
+
+    minimum: 0.70
+
+  reasoning_growth:
+
+    minimum: 0.85
+
+  autonomy_growth:
+
+    minimum: 0.80
+
+  catastrophic_forgetting:
+
+    maximum: 0.05
+
+  curriculum_consistency:
+
+    minimum: 0.98

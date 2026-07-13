@@ -1,0 +1,636 @@
+```toon id="2ibg4k"
+spec:
+
+  id: relationships
+
+  version: 1.0.0
+
+  status: stable
+
+  priority: highest
+
+  module: Ontology
+
+  compiler_stage: Knowledge Representation
+
+  description: >
+    Defines the universal relationship ontology of the TOON Dataset
+    Compiler. Relationships connect every object within the compiler,
+    forming a complete Engineering Knowledge Graph.
+    No Engineering Knowledge Record, Knowledge Atom, Capability,
+    Domain, Engineering World, Repository, Company or Artifact
+    exists in isolation.
+
+###########################################################
+# PURPOSE
+###########################################################
+
+purpose:
+
+  Transform isolated engineering knowledge into a
+  connected engineering knowledge graph where every
+  object derives meaning through explicit relationships.
+
+###########################################################
+# PHILOSOPHY
+###########################################################
+
+philosophy:
+
+  Knowledge without relationships
+  is information.
+
+  Connected knowledge
+  becomes understanding.
+
+  Understanding connected over time
+  becomes engineering intelligence.
+
+###########################################################
+# GRAPH MODEL
+###########################################################
+
+graph:
+
+  type:
+
+    Directed Property Graph
+
+  nodes:
+
+    Engineering Objects
+
+  edges:
+
+    Typed Relationships
+
+  properties:
+
+    Allowed
+
+###########################################################
+# NODE TYPES
+###########################################################
+
+nodes:
+
+  Knowledge_Atom
+
+  Engineering_Knowledge_Record
+
+  Domain
+
+  Capability
+
+  Reasoning_Primitive
+
+  Engineering_World
+
+  Company
+
+  Repository
+
+  Team
+
+  Engineer
+
+  Project
+
+  Sprint
+
+  Feature
+
+  Architecture
+
+  Module
+
+  Component
+
+  Service
+
+  API
+
+  Database
+
+  Test
+
+  Benchmark
+
+  Incident
+
+  Decision
+
+  Lesson
+
+  Artifact
+
+###########################################################
+# RELATIONSHIP CATEGORIES
+###########################################################
+
+categories:
+
+  Structural
+
+  Semantic
+
+  Temporal
+
+  Causal
+
+  Dependency
+
+  Capability
+
+  Educational
+
+  Operational
+
+###########################################################
+# STRUCTURAL RELATIONSHIPS
+###########################################################
+
+structural:
+
+  parent_of
+
+  child_of
+
+  contains
+
+  belongs_to
+
+  composed_of
+
+  owns
+
+  extends
+
+  specializes
+
+###########################################################
+# SEMANTIC RELATIONSHIPS
+###########################################################
+
+semantic:
+
+  defines
+
+  describes
+
+  explains
+
+  represents
+
+  models
+
+  exemplifies
+
+  generalizes
+
+  abstracts
+
+###########################################################
+# DEPENDENCY RELATIONSHIPS
+###########################################################
+
+dependency:
+
+  depends_on
+
+  requires
+
+  imports
+
+  references
+
+  links_to
+
+  derives_from
+
+  generated_from
+
+###########################################################
+# CAUSAL RELATIONSHIPS
+###########################################################
+
+causal:
+
+  causes
+
+  caused_by
+
+  triggers
+
+  prevents
+
+  mitigates
+
+  enables
+
+  disables
+
+###########################################################
+# TEMPORAL RELATIONSHIPS
+###########################################################
+
+temporal:
+
+  precedes
+
+  follows
+
+  evolves_into
+
+  replaces
+
+  supersedes
+
+  deprecated_by
+
+###########################################################
+# ENGINEERING RELATIONSHIPS
+###########################################################
+
+engineering:
+
+  implements
+
+  validates
+
+  verifies
+
+  benchmarks
+
+  optimizes
+
+  secures
+
+  monitors
+
+  deploys
+
+  documents
+
+###########################################################
+# REASONING RELATIONSHIPS
+###########################################################
+
+reasoning:
+
+  observes
+
+  infers
+
+  predicts
+
+  evaluates
+
+  compares
+
+  concludes
+
+  justifies
+
+  reflects_on
+
+###########################################################
+# CAPABILITY RELATIONSHIPS
+###########################################################
+
+capabilities:
+
+  teaches
+
+  strengthens
+
+  requires
+
+  reinforces
+
+  transfers_to
+
+  measures
+
+###########################################################
+# LEARNING RELATIONSHIPS
+###########################################################
+
+learning:
+
+  prerequisite_for
+
+  advanced_by
+
+  reviewed_by
+
+  explained_by
+
+  practiced_by
+
+###########################################################
+# FAILURE RELATIONSHIPS
+###########################################################
+
+failures:
+
+  introduces
+
+  fixes
+
+  detects
+
+  reproduces
+
+  diagnoses
+
+  resolves
+
+  prevents
+
+###########################################################
+# RELATIONSHIP ATTRIBUTES
+###########################################################
+
+attributes:
+
+  direction
+
+  weight
+
+  confidence
+
+  strength
+
+  timestamp
+
+  evidence
+
+  explanation
+
+###########################################################
+# CARDINALITY
+###########################################################
+
+cardinality:
+
+  one_to_one
+
+  one_to_many
+
+  many_to_one
+
+  many_to_many
+
+###########################################################
+# GRAPH CONSTRAINTS
+###########################################################
+
+constraints:
+
+  No orphan nodes.
+
+  Every node has at least one relationship.
+
+  Cyclic taxonomy forbidden.
+
+  Self references forbidden unless explicit.
+
+  Every relationship typed.
+
+  Every relationship directional.
+
+###########################################################
+# GRAPH OPERATIONS
+###########################################################
+
+operations:
+
+  Traverse
+
+  Search
+
+  Expand
+
+  Collapse
+
+  Aggregate
+
+  Cluster
+
+  Rank
+
+  Filter
+
+###########################################################
+# GRAPH QUERIES
+###########################################################
+
+queries:
+
+  Find Dependencies
+
+  Find Root Causes
+
+  Find Related Concepts
+
+  Find Prerequisites
+
+  Find Alternatives
+
+  Find Similar Incidents
+
+  Find Missing Knowledge
+
+###########################################################
+# GRAPH METRICS
+###########################################################
+
+metrics:
+
+  Connectivity
+
+  Density
+
+  Centrality
+
+  Reachability
+
+  Path Length
+
+  Component Count
+
+  Dependency Depth
+
+###########################################################
+# VALIDATION
+###########################################################
+
+validation:
+
+  Every relationship
+  has source.
+
+  Every relationship
+  has destination.
+
+  Every relationship
+  has type.
+
+  Every relationship
+  has meaning.
+
+  Every relationship
+  is traceable.
+
+###########################################################
+# ENGINEERING EXAMPLES
+###########################################################
+
+examples:
+
+###########################################################
+
+  Example_01:
+
+    Mutex
+
+      →
+
+    protects
+
+      →
+
+    Critical Section
+
+###########################################################
+
+  Example_02:
+
+    Deadlock
+
+      →
+
+    caused_by
+
+      →
+
+    Circular Wait
+
+###########################################################
+
+  Example_03:
+
+    Cache
+
+      →
+
+    optimizes
+
+      →
+
+    Database Access
+
+###########################################################
+
+  Example_04:
+
+    Benchmark
+
+      →
+
+    validates
+
+      →
+
+    Optimization
+
+###########################################################
+
+  Example_05:
+
+    ADR
+
+      →
+
+    justifies
+
+      →
+
+    Architecture Decision
+
+###########################################################
+# EKR RELATIONSHIPS
+###########################################################
+
+ekr:
+
+  Every Engineering Knowledge Record
+
+    references:
+
+      Domains
+
+      Capabilities
+
+      Knowledge Atoms
+
+      Reasoning Primitives
+
+      Lessons
+
+      Artifacts
+
+      Related EKRs
+
+###########################################################
+# SUCCESS
+###########################################################
+
+success:
+
+  Every engineering object is connected.
+
+  Every relationship is explicit.
+
+  Every graph is navigable.
+
+  Every concept is discoverable.
+
+  Every engineering experience contributes
+  to the global knowledge graph.
+
+###########################################################
+# GUARANTEES
+###########################################################
+
+guarantees:
+
+  Connected Engineering Universe
+
+  Explainable Relationships
+
+  Graph Native Knowledge
+
+  Deterministic Connectivity
+
+  Unlimited Graph Expansion
+
+###########################################################
+# FUTURE
+###########################################################
+
+future:
+
+  weighted_edges: true
+
+  probabilistic_relationships: true
+
+  graph_embeddings: true
+
+  semantic_search: true
+
+  automated_relationship_discovery: true
+
+  graph_reasoning: true
+```

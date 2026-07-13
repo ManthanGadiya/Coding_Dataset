@@ -1,0 +1,465 @@
+incident_generator:
+
+  metadata:
+
+    id: WORLD-010
+
+    title: Incident Generator
+
+    version: 1.0
+
+    status: Stable
+
+    owner: World Engine
+
+    depends_on:
+
+      - compiler/04_world/01_world_generator.toon
+      - compiler/04_world/03_repository_generator.toon
+      - compiler/04_world/05_team_generator.toon
+      - compiler/04_world/06_engineer_profiles.toon
+      - compiler/04_world/07_roles.toon
+      - compiler/04_world/08_business_events.toon
+      - compiler/04_world/09_repository_history.toon
+
+    consumed_by:
+
+      - compiler/04_world/12_technical_debt.toon
+      - compiler/04_world/15_world_state.toon
+      - compiler/05_generation/02_episode_generator.toon
+      - compiler/05_generation/09_bug_generator.toon
+      - compiler/05_generation/15_scenario_generator.toon
+      - compiler/05_generation/18_reflection_generator.toon
+
+    objective:
+
+      Generate realistic engineering incidents with complete
+      lifecycle, root-cause analysis, response workflows,
+      postmortems, and organizational learning.
+
+
+################################################################################
+# CORE PRINCIPLES
+################################################################################
+
+principles:
+
+  - causal_consistency
+
+  - engineering_realism
+
+  - deterministic_generation
+
+  - reproducibility
+
+  - timeline_consistency
+
+  - production_first
+
+  - educational
+
+  - organizational_learning
+
+
+################################################################################
+# INCIDENT TYPES
+################################################################################
+
+incident_types:
+
+  production_outage
+
+  latency_regression
+
+  memory_leak
+
+  database_failure
+
+  cache_failure
+
+  deployment_failure
+
+  configuration_error
+
+  dependency_breakage
+
+  security_breach
+
+  authentication_failure
+
+  authorization_failure
+
+  network_partition
+
+  dns_failure
+
+  certificate_expiration
+
+  resource_exhaustion
+
+  disk_failure
+
+  message_queue_failure
+
+  api_contract_breakage
+
+  data_corruption
+
+  race_condition
+
+  deadlock
+
+  cascading_failure
+
+
+################################################################################
+# SEVERITY
+################################################################################
+
+severity:
+
+  sev_0:
+
+    description:
+
+      Organization-wide catastrophic outage.
+
+  sev_1:
+
+    description:
+
+      Critical customer impact.
+
+  sev_2:
+
+    description:
+
+      Major degradation.
+
+  sev_3:
+
+    description:
+
+      Partial functionality affected.
+
+  sev_4:
+
+    description:
+
+      Minor engineering issue.
+
+
+################################################################################
+# INCIDENT LIFECYCLE
+################################################################################
+
+lifecycle:
+
+  detected
+
+  acknowledged
+
+  triaged
+
+  investigated
+
+  mitigated
+
+  resolved
+
+  verified
+
+  postmortem
+
+  prevention
+
+
+################################################################################
+# DETECTION
+################################################################################
+
+detection:
+
+  customer_report
+
+  monitoring_alert
+
+  automated_test
+
+  engineer_observation
+
+  security_scan
+
+  synthetic_monitoring
+
+  anomaly_detection
+
+
+################################################################################
+# ROOT CAUSE
+################################################################################
+
+root_causes:
+
+  human_error
+
+  design_flaw
+
+  implementation_bug
+
+  dependency_update
+
+  infrastructure_failure
+
+  scaling_issue
+
+  operational_error
+
+  configuration_drift
+
+  security_vulnerability
+
+  third_party_failure
+
+  unknown
+
+
+################################################################################
+# RESPONSE ACTIONS
+################################################################################
+
+response:
+
+  rollback
+
+  hotfix
+
+  feature_flag
+
+  traffic_shift
+
+  capacity_scaling
+
+  database_restore
+
+  service_restart
+
+  dependency_revert
+
+  incident_bridge
+
+  stakeholder_notification
+
+  customer_communication
+
+
+################################################################################
+# IMPACT MODEL
+################################################################################
+
+impact:
+
+  availability
+
+  latency
+
+  throughput
+
+  reliability
+
+  revenue
+
+  customer_trust
+
+  sla_violation
+
+  operational_cost
+
+  engineering_time
+
+
+################################################################################
+# PARTICIPANTS
+################################################################################
+
+participants:
+
+  incident_commander
+
+  tech_lead
+
+  sre
+
+  backend_engineer
+
+  security_engineer
+
+  qa_engineer
+
+  engineering_manager
+
+  product_manager
+
+  communications_lead
+
+
+################################################################################
+# POSTMORTEM
+################################################################################
+
+postmortem:
+
+  timeline
+
+  root_cause
+
+  contributing_factors
+
+  lessons_learned
+
+  action_items
+
+  ownership
+
+  follow_up_deadline
+
+  verification
+
+
+################################################################################
+# PREVENTION
+################################################################################
+
+prevention:
+
+  additional_tests
+
+  monitoring
+
+  documentation
+
+  architecture_changes
+
+  automation
+
+  runbooks
+
+  code_review_rules
+
+  deployment_guards
+
+  observability_improvements
+
+
+################################################################################
+# CAUSAL RELATIONSHIPS
+################################################################################
+
+causality:
+
+  incident:
+
+    triggered_by:
+
+      repository_change
+
+      infrastructure_change
+
+      business_event
+
+      deployment
+
+      configuration_change
+
+    may_trigger:
+
+      rollback
+
+      hotfix
+
+      architecture_review
+
+      technical_debt
+
+      documentation_update
+
+      monitoring_upgrade
+
+
+################################################################################
+# VALIDATION
+################################################################################
+
+validation:
+
+  reject_if:
+
+    missing_root_cause
+
+    impossible_timeline
+
+    missing_owner
+
+    invalid_severity
+
+    missing_resolution
+
+    unresolved_dependencies
+
+    inconsistent_postmortem
+
+
+################################################################################
+# METRICS
+################################################################################
+
+metrics:
+
+  compute:
+
+    mean_time_to_detect
+
+    mean_time_to_acknowledge
+
+    mean_time_to_recover
+
+    blast_radius
+
+    customer_impact
+
+    recurrence_probability
+
+    root_cause_accuracy
+
+    operational_learning
+
+
+################################################################################
+# SUCCESS METRICS
+################################################################################
+
+success_metrics:
+
+  incident_realism:
+
+    minimum: 0.98
+
+  causal_consistency:
+
+    minimum: 1.00
+
+  postmortem_quality:
+
+    minimum: 0.96
+
+  timeline_consistency:
+
+    minimum: 1.00
+
+  engineering_value:
+
+    minimum: 0.97
+
+  reproducibility:
+
+    minimum: 1.00

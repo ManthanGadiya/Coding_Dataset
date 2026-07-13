@@ -1,0 +1,399 @@
+generation_engine:
+
+  metadata:
+
+    id: GEN-001
+
+    title: Generation Engine
+
+    version: 1.0
+
+    status: Stable
+
+    owner: Generation Engine
+
+    depends_on:
+
+      - compiler/01_ontology/20_master_ontology.toon
+      - compiler/02_cognition/16_master_cognition.toon
+      - compiler/03_curriculum/10_master_curriculum.toon
+      - compiler/04_world/15_world_state.toon
+
+    consumed_by:
+
+      - compiler/05_generation/02_episode_generator.toon
+      - compiler/05_generation/03_task_generator.toon
+      - compiler/05_generation/15_scenario_generator.toon
+      - compiler/05_generation/19_dataset_builder.toon
+
+    objective:
+
+      Transform ontology, cognition, curriculum,
+      and world state into realistic engineering
+      training episodes with deterministic execution.
+
+
+################################################################################
+# CORE PRINCIPLES
+################################################################################
+
+principles:
+
+  - deterministic
+
+  - reproducible
+
+  - curriculum_driven
+
+  - world_consistent
+
+  - cognition_guided
+
+  - engineering_realism
+
+  - diversity_first
+
+  - capability_oriented
+
+  - scalable
+
+
+################################################################################
+# INPUTS
+################################################################################
+
+inputs:
+
+  ontology
+
+  cognition
+
+  curriculum
+
+  world_state
+
+  random_seed
+
+  generation_policy
+
+  optimization_policy
+
+
+################################################################################
+# PIPELINE
+################################################################################
+
+pipeline:
+
+  step_01:
+
+    load_world_state
+
+  step_02:
+
+    select_curriculum_node
+
+  step_03:
+
+    validate_prerequisites
+
+  step_04:
+
+    choose_engineering_context
+
+  step_05:
+
+    generate_episode
+
+  step_06:
+
+    generate_artifacts
+
+  step_07:
+
+    validate_output
+
+  step_08:
+
+    score_quality
+
+  step_09:
+
+    update_world
+
+  step_10:
+
+    export_episode
+
+
+################################################################################
+# GENERATION MODES
+################################################################################
+
+generation_modes:
+
+  curriculum
+
+  random
+
+  reinforcement
+
+  adaptive
+
+  replay
+
+  evaluation
+
+  benchmark
+
+  exploration
+
+
+################################################################################
+# EPISODE TYPES
+################################################################################
+
+episode_types:
+
+  implementation
+
+  debugging
+
+  code_review
+
+  architecture
+
+  testing
+
+  deployment
+
+  production_incident
+
+  feature_request
+
+  optimization
+
+  research
+
+  documentation
+
+  mentoring
+
+
+################################################################################
+# ENGINEERING CONTEXT
+################################################################################
+
+context:
+
+  company
+
+  project
+
+  repository
+
+  team
+
+  engineer
+
+  role
+
+  customer
+
+  infrastructure
+
+  architecture
+
+  current_world_state
+
+
+################################################################################
+# OUTPUT ARTIFACTS
+################################################################################
+
+artifacts:
+
+  task
+
+  reasoning
+
+  implementation
+
+  tests
+
+  review
+
+  documentation
+
+  deployment
+
+  reflection
+
+  metadata
+
+  evaluation_labels
+
+
+################################################################################
+# WORLD INTEGRATION
+################################################################################
+
+world_integration:
+
+  read_world_state
+
+  update_entities
+
+  append_history
+
+  create_events
+
+  update_metrics
+
+  maintain_consistency
+
+
+################################################################################
+# CURRICULUM INTEGRATION
+################################################################################
+
+curriculum:
+
+  enforce_prerequisites
+
+  follow_learning_path
+
+  apply_spacing
+
+  reinforce_skills
+
+  balance_domains
+
+  balance_difficulty
+
+
+################################################################################
+# COGNITIVE INTEGRATION
+################################################################################
+
+cognition:
+
+  reasoning_chain
+
+  planning
+
+  decomposition
+
+  reflection
+
+  verification
+
+  transfer_learning
+
+  self_correction
+
+
+################################################################################
+# RANDOMIZATION
+################################################################################
+
+randomization:
+
+  deterministic_seed:
+
+    true
+
+  weighted_sampling:
+
+    true
+
+  reproducible:
+
+    true
+
+  configurable_entropy:
+
+    true
+
+
+################################################################################
+# VALIDATION
+################################################################################
+
+validation:
+
+  reject_if:
+
+    prerequisite_violation
+
+    inconsistent_world
+
+    invalid_reasoning
+
+    duplicate_episode
+
+    impossible_timeline
+
+    ontology_violation
+
+    curriculum_violation
+
+
+################################################################################
+# METRICS
+################################################################################
+
+metrics:
+
+  compute:
+
+    generation_speed
+
+    diversity
+
+    curriculum_coverage
+
+    reasoning_quality
+
+    engineering_realism
+
+    world_consistency
+
+    artifact_quality
+
+    replay_determinism
+
+
+################################################################################
+# SUCCESS METRICS
+################################################################################
+
+success_metrics:
+
+  deterministic_execution:
+
+    minimum: 1.00
+
+  curriculum_compliance:
+
+    minimum: 1.00
+
+  world_consistency:
+
+    minimum: 1.00
+
+  engineering_realism:
+
+    minimum: 0.98
+
+  reasoning_quality:
+
+    minimum: 0.96
+
+  duplicate_rate:
+
+    maximum: 0.01
+
+  artifact_quality:
+
+    minimum: 0.97

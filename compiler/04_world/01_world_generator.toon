@@ -1,0 +1,419 @@
+world_generator:
+
+  metadata:
+
+    id: WORLD-001
+
+    title: World Generator
+
+    version: 1.0
+
+    status: Stable
+
+    owner: World Engine
+
+    depends_on:
+
+      - compiler/01_ontology/17_entity_model.toon
+      - compiler/01_ontology/19_dependency_graph.toon
+      - compiler/03_curriculum/10_master_curriculum.toon
+      - compiler/03_curriculum/12_competency_matrix.toon
+
+    consumed_by:
+
+      - compiler/04_world/02_company_generator.toon
+      - compiler/04_world/03_repository_generator.toon
+      - compiler/04_world/04_project_generator.toon
+      - compiler/05_generation/02_episode_generator.toon
+      - compiler/05_generation/15_scenario_generator.toon
+
+    objective:
+
+      Generate realistic engineering worlds that simulate software
+      companies, projects, repositories, engineers, customers,
+      infrastructure, and evolving business environments.
+
+
+################################################################################
+# CORE PHILOSOPHY
+################################################################################
+
+philosophy:
+
+  principles:
+
+    - realism_before_randomness
+
+    - internally_consistent
+
+    - temporally_consistent
+
+    - reproducible
+
+    - scalable
+
+    - domain_diverse
+
+    - engineering_first
+
+    - business_driven
+
+    - evolving_worlds
+
+
+################################################################################
+# WORLD STRUCTURE
+################################################################################
+
+world:
+
+  entities:
+
+    companies
+
+    repositories
+
+    projects
+
+    engineers
+
+    teams
+
+    services
+
+    customers
+
+    products
+
+    infrastructure
+
+    deployments
+
+    incidents
+
+    feature_requests
+
+    technical_debt
+
+    documentation
+
+    research
+
+    releases
+
+
+################################################################################
+# WORLD PROPERTIES
+################################################################################
+
+properties:
+
+  deterministic_seed:
+
+    required: true
+
+  persistent_state:
+
+    enabled: true
+
+  evolving_timeline:
+
+    enabled: true
+
+  causal_consistency:
+
+    required: true
+
+  historical_memory:
+
+    enabled: true
+
+
+################################################################################
+# TIME MODEL
+################################################################################
+
+timeline:
+
+  supports:
+
+    project_start
+
+    feature_development
+
+    code_reviews
+
+    releases
+
+    production_incidents
+
+    bug_reports
+
+    architecture_changes
+
+    customer_feedback
+
+    company_growth
+
+    technology_migration
+
+  ordering:
+
+    chronological
+
+
+################################################################################
+# WORLD SCALE
+################################################################################
+
+scale:
+
+  company_sizes:
+
+    startup
+
+    small
+
+    medium
+
+    enterprise
+
+    global
+
+  repository_sizes:
+
+    tiny
+
+    small
+
+    medium
+
+    large
+
+    monorepo
+
+  project_complexity:
+
+    prototype
+
+    production
+
+    enterprise
+
+    mission_critical
+
+
+################################################################################
+# DOMAIN COVERAGE
+################################################################################
+
+domains:
+
+  web
+
+  mobile
+
+  ai
+
+  cloud
+
+  fintech
+
+  healthcare
+
+  cybersecurity
+
+  robotics
+
+  gaming
+
+  ecommerce
+
+  education
+
+  embedded_systems
+
+  devtools
+
+  infrastructure
+
+
+################################################################################
+# CONSISTENCY RULES
+################################################################################
+
+consistency:
+
+  maintain:
+
+    entity_relationships
+
+    historical_accuracy
+
+    dependency_validity
+
+    timeline_order
+
+    architecture_integrity
+
+    business_constraints
+
+    technical_constraints
+
+
+################################################################################
+# RANDOMIZATION
+################################################################################
+
+randomization:
+
+  deterministic:
+
+    true
+
+  seed_control:
+
+    enabled: true
+
+  variability:
+
+    high
+
+  reproducibility:
+
+    guaranteed
+
+
+################################################################################
+# WORLD EVENTS
+################################################################################
+
+event_sources:
+
+  customer_requests
+
+  market_changes
+
+  production_failures
+
+  security_incidents
+
+  architecture_reviews
+
+  hiring
+
+  budget_changes
+
+  regulation_changes
+
+  technology_advances
+
+  infrastructure_failures
+
+
+################################################################################
+# GENERATION CONSTRAINTS
+################################################################################
+
+constraints:
+
+  every_project:
+
+    belongs_to_company
+
+  every_repository:
+
+    belongs_to_project
+
+  every_engineer:
+
+    belongs_to_team
+
+  every_incident:
+
+    references_existing_services
+
+  every_release:
+
+    follows_development
+
+  every_event:
+
+    has_cause
+
+    has_effect
+
+
+################################################################################
+# VALIDATION
+################################################################################
+
+validation:
+
+  reject_if:
+
+    orphan_entities
+
+    impossible_timelines
+
+    circular_dependencies
+
+    inconsistent_history
+
+    missing_relationships
+
+    invalid_world_state
+
+
+################################################################################
+# METRICS
+################################################################################
+
+metrics:
+
+  compute:
+
+    world_consistency
+
+    entity_density
+
+    relationship_density
+
+    historical_depth
+
+    event_diversity
+
+    business_realism
+
+    engineering_realism
+
+
+################################################################################
+# SUCCESS METRICS
+################################################################################
+
+success_metrics:
+
+  world_consistency:
+
+    minimum: 1.00
+
+  entity_connectivity:
+
+    minimum: 0.98
+
+  timeline_validity:
+
+    minimum: 1.00
+
+  engineering_realism:
+
+    minimum: 0.95
+
+  business_realism:
+
+    minimum: 0.90
+
+  reproducibility:
+
+    minimum: 1.00

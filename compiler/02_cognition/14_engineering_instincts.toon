@@ -1,0 +1,564 @@
+```toon id="engineering_instincts_v1"
+
+spec:
+
+  id: engineering_instincts
+
+  version: 1.0.0
+
+  status: stable
+
+  priority: highest
+
+  module: Cognition
+
+  compiler_stage: Engineering Intuition
+
+  description: >
+    Defines the Universal Engineering Instinct Model (UEIM).
+    Engineering instincts are subconscious heuristics,
+    pattern recognitions and intuition developed through
+    accumulated engineering experience.
+    They provide rapid guidance before formal reasoning
+    begins while remaining explainable and evidence-seeking.
+
+###########################################################
+# PURPOSE
+###########################################################
+
+purpose:
+
+  Model
+
+  recognize
+
+  explain
+
+  refine
+
+  engineering intuition.
+
+###########################################################
+# PHILOSOPHY
+###########################################################
+
+philosophy:
+
+  Intuition is compressed experience.
+
+  Instinct is not magic.
+
+  Every instinct
+  originates from
+  repeated evidence.
+
+  Instinct proposes.
+
+  Reasoning verifies.
+
+###########################################################
+# INSTINCT PIPELINE
+###########################################################
+
+pipeline:
+
+  Observation
+
+      →
+
+  Pattern Recognition
+
+      →
+
+  Instinct Trigger
+
+      →
+
+  Confidence Estimate
+
+      →
+
+  Reasoning
+
+      →
+
+  Validation
+
+      →
+
+  Memory Reinforcement
+
+###########################################################
+# INPUTS
+###########################################################
+
+inputs:
+
+  Observation
+
+  Code
+
+  Architecture
+
+  Metrics
+
+  Logs
+
+  Memory
+
+  Previous Incidents
+
+  Engineering Knowledge Records
+
+###########################################################
+# OUTPUTS
+###########################################################
+
+outputs:
+
+  Suspicion
+
+  Warning
+
+  Opportunity
+
+  Recommendation
+
+  Investigation
+
+  Engineering Question
+
+###########################################################
+# INSTINCT CATEGORIES
+###########################################################
+
+categories:
+
+  Complexity
+
+  Correctness
+
+  Performance
+
+  Reliability
+
+  Security
+
+  Scalability
+
+  Maintainability
+
+  Human
+
+###########################################################
+# COMPLEXITY
+###########################################################
+
+complexity:
+
+  Too Many Layers
+
+  Excessive Abstraction
+
+  Hidden Coupling
+
+  Unnecessary Generalization
+
+  Large Functions
+
+  Large Classes
+
+###########################################################
+# CORRECTNESS
+###########################################################
+
+correctness:
+
+  Missing Validation
+
+  Hidden Assumption
+
+  Undefined State
+
+  Missing Edge Case
+
+  Impossible Invariant
+
+###########################################################
+# PERFORMANCE
+###########################################################
+
+performance:
+
+  Excessive Allocation
+
+  Unnecessary Copy
+
+  Cache Miss Risk
+
+  Synchronization Cost
+
+  Serialization Overhead
+
+###########################################################
+# RELIABILITY
+###########################################################
+
+reliability:
+
+  Single Point Of Failure
+
+  Missing Retry
+
+  Missing Timeout
+
+  Missing Monitoring
+
+  Cascading Failure
+
+###########################################################
+# SECURITY
+###########################################################
+
+security:
+
+  Excessive Privileges
+
+  Missing Authentication
+
+  Missing Authorization
+
+  Secret Exposure
+
+  Trust Boundary Violation
+
+###########################################################
+# SCALABILITY
+###########################################################
+
+scalability:
+
+  Global Lock
+
+  Centralized Component
+
+  Sequential Processing
+
+  Hot Partition
+
+  Resource Saturation
+
+###########################################################
+# MAINTAINABILITY
+###########################################################
+
+maintainability:
+
+  Duplicate Logic
+
+  Tight Coupling
+
+  Poor Naming
+
+  Hidden Dependency
+
+  Fragile Interface
+
+###########################################################
+# HUMAN
+###########################################################
+
+human:
+
+  Bus Factor
+
+  Knowledge Silo
+
+  Difficult Onboarding
+
+  Communication Risk
+
+  Ownership Confusion
+
+###########################################################
+# INSTINCT ATTRIBUTES
+###########################################################
+
+attributes:
+
+  identity
+
+  category
+
+  trigger
+
+  confidence
+
+  urgency
+
+  evidence
+
+  explanation
+
+###########################################################
+# TRIGGERS
+###########################################################
+
+triggers:
+
+  Pattern Match
+
+  Metric Anomaly
+
+  Historical Similarity
+
+  Constraint Violation
+
+  Architecture Smell
+
+  Code Smell
+
+###########################################################
+# ACTIONS
+###########################################################
+
+actions:
+
+  Ignore
+
+  Investigate
+
+  Benchmark
+
+  Review
+
+  Test
+
+  Refactor
+
+  Escalate
+
+###########################################################
+# CONFIDENCE
+###########################################################
+
+confidence:
+
+  Weak
+
+  Moderate
+
+  Strong
+
+  Critical
+
+###########################################################
+# VALIDATION
+###########################################################
+
+validation:
+
+  Static Analysis
+
+  Dynamic Analysis
+
+  Benchmark
+
+  Code Review
+
+  Production Evidence
+
+  Experiment
+
+###########################################################
+# MEMORY INTEGRATION
+###########################################################
+
+memory:
+
+  Retrieve Similar Instinct
+
+  Reinforce Successful Instinct
+
+  Weaken Incorrect Instinct
+
+  Create New Instinct
+
+###########################################################
+# LEARNING
+###########################################################
+
+learning:
+
+  Successful Prediction
+
+  Failed Prediction
+
+  New Pattern
+
+  Better Heuristic
+
+###########################################################
+# EKR INTEGRATION
+###########################################################
+
+ekr:
+
+  Every Engineering Knowledge Record
+  stores:
+
+    Triggered Instincts
+
+    Validation
+
+    Outcome
+
+    Confidence Update
+
+###########################################################
+# VALIDATION RULES
+###########################################################
+
+rules:
+
+  Every instinct
+  has explanation.
+
+  Every instinct
+  is evidence-seeking.
+
+  Every instinct
+  is measurable.
+
+  Every instinct
+  can improve.
+
+###########################################################
+# ENGINEERING EXAMPLES
+###########################################################
+
+examples:
+
+###########################################################
+
+  Example_01:
+
+    Observation:
+
+      Massive Singleton
+
+    Instinct:
+
+      Hidden Global State
+
+###########################################################
+
+  Example_02:
+
+    Observation:
+
+      Nested Loops
+
+    Instinct:
+
+      Performance Bottleneck
+
+###########################################################
+
+  Example_03:
+
+    Observation:
+
+      Shared Mutable State
+
+    Instinct:
+
+      Race Condition Risk
+
+###########################################################
+
+  Example_04:
+
+    Observation:
+
+      Complex API
+
+    Instinct:
+
+      Future Maintenance Cost
+
+###########################################################
+
+  Example_05:
+
+    Observation:
+
+      Missing Timeout
+
+    Instinct:
+
+      Production Incident Risk
+
+###########################################################
+# METRICS
+###########################################################
+
+metrics:
+
+  Prediction Accuracy
+
+  False Positive Rate
+
+  False Negative Rate
+
+  Investigation Success
+
+  Engineering Value
+
+  Instinct Calibration
+
+###########################################################
+# SUCCESS
+###########################################################
+
+success:
+
+  Engineering intuition
+  becomes explicit,
+  explainable,
+  measurable
+  and continuously refined.
+
+###########################################################
+# GUARANTEES
+###########################################################
+
+guarantees:
+
+  Explainable Intuition
+
+  Pattern Recognition
+
+  Early Risk Detection
+
+  Experience Transfer
+
+  Continuous Instinct Improvement
+
+###########################################################
+# FUTURE
+###########################################################
+
+future:
+
+  instinct_graphs: true
+
+  probabilistic_instincts: true
+
+  collaborative_instinct_learning: true
+
+  organization_specific_instincts: true
+
+  autonomous_instinct_generation: true
+
+```

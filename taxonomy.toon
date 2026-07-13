@@ -1,0 +1,502 @@
+```toon
+spec:
+  id: taxonomy
+  version: 1.1
+  priority: critical
+  role: >
+    Defines the complete hierarchical knowledge taxonomy used by every
+    dataset object. Every Engineering Episode, Knowledge Atom, Event,
+    Artifact, Decision and Lesson MUST belong to exactly one primary
+    taxonomy path and may belong to multiple secondary paths.
+
+principles:
+  - Hierarchical
+  - Non-overlapping
+  - Extensible
+  - Language Agnostic
+  - Framework Agnostic
+  - Capability Independent
+  - Future Proof
+
+rules:
+
+  root_count: 40+
+
+  node:
+    required:
+      - id
+      - name
+      - description
+      - parent
+      - children
+      - aliases
+      - prerequisites
+      - related
+      - capabilities
+      - difficulty
+      - knowledge_atoms
+
+  constraints:
+
+    unique_id: true
+
+    one_primary_parent: true
+
+    unlimited_secondary_links: true
+
+    cyclic_graph: false
+
+    orphan_nodes: false
+
+taxonomy:
+
+  Programming:
+    Languages:
+      Python
+      C
+      C++
+      Rust
+      Go
+      Java
+      Kotlin
+      Swift
+      Zig
+      JavaScript
+      TypeScript
+      Bash
+      SQL
+      Lua
+      Assembly
+
+    Semantics:
+      Ownership
+      Lifetime
+      Type_System
+      Dynamic_Typing
+      Static_Typing
+      Memory_Model
+      Object_Model
+      Runtime
+      ABI
+      Undefined_Behavior
+      Concurrency_Model
+
+    Runtime:
+      Stack
+      Heap
+      GC
+      ARC
+      Ref_Counting
+      Allocation
+      Alignment
+      Calling_Convention
+
+  Computer_Systems:
+    Hardware:
+      CPU
+      GPU
+      Cache
+      SIMD
+      NUMA
+      Registers
+      Memory
+      Bus
+      Storage
+      Interrupts
+      DMA
+
+    Operating_System:
+      Process
+      Thread
+      Scheduler
+      Filesystem
+      Virtual_Memory
+      Paging
+      Signals
+      IPC
+      Containers
+      Cgroups
+      Namespaces
+
+    Compiler:
+      Lexer
+      Parser
+      AST
+      Semantic_Analysis
+      IR
+      Optimizer
+      Linker
+      Loader
+      JIT
+
+  Algorithms:
+    Fundamentals:
+      Sorting
+      Searching
+      Recursion
+      Divide_And_Conquer
+      Greedy
+      Dynamic_Programming
+      Backtracking
+
+    Graph:
+      BFS
+      DFS
+      MST
+      Shortest_Path
+      Topological
+      Network_Flow
+
+    Advanced:
+      Suffix
+      Segment_Tree
+      Fenwick
+      Trie
+      Union_Find
+      Skip_List
+
+  Data_Structures:
+    Linear:
+      Array
+      Vector
+      Linked_List
+      Stack
+      Queue
+      Deque
+
+    Trees:
+      BST
+      AVL
+      Red_Black
+      BTree
+      Heap
+      Trie
+
+    Hashing:
+      Hash_Table
+      Bloom_Filter
+      Cuckoo
+      Perfect_Hashing
+
+  Networking:
+    Protocols:
+      TCP
+      UDP
+      HTTP
+      HTTPS
+      HTTP2
+      HTTP3
+      WebSocket
+      QUIC
+      DNS
+      SMTP
+      MQTT
+
+    Concepts:
+      Latency
+      Throughput
+      Congestion
+      Packet
+      Routing
+      Load_Balancing
+
+  Databases:
+    Relational:
+      PostgreSQL
+      MySQL
+      SQLite
+
+    NoSQL:
+      Redis
+      MongoDB
+      Cassandra
+
+    Concepts:
+      Index
+      Transaction
+      Locking
+      MVCC
+      Replication
+      Sharding
+      Query_Planner
+
+  Software_Engineering:
+    Design:
+      SOLID
+      GRASP
+      DDD
+      Clean_Architecture
+      Hexagonal
+      Event_Driven
+
+    Lifecycle:
+      Requirements
+      Planning
+      Architecture
+      Implementation
+      Testing
+      Deployment
+      Maintenance
+
+    Patterns:
+      Factory
+      Strategy
+      Observer
+      Adapter
+      CQRS
+      Repository
+
+  Security:
+    Identity:
+      Authentication
+      Authorization
+      OAuth
+      JWT
+
+    Vulnerabilities:
+      SQLi
+      XSS
+      CSRF
+      SSRF
+      RCE
+      XXE
+
+    Cryptography:
+      Hashing
+      Signing
+      Encryption
+      Key_Exchange
+
+  DevOps:
+    Containers:
+      Docker
+      OCI
+      Kubernetes
+
+    CI_CD:
+      Build
+      Test
+      Deploy
+      Rollback
+
+    Observability:
+      Logging
+      Metrics
+      Tracing
+      Alerting
+
+  Artificial_Intelligence:
+    Machine_Learning:
+      Supervised
+      Self_Supervised
+      Reinforcement
+      Transfer
+
+    LLM:
+      Tokenizer
+      Transformer
+      Attention
+      Fine_Tuning
+      LoRA
+      RLHF
+      Evaluation
+
+    Agents:
+      Planning
+      Tool_Use
+      Memory
+      Multi_Agent
+      MCP
+
+  Engineering:
+    Capabilities:
+      Research
+      Design
+      Implementation
+      Debugging
+      Testing
+      Optimization
+      Review
+      Documentation
+      Teaching
+      Reflection
+
+    Production:
+      Incident
+      RCA
+      Monitoring
+      SLO
+      SLA
+      Capacity
+      Cost
+
+  Distributed_Systems:
+    Concepts:
+      Consensus
+      Replication
+      Partitioning
+      Consistency
+      Availability
+      Fault_Tolerance
+      Leader_Election
+
+  Embedded_Systems:
+    Concepts:
+      Microcontroller
+      Firmware
+      RTOS
+      Interrupts
+      Low_Power
+
+  Graphics:
+    Rendering:
+      Rasterization
+      Ray_Tracing
+      Shaders
+      GPU_Pipeline
+
+  Game_Development:
+    Systems:
+      Physics
+      Rendering
+      Input
+      Game_Loop
+      ECS
+
+  Blockchain:
+    Concepts:
+      Consensus
+      Smart_Contracts
+      Cryptoeconomics
+      Ledger
+
+  Cloud_Computing:
+    Concepts:
+      IaaS
+      PaaS
+      SaaS
+      Serverless
+      Autoscaling
+
+  Formal_Methods:
+    Concepts:
+      Model_Checking
+      Theorem_Proving
+      Verification
+
+  Human_Computer_Interaction:
+    Concepts:
+      UX
+      UI
+      Accessibility
+      Usability
+
+  Robotics:
+    Concepts:
+      Kinematics
+      Control
+      Perception
+      SLAM
+
+  Scientific_Computing:
+    Concepts:
+      Numerical_Methods
+      Simulation
+      HPC
+
+  Reverse_Engineering:
+    Concepts:
+      Disassembly
+      Decompilation
+      Binary_Analysis
+
+  Digital_Signal_Processing:
+    Concepts:
+      Filtering
+      FFT
+      Sampling
+
+  Browsers:
+    Concepts:
+      Rendering_Engine
+      DOM
+      CSS
+      JavaScript_Engine
+
+  Language_Design:
+    Concepts:
+      Syntax
+      Semantics
+      Type_System
+      Compilation
+
+  Build_Systems:
+    Concepts:
+      Dependency_Graph
+      Incremental_Build
+      Toolchains
+
+  Package_Managers:
+    Concepts:
+      Dependency_Resolution
+      Versioning
+      Registry
+
+  Finance_Engineering:
+    Concepts:
+      Derivatives
+      Risk
+      Pricing
+
+  Bioinformatics:
+    Concepts:
+      Genomics
+      Sequence_Alignment
+      Phylogenetics
+
+  Quantum_Computing:
+    Concepts:
+      Qubits
+      Entanglement
+      Quantum_Algorithms
+
+  Computational_Geometry:
+    Concepts:
+      Convex_Hull
+      Voronoi
+      Delaunay
+
+relationships:
+  supports
+  depends_on
+  extends
+  implements
+  replaces
+  optimizes
+  validates
+  tests
+  secures
+  benchmarks
+  documents
+  teaches
+  contradicts
+
+inheritance:
+  child_inherits:
+    aliases
+    capabilities
+    relationships
+    metadata
+
+knowledge_atom:
+  every_leaf_is:
+    atomic
+    reusable
+    composable
+    independently_trainable
+
+future:
+  add_domain_without_breaking_schema: true
+  unlimited_depth: true
+  backward_compatible: true
+```

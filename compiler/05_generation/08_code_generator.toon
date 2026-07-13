@@ -1,0 +1,392 @@
+code_generator:
+
+  metadata:
+
+    id: GEN-008
+
+    title: Code Generator
+
+    version: 2.0
+
+    status: Stable
+
+    owner: Generation Engine
+
+    depends_on:
+
+      - compiler/05_generation/05_reasoning_generator.toon
+      - compiler/05_generation/06_dialogue_generator.toon
+      - compiler/05_generation/07_requirement_generator.toon
+      - compiler/04_world/15_world_state.toon
+      - compiler/01_ontology/20_master_ontology.toon
+
+    consumed_by:
+
+      - compiler/05_generation/09_bug_generator.toon
+      - compiler/05_generation/10_test_generator.toon
+      - compiler/05_generation/11_review_generator.toon
+      - compiler/05_generation/12_documentation_generator.toon
+      - compiler/05_generation/19_dataset_builder.toon
+
+    objective:
+
+      Generate production-quality engineering artifacts that
+      satisfy business requirements, engineering standards,
+      repository conventions, architectural constraints,
+      and long-term maintainability.
+
+
+################################################################################
+# CORE PRINCIPLES
+################################################################################
+
+principles:
+
+  deterministic
+
+  reproducible
+
+  architecture_aware
+
+  repository_aware
+
+  maintainable
+
+  testable
+
+  secure
+
+  performant
+
+  production_ready
+
+  traceable
+
+
+################################################################################
+# INPUTS
+################################################################################
+
+inputs:
+
+  instruction
+
+  requirements
+
+  engineering_plan
+
+  repository_state
+
+  project_architecture
+
+  coding_standards
+
+  dependency_graph
+
+  world_state
+
+  curriculum_node
+
+
+################################################################################
+# CODE TYPES
+################################################################################
+
+code_types:
+
+  feature
+
+  bug_fix
+
+  refactoring
+
+  optimization
+
+  migration
+
+  integration
+
+  infrastructure
+
+  automation
+
+  deployment
+
+  tooling
+
+  security_patch
+
+  observability
+
+
+################################################################################
+# GENERATED ARTIFACTS
+################################################################################
+
+artifacts:
+
+  source_code
+
+  configuration
+
+  api
+
+  database_migration
+
+  infrastructure_changes
+
+  build_files
+
+  dependency_updates
+
+  scripts
+
+  cli
+
+  templates
+
+
+################################################################################
+# IMPLEMENTATION QUALITY
+################################################################################
+
+quality:
+
+  readability
+
+  modularity
+
+  maintainability
+
+  extensibility
+
+  correctness
+
+  robustness
+
+  observability
+
+  documentation
+
+  portability
+
+  reliability
+
+
+################################################################################
+# ENGINEERING CONSTRAINTS
+################################################################################
+
+constraints:
+
+  coding_style
+
+  architecture_rules
+
+  dependency_policy
+
+  backward_compatibility
+
+  performance_budget
+
+  security_policy
+
+  deployment_constraints
+
+  operational_guidelines
+
+
+################################################################################
+# IMPLEMENTATION STRATEGIES
+################################################################################
+
+strategies:
+
+  incremental
+
+  greenfield
+
+  refactoring
+
+  strangler_pattern
+
+  adapter_pattern
+
+  feature_flag
+
+  canary
+
+  blue_green
+
+  rollback_safe
+
+
+################################################################################
+# CODE EVOLUTION
+################################################################################
+
+evolution:
+
+  supports:
+
+    incremental_commits
+
+    pull_requests
+
+    review_feedback
+
+    refactoring
+
+    architecture_updates
+
+    technical_debt
+
+    future_extensions
+
+
+################################################################################
+# VERIFICATION
+################################################################################
+
+verification:
+
+  syntax
+
+  compilation
+
+  linting
+
+  formatting
+
+  architecture_rules
+
+  dependency_validation
+
+  security_checks
+
+  performance_checks
+
+  compatibility_checks
+
+
+################################################################################
+# OUTPUTS
+################################################################################
+
+outputs:
+
+  implementation
+
+  modified_files
+
+  dependency_changes
+
+  migration_notes
+
+  implementation_summary
+
+  validation_report
+
+
+################################################################################
+# RANDOMIZATION
+################################################################################
+
+randomization:
+
+  deterministic_seed:
+
+    true
+
+  implementation_variants:
+
+    enabled
+
+  architecture_guided:
+
+    true
+
+  reproducible:
+
+    true
+
+
+################################################################################
+# VALIDATION
+################################################################################
+
+validation:
+
+  reject_if:
+
+    uncompilable
+
+    architecture_violation
+
+    dependency_cycle
+
+    security_issue
+
+    broken_api
+
+    failing_validation
+
+    curriculum_violation
+
+
+################################################################################
+# METRICS
+################################################################################
+
+metrics:
+
+  compute:
+
+    code_quality
+
+    maintainability
+
+    complexity
+
+    architecture_compliance
+
+    dependency_health
+
+    readability
+
+    correctness
+
+    extensibility
+
+    production_readiness
+
+
+################################################################################
+# SUCCESS METRICS
+################################################################################
+
+success_metrics:
+
+  correctness:
+
+    minimum: 0.99
+
+  production_readiness:
+
+    minimum: 0.98
+
+  architecture_compliance:
+
+    minimum: 0.99
+
+  maintainability:
+
+    minimum: 0.97
+
+  repository_consistency:
+
+    minimum: 1.00
+
+  reproducibility:
+
+    minimum: 1.00

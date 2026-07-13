@@ -1,0 +1,328 @@
+memory_generator:
+
+  metadata:
+
+    id: GEN-013
+
+    title: Memory Generator
+
+    version: 2.0
+
+    status: Stable
+
+    owner: Generation Engine
+
+    depends_on:
+
+      - compiler/05_generation/08_code_generator.toon
+
+      - compiler/05_generation/09_bug_generator.toon
+
+      - compiler/05_generation/10_test_generator.toon
+
+      - compiler/05_generation/11_review_generator.toon
+
+      - compiler/05_generation/12_documentation_generator.toon
+
+      - compiler/01_ontology/16_memory_model.toon
+
+      - compiler/04_world/15_world_state.toon
+
+    consumed_by:
+
+      - compiler/05_generation/14_artifact_generator.toon
+
+      - compiler/05_generation/15_scenario_generator.toon
+
+      - compiler/05_generation/19_dataset_builder.toon
+
+    objective:
+
+      Generate persistent engineering memories that allow
+      future reasoning, planning, debugging, architecture,
+      and implementation decisions to remain historically
+      consistent across repository evolution.
+
+
+################################################################################
+# CORE PRINCIPLES
+################################################################################
+
+principles:
+
+  persistence
+
+  traceability
+
+  causality
+
+  consistency
+
+  evolution
+
+  retrieval
+
+  compression
+
+  explainability
+
+  long_term_learning
+
+
+################################################################################
+# INPUTS
+################################################################################
+
+inputs:
+
+  repository_state
+
+  implementation
+
+  architecture
+
+  review_history
+
+  bug_history
+
+  documentation
+
+  deployment_history
+
+  issue_tracker
+
+  pull_requests
+
+  engineering_decisions
+
+  world_state
+
+
+################################################################################
+# MEMORY TYPES
+################################################################################
+
+memory_types:
+
+  architectural
+
+  implementation
+
+  debugging
+
+  deployment
+
+  operational
+
+  performance
+
+  security
+
+  customer_feedback
+
+  technical_debt
+
+  reviewer_preferences
+
+  coding_patterns
+
+  business_rules
+
+  domain_knowledge
+
+
+################################################################################
+# MEMORY EVENTS
+################################################################################
+
+events:
+
+  feature_completed
+
+  bug_fixed
+
+  incident_occurred
+
+  deployment_failed
+
+  architecture_changed
+
+  dependency_upgraded
+
+  review_completed
+
+  migration_finished
+
+  optimization_applied
+
+  experiment_failed
+
+
+################################################################################
+# MEMORY STRUCTURE
+################################################################################
+
+structure:
+
+  timestamp
+
+  repository_version
+
+  related_entities
+
+  causal_chain
+
+  confidence
+
+  importance
+
+  lifespan
+
+  retrieval_tags
+
+  source_artifacts
+
+
+################################################################################
+# RETRIEVAL STRATEGIES
+################################################################################
+
+retrieval:
+
+  semantic
+
+  graph_based
+
+  temporal
+
+  dependency_based
+
+  similarity
+
+  hierarchical
+
+  contextual
+
+
+################################################################################
+# CONSOLIDATION
+################################################################################
+
+consolidation:
+
+  deduplicate
+
+  summarize
+
+  merge_related
+
+  strengthen_frequent
+
+  decay_irrelevant
+
+  archive_obsolete
+
+
+################################################################################
+# RANDOMIZATION
+################################################################################
+
+randomization:
+
+  deterministic_seed:
+
+    true
+
+  memory_sampling:
+
+    adaptive
+
+  historical_depth:
+
+    variable
+
+
+################################################################################
+# VALIDATION
+################################################################################
+
+validation:
+
+  reject_if:
+
+    contradictory_memory
+
+    impossible_timeline
+
+    broken_references
+
+    duplicate_history
+
+    missing_dependencies
+
+
+################################################################################
+# OUTPUTS
+################################################################################
+
+outputs:
+
+  memory_records
+
+  knowledge_graph_updates
+
+  retrieval_index
+
+  repository_memory
+
+  historical_summary
+
+  validation_report
+
+
+################################################################################
+# METRICS
+################################################################################
+
+metrics:
+
+  compute:
+
+    retrieval_accuracy
+
+    historical_consistency
+
+    compression_efficiency
+
+    causal_integrity
+
+    reasoning_value
+
+    long_term_usefulness
+
+
+################################################################################
+# SUCCESS METRICS
+################################################################################
+
+success_metrics:
+
+  historical_consistency:
+
+    minimum: 1.00
+
+  retrieval_accuracy:
+
+    minimum: 0.99
+
+  causal_integrity:
+
+    minimum: 0.99
+
+  reasoning_value:
+
+    minimum: 0.98
+
+  repository_alignment:
+
+    minimum: 1.00

@@ -1,0 +1,553 @@
+```toon
+spec:
+
+  id: difficulty_model
+
+  version: 1.0.0
+
+  status: stable
+
+  priority: critical
+
+  module: Ontology
+
+  compiler_stage: Knowledge Representation
+
+  description: >
+    Defines the multidimensional difficulty model used throughout
+    the TOON Dataset Compiler.
+    Difficulty is not determined by code size but by the
+    engineering cognition required to understand, reason about,
+    design, validate and evolve a system.
+
+###########################################################
+# PURPOSE
+###########################################################
+
+purpose:
+
+  Represent engineering difficulty as a measurable,
+  multidimensional property used by curriculum learning,
+  dataset generation, benchmarking and model evaluation.
+
+###########################################################
+# PHILOSOPHY
+###########################################################
+
+philosophy:
+
+  Hard problems are not large.
+
+  Hard problems require reasoning.
+
+  Engineering difficulty emerges from
+  interacting cognitive dimensions.
+
+###########################################################
+# DIFFICULTY MODEL
+###########################################################
+
+model:
+
+  Difficulty
+
+      =
+
+  Knowledge
+
+      +
+
+  Reasoning
+
+      +
+
+  Engineering
+
+      +
+
+  Uncertainty
+
+      +
+
+  Scale
+
+###########################################################
+# DIMENSIONS
+###########################################################
+
+dimensions:
+
+###########################################################
+
+  Knowledge:
+
+    description:
+
+      Amount of prerequisite knowledge.
+
+    examples:
+
+      Programming Language
+
+      Compiler Theory
+
+      Networking
+
+      Memory Models
+
+###########################################################
+
+  Reasoning:
+
+    description:
+
+      Cognitive reasoning required.
+
+    examples:
+
+      Root Cause Analysis
+
+      Tradeoff Analysis
+
+      Prediction
+
+      Abstraction
+
+###########################################################
+
+  Engineering:
+
+    description:
+
+      Engineering judgement required.
+
+    examples:
+
+      Architecture
+
+      Production
+
+      Reliability
+
+      Security
+
+###########################################################
+
+  Scale:
+
+    description:
+
+      Size and interconnectedness.
+
+    examples:
+
+      Modules
+
+      Services
+
+      Teams
+
+      Repositories
+
+###########################################################
+
+  Uncertainty:
+
+    description:
+
+      Missing information.
+
+    examples:
+
+      Ambiguous Requirements
+
+      Incomplete Logs
+
+      Unknown Failures
+
+###########################################################
+
+  Time:
+
+    description:
+
+      Long-term evolution.
+
+    examples:
+
+      Legacy Systems
+
+      Version Migration
+
+      Technical Debt
+
+###########################################################
+
+  Interaction:
+
+    description:
+
+      Number of interacting components.
+
+    examples:
+
+      Database
+
+      API
+
+      Cache
+
+      Queue
+
+      Load Balancer
+
+###########################################################
+
+  Failure:
+
+    description:
+
+      Difficulty of diagnosing failures.
+
+###########################################################
+
+  Optimization:
+
+    description:
+
+      Difficulty of improving behaviour.
+
+###########################################################
+
+  Abstraction:
+
+    description:
+
+      Distance from implementation.
+
+###########################################################
+# DIFFICULTY LEVELS
+###########################################################
+
+levels:
+
+###########################################################
+
+  D0:
+
+    name:
+
+      Recognition
+
+    characteristics:
+
+      Recall
+
+      Identify
+
+      Define
+
+###########################################################
+
+  D1:
+
+    name:
+
+      Understanding
+
+    characteristics:
+
+      Explain
+
+      Summarize
+
+      Interpret
+
+###########################################################
+
+  D2:
+
+    name:
+
+      Application
+
+    characteristics:
+
+      Implement
+
+      Modify
+
+      Integrate
+
+###########################################################
+
+  D3:
+
+    name:
+
+      Analysis
+
+    characteristics:
+
+      Debug
+
+      Compare
+
+      Evaluate
+
+      Diagnose
+
+###########################################################
+
+  D4:
+
+    name:
+
+      Design
+
+    characteristics:
+
+      Architect
+
+      Optimize
+
+      Plan
+
+###########################################################
+
+  D5:
+
+    name:
+
+      Expert
+
+    characteristics:
+
+      Production Incidents
+
+      Distributed Systems
+
+      Performance
+
+      Reliability
+
+###########################################################
+
+  D6:
+
+    name:
+
+      Research
+
+    characteristics:
+
+      Unknown Problems
+
+      Novel Algorithms
+
+      Open Questions
+
+###########################################################
+# DIFFICULTY METRICS
+###########################################################
+
+metrics:
+
+  prerequisite_depth
+
+  dependency_depth
+
+  reasoning_steps
+
+  abstraction_level
+
+  uncertainty
+
+  engineering_tradeoffs
+
+  interacting_systems
+
+  temporal_scope
+
+  production_risk
+
+###########################################################
+# DIFFICULTY FACTORS
+###########################################################
+
+factors:
+
+  increases:
+
+    Unknown Requirements
+
+    Concurrency
+
+    Distribution
+
+    Security
+
+    Scale
+
+    Production
+
+    Optimization
+
+    Legacy Code
+
+    Cross Domain Reasoning
+
+    Ambiguity
+
+  decreases:
+
+    Isolation
+
+    Complete Documentation
+
+    Small Scope
+
+    Deterministic Behaviour
+
+    Well Tested Code
+
+###########################################################
+# CURRICULUM RULES
+###########################################################
+
+curriculum:
+
+  Teach prerequisites first.
+
+  Increase one dimension at a time.
+
+  Reinforce foundational concepts.
+
+  Delay high ambiguity.
+
+  Mix review with progression.
+
+###########################################################
+# GENERATION RULES
+###########################################################
+
+generation:
+
+  Every generated record
+  declares its difficulty.
+
+  Difficulty is computed,
+  not assigned manually.
+
+  Difficulty explains itself.
+
+###########################################################
+# VALIDATION
+###########################################################
+
+validation:
+
+  Difficulty must be reproducible.
+
+  Difficulty must be measurable.
+
+  Difficulty must be explainable.
+
+  Difficulty must match curriculum.
+
+###########################################################
+# EXAMPLES
+###########################################################
+
+examples:
+
+  Example_1:
+
+    task:
+
+      Reverse Linked List
+
+    difficulty:
+
+      D2
+
+    dominant_dimension:
+
+      Knowledge
+
+  Example_2:
+
+    task:
+
+      Design Distributed Cache
+
+    difficulty:
+
+      D5
+
+    dominant_dimension:
+
+      Engineering
+
+  Example_3:
+
+    task:
+
+      Debug Kernel Deadlock
+
+    difficulty:
+
+      D6
+
+    dominant_dimension:
+
+      Reasoning
+
+###########################################################
+# SUCCESS
+###########################################################
+
+success:
+
+  Difficulty predicts:
+
+    Learning Order
+
+    Dataset Progression
+
+    Competency Growth
+
+    Curriculum Placement
+
+###########################################################
+# GUARANTEES
+###########################################################
+
+guarantees:
+
+  Difficulty is multidimensional.
+
+  Difficulty is explainable.
+
+  Difficulty is reproducible.
+
+  Difficulty is measurable.
+
+  Difficulty evolves with knowledge.
+
+###########################################################
+# FUTURE
+###########################################################
+
+future:
+
+  adaptive_difficulty: true
+
+  personalized_curriculum: true
+
+  dynamic_scoring: true
+
+  competency_prediction: true
+
+  automated_calibration: true
+```

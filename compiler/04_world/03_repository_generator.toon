@@ -1,0 +1,446 @@
+repository_generator:
+
+  metadata:
+
+    id: WORLD-003
+
+    title: Repository Generator
+
+    version: 1.0
+
+    status: Stable
+
+    owner: World Engine
+
+    depends_on:
+
+      - compiler/04_world/01_world_generator.toon
+      - compiler/04_world/02_company_generator.toon
+      - compiler/01_ontology/17_entity_model.toon
+
+    consumed_by:
+
+      - compiler/04_world/04_project_generator.toon
+      - compiler/04_world/09_repository_history.toon
+      - compiler/05_generation/02_episode_generator.toon
+      - compiler/05_generation/08_code_generator.toon
+      - compiler/05_generation/09_bug_generator.toon
+      - compiler/05_generation/11_review_generator.toon
+
+    objective:
+
+      Generate realistic software repositories with evolving
+      architecture, engineering workflows, history,
+      documentation, dependencies, and development practices.
+
+
+################################################################################
+# CORE PRINCIPLES
+################################################################################
+
+principles:
+
+  - engineering_realism
+
+  - deterministic_generation
+
+  - temporal_consistency
+
+  - architecture_consistency
+
+  - repository_evolution
+
+  - reproducibility
+
+  - maintainability
+
+  - scalability
+
+
+################################################################################
+# REPOSITORY TYPES
+################################################################################
+
+repository_types:
+
+  application
+
+  backend_service
+
+  frontend
+
+  mobile
+
+  library
+
+  sdk
+
+  cli
+
+  infrastructure
+
+  ai_model
+
+  data_pipeline
+
+  monorepo
+
+  microservice
+
+
+################################################################################
+# REPOSITORY ATTRIBUTES
+################################################################################
+
+attributes:
+
+  repository_name
+
+  visibility
+
+  primary_language
+
+  secondary_languages
+
+  framework
+
+  license
+
+  default_branch
+
+  creation_date
+
+  archived
+
+  active
+
+  maturity
+
+  repository_size
+
+  codebase_age
+
+
+################################################################################
+# REPOSITORY SCALE
+################################################################################
+
+scale:
+
+  tiny:
+
+    files: 10-100
+
+  small:
+
+    files: 100-1000
+
+  medium:
+
+    files: 1000-10000
+
+  large:
+
+    files: 10000-100000
+
+  enterprise:
+
+    files: 100000+
+
+
+################################################################################
+# PROJECT STRUCTURE
+################################################################################
+
+structure:
+
+  source
+
+  tests
+
+  documentation
+
+  scripts
+
+  ci
+
+  infrastructure
+
+  examples
+
+  benchmarks
+
+  configs
+
+  assets
+
+  tools
+
+
+################################################################################
+# ENGINEERING WORKFLOWS
+################################################################################
+
+workflows:
+
+  git_flow
+
+  trunk_based
+
+  github_flow
+
+  release_flow
+
+  hotfix_flow
+
+  feature_branch
+
+  code_review
+
+  ci_cd
+
+
+################################################################################
+# DEVELOPMENT PRACTICES
+################################################################################
+
+development:
+
+  branching_strategy
+
+  commit_convention
+
+  review_policy
+
+  testing_policy
+
+  release_strategy
+
+  dependency_management
+
+  versioning_strategy
+
+  documentation_policy
+
+
+################################################################################
+# DEPENDENCIES
+################################################################################
+
+dependencies:
+
+  internal
+
+  external
+
+  package_manager
+
+  system_dependencies
+
+  build_dependencies
+
+  runtime_dependencies
+
+  optional_dependencies
+
+
+################################################################################
+# QUALITY PROFILE
+################################################################################
+
+quality:
+
+  unit_test_coverage
+
+  integration_test_coverage
+
+  documentation_score
+
+  technical_debt
+
+  maintainability
+
+  complexity
+
+  security_score
+
+  reliability_score
+
+
+################################################################################
+# REPOSITORY STATE
+################################################################################
+
+state:
+
+  commits
+
+  branches
+
+  pull_requests
+
+  releases
+
+  issues
+
+  discussions
+
+  milestones
+
+  tags
+
+  contributors
+
+
+################################################################################
+# GENERATED ARTIFACTS
+################################################################################
+
+artifacts:
+
+  README
+
+  LICENSE
+
+  CHANGELOG
+
+  CONTRIBUTING
+
+  CODE_OF_CONDUCT
+
+  ARCHITECTURE
+
+  ROADMAP
+
+  SECURITY
+
+  API_REFERENCE
+
+
+################################################################################
+# WORLD RELATIONSHIPS
+################################################################################
+
+relationships:
+
+  belongs_to:
+
+    company
+
+    project
+
+  contains:
+
+    modules
+
+    services
+
+    packages
+
+    documentation
+
+    tests
+
+  managed_by:
+
+    engineering_team
+
+
+################################################################################
+# RANDOMIZATION
+################################################################################
+
+randomization:
+
+  deterministic_seed:
+
+    true
+
+  reproducible:
+
+    true
+
+  weighted_generation:
+
+    true
+
+  technology_distribution:
+
+    realistic
+
+
+################################################################################
+# VALIDATION
+################################################################################
+
+validation:
+
+  reject_if:
+
+    missing_default_branch
+
+    missing_source_directory
+
+    impossible_repository_size
+
+    inconsistent_languages
+
+    invalid_dependency_graph
+
+    missing_readme
+
+    missing_history_reference
+
+
+################################################################################
+# METRICS
+################################################################################
+
+metrics:
+
+  compute:
+
+    repository_complexity
+
+    architecture_score
+
+    dependency_density
+
+    documentation_quality
+
+    contributor_activity
+
+    repository_health
+
+    engineering_maturity
+
+
+################################################################################
+# SUCCESS METRICS
+################################################################################
+
+success_metrics:
+
+  repository_consistency:
+
+    minimum: 1.00
+
+  engineering_realism:
+
+    minimum: 0.96
+
+  dependency_validity:
+
+    minimum: 1.00
+
+  documentation_quality:
+
+    minimum: 0.90
+
+  workflow_realism:
+
+    minimum: 0.94
+
+  reproducibility:
+
+    minimum: 1.00

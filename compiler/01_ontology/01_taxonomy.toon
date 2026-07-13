@@ -1,0 +1,635 @@
+```toon
+spec:
+
+  id: taxonomy
+
+  version: 1.0.0
+
+  status: stable
+
+  priority: critical
+
+  module: Ontology
+
+  compiler_stage: Knowledge Representation
+
+  description: >
+    Defines the universal taxonomy of the TOON Dataset Compiler.
+    The taxonomy organizes all engineering knowledge into a
+    hierarchical, graph-native ontology that serves as the
+    semantic foundation of every compiler subsystem.
+    Every Engineering Knowledge Record (EKR), Knowledge Atom,
+    Engineering World, Company, Repository, Artifact,
+    Decision and Lesson must map into this taxonomy.
+
+###########################################################
+# PURPOSE
+###########################################################
+
+purpose:
+
+  Provide a universal engineering knowledge classification
+  system that is:
+
+    hierarchical
+
+    extensible
+
+    deterministic
+
+    graph-native
+
+    language-independent
+
+###########################################################
+# TAXONOMY PRINCIPLES
+###########################################################
+
+principles:
+
+  Every concept belongs to exactly one primary category.
+
+  Concepts may belong to multiple secondary categories.
+
+  Categories never overlap semantically.
+
+  Parent concepts are always more abstract.
+
+  Child concepts specialize parent concepts.
+
+  Relationships are explicit.
+
+  Knowledge is composable.
+
+###########################################################
+# ROOT TAXONOMY
+###########################################################
+
+taxonomy:
+
+###########################################################
+# 01 FOUNDATIONS
+###########################################################
+
+  Foundations:
+
+    Mathematics
+
+    Logic
+
+    Set Theory
+
+    Probability
+
+    Statistics
+
+    Information Theory
+
+    Computation Theory
+
+###########################################################
+# 02 PROGRAMMING
+###########################################################
+
+  Programming:
+
+    Syntax
+
+    Semantics
+
+    Type Systems
+
+    Variables
+
+    Functions
+
+    Objects
+
+    Modules
+
+    Packages
+
+    Libraries
+
+    Runtime
+
+###########################################################
+# 03 ALGORITHMS
+###########################################################
+
+  Algorithms:
+
+    Searching
+
+    Sorting
+
+    Greedy
+
+    Divide And Conquer
+
+    Dynamic Programming
+
+    Backtracking
+
+    Graph Algorithms
+
+    String Algorithms
+
+    Numerical Algorithms
+
+    Randomized Algorithms
+
+###########################################################
+# 04 DATA STRUCTURES
+###########################################################
+
+  Data_Structures:
+
+    Arrays
+
+    Linked Lists
+
+    Stacks
+
+    Queues
+
+    Trees
+
+    Heaps
+
+    Hash Tables
+
+    Graphs
+
+    Tries
+
+    Skip Lists
+
+###########################################################
+# 05 COMPUTER SYSTEMS
+###########################################################
+
+  Systems:
+
+    Operating Systems
+
+    Memory
+
+    Processes
+
+    Threads
+
+    Scheduling
+
+    Filesystems
+
+    Virtual Memory
+
+    Synchronization
+
+    IPC
+
+###########################################################
+# 06 COMPILERS
+###########################################################
+
+  Compilers:
+
+    Lexing
+
+    Parsing
+
+    AST
+
+    IR
+
+    Optimization
+
+    Code Generation
+
+    Linking
+
+    Loading
+
+###########################################################
+# 07 NETWORKING
+###########################################################
+
+  Networking:
+
+    OSI
+
+    TCP/IP
+
+    HTTP
+
+    DNS
+
+    Routing
+
+    Load Balancing
+
+    RPC
+
+    gRPC
+
+    WebSockets
+
+###########################################################
+# 08 DATABASES
+###########################################################
+
+  Databases:
+
+    SQL
+
+    NoSQL
+
+    Transactions
+
+    Indexing
+
+    Query Planning
+
+    Replication
+
+    Sharding
+
+    Consistency
+
+###########################################################
+# 09 DISTRIBUTED SYSTEMS
+###########################################################
+
+  Distributed_Systems:
+
+    Consensus
+
+    Replication
+
+    Leader Election
+
+    Event Sourcing
+
+    Messaging
+
+    CAP
+
+    Fault Tolerance
+
+    Distributed Storage
+
+###########################################################
+# 10 SOFTWARE ENGINEERING
+###########################################################
+
+  Software_Engineering:
+
+    Architecture
+
+    Design Patterns
+
+    Principles
+
+    Refactoring
+
+    Technical Debt
+
+    Documentation
+
+    Code Review
+
+    Requirements
+
+###########################################################
+# 11 TESTING
+###########################################################
+
+  Testing:
+
+    Unit Testing
+
+    Integration Testing
+
+    System Testing
+
+    Property Testing
+
+    Fuzz Testing
+
+    Performance Testing
+
+    Regression Testing
+
+###########################################################
+# 12 DEVOPS
+###########################################################
+
+  DevOps:
+
+    CI
+
+    CD
+
+    Infrastructure
+
+    Containers
+
+    Kubernetes
+
+    Monitoring
+
+    Logging
+
+    Deployment
+
+###########################################################
+# 13 SECURITY
+###########################################################
+
+  Security:
+
+    Authentication
+
+    Authorization
+
+    Cryptography
+
+    Secure Coding
+
+    Vulnerabilities
+
+    Threat Modeling
+
+    Sandboxing
+
+###########################################################
+# 14 PERFORMANCE
+###########################################################
+
+  Performance:
+
+    Profiling
+
+    Benchmarking
+
+    Optimization
+
+    Parallelism
+
+    Concurrency
+
+    SIMD
+
+    GPU Computing
+
+###########################################################
+# 15 CLOUD
+###########################################################
+
+  Cloud:
+
+    Compute
+
+    Storage
+
+    Networking
+
+    Serverless
+
+    IAM
+
+    Multi Cloud
+
+###########################################################
+# 16 AI ENGINEERING
+###########################################################
+
+  AI_Engineering:
+
+    Machine Learning
+
+    Deep Learning
+
+    LLMs
+
+    RAG
+
+    Agents
+
+    Fine Tuning
+
+    Evaluation
+
+    Serving
+
+###########################################################
+# 17 ENGINEERING KNOWLEDGE
+###########################################################
+
+  Engineering_Knowledge:
+
+    Concepts
+
+    Patterns
+
+    Anti Patterns
+
+    Best Practices
+
+    Lessons
+
+    Incidents
+
+    Tradeoffs
+
+    Decisions
+
+###########################################################
+# 18 HUMAN FACTORS
+###########################################################
+
+  Human_Factors:
+
+    Collaboration
+
+    Mentoring
+
+    Communication
+
+    Leadership
+
+    Planning
+
+    Estimation
+
+###########################################################
+# KNOWLEDGE LEVELS
+###########################################################
+
+knowledge_levels:
+
+  Domain
+
+      →
+
+  Category
+
+      →
+
+  Topic
+
+      →
+
+  Concept
+
+      →
+
+  Knowledge Atom
+
+###########################################################
+# OBJECT MAPPING
+###########################################################
+
+mapping:
+
+  Every Knowledge Atom
+
+      →
+
+  Topic
+
+  Every Topic
+
+      →
+
+  Category
+
+  Every Category
+
+      →
+
+  Domain
+
+  Every Domain
+
+      →
+
+  Root Taxonomy
+
+###########################################################
+# RELATIONSHIP RULES
+###########################################################
+
+relationships:
+
+  parent_of
+
+  child_of
+
+  prerequisite_of
+
+  depends_on
+
+  extends
+
+  specializes
+
+  generalizes
+
+  related_to
+
+  complements
+
+  conflicts_with
+
+###########################################################
+# CLASSIFICATION RULES
+###########################################################
+
+rules:
+
+  Every object has one primary domain.
+
+  Every object has one primary category.
+
+  Every object has one primary topic.
+
+  Multiple secondary relationships allowed.
+
+  Cyclic taxonomy forbidden.
+
+  Duplicate taxonomy nodes forbidden.
+
+###########################################################
+# VALIDATION
+###########################################################
+
+validation:
+
+  unique_domains
+
+  unique_categories
+
+  unique_topics
+
+  connected_taxonomy
+
+  acyclic_graph
+
+  reachable_nodes
+
+###########################################################
+# SUCCESS CRITERIA
+###########################################################
+
+success:
+
+  Every engineering concept has a place.
+
+  Every concept is discoverable.
+
+  Every relationship is explicit.
+
+  Every knowledge atom is classified.
+
+  Every compiler module references this taxonomy.
+
+###########################################################
+# GUARANTEES
+###########################################################
+
+guarantees:
+
+  Universal engineering coverage.
+
+  Language independence.
+
+  Extensible hierarchy.
+
+  Graph-native representation.
+
+  Deterministic classification.
+
+###########################################################
+# FUTURE
+###########################################################
+
+future:
+
+  new_domains:
+
+    supported
+
+  ontology_growth:
+
+    unlimited
+
+  backward_compatible:
+
+    true
+
+  graph_native:
+
+    true
+```

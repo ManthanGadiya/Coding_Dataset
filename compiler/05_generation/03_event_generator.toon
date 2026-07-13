@@ -1,0 +1,368 @@
+event_generator:
+
+  metadata:
+
+    id: GEN-003
+
+    title: Event Generator
+
+    version: 1.0
+
+    status: Stable
+
+    owner: Generation Engine
+
+    depends_on:
+
+      - compiler/05_generation/02_episode_generator.toon
+      - compiler/04_world/15_world_state.toon
+      - compiler/03_curriculum/10_master_curriculum.toon
+      - compiler/01_ontology/20_master_ontology.toon
+
+    consumed_by:
+
+      - compiler/05_generation/04_instruction_generator.toon
+      - compiler/05_generation/05_reasoning_generator.toon
+      - compiler/05_generation/07_requirement_generator.toon
+      - compiler/05_generation/08_code_generator.toon
+
+    objective:
+
+      Generate realistic engineering tasks that align with the
+      curriculum, world state, engineering context, and intended
+      competency progression.
+
+
+################################################################################
+# CORE PRINCIPLES
+################################################################################
+
+principles:
+
+  - curriculum_aligned
+
+  - world_driven
+
+  - deterministic
+
+  - reproducible
+
+  - engineering_realistic
+
+  - competency_based
+
+  - traceable
+
+  - diverse
+
+
+################################################################################
+# TASK SOURCES
+################################################################################
+
+sources:
+
+  feature_request
+
+  production_incident
+
+  technical_debt
+
+  customer_feedback
+
+  roadmap
+
+  architecture_review
+
+  code_review
+
+  security_review
+
+  performance_analysis
+
+  documentation_gap
+
+  research
+
+  maintenance
+
+
+################################################################################
+# TASK TYPES
+################################################################################
+
+task_types:
+
+  implement_feature
+
+  fix_bug
+
+  refactor_module
+
+  optimize_performance
+
+  write_tests
+
+  improve_documentation
+
+  review_pull_request
+
+  design_architecture
+
+  migrate_system
+
+  investigate_incident
+
+  improve_security
+
+  automate_process
+
+  update_dependencies
+
+  create_tooling
+
+
+################################################################################
+# TASK ATTRIBUTES
+################################################################################
+
+attributes:
+
+  task_id
+
+  title
+
+  description
+
+  business_context
+
+  engineering_context
+
+  priority
+
+  estimated_effort
+
+  complexity
+
+  owner
+
+  repository
+
+  dependencies
+
+  acceptance_criteria
+
+  deadline
+
+
+################################################################################
+# CONTEXT
+################################################################################
+
+context:
+
+  company
+
+  project
+
+  repository
+
+  engineer
+
+  role
+
+  sprint
+
+  milestone
+
+  technical_debt
+
+  active_incidents
+
+  customer_requests
+
+  architecture
+
+
+################################################################################
+# DIFFICULTY MODEL
+################################################################################
+
+difficulty:
+
+  beginner
+
+  intermediate
+
+  advanced
+
+  expert
+
+  autonomous
+
+
+################################################################################
+# DEPENDENCIES
+################################################################################
+
+dependencies:
+
+  prerequisite_tasks
+
+  blocked_tasks
+
+  parallel_tasks
+
+  follow_up_tasks
+
+  architecture_dependencies
+
+  repository_dependencies
+
+
+################################################################################
+# ACCEPTANCE CRITERIA
+################################################################################
+
+acceptance:
+
+  functional_correctness
+
+  performance
+
+  reliability
+
+  maintainability
+
+  security
+
+  testing
+
+  documentation
+
+  deployment_ready
+
+
+################################################################################
+# OUTPUT
+################################################################################
+
+outputs:
+
+  task_statement
+
+  business_goal
+
+  engineering_goal
+
+  required_skills
+
+  expected_artifacts
+
+  evaluation_targets
+
+
+################################################################################
+# RANDOMIZATION
+################################################################################
+
+randomization:
+
+  deterministic_seed:
+
+    true
+
+  weighted_sampling:
+
+    true
+
+  curriculum_controlled:
+
+    true
+
+  reproducible:
+
+    true
+
+
+################################################################################
+# VALIDATION
+################################################################################
+
+validation:
+
+  reject_if:
+
+    missing_context
+
+    invalid_prerequisites
+
+    impossible_deadline
+
+    inconsistent_world_state
+
+    duplicate_task
+
+    unclear_acceptance_criteria
+
+    curriculum_violation
+
+
+################################################################################
+# METRICS
+################################################################################
+
+metrics:
+
+  compute:
+
+    engineering_realism
+
+    business_alignment
+
+    curriculum_alignment
+
+    diversity
+
+    task_complexity
+
+    dependency_depth
+
+    learning_value
+
+    traceability
+
+
+################################################################################
+# SUCCESS METRICS
+################################################################################
+
+success_metrics:
+
+  curriculum_alignment:
+
+    minimum: 1.00
+
+  engineering_realism:
+
+    minimum: 0.98
+
+  business_alignment:
+
+    minimum: 0.96
+
+  task_diversity:
+
+    minimum: 0.95
+
+  dependency_consistency:
+
+    minimum: 1.00
+
+  traceability:
+
+    minimum: 1.00
+
+  reproducibility:
+
+    minimum: 1.00

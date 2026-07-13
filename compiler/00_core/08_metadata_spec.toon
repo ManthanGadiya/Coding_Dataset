@@ -1,0 +1,525 @@
+```toon
+spec:
+
+  id: metadata_spec
+
+  version: 1.0.0
+
+  status: stable
+
+  priority: critical
+
+  module: Core
+
+  compiler_stage: Foundation
+
+  description: >
+    Defines the canonical metadata specification for every object
+    generated, processed, validated or released by the TOON Dataset
+    Compiler. Every compiler object must implement this specification.
+    Metadata guarantees identity, traceability, reproducibility,
+    provenance and lifecycle management across the entire compiler.
+
+###########################################################
+# PURPOSE
+###########################################################
+
+purpose:
+
+  Establish one universal metadata schema used by every
+  compiler object regardless of type.
+
+###########################################################
+# DESIGN PRINCIPLES
+###########################################################
+
+principles:
+
+  Universal
+
+  Immutable Identity
+
+  Traceable
+
+  Versioned
+
+  Extensible
+
+  Deterministic
+
+  Human Readable
+
+  Machine Readable
+
+###########################################################
+# METADATA STRUCTURE
+###########################################################
+
+metadata:
+
+###########################################################
+# Identity
+###########################################################
+
+  identity:
+
+    id:
+
+      globally_unique: true
+
+      immutable: true
+
+    uuid:
+
+      immutable: true
+
+    object_type:
+
+      required: true
+
+    object_name:
+
+      required: true
+
+    short_name:
+
+      optional: true
+
+###########################################################
+# Version Information
+###########################################################
+
+  version:
+
+    object_version
+
+    compiler_version
+
+    ontology_version
+
+    schema_version
+
+    serialization_version
+
+###########################################################
+# Ownership
+###########################################################
+
+  ownership:
+
+    author
+
+    contributors
+
+    maintainer
+
+    organization
+
+###########################################################
+# Provenance
+###########################################################
+
+  provenance:
+
+    source
+
+    source_type
+
+    source_reference
+
+    source_license
+
+    source_timestamp
+
+    imported_from
+
+###########################################################
+# Compiler Information
+###########################################################
+
+  compiler:
+
+    compiler_module
+
+    compiler_stage
+
+    compiler_pass
+
+    generation_method
+
+    generation_timestamp
+
+###########################################################
+# Classification
+###########################################################
+
+  classification:
+
+    domain
+
+    capability
+
+    category
+
+    tags
+
+    keywords
+
+###########################################################
+# Difficulty
+###########################################################
+
+  difficulty:
+
+    level
+
+    complexity
+
+    maturity
+
+###########################################################
+# Quality
+###########################################################
+
+  quality:
+
+    score
+
+    engineering_density
+
+    reasoning_density
+
+    educational_value
+
+    realism
+
+    completeness
+
+###########################################################
+# Confidence
+###########################################################
+
+  confidence:
+
+    confidence_level
+
+    evidence_strength
+
+    validation_status
+
+###########################################################
+# Lifecycle
+###########################################################
+
+  lifecycle:
+
+    state
+
+    created_at
+
+    updated_at
+
+    released_at
+
+    deprecated_at
+
+###########################################################
+# Relationships
+###########################################################
+
+  relationships:
+
+    parent
+
+    children
+
+    depends_on
+
+    references
+
+    related_objects
+
+###########################################################
+# Validation
+###########################################################
+
+  validation:
+
+    validated
+
+    validator
+
+    validation_timestamp
+
+    validation_report
+
+###########################################################
+# Repair
+###########################################################
+
+  repair:
+
+    repaired
+
+    repair_count
+
+    repaired_by
+
+    repair_history
+
+###########################################################
+# Optimization
+###########################################################
+
+  optimization:
+
+    optimized
+
+    optimizer
+
+    optimization_passes
+
+    optimization_score
+
+###########################################################
+# Serialization
+###########################################################
+
+  serialization:
+
+    format
+
+    checksum
+
+    export_timestamp
+
+###########################################################
+# Metrics
+###########################################################
+
+  metrics:
+
+    token_count
+
+    graph_nodes
+
+    graph_edges
+
+    relationship_count
+
+    dependency_count
+
+###########################################################
+# Audit Trail
+###########################################################
+
+  audit:
+
+    created_by
+
+    modified_by
+
+    modification_history
+
+    approval_history
+
+###########################################################
+# Security
+###########################################################
+
+  security:
+
+    integrity_hash
+
+    digital_signature
+
+###########################################################
+# Extension
+###########################################################
+
+  extensions:
+
+    custom_fields
+
+    plugin_metadata
+
+###########################################################
+# REQUIRED FIELDS
+###########################################################
+
+required:
+
+  id
+
+  uuid
+
+  object_type
+
+  object_name
+
+  object_version
+
+  compiler_version
+
+  ontology_version
+
+  domain
+
+  lifecycle
+
+  quality
+
+###########################################################
+# OPTIONAL FIELDS
+###########################################################
+
+optional:
+
+  contributors
+
+  source_reference
+
+  tags
+
+  keywords
+
+  optimization
+
+  repair
+
+  security
+
+  extensions
+
+###########################################################
+# METADATA INHERITANCE
+###########################################################
+
+inheritance:
+
+  Every object inherits this metadata.
+
+  Child objects inherit parent provenance.
+
+  Parent identity is never modified.
+
+###########################################################
+# UPDATE POLICY
+###########################################################
+
+updates:
+
+  mutable:
+
+    quality
+
+    lifecycle
+
+    optimization
+
+    validation
+
+    repair
+
+    tags
+
+  immutable:
+
+    id
+
+    uuid
+
+    provenance
+
+    creation_timestamp
+
+###########################################################
+# METADATA VALIDATION
+###########################################################
+
+validation:
+
+  id_must_be_unique
+
+  version_required
+
+  timestamps_required
+
+  lifecycle_required
+
+  compiler_version_required
+
+  ontology_version_required
+
+###########################################################
+# IDENTIFIER FORMAT
+###########################################################
+
+identifier:
+
+  format:
+
+    <TYPE>-<DOMAIN>-<UUID>
+
+  examples:
+
+    KA-Algorithms-000001
+
+    EKR-Systems-001245
+
+    CO-Cloud-000021
+
+###########################################################
+# TRACEABILITY
+###########################################################
+
+traceability:
+
+  Every object must trace back to:
+
+    Original Source
+
+    Compiler Pass
+
+    Ontology Node
+
+    Generator
+
+    Validation Report
+
+    Release Version
+
+###########################################################
+# GUARANTEES
+###########################################################
+
+guarantees:
+
+  Every compiler object has one identity.
+
+  Every object is traceable.
+
+  Every object is versioned.
+
+  Every object is reproducible.
+
+  Every object is auditable.
+
+  Every object is extensible.
+
+###########################################################
+# FUTURE COMPATIBILITY
+###########################################################
+
+future:
+
+  backward_compatible: true
+
+  schema_evolution: true
+
+  plugin_extensions: true
+
+  distributed_generation: true
+
+  cloud_ready: true
+```

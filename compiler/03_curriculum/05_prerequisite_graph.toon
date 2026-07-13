@@ -1,0 +1,452 @@
+prerequisite_graph:
+
+  metadata:
+
+    id: CURR-005
+
+    title: Prerequisite Graph
+
+    version: 1.0
+
+    status: Stable
+
+    owner: Curriculum Engine
+
+    depends_on:
+
+      - compiler/01_ontology/19_dependency_graph.toon
+      - compiler/03_curriculum/01_learning_order.toon
+      - compiler/03_curriculum/02_skill_progression.toon
+      - compiler/03_curriculum/03_domain_progression.toon
+      - compiler/03_curriculum/04_difficulty_progression.toon
+
+    consumed_by:
+
+      - compiler/03_curriculum/06_sampling_strategy.toon
+      - compiler/03_curriculum/09_curriculum_graph.toon
+      - compiler/03_curriculum/10_master_curriculum.toon
+      - compiler/05_generation/19_dataset_builder.toon
+      - compiler/08_validation/03_graph_validation.toon
+
+    objective:
+
+      Represent all prerequisite relationships as a Directed
+      Acyclic Graph (DAG) to guarantee valid curriculum generation.
+
+
+################################################################################
+# GRAPH RULES
+################################################################################
+
+graph_rules:
+
+  structure:
+
+    directed: true
+
+    acyclic: true
+
+    connected: true
+
+    layered: true
+
+    deterministic: true
+
+  constraints:
+
+    no_cycles
+
+    no_self_edges
+
+    prerequisite_before_dependent
+
+    preserve_dependency_order
+
+    multiple_parents_allowed
+
+    multiple_children_allowed
+
+
+################################################################################
+# ROOT NODES
+################################################################################
+
+root_nodes:
+
+  - Programming Fundamentals
+
+  - Mathematics
+
+  - Computer Fundamentals
+
+  - Tooling Fundamentals
+
+
+################################################################################
+# DOMAIN DEPENDENCIES
+################################################################################
+
+dependencies:
+
+  Programming Fundamentals:
+
+    enables:
+
+      - Variables
+      - Data Types
+      - Operators
+      - Control Flow
+      - Functions
+
+  Variables:
+
+    enables:
+
+      - Memory
+      - Scope
+
+  Data Types:
+
+    enables:
+
+      - Collections
+      - Objects
+
+  Functions:
+
+    enables:
+
+      - Recursion
+      - Modules
+      - APIs
+
+  Memory:
+
+    enables:
+
+      - Pointers
+      - Garbage Collection
+      - Performance
+
+  Collections:
+
+    enables:
+
+      - Data Structures
+
+  Data Structures:
+
+    requires:
+
+      - Variables
+      - Functions
+      - Memory
+
+    enables:
+
+      - Algorithms
+      - Databases
+
+  Algorithms:
+
+    requires:
+
+      - Data Structures
+
+    enables:
+
+      - Optimization
+      - AI
+      - Distributed Systems
+
+  Object Oriented Programming:
+
+    requires:
+
+      - Functions
+      - Objects
+
+    enables:
+
+      - Design Patterns
+
+  Functional Programming:
+
+    requires:
+
+      - Functions
+
+    enables:
+
+      - Parallel Programming
+
+  Design Patterns:
+
+    requires:
+
+      - Object Oriented Programming
+
+    enables:
+
+      - Architecture
+
+  Databases:
+
+    requires:
+
+      - Data Structures
+
+    enables:
+
+      - Backend Engineering
+
+  Networking:
+
+    requires:
+
+      - Operating Systems
+
+    enables:
+
+      - Distributed Systems
+
+  Backend Engineering:
+
+    requires:
+
+      - APIs
+      - Databases
+      - Authentication
+
+    enables:
+
+      - Production Engineering
+
+  Architecture:
+
+    requires:
+
+      - Backend Engineering
+      - Design Patterns
+
+    enables:
+
+      - Distributed Systems
+
+  Distributed Systems:
+
+    requires:
+
+      - Networking
+      - Architecture
+
+    enables:
+
+      - Cloud Engineering
+
+  Cloud Engineering:
+
+    requires:
+
+      - Distributed Systems
+
+    enables:
+
+      - Production Engineering
+
+  Production Engineering:
+
+    requires:
+
+      - Architecture
+      - Cloud Engineering
+
+    enables:
+
+      - AI Engineering
+
+  AI Engineering:
+
+    requires:
+
+      - Algorithms
+      - Backend Engineering
+      - Production Engineering
+
+    enables:
+
+      - Agent Engineering
+
+  Agent Engineering:
+
+    requires:
+
+      - AI Engineering
+      - Planning
+      - Reflection
+      - Tool Use
+
+    enables:
+
+      - Autonomous Engineering
+
+  Autonomous Engineering:
+
+    requires:
+
+      - Agent Engineering
+
+    enables: []
+
+
+################################################################################
+# CROSS DOMAIN EDGES
+################################################################################
+
+cross_dependencies:
+
+  Testing:
+
+    depends_on:
+
+      - Functions
+      - Modules
+
+  Security:
+
+    depends_on:
+
+      - Networking
+      - Backend Engineering
+
+  Performance:
+
+    depends_on:
+
+      - Algorithms
+      - Memory
+
+  Debugging:
+
+    depends_on:
+
+      - Programming Fundamentals
+
+  Documentation:
+
+    depends_on:
+
+      - Software Engineering
+
+  Code Review:
+
+    depends_on:
+
+      - Software Engineering
+
+  DevOps:
+
+    depends_on:
+
+      - Backend Engineering
+      - Cloud Engineering
+
+
+################################################################################
+# VALIDATION RULES
+################################################################################
+
+validation:
+
+  reject_if:
+
+    - cyclic_graph
+
+    - missing_node
+
+    - orphan_node
+
+    - invalid_dependency
+
+    - duplicate_edge
+
+    - unreachable_node
+
+  verify:
+
+    - topological_sort
+
+    - dependency_closure
+
+    - graph_connectivity
+
+    - deterministic_traversal
+
+
+################################################################################
+# TOPOLOGICAL ORDER
+################################################################################
+
+topological_constraints:
+
+  every_parent_before_child: true
+
+  deterministic_order: true
+
+  stable_generation: true
+
+  reproducible_builds: true
+
+
+################################################################################
+# GRAPH METRICS
+################################################################################
+
+metrics:
+
+  measure:
+
+    - graph_depth
+
+    - graph_width
+
+    - average_branching_factor
+
+    - longest_dependency_chain
+
+    - prerequisite_density
+
+    - dependency_reuse
+
+    - knowledge_reachability
+
+
+################################################################################
+# SUCCESS METRICS
+################################################################################
+
+success_metrics:
+
+  graph_validity:
+
+    minimum: 1.00
+
+  cyclic_dependencies:
+
+    maximum: 0
+
+  unreachable_nodes:
+
+    maximum: 0
+
+  prerequisite_accuracy:
+
+    minimum: 1.00
+
+  deterministic_traversal:
+
+    minimum: 1.00
+
+  curriculum_consistency:
+
+    minimum: 0.99

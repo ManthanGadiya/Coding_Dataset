@@ -1,0 +1,449 @@
+company_generator:
+
+  metadata:
+
+    id: WORLD-002
+
+    title: Company Generator
+
+    version: 1.0
+
+    status: Stable
+
+    owner: World Engine
+
+    depends_on:
+
+      - compiler/04_world/01_world_generator.toon
+      - compiler/01_ontology/17_entity_model.toon
+
+    consumed_by:
+
+      - compiler/04_world/03_repository_generator.toon
+      - compiler/04_world/04_project_generator.toon
+      - compiler/04_world/05_team_generator.toon
+      - compiler/04_world/08_business_events.toon
+      - compiler/04_world/14_company_growth.toon
+
+    objective:
+
+      Generate realistic software companies with coherent business,
+      engineering, financial, and organizational characteristics.
+
+
+################################################################################
+# CORE PRINCIPLES
+################################################################################
+
+principles:
+
+  - internally_consistent
+
+  - business_driven
+
+  - engineering_realistic
+
+  - scalable
+
+  - reproducible
+
+  - diverse
+
+  - economically_plausible
+
+
+################################################################################
+# COMPANY TYPES
+################################################################################
+
+company_types:
+
+  startup
+
+  scaleup
+
+  smb
+
+  enterprise
+
+  multinational
+
+  government
+
+  nonprofit
+
+  consulting
+
+  open_source_foundation
+
+
+################################################################################
+# INDUSTRIES
+################################################################################
+
+industries:
+
+  fintech
+
+  healthcare
+
+  ecommerce
+
+  cybersecurity
+
+  education
+
+  cloud
+
+  ai
+
+  robotics
+
+  gaming
+
+  logistics
+
+  telecom
+
+  manufacturing
+
+  energy
+
+  social_media
+
+  devtools
+
+
+################################################################################
+# COMPANY ATTRIBUTES
+################################################################################
+
+attributes:
+
+  name
+
+  industry
+
+  headquarters
+
+  founded_year
+
+  employee_count
+
+  engineering_count
+
+  annual_revenue
+
+  funding_stage
+
+  ownership_type
+
+  growth_rate
+
+  market_share
+
+
+################################################################################
+# ENGINEERING PROFILE
+################################################################################
+
+engineering:
+
+  architecture_style:
+
+    monolith
+
+    modular_monolith
+
+    microservices
+
+    event_driven
+
+    serverless
+
+    hybrid
+
+  deployment_model:
+
+    cloud
+
+    on_premise
+
+    hybrid
+
+    edge
+
+  engineering_maturity:
+
+    experimental
+
+    growing
+
+    mature
+
+    elite
+
+  testing_culture:
+
+    low
+
+    moderate
+
+    strong
+
+    rigorous
+
+
+################################################################################
+# TECHNOLOGY STACK
+################################################################################
+
+technology:
+
+  languages:
+
+    C
+
+    C++
+
+    Rust
+
+    Go
+
+    Java
+
+    Kotlin
+
+    Python
+
+    JavaScript
+
+    TypeScript
+
+  databases:
+
+    PostgreSQL
+
+    MySQL
+
+    SQLite
+
+    MongoDB
+
+    Redis
+
+    Cassandra
+
+  infrastructure:
+
+    Docker
+
+    Kubernetes
+
+    Terraform
+
+    Kafka
+
+    RabbitMQ
+
+    Prometheus
+
+    Grafana
+
+
+################################################################################
+# ORGANIZATION
+################################################################################
+
+organization:
+
+  executive
+
+  product
+
+  engineering
+
+  infrastructure
+
+  security
+
+  qa
+
+  design
+
+  customer_success
+
+  support
+
+  research
+
+
+################################################################################
+# BUSINESS CONSTRAINTS
+################################################################################
+
+constraints:
+
+  budget
+
+  deadlines
+
+  regulations
+
+  compliance
+
+  hiring
+
+  customer_commitments
+
+  technical_debt
+
+  infrastructure_cost
+
+
+################################################################################
+# CULTURE
+################################################################################
+
+culture:
+
+  innovation
+
+  quality
+
+  speed
+
+  reliability
+
+  security
+
+  documentation
+
+  experimentation
+
+  learning
+
+
+################################################################################
+# WORLD RELATIONSHIPS
+################################################################################
+
+relationships:
+
+  owns:
+
+    repositories
+
+    projects
+
+    teams
+
+    infrastructure
+
+    products
+
+  employs:
+
+    engineers
+
+    managers
+
+    architects
+
+    researchers
+
+  serves:
+
+    customers
+
+
+################################################################################
+# RANDOMIZATION
+################################################################################
+
+randomization:
+
+  deterministic_seed:
+
+    true
+
+  weighted_generation:
+
+    true
+
+  reproducible:
+
+    true
+
+  diversity_bias:
+
+    enabled
+
+
+################################################################################
+# VALIDATION
+################################################################################
+
+validation:
+
+  reject_if:
+
+    missing_industry
+
+    invalid_employee_count
+
+    inconsistent_budget
+
+    impossible_growth
+
+    missing_departments
+
+    orphan_projects
+
+
+################################################################################
+# METRICS
+################################################################################
+
+metrics:
+
+  measure:
+
+    organizational_complexity
+
+    engineering_maturity
+
+    technology_diversity
+
+    business_realism
+
+    operational_scale
+
+    company_consistency
+
+
+################################################################################
+# SUCCESS METRICS
+################################################################################
+
+success_metrics:
+
+  realism:
+
+    minimum: 0.95
+
+  consistency:
+
+    minimum: 1.00
+
+  diversity:
+
+    minimum: 0.90
+
+  reproducibility:
+
+    minimum: 1.00
+
+  engineering_quality:
+
+    minimum: 0.92

@@ -1,0 +1,473 @@
+```toon
+spec:
+
+  id: artifact_types
+
+  version: 1.0.0
+
+  status: stable
+
+  priority: highest
+
+  module: Ontology
+
+  compiler_stage: Knowledge Representation
+
+  description: >
+    Defines every engineering artifact that can exist within
+    the TOON Engineering Universe.
+    Artifacts are persistent outputs produced throughout the
+    software engineering lifecycle.
+    Every Engineering Knowledge Record references zero or more
+    Engineering Artifacts.
+
+###########################################################
+# PURPOSE
+###########################################################
+
+purpose:
+
+  Create a universal ontology for every artifact
+  produced, modified, consumed or analyzed during
+  software engineering.
+
+###########################################################
+# PHILOSOPHY
+###########################################################
+
+philosophy:
+
+  Engineering creates artifacts.
+
+  Artifacts preserve engineering knowledge.
+
+  Artifacts evolve.
+
+  Artifacts provide evidence.
+
+  Artifacts connect engineering decisions
+  to implementation.
+
+###########################################################
+# ARTIFACT MODEL
+###########################################################
+
+model:
+
+  Artifact
+
+      →
+
+  Category
+
+      →
+
+  Type
+
+      →
+
+  Instance
+
+###########################################################
+# ARTIFACT CATEGORIES
+###########################################################
+
+categories:
+
+  Source
+
+  Architecture
+
+  Documentation
+
+  Planning
+
+  Quality
+
+  Operations
+
+  Infrastructure
+
+  Research
+
+  Knowledge
+
+###########################################################
+# SOURCE ARTIFACTS
+###########################################################
+
+source:
+
+  Source File
+
+  Module
+
+  Package
+
+  Library
+
+  Repository
+
+  Branch
+
+  Commit
+
+  Pull Request
+
+  Merge Request
+
+  Release
+
+###########################################################
+# ARCHITECTURE ARTIFACTS
+###########################################################
+
+architecture:
+
+  Architecture Diagram
+
+  Component Diagram
+
+  Deployment Diagram
+
+  Sequence Diagram
+
+  Domain Model
+
+  Service Contract
+
+  Architecture Decision Record
+
+###########################################################
+# DOCUMENTATION
+###########################################################
+
+documentation:
+
+  README
+
+  RFC
+
+  Specification
+
+  Design Document
+
+  API Documentation
+
+  User Guide
+
+  Developer Guide
+
+  Runbook
+
+  Migration Guide
+
+###########################################################
+# PLANNING
+###########################################################
+
+planning:
+
+  Requirement
+
+  Epic
+
+  Story
+
+  Task
+
+  Sprint Plan
+
+  Roadmap
+
+  Milestone
+
+###########################################################
+# QUALITY
+###########################################################
+
+quality:
+
+  Test Case
+
+  Test Suite
+
+  Benchmark
+
+  Performance Report
+
+  Coverage Report
+
+  Static Analysis Report
+
+  Review Report
+
+###########################################################
+# OPERATIONS
+###########################################################
+
+operations:
+
+  Incident Report
+
+  Deployment Record
+
+  Rollback Report
+
+  Monitoring Dashboard
+
+  Alert
+
+  Log
+
+  Metric
+
+###########################################################
+# INFRASTRUCTURE
+###########################################################
+
+infrastructure:
+
+  Dockerfile
+
+  Compose File
+
+  Kubernetes Manifest
+
+  Terraform Module
+
+  CI Pipeline
+
+  CD Pipeline
+
+  Infrastructure Template
+
+###########################################################
+# RESEARCH
+###########################################################
+
+research:
+
+  Experiment
+
+  Prototype
+
+  Evaluation
+
+  Comparison Matrix
+
+  Survey
+
+  Benchmark Study
+
+###########################################################
+# KNOWLEDGE
+###########################################################
+
+knowledge:
+
+  Knowledge Atom
+
+  Engineering Knowledge Record
+
+  Lesson
+
+  Pattern
+
+  Anti Pattern
+
+  Engineering Guideline
+
+###########################################################
+# ARTIFACT ATTRIBUTES
+###########################################################
+
+attributes:
+
+  identity
+
+  owner
+
+  lifecycle
+
+  version
+
+  status
+
+  metadata
+
+  dependencies
+
+  relationships
+
+  quality
+
+###########################################################
+# LIFECYCLE
+###########################################################
+
+lifecycle:
+
+  Created
+
+      →
+
+  Draft
+
+      →
+
+  Review
+
+      →
+
+  Approved
+
+      →
+
+  Published
+
+      →
+
+  Updated
+
+      →
+
+  Deprecated
+
+      →
+
+  Archived
+
+###########################################################
+# OWNERSHIP
+###########################################################
+
+ownership:
+
+  Engineer
+
+  Team
+
+  Repository
+
+  Organization
+
+###########################################################
+# RELATIONSHIPS
+###########################################################
+
+relationships:
+
+  created_by
+
+  modified_by
+
+  reviewed_by
+
+  approved_by
+
+  references
+
+  generated_from
+
+  validates
+
+  documents
+
+  implements
+
+  supersedes
+
+###########################################################
+# QUALITY PROPERTIES
+###########################################################
+
+quality:
+
+  Correctness
+
+  Completeness
+
+  Maintainability
+
+  Traceability
+
+  Reusability
+
+  Educational Value
+
+###########################################################
+# EKR INTEGRATION
+###########################################################
+
+ekr:
+
+  Every Engineering Knowledge Record may:
+
+    produce artifacts
+
+    consume artifacts
+
+    modify artifacts
+
+    validate artifacts
+
+    document artifacts
+
+###########################################################
+# VALIDATION
+###########################################################
+
+validation:
+
+  Every artifact has identity.
+
+  Every artifact has owner.
+
+  Every artifact has lifecycle.
+
+  Every artifact has purpose.
+
+  Every artifact belongs to one category.
+
+###########################################################
+# SUCCESS
+###########################################################
+
+success:
+
+  Every engineering output is represented
+  as an Engineering Artifact.
+
+###########################################################
+# GUARANTEES
+###########################################################
+
+guarantees:
+
+  Universal Artifact Ontology
+
+  Explicit Ownership
+
+  Complete Lifecycle
+
+  Graph Native Relationships
+
+  Unlimited Extensibility
+
+###########################################################
+# FUTURE
+###########################################################
+
+future:
+
+  artifact_templates: true
+
+  artifact_inheritance: true
+
+  semantic_search: true
+
+  automated_generation: true
+
+  graph_embeddings: true
+```

@@ -1,0 +1,364 @@
+scenario_generator:
+
+  metadata:
+
+    id: GEN-015
+
+    title: Scenario Generator
+
+    version: 2.0
+
+    status: Stable
+
+    owner: Generation Engine
+
+    depends_on:
+
+      - compiler/05_generation/08_code_generator.toon
+
+      - compiler/05_generation/09_bug_generator.toon
+
+      - compiler/05_generation/10_test_generator.toon
+
+      - compiler/05_generation/11_review_generator.toon
+
+      - compiler/05_generation/12_documentation_generator.toon
+
+      - compiler/05_generation/13_memory_generator.toon
+
+      - compiler/05_generation/14_artifact_generator.toon
+
+      - compiler/04_world/15_world_state.toon
+
+      - compiler/02_cognition/07_decision_engine.toon
+
+    consumed_by:
+
+      - compiler/05_generation/16_story_generator.toon
+
+      - compiler/05_generation/17_dialog_generator.toon
+
+      - compiler/05_generation/18_failure_generator.toon
+
+      - compiler/05_generation/19_dataset_builder.toon
+
+    objective:
+
+      Generate realistic engineering scenarios containing
+      evolving business goals, technical constraints,
+      human interactions, uncertainty, and production
+      environments that require multi-step engineering reasoning.
+
+
+################################################################################
+# CORE PRINCIPLES
+################################################################################
+
+principles:
+
+  realism
+
+  causality
+
+  diversity
+
+  uncertainty
+
+  temporal_consistency
+
+  engineering_authenticity
+
+  business_alignment
+
+  educational_value
+
+
+################################################################################
+# INPUTS
+################################################################################
+
+inputs:
+
+  repository_state
+
+  engineering_memory
+
+  organization_state
+
+  architecture
+
+  active_features
+
+  production_metrics
+
+  incident_history
+
+  customer_feedback
+
+  world_state
+
+
+################################################################################
+# SCENARIO TYPES
+################################################################################
+
+scenario_types:
+
+  feature_request
+
+  production_incident
+
+  scaling_event
+
+  security_incident
+
+  customer_escalation
+
+  dependency_breakage
+
+  legacy_modernization
+
+  performance_regression
+
+  architecture_migration
+
+  cloud_migration
+
+  release_day
+
+  disaster_recovery
+
+  compliance_audit
+
+  acquisition_merge
+
+  startup_hypergrowth
+
+  open_source_maintenance
+
+
+################################################################################
+# PARTICIPANTS
+################################################################################
+
+participants:
+
+  junior_engineer
+
+  senior_engineer
+
+  staff_engineer
+
+  principal_engineer
+
+  sre
+
+  tech_lead
+
+  engineering_manager
+
+  product_manager
+
+  security_engineer
+
+  customer
+
+  qa_engineer
+
+  architect
+
+
+################################################################################
+# CONSTRAINTS
+################################################################################
+
+constraints:
+
+  deadline
+
+  budget
+
+  staffing
+
+  technical_debt
+
+  legacy_systems
+
+  backward_compatibility
+
+  compliance
+
+  security
+
+  infrastructure_limits
+
+  customer_commitments
+
+
+################################################################################
+# EVENTS
+################################################################################
+
+events:
+
+  deployment
+
+  rollback
+
+  outage
+
+  release
+
+  meeting
+
+  design_review
+
+  code_review
+
+  incident_response
+
+  planning_session
+
+  customer_demo
+
+  benchmark_run
+
+  architecture_review
+
+
+################################################################################
+# DECISION POINTS
+################################################################################
+
+decision_points:
+
+  prioritize_feature
+
+  accept_technical_debt
+
+  rollback_release
+
+  redesign_architecture
+
+  optimize_performance
+
+  delay_release
+
+  split_service
+
+  migrate_database
+
+  reject_pr
+
+  approve_hotfix
+
+
+################################################################################
+# RANDOMIZATION
+################################################################################
+
+randomization:
+
+  deterministic_seed:
+
+    true
+
+  complexity:
+
+    adaptive
+
+  uncertainty:
+
+    realistic
+
+  event_order:
+
+    variable
+
+
+################################################################################
+# VALIDATION
+################################################################################
+
+validation:
+
+  reject_if:
+
+    impossible_timeline
+
+    contradictory_constraints
+
+    invalid_world_state
+
+    inconsistent_repository
+
+    impossible_business_goal
+
+
+################################################################################
+# OUTPUTS
+################################################################################
+
+outputs:
+
+  engineering_scenario
+
+  timeline
+
+  participants
+
+  decision_points
+
+  constraints
+
+  expected_outcomes
+
+  validation_report
+
+
+################################################################################
+# METRICS
+################################################################################
+
+metrics:
+
+  compute:
+
+    realism
+
+    engineering_complexity
+
+    reasoning_depth
+
+    business_alignment
+
+    temporal_consistency
+
+    educational_value
+
+
+################################################################################
+# SUCCESS METRICS
+################################################################################
+
+success_metrics:
+
+  realism:
+
+    minimum: 0.99
+
+  causal_consistency:
+
+    minimum: 0.99
+
+  engineering_depth:
+
+    minimum: 0.99
+
+  decision_quality:
+
+    minimum: 0.98
+
+  world_consistency:
+
+    minimum: 1.00

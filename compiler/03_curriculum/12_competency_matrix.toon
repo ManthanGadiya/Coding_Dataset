@@ -1,0 +1,447 @@
+competency_matrix:
+
+  metadata:
+
+    id: CURR-012
+
+    title: Competency Matrix
+
+    version: 1.0
+
+    status: Stable
+
+    owner: Curriculum Engine
+
+    depends_on:
+
+      - compiler/03_curriculum/11_learning_objectives.toon
+      - compiler/03_curriculum/10_master_curriculum.toon
+      - compiler/02_cognition/15_cognitive_metrics.toon
+      - compiler/01_ontology/02_capabilities.toon
+      - compiler/01_ontology/06_difficulty_model.toon
+
+    consumed_by:
+
+      - compiler/07_quality/01_quality_engine.toon
+      - compiler/07_quality/02_scoring_dimensions.toon
+      - compiler/08_validation/04_reasoning_validation.toon
+      - compiler/08_validation/09_dataset_validation.toon
+      - compiler/08_validation/10_final_validation.toon
+      - compiler/05_generation/19_dataset_builder.toon
+
+    objective:
+
+      Define measurable competency levels for every engineering
+      capability to evaluate learning quality, reasoning ability,
+      and autonomous engineering readiness.
+
+
+################################################################################
+# CORE PRINCIPLES
+################################################################################
+
+principles:
+
+  - measurable
+
+  - objective
+
+  - capability_based
+
+  - cumulative
+
+  - explainable
+
+  - transferable
+
+  - engineering_first
+
+  - production_oriented
+
+  - autonomy_ready
+
+
+################################################################################
+# COMPETENCY LEVELS
+################################################################################
+
+levels:
+
+  - level: 0
+
+    name: Awareness
+
+    description:
+
+      Recognizes concepts without practical application.
+
+  - level: 1
+
+    name: Understanding
+
+    description:
+
+      Explains concepts and predicts simple behavior.
+
+  - level: 2
+
+    name: Practitioner
+
+    description:
+
+      Applies concepts to solve engineering problems.
+
+  - level: 3
+
+    name: Advanced Engineer
+
+    description:
+
+      Designs robust solutions and justifies tradeoffs.
+
+  - level: 4
+
+    name: Senior Engineer
+
+    description:
+
+      Optimizes systems, mentors through reasoning,
+      and evaluates multiple architectural alternatives.
+
+  - level: 5
+
+    name: Autonomous Engineer
+
+    description:
+
+      Independently plans, builds, validates,
+      debugs, reviews, and improves complex systems.
+
+
+################################################################################
+# COMPETENCY DOMAINS
+################################################################################
+
+domains:
+
+  programming:
+
+    competencies:
+
+      syntax
+
+      language_features
+
+      debugging
+
+      testing
+
+      optimization
+
+  computer_science:
+
+    competencies:
+
+      algorithms
+
+      data_structures
+
+      complexity_analysis
+
+      graph_reasoning
+
+      dynamic_programming
+
+  software_engineering:
+
+    competencies:
+
+      modularity
+
+      architecture
+
+      design_patterns
+
+      documentation
+
+      maintainability
+
+  backend:
+
+    competencies:
+
+      apis
+
+      databases
+
+      authentication
+
+      scalability
+
+      concurrency
+
+  production:
+
+    competencies:
+
+      deployment
+
+      monitoring
+
+      reliability
+
+      incident_response
+
+      observability
+
+  ai_engineering:
+
+    competencies:
+
+      machine_learning
+
+      llm_engineering
+
+      rag
+
+      embeddings
+
+      evaluation
+
+      tool_use
+
+  autonomous_engineering:
+
+    competencies:
+
+      planning
+
+      reflection
+
+      memory_management
+
+      self_critique
+
+      multi_agent_coordination
+
+      autonomous_debugging
+
+
+################################################################################
+# REASONING COMPETENCIES
+################################################################################
+
+reasoning:
+
+  deductive
+
+  inductive
+
+  abductive
+
+  causal
+
+  probabilistic
+
+  systems_reasoning
+
+  architectural_reasoning
+
+  strategic_reasoning
+
+
+################################################################################
+# ENGINEERING COMPETENCIES
+################################################################################
+
+engineering:
+
+  requirement_analysis
+
+  tradeoff_analysis
+
+  architecture_design
+
+  implementation
+
+  testing
+
+  debugging
+
+  optimization
+
+  documentation
+
+  code_review
+
+  production_operations
+
+
+################################################################################
+# AUTONOMY COMPETENCIES
+################################################################################
+
+autonomy:
+
+  task_planning
+
+  decomposition
+
+  execution
+
+  verification
+
+  recovery
+
+  reflection
+
+  learning
+
+  adaptation
+
+
+################################################################################
+# EVALUATION CRITERIA
+################################################################################
+
+evaluation:
+
+  every_competency:
+
+    measure:
+
+      conceptual_understanding
+
+      implementation_quality
+
+      reasoning_quality
+
+      explanation_quality
+
+      transfer_learning
+
+      production_readiness
+
+      autonomy
+
+      consistency
+
+
+################################################################################
+# PROFICIENCY REQUIREMENTS
+################################################################################
+
+proficiency:
+
+  awareness:
+
+    minimum_score: 0.30
+
+  understanding:
+
+    minimum_score: 0.50
+
+  practitioner:
+
+    minimum_score: 0.70
+
+  advanced_engineer:
+
+    minimum_score: 0.85
+
+  senior_engineer:
+
+    minimum_score: 0.93
+
+  autonomous_engineer:
+
+    minimum_score: 0.97
+
+
+################################################################################
+# FAILURE CONDITIONS
+################################################################################
+
+failure_conditions:
+
+  - memorization_without_reasoning
+
+  - inconsistent_decisions
+
+  - weak_transfer_learning
+
+  - inability_to_explain
+
+  - architecture_failure
+
+  - production_failure
+
+  - repeated_debugging_failures
+
+  - poor_tradeoff_reasoning
+
+
+################################################################################
+# VALIDATION RULES
+################################################################################
+
+validation:
+
+  every_competency_must_be:
+
+    observable
+
+    measurable
+
+    reproducible
+
+    transferable
+
+    curriculum_aligned
+
+    ontology_consistent
+
+  reject_if:
+
+    - undefined_competency
+
+    - duplicate_competency
+
+    - ambiguous_measurement
+
+    - missing_evaluation_criteria
+
+
+################################################################################
+# SUCCESS METRICS
+################################################################################
+
+success_metrics:
+
+  competency_coverage:
+
+    minimum: 1.00
+
+  reasoning_accuracy:
+
+    minimum: 0.95
+
+  engineering_readiness:
+
+    minimum: 0.92
+
+  production_readiness:
+
+    minimum: 0.90
+
+  autonomy_readiness:
+
+    minimum: 0.85
+
+  evaluation_consistency:
+
+    minimum: 0.98
+
+  curriculum_alignment:
+
+    minimum: 0.99

@@ -1,0 +1,484 @@
+```toon
+spec:
+
+  id: hypothesis_engine
+
+  version: 1.0.0
+
+  status: stable
+
+  priority: highest
+
+  module: Cognition
+
+  compiler_stage: Hypothesis Formation
+
+  description: >
+    Defines the Engineering Hypothesis Engine (EHE),
+    the cognitive subsystem responsible for generating,
+    refining, validating, ranking and retiring hypotheses
+    during engineering reasoning. It enables systematic
+    exploration of uncertainty through evidence-driven
+    hypothesis management.
+
+###########################################################
+# PURPOSE
+###########################################################
+
+purpose:
+
+  Transform observations into
+  testable engineering hypotheses.
+
+###########################################################
+# PHILOSOPHY
+###########################################################
+
+philosophy:
+
+  Never jump directly
+  to conclusions.
+
+  Generate hypotheses.
+
+  Test hypotheses.
+
+  Reject weak hypotheses.
+
+  Strengthen good hypotheses.
+
+###########################################################
+# HYPOTHESIS PIPELINE
+###########################################################
+
+pipeline:
+
+  Observe
+
+      →
+
+  Detect Anomaly
+
+      →
+
+  Generate Hypotheses
+
+      →
+
+  Rank
+
+      →
+
+  Design Validation
+
+      →
+
+  Execute
+
+      →
+
+  Update Confidence
+
+      →
+
+  Decide
+
+###########################################################
+# INPUTS
+###########################################################
+
+inputs:
+
+  Observations
+
+  Logs
+
+  Metrics
+
+  Stack Traces
+
+  Source Code
+
+  User Reports
+
+  Test Results
+
+  Benchmarks
+
+  Knowledge Atoms
+
+  Memory
+
+###########################################################
+# OUTPUTS
+###########################################################
+
+outputs:
+
+  Root Cause
+
+  Design Choice
+
+  Engineering Decision
+
+  Rejected Hypothesis
+
+  Validated Hypothesis
+
+  New Knowledge
+
+###########################################################
+# HYPOTHESIS TYPES
+###########################################################
+
+types:
+
+  Root Cause
+
+  Performance
+
+  Security
+
+  Architecture
+
+  Concurrency
+
+  Memory
+
+  Compiler
+
+  Networking
+
+  Product
+
+  Human Error
+
+###########################################################
+# GENERATION METHODS
+###########################################################
+
+generation:
+
+  Pattern Matching
+
+  Analogical Reasoning
+
+  Abductive Reasoning
+
+  Causal Analysis
+
+  Constraint Analysis
+
+  Failure Analysis
+
+  Simulation
+
+###########################################################
+# ATTRIBUTES
+###########################################################
+
+attributes:
+
+  id
+
+  description
+
+  assumptions
+
+  supporting_evidence
+
+  contradicting_evidence
+
+  confidence
+
+  priority
+
+  cost_to_validate
+
+  expected_impact
+
+###########################################################
+# RANKING FACTORS
+###########################################################
+
+ranking:
+
+  Evidence Strength
+
+  Prior Probability
+
+  Engineering Experience
+
+  Validation Cost
+
+  Risk
+
+  Expected Impact
+
+###########################################################
+# VALIDATION METHODS
+###########################################################
+
+validation:
+
+  Unit Test
+
+  Integration Test
+
+  Benchmark
+
+  Simulation
+
+  Static Analysis
+
+  Dynamic Analysis
+
+  Experiment
+
+  Code Review
+
+###########################################################
+# CONFIDENCE UPDATE
+###########################################################
+
+confidence:
+
+  Initialize
+
+  Increase
+
+  Decrease
+
+  Stabilize
+
+  Reject
+
+  Accept
+
+###########################################################
+# TERMINATION
+###########################################################
+
+termination:
+
+  Root Cause Confirmed
+
+  Evidence Exhausted
+
+  Objective Achieved
+
+  Escalation Required
+
+###########################################################
+# FAILURE MODES
+###########################################################
+
+failure:
+
+  Confirmation Bias
+
+  Premature Conclusion
+
+  Missing Evidence
+
+  Wrong Assumptions
+
+  Circular Reasoning
+
+###########################################################
+# MITIGATION
+###########################################################
+
+mitigation:
+
+  Generate Alternatives
+
+  Seek Contradictions
+
+  Validate Assumptions
+
+  Independent Verification
+
+  Multiple Experiments
+
+###########################################################
+# MEMORY INTEGRATION
+###########################################################
+
+memory:
+
+  Retrieve Similar Cases
+
+  Retrieve Previous Failures
+
+  Retrieve Lessons
+
+  Store Successful Hypotheses
+
+  Store Failed Hypotheses
+
+###########################################################
+# REASONING INTEGRATION
+###########################################################
+
+reasoning:
+
+  Deduction
+
+  Induction
+
+  Abduction
+
+  Bayesian Updating
+
+  Counterfactual Analysis
+
+###########################################################
+# EKR INTEGRATION
+###########################################################
+
+ekr:
+
+  Every Engineering Knowledge Record
+  stores:
+
+    Initial Hypotheses
+
+    Validation Evidence
+
+    Final Hypothesis
+
+    Rejected Alternatives
+
+###########################################################
+# VALIDATION RULES
+###########################################################
+
+rules:
+
+  Every hypothesis is testable.
+
+  Every hypothesis has evidence.
+
+  Every rejection has reasoning.
+
+  Every accepted hypothesis
+  survives validation.
+
+###########################################################
+# ENGINEERING EXAMPLES
+###########################################################
+
+examples:
+
+  Example_01:
+
+    Observation:
+
+      CPU Usage 100%
+
+    Hypotheses:
+
+      Infinite Loop
+
+      Lock Contention
+
+      Busy Waiting
+
+      GC Storm
+
+  Example_02:
+
+    Observation:
+
+      API Timeout
+
+    Hypotheses:
+
+      Database Slow
+
+      Network Issue
+
+      Thread Pool Exhausted
+
+      DNS Failure
+
+  Example_03:
+
+    Observation:
+
+      Memory Leak
+
+    Hypotheses:
+
+      Object Retention
+
+      Cache Growth
+
+      Reference Cycle
+
+      Native Allocation Leak
+
+###########################################################
+# METRICS
+###########################################################
+
+metrics:
+
+  Hypothesis Count
+
+  Validation Accuracy
+
+  Average Confidence
+
+  Rejection Rate
+
+  Time To Root Cause
+
+  Evidence Coverage
+
+###########################################################
+# SUCCESS
+###########################################################
+
+success:
+
+  Engineering reasoning
+  consistently converges
+  toward the correct
+  explanation through
+  evidence-based hypothesis
+  refinement.
+
+###########################################################
+# GUARANTEES
+###########################################################
+
+guarantees:
+
+  Multiple Alternatives
+
+  Evidence Driven Validation
+
+  Explainable Decisions
+
+  Traceable Reasoning
+
+  Reduced Premature Conclusions
+
+###########################################################
+# FUTURE
+###########################################################
+
+future:
+
+  probabilistic_hypotheses: true
+
+  graph_based_hypotheses: true
+
+  parallel_validation: true
+
+  autonomous_experiment_design: true
+
+  continual_hypothesis_learning: true
+```

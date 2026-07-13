@@ -1,0 +1,608 @@
+```toon id="e9k7qp"
+spec:
+
+  id: entity_model
+
+  version: 1.0.0
+
+  status: stable
+
+  priority: highest
+
+  module: Ontology
+
+  compiler_stage: Knowledge Representation
+
+  description: >
+    Defines the Universal Entity Model (UEM) used throughout
+    the TOON Dataset Compiler.
+    Every object inside the Engineering Universe is represented
+    as an Entity with a shared identity, lifecycle, metadata,
+    relationships and behavioral semantics.
+
+###########################################################
+# PURPOSE
+###########################################################
+
+purpose:
+
+  Provide one universal representation for
+  every engineering object inside TOON.
+
+###########################################################
+# PHILOSOPHY
+###########################################################
+
+philosophy:
+
+  Everything is an Entity.
+
+  Every Entity has identity.
+
+  Every Entity evolves.
+
+  Every Entity participates
+  in the Engineering Knowledge Graph.
+
+###########################################################
+# ENTITY MODEL
+###########################################################
+
+model:
+
+  Identity
+
+      →
+
+  Metadata
+
+      →
+
+  State
+
+      →
+
+  Relationships
+
+      →
+
+  Behaviour
+
+      →
+
+  Lifecycle
+
+###########################################################
+# UNIVERSAL ENTITY
+###########################################################
+
+entity:
+
+  identity
+
+  type
+
+  category
+
+  metadata
+
+  attributes
+
+  state
+
+  lifecycle
+
+  owner
+
+  relationships
+
+  capabilities
+
+  history
+
+###########################################################
+# ENTITY TYPES
+###########################################################
+
+types:
+
+###########################################################
+
+  Knowledge
+
+###########################################################
+
+  Human
+
+###########################################################
+
+  Organization
+
+###########################################################
+
+  Repository
+
+###########################################################
+
+  Software
+
+###########################################################
+
+  Infrastructure
+
+###########################################################
+
+  Runtime
+
+###########################################################
+
+  Documentation
+
+###########################################################
+
+  Engineering
+
+###########################################################
+
+  Operational
+
+###########################################################
+# KNOWLEDGE ENTITIES
+###########################################################
+
+knowledge:
+
+  Knowledge Atom
+
+  Engineering Knowledge Record
+
+  Pattern
+
+  Lesson
+
+  Capability
+
+  Constraint
+
+  Decision
+
+###########################################################
+# HUMAN ENTITIES
+###########################################################
+
+human:
+
+  Engineer
+
+  Reviewer
+
+  Architect
+
+  Tech Lead
+
+  Manager
+
+###########################################################
+# ORGANIZATION ENTITIES
+###########################################################
+
+organization:
+
+  Company
+
+  Department
+
+  Team
+
+  Product
+
+###########################################################
+# SOFTWARE ENTITIES
+###########################################################
+
+software:
+
+  Repository
+
+  Module
+
+  Package
+
+  Service
+
+  Component
+
+  API
+
+  Function
+
+  Class
+
+###########################################################
+# INFRASTRUCTURE ENTITIES
+###########################################################
+
+infrastructure:
+
+  Cluster
+
+  Container
+
+  VM
+
+  Node
+
+  Storage
+
+  Queue
+
+###########################################################
+# OPERATIONAL ENTITIES
+###########################################################
+
+operational:
+
+  Deployment
+
+  Incident
+
+  Alert
+
+  Metric
+
+  Benchmark
+
+###########################################################
+# ENTITY ATTRIBUTES
+###########################################################
+
+attributes:
+
+  identity
+
+  name
+
+  description
+
+  owner
+
+  version
+
+  status
+
+  tags
+
+  labels
+
+  timestamps
+
+###########################################################
+# ENTITY STATE
+###########################################################
+
+state:
+
+  Draft
+
+  Active
+
+  Stable
+
+  Deprecated
+
+  Archived
+
+###########################################################
+# ENTITY LIFECYCLE
+###########################################################
+
+lifecycle:
+
+  Created
+
+      →
+
+  Initialized
+
+      →
+
+  Active
+
+      →
+
+  Modified
+
+      →
+
+  Validated
+
+      →
+
+  Released
+
+      →
+
+  Deprecated
+
+      →
+
+  Archived
+
+###########################################################
+# ENTITY CAPABILITIES
+###########################################################
+
+capabilities:
+
+  Create
+
+  Read
+
+  Update
+
+  Delete
+
+  Compose
+
+  Reference
+
+  Extend
+
+  Validate
+
+###########################################################
+# ENTITY RELATIONSHIPS
+###########################################################
+
+relationships:
+
+  owns
+
+  contains
+
+  references
+
+  depends_on
+
+  extends
+
+  specializes
+
+  creates
+
+  modifies
+
+  validates
+
+  monitors
+
+  replaces
+
+###########################################################
+# ENTITY HISTORY
+###########################################################
+
+history:
+
+  creation
+
+  modification
+
+  ownership
+
+  releases
+
+  incidents
+
+  decisions
+
+###########################################################
+# ENTITY BEHAVIOUR
+###########################################################
+
+behaviour:
+
+  evolve
+
+  relate
+
+  inherit
+
+  compose
+
+  specialize
+
+  deprecate
+
+###########################################################
+# IDENTITY MODEL
+###########################################################
+
+identity:
+
+  globally_unique
+
+  immutable
+
+  deterministic
+
+  version_independent
+
+###########################################################
+# ENTITY METADATA
+###########################################################
+
+metadata:
+
+  author
+
+  owner
+
+  source
+
+  provenance
+
+  compiler_version
+
+  ontology_version
+
+  timestamps
+
+###########################################################
+# GRAPH RULES
+###########################################################
+
+graph:
+
+  Every entity has:
+
+    unique identity
+
+    explicit type
+
+    metadata
+
+    relationships
+
+    lifecycle
+
+###########################################################
+# ENTITY INVARIANTS
+###########################################################
+
+invariants:
+
+  Identity never changes.
+
+  Type never changes.
+
+  Relationships evolve.
+
+  Metadata grows.
+
+  History is append-only.
+
+###########################################################
+# EKR INTEGRATION
+###########################################################
+
+ekr:
+
+  Every Engineering Knowledge Record
+  references one or more Entities.
+
+  Every Entity participates in
+  one or more Engineering Knowledge Records.
+
+###########################################################
+# VALIDATION
+###########################################################
+
+validation:
+
+  Every entity has identity.
+
+  Every entity has type.
+
+  Every entity has owner.
+
+  Every entity has lifecycle.
+
+  Every entity is graph connected.
+
+###########################################################
+# ENGINEERING EXAMPLES
+###########################################################
+
+examples:
+
+###########################################################
+
+  Example_01:
+
+    Entity:
+
+      Repository
+
+    Contains:
+
+      Modules
+
+###########################################################
+
+  Example_02:
+
+    Entity:
+
+      Pull Request
+
+    References:
+
+      Commits
+
+###########################################################
+
+  Example_03:
+
+    Entity:
+
+      Incident
+
+    Affects:
+
+      Service
+
+###########################################################
+
+  Example_04:
+
+    Entity:
+
+      Knowledge Atom
+
+    Enables:
+
+      Capability
+
+###########################################################
+# SUCCESS
+###########################################################
+
+success:
+
+  Every engineering object
+  is represented using
+  one universal entity model.
+
+###########################################################
+# GUARANTEES
+###########################################################
+
+guarantees:
+
+  Universal Representation
+
+  Graph Native Identity
+
+  Consistent Metadata
+
+  Deterministic Lifecycle
+
+  Unlimited Extensibility
+
+###########################################################
+# FUTURE
+###########################################################
+
+future:
+
+  entity_inheritance: true
+
+  entity_templates: true
+
+  distributed_entities: true
+
+  semantic_entities: true
+
+  autonomous_entities: true
+```

@@ -1,0 +1,440 @@
+engineer_profiles:
+
+  metadata:
+
+    id: WORLD-006
+
+    title: Engineer Profiles
+
+    version: 1.0
+
+    status: Stable
+
+    owner: World Engine
+
+    depends_on:
+
+      - compiler/04_world/05_team_generator.toon
+      - compiler/01_ontology/17_entity_model.toon
+      - compiler/03_curriculum/12_competency_matrix.toon
+
+    consumed_by:
+
+      - compiler/04_world/07_roles.toon
+      - compiler/04_world/09_repository_history.toon
+      - compiler/04_world/10_incident_generator.toon
+      - compiler/05_generation/02_episode_generator.toon
+      - compiler/05_generation/11_review_generator.toon
+      - compiler/05_generation/16_dialogue_generator.toon
+
+    objective:
+
+      Generate realistic software engineers with evolving
+      knowledge, skills, responsibilities, experience,
+      personalities, and engineering behavior.
+
+
+################################################################################
+# CORE PRINCIPLES
+################################################################################
+
+principles:
+
+  - deterministic
+
+  - reproducible
+
+  - realistic
+
+  - evolving
+
+  - competency_driven
+
+  - role_consistent
+
+  - experience_sensitive
+
+  - collaboration_aware
+
+
+################################################################################
+# ENGINEER ATTRIBUTES
+################################################################################
+
+attributes:
+
+  engineer_id
+
+  full_name
+
+  organization
+
+  team
+
+  role
+
+  seniority
+
+  years_of_experience
+
+  primary_domains
+
+  secondary_domains
+
+  preferred_languages
+
+  preferred_tools
+
+  timezone
+
+  availability
+
+  employment_type
+
+  career_stage
+
+
+################################################################################
+# EXPERIENCE LEVELS
+################################################################################
+
+experience:
+
+  intern:
+
+    years: 0-1
+
+  junior:
+
+    years: 1-3
+
+  mid:
+
+    years: 3-6
+
+  senior:
+
+    years: 6-10
+
+  staff:
+
+    years: 10-15
+
+  principal:
+
+    years: 15+
+
+  distinguished:
+
+    years: 20+
+
+
+################################################################################
+# TECHNICAL PROFILE
+################################################################################
+
+technical_profile:
+
+  programming_languages
+
+  frameworks
+
+  databases
+
+  cloud_platforms
+
+  operating_systems
+
+  architecture_styles
+
+  testing_expertise
+
+  debugging_skill
+
+  performance_engineering
+
+  security_knowledge
+
+
+################################################################################
+# ENGINEERING CAPABILITIES
+################################################################################
+
+capabilities:
+
+  implementation
+
+  debugging
+
+  testing
+
+  architecture
+
+  optimization
+
+  documentation
+
+  code_review
+
+  deployment
+
+  incident_response
+
+  mentoring
+
+  planning
+
+  estimation
+
+
+################################################################################
+# COGNITIVE PROFILE
+################################################################################
+
+cognitive_profile:
+
+  reasoning_style:
+
+    analytical
+
+    systems
+
+    experimental
+
+    architectural
+
+    strategic
+
+  decision_style:
+
+    conservative
+
+    balanced
+
+    aggressive
+
+  learning_style:
+
+    documentation
+
+    experimentation
+
+    mentorship
+
+    research
+
+  communication_style:
+
+    concise
+
+    detailed
+
+    collaborative
+
+    instructional
+
+
+################################################################################
+# ENGINEERING BEHAVIOR
+################################################################################
+
+behavior:
+
+  pull_request_size
+
+  review_depth
+
+  testing_habits
+
+  documentation_habits
+
+  refactoring_frequency
+
+  risk_tolerance
+
+  ownership_level
+
+  collaboration_score
+
+  incident_participation
+
+  knowledge_sharing
+
+
+################################################################################
+# KNOWLEDGE MODEL
+################################################################################
+
+knowledge:
+
+  mastered_domains
+
+  developing_domains
+
+  unfamiliar_domains
+
+  certifications
+
+  completed_projects
+
+  architecture_experience
+
+  production_experience
+
+
+################################################################################
+# GROWTH MODEL
+################################################################################
+
+growth:
+
+  promotions
+
+  skill_progression
+
+  technology_adoption
+
+  mentorship
+
+  project_rotation
+
+  specialization
+
+  leadership_development
+
+
+################################################################################
+# RELATIONSHIPS
+################################################################################
+
+relationships:
+
+  belongs_to:
+
+    company
+
+    team
+
+  contributes_to:
+
+    repositories
+
+    services
+
+    documentation
+
+  reviews:
+
+    pull_requests
+
+  mentors:
+
+    junior_engineers
+
+  collaborates_with:
+
+    engineers
+
+    architects
+
+    managers
+
+
+################################################################################
+# RANDOMIZATION
+################################################################################
+
+randomization:
+
+  deterministic_seed:
+
+    true
+
+  weighted_generation:
+
+    true
+
+  realistic_distribution:
+
+    true
+
+  reproducible:
+
+    true
+
+
+################################################################################
+# VALIDATION
+################################################################################
+
+validation:
+
+  reject_if:
+
+    missing_team
+
+    missing_role
+
+    inconsistent_experience
+
+    impossible_skill_progression
+
+    invalid_competency
+
+    orphan_engineer
+
+
+################################################################################
+# METRICS
+################################################################################
+
+metrics:
+
+  compute:
+
+    competency_score
+
+    engineering_maturity
+
+    collaboration_quality
+
+    review_quality
+
+    architecture_experience
+
+    production_experience
+
+    learning_velocity
+
+    knowledge_breadth
+
+
+################################################################################
+# SUCCESS METRICS
+################################################################################
+
+success_metrics:
+
+  competency_consistency:
+
+    minimum: 1.00
+
+  engineering_realism:
+
+    minimum: 0.97
+
+  behavioral_consistency:
+
+    minimum: 0.95
+
+  collaboration_realism:
+
+    minimum: 0.95
+
+  reproducibility:
+
+    minimum: 1.00
+
+  profile_diversity:
+
+    minimum: 0.95

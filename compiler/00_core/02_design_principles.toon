@@ -1,0 +1,509 @@
+```toon
+spec:
+
+  id: design_principles
+
+  version: 1.0.0
+
+  status: stable
+
+  priority: highest
+
+  module: Core
+
+  compiler_stage: Initialization
+
+  description: >
+    Defines the immutable architectural, engineering, and design
+    principles governing every component of the TOON Dataset Compiler.
+    These principles serve as the constitutional rules for the
+    compiler. Every module, specification, generator, validator,
+    optimizer, and serializer MUST comply with these principles.
+
+###########################################################
+# DESIGN PHILOSOPHY
+###########################################################
+
+design:
+
+  philosophy:
+
+    Engineering > Programming
+
+    Knowledge > Tokens
+
+    Graphs > Flat Documents
+
+    Reasoning > Memorization
+
+    Understanding > Pattern Matching
+
+    Quality > Quantity
+
+    Context > Isolated Examples
+
+    Evolution > Snapshots
+
+    Explainability > Black Boxes
+
+###########################################################
+# CORE PRINCIPLES
+###########################################################
+
+principles:
+
+###########################################################
+
+  P01:
+
+    name:
+      Single Source of Truth
+
+    description:
+      Every concept must have exactly one authoritative definition.
+
+    objective:
+      Eliminate duplication.
+
+###########################################################
+
+  P02:
+
+    name:
+      Graph Native
+
+    description:
+      Knowledge exists as interconnected graphs,
+      never isolated records.
+
+###########################################################
+
+  P03:
+
+    name:
+      Engineering First
+
+    description:
+      Model engineering reasoning before programming syntax.
+
+###########################################################
+
+  P04:
+
+    name:
+      Ontology Driven
+
+    description:
+      Every generated object must reference
+      the engineering ontology.
+
+###########################################################
+
+  P05:
+
+    name:
+      Explicit Reasoning
+
+    description:
+      Every important engineering decision must
+      contain explicit reasoning.
+
+###########################################################
+
+  P06:
+
+    name:
+      Context Preservation
+
+    description:
+      Engineering artifacts are meaningless
+      without surrounding context.
+
+###########################################################
+
+  P07:
+
+    name:
+      Traceability
+
+    description:
+      Every generated artifact must be traceable
+      to its origin.
+
+###########################################################
+
+  P08:
+
+    name:
+      Explainability
+
+    description:
+      Every compiler decision must be explainable.
+
+###########################################################
+
+  P09:
+
+    name:
+      Determinism
+
+    description:
+      Identical inputs must produce identical outputs.
+
+###########################################################
+
+  P10:
+
+    name:
+      Modularity
+
+    description:
+      Every subsystem should be independently replaceable.
+
+###########################################################
+
+  P11:
+
+    name:
+      Extensibility
+
+    description:
+      New domains should be added without modifying
+      existing architecture.
+
+###########################################################
+
+  P12:
+
+    name:
+      Validation Before Acceptance
+
+    description:
+      Nothing enters the dataset without validation.
+
+###########################################################
+
+  P13:
+
+    name:
+      Repair Before Rejection
+
+    description:
+      Attempt automatic repair before discarding records.
+
+###########################################################
+
+  P14:
+
+    name:
+      Quality Before Release
+
+    description:
+      Every release must satisfy predefined
+      quality thresholds.
+
+###########################################################
+
+  P15:
+
+    name:
+      Continuous Evolution
+
+    description:
+      Knowledge continuously evolves.
+
+###########################################################
+
+  P16:
+
+    name:
+      Human Review
+
+    description:
+      Critical architectural changes require
+      human approval.
+
+###########################################################
+# ARCHITECTURAL LAWS
+###########################################################
+
+architecture:
+
+  laws:
+
+    Every module has one responsibility.
+
+    Every file has one owner.
+
+    Every dependency is explicit.
+
+    Every interface is documented.
+
+    Every object has a lifecycle.
+
+    Every lifecycle has validation.
+
+    Every validation produces reports.
+
+    Every report is reproducible.
+
+###########################################################
+# ENGINEERING LAWS
+###########################################################
+
+engineering:
+
+  laws:
+
+    Every problem has context.
+
+    Every solution has assumptions.
+
+    Every assumption has risk.
+
+    Every architecture has tradeoffs.
+
+    Every optimization has cost.
+
+    Every bug has root cause.
+
+    Every lesson becomes reusable knowledge.
+
+###########################################################
+# KNOWLEDGE LAWS
+###########################################################
+
+knowledge:
+
+  laws:
+
+    Knowledge must be atomic.
+
+    Knowledge must be reusable.
+
+    Knowledge must be composable.
+
+    Knowledge must be linked.
+
+    Knowledge must be versioned.
+
+    Knowledge must remain explainable.
+
+###########################################################
+# DATASET LAWS
+###########################################################
+
+dataset:
+
+  laws:
+
+    No duplicated knowledge.
+
+    No orphan knowledge.
+
+    No disconnected graphs.
+
+    No unverifiable facts.
+
+    No hidden assumptions.
+
+    No unexplained decisions.
+
+    No synthetic complexity without purpose.
+
+###########################################################
+# WORLD SIMULATION LAWS
+###########################################################
+
+world:
+
+  laws:
+
+    Every company has history.
+
+    Every repository evolves.
+
+    Every engineer has expertise.
+
+    Every project has constraints.
+
+    Every incident has consequences.
+
+    Every architecture accumulates technical debt.
+
+###########################################################
+# GENERATION LAWS
+###########################################################
+
+generation:
+
+  laws:
+
+    Never generate isolated code.
+
+    Always generate engineering context.
+
+    Generate realistic constraints.
+
+    Generate multiple alternatives.
+
+    Preserve decision history.
+
+###########################################################
+# VALIDATION LAWS
+###########################################################
+
+validation:
+
+  laws:
+
+    Validate structure.
+
+    Validate semantics.
+
+    Validate ontology.
+
+    Validate reasoning.
+
+    Validate consistency.
+
+    Validate references.
+
+###########################################################
+# OPTIMIZATION LAWS
+###########################################################
+
+optimization:
+
+  laws:
+
+    Remove redundancy.
+
+    Preserve information.
+
+    Improve density.
+
+    Maintain readability.
+
+    Never sacrifice correctness.
+
+###########################################################
+# SERIALIZATION LAWS
+###########################################################
+
+serialization:
+
+  laws:
+
+    Preserve graph structure.
+
+    Preserve relationships.
+
+    Preserve metadata.
+
+    Preserve reasoning.
+
+    Preserve traceability.
+
+###########################################################
+# INVARIANTS
+###########################################################
+
+invariants:
+
+  Graph Integrity
+
+  Ontology Consistency
+
+  Deterministic Compilation
+
+  Reproducible Outputs
+
+  Version Compatibility
+
+  Explainable Decisions
+
+  Connected Knowledge
+
+  Explicit Metadata
+
+###########################################################
+# ANTI-PATTERNS
+###########################################################
+
+anti_patterns:
+
+  Duplicate Knowledge
+
+  Circular Dependencies
+
+  Hidden State
+
+  Magic Constants
+
+  Implicit Relationships
+
+  Unvalidated Facts
+
+  Opaque Decisions
+
+  Dead Knowledge
+
+  Broken References
+
+  Overfitting To Benchmarks
+
+###########################################################
+# QUALITY ATTRIBUTES
+###########################################################
+
+quality:
+
+  maintainability
+
+  scalability
+
+  modularity
+
+  consistency
+
+  correctness
+
+  explainability
+
+  reproducibility
+
+  interoperability
+
+###########################################################
+# SUCCESS CRITERIA
+###########################################################
+
+success:
+
+  Every compiler module follows these principles.
+
+  Every generated dataset satisfies these principles.
+
+  Every future extension remains compatible.
+
+  Every engineering artifact preserves these principles.
+
+###########################################################
+# FUTURE COMPATIBILITY
+###########################################################
+
+future:
+
+  immutable_principles: true
+
+  extensible_architecture: true
+
+  backward_compatible: true
+
+  deterministic_execution: true
+
+  graph_native: true
+
+  ontology_driven: true
+```

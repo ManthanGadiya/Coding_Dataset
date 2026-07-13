@@ -1,0 +1,356 @@
+constraint_generator:
+
+  metadata:
+
+    id: GEN-004
+
+    title: Constraint Generator
+
+    version: 1.0
+
+    status: Stable
+
+    owner: Generation Engine
+
+    depends_on:
+
+      - compiler/05_generation/03_event_generator.toon
+      - compiler/04_world/15_world_state.toon
+      - compiler/03_curriculum/10_master_curriculum.toon
+      - compiler/01_ontology/20_master_ontology.toon
+
+    consumed_by:
+
+      - compiler/05_generation/05_research_generator.toon
+      - compiler/05_generation/08_code_generator.toon
+      - compiler/05_generation/16_conversation_generator.toon
+      - compiler/05_generation/19_dataset_builder.toon
+
+    objective:
+
+      Generate realistic engineering instructions that communicate
+      tasks with appropriate business context, engineering
+      constraints, role expectations, and evaluation criteria.
+
+
+################################################################################
+# CORE PRINCIPLES
+################################################################################
+
+principles:
+
+  - deterministic
+
+  - reproducible
+
+  - context_aware
+
+  - role_aware
+
+  - curriculum_aligned
+
+  - engineering_realistic
+
+  - unambiguous
+
+  - actionable
+
+
+################################################################################
+# CONSTRAINT SOURCES
+################################################################################
+
+sources:
+
+  engineering_manager
+
+  tech_lead
+
+  product_manager
+
+  architect
+
+  incident_commander
+
+  customer
+
+  issue_tracker
+
+  pull_request
+
+  architecture_review
+
+  roadmap
+
+
+################################################################################
+# CONSTRAINT TYPES
+################################################################################
+
+types:
+
+  implementation
+
+  debugging
+
+  architecture
+
+  optimization
+
+  testing
+
+  documentation
+
+  review
+
+  deployment
+
+  migration
+
+  investigation
+
+  mentoring
+
+  research
+
+
+################################################################################
+# CONSTRAINT STRUCTURE
+################################################################################
+
+structure:
+
+  title
+
+  background
+
+  business_context
+
+  engineering_context
+
+  objective
+
+  constraints
+
+  acceptance_criteria
+
+  deliverables
+
+  references
+
+  success_definition
+
+
+################################################################################
+# CONTEXT
+################################################################################
+
+context:
+
+  company
+
+  project
+
+  repository
+
+  engineer
+
+  role
+
+  sprint
+
+  milestone
+
+  roadmap
+
+  incidents
+
+  technical_debt
+
+  customer_feedback
+
+
+################################################################################
+# CONSTRAINTS
+################################################################################
+
+constraints:
+
+  backward_compatibility
+
+  performance_budget
+
+  security_requirements
+
+  coding_standards
+
+  testing_requirements
+
+  deployment_window
+
+  compliance
+
+  architecture_guidelines
+
+  dependency_limits
+
+
+################################################################################
+# DELIVERABLES
+################################################################################
+
+deliverables:
+
+  implementation
+
+  tests
+
+  documentation
+
+  migration_plan
+
+  rollout_plan
+
+  monitoring_updates
+
+  changelog
+
+  design_notes
+
+
+################################################################################
+# LANGUAGE STYLE
+################################################################################
+
+style:
+
+  concise
+
+  professional
+
+  technically_precise
+
+  role_specific
+
+  context_rich
+
+  deterministic
+
+
+################################################################################
+# ADAPTATION
+################################################################################
+
+adaptation:
+
+  by_curriculum_level
+
+  by_engineer_role
+
+  by_repository_maturity
+
+  by_incident_severity
+
+  by_company_stage
+
+  by_project_complexity
+
+
+################################################################################
+# RANDOMIZATION
+################################################################################
+
+randomization:
+
+  deterministic_seed:
+
+    true
+
+  template_variation:
+
+    enabled
+
+  linguistic_diversity:
+
+    enabled
+
+  reproducible:
+
+    true
+
+
+################################################################################
+# VALIDATION
+################################################################################
+
+validation:
+
+  reject_if:
+
+    ambiguous_instruction
+
+    missing_context
+
+    inconsistent_constraints
+
+    missing_acceptance_criteria
+
+    impossible_requirements
+
+    curriculum_violation
+
+
+################################################################################
+# METRICS
+################################################################################
+
+metrics:
+
+  compute:
+
+    clarity
+
+    completeness
+
+    engineering_realism
+
+    curriculum_alignment
+
+    context_quality
+
+    ambiguity_score
+
+    instruction_diversity
+
+    execution_feasibility
+
+
+################################################################################
+# SUCCESS METRICS
+################################################################################
+
+success_metrics:
+
+  clarity:
+
+    minimum: 0.99
+
+  engineering_realism:
+
+    minimum: 0.98
+
+  curriculum_alignment:
+
+    minimum: 1.00
+
+  ambiguity:
+
+    maximum: 0.01
+
+  execution_feasibility:
+
+    minimum: 0.98
+
+  reproducibility:
+
+    minimum: 1.00

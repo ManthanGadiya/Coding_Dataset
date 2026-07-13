@@ -1,0 +1,400 @@
+decision_generator:
+
+  metadata:
+
+    id: GEN-007
+
+    title: Decision Generator
+
+    version: 1.0
+
+    status: Stable
+
+    owner: Generation Engine
+
+    depends_on:
+
+      - compiler/05_generation/03_event_generator.toon
+      - compiler/05_generation/04_constraint_generator.toon
+      - compiler/04_world/15_world_state.toon
+      - compiler/01_ontology/20_master_ontology.toon
+
+    consumed_by:
+
+      - compiler/05_generation/08_code_generator.toon
+      - compiler/05_generation/10_test_generator.toon
+      - compiler/05_generation/12_documentation_generator.toon
+      - compiler/05_generation/19_dataset_builder.toon
+
+    objective:
+
+      Generate complete engineering requirements with business
+      objectives, technical constraints, traceability, validation
+      criteria, and implementation guidance.
+
+
+################################################################################
+# CORE PRINCIPLES
+################################################################################
+
+principles:
+
+  - deterministic
+
+  - reproducible
+
+  - complete
+
+  - traceable
+
+  - engineering_realistic
+
+  - business_aligned
+
+  - testable
+
+  - implementation_ready
+
+
+################################################################################
+# DECISION TYPES
+################################################################################
+
+types:
+
+  functional
+
+  non_functional
+
+  business
+
+  technical
+
+  security
+
+  compliance
+
+  operational
+
+  deployment
+
+  observability
+
+  documentation
+
+
+################################################################################
+# DECISION STRUCTURE
+################################################################################
+
+structure:
+
+  requirement_id
+
+  title
+
+  description
+
+  rationale
+
+  business_goal
+
+  engineering_goal
+
+  dependencies
+
+  assumptions
+
+  constraints
+
+  acceptance_criteria
+
+  verification_method
+
+  priority
+
+  owner
+
+
+################################################################################
+# FUNCTIONAL DECISIONS
+################################################################################
+
+functional:
+
+  input_behavior
+
+  output_behavior
+
+  business_rules
+
+  workflow
+
+  api_behavior
+
+  error_handling
+
+  state_management
+
+  integration
+
+
+################################################################################
+# NON-FUNCTIONAL DECISIONS
+################################################################################
+
+non_functional:
+
+  performance
+
+  scalability
+
+  reliability
+
+  availability
+
+  maintainability
+
+  usability
+
+  interoperability
+
+  portability
+
+
+################################################################################
+# SECURITY DECISIONS
+################################################################################
+
+security:
+
+  authentication
+
+  authorization
+
+  encryption
+
+  auditing
+
+  logging
+
+  secret_management
+
+  compliance
+
+  vulnerability_mitigation
+
+
+################################################################################
+# OPERATIONAL DECISIONS
+################################################################################
+
+operations:
+
+  monitoring
+
+  alerting
+
+  deployment
+
+  rollback
+
+  backup
+
+  disaster_recovery
+
+  observability
+
+  maintenance
+
+
+################################################################################
+# CONSTRAINTS
+################################################################################
+
+constraints:
+
+  budget
+
+  timeline
+
+  architecture
+
+  technology_stack
+
+  backward_compatibility
+
+  dependency_limits
+
+  compliance
+
+  resource_limits
+
+
+################################################################################
+# TRACEABILITY
+################################################################################
+
+traceability:
+
+  links_to:
+
+    task
+
+    feature_request
+
+    customer_feedback
+
+    incident
+
+    architecture_decision
+
+    business_event
+
+    curriculum_node
+
+
+################################################################################
+# VALIDATION
+################################################################################
+
+validation:
+
+  methods:
+
+    unit_tests
+
+    integration_tests
+
+    manual_review
+
+    performance_tests
+
+    security_tests
+
+    acceptance_tests
+
+    deployment_validation
+
+
+################################################################################
+# OUTPUTS
+################################################################################
+
+outputs:
+
+  requirement_document
+
+  acceptance_matrix
+
+  dependency_map
+
+  verification_plan
+
+  implementation_constraints
+
+  traceability_matrix
+
+
+################################################################################
+# RANDOMIZATION
+################################################################################
+
+randomization:
+
+  deterministic_seed:
+
+    true
+
+  template_variation:
+
+    enabled
+
+  domain_specific_requirements:
+
+    enabled
+
+  reproducible:
+
+    true
+
+
+################################################################################
+# VALIDATION
+################################################################################
+
+validation:
+
+  reject_if:
+
+    ambiguous_requirement
+
+    conflicting_constraints
+
+    missing_acceptance_criteria
+
+    unverifiable_requirement
+
+    inconsistent_traceability
+
+    curriculum_violation
+
+
+################################################################################
+# METRICS
+################################################################################
+
+metrics:
+
+  compute:
+
+    completeness
+
+    clarity
+
+    testability
+
+    traceability
+
+    engineering_realism
+
+    business_alignment
+
+    ambiguity_score
+
+    implementation_readiness
+
+
+################################################################################
+# SUCCESS METRICS
+################################################################################
+
+success_metrics:
+
+  completeness:
+
+    minimum: 0.99
+
+  traceability:
+
+    minimum: 1.00
+
+  testability:
+
+    minimum: 0.98
+
+  engineering_realism:
+
+    minimum: 0.98
+
+  business_alignment:
+
+    minimum: 0.97
+
+  ambiguity:
+
+    maximum: 0.01
+
+  reproducibility:
+
+    minimum: 1.00
