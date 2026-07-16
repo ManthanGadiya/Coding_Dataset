@@ -141,7 +141,11 @@ class EpisodeGenerator:
         concepts = list(DOMAIN_CONCEPTS.get(domain, ["General"]))
         atoms = self._knowledge.get_random(self._rng, domain, 2)
         scenario = self._pick_scenario(episode_type, concepts)
-        reasoning_chain = REASONING_CHAINS.get(episode_type.value, ["Observe", "Analyze"])
+        base_chain = REASONING_CHAINS.get(episode_type.value, ["Observe", "Analyze"])
+
+        # Variable chain length: trim 0-3 steps randomly to create within-type variance
+        trim = self._rng.randint(0, min(3, len(base_chain) - 2))
+        reasoning_chain = base_chain[:len(base_chain) - trim]
 
         ekr.difficulty = self._pick_difficulty(episode_type)
         ekr.confidence = Confidence.C3
@@ -150,14 +154,16 @@ class EpisodeGenerator:
             content = self._reasoning_content(step, episode_type, domain, scenario, concepts)
             ekr.add_reasoning(step, content, Confidence.C3)
 
-        ekr.add_reasoning("Reflect",
-            f"Lessons learned from {episode_type.value.replace('_', ' ')} in {domain}: "
-            f"{scenario.get('fix', scenario.get('reasoning', 'Engineering insight'))}",
-            Confidence.C4)
+        # Add final reflect step only for longer chains
+        if len(reasoning_chain) >= 4:
+            ekr.add_reasoning("Reflect",
+                f"Lessons learned from {episode_type.value.replace('_', ' ')} in {domain}: "
+                f"{scenario.get('fix', scenario.get('reasoning', 'Engineering insight'))}",
+                Confidence.C4)
 
         decisions = ENGINEERING_DECISIONS.get(episode_type.value, [])
         if decisions:
-            n_decisions = self._rng.randint(2, 3)
+            n_decisions = self._rng.randint(1, 3)
             self._rng.shuffle(decisions)
             for i in range(min(n_decisions, len(decisions))):
                 d = decisions[i]
@@ -166,7 +172,7 @@ class EpisodeGenerator:
 
         evidence_types = ["observation", "measurement", "log", "metric"]
         if "problem" in scenario:
-            for et in evidence_types[:self._rng.randint(2, 3)]:
+            for et in evidence_types[:self._rng.randint(1, 4)]:
                 ekr.evidence.append({
                     "type": et,
                     "content": scenario.get("cause", scenario["problem"]),
@@ -174,7 +180,7 @@ class EpisodeGenerator:
                 })
 
         ekr.knowledge_atoms = [f"KA-{domain}-{self._rng.randint(1000,9999)}"
-                               for _ in range(self._rng.randint(2, 4))]
+                               for _ in range(self._rng.randint(0, 5))]
 
         elapsed = (time.perf_counter() - t0) * 1000
         return GenerationResult(ekr=ekr, episode_type=episode_type, duration_ms=elapsed)

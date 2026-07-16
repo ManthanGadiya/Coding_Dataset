@@ -1,0 +1,101 @@
+[
+  {
+    "domain": "Cloud",
+    "concept": "serverless",
+    "content": "Serverless computing abstracts infrastructure management \u2014 cloud providers dynamically allocate resources based on usage, scaling automatically.",
+    "source_url": "https://dev.to/fahimulhaq/complete-guide-to-system-design-oc7",
+    "source_type": "article",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Cloud",
+    "concept": "multi-AZ deployment",
+    "content": "Multi-Availability Zone deployment spreads services across physically isolated data centers, ensuring continued operation during regional failures.",
+    "source_url": "https://sre.google/sre-book/service-best-practices/",
+    "source_type": "sre",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Cloud",
+    "concept": "N+2 capacity",
+    "content": "Provision N+2 capacity means peak traffic can be handled by N instances while the largest 2 instances are unavailable simultaneously.",
+    "source_url": "https://sre.google/sre-book/service-best-practices/",
+    "source_type": "sre",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Cloud",
+    "concept": "well-architected framework",
+    "content": "AWS Well-Architected Framework provides six pillars: operational excellence, security, reliability, performance efficiency, cost optimization, and sustainability.",
+    "source_url": "https://aws.amazon.com/architecture/well-architected/",
+    "source_type": "article",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Cloud",
+    "concept": "operational excellence pillar",
+    "content": "Operational excellence focuses on running and monitoring systems, automating changes, responding to events, and continually improving processes and procedures.",
+    "source_url": "https://aws.amazon.com/architecture/well-architected/",
+    "source_type": "article",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Cloud",
+    "concept": "reliability pillar",
+    "content": "The reliability pillar ensures workloads perform intended functions and recover quickly from failure through distributed system design, recovery planning, and adaptation to change.",
+    "source_url": "https://aws.amazon.com/architecture/well-architected/",
+    "source_type": "article",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Cloud",
+    "concept": "cell-based architecture",
+    "content": "Cell-based architecture increases resilience by applying fault isolation at the application level, limiting blast radius of failures to individual cells.",
+    "source_url": "https://docs.aws.amazon.com/wellarchitected/latest/reducing-scope-of-impact-with-cell-based-architecture/",
+    "source_type": "article",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Cloud",
+    "concept": "disaster recovery",
+    "content": "Disaster Recovery planning requires defined RPO and RTO objectives, tested recovery procedures, and multi-region failover capability for critical workloads.",
+    "source_url": "https://docs.aws.amazon.com/whitepapers/latest/disaster-recovery-workloads-on-aws/",
+    "source_type": "article",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Cloud",
+    "concept": "cost optimization",
+    "content": "Cloud cost optimization requires understanding spending patterns, selecting right-sized resources, using reserved capacity, and implementing auto-scaling to match demand.",
+    "source_url": "https://aws.amazon.com/architecture/well-architected/",
+    "source_type": "article",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Cloud",
+    "concept": "shared responsibility model",
+    "content": "Cloud security follows a shared responsibility model: AWS secures the cloud infrastructure, customers are responsible for security IN the cloud including data, configs, and access.",
+    "source_url": "https://aws.amazon.com/architecture/well-architected/",
+    "source_type": "article",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Cloud",
+    "concept": "auto-scaling",
+    "content": "Auto-scaling dynamically adjusts compute resources based on load, adding capacity during traffic peaks and releasing resources during lulls to optimize cost and performance.",
+    "source_url": "https://aws.amazon.com/architecture/well-architected/",
+    "source_type": "article",
+    "tags": [],
+    "quality": 1.0
+  }
+]

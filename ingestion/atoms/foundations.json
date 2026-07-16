@@ -1,0 +1,20 @@
+[
+  {
+    "domain": "Foundations",
+    "concept": "engineering thinking",
+    "content": "System Design is the process of understanding a system's requirements and creating infrastructure to satisfy them under constraints.",
+    "source_url": "https://dev.to/fahimulhaq/complete-guide-to-system-design-oc7",
+    "source_type": "article",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Foundations",
+    "concept": "trade-off thinking",
+    "content": "Engineering is about trade-offs: consistency vs availability, latency vs throughput, build vs buy, speed vs quality. There are no free lunches.",
+    "source_url": "https://dev.to/fahimulhaq/complete-guide-to-system-design-oc7",
+    "source_type": "article",
+    "tags": [],
+    "quality": 1.0
+  }
+]

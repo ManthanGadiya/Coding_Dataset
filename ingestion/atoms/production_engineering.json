@@ -1,0 +1,146 @@
+[
+  {
+    "domain": "Production_Engineering",
+    "concept": "incident response",
+    "content": "Modern postmortem software captures timeline data during the incident and uses it to draft postmortems automatically, saving 60-90 minutes per incident.",
+    "source_url": "https://incident.io/blog/best-incident-postmortem-software-2026-guide",
+    "source_type": "postmortem",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Production_Engineering",
+    "concept": "postmortem",
+    "content": "Postmortems should be blameless and focus on process and technology, not people. Assume everyone acted with good intent given available information.",
+    "source_url": "https://sre.google/sre-book/service-best-practices/",
+    "source_type": "postmortem",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Production_Engineering",
+    "concept": "MTTR",
+    "content": "Mean Time To Resolution (MTTR) is the average time to fully resolve a failure, including detection, diagnosis, repair, and ensuring recurrence prevention.",
+    "source_url": "https://incident.io/blog/best-incident-postmortem-software-2026-guide",
+    "source_type": "postmortem",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Production_Engineering",
+    "concept": "blameless culture",
+    "content": "Blameless postmortem culture focuses on identifying contributing causes without indicting individuals, emphasizing system-level issues rather than personal mistakes.",
+    "source_url": "https://incident.io/blog/best-incident-postmortem-software-2026-guide",
+    "source_type": "postmortem",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Production_Engineering",
+    "concept": "error budgets",
+    "content": "Error budgets balance reliability and innovation. A budget is 1 minus the service SLO; when exhausted, all feature changes freeze until budget recovers.",
+    "source_url": "https://sre.google/sre-book/service-best-practices/",
+    "source_type": "sre",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Production_Engineering",
+    "concept": "SLO",
+    "content": "Service Level Objectives (SLOs) should be measured in terms that matter to end users, such as client-side latency rather than server-side metrics.",
+    "source_url": "https://sre.google/sre-book/service-best-practices/",
+    "source_type": "sre",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Production_Engineering",
+    "concept": "progressive rollouts",
+    "content": "Nonemergency rollouts must proceed in stages \u2014 apply changes to small traffic fractions, monitor, and roll back first before diagnosing if issues arise.",
+    "source_url": "https://sre.google/sre-book/service-best-practices/",
+    "source_type": "sre",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Production_Engineering",
+    "concept": "capacity planning",
+    "content": "Provision N+2 capacity to handle simultaneous planned and unplanned outages without degrading user experience.",
+    "source_url": "https://sre.google/sre-book/service-best-practices/",
+    "source_type": "sre",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Production_Engineering",
+    "concept": "monitoring",
+    "content": "Monitoring has three output types: pages (act now), tickets (act within days), and logging (analysis later). Alerts in email are effectively /dev/null.",
+    "source_url": "https://sre.google/sre-book/service-best-practices/",
+    "source_type": "sre",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Production_Engineering",
+    "concept": "graceful degradation",
+    "content": "Services should produce reasonable but suboptimal results when overloaded, such as searching a smaller index or disabling non-critical features.",
+    "source_url": "https://sre.google/sre-book/service-best-practices/",
+    "source_type": "sre",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Production_Engineering",
+    "concept": "fail sanely",
+    "content": "Sanitize and validate configuration inputs. Respond to bad input by continuing with previous state and alerting, not by applying corrupt data.",
+    "source_url": "https://sre.google/sre-book/service-best-practices/",
+    "source_type": "sre",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Production_Engineering",
+    "concept": "on-call rotations",
+    "content": "Effective on-call rotations require at least 8 engineers per rotation to prevent burnout, with clear escalation paths and automated runbooks for common incidents.",
+    "source_url": "https://incident.io/blog/best-incident-postmortem-software-2026-guide",
+    "source_type": "postmortem",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Production_Engineering",
+    "concept": "incident severity levels",
+    "content": "Incidents should be classified by severity based on customer impact: SEV1 (complete outage), SEV2 (degraded service), SEV3 (minor issue) with different response SLAs per level.",
+    "source_url": "https://incident.io/blog/best-incident-postmortem-software-2026-guide",
+    "source_type": "postmortem",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Production_Engineering",
+    "concept": "declaration-to-resolution pipeline",
+    "content": "Modern incident management follows a pipeline: detect, declare, triage, diagnose, mitigate, resolve, document, and prevent \u2014 each stage has specific tooling and automation.",
+    "source_url": "https://incident.io/blog/best-incident-postmortem-software-2026-guide",
+    "source_type": "postmortem",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Production_Engineering",
+    "concept": "runbook automation",
+    "content": "Runbooks should be version-controlled, tested, and automated where possible. Common incident types should have documented runbooks that reduce MTTR by providing step-by-step guidance.",
+    "source_url": "https://incident.io/blog/best-incident-postmortem-software-2026-guide",
+    "source_type": "postmortem",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Production_Engineering",
+    "concept": "incident commander role",
+    "content": "The Incident Commander role coordinates response without fixing \u2014 they track timeline, assign tasks, communicate status, and ensure the team follows the incident response process.",
+    "source_url": "https://incident.io/blog/best-incident-postmortem-software-2026-guide",
+    "source_type": "postmortem",
+    "tags": [],
+    "quality": 1.0
+  }
+]

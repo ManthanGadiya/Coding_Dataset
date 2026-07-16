@@ -4,6 +4,41 @@ SemVer: MAJOR.MINOR.PATCH
 
 ---
 
+# [0.4.0] — 2026-07-16
+
+## Added
+
+### 1M Production Dataset
+- **1,000,000 EKRs** generated at 2,373 EKRs/sec in 7 minutes
+- Real quality distribution: **Q2 14.4%, Q3 74.0%, Q4 11.6%** (variable reasoning chains)
+- Output in both JSONL (2.19 GB) and **TOON (2.37 GB)** formats with manifest
+- 114 knowledge atoms across 15 domains (from scraped real-world engineering sources)
+
+### Knowledge Base Expansion
+- **41 new knowledge atoms**: 15 Software_Architecture (microservices), 8 Cloud (AWS Well-Architected), 5 Production_Engineering, 5 AI_Engineering, 3 Networking, 3 Databases, 2 Security
+- Sources: Martin Fowler microservices article, AWS Well-Architected Framework, incident.io runbooks
+- All domains have ≥5 atoms with richer cross-domain coverage
+
+### Benchmark Suite
+- `src/compiler/benchmark/engine.py`: quality distribution, domain coverage, atom diversity, throughput measurement
+- `scripts/benchmark.py`: automated benchmark runner
+- `scripts/generate_production.py`: 1M-capable generation with checkpointing and quality tracking
+
+### EpisodeGenerator Improvements
+- Variable reasoning chain length: 2-8 steps per EKR (was fixed 6-7)
+- Variable decisions: 1-3 per decision type (was 2-3)
+- Variable evidence: 1-4 items (was 2-3)
+- Variable knowledge atoms: 0-5 per EKR (was 2-4)
+- Creates genuine within-type quality variance (Q2-Q4)
+
+## Changed
+- QualityEngine: content-aware scoring with substance analysis and concrete detail metrics
+- SourceAcquirer: three-tier fallback (Firecrawl SDK → HTTP → ingest file); fixed falsy `[]` bug
+- README updated to v0.4.0
+
+## Documentation
+- ROADMAP.md: v0.4 milestone marked complete, v1.0+ future scoped
+
 # [0.3.1] — 2026-07-16
 
 ## Changed

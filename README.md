@@ -212,23 +212,25 @@ Rather than maintaining static datasets, TOON aims to function as a continuously
 Current Version:
 
 ```
-v0.3.1 (Quality Discrimination + Ingestion Tests)
+v0.4.0 (1M Production Dataset)
 ```
 
 Development Stage:
 
 ```
-Generative Dataset Production (v0.4 planning: 1M+ scale, benchmark suite)
+1M Production Dataset — v0.4.0 released
 ```
 
-### Quality Profile (v0.3.1)
+### Quality Profile (v0.4.0)
 
 | Metric | Value |
 |--------|-------|
-| Content-aware 10-dimension scoring | Q3 (84%) / Q4 (16%) discrimination |
-| Avg reasoning chains | 6-8 steps per EKR |
-| Knowledge atom coverage | 73 atoms, 15 domains |
-| Episode types | All 12 distributed evenly |
+| Dataset size | **1,000,000 EKRs** (JSONL + TOON) |
+| Quality distribution | Q2 14.4% / Q3 74.0% / Q4 11.6% |
+| Knowledge atoms | **114 atoms**, 15 domains |
+| Avg reasoning steps | 5.3 per EKR (2-8 variable chain) |
+| Throughput | 2,373 EKRs/sec |
+| Episode types | All 12 evenly distributed |
 | Test coverage | 83 tests, all passing |
 
 ---

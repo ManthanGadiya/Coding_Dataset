@@ -1,0 +1,38 @@
+[
+  {
+    "domain": "Testing",
+    "concept": "testing for reliability",
+    "content": "Testing for reliability includes unit tests, integration tests, load tests, and disaster recovery drills to validate system behavior under adverse conditions.",
+    "source_url": "https://sre.google/sre-book/testing-reliability/",
+    "source_type": "sre",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Testing",
+    "concept": "load testing",
+    "content": "Load testing validates systems under expected and peak traffic, establishing the resource-to-capacity ratio that drives provisioning decisions.",
+    "source_url": "https://sre.google/sre-book/service-best-practices/",
+    "source_type": "sre",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Testing",
+    "concept": "canary deployment",
+    "content": "Canary deployments route a small percentage of traffic to a new version before full rollout, detecting regressions with minimal user impact.",
+    "source_url": "https://sre.google/sre-book/service-best-practices/",
+    "source_type": "sre",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Testing",
+    "concept": "disaster role playing",
+    "content": "Practice handling hypothetical outages through disaster role-playing to keep incident response skills sharp and improve documentation.",
+    "source_url": "https://sre.google/sre-book/service-best-practices/",
+    "source_type": "sre",
+    "tags": [],
+    "quality": 1.0
+  }
+]

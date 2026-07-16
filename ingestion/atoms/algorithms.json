@@ -1,0 +1,20 @@
+[
+  {
+    "domain": "Algorithms",
+    "concept": "exponential backoff",
+    "content": "Exponential backoff with jitter is essential for retry logic in distributed systems, preventing retry storms that amplify failure rates.",
+    "source_url": "https://sre.google/sre-book/service-best-practices/",
+    "source_type": "sre",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Algorithms",
+    "concept": "consistent hashing",
+    "content": "Consistent hashing maps keys to positions on a hash ring, with each node responsible for a range. Adding or removing nodes affects only immediate neighbors.",
+    "source_url": "https://github.com/Sairyss/system-design-patterns",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  }
+]
