@@ -23,12 +23,23 @@ All 11 modules implemented. 70 tests. 100K EKR pilot at Q4+ quality.
 | 10-dimensional quality scoring | Done |
 | 100K EKR pilot at Q4+ avg (4.03) | Done |
 
-## v0.3 — Production Dataset (Next)
+## v0.3 — Production Dataset (Done)
+
+100K EKRs at Q4+ quality, 73 knowledge atoms from real-world sources via Firecrawl ingestion.
+
+| Component | Status |
+|-----------|--------|
+| 100K EKR production dataset | Done |
+| Real-world knowledge ingestion | Done |
+| Knowledge-enriched generation (73 atoms, 15 domains) | Done |
+| 70+ tests passing | Done |
+
+## v0.4 — Scale & Release (Next)
 
 - Generate 1M+ EKR dataset
-- Build real-world sources (Firecrawl)
 - Benchmark suite
 - Public dataset release
+- Model training pipeline
 
 ---
 
@@ -42,8 +53,22 @@ All 11 modules implemented. 70 tests. 100K EKR pilot at Q4+ quality.
 | M4 | Generation pipeline | Done |
 | M5 | Validation pipeline | Done |
 | M6 | Optimization pipeline | Done |
-| M7 | Pilot dataset released | Pending |
+| M7 | Pilot dataset released | Done |
 | M8 | Public v1.0 release | Future |
+
+---
+
+## v0.3 — Production Dataset (Done)
+
+v0.3.0: 100K EKRs at Q4+ quality, 73 knowledge atoms from real sources, Firecrawl ingestion pipeline.
+
+| Component | Status |
+|-----------|--------|
+| 100K EKR production dataset | Done |
+| Real-world knowledge ingestion (73 atoms) | Done |
+| Knowledge-enriched generation | Done |
+| 70+ tests passing | Done |
+| v0.3.0 tagged | Done |
 
 ---
 
