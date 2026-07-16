@@ -1,5 +1,7 @@
 # Curriculum Module
 
+> **v0.2.0-dev**
+
 Defines learning progression. 1 file in `src/compiler/curriculum/`.
 
 ## Difficulty Distribution

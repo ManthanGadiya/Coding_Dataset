@@ -1,5 +1,7 @@
 # Cognition Module
 
+> **v0.2.0-dev**
+
 Models engineering reasoning. 1 file in `src/compiler/cognition/`.
 
 ## Reasoning Primitives

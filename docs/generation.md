@@ -1,5 +1,7 @@
 # Generation Module
 
+> **v0.2.0-dev**
+
 Transforms worlds into Engineering Knowledge Records. 2 files in `src/compiler/generation/`.
 
 ## Episode Types

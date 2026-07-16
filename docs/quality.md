@@ -1,5 +1,7 @@
 # Quality Module
 
+> **v0.2.0-dev**
+
 Multi-dimensional quality scoring. 1 file in `src/compiler/quality/`.
 
 ## Scoring Dimensions

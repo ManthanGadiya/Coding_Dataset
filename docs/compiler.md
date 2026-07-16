@@ -1,5 +1,7 @@
 # Compiler Overview
 
+> **v0.2.0-dev**
+
 11-layer pipeline for transforming engineering knowledge into structured datasets.
 
 ## Pipeline

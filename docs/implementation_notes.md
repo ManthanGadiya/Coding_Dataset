@@ -1,5 +1,7 @@
 # Implementation Notes
 
+> **v0.2.0-dev**
+
 ## Architecture Decisions
 
 ### ADR-001: Relative Imports Within `src/compiler/`

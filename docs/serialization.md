@@ -1,5 +1,7 @@
 # Serialization Module
 
+> **v0.2.0-dev**
+
 Converts internal EKRs to output formats. 2 files in `src/compiler/serialization/`.
 
 ## TOON Parser

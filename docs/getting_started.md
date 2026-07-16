@@ -1,5 +1,7 @@
 # Getting Started
 
+> **v0.2.0-dev**
+
 ## Prerequisites
 
 - Python 3.10+

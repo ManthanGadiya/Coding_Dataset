@@ -1,5 +1,7 @@
 # Ontology Module
 
+> **v0.2.0-dev**
+
 Defines the engineering knowledge universe. 6 files in `src/compiler/ontology/`.
 
 ## Domain Taxonomy
