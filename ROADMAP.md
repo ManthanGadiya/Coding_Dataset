@@ -11,28 +11,22 @@
 Goal: Design complete compiler architecture.
 Deliverables: Repository structure, documentation, architecture, all specs.
 
-## v0.2 — Implementation (90% Done)
+## v0.2 — Implementation (Done)
+
+All 11 modules implemented. 70 tests. 100K EKR pilot at Q4+ quality.
 
 | Component | Status |
 |-----------|--------|
-| Core (config, constants, pipeline) | Done |
-| Ontology (EKR, graph, 18 domains) | Done |
-| Cognition (20 reasoning primitives) | Done |
-| Curriculum (difficulty D0-D6) | Done |
-| World (seeded generator, models) | Done |
-| Generation (12 episode types, dataset builder) | Done |
-| Repair (16 failure categories) | Done |
-| Quality (10 scoring dimensions) | Done |
-| Validation (9 domains) | Done |
-| Optimization (dedup + tokens) | Done |
-| Serialization (JSONL, TOON, parser, manifests) | Done |
-| Pilot dataset generation | Pending |
-| Full spec-driven generation | In Progress |
+| All 11 compiler modules | Done |
+| 70 passing tests | Done |
+| Spec-driven generation (12 types, domain concepts) | Done |
+| 10-dimensional quality scoring | Done |
+| 100K EKR pilot at Q4+ avg (4.03) | Done |
 
 ## v0.3 — Production Dataset (Next)
 
-- Generate 100K+ EKR pilot
-- Spec-driven full generation
+- Generate 1M+ EKR dataset
+- Build real-world sources (Firecrawl)
 - Benchmark suite
 - Public dataset release
 

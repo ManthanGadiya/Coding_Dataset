@@ -4,7 +4,7 @@ SemVer: MAJOR.MINOR.PATCH
 
 ---
 
-# [0.2.0-dev] — 2026-07-16
+# [0.2.0] — 2026-07-16
 
 ## Added
 
@@ -32,9 +32,19 @@ SemVer: MAJOR.MINOR.PATCH
 ## Changed
 - Architecture docs updated to reflect actual implementation
 - Roadmap updated with current progress
+- EpisodeGenerator: template-based → spec-driven (12 episode types, domain concepts, incident scenarios)
+- QualityEngine: flat scoring → 10-dimensional content-aware scoring
+- DatasetBuilder: cycling episode types for even distribution
+
+## Improved
+- Avg quality from Q3 (3.0) to Q4+ (4.03) at 100K scale
+- Reasoning chains: 7-step spec-driven (was 2-step template)
+- Evidence: 2.5 items per EKR (was 1)
+- Decisions: 1.25 per EKR (was 1)
 
 ## Removed
 - `compile_constants` method from ToonCompiler (replaced by direct dict access)
+- Redundant reasoning injection in DatasetBuilder
 
 # [0.1.0] — Foundation
 
