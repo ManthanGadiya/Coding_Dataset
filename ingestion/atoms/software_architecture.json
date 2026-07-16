@@ -1,0 +1,245 @@
+[
+  {
+    "domain": "Software_Architecture",
+    "concept": "Design Patterns",
+    "content": "Design patterns are typical solutions to common problems in software design. Each pattern is like a blueprint that you can customize.",
+    "source_url": "https://refactoring.guru/design-patterns/catalog",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Software_Architecture",
+    "concept": "Creational Patterns",
+    "content": "Creational patterns provide various object creation mechanisms, which increase flexibility and reuse of existing code.",
+    "source_url": "https://refactoring.guru/design-patterns/catalog",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Software_Architecture",
+    "concept": "Structural Patterns",
+    "content": "Structural patterns explain how to assemble objects and classes into larger structures while keeping these structures flexible and efficient.",
+    "source_url": "https://refactoring.guru/design-patterns/catalog",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Software_Architecture",
+    "concept": "Behavioral Patterns",
+    "content": "Behavioral patterns are concerned with algorithms and the assignment of responsibilities between objects.",
+    "source_url": "https://refactoring.guru/design-patterns/catalog",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Software_Architecture",
+    "concept": "microservices",
+    "content": "Microservices architecture breaks a system into loosely coupled, independently deployable services, each responsible for a specific business function.",
+    "source_url": "https://dev.to/fahimulhaq/complete-guide-to-system-design-oc7",
+    "source_type": "article",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Software_Architecture",
+    "concept": "event-driven architecture",
+    "content": "Event-driven architecture relies on the production, detection, and consumption of events to drive interactions between decoupled components.",
+    "source_url": "https://dev.to/fahimulhaq/complete-guide-to-system-design-oc7",
+    "source_type": "article",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Software_Architecture",
+    "concept": "Architecture Decision Record",
+    "content": "An Architecture Decision Record (ADR) captures a single architectural decision along with its context, trade-offs, and consequences.",
+    "source_url": "https://adr.github.io/",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Software_Architecture",
+    "concept": "CQRS",
+    "content": "Command Query Responsibility Segregation (CQRS) separates read and write models, enabling independent scaling and optimization.",
+    "source_url": "https://github.com/Sairyss/system-design-patterns",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Software_Architecture",
+    "concept": "SAGA pattern",
+    "content": "The Saga pattern manages distributed transactions by breaking them into a series of local transactions with compensating rollback steps.",
+    "source_url": "https://github.com/Sairyss/system-design-patterns",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Software_Architecture",
+    "concept": "outbox pattern",
+    "content": "The Outbox pattern ensures reliable message delivery by writing events to a database table as part of the same transaction as the state change.",
+    "source_url": "https://github.com/Sairyss/system-design-patterns",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Software_Architecture",
+    "concept": "strangler fig pattern",
+    "content": "The Strangler Fig pattern incrementally replaces legacy systems by gradually routing functionality to new services until the old system can be decommissioned.",
+    "source_url": "https://martinfowler.com/bliki/StranglerFigApplication.html",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Software_Architecture",
+    "concept": "bulkhead pattern",
+    "content": "The Bulkhead pattern isolates system components into pools so failure in one pool does not cascade, ensuring partial availability during outages.",
+    "source_url": "https://github.com/Sairyss/system-design-patterns",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Software_Architecture",
+    "concept": "microservices definition",
+    "content": "Microservice architecture builds applications as suites of independently deployable services, each running in its own process and communicating via lightweight HTTP APIs.",
+    "source_url": "https://martinfowler.com/articles/microservices.html",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Software_Architecture",
+    "concept": "smart endpoints dumb pipes",
+    "content": "Microservices favor smart endpoints and dumb pipes using simple RESTish protocols and lightweight messaging, avoiding complex ESB middleware for communication.",
+    "source_url": "https://martinfowler.com/articles/microservices.html",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Software_Architecture",
+    "concept": "decentralized governance",
+    "content": "Microservices decentralize governance so each service can choose the best technology stack for its requirements, enabled by service boundary enforcement.",
+    "source_url": "https://martinfowler.com/articles/microservices.html",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Software_Architecture",
+    "concept": "polyglot persistence",
+    "content": "Microservices prefer decentralized data management where each service owns its own database using polyglot persistence \u2014 different databases for different service needs.",
+    "source_url": "https://martinfowler.com/articles/microservices.html",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Software_Architecture",
+    "concept": "design for failure",
+    "content": "Microservice architectures must design for failure: any service call can fail, so clients implement graceful degradation with circuit breakers, timeouts, and bulkheads.",
+    "source_url": "https://martinfowler.com/articles/microservices.html",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Software_Architecture",
+    "concept": "bounded context",
+    "content": "Bounded Context from Domain-Driven Design provides natural service boundaries by dividing complex domains into separate contexts with explicit relationships between them.",
+    "source_url": "https://martinfowler.com/articles/microservices.html",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Software_Architecture",
+    "concept": "tolerant reader",
+    "content": "Tolerant Reader pattern allows services to tolerate changes in suppliers by ignoring unknown fields in responses, enabling independent evolution of service contracts.",
+    "source_url": "https://martinfowler.com/articles/microservices.html",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Software_Architecture",
+    "concept": "consumer-driven contracts",
+    "content": "Consumer-Driven Contracts enable services to evolve independently by defining expected behavior from the consumer perspective with automated contract validation in CI/CD.",
+    "source_url": "https://martinfowler.com/articles/microservices.html",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Software_Architecture",
+    "concept": "products not projects",
+    "content": "Microservice teams own their products over the full lifetime using 'you build, you run it' model, bringing developers into daily contact with production behavior.",
+    "source_url": "https://martinfowler.com/articles/microservices.html",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Software_Architecture",
+    "concept": "Conway's Law",
+    "content": "Conway's Law states organizations design systems whose structure mirrors their communication structure, motivating team alignment with service boundaries.",
+    "source_url": "https://martinfowler.com/articles/microservices.html",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Software_Architecture",
+    "concept": "evolutionary design",
+    "content": "Evolutionary design in microservices enables incremental migration by adding new features as services alongside existing systems, allowing gradual replacement of monolithic components.",
+    "source_url": "https://martinfowler.com/articles/microservices.html",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Software_Architecture",
+    "concept": "two pizza team",
+    "content": "The Two Pizza Team rule limits service teams to a size that can be fed by two pizzas, ensuring teams remain small enough for effective communication and ownership.",
+    "source_url": "https://martinfowler.com/articles/microservices.html",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Software_Architecture",
+    "concept": "continuous delivery",
+    "content": "Continuous Delivery is essential for microservices: automated testing, deployment pipelines, and infrastructure automation enable frequent, reliable deployments across many services.",
+    "source_url": "https://martinfowler.com/articles/microservices.html",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Software_Architecture",
+    "concept": "semantic monitoring",
+    "content": "Microservice architectures require semantic monitoring of both technical metrics (requests per second) and business metrics (orders per minute) to detect emergent behavior issues.",
+    "source_url": "https://martinfowler.com/articles/microservices.html",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Software_Architecture",
+    "concept": "service decomposition",
+    "content": "Good microservice decomposition keeps things that change together in the same service; repeatedly changing two services together signals they should be merged.",
+    "source_url": "https://martinfowler.com/articles/microservices.html",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  }
+]

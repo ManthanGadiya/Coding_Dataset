@@ -1,0 +1,38 @@
+[
+  {
+    "domain": "Performance",
+    "concept": "caching",
+    "content": "Caching reduces latency by storing frequently accessed data closer to users, while load balancing distributes traffic to optimize resource use.",
+    "source_url": "https://dev.to/fahimulhaq/complete-guide-to-system-design-oc7",
+    "source_type": "article",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Performance",
+    "concept": "autoscaling",
+    "content": "Autoscaling dynamically adjusts computational resources based on load, adding capacity during peaks and releasing resources during lulls.",
+    "source_url": "https://github.com/Sairyss/system-design-patterns",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Performance",
+    "concept": "load balancing",
+    "content": "Load balancing distributes traffic across servers using algorithms like round-robin, least-connections, or consistent hashing for optimal resource use.",
+    "source_url": "https://github.com/Sairyss/system-design-patterns",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Performance",
+    "concept": "CDN",
+    "content": "Content Delivery Networks (CDNs) cache content at edge servers close to users, reducing latency and offloading origin servers.",
+    "source_url": "https://dev.to/fahimulhaq/complete-guide-to-system-design-oc7",
+    "source_type": "article",
+    "tags": [],
+    "quality": 1.0
+  }
+]

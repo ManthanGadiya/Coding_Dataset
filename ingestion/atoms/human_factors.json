@@ -1,0 +1,29 @@
+[
+  {
+    "domain": "Human_Factors",
+    "concept": "SRE team model",
+    "content": "SRE teams should spend no more than 50% of time on operational work. At least 8 people per on-call rotation prevents fatigue.",
+    "source_url": "https://sre.google/sre-book/service-best-practices/",
+    "source_type": "sre",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Human_Factors",
+    "concept": "blameless culture",
+    "content": "Blameless postmortems focus on fixing the system, not the people. We can't fix people \u2014 but we can improve system design to prevent entire failure classes.",
+    "source_url": "https://sre.google/sre-book/service-best-practices/",
+    "source_type": "sre",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Human_Factors",
+    "concept": "production meetings",
+    "content": "Regular production meetings between SRE and development teams align on operational health, incident trends, and reliability improvements.",
+    "source_url": "https://sre.google/sre-book/service-best-practices/",
+    "source_type": "sre",
+    "tags": [],
+    "quality": 1.0
+  }
+]

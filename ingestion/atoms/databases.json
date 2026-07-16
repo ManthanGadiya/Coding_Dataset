@@ -1,0 +1,83 @@
+[
+  {
+    "domain": "Databases",
+    "concept": "replication",
+    "content": "Replication works alongside redundancy by keeping duplicate components synchronized, commonly using a primary-replica model.",
+    "source_url": "https://dev.to/fahimulhaq/complete-guide-to-system-design-oc7",
+    "source_type": "article",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Databases",
+    "concept": "partitioning",
+    "content": "Data partitioning divides data within a single database instance based on logical rules such as date ranges or user IDs to reduce query load.",
+    "source_url": "https://dev.to/fahimulhaq/complete-guide-to-system-design-oc7",
+    "source_type": "article",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Databases",
+    "concept": "indexing",
+    "content": "Database indexing creates a data structure that enables fast data lookup without scanning the entire table. B-Tree indexes work for most cases.",
+    "source_url": "https://github.com/Sairyss/system-design-patterns",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Databases",
+    "concept": "denormalization",
+    "content": "Denormalization improves read performance by adding redundant copies of data, sacrificing write performance to reduce join complexity.",
+    "source_url": "https://github.com/Sairyss/system-design-patterns",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Databases",
+    "concept": "materialized views",
+    "content": "Materialized views pre-compute and store query results for fast retrieval. Data may be stale as refresh happens periodically.",
+    "source_url": "https://github.com/Sairyss/system-design-patterns",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Databases",
+    "concept": "connection pooling",
+    "content": "Connection pooling reuses database connections across requests, avoiding the overhead of establishing a new TCP connection for each operation.",
+    "source_url": "https://github.com/Sairyss/system-design-patterns",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Databases",
+    "concept": "polyglot persistence",
+    "content": "Polyglot persistence uses different database technologies for different service needs: document stores for flexible schemas, relational for ACID transactions, time-series for metrics.",
+    "source_url": "https://martinfowler.com/articles/microservices.html",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Databases",
+    "concept": "distributed transactions",
+    "content": "Distributed transactions across services are notoriously difficult to implement; microservice architectures prefer eventual consistency with compensating operations instead.",
+    "source_url": "https://martinfowler.com/articles/microservices.html",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Databases",
+    "concept": "read replicas",
+    "content": "Read replicas offload query traffic from the primary database by maintaining synchronized copies, improving read throughput and reducing latency for reporting workloads.",
+    "source_url": "https://dev.to/fahimulhaq/complete-guide-to-system-design-oc7",
+    "source_type": "article",
+    "tags": [],
+    "quality": 1.0
+  }
+]

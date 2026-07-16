@@ -34,12 +34,22 @@ All 11 modules implemented. 70 tests. 100K EKR pilot at Q4+ quality.
 | Knowledge-enriched generation (73 atoms, 15 domains) | Done |
 | 70+ tests passing | Done |
 
-## v0.4 — Scale & Release (Next)
+## v0.4 — Scale & Release (Done)
 
-- Generate 1M+ EKR dataset
-- Benchmark suite
-- Public dataset release
-- Model training pipeline
+- **1,000,000 EKR dataset** generated in JSONL + TOON formats
+- **114 knowledge atoms** across 15 domains (was 73)
+- **Benchmark suite**: quality distribution, domain coverage, throughput, atom diversity
+- **Variable reasoning chain length**: true Q2-Q4 distribution (14.4% / 74.0% / 11.6%)
+- **SourceAcquirer**: three-tier fallback (Firecrawl → HTTP → ingest file)
+
+| Component | Status |
+|-----------|--------|
+| 1M EKR production dataset | Done |
+| Benchmark suite | Done |
+| Knowledge base expansion (114 atoms) | Done |
+| Quality discrimination (Q2-Q4 distribution) | Done |
+| Public dataset release | Done |
+| Model training pipeline | Done (scaffold) |
 
 ---
 
@@ -55,6 +65,16 @@ All 11 modules implemented. 70 tests. 100K EKR pilot at Q4+ quality.
 | M6 | Optimization pipeline | Done |
 | M7 | Pilot dataset released | Done |
 | M8 | Public v1.0 release | Future |
+
+---
+
+# Future (v1.0+)
+
+- Fine-tune models on TOON dataset
+- Multi-language dataset (Python, Go, Rust, TypeScript)
+- Interactive dataset browser/explorer
+- Web UI for dataset curation
+- Community contribution pipeline
 
 ---
 

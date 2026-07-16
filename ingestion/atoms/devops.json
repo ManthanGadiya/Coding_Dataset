@@ -1,0 +1,38 @@
+[
+  {
+    "domain": "DevOps",
+    "concept": "CI/CD",
+    "content": "Continuous Integration and Continuous Deployment automates building, testing, and deploying code changes, reducing manual error and speeding delivery.",
+    "source_url": "https://sre.google/sre-book/release-engineering/",
+    "source_type": "sre",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "DevOps",
+    "concept": "release engineering",
+    "content": "Release engineering manages the process of building and deploying software, including versioning, artifact management, and progressive rollout strategies.",
+    "source_url": "https://sre.google/sre-book/release-engineering/",
+    "source_type": "sre",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "DevOps",
+    "concept": "immutable infrastructure",
+    "content": "Immutable infrastructure replaces servers instead of modifying them in-place, ensuring consistent and reproducible deployments.",
+    "source_url": "https://sre.google/sre-book/service-best-practices/",
+    "source_type": "sre",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "DevOps",
+    "concept": "chaos engineering",
+    "content": "Chaos engineering proactively tests system resilience by injecting failures in production-like environments to uncover weaknesses before they cause real outages.",
+    "source_url": "https://github.com/Sairyss/system-design-patterns",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  }
+]

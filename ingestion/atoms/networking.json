@@ -1,0 +1,65 @@
+[
+  {
+    "domain": "Networking",
+    "concept": "API Gateway",
+    "content": "An API Gateway acts as a reverse proxy that routes requests, handles load balancing, rate limiting, authentication, and aggregates responses from multiple services.",
+    "source_url": "https://github.com/Sairyss/system-design-patterns",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Networking",
+    "concept": "circuit breaker",
+    "content": "The Circuit Breaker pattern prevents cascading failures by detecting when a downstream service is failing and routing around it until it recovers.",
+    "source_url": "https://github.com/Sairyss/system-design-patterns",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Networking",
+    "concept": "retry with backoff",
+    "content": "Clients making RPCs must implement exponential backoff with jitter for retries to prevent retry storms that amplify failure rates.",
+    "source_url": "https://sre.google/sre-book/service-best-practices/",
+    "source_type": "sre",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Networking",
+    "concept": "graceful load shedding",
+    "content": "When load exceeds capacity, use well-behaved queuing, dynamic timeouts, and tarpitting to shed load gracefully rather than failing entirely.",
+    "source_url": "https://sre.google/sre-book/service-best-practices/",
+    "source_type": "sre",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Networking",
+    "concept": "REST API design",
+    "content": "REST APIs use HTTP methods (GET, POST, PUT, DELETE) as verbs on resource URIs, with stateless interactions, cacheable responses, and layered system architecture.",
+    "source_url": "https://martinfowler.com/articles/microservices.html",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Networking",
+    "concept": "gRPC",
+    "content": "gRPC uses Protocol Buffers for typed service contracts with HTTP/2 transport, enabling bidirectional streaming, flow control, and low-latency inter-service communication.",
+    "source_url": "https://martinfowler.com/articles/microservices.html",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Networking",
+    "concept": "message queuing",
+    "content": "Message queues decouple producers from consumers with asynchronous communication, enabling buffering during load spikes, guaranteed delivery, and work distribution across workers.",
+    "source_url": "https://martinfowler.com/articles/microservices.html",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  }
+]

@@ -1,0 +1,83 @@
+[
+  {
+    "domain": "AI_Engineering",
+    "concept": "RAG",
+    "content": "Retrieval-Augmented Generation (RAG) combines LLMs with external knowledge retrieval, grounding model outputs in verifiable source documents.",
+    "source_url": "https://dev.to/fahimulhaq/complete-guide-to-system-design-oc7",
+    "source_type": "article",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "AI_Engineering",
+    "concept": "LLM inference",
+    "content": "Large Language Model inference introduces new cost and latency constraints \u2014 model inference costs can dwarf compute costs in AI-native architectures.",
+    "source_url": "https://dev.to/fahimulhaq/complete-guide-to-system-design-oc7",
+    "source_type": "article",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "AI_Engineering",
+    "concept": "prompt caching",
+    "content": "Prompt caching reduces LLM inference costs by reusing cached processing results for repeated prompt prefixes across requests.",
+    "source_url": "https://dev.to/fahimulhaq/complete-guide-to-system-design-oc7",
+    "source_type": "article",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "AI_Engineering",
+    "concept": "AI observability",
+    "content": "AI systems require specialized observability: tracking embeddings drift, hallucination rates, token usage, and model response quality over time.",
+    "source_url": "https://dev.to/fahimulhaq/complete-guide-to-system-design-oc7",
+    "source_type": "article",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "AI_Engineering",
+    "concept": "fine-tuning",
+    "content": "Fine-tuning adapts a pre-trained LLM to a specific domain by training on curated datasets, improving output quality for specialized tasks at the cost of additional compute.",
+    "source_url": "https://dev.to/fahimulhaq/complete-guide-to-system-design-oc7",
+    "source_type": "article",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "AI_Engineering",
+    "concept": "embeddings",
+    "content": "Embeddings convert text into dense vector representations that capture semantic meaning, enabling similarity search, clustering, and retrieval for RAG pipelines.",
+    "source_url": "https://dev.to/fahimulhaq/complete-guide-to-system-design-oc7",
+    "source_type": "article",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "AI_Engineering",
+    "concept": "LLM evaluation",
+    "content": "LLM evaluation requires automated metrics (BLEU, ROUGE, accuracy) combined with human evaluation for subjective quality, hallucination rate, and factual consistency measurement.",
+    "source_url": "https://dev.to/fahimulhaq/complete-guide-to-system-design-oc7",
+    "source_type": "article",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "AI_Engineering",
+    "concept": "vector databases",
+    "content": "Vector databases store and index embeddings for efficient similarity search, using approximate nearest neighbor (ANN) algorithms for sub-millisecond retrieval at billion-scale.",
+    "source_url": "https://dev.to/fahimulhaq/complete-guide-to-system-design-oc7",
+    "source_type": "article",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "AI_Engineering",
+    "concept": "agentic AI",
+    "content": "Agentic AI systems autonomously reason, plan, and execute multi-step tasks using tools and external knowledge, requiring careful observability for safety and correctness.",
+    "source_url": "https://aws.amazon.com/what-is/agentic-ai/",
+    "source_type": "article",
+    "tags": [],
+    "quality": 1.0
+  }
+]

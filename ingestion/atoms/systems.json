@@ -1,0 +1,29 @@
+[
+  {
+    "domain": "Systems",
+    "concept": "asynchronous processing",
+    "content": "Asynchronous processing uses message queues or event streams to decouple components, improving scalability and resilience.",
+    "source_url": "https://github.com/Sairyss/system-design-patterns",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Systems",
+    "concept": "event sourcing",
+    "content": "Event sourcing stores all state changes as a sequence of events, enabling full audit trails, temporal queries, and replay for recovery.",
+    "source_url": "https://github.com/Sairyss/system-design-patterns",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Systems",
+    "concept": "actor model",
+    "content": "The Actor model isolates state within lightweight actors that communicate via messages, eliminating shared-state concurrency bugs.",
+    "source_url": "https://github.com/Sairyss/system-design-patterns",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "domain": "Distributed_Systems",
+    "concept": "CAP theorem",
+    "content": "A distributed system can only provide two of three properties simultaneously: consistency, availability, and partition tolerance.",
+    "source_url": "https://dev.to/fahimulhaq/complete-guide-to-system-design-oc7",
+    "source_type": "article",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Distributed_Systems",
+    "concept": "PACELC theorem",
+    "content": "When there is no partition, a distributed system can trade off between latency and consistency.",
+    "source_url": "https://dev.to/fahimulhaq/complete-guide-to-system-design-oc7",
+    "source_type": "article",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Distributed_Systems",
+    "concept": "sharding",
+    "content": "Sharding distributes data across multiple database instances, with each shard containing a unique subset of data.",
+    "source_url": "https://dev.to/fahimulhaq/complete-guide-to-system-design-oc7",
+    "source_type": "article",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Distributed_Systems",
+    "concept": "consensus",
+    "content": "Consensus algorithms like Raft and Paxos allow distributed nodes to agree on values despite failures, ensuring consistency across a cluster.",
+    "source_url": "https://github.com/Sairyss/system-design-patterns",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Distributed_Systems",
+    "concept": "gossip protocol",
+    "content": "Gossip protocols enable decentralized information dissemination where each node periodically exchanges state with random peers, scaling to thousands of nodes.",
+    "source_url": "https://github.com/Sairyss/system-design-patterns",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Distributed_Systems",
+    "concept": "consistent hashing",
+    "content": "Consistent hashing maps keys to nodes using a hash ring, minimizing remapping when nodes are added or removed \u2014 critical for distributed caches.",
+    "source_url": "https://github.com/Sairyss/system-design-patterns",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Distributed_Systems",
+    "concept": "vector clocks",
+    "content": "Vector clocks capture causal relationships between events in distributed systems, enabling detection of concurrent updates.",
+    "source_url": "https://github.com/Sairyss/system-design-patterns",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Distributed_Systems",
+    "concept": "CRDT",
+    "content": "Conflict-free Replicated Data Types (CRDTs) allow concurrent updates across replicas that converge automatically without consensus.",
+    "source_url": "https://github.com/Sairyss/system-design-patterns",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  }
+]
