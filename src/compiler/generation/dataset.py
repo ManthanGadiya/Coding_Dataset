@@ -9,15 +9,9 @@ from datetime import datetime, timezone
 from typing import Any
 
 from compiler.core.config import CompilerConfig
-from compiler.core.constants import Difficulty, Quality, Confidence
-from compiler.core.identifiers import make_id
-from compiler.core.pipeline import PipelineResult, StageResult, PipelineStage
-
-from compiler.ontology.ekr import EngineeringKnowledgeRecord
+from compiler.core.constants import Quality
 from compiler.ontology.graph import KnowledgeGraph
 from compiler.ontology.domain import DomainName
-
-from compiler.cognition.engine import ReasoningGraph, ReasoningStep
 
 from compiler.world.generator import WorldGenerator
 from compiler.world.models import EngineeringWorld
@@ -64,36 +58,7 @@ class DatasetBuildResult:
         return "\n".join(lines)
 
 
-REASONING_TEMPLATES: dict[str, list[str]] = {
-    "bug_fix": [
-        "Observe the failing test output",
-        "Identify the root cause of the regression",
-        "Hypothesize about the incorrect assumption",
-        "Validate the fix with unit tests",
-        "Reflect on how to prevent similar bugs",
-    ],
-    "incident_response": [
-        "Observe elevated error rates in monitoring",
-        "Diagnose the failing service component",
-        "Identify the root cause from logs",
-        "Implement the mitigation strategy",
-        "Document the incident for postmortem",
-    ],
-    "performance_optimization": [
-        "Measure current latency distribution",
-        "Identify the bottleneck component",
-        "Design optimization approach",
-        "Implement the optimization",
-        "Benchmark and verify improvement",
-    ],
-    "architecture_decision": [
-        "Analyze the current system limitations",
-        "Research alternative architectures",
-        "Evaluate trade-offs between options",
-        "Select the optimal approach",
-        "Document the decision rationale",
-    ],
-}
+
 
 
 class DatasetBuilder:
@@ -117,6 +82,7 @@ class DatasetBuilder:
 
         domains = list(DomainName)
         episode_types = list(EpisodeType)
+        ep_idx = 0
 
         for w_idx in range(num_worlds):
             domain = domains[w_idx % len(domains)]
@@ -124,22 +90,14 @@ class DatasetBuilder:
             result.total_worlds += 1
 
             for _ in range(episodes_per_world):
-                ep_type = episode_types[self.world_gen._rand(len(episode_types))]
+                ep_type = episode_types[ep_idx % len(episode_types)]
+                ep_idx += 1
                 gen_result = self.ep_gen.generate(
                     {"world": world.to_dict(), "domain": domain.value},
                     ep_type, domain.value,
                 )
                 ekr = gen_result.ekr
                 result.total_episodes += 1
-
-                # Inject realistic reasoning
-                self._inject_reasoning(ekr, ep_type.value, domain.value)
-
-                # Add decisions
-                self._inject_decisions(ekr, ep_type.value)
-
-                # Link knowledge atoms
-                ekr.knowledge_atoms = [make_id("KA") for _ in range(self.world_gen._rand(3) + 1)]
 
                 record = ekr.to_dict()
 
@@ -185,28 +143,4 @@ class DatasetBuilder:
         result.duration_ms = (time.perf_counter() - t0) * 1000
         return result
 
-    def _inject_reasoning(self, ekr: EngineeringKnowledgeRecord, ep_type: str, domain: str):
-        templates = REASONING_TEMPLATES.get(ep_type, [
-            "Observe the current state",
-            "Analyze the situation",
-            "Formulate a plan",
-        ])
-        for step in templates:
-            ekr.add_reasoning(
-                step.split(" ")[0],
-                f"{step} in {domain} context",
-                Confidence.C3,
-            )
-        ekr.add_reasoning("Reflect", f"Lessons learned from {ep_type} in {domain}", Confidence.C4)
 
-    def _inject_decisions(self, ekr: EngineeringKnowledgeRecord, ep_type: str):
-        decisions = {
-            "bug_fix": ("Apply minimal fix", ["Rewrite module", "Add workaround"], "Fixed with regression test"),
-            "incident_response": ("Implement circuit breaker", ["Scale horizontally", "Add caching"], "Circuit breaker deployed"),
-            "performance_optimization": ("Add connection pooling", ["Increase threads", "Use async IO"], "Pool size optimized"),
-            "architecture_decision": ("Adopt event-driven architecture", ["Monolith", "Microservices"], "Event-driven selected"),
-        }
-        decision, alternatives, outcome = decisions.get(ep_type, (
-            "Use proven solution", ["Custom solution", "Third-party tool"], "Proven solution adopted"
-        ))
-        ekr.add_decision(decision, f"Context: {ep_type}", alternatives, outcome)
