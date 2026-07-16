@@ -17,6 +17,7 @@ from compiler.world.generator import WorldGenerator
 from compiler.world.models import EngineeringWorld
 
 from compiler.generation.engine import EpisodeGenerator, EpisodeType
+from compiler.ingestion.atoms import KnowledgeStore
 
 from compiler.repair.engine import RepairEngine
 from compiler.quality.engine import QualityEngine
@@ -62,10 +63,13 @@ class DatasetBuildResult:
 
 
 class DatasetBuilder:
-    def __init__(self, config: CompilerConfig | None = None):
+    def __init__(self, config: CompilerConfig | None = None,
+                 knowledge_store: KnowledgeStore | None = None,
+                 knowledge_atoms_path: Path = Path("ingestion/atoms")):
         self.config = config or CompilerConfig.default()
+        self.knowledge = knowledge_store or KnowledgeStore(path=knowledge_atoms_path)
         self.world_gen = WorldGenerator(seed=self.config.seed)
-        self.ep_gen = EpisodeGenerator()
+        self.ep_gen = EpisodeGenerator(knowledge_store=self.knowledge)
         self.repair = RepairEngine()
         self.quality = QualityEngine()
         self.validation = ValidationEngine()
