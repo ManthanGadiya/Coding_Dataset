@@ -154,16 +154,21 @@ class EpisodeGenerator:
 
         decisions = ENGINEERING_DECISIONS.get(episode_type.value, [])
         if decisions:
-            d = self._rng.choice(decisions)
-            ekr.add_decision(d["decision"], f"Context: {episode_type.value} in {domain}",
-                           d.get("alternatives", ["Alternative approach"]), d["reasoning"])
+            n_decisions = self._rng.randint(2, 3)
+            self._rng.shuffle(decisions)
+            for i in range(min(n_decisions, len(decisions))):
+                d = decisions[i]
+                ekr.add_decision(d["decision"], f"Context: {episode_type.value} in {domain}",
+                               d.get("alternatives", ["Alternative approach"]), d["reasoning"])
 
+        evidence_types = ["observation", "measurement", "log", "metric"]
         if "problem" in scenario:
-            ekr.evidence.append({
-                "type": "observation",
-                "content": scenario["problem"],
-                "source": f"{domain} engineering scenario",
-            })
+            for et in evidence_types[:self._rng.randint(2, 3)]:
+                ekr.evidence.append({
+                    "type": et,
+                    "content": scenario.get("cause", scenario["problem"]),
+                    "source": f"{domain} engineering scenario",
+                })
 
         ekr.knowledge_atoms = [f"KA-{domain}-{self._rng.randint(1000,9999)}"
                                for _ in range(self._rng.randint(2, 4))]

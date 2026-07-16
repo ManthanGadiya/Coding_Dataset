@@ -55,12 +55,69 @@ class QualityEngine:
         return QualityScore(overall=overall, dimensions=dims)
 
     def _score_dimension(self, dim: str, ekr_dict: dict) -> float:
+        reasoning = ekr_dict.get("reasoning", [])
+        decisions = ekr_dict.get("decisions", [])
+        evidence = ekr_dict.get("evidence", [])
+        tradeoffs = ekr_dict.get("tradeoffs", [])
+        atoms = ekr_dict.get("knowledge_atoms", [])
+        difficulty = ekr_dict.get("difficulty", 1)
+        domain = ekr_dict.get("domain", "")
+
         if dim == "reasoning_depth":
-            return min(5.0, len(ekr_dict.get("reasoning", [])) * 1.0)
+            ops = set(s.get("operation", "") for s in reasoning)
+            base = min(5.0, len(reasoning))
+            bonus = 0.5 if len(ops) >= 5 else 0
+            return min(5.0, base + bonus)
+
         if dim == "engineering_quality":
-            return min(5.0, len(ekr_dict.get("decisions", [])) * 1.5)
+            base = min(5.0, len(decisions) * 1.2)
+            if any(d.get("alternatives") for d in decisions):
+                base = min(5.0, base + 0.5)
+            return base
+
         if dim == "knowledge_density":
-            return min(5.0, len(ekr_dict.get("knowledge_atoms", [])) * 1.5 + 1.0)
+            return min(5.0, len(atoms) * 1.2 + len(evidence) * 0.3)
+
         if dim == "completeness":
-            return 4.0 if ekr_dict.get("metadata") and ekr_dict.get("reasoning") else 2.0
+            score = 2.0
+            if ekr_dict.get("metadata"):
+                score += 1.0
+            if reasoning:
+                score += 0.5
+            if decisions:
+                score += 0.5
+            if evidence:
+                score += 0.5
+            if atoms:
+                score += 0.5
+            return min(5.0, score)
+
+        if dim == "diversity":
+            ops = set(s.get("operation", "") for s in reasoning)
+            return min(5.0, len(ops) * 0.6 + 1.0)
+
+        if dim == "realism":
+            if evidence:
+                return min(5.0, len(evidence) * 0.8 + 2.0)
+            return 2.0
+
+        if dim == "novelty":
+            if difficulty >= 3:
+                return min(5.0, difficulty * 0.8 + 1.0)
+            return 2.0
+
+        if dim == "educational_value":
+            return min(5.0, len(reasoning) * 0.4 + len(decisions) * 0.5 + 1.0)
+
+        if dim == "consistency":
+            meta = ekr_dict.get("metadata", {})
+            if meta.get("domain") and domain and meta["domain"] == domain:
+                return 4.5
+            return 3.0
+
+        if dim == "coherence":
+            if reasoning and decisions:
+                return 4.0
+            return 2.5
+
         return 3.0
