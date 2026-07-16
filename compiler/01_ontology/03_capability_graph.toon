@@ -1,4 +1,4 @@
-description: "guarantees[5]: Connected Capability Network,No Isolated Skills,Deterministic Dependencies,Explicit Skill Progression,Explainable Competency Growth"
+description: "\"guarantees[5]: Connected Capability Network,No Isolated Skills,Deterministic Dependencies,Explicit Skill Progression,Explainable Competency Growth\""
 spec:
   id: capability_graph
   version: 1.0.0
@@ -6,15 +6,15 @@ spec:
   priority: critical
   module: Ontology
   compiler_stage: Knowledge Representation
-  description: "\"Defines the Engineering Capability Graph. Unlike a flat capability taxonomy, this specification models how engineering capabilities depend upon, reinforce, compose with and enable one another. The graph forms the cognitive backbone of engineering expertise and determines capability progression, transfer learning, prerequisite reasoning and curriculum generation.\""
+  description: "\"\\\"Defines the Engineering Capability Graph. Unlike a flat capability taxonomy, this specification models how engineering capabilities depend upon, reinforce, compose with and enable one another. The graph forms the cognitive backbone of engineering expertise and determines capability progression, transfer learning, prerequisite reasoning and curriculum generation.\\\"\""
 purpose: Represent engineering expertise as an interconnected capability graph rather than isolated independent skills.
 composite:
-  Debugging: "requires[5]: Systems Thinking,Root Cause Analysis,Observation,Hypothesis Formation,Experimentation"
+  Debugging: "\"requires[5]: Systems Thinking,Root Cause Analysis,Observation,Hypothesis Formation,Experimentation\""
 decay:
   memorized_facts: high
   reasoning: low
   engineering_judgement: very_low
-success: "\"Capability graph enables\"[5]: Curriculum Generation,Skill Gap Detection,Adaptive Dataset Generation,Competency Tracking,Transfer Learning"
+success: "\"\\\"Capability graph enables\\\"[5]: Curriculum Generation,Skill Gap Detection,Adaptive Dataset Generation,Competency Tracking,Transfer Learning\""
 future:
   weighted_edges: true
   dynamic_graphs: true

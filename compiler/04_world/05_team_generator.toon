@@ -1,24 +1,24 @@
-description: "principles[8]: engineering_realism,business_alignment,deterministic,reproducible,collaboration_first,ownership_driven,organizational_consistency,evolving_teams team_types[15]: platform,backend,frontend,mobile,ai,mlops,infrastructure,sre,devops,security,qa,developer_experience,data_engineering,research,architecture attributes[12]: team_name,team_type,project,company,mission,responsibilities,ownership,size,maturity,timezone_distribution,communication_style,decision_model structure[11]: engineering_manager,tech_lead,senior_engineers,mid_engineers,junior_engineers,interns,product_manager,designer,qa_engineer,sre,architect responsibilities[12]: feature_development,bug_fixes,code_review,architecture,deployment,monitoring,incident_response,documentation,mentoring,technical_planning,roadmap_execution,dependency_management ownership[9]: services,repositories,infrastructure,documentation,deployments,alerts,production_incidents,technical_debt,architecture_decisions collaboration[9]: planning,design_review,code_review,pair_programming,architecture_review,retrospective,incident_review,knowledge_sharing,cross_team_sync communication[9]: synchronous,asynchronous,design_documents,pull_requests,issue_tracking,architecture_records,chat,meetings,runbooks dynamics[10]: onboarding,promotions,transfers,hiring,attrition,mentorship,conflict_resolution,leadership_changes,knowledge_distribution,bus_factor performance[8]: velocity,review_latency,deployment_frequency,defect_rate,incident_rate,technical_debt_growth,documentation_quality,collaboration_score"
+description: "\"principles[8]: engineering_realism,business_alignment,deterministic,reproducible,collaboration_first,ownership_driven,organizational_consistency,evolving_teams team_types[15]: platform,backend,frontend,mobile,ai,mlops,infrastructure,sre,devops,security,qa,developer_experience,data_engineering,research,architecture attributes[12]: team_name,team_type,project,company,mission,responsibilities,ownership,size,maturity,timezone_distribution,communication_style,decision_model structure[11]: engineering_manager,tech_lead,senior_engineers,mid_engineers,junior_engineers,interns,product_manager,designer,qa_engineer,sre,architect responsibilities[12]: feature_development,bug_fixes,code_review,architecture,deployment,monitoring,incident_response,documentation,mentoring,technical_planning,roadmap_execution,dependency_management ownership[9]: services,repositories,infrastructure,documentation,deployments,alerts,production_incidents,technical_debt,architecture_decisions collaboration[9]: planning,design_review,code_review,pair_programming,architecture_review,retrospective,incident_review,knowledge_sharing,cross_team_sync communication[9]: synchronous,asynchronous,design_documents,pull_requests,issue_tracking,architecture_records,chat,meetings,runbooks dynamics[10]: onboarding,promotions,transfers,hiring,attrition,mentorship,conflict_resolution,leadership_changes,knowledge_distribution,bus_factor performance[8]: velocity,review_latency,deployment_frequency,defect_rate,incident_rate,technical_debt_growth,documentation_quality,collaboration_score\""
 team_generator:
   metadata:
-    description: "depends_on[5]: compiler/04_world/01_world_generator.toon,compiler/04_world/02_company_generator.toon,compiler/04_world/03_repository_generator.toon,compiler/04_world/04_project_generator.toon,compiler/01_ontology/17_entity_model.toon consumed_by[6]: compiler/04_world/06_engineer_profiles.toon,compiler/04_world/07_roles.toon,compiler/04_world/08_business_events.toon,compiler/04_world/09_repository_history.toon,compiler/05_generation/02_episode_generator.toon,compiler/05_generation/11_review_generator.toon"
+    description: "\"depends_on[5]: compiler/04_world/01_world_generator.toon,compiler/04_world/02_company_generator.toon,compiler/04_world/03_repository_generator.toon,compiler/04_world/04_project_generator.toon,compiler/01_ontology/17_entity_model.toon consumed_by[6]: compiler/04_world/06_engineer_profiles.toon,compiler/04_world/07_roles.toon,compiler/04_world/08_business_events.toon,compiler/04_world/09_repository_history.toon,compiler/05_generation/02_episode_generator.toon,compiler/05_generation/11_review_generator.toon\""
     id: WORLD-005
     title: Team Generator
     version: 1.0
     status: Stable
     owner: World Engine
-    objective: "\"Generate realistic software engineering teams with evolving structures, ownership, collaboration patterns, communication, and engineering responsibilities.\""
-evolution: "supports[8]: team_growth,reorganization,ownership_transfer,technology_adoption,process_improvement,scaling,mergers,project_reassignment"
+    objective: "\"\\\"Generate realistic software engineering teams with evolving structures, ownership, collaboration patterns, communication, and engineering responsibilities.\\\"\""
+evolution: "\"supports[8]: team_growth,reorganization,ownership_transfer,technology_adoption,process_improvement,scaling,mergers,project_reassignment\""
 relationships:
-  description: "belongs_to[2]: company,project owns[3]: repositories,services,infrastructure consists_of[3]: engineers,managers,architects"
+  description: "\"belongs_to[2]: company,project owns[3]: repositories,services,infrastructure consists_of[3]: engineers,managers,architects\""
   collaborates_with: other_teams
 randomization:
   deterministic_seed: true
   weighted_generation: true
   reproducible: true
   realistic_distribution: true
-validation: "reject_if[7]: missing_team_lead,orphan_team,missing_project,missing_company,invalid_team_size,inconsistent_ownership,impossible_structure"
-metrics: "compute[8]: collaboration_density,ownership_clarity,communication_efficiency,engineering_maturity,organizational_health,bus_factor,knowledge_distribution,team_resilience"
+validation: "\"reject_if[7]: missing_team_lead,orphan_team,missing_project,missing_company,invalid_team_size,inconsistent_ownership,impossible_structure\""
+metrics: "\"compute[8]: collaboration_density,ownership_clarity,communication_efficiency,engineering_maturity,organizational_health,bus_factor,knowledge_distribution,team_resilience\""
 success_metrics:
   organizational_consistency:
     minimum: 1.0

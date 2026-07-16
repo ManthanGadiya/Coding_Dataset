@@ -1,4 +1,4 @@
-description: "success[3]: Every dependency is explicit.,Every dependency is traceable.,Every dependency supports reasoning. guarantees[5]: Deterministic Dependency Graph,Explainable Dependencies,Incremental Compilation,Curriculum Generation,Impact Analysis"
+description: "\"success[3]: Every dependency is explicit.,Every dependency is traceable.,Every dependency supports reasoning. guarantees[5]: Deterministic Dependency Graph,Explainable Dependencies,Incremental Compilation,Curriculum Generation,Impact Analysis\""
 spec:
   id: dependency_graph
   version: 1.0.0
@@ -6,15 +6,14 @@ spec:
   priority: highest
   module: Ontology
   compiler_stage: Knowledge Representation
-  description: "\"Defines the Universal Dependency Graph (UDG) for the TOON Dataset Compiler. The graph models every dependency between engineering entities, enabling curriculum generation, reasoning, impact analysis, validation, change propagation, incremental compilation and engineering simulations.\""
+  description: "\"\\\"Defines the Universal Dependency Graph (UDG) for the TOON Dataset Compiler. The graph models every dependency between engineering entities, enabling curriculum generation, reasoning, impact analysis, validation, change propagation, incremental compilation and engineering simulations.\\\"\""
 purpose: Represent all engineering dependencies as a deterministic directed graph.
 graph:
   type: Directed Acyclic Graph
   weighted: true
   deterministic: true
   traversable: true
-ekr: "\"Every Engineering Knowledge Record declares\"[4]: Incoming Dependencies,Outgoing Dependencies,Capability Dependencies,Knowledge Dependencies"
-examples[5]: "Example_01[3]: Dynamic Programming,depends_on,Recursion","Example_02[3]: Raft,requires,Consensus Theory","Example_03[3]: Service,depends_on,Database","Example_04[3]: Redis Cache,influences,API Latency","Example_05[3]: Mutex,enables,Thread Safety"
+ekr: "\"\\\"Every Engineering Knowledge Record declares\\\"[4]: Incoming Dependencies,Outgoing Dependencies,Capability Dependencies,Knowledge Dependencies\""
 future:
   dynamic_dependencies: true
   probabilistic_edges: true

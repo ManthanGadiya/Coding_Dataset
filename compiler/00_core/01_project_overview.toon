@@ -1,4 +1,4 @@
-description: "lifecycle[10]: Acquire,Structure,Connect,Reason,Generate,Repair,Validate,Optimize,Serialize,Release"
+description: "\"lifecycle[10]: Acquire,Structure,Connect,Reason,Generate,Repair,Validate,Optimize,Serialize,Release\""
 spec:
   id: project_overview
   version: 1.0.0
@@ -7,14 +7,14 @@ spec:
   owner: CAMera
   module: Core
   compiler_stage: Initialization
-  description: "\"Defines the purpose, scope, architecture, objectives and execution model of the TOON Dataset Compiler. This file serves as the entry point for every compiler component and every AI agent interacting with the project.\""
+  description: "\"\\\"Defines the purpose, scope, architecture, objectives and execution model of the TOON Dataset Compiler. This file serves as the entry point for every compiler component and every AI agent interacting with the project.\\\"\""
 project:
   name: TOON Dataset Compiler
   codename: CAMera Dataset
   type: Engineering Knowledge Compiler
   objective: Build the world's highest-quality engineering dataset for training autonomous coding models.
 mission:
-  primary: "\"Represent software engineering knowledge as structured, interconnected engineering knowledge rather than isolated text.\""
+  primary: "\"\\\"Represent software engineering knowledge as structured, interconnected engineering knowledge rather than isolated text.\\\"\""
 vision:
   short_term: Build a compiler capable of generating high-quality Engineering Knowledge Records.
   medium_term: Build a persistent engineering world capable of producing realistic software engineering experiences.

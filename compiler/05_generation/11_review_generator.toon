@@ -1,20 +1,20 @@
-description: "outputs[7]: review_comments,summary,blocking_issues,improvement_suggestions,approval_status,review_metrics,educational_feedback"
+description: "\"outputs[7]: review_comments,summary,blocking_issues,improvement_suggestions,approval_status,review_metrics,educational_feedback\""
 review_generator:
   metadata:
-    description: "depends_on[5]: compiler/05_generation/08_code_generator.toon,compiler/05_generation/09_bug_generator.toon,compiler/05_generation/10_test_generator.toon,compiler/04_world/15_world_state.toon,compiler/01_ontology/20_ontology_rules.toon consumed_by[2]: compiler/05_generation/12_documentation_generator.toon,compiler/05_generation/19_dataset_builder.toon"
+    description: "\"depends_on[5]: compiler/05_generation/08_code_generator.toon,compiler/05_generation/09_bug_generator.toon,compiler/05_generation/10_test_generator.toon,compiler/04_world/15_world_state.toon,compiler/01_ontology/20_ontology_rules.toon consumed_by[2]: compiler/05_generation/12_documentation_generator.toon,compiler/05_generation/19_dataset_builder.toon\""
     id: GEN-011
     title: Review Generator
     version: 2.0
     status: Stable
     owner: Generation Engine
-    objective: "\"Generate realistic senior-engineer code reviews that evaluate correctness, architecture, maintainability, security, performance, readability, and long-term engineering quality.\""
+    objective: "\"\\\"Generate realistic senior-engineer code reviews that evaluate correctness, architecture, maintainability, security, performance, readability, and long-term engineering quality.\\\"\""
 randomization:
   deterministic_seed: true
   reviewer_personality: enabled
   strictness_level: adaptive
   repository_consistent: true
-validation: "reject_if[6]: contradictory_feedback,impossible_suggestion,architecture_inconsistency,invalid_reasoning,unsupported_claim,duplicate_comments"
-metrics: "compute[7]: review_quality,engineering_depth,actionability,educational_value,consistency,architecture_alignment,reviewer_confidence"
+validation: "\"reject_if[6]: contradictory_feedback,impossible_suggestion,architecture_inconsistency,invalid_reasoning,unsupported_claim,duplicate_comments\""
+metrics: "\"compute[7]: review_quality,engineering_depth,actionability,educational_value,consistency,architecture_alignment,reviewer_confidence\""
 success_metrics:
   engineering_depth:
     minimum: 0.99

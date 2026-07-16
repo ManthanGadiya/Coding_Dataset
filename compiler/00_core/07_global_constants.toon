@@ -1,4 +1,4 @@
-description: "immutable[5]: compiler_identity,ontology_identity,record_identity,version_history,provenance guarantees[5]: Every module references this specification.,No duplicated enumerations exist.,Constants remain backward compatible.,Compiler-wide terminology remains consistent.,Every identifier is globally unique."
+description: "\"immutable[5]: compiler_identity,ontology_identity,record_identity,version_history,provenance guarantees[5]: Every module references this specification.,No duplicated enumerations exist.,Constants remain backward compatible.,Compiler-wide terminology remains consistent.,Every identifier is globally unique.\""
 spec:
   id: global_constants
   version: 1.0.0
@@ -6,8 +6,8 @@ spec:
   priority: critical
   module: Core
   compiler_stage: Foundation
-  description: "\"Defines every compiler-wide constant, enumeration, identifier, priority, status, quality scale, confidence scale, risk scale, difficulty level, lifecycle state and global limits used by every subsystem of the TOON Dataset Compiler. No compiler module may redefine constants defined in this specification.\""
-purpose: "\"Provide a single immutable source of truth for all compiler-wide constants to guarantee consistency, reproducibility and interoperability.\""
+  description: "\"\\\"Defines every compiler-wide constant, enumeration, identifier, priority, status, quality scale, confidence scale, risk scale, difficulty level, lifecycle state and global limits used by every subsystem of the TOON Dataset Compiler. No compiler module may redefine constants defined in this specification.\\\"\""
+purpose: "\"\\\"Provide a single immutable source of truth for all compiler-wide constants to guarantee consistency, reproducibility and interoperability.\\\"\""
 priority:
   P0: Critical
   P1: High

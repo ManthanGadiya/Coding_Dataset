@@ -1,301 +1,35 @@
 execution_validation:
-
   metadata:
-
     id: VAL-006
-
     title: Execution Validation
-
     version: 2.0
-
     status: Stable
-
     owner: Validation Engine
-
-    depends_on:
-
-      - compiler/08_validation/01_validation_engine.toon
-      - compiler/05_generation/08_code_generator.toon
-      - compiler/05_generation/10_test_generator.toon
-
-    consumed_by:
-
-      - compiler/08_validation/08_consistency_validation.toon
-      - compiler/08_validation/10_final_validation.toon
-      - compiler/08_validation/11_validation_reports.toon
-
-    objective:
-
-      Validate that generated code artifacts
-      compile, execute, pass tests, and produce
-      correct outputs within simulated engineering
-      environments, ensuring functional correctness
-      independent of structural quality.
-
-
-################################################################################
-# PHILOSOPHY
-################################################################################
-
-philosophy:
-
-  code_must_execute
-
-  tests_must_pass
-
-  compilation_is_required
-
-  runtime_correctness_matters
-
-  deterministic_execution
-
-  isolated_environments
-
-  reproducible_builds
-
-  evidence_is_output
-
-
-################################################################################
-# INPUTS
-################################################################################
-
-inputs:
-
-  code_artifacts
-
-  test_suites
-
-  build_configurations
-
-  execution_environments
-
-  dependency_definitions
-
-  expected_outputs
-
-  execution_constraints
-
-  runtime_configuration
-
-
-################################################################################
-# EXECUTION DOMAINS
-################################################################################
-
-domains:
-
-  compilation
-
-  static_analysis
-
-  unit_testing
-
-  integration_testing
-
-  output_verification
-
-  performance_validation
-
-  error_handling
-
-  resource_usage
-
-
-################################################################################
-# VALIDATION RULES
-################################################################################
-
-rules:
-
-  code_compiles
-
-  static_analysis_passes
-
-  unit_tests_pass
-
-  integration_tests_pass
-
-  output_matches_expected
-
-  error_handling_complete
-
-  resource_usage_within_bounds
-
-  no_runtime_exceptions
-
-  deterministic_execution
-
-
-################################################################################
-# ANALYSIS
-################################################################################
-
-analysis:
-
-  compilation_analysis
-
-  test_coverage_analysis
-
-  output_verification
-
-  error_analysis
-
-  performance_analysis
-
-  resource_analysis
-
-  determinism_verification
-
-
-################################################################################
-# FAILURE MODES
-################################################################################
-
-failures:
-
-  compilation_failure
-
-  static_analysis_violation
-
-  unit_test_failure
-
-  integration_test_failure
-
-  output_mismatch
-
-  runtime_exception
-
-  resource_exhaustion
-
-  non_deterministic_execution
-
-  timeout
-
-
-################################################################################
-# CONSTRAINTS
-################################################################################
-
-constraints:
-
-  deterministic
-
-  reproducible
-
-  isolated_execution
-
-  resource_bounded
-
-  timeout_defined
-
-  environment_specified
-
-  dependency_resolved
-
-
-################################################################################
-# VALIDATION
-################################################################################
-
-validation:
-
-  build_validation
-
-  test_validation
-
-  output_validation
-
-  runtime_validation
-
-  performance_validation
-
-  determinism_validation
-
-
-################################################################################
-# RANDOMIZATION
-################################################################################
-
+    depends_on[3]: "- compiler/08_validation/01_validation_engine.toon","- compiler/05_generation/08_code_generator.toon","- compiler/05_generation/10_test_generator.toon"
+    consumed_by[3]: "- compiler/08_validation/08_consistency_validation.toon","- compiler/08_validation/10_final_validation.toon","- compiler/08_validation/11_validation_reports.toon"
+    objective[5]: Validate that generated code artifacts,"compile, execute, pass tests, and produce",correct outputs within simulated engineering,"environments, ensuring functional correctness",independent of structural quality.
+philosophy[8]: code_must_execute,tests_must_pass,compilation_is_required,runtime_correctness_matters,deterministic_execution,isolated_environments,reproducible_builds,evidence_is_output
+inputs[8]: code_artifacts,test_suites,build_configurations,execution_environments,dependency_definitions,expected_outputs,execution_constraints,runtime_configuration
+domains[8]: compilation,static_analysis,unit_testing,integration_testing,output_verification,performance_validation,error_handling,resource_usage
+rules[9]: code_compiles,static_analysis_passes,unit_tests_pass,integration_tests_pass,output_matches_expected,error_handling_complete,resource_usage_within_bounds,no_runtime_exceptions,deterministic_execution
+analysis[7]: compilation_analysis,test_coverage_analysis,output_verification,error_analysis,performance_analysis,resource_analysis,determinism_verification
+failures[9]: compilation_failure,static_analysis_violation,unit_test_failure,integration_test_failure,output_mismatch,runtime_exception,resource_exhaustion,non_deterministic_execution,timeout
+constraints[7]: deterministic,reproducible,isolated_execution,resource_bounded,timeout_defined,environment_specified,dependency_resolved
+validation[6]: build_validation,test_validation,output_validation,runtime_validation,performance_validation,determinism_validation
 randomization:
-
-  deterministic_seed:
-
-    true
-
-  reproducible:
-
-    true
-
-
-################################################################################
-# OUTPUTS
-################################################################################
-
-outputs:
-
-  execution_validation_report
-
-  compilation_report
-
-  test_results
-
-  output_verification_report
-
-  runtime_analysis
-
-  performance_report
-
-  metadata
-
-
-################################################################################
-# METRICS
-################################################################################
-
+  deterministic_seed: true
+  reproducible: true
+outputs[7]: execution_validation_report,compilation_report,test_results,output_verification_report,runtime_analysis,performance_report,metadata
 metrics:
-
-  compute:
-
-    compilation_success_rate
-
-    test_pass_rate
-
-    output_accuracy
-
-    runtime_stability
-
-    resource_efficiency
-
-    determinism_score
-
-    validation_latency
-
-    execution_reproducibility
-
-
-################################################################################
-# SUCCESS METRICS
-################################################################################
-
+  compute[8]: compilation_success_rate,test_pass_rate,output_accuracy,runtime_stability,resource_efficiency,determinism_score,validation_latency,execution_reproducibility
 success_metrics:
-
   compilation_success_rate:
-
-    minimum: 1.00
-
+    minimum: 1.0
   test_pass_rate:
-
-    minimum: 1.00
-
+    minimum: 1.0
   output_accuracy:
-
-    minimum: 1.00
-
+    minimum: 1.0
   determinism_score:
-
-    minimum: 1.00
-
+    minimum: 1.0
   execution_reproducibility:
-
-    minimum: 1.00
+    minimum: 1.0

@@ -1,370 +1,38 @@
 engineering_quality:
-
   metadata:
-
     id: QLT-005
-
     title: Engineering Quality
-
     version: 2.0
-
     status: Stable
-
     owner: Quality Engine
-
-    depends_on:
-
-      - compiler/07_quality/04_reasoning_quality.toon
-      - compiler/01_ontology/15_tradeoff_types.toon
-      - compiler/02_cognition/14_engineering_instincts.toon
-      - compiler/04_world/15_world_state.toon
-
-    consumed_by:
-
-      - compiler/07_quality/06_diversity_metrics.toon
-      - compiler/07_quality/09_quality_dashboard.toon
-      - compiler/08_validation/04_engineering_validation.toon
-
-    objective:
-
-      Evaluate engineering excellence,
-      architectural integrity,
-      maintainability,
-      operational readiness,
-      and long-term software quality
-      independent of functional correctness.
-
-
-################################################################################
-# PHILOSOPHY
-################################################################################
-
-philosophy:
-
-  engineering_over_code
-
-  systems_over_functions
-
-  maintainability_is_quality
-
-  architecture_guides_design
-
-  technical_debt_has_cost
-
-  observability_is_required
-
-  scalability_is_engineering
-
-  deterministic_evaluation
-
-
-################################################################################
-# INPUTS
-################################################################################
-
-inputs:
-
-  implementation
-
-  architecture
-
-  repository_graph
-
-  dependency_graph
-
-  deployment_plan
-
-  monitoring_plan
-
-  testing_strategy
-
-  documentation
-
-  engineering_story
-
-  engineering_memory
-
-  benchmark_reports
-
-
-################################################################################
-# ENGINEERING DIMENSIONS
-################################################################################
-
-dimensions:
-
-  maintainability
-
-  modularity
-
-  cohesion
-
-  coupling
-
-  architecture
-
-  scalability
-
-  resilience
-
-  security
-
-  observability
-
-  deployability
-
-  testability
-
-  documentation
-
-  extensibility
-
-  operability
-
-  production_readiness
-
-
-################################################################################
-# ENGINEERING PRINCIPLES
-################################################################################
-
-principles:
-
-  single_responsibility
-
-  open_closed
-
-  liskov_substitution
-
-  interface_segregation
-
-  dependency_inversion
-
-  separation_of_concerns
-
-  composition_over_inheritance
-
-  fail_fast
-
-  graceful_degradation
-
-  immutable_interfaces
-
-  explicit_dependencies
-
-  least_privilege
-
-
-################################################################################
-# ANALYSIS
-################################################################################
-
-analysis:
-
-  architecture_analysis
-
-  dependency_analysis
-
-  maintainability_analysis
-
-  scalability_analysis
-
-  observability_analysis
-
-  resilience_analysis
-
-  security_analysis
-
-  deployment_analysis
-
-  technical_debt_analysis
-
-  ownership_analysis
-
-
-################################################################################
-# QUALITY CHECKS
-################################################################################
-
-checks:
-
-  architecture_compliance
-
-  dependency_health
-
-  layering_validation
-
-  interface_quality
-
-  abstraction_quality
-
-  service_boundaries
-
-  deployment_readiness
-
-  operational_readiness
-
-  ownership_clarity
-
-  change_isolation
-
-
-################################################################################
-# SCORING
-################################################################################
-
-scoring:
-
-  maintainability_score
-
-  architecture_score
-
-  scalability_score
-
-  operational_score
-
-  deployment_score
-
-  observability_score
-
-  technical_debt_score
-
-  engineering_score
-
-
-################################################################################
-# CONSTRAINTS
-################################################################################
-
-constraints:
-
-  deterministic
-
-  reproducible
-
-  explainable
-
-  benchmarkable
-
-  graph_consistent
-
-  production_realistic
-
-  engineering_first
-
-
-################################################################################
-# VALIDATION
-################################################################################
-
-validation:
-
-  architecture_validation
-
-  dependency_validation
-
-  engineering_validation
-
-  deployment_validation
-
-  benchmark_validation
-
-  determinism_validation
-
-
-################################################################################
-# RANDOMIZATION
-################################################################################
-
+    depends_on[4]: "- compiler/07_quality/04_reasoning_quality.toon","- compiler/01_ontology/15_tradeoff_types.toon","- compiler/02_cognition/14_engineering_instincts.toon","- compiler/04_world/15_world_state.toon"
+    consumed_by[3]: "- compiler/07_quality/06_diversity_metrics.toon","- compiler/07_quality/09_quality_dashboard.toon","- compiler/08_validation/04_engineering_validation.toon"
+    objective[6]: "Evaluate engineering excellence,","architectural integrity,","maintainability,","operational readiness,",and long-term software quality,independent of functional correctness.
+philosophy[8]: engineering_over_code,systems_over_functions,maintainability_is_quality,architecture_guides_design,technical_debt_has_cost,observability_is_required,scalability_is_engineering,deterministic_evaluation
+inputs[11]: implementation,architecture,repository_graph,dependency_graph,deployment_plan,monitoring_plan,testing_strategy,documentation,engineering_story,engineering_memory,benchmark_reports
+dimensions[15]: maintainability,modularity,cohesion,coupling,architecture,scalability,resilience,security,observability,deployability,testability,documentation,extensibility,operability,production_readiness
+principles[12]: single_responsibility,open_closed,liskov_substitution,interface_segregation,dependency_inversion,separation_of_concerns,composition_over_inheritance,fail_fast,graceful_degradation,immutable_interfaces,explicit_dependencies,least_privilege
+analysis[10]: architecture_analysis,dependency_analysis,maintainability_analysis,scalability_analysis,observability_analysis,resilience_analysis,security_analysis,deployment_analysis,technical_debt_analysis,ownership_analysis
+checks[10]: architecture_compliance,dependency_health,layering_validation,interface_quality,abstraction_quality,service_boundaries,deployment_readiness,operational_readiness,ownership_clarity,change_isolation
+scoring[8]: maintainability_score,architecture_score,scalability_score,operational_score,deployment_score,observability_score,technical_debt_score,engineering_score
+constraints[7]: deterministic,reproducible,explainable,benchmarkable,graph_consistent,production_realistic,engineering_first
+validation[6]: architecture_validation,dependency_validation,engineering_validation,deployment_validation,benchmark_validation,determinism_validation
 randomization:
-
-  deterministic_seed:
-
-    true
-
-  reproducible:
-
-    true
-
-
-################################################################################
-# OUTPUTS
-################################################################################
-
-outputs:
-
-  engineering_report
-
-  engineering_score
-
-  architecture_report
-
-  maintainability_report
-
-  technical_debt_report
-
-  production_readiness_report
-
-  metadata
-
-
-################################################################################
-# METRICS
-################################################################################
-
+  deterministic_seed: true
+  reproducible: true
+outputs[7]: engineering_report,engineering_score,architecture_report,maintainability_report,technical_debt_report,production_readiness_report,metadata
 metrics:
-
-  compute:
-
-    maintainability
-
-    modularity
-
-    cohesion
-
-    coupling
-
-    architecture_compliance
-
-    observability
-
-    resilience
-
-    deployment_readiness
-
-    technical_debt
-
-    production_similarity
-
-    engineering_excellence
-
-
-################################################################################
-# SUCCESS METRICS
-################################################################################
-
+  compute[11]: maintainability,modularity,cohesion,coupling,architecture_compliance,observability,resilience,deployment_readiness,technical_debt,production_similarity,engineering_excellence
 success_metrics:
-
   engineering_excellence:
-
     minimum: 0.99
-
   architecture_compliance:
-
     minimum: 0.99
-
   maintainability:
-
     minimum: 0.99
-
   production_similarity:
-
     minimum: 0.99
-
   technical_debt:
-
     maximum: 0.05
-
   determinism:
-
-    minimum: 1.00
+    minimum: 1.0

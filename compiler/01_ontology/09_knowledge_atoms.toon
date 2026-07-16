@@ -1,3 +1,4 @@
+description: "quality[6]: Single Responsibility,Single Meaning,Explicit Definition,Explicit Relationships,Engineering Value,Reusable validation[6]: Every atom has one identity.,Every atom has one definition.,Every atom belongs to one domain.,Every atom has explicit relationships.,Every atom is reusable.,Every atom is independently understandable. graph[6]: No isolated atoms.,Every atom participates,in at least one relationship.,Every atom contributes,to one or more Engineering,Knowledge Records. evolution[7]: Knowledge Atoms may,gain relationships,improve definitions,gain examples,improve validation,Knowledge Atoms may never,lose identity engineering[6]: Reusable,Explainable,Searchable,Linkable,Composable,Machine Interpretable success[4]: Every engineering concept,can be represented,using one or more,Knowledge Atoms. guarantees[5]: Universal Engineering Vocabulary,Minimal Semantic Units,Graph Native Knowledge,Unlimited Composition,Cross Domain Reusability"
 spec:
   id: knowledge_atoms
   version: 1.0.0
@@ -6,18 +7,9 @@ spec:
   module: Ontology
   compiler_stage: Knowledge Representation
   description: >
-purpose[2]: Represent engineering knowledge at its,minimum reusable semantic granularity.
-philosophy[4]: Tokens build language.,Instructions build programs.,Atoms build molecules.,Knowledge Atoms build engineering intelligence.
-definition[5]: A Knowledge Atom is the smallest,engineering concept that possesses,independent meaning and cannot be,decomposed further without losing,semantic integrity.
-model[13]: Knowledge Atom,→,Concept,→,Mechanism,→,Principle,→,Engineering Knowledge Record,→,Engineering Episode,→,Engineering World
-properties[8]: Atomic,Immutable Identity,Explainable,Reusable,Composable,Versioned,Graph Native,Language Independent
 types:
   description: Lesson
   examples: Measure Before Optimizing
-atom[13]: identity,definition,purpose,mechanism,assumptions,prerequisites,dependencies,constraints,tradeoffs,examples,failure_modes,relationships,validation
-attributes[7]: domain,capability,reasoning,difficulty,confidence,maturity,abstraction
-relationships[12]: depends_on,requires,extends,specializes,causes,prevents,enables,optimizes,validates,measures,contradicts,complements
-composition[7]: Knowledge Atoms,→,Concepts,→,Engineering Principles,→,Engineering Knowledge Records
 examples:
   KA_000001:
     name: Mutex
@@ -36,13 +28,6 @@ examples:
     name: Hash Table
     type: Mechanism
     requires: Hash Function
-quality[6]: Single Responsibility,Single Meaning,Explicit Definition,Explicit Relationships,Engineering Value,Reusable
-validation[6]: Every atom has one identity.,Every atom has one definition.,Every atom belongs to one domain.,Every atom has explicit relationships.,Every atom is reusable.,Every atom is independently understandable.
-graph[6]: No isolated atoms.,Every atom participates,in at least one relationship.,Every atom contributes,to one or more Engineering,Knowledge Records.
-evolution[7]: Knowledge Atoms may,gain relationships,improve definitions,gain examples,improve validation,Knowledge Atoms may never,lose identity
-engineering[6]: Reusable,Explainable,Searchable,Linkable,Composable,Machine Interpretable
-success[4]: Every engineering concept,can be represented,using one or more,Knowledge Atoms.
-guarantees[5]: Universal Engineering Vocabulary,Minimal Semantic Units,Graph Native Knowledge,Unlimited Composition,Cross Domain Reusability
 future:
   graph_embeddings: true
   semantic_vectors: true

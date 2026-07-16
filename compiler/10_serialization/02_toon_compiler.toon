@@ -1,248 +1,33 @@
 toon_compiler:
-
   metadata:
-
     id: SER-002
-
     title: TOON Compiler
-
     version: 2.0
-
     status: Stable
-
     owner: Serialization Engine
-
-    depends_on:
-
-      - compiler/10_serialization/01_toon_spec.toon
-      - compiler/10_serialization/03_schema_mapper.toon
-      - compiler/10_serialization/04_reference_resolver.toon
-
-    consumed_by:
-
-      - compiler/10_serialization/05_graph_serializer.toon
-      - compiler/10_serialization/07_export_pipeline.toon
-      - compiler/10_serialization/10_export_targets.toon
-
-    objective:
-
-      Compile the internal graph-native dataset
-      representation into the canonical TOON
-      format by applying the TOON specification,
-      resolving all references, mapping schemas,
-      and producing valid, self-describing TOON
-      output ready for distribution.
-
-
-################################################################################
-# PHILOSOPHY
-################################################################################
-
-philosophy:
-
-  compilation_is_deterministic
-
-  input_determines_output
-
-  format_is_transparent
-
-  references_must_resolve
-
-  schema_informs_structure
-
-  graph_native_compilation
-
-  byte_level_reproducibility
-
-  self_describing_output
-
-
-################################################################################
-# INPUTS
-################################################################################
-
-inputs:
-
-  optimized_dataset
-
-  toon_specification
-
-  schema_mappings
-
-  reference_graph
-
-  compilation_configuration
-
-  formatting_options
-
-  metadata_template
-
-
-################################################################################
-# COMPILATION STAGES
-################################################################################
-
-stages:
-
-  load_internal_representation
-
-  apply_schema_mappings
-
-  resolve_all_references
-
-  build_toon_structure
-
-  apply_formatting
-
-  validate_output
-
-  generate_metadata
-
-  produce_artifacts
-
-
-################################################################################
-# COMPILATION RULES
-################################################################################
-
-rules:
-
-  deterministic_ordering
-
-  reference_resolution_before_output
-
-  schema_mapping_before_compilation
-
-  validation_after_compilation
-
-  formatting_preserves_semantics
-
-  metadata_enriched_at_compile_time
-
-  graph_structure_preserved_in_toon
-
-
-################################################################################
-# CONSTRAINTS
-################################################################################
-
-constraints:
-
-  deterministic
-
-  reproducible
-
-  byte_level_identical
-
-  schema_compliant
-
-  reference_complete
-
-  self_validating
-
-  format_consistent
-
-
-################################################################################
-# VALIDATION
-################################################################################
-
-validation:
-
-  output_validity_validation
-
-  schema_compliance_validation
-
-  reference_completeness_validation
-
-  determinism_validation
-
-  reproducibility_validation
-
-  format_validation
-
-
-################################################################################
-# RANDOMIZATION
-################################################################################
-
+    depends_on[3]: "- compiler/10_serialization/01_toon_spec.toon","- compiler/10_serialization/03_schema_mapper.toon","- compiler/10_serialization/04_reference_resolver.toon"
+    consumed_by[3]: "- compiler/10_serialization/05_graph_serializer.toon","- compiler/10_serialization/07_export_pipeline.toon","- compiler/10_serialization/10_export_targets.toon"
+    objective[6]: Compile the internal graph-native dataset,representation into the canonical TOON,"format by applying the TOON specification,","resolving all references, mapping schemas,","and producing valid, self-describing TOON",output ready for distribution.
+philosophy[8]: compilation_is_deterministic,input_determines_output,format_is_transparent,references_must_resolve,schema_informs_structure,graph_native_compilation,byte_level_reproducibility,self_describing_output
+inputs[7]: optimized_dataset,toon_specification,schema_mappings,reference_graph,compilation_configuration,formatting_options,metadata_template
+stages[8]: load_internal_representation,apply_schema_mappings,resolve_all_references,build_toon_structure,apply_formatting,validate_output,generate_metadata,produce_artifacts
+rules[7]: deterministic_ordering,reference_resolution_before_output,schema_mapping_before_compilation,validation_after_compilation,formatting_preserves_semantics,metadata_enriched_at_compile_time,graph_structure_preserved_in_toon
+constraints[7]: deterministic,reproducible,byte_level_identical,schema_compliant,reference_complete,self_validating,format_consistent
+validation[6]: output_validity_validation,schema_compliance_validation,reference_completeness_validation,determinism_validation,reproducibility_validation,format_validation
 randomization:
-
-  deterministic_seed:
-
-    true
-
-  reproducible:
-
-    true
-
-
-################################################################################
-# OUTPUTS
-################################################################################
-
-outputs:
-
-  compiled_toon_dataset
-
-  compilation_manifest
-
-  compilation_report
-
-  reference_resolution_report
-
-  schema_mapping_audit
-
-  metadata_artifacts
-
-  validation_results
-
-
-################################################################################
-# METRICS
-################################################################################
-
+  deterministic_seed: true
+  reproducible: true
+outputs[7]: compiled_toon_dataset,compilation_manifest,compilation_report,reference_resolution_report,schema_mapping_audit,metadata_artifacts,validation_results
 metrics:
-
-  compute:
-
-    compilation_throughput
-
-    output_validity_rate
-
-    reference_resolution_rate
-
-    schema_compliance_rate
-
-    determinism_score
-
-    reproducibility_score
-
-    compilation_latency
-
-
-################################################################################
-# SUCCESS METRICS
-################################################################################
-
+  compute[7]: compilation_throughput,output_validity_rate,reference_resolution_rate,schema_compliance_rate,determinism_score,reproducibility_score,compilation_latency
 success_metrics:
-
   output_validity_rate:
-
-    minimum: 1.00
-
+    minimum: 1.0
   reference_resolution_rate:
-
-    minimum: 1.00
-
+    minimum: 1.0
   schema_compliance_rate:
-
-    minimum: 1.00
-
+    minimum: 1.0
   determinism_score:
-
-    minimum: 1.00
-
+    minimum: 1.0
   reproducibility_score:
-
-    minimum: 1.00
+    minimum: 1.0

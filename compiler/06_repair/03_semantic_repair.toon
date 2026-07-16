@@ -1,301 +1,36 @@
 semantic_repair:
-
   metadata:
-
     id: REP-003
-
     title: Semantic Repair
-
     version: 2.0
-
     status: Stable
-
     owner: Repair Engine
-
-    depends_on:
-
-      - compiler/06_repair/02_structural_repair.toon
-      - compiler/01_ontology/20_ontology_rules.toon
-      - compiler/02_cognition/05_mental_models.toon
-      - compiler/02_cognition/10_reflection_model.toon
-
-    consumed_by:
-
-      - compiler/06_repair/04_knowledge_repair.toon
-      - compiler/06_repair/05_reasoning_repair.toon
-      - compiler/06_repair/14_repair_pipeline.toon
-
-    objective:
-
-      Detect and repair semantic inconsistencies while
-      preserving engineering intent, architectural
-      correctness, repository history, and educational value.
-
-
-################################################################################
-# PHILOSOPHY
-################################################################################
-
-philosophy:
-
-  meaning_before_style
-
-  preserve_engineering_intent
-
-  repair_without_rewriting
-
-  consistency_across_artifacts
-
-  ontology_guided_semantics
-
-  repository_context_matters
-
-  architecture_drives_meaning
-
-  deterministic_semantic_repairs
-
-
-################################################################################
-# INPUTS
-################################################################################
-
-inputs:
-
-  repaired_dataset
-
-  ontology_graph
-
-  engineering_story
-
-  architecture
-
-  repository_state
-
-  implementation
-
-  documentation
-
-  review_comments
-
-  engineering_memory
-
-  repair_log
-
-
-################################################################################
-# SEMANTIC FAILURES
-################################################################################
-
-repair_targets:
-
-  contradictory_information
-
-  incorrect_domain_usage
-
-  invalid_architecture_claim
-
-  inconsistent_documentation
-
-  mismatched_identifiers
-
-  incorrect_api_description
-
-  conflicting_business_logic
-
-  invalid_design_pattern
-
-  inconsistent_repository_state
-
-  terminology_drift
-
-  incorrect_dependency_usage
-
-  invalid_engineering_explanation
-
-  incorrect_failure_description
-
-  inconsistent_world_state
-
-  educational_conflict
-
-
-################################################################################
-# SEMANTIC ANALYSIS
-################################################################################
-
-analysis:
-
-  ontology_matching
-
-  concept_alignment
-
-  entity_resolution
-
-  terminology_validation
-
-  architecture_alignment
-
-  documentation_alignment
-
-  implementation_alignment
-
-  repository_alignment
-
-  engineering_context_validation
-
-
-################################################################################
-# REPAIR OPERATIONS
-################################################################################
-
-operations:
-
-  align_concepts
-
-  normalize_terminology
-
-  repair_entity_links
-
-  synchronize_documentation
-
-  repair_architecture_claims
-
-  repair_repository_context
-
-  reconcile_business_logic
-
-  update_metadata
-
-  preserve_reasoning_context
-
-
-################################################################################
-# CONSTRAINTS
-################################################################################
-
-constraints:
-
-  preserve_structure
-
-  preserve_history
-
-  preserve_curriculum
-
-  preserve_identifiers
-
-  preserve_repository_evolution
-
-  deterministic
-
-  reversible
-
-
-################################################################################
-# VALIDATION
-################################################################################
-
-validation:
-
-  ontology_validation
-
-  semantic_consistency
-
-  architecture_consistency
-
-  documentation_consistency
-
-  repository_consistency
-
-  curriculum_consistency
-
-
-################################################################################
-# RANDOMIZATION
-################################################################################
-
+    depends_on[4]: "- compiler/06_repair/02_structural_repair.toon","- compiler/01_ontology/20_ontology_rules.toon","- compiler/02_cognition/05_mental_models.toon","- compiler/02_cognition/10_reflection_model.toon"
+    consumed_by[3]: "- compiler/06_repair/04_knowledge_repair.toon","- compiler/06_repair/05_reasoning_repair.toon","- compiler/06_repair/14_repair_pipeline.toon"
+    objective[3]: Detect and repair semantic inconsistencies while,"preserving engineering intent, architectural","correctness, repository history, and educational value."
+philosophy[8]: meaning_before_style,preserve_engineering_intent,repair_without_rewriting,consistency_across_artifacts,ontology_guided_semantics,repository_context_matters,architecture_drives_meaning,deterministic_semantic_repairs
+inputs[10]: repaired_dataset,ontology_graph,engineering_story,architecture,repository_state,implementation,documentation,review_comments,engineering_memory,repair_log
+repair_targets[15]: contradictory_information,incorrect_domain_usage,invalid_architecture_claim,inconsistent_documentation,mismatched_identifiers,incorrect_api_description,conflicting_business_logic,invalid_design_pattern,inconsistent_repository_state,terminology_drift,incorrect_dependency_usage,invalid_engineering_explanation,incorrect_failure_description,inconsistent_world_state,educational_conflict
+analysis[9]: ontology_matching,concept_alignment,entity_resolution,terminology_validation,architecture_alignment,documentation_alignment,implementation_alignment,repository_alignment,engineering_context_validation
+operations[9]: align_concepts,normalize_terminology,repair_entity_links,synchronize_documentation,repair_architecture_claims,repair_repository_context,reconcile_business_logic,update_metadata,preserve_reasoning_context
+constraints[7]: preserve_structure,preserve_history,preserve_curriculum,preserve_identifiers,preserve_repository_evolution,deterministic,reversible
+validation[6]: ontology_validation,semantic_consistency,architecture_consistency,documentation_consistency,repository_consistency,curriculum_consistency
 randomization:
-
-  deterministic_seed:
-
-    true
-
-  reproducible:
-
-    true
-
-
-################################################################################
-# OUTPUTS
-################################################################################
-
-outputs:
-
-  semantically_repaired_dataset
-
-  semantic_diff
-
-  ontology_alignment_report
-
-  terminology_report
-
-  semantic_graph
-
-  repair_log
-
-  metadata
-
-
-################################################################################
-# METRICS
-################################################################################
-
+  deterministic_seed: true
+  reproducible: true
+outputs[7]: semantically_repaired_dataset,semantic_diff,ontology_alignment_report,terminology_report,semantic_graph,repair_log,metadata
 metrics:
-
-  compute:
-
-    semantic_consistency
-
-    ontology_alignment
-
-    terminology_consistency
-
-    repository_alignment
-
-    architecture_alignment
-
-    educational_integrity
-
-    information_preservation
-
-    repair_efficiency
-
-
-################################################################################
-# SUCCESS METRICS
-################################################################################
-
+  compute[8]: semantic_consistency,ontology_alignment,terminology_consistency,repository_alignment,architecture_alignment,educational_integrity,information_preservation,repair_efficiency
 success_metrics:
-
   semantic_consistency:
-
     minimum: 0.995
-
   ontology_alignment:
-
     minimum: 0.99
-
   architecture_alignment:
-
     minimum: 0.99
-
   repository_alignment:
-
     minimum: 0.99
-
   information_preservation:
-
     minimum: 0.999
-
   determinism:
-
-    minimum: 1.00
+    minimum: 1.0

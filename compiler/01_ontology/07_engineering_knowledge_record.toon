@@ -1,4 +1,4 @@
-description: "guarantees[8]: Canonical Representation,Language Independent,Framework Independent,Graph Native,Deterministic,Explainable,Composable,Immutable Identity"
+description: "\"guarantees[8]: Canonical Representation,Language Independent,Framework Independent,Graph Native,Deterministic,Explainable,Composable,Immutable Identity\""
 spec:
   id: engineering_knowledge_record
   version: 1.0.0
@@ -6,9 +6,9 @@ spec:
   priority: highest
   module: Ontology
   compiler_stage: Canonical Representation
-  description: "\"Defines the canonical Engineering Knowledge Record (EKR), the fundamental knowledge object of the TOON Dataset Compiler. Every piece of engineering knowledge ultimately compiles into one or more Engineering Knowledge Records. The EKR is immutable, graph-native, explainable, versioned and composable.\""
-purpose: "\"Represent engineering knowledge in its complete form, preserving not only information, but reasoning, decisions, assumptions, tradeoffs, evidence, validation, outcomes and learning.\""
-graph: "\"Every EKR has\"[6]: Parent,Children,Related EKRs,Capability Links,Domain Links,Knowledge Links"
+  description: "\"\\\"Defines the canonical Engineering Knowledge Record (EKR), the fundamental knowledge object of the TOON Dataset Compiler. Every piece of engineering knowledge ultimately compiles into one or more Engineering Knowledge Records. The EKR is immutable, graph-native, explainable, versioned and composable.\\\"\""
+purpose: "\"\\\"Represent engineering knowledge in its complete form, preserving not only information, but reasoning, decisions, assumptions, tradeoffs, evidence, validation, outcomes and learning.\\\"\""
+graph: "\"\\\"Every EKR has\\\"[6]: Parent,Children,Related EKRs,Capability Links,Domain Links,Knowledge Links\""
 success: Every engineering experience can be represented as one or more EKRs.
 future:
   graph_embeddings: true

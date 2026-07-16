@@ -1,4 +1,4 @@
-description: "guarantees[5]: Explainable Reasoning,Evidence-Based Decisions,Memory Integration,Reproducible Inference,Traceable Engineering Thought"
+description: "\"guarantees[5]: Explainable Reasoning,Evidence-Based Decisions,Memory Integration,Reproducible Inference,Traceable Engineering Thought\""
 spec:
   id: reasoning_graphs
   version: 1.0.0
@@ -6,10 +6,9 @@ spec:
   priority: critical
   module: Cognition
   compiler_stage: Reasoning
-  description: "\"Defines the Universal Reasoning Graph (URG), the executable representation of engineering reasoning. A Reasoning Graph models how an engineer transforms evidence into validated engineering knowledge through interconnected reasoning paths.\""
+  description: "\"\\\"Defines the Universal Reasoning Graph (URG), the executable representation of engineering reasoning. A Reasoning Graph models how an engineer transforms evidence into validated engineering knowledge through interconnected reasoning paths.\\\"\""
 purpose: Represent reasoning as graph execution rather than linear inference.
 ekr: Every Engineering Knowledge Record references one or more Reasoning Graphs.
-examples[4]: "Example_01[9]: Production Bug,→,Retrieve Similar Incident,→,Form Hypothesis,→,Validate,→,Root Cause","Example_02[7]: High Latency,→,Analyze Metrics,→,Compare Bottlenecks,→,Optimize","Example_03[7]: Choose Database,→,Compare Alternatives,→,Analyze Tradeoffs,→,Decision","Example_04[9]: API Failure,→,Gather Logs,→,Infer Cause,→,Validate,→,Recovery"
 success: Every engineering reasoning process is represented as a reusable graph.
 future:
   graph_execution_engine: true

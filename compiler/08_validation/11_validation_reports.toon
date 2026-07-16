@@ -1,299 +1,35 @@
 validation_reports:
-
   metadata:
-
     id: VAL-011
-
     title: Validation Reports
-
     version: 2.0
-
     status: Stable
-
     owner: Validation Engine
-
-    depends_on:
-
-      - compiler/08_validation/10_final_validation.toon
-      - compiler/08_validation/02_schema_validation.toon
-      - compiler/08_validation/03_graph_validation.toon
-      - compiler/08_validation/04_reasoning_validation.toon
-      - compiler/08_validation/05_fact_validation.toon
-      - compiler/08_validation/06_execution_validation.toon
-      - compiler/08_validation/07_security_validation.toon
-      - compiler/08_validation/08_consistency_validation.toon
-      - compiler/08_validation/09_dataset_validation.toon
-
-    consumed_by:
-
-      - compiler/09_optimization/01_dataset_optimizer.toon
-      - compiler/09_optimization/10_optimizer_reports.toon
-      - compiler/10_serialization/09_dataset_manifest.toon
-
-    objective:
-
-      Aggregate, format, and produce all
-      validation reports in standardized
-      formats for downstream consumption
-      by optimization, serialization,
-      auditing, and release management.
-
-
-################################################################################
-# PHILOSOPHY
-################################################################################
-
-philosophy:
-
-  reports_enable_decisions
-
-  standardization_is_required
-
-  every_report_is_auditable
-
-  deterministic_formatting
-
-  machine_readable_by_default
-
-  human_readable_when_needed
-
-  graph_native_serialization
-
-  complete_audit_trail
-
-
-################################################################################
-# INPUTS
-################################################################################
-
-inputs:
-
-  final_validation_report
-
-  schema_validation_report
-
-  graph_validation_report
-
-  reasoning_validation_report
-
-  fact_validation_report
-
-  execution_validation_report
-
-  security_validation_report
-
-  consistency_validation_report
-
-  dataset_validation_report
-
-  report_templates
-
-  output_format_configuration
-
-
-################################################################################
-# REPORT TYPES
-################################################################################
-
-types:
-
-  executive_summary
-
-  detailed_validation_report
-
-  failure_analysis_report
-
-  determinism_certificate
-
-  reproducibility_certificate
-
-  release_readiness_report
-
-  optimization_feedback_report
-
-  audit_report
-
-
-################################################################################
-# OUTPUT FORMATS
-################################################################################
-
-formats:
-
-  toon_report
-
-  json_report
-
-  structured_log
-
-  markdown_summary
-
-  graph_snapshot
-
-  metric_timeseries
-
-  audit_artifact
-
-
-################################################################################
-# ANALYSIS
-################################################################################
-
-analysis:
-
-  report_completeness_analysis
-
-  format_compliance_analysis
-
-  data_integrity_analysis
-
-  cross_report_consistency
-
-  audit_trail_completeness
-
-
-################################################################################
-# REPORT GENERATION
-################################################################################
-
-generation:
-
-  deterministic_reporting
-
-  template_based_rendering
-
-  multi_format_export
-
-  graph_aware_formatting
-
-  incremental_report_updates
-
-  cache_aware_generation
-
-  parallel_report_assembly
-
-
-################################################################################
-# CONSTRAINTS
-################################################################################
-
-constraints:
-
-  deterministic
-
-  reproducible
-
-  format_compliant
-
-  complete
-
-  auditable
-
-  machine_readable
-
-  cross_referenced
-
-
-################################################################################
-# VALIDATION
-################################################################################
-
-validation:
-
-  report_integrity_validation
-
-  format_validation
-
-  completeness_validation
-
-  cross_reference_validation
-
-  determinism_validation
-
-  audit_trail_validation
-
-
-################################################################################
-# RANDOMIZATION
-################################################################################
-
+    depends_on[9]: "- compiler/08_validation/10_final_validation.toon","- compiler/08_validation/02_schema_validation.toon","- compiler/08_validation/03_graph_validation.toon","- compiler/08_validation/04_reasoning_validation.toon","- compiler/08_validation/05_fact_validation.toon","- compiler/08_validation/06_execution_validation.toon","- compiler/08_validation/07_security_validation.toon","- compiler/08_validation/08_consistency_validation.toon","- compiler/08_validation/09_dataset_validation.toon"
+    consumed_by[3]: "- compiler/09_optimization/01_dataset_optimizer.toon","- compiler/09_optimization/10_optimizer_reports.toon","- compiler/10_serialization/09_dataset_manifest.toon"
+    objective[5]: "Aggregate, format, and produce all",validation reports in standardized,formats for downstream consumption,"by optimization, serialization,","auditing, and release management."
+philosophy[8]: reports_enable_decisions,standardization_is_required,every_report_is_auditable,deterministic_formatting,machine_readable_by_default,human_readable_when_needed,graph_native_serialization,complete_audit_trail
+inputs[11]: final_validation_report,schema_validation_report,graph_validation_report,reasoning_validation_report,fact_validation_report,execution_validation_report,security_validation_report,consistency_validation_report,dataset_validation_report,report_templates,output_format_configuration
+types[8]: executive_summary,detailed_validation_report,failure_analysis_report,determinism_certificate,reproducibility_certificate,release_readiness_report,optimization_feedback_report,audit_report
+formats[7]: toon_report,json_report,structured_log,markdown_summary,graph_snapshot,metric_timeseries,audit_artifact
+analysis[5]: report_completeness_analysis,format_compliance_analysis,data_integrity_analysis,cross_report_consistency,audit_trail_completeness
+generation[7]: deterministic_reporting,template_based_rendering,multi_format_export,graph_aware_formatting,incremental_report_updates,cache_aware_generation,parallel_report_assembly
+constraints[7]: deterministic,reproducible,format_compliant,complete,auditable,machine_readable,cross_referenced
+validation[6]: report_integrity_validation,format_validation,completeness_validation,cross_reference_validation,determinism_validation,audit_trail_validation
 randomization:
-
-  deterministic_seed:
-
-    true
-
-  reproducible:
-
-    true
-
-
-################################################################################
-# OUTPUTS
-################################################################################
-
-outputs:
-
-  validation_report_bundle
-
-  executive_summary
-
-  detailed_reports
-
-  determinism_certificate
-
-  reproducibility_certificate
-
-  audit_trail
-
-  optimization_feedback
-
-  metadata
-
-
-################################################################################
-# METRICS
-################################################################################
-
+  deterministic_seed: true
+  reproducible: true
+outputs[8]: validation_report_bundle,executive_summary,detailed_reports,determinism_certificate,reproducibility_certificate,audit_trail,optimization_feedback,metadata
 metrics:
-
-  compute:
-
-    report_completeness
-
-    format_compliance
-
-    cross_report_consistency
-
-    audit_trail_completeness
-
-    report_generation_latency
-
-    data_integrity
-
-
-################################################################################
-# SUCCESS METRICS
-################################################################################
-
+  compute[6]: report_completeness,format_compliance,cross_report_consistency,audit_trail_completeness,report_generation_latency,data_integrity
 success_metrics:
-
   report_completeness:
-
-    minimum: 1.00
-
+    minimum: 1.0
   format_compliance:
-
-    minimum: 1.00
-
+    minimum: 1.0
   cross_report_consistency:
-
-    minimum: 1.00
-
+    minimum: 1.0
   audit_trail_completeness:
-
-    minimum: 1.00
-
+    minimum: 1.0
   determinism:
-
-    minimum: 1.00
+    minimum: 1.0

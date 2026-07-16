@@ -1,348 +1,38 @@
 confidence_repair:
-
   metadata:
-
     id: REP-011
-
     title: Confidence Repair
-
     version: 2.0
-
     status: Stable
-
     owner: Repair Engine
-
-    depends_on:
-
-      - compiler/06_repair/10_token_optimizer.toon
-      - compiler/02_cognition/08_confidence_model.toon
-      - compiler/02_cognition/09_uncertainty_model.toon
-      - compiler/02_cognition/10_reflection_model.toon
-
-    consumed_by:
-
-      - compiler/06_repair/12_self_critique.toon
-      - compiler/06_repair/13_regeneration.toon
-      - compiler/06_repair/14_repair_pipeline.toon
-
-    objective:
-
-      Detect and repair miscalibrated confidence,
-      uncertainty estimation, risk assessment,
-      and decision certainty while preserving
-      engineering correctness and explainability.
-
-
-################################################################################
-# PHILOSOPHY
-################################################################################
-
-philosophy:
-
-  confidence_is_not_accuracy
-
-  calibrated_models_are_safer
-
-  uncertainty_is_information
-
-  explain_confidence
-
-  evidence_controls_certainty
-
-  engineering_requires_humility
-
-  deterministic_calibration
-
-  confidence_guides_actions
-
-
-################################################################################
-# INPUTS
-################################################################################
-
-inputs:
-
-  optimized_dataset
-
-  reasoning_graph
-
-  evidence_graph
-
-  confidence_matrix
-
-  uncertainty_model
-
-  engineering_story
-
-  validation_reports
-
-  repair_history
-
-  curriculum_node
-
-
-################################################################################
-# CONFIDENCE FAILURES
-################################################################################
-
-repair_targets:
-
-  overconfidence
-
-  underconfidence
-
-  unjustified_certainty
-
-  unsupported_probability
-
-  inconsistent_confidence
-
-  missing_uncertainty
-
-  ignored_risks
-
-  invalid_confidence_propagation
-
-  contradictory_estimates
-
-  confidence_drift
-
-  calibration_bias
-
-  evidence_mismatch
-
-  uncertainty_gap
-
-  false_precision
-
-  confidence_collapse
-
-
-################################################################################
-# CONFIDENCE ANALYSIS
-################################################################################
-
-analysis:
-
-  evidence_strength
-
-  uncertainty_estimation
-
-  calibration_analysis
-
-  risk_analysis
-
-  confidence_consistency
-
-  historical_accuracy
-
-  assumption_validation
-
-  decision_confidence
-
-  probability_validation
-
-
-################################################################################
-# REPAIR OPERATIONS
-################################################################################
-
-operations:
-
-  recalibrate_confidence
-
-  estimate_uncertainty
-
-  propagate_confidence
-
-  normalize_probabilities
-
-  reduce_overconfidence
-
-  strengthen_evidence
-
-  revise_risk_estimates
-
-  repair_confidence_graph
-
-  annotate_assumptions
-
-  update_confidence_history
-
-
-################################################################################
-# CONFIDENCE MODEL
-################################################################################
-
-confidence:
-
-  observations
-
-  assumptions
-
-  evidence
-
-  uncertainty
-
-  confidence
-
-  risk
-
-  alternatives
-
-  decision_threshold
-
-  expected_outcome
-
-  confidence_history
-
-
-################################################################################
-# DECISION THRESHOLDS
-################################################################################
-
-thresholds:
-
-  autonomous_execution
-
-  human_review
-
-  clarification_required
-
-  additional_research
-
-  regeneration_required
-
-  reject_sample
-
-
-################################################################################
-# CONSTRAINTS
-################################################################################
-
-constraints:
-
-  preserve_reasoning
-
-  preserve_semantics
-
-  preserve_engineering_quality
-
-  preserve_curriculum
-
-  deterministic
-
-  reproducible
-
-  explainable
-
-
-################################################################################
-# VALIDATION
-################################################################################
-
-validation:
-
-  calibration_validation
-
-  uncertainty_validation
-
-  probability_validation
-
-  evidence_validation
-
-  confidence_consistency
-
-  threshold_validation
-
-
-################################################################################
-# RANDOMIZATION
-################################################################################
-
+    depends_on[4]: "- compiler/06_repair/10_token_optimizer.toon","- compiler/02_cognition/08_confidence_model.toon","- compiler/02_cognition/09_uncertainty_model.toon","- compiler/02_cognition/10_reflection_model.toon"
+    consumed_by[3]: "- compiler/06_repair/12_self_critique.toon","- compiler/06_repair/13_regeneration.toon","- compiler/06_repair/14_repair_pipeline.toon"
+    objective[4]: "Detect and repair miscalibrated confidence,","uncertainty estimation, risk assessment,",and decision certainty while preserving,engineering correctness and explainability.
+philosophy[8]: confidence_is_not_accuracy,calibrated_models_are_safer,uncertainty_is_information,explain_confidence,evidence_controls_certainty,engineering_requires_humility,deterministic_calibration,confidence_guides_actions
+inputs[9]: optimized_dataset,reasoning_graph,evidence_graph,confidence_matrix,uncertainty_model,engineering_story,validation_reports,repair_history,curriculum_node
+repair_targets[15]: overconfidence,underconfidence,unjustified_certainty,unsupported_probability,inconsistent_confidence,missing_uncertainty,ignored_risks,invalid_confidence_propagation,contradictory_estimates,confidence_drift,calibration_bias,evidence_mismatch,uncertainty_gap,false_precision,confidence_collapse
+analysis[9]: evidence_strength,uncertainty_estimation,calibration_analysis,risk_analysis,confidence_consistency,historical_accuracy,assumption_validation,decision_confidence,probability_validation
+operations[10]: recalibrate_confidence,estimate_uncertainty,propagate_confidence,normalize_probabilities,reduce_overconfidence,strengthen_evidence,revise_risk_estimates,repair_confidence_graph,annotate_assumptions,update_confidence_history
+confidence[10]: observations,assumptions,evidence,uncertainty,confidence,risk,alternatives,decision_threshold,expected_outcome,confidence_history
+thresholds[6]: autonomous_execution,human_review,clarification_required,additional_research,regeneration_required,reject_sample
+constraints[7]: preserve_reasoning,preserve_semantics,preserve_engineering_quality,preserve_curriculum,deterministic,reproducible,explainable
+validation[6]: calibration_validation,uncertainty_validation,probability_validation,evidence_validation,confidence_consistency,threshold_validation
 randomization:
-
-  deterministic_seed:
-
-    true
-
-  reproducible:
-
-    true
-
-
-################################################################################
-# OUTPUTS
-################################################################################
-
-outputs:
-
-  calibrated_dataset
-
-  confidence_graph
-
-  uncertainty_report
-
-  calibration_report
-
-  confidence_diff
-
-  repair_log
-
-  metadata
-
-
-################################################################################
-# METRICS
-################################################################################
-
+  deterministic_seed: true
+  reproducible: true
+outputs[7]: calibrated_dataset,confidence_graph,uncertainty_report,calibration_report,confidence_diff,repair_log,metadata
 metrics:
-
-  compute:
-
-    calibration_error
-
-    confidence_accuracy
-
-    uncertainty_quality
-
-    evidence_alignment
-
-    decision_reliability
-
-    risk_estimation
-
-    confidence_stability
-
-    repair_efficiency
-
-
-################################################################################
-# SUCCESS METRICS
-################################################################################
-
+  compute[8]: calibration_error,confidence_accuracy,uncertainty_quality,evidence_alignment,decision_reliability,risk_estimation,confidence_stability,repair_efficiency
 success_metrics:
-
   calibration_error:
-
     maximum: 0.02
-
   confidence_accuracy:
-
     minimum: 0.99
-
   uncertainty_quality:
-
     minimum: 0.99
-
   decision_reliability:
-
     minimum: 0.99
-
   evidence_alignment:
-
     minimum: 0.99
-
   determinism:
-
-    minimum: 1.00
+    minimum: 1.0

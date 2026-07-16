@@ -1,19 +1,19 @@
-description: "outputs[6]: engineering_artifacts,repository_graph,artifact_relationships,repository_snapshot,lifecycle_history,validation_report"
+description: "\"outputs[6]: engineering_artifacts,repository_graph,artifact_relationships,repository_snapshot,lifecycle_history,validation_report\""
 artifact_generator:
   metadata:
-    description: "depends_on[7]: compiler/05_generation/08_code_generator.toon,compiler/05_generation/09_bug_generator.toon,compiler/05_generation/10_test_generator.toon,compiler/05_generation/11_review_generator.toon,compiler/05_generation/12_documentation_generator.toon,compiler/05_generation/13_memory_generator.toon,compiler/04_world/15_world_state.toon consumed_by[2]: compiler/05_generation/15_scenario_generator.toon,compiler/05_generation/19_dataset_builder.toon"
+    description: "\"depends_on[7]: compiler/05_generation/08_code_generator.toon,compiler/05_generation/09_bug_generator.toon,compiler/05_generation/10_test_generator.toon,compiler/05_generation/11_review_generator.toon,compiler/05_generation/12_documentation_generator.toon,compiler/05_generation/13_memory_generator.toon,compiler/04_world/15_world_state.toon consumed_by[2]: compiler/05_generation/15_scenario_generator.toon,compiler/05_generation/19_dataset_builder.toon\""
     id: GEN-014
     title: Artifact Generator
     version: 2.0
     status: Stable
     owner: Generation Engine
-    objective: "\"Generate every engineering artifact that naturally exists throughout the software development lifecycle, ensuring repository-wide consistency, traceability, and realistic evolution.\""
+    objective: "\"\\\"Generate every engineering artifact that naturally exists throughout the software development lifecycle, ensuring repository-wide consistency, traceability, and realistic evolution.\\\"\""
 randomization:
   deterministic_seed: true
   artifact_distribution: repository_guided
   lifecycle_variation: enabled
-validation: "reject_if[6]: orphan_artifact,broken_reference,impossible_timeline,invalid_dependency,inconsistent_repository_state,duplicate_identifier"
-metrics: "compute[6]: repository_realism,graph_connectivity,artifact_diversity,lifecycle_consistency,engineering_value,traceability_score"
+validation: "\"reject_if[6]: orphan_artifact,broken_reference,impossible_timeline,invalid_dependency,inconsistent_repository_state,duplicate_identifier\""
+metrics: "\"compute[6]: repository_realism,graph_connectivity,artifact_diversity,lifecycle_consistency,engineering_value,traceability_score\""
 success_metrics:
   repository_consistency:
     minimum: 1.0

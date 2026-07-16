@@ -1,13 +1,13 @@
-description: "structure[11]: source,tests,documentation,scripts,ci,infrastructure,examples,benchmarks,configs,assets,tools workflows[8]: git_flow,trunk_based,github_flow,release_flow,hotfix_flow,feature_branch,code_review,ci_cd development[8]: branching_strategy,commit_convention,review_policy,testing_policy,release_strategy,dependency_management,versioning_strategy,documentation_policy dependencies[7]: internal,external,package_manager,system_dependencies,build_dependencies,runtime_dependencies,optional_dependencies quality[8]: unit_test_coverage,integration_test_coverage,documentation_score,technical_debt,maintainability,complexity,security_score,reliability_score state[9]: commits,branches,pull_requests,releases,issues,discussions,milestones,tags,contributors artifacts[9]: README,LICENSE,CHANGELOG,CONTRIBUTING,CODE_OF_CONDUCT,ARCHITECTURE,ROADMAP,SECURITY,API_REFERENCE"
+description: "\"structure[11]: source,tests,documentation,scripts,ci,infrastructure,examples,benchmarks,configs,assets,tools workflows[8]: git_flow,trunk_based,github_flow,release_flow,hotfix_flow,feature_branch,code_review,ci_cd development[8]: branching_strategy,commit_convention,review_policy,testing_policy,release_strategy,dependency_management,versioning_strategy,documentation_policy dependencies[7]: internal,external,package_manager,system_dependencies,build_dependencies,runtime_dependencies,optional_dependencies quality[8]: unit_test_coverage,integration_test_coverage,documentation_score,technical_debt,maintainability,complexity,security_score,reliability_score state[9]: commits,branches,pull_requests,releases,issues,discussions,milestones,tags,contributors artifacts[9]: README,LICENSE,CHANGELOG,CONTRIBUTING,CODE_OF_CONDUCT,ARCHITECTURE,ROADMAP,SECURITY,API_REFERENCE\""
 repository_generator:
   metadata:
-    description: "depends_on[3]: compiler/04_world/01_world_generator.toon,compiler/04_world/02_company_generator.toon,compiler/01_ontology/17_entity_model.toon consumed_by[6]: compiler/04_world/04_project_generator.toon,compiler/04_world/09_repository_history.toon,compiler/05_generation/02_episode_generator.toon,compiler/05_generation/08_code_generator.toon,compiler/05_generation/09_bug_generator.toon,compiler/05_generation/11_review_generator.toon"
+    description: "\"depends_on[3]: compiler/04_world/01_world_generator.toon,compiler/04_world/02_company_generator.toon,compiler/01_ontology/17_entity_model.toon consumed_by[6]: compiler/04_world/04_project_generator.toon,compiler/04_world/09_repository_history.toon,compiler/05_generation/02_episode_generator.toon,compiler/05_generation/08_code_generator.toon,compiler/05_generation/09_bug_generator.toon,compiler/05_generation/11_review_generator.toon\""
     id: WORLD-003
     title: Repository Generator
     version: 1.0
     status: Stable
     owner: World Engine
-    objective: "\"Generate realistic software repositories with evolving architecture, engineering workflows, history, documentation, dependencies, and development practices.\""
+    objective: "\"\\\"Generate realistic software repositories with evolving architecture, engineering workflows, history, documentation, dependencies, and development practices.\\\"\""
 scale:
   tiny:
     files: 10-100
@@ -20,15 +20,15 @@ scale:
   enterprise:
     files: 100000+
 relationships:
-  description: "belongs_to[2]: company,project contains[5]: modules,services,packages,documentation,tests"
+  description: "\"belongs_to[2]: company,project contains[5]: modules,services,packages,documentation,tests\""
   managed_by: engineering_team
 randomization:
   deterministic_seed: true
   reproducible: true
   weighted_generation: true
   technology_distribution: realistic
-validation: "reject_if[7]: missing_default_branch,missing_source_directory,impossible_repository_size,inconsistent_languages,invalid_dependency_graph,missing_readme,missing_history_reference"
-metrics: "compute[7]: repository_complexity,architecture_score,dependency_density,documentation_quality,contributor_activity,repository_health,engineering_maturity"
+validation: "\"reject_if[7]: missing_default_branch,missing_source_directory,impossible_repository_size,inconsistent_languages,invalid_dependency_graph,missing_readme,missing_history_reference\""
+metrics: "\"compute[7]: repository_complexity,architecture_score,dependency_density,documentation_quality,contributor_activity,repository_health,engineering_maturity\""
 success_metrics:
   repository_consistency:
     minimum: 1.0

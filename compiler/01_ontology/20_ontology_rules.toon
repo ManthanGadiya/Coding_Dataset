@@ -1,4 +1,4 @@
-description: "memory[4]: append_only_history,immutable_identity,evidence_backed,graph_linked metadata[4]: complete,reproducible,versioned,auditable quality[5]: explainable,reusable,deterministic,validated,educational evolution[5]: preserve_identity,preserve_history,preserve_lineage,preserve_relationships,never_destroy_provenance consistency[4]: no_duplicate_identity,no_conflicting_versions,no_missing_dependencies,no_invalid_relationships validation[7]: syntax,schema,semantic,graph,reasoning,quality,reproducibility severity[5]: INFO,WARNING,ERROR,CRITICAL,FATAL actions[5]: accept,reject,repair,regenerate,quarantine repair[12]: missing_metadata,→,auto_generate,broken_relationship,→,repair_if_possible,invalid_reasoning,→,regenerate,duplicate_identity,→,reject security[4]: provenance_required,checksum_validation,immutable_release,audit_logging compatibility[3]: backward_compatible,version_aware,migration_supported guarantees[5]: deterministic_generation,graph_consistency,explainable_reasoning,reproducible_compilation,semantic_integrity success[3]: Every Engineering Object satisfies all ontology rules.,Every generated dataset is semantically valid.,Every Engineering Knowledge Graph is internally consistent."
+description: "\"memory[4]: append_only_history,immutable_identity,evidence_backed,graph_linked metadata[4]: complete,reproducible,versioned,auditable quality[5]: explainable,reusable,deterministic,validated,educational evolution[5]: preserve_identity,preserve_history,preserve_lineage,preserve_relationships,never_destroy_provenance consistency[4]: no_duplicate_identity,no_conflicting_versions,no_missing_dependencies,no_invalid_relationships validation[7]: syntax,schema,semantic,graph,reasoning,quality,reproducibility severity[5]: INFO,WARNING,ERROR,CRITICAL,FATAL actions[5]: accept,reject,repair,regenerate,quarantine repair[12]: missing_metadata,→,auto_generate,broken_relationship,→,repair_if_possible,invalid_reasoning,→,regenerate,duplicate_identity,→,reject security[4]: provenance_required,checksum_validation,immutable_release,audit_logging compatibility[3]: backward_compatible,version_aware,migration_supported guarantees[5]: deterministic_generation,graph_consistency,explainable_reasoning,reproducible_compilation,semantic_integrity success[3]: Every Engineering Object satisfies all ontology rules.,Every generated dataset is semantically valid.,Every Engineering Knowledge Graph is internally consistent.\""
 spec:
   id: ontology_rules
   version: 1.0.0
@@ -6,14 +6,13 @@ spec:
   priority: highest
   module: Ontology
   compiler_stage: Semantic Validation
-  description: "\"Defines the Universal Ontology Rules (UOR) governing every object, relationship, graph, Engineering Knowledge Record, Knowledge Atom, Capability, Domain and Entity inside the TOON Dataset Compiler. These rules ensure semantic consistency, graph integrity, deterministic compilation and long-term evolution.\""
-purpose: "\"Guarantee the correctness, consistency, integrity, explainability and reproducibility of the Engineering Knowledge Graph.\""
-entities: "\"Every Entity has\"[5]: identity,type,lifecycle,metadata,relationships"
-knowledge_atoms: "\"Every Knowledge Atom\"[5]: has_definition,has_purpose,has_relationships,has_validation,is_independently_understandable"
-ekr: "\"Every Engineering Knowledge Record\"[7]: has_context,has_problem,has_constraints,has_reasoning,has_decision,has_validation,has_lessons"
-relationships: "\"Every relationship\"[5]: has_source,has_destination,has_type,has_direction,has_semantic_meaning"
-capabilities: "\"Every capability\"[4]: measurable,observable,composable,transferable"
-reasoning[4]: "\"Every conclusion\": requires_evidence","\"Every decision\": requires_tradeoff_analysis","\"Every optimization\": requires_measurement","\"Every hypothesis\": requires_validation"
+  description: "\"\\\"Defines the Universal Ontology Rules (UOR) governing every object, relationship, graph, Engineering Knowledge Record, Knowledge Atom, Capability, Domain and Entity inside the TOON Dataset Compiler. These rules ensure semantic consistency, graph integrity, deterministic compilation and long-term evolution.\\\"\""
+purpose: "\"\\\"Guarantee the correctness, consistency, integrity, explainability and reproducibility of the Engineering Knowledge Graph.\\\"\""
+entities: "\"\\\"Every Entity has\\\"[5]: identity,type,lifecycle,metadata,relationships\""
+knowledge_atoms: "\"\\\"Every Knowledge Atom\\\"[5]: has_definition,has_purpose,has_relationships,has_validation,is_independently_understandable\""
+ekr: "\"\\\"Every Engineering Knowledge Record\\\"[7]: has_context,has_problem,has_constraints,has_reasoning,has_decision,has_validation,has_lessons\""
+relationships: "\"\\\"Every relationship\\\"[5]: has_source,has_destination,has_type,has_direction,has_semantic_meaning\""
+capabilities: "\"\\\"Every capability\\\"[4]: measurable,observable,composable,transferable\""
 future:
   formal_verification: true
   theorem_validation: true

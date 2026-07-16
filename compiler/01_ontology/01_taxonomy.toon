@@ -1,3 +1,4 @@
+description: "knowledge_levels[9]: Domain,→,Category,→,Topic,→,Concept,→,Knowledge Atom mapping[12]: Every Knowledge Atom,→,Topic,Every Topic,→,Category,Every Category,→,Domain,Every Domain,→,Root Taxonomy relationships[10]: parent_of,child_of,prerequisite_of,depends_on,extends,specializes,generalizes,related_to,complements,conflicts_with rules[6]: Every object has one primary domain.,Every object has one primary category.,Every object has one primary topic.,Multiple secondary relationships allowed.,Cyclic taxonomy forbidden.,Duplicate taxonomy nodes forbidden. validation[6]: unique_domains,unique_categories,unique_topics,connected_taxonomy,acyclic_graph,reachable_nodes success[5]: Every engineering concept has a place.,Every concept is discoverable.,Every relationship is explicit.,Every knowledge atom is classified.,Every compiler module references this taxonomy. guarantees[5]: Universal engineering coverage.,Language independence.,Extensible hierarchy.,Graph-native representation.,Deterministic classification."
 spec:
   id: taxonomy
   version: 1.0.0
@@ -6,34 +7,7 @@ spec:
   module: Ontology
   compiler_stage: Knowledge Representation
   description: >
-purpose[7]: Provide a universal engineering knowledge classification,"system that is:",hierarchical,extensible,deterministic,graph-native,language-independent
-principles[7]: Every concept belongs to exactly one primary category.,Concepts may belong to multiple secondary categories.,Categories never overlap semantically.,Parent concepts are always more abstract.,Child concepts specialize parent concepts.,Relationships are explicit.,Knowledge is composable.
-taxonomy:
-  Foundations[7]: Mathematics,Logic,Set Theory,Probability,Statistics,Information Theory,Computation Theory
-  Programming[10]: Syntax,Semantics,Type Systems,Variables,Functions,Objects,Modules,Packages,Libraries,Runtime
-  Algorithms[10]: Searching,Sorting,Greedy,Divide And Conquer,Dynamic Programming,Backtracking,Graph Algorithms,String Algorithms,Numerical Algorithms,Randomized Algorithms
-  Data_Structures[10]: Arrays,Linked Lists,Stacks,Queues,Trees,Heaps,Hash Tables,Graphs,Tries,Skip Lists
-  Systems[9]: Operating Systems,Memory,Processes,Threads,Scheduling,Filesystems,Virtual Memory,Synchronization,IPC
-  Compilers[8]: Lexing,Parsing,AST,IR,Optimization,Code Generation,Linking,Loading
-  Networking[9]: OSI,TCP/IP,HTTP,DNS,Routing,Load Balancing,RPC,gRPC,WebSockets
-  Databases[8]: SQL,NoSQL,Transactions,Indexing,Query Planning,Replication,Sharding,Consistency
-  Distributed_Systems[8]: Consensus,Replication,Leader Election,Event Sourcing,Messaging,CAP,Fault Tolerance,Distributed Storage
-  Software_Engineering[8]: Architecture,Design Patterns,Principles,Refactoring,Technical Debt,Documentation,Code Review,Requirements
-  Testing[7]: Unit Testing,Integration Testing,System Testing,Property Testing,Fuzz Testing,Performance Testing,Regression Testing
-  DevOps[8]: CI,CD,Infrastructure,Containers,Kubernetes,Monitoring,Logging,Deployment
-  Security[7]: Authentication,Authorization,Cryptography,Secure Coding,Vulnerabilities,Threat Modeling,Sandboxing
-  Performance[7]: Profiling,Benchmarking,Optimization,Parallelism,Concurrency,SIMD,GPU Computing
-  Cloud[6]: Compute,Storage,Networking,Serverless,IAM,Multi Cloud
-  AI_Engineering[8]: Machine Learning,Deep Learning,LLMs,RAG,Agents,Fine Tuning,Evaluation,Serving
-  Engineering_Knowledge[8]: Concepts,Patterns,Anti Patterns,Best Practices,Lessons,Incidents,Tradeoffs,Decisions
-  Human_Factors[6]: Collaboration,Mentoring,Communication,Leadership,Planning,Estimation
-knowledge_levels[9]: Domain,→,Category,→,Topic,→,Concept,→,Knowledge Atom
-mapping[12]: Every Knowledge Atom,→,Topic,Every Topic,→,Category,Every Category,→,Domain,Every Domain,→,Root Taxonomy
-relationships[10]: parent_of,child_of,prerequisite_of,depends_on,extends,specializes,generalizes,related_to,complements,conflicts_with
-rules[6]: Every object has one primary domain.,Every object has one primary category.,Every object has one primary topic.,Multiple secondary relationships allowed.,Cyclic taxonomy forbidden.,Duplicate taxonomy nodes forbidden.
-validation[6]: unique_domains,unique_categories,unique_topics,connected_taxonomy,acyclic_graph,reachable_nodes
-success[5]: Every engineering concept has a place.,Every concept is discoverable.,Every relationship is explicit.,Every knowledge atom is classified.,Every compiler module references this taxonomy.
-guarantees[5]: Universal engineering coverage.,Language independence.,Extensible hierarchy.,Graph-native representation.,Deterministic classification.
+taxonomy[18]: "Foundations[7]: Mathematics,Logic,Set Theory,Probability,Statistics,Information Theory,Computation Theory","Programming[10]: Syntax,Semantics,Type Systems,Variables,Functions,Objects,Modules,Packages,Libraries,Runtime","Algorithms[10]: Searching,Sorting,Greedy,Divide And Conquer,Dynamic Programming,Backtracking,Graph Algorithms,String Algorithms,Numerical Algorithms,Randomized Algorithms","Data_Structures[10]: Arrays,Linked Lists,Stacks,Queues,Trees,Heaps,Hash Tables,Graphs,Tries,Skip Lists","Systems[9]: Operating Systems,Memory,Processes,Threads,Scheduling,Filesystems,Virtual Memory,Synchronization,IPC","Compilers[8]: Lexing,Parsing,AST,IR,Optimization,Code Generation,Linking,Loading","Networking[9]: OSI,TCP/IP,HTTP,DNS,Routing,Load Balancing,RPC,gRPC,WebSockets","Databases[8]: SQL,NoSQL,Transactions,Indexing,Query Planning,Replication,Sharding,Consistency","Distributed_Systems[8]: Consensus,Replication,Leader Election,Event Sourcing,Messaging,CAP,Fault Tolerance,Distributed Storage","Software_Engineering[8]: Architecture,Design Patterns,Principles,Refactoring,Technical Debt,Documentation,Code Review,Requirements","Testing[7]: Unit Testing,Integration Testing,System Testing,Property Testing,Fuzz Testing,Performance Testing,Regression Testing","DevOps[8]: CI,CD,Infrastructure,Containers,Kubernetes,Monitoring,Logging,Deployment","Security[7]: Authentication,Authorization,Cryptography,Secure Coding,Vulnerabilities,Threat Modeling,Sandboxing","Performance[7]: Profiling,Benchmarking,Optimization,Parallelism,Concurrency,SIMD,GPU Computing","Cloud[6]: Compute,Storage,Networking,Serverless,IAM,Multi Cloud","AI_Engineering[8]: Machine Learning,Deep Learning,LLMs,RAG,Agents,Fine Tuning,Evaluation,Serving","Engineering_Knowledge[8]: Concepts,Patterns,Anti Patterns,Best Practices,Lessons,Incidents,Tradeoffs,Decisions","Human_Factors[6]: Collaboration,Mentoring,Communication,Leadership,Planning,Estimation"
 future:
   new_domains: supported
   ontology_growth: unlimited

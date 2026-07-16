@@ -1,4 +1,4 @@
-description: "guarantees[5]: Engineering-Oriented Thinking,Constraint Awareness,Evidence-Based Decisions,Explainable Judgement,Reusable Engineering Process"
+description: "\"guarantees[5]: Engineering-Oriented Thinking,Constraint Awareness,Evidence-Based Decisions,Explainable Judgement,Reusable Engineering Process\""
 spec:
   id: engineering_thinking
   version: 1.0.0
@@ -6,7 +6,7 @@ spec:
   priority: critical
   module: Cognition
   compiler_stage: Engineering Cognition
-  description: "\"Defines the Engineering Thinking Model (ETM), the cognitive framework that differentiates engineering reasoning from general reasoning. Engineering thinking optimizes for correctness, constraints, tradeoffs, evidence, maintainability, long-term value and measurable outcomes.\""
+  description: "\"\\\"Defines the Engineering Thinking Model (ETM), the cognitive framework that differentiates engineering reasoning from general reasoning. Engineering thinking optimizes for correctness, constraints, tradeoffs, evidence, maintainability, long-term value and measurable outcomes.\\\"\""
 purpose: Teach the model to think like an experienced engineer rather than a code generator.
 examples:
   Example_01:
@@ -15,7 +15,7 @@ examples:
     Problem: Deadlock
   Example_03:
     Problem: Choose Database
-success: "\"The model consistently reasons like a senior engineer, balancing correctness, evidence, constraints, tradeoffs, implementation, and long-term maintainability.\""
+success: "\"\\\"The model consistently reasons like a senior engineer, balancing correctness, evidence, constraints, tradeoffs, implementation, and long-term maintainability.\\\"\""
 future:
   adaptive_engineering_styles: true
   collaborative_reasoning: true

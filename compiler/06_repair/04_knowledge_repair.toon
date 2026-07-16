@@ -1,331 +1,37 @@
 knowledge_repair:
-
   metadata:
-
     id: REP-004
-
     title: Knowledge Repair
-
     version: 2.0
-
     status: Stable
-
     owner: Repair Engine
-
-    depends_on:
-
-      - compiler/06_repair/03_semantic_repair.toon
-      - compiler/01_ontology/20_ontology_rules.toon
-      - compiler/02_cognition/11_learning_model.toon
-      - compiler/02_cognition/12_memory_updates.toon
-
-    consumed_by:
-
-      - compiler/06_repair/05_reasoning_repair.toon
-      - compiler/06_repair/06_engineering_repair.toon
-      - compiler/06_repair/14_repair_pipeline.toon
-
-    objective:
-
-      Detect, repair, enrich, and reconcile engineering
-      knowledge while preserving repository history,
-      architectural intent, curriculum alignment,
-      and long-term engineering consistency.
-
-
-################################################################################
-# PHILOSOPHY
-################################################################################
-
-philosophy:
-
-  knowledge_is_graph
-
-  incomplete_knowledge_is_failure
-
-  preserve_true_information
-
-  repair_before_regenerate
-
-  evidence_driven_repairs
-
-  engineering_context_matters
-
-  learning_is_incremental
-
-  deterministic_enrichment
-
-
-################################################################################
-# INPUTS
-################################################################################
-
-inputs:
-
-  semantically_repaired_dataset
-
-  ontology_graph
-
-  engineering_memory
-
-  repository_state
-
-  architecture
-
-  curriculum_node
-
-  reasoning_trace
-
-  documentation
-
-  incident_history
-
-  validation_reports
-
-
-################################################################################
-# KNOWLEDGE FAILURES
-################################################################################
-
-repair_targets:
-
-  missing_knowledge
-
-  obsolete_information
-
-  contradictory_knowledge
-
-  fragmented_concepts
-
-  missing_prerequisites
-
-  incorrect_relationships
-
-  incomplete_reasoning_chain
-
-  inconsistent_domain_model
-
-  missing_constraints
-
-  invalid_assumptions
-
-  missing_best_practices
-
-  disconnected_lessons
-
-  stale_documentation
-
-  missing_context
-
-  incomplete_engineering_episode
-
-
-################################################################################
-# KNOWLEDGE ANALYSIS
-################################################################################
-
-analysis:
-
-  ontology_reasoning
-
-  graph_completion
-
-  prerequisite_validation
-
-  concept_alignment
-
-  curriculum_alignment
-
-  engineering_consistency
-
-  repository_context_analysis
-
-  dependency_analysis
-
-  evidence_analysis
-
-
-################################################################################
-# REPAIR OPERATIONS
-################################################################################
-
-operations:
-
-  infer_missing_knowledge
-
-  merge_equivalent_concepts
-
-  remove_obsolete_information
-
-  reconnect_knowledge_graph
-
-  enrich_context
-
-  repair_relationships
-
-  reconcile_conflicts
-
-  update_prerequisites
-
-  complete_reasoning_chain
-
-  synchronize_memory
-
-
-################################################################################
-# KNOWLEDGE GRAPH
-################################################################################
-
-graph:
-
-  entities
-
-  concepts
-
-  engineering_patterns
-
-  dependencies
-
-  lessons
-
-  incidents
-
-  architectural_decisions
-
-  constraints
-
-  invariants
-
-  capabilities
-
-
-################################################################################
-# CONSTRAINTS
-################################################################################
-
-constraints:
-
-  preserve_truth
-
-  preserve_history
-
-  preserve_curriculum
-
-  preserve_repository_context
-
-  deterministic
-
-  reversible
-
-  evidence_required
-
-
-################################################################################
-# VALIDATION
-################################################################################
-
-validation:
-
-  ontology_validation
-
-  graph_validation
-
-  curriculum_validation
-
-  engineering_validation
-
-  repository_validation
-
-  consistency_validation
-
-
-################################################################################
-# RANDOMIZATION
-################################################################################
-
+    depends_on[4]: "- compiler/06_repair/03_semantic_repair.toon","- compiler/01_ontology/20_ontology_rules.toon","- compiler/02_cognition/11_learning_model.toon","- compiler/02_cognition/12_memory_updates.toon"
+    consumed_by[3]: "- compiler/06_repair/05_reasoning_repair.toon","- compiler/06_repair/06_engineering_repair.toon","- compiler/06_repair/14_repair_pipeline.toon"
+    objective[4]: "Detect, repair, enrich, and reconcile engineering","knowledge while preserving repository history,","architectural intent, curriculum alignment,",and long-term engineering consistency.
+philosophy[8]: knowledge_is_graph,incomplete_knowledge_is_failure,preserve_true_information,repair_before_regenerate,evidence_driven_repairs,engineering_context_matters,learning_is_incremental,deterministic_enrichment
+inputs[10]: semantically_repaired_dataset,ontology_graph,engineering_memory,repository_state,architecture,curriculum_node,reasoning_trace,documentation,incident_history,validation_reports
+repair_targets[15]: missing_knowledge,obsolete_information,contradictory_knowledge,fragmented_concepts,missing_prerequisites,incorrect_relationships,incomplete_reasoning_chain,inconsistent_domain_model,missing_constraints,invalid_assumptions,missing_best_practices,disconnected_lessons,stale_documentation,missing_context,incomplete_engineering_episode
+analysis[9]: ontology_reasoning,graph_completion,prerequisite_validation,concept_alignment,curriculum_alignment,engineering_consistency,repository_context_analysis,dependency_analysis,evidence_analysis
+operations[10]: infer_missing_knowledge,merge_equivalent_concepts,remove_obsolete_information,reconnect_knowledge_graph,enrich_context,repair_relationships,reconcile_conflicts,update_prerequisites,complete_reasoning_chain,synchronize_memory
+graph[10]: entities,concepts,engineering_patterns,dependencies,lessons,incidents,architectural_decisions,constraints,invariants,capabilities
+constraints[7]: preserve_truth,preserve_history,preserve_curriculum,preserve_repository_context,deterministic,reversible,evidence_required
+validation[6]: ontology_validation,graph_validation,curriculum_validation,engineering_validation,repository_validation,consistency_validation
 randomization:
-
-  deterministic_seed:
-
-    true
-
-  reproducible:
-
-    true
-
-
-################################################################################
-# OUTPUTS
-################################################################################
-
-outputs:
-
-  repaired_knowledge_graph
-
-  enriched_dataset
-
-  knowledge_diff
-
-  evidence_report
-
-  dependency_updates
-
-  repair_log
-
-  metadata
-
-
-################################################################################
-# METRICS
-################################################################################
-
+  deterministic_seed: true
+  reproducible: true
+outputs[7]: repaired_knowledge_graph,enriched_dataset,knowledge_diff,evidence_report,dependency_updates,repair_log,metadata
 metrics:
-
-  compute:
-
-    knowledge_completeness
-
-    graph_connectivity
-
-    ontology_alignment
-
-    prerequisite_coverage
-
-    engineering_accuracy
-
-    evidence_quality
-
-    curriculum_alignment
-
-    repair_efficiency
-
-
-################################################################################
-# SUCCESS METRICS
-################################################################################
-
+  compute[8]: knowledge_completeness,graph_connectivity,ontology_alignment,prerequisite_coverage,engineering_accuracy,evidence_quality,curriculum_alignment,repair_efficiency
 success_metrics:
-
   knowledge_completeness:
-
     minimum: 0.995
-
   ontology_alignment:
-
     minimum: 0.99
-
   graph_connectivity:
-
     minimum: 0.99
-
   engineering_accuracy:
-
     minimum: 0.99
-
   evidence_quality:
-
     minimum: 0.99
-
   determinism:
-
-    minimum: 1.00
+    minimum: 1.0

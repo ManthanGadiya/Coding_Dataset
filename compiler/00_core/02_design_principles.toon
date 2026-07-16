@@ -1,4 +1,4 @@
-description: "invariants[8]: Graph Integrity,Ontology Consistency,Deterministic Compilation,Reproducible Outputs,Version Compatibility,Explainable Decisions,Connected Knowledge,Explicit Metadata anti_patterns[10]: Duplicate Knowledge,Circular Dependencies,Hidden State,Magic Constants,Implicit Relationships,Unvalidated Facts,Opaque Decisions,Dead Knowledge,Broken References,Overfitting To Benchmarks quality[8]: maintainability,scalability,modularity,consistency,correctness,explainability,reproducibility,interoperability success[4]: Every compiler module follows these principles.,Every generated dataset satisfies these principles.,Every future extension remains compatible.,Every engineering artifact preserves these principles."
+description: "\"invariants[8]: Graph Integrity,Ontology Consistency,Deterministic Compilation,Reproducible Outputs,Version Compatibility,Explainable Decisions,Connected Knowledge,Explicit Metadata anti_patterns[10]: Duplicate Knowledge,Circular Dependencies,Hidden State,Magic Constants,Implicit Relationships,Unvalidated Facts,Opaque Decisions,Dead Knowledge,Broken References,Overfitting To Benchmarks quality[8]: maintainability,scalability,modularity,consistency,correctness,explainability,reproducibility,interoperability success[4]: Every compiler module follows these principles.,Every generated dataset satisfies these principles.,Every future extension remains compatible.,Every engineering artifact preserves these principles.\""
 spec:
   id: design_principles
   version: 1.0.0
@@ -6,8 +6,8 @@ spec:
   priority: highest
   module: Core
   compiler_stage: Initialization
-  description: "\"Defines the immutable architectural, engineering, and design principles governing every component of the TOON Dataset Compiler. These principles serve as the constitutional rules for the compiler. Every module, specification, generator, validator, optimizer, and serializer MUST comply with these principles.\""
-design: "philosophy[9]: Engineering > Programming,Knowledge > Tokens,Graphs > Flat Documents,Reasoning > Memorization,Understanding > Pattern Matching,Quality > Quantity,Context > Isolated Examples,Evolution > Snapshots,Explainability > Black Boxes"
+  description: "\"\\\"Defines the immutable architectural, engineering, and design principles governing every component of the TOON Dataset Compiler. These principles serve as the constitutional rules for the compiler. Every module, specification, generator, validator, optimizer, and serializer MUST comply with these principles.\\\"\""
+design: "\"philosophy[9]: Engineering > Programming,Knowledge > Tokens,Graphs > Flat Documents,Reasoning > Memorization,Understanding > Pattern Matching,Quality > Quantity,Context > Isolated Examples,Evolution > Snapshots,Explainability > Black Boxes\""
 principles:
   P01:
     name: Single Source of Truth
@@ -15,7 +15,7 @@ principles:
     objective: Eliminate duplication.
   P02:
     name: Graph Native
-    description: "\"Knowledge exists as interconnected graphs, never isolated records.\""
+    description: "\"\\\"Knowledge exists as interconnected graphs, never isolated records.\\\"\""
   P03:
     name: Engineering First
     description: Model engineering reasoning before programming syntax.
@@ -58,15 +58,15 @@ principles:
   P16:
     name: Human Review
     description: Critical architectural changes require human approval.
-architecture: "laws[8]: Every module has one responsibility.,Every file has one owner.,Every dependency is explicit.,Every interface is documented.,Every object has a lifecycle.,Every lifecycle has validation.,Every validation produces reports.,Every report is reproducible."
-engineering: "laws[7]: Every problem has context.,Every solution has assumptions.,Every assumption has risk.,Every architecture has tradeoffs.,Every optimization has cost.,Every bug has root cause.,Every lesson becomes reusable knowledge."
-knowledge: "laws[6]: Knowledge must be atomic.,Knowledge must be reusable.,Knowledge must be composable.,Knowledge must be linked.,Knowledge must be versioned.,Knowledge must remain explainable."
-dataset: "laws[7]: No duplicated knowledge.,No orphan knowledge.,No disconnected graphs.,No unverifiable facts.,No hidden assumptions.,No unexplained decisions.,No synthetic complexity without purpose."
-world: "laws[6]: Every company has history.,Every repository evolves.,Every engineer has expertise.,Every project has constraints.,Every incident has consequences.,Every architecture accumulates technical debt."
-generation: "laws[5]: Never generate isolated code.,Always generate engineering context.,Generate realistic constraints.,Generate multiple alternatives.,Preserve decision history."
-validation: "laws[6]: Validate structure.,Validate semantics.,Validate ontology.,Validate reasoning.,Validate consistency.,Validate references."
-optimization: "laws[5]: Remove redundancy.,Preserve information.,Improve density.,Maintain readability.,Never sacrifice correctness."
-serialization: "laws[5]: Preserve graph structure.,Preserve relationships.,Preserve metadata.,Preserve reasoning.,Preserve traceability."
+architecture: "\"laws[8]: Every module has one responsibility.,Every file has one owner.,Every dependency is explicit.,Every interface is documented.,Every object has a lifecycle.,Every lifecycle has validation.,Every validation produces reports.,Every report is reproducible.\""
+engineering: "\"laws[7]: Every problem has context.,Every solution has assumptions.,Every assumption has risk.,Every architecture has tradeoffs.,Every optimization has cost.,Every bug has root cause.,Every lesson becomes reusable knowledge.\""
+knowledge: "\"laws[6]: Knowledge must be atomic.,Knowledge must be reusable.,Knowledge must be composable.,Knowledge must be linked.,Knowledge must be versioned.,Knowledge must remain explainable.\""
+dataset: "\"laws[7]: No duplicated knowledge.,No orphan knowledge.,No disconnected graphs.,No unverifiable facts.,No hidden assumptions.,No unexplained decisions.,No synthetic complexity without purpose.\""
+world: "\"laws[6]: Every company has history.,Every repository evolves.,Every engineer has expertise.,Every project has constraints.,Every incident has consequences.,Every architecture accumulates technical debt.\""
+generation: "\"laws[5]: Never generate isolated code.,Always generate engineering context.,Generate realistic constraints.,Generate multiple alternatives.,Preserve decision history.\""
+validation: "\"laws[6]: Validate structure.,Validate semantics.,Validate ontology.,Validate reasoning.,Validate consistency.,Validate references.\""
+optimization: "\"laws[5]: Remove redundancy.,Preserve information.,Improve density.,Maintain readability.,Never sacrifice correctness.\""
+serialization: "\"laws[5]: Preserve graph structure.,Preserve relationships.,Preserve metadata.,Preserve reasoning.,Preserve traceability.\""
 future:
   immutable_principles: true
   extensible_architecture: true

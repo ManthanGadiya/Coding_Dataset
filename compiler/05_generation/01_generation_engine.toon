@@ -1,13 +1,13 @@
-description: "generation_modes[8]: curriculum,random,reinforcement,adaptive,replay,evaluation,benchmark,exploration episode_types[12]: implementation,debugging,code_review,architecture,testing,deployment,production_incident,feature_request,optimization,research,documentation,mentoring context[10]: company,project,repository,team,engineer,role,customer,infrastructure,architecture,current_world_state artifacts[10]: task,reasoning,implementation,tests,review,documentation,deployment,reflection,metadata,evaluation_labels world_integration[6]: read_world_state,update_entities,append_history,create_events,update_metrics,maintain_consistency curriculum[6]: enforce_prerequisites,follow_learning_path,apply_spacing,reinforce_skills,balance_domains,balance_difficulty cognition[7]: reasoning_chain,planning,decomposition,reflection,verification,transfer_learning,self_correction"
+description: "\"generation_modes[8]: curriculum,random,reinforcement,adaptive,replay,evaluation,benchmark,exploration episode_types[12]: implementation,debugging,code_review,architecture,testing,deployment,production_incident,feature_request,optimization,research,documentation,mentoring context[10]: company,project,repository,team,engineer,role,customer,infrastructure,architecture,current_world_state artifacts[10]: task,reasoning,implementation,tests,review,documentation,deployment,reflection,metadata,evaluation_labels world_integration[6]: read_world_state,update_entities,append_history,create_events,update_metrics,maintain_consistency curriculum[6]: enforce_prerequisites,follow_learning_path,apply_spacing,reinforce_skills,balance_domains,balance_difficulty cognition[7]: reasoning_chain,planning,decomposition,reflection,verification,transfer_learning,self_correction\""
 generation_engine:
   metadata:
-    description: "depends_on[4]: compiler/01_ontology/20_master_ontology.toon,compiler/02_cognition/16_master_cognition.toon,compiler/03_curriculum/10_master_curriculum.toon,compiler/04_world/15_world_state.toon consumed_by[4]: compiler/05_generation/02_episode_generator.toon,compiler/05_generation/03_task_generator.toon,compiler/05_generation/15_scenario_generator.toon,compiler/05_generation/19_dataset_builder.toon"
+    description: "\"depends_on[4]: compiler/01_ontology/20_master_ontology.toon,compiler/02_cognition/16_master_cognition.toon,compiler/03_curriculum/10_master_curriculum.toon,compiler/04_world/15_world_state.toon consumed_by[4]: compiler/05_generation/02_episode_generator.toon,compiler/05_generation/03_task_generator.toon,compiler/05_generation/15_scenario_generator.toon,compiler/05_generation/19_dataset_builder.toon\""
     id: GEN-001
     title: Generation Engine
     version: 1.0
     status: Stable
     owner: Generation Engine
-    objective: "\"Transform ontology, cognition, curriculum, and world state into realistic engineering training episodes with deterministic execution.\""
+    objective: "\"\\\"Transform ontology, cognition, curriculum, and world state into realistic engineering training episodes with deterministic execution.\\\"\""
 pipeline:
   step_01: load_world_state
   step_02: select_curriculum_node
@@ -24,8 +24,8 @@ randomization:
   weighted_sampling: true
   reproducible: true
   configurable_entropy: true
-validation: "reject_if[7]: prerequisite_violation,inconsistent_world,invalid_reasoning,duplicate_episode,impossible_timeline,ontology_violation,curriculum_violation"
-metrics: "compute[8]: generation_speed,diversity,curriculum_coverage,reasoning_quality,engineering_realism,world_consistency,artifact_quality,replay_determinism"
+validation: "\"reject_if[7]: prerequisite_violation,inconsistent_world,invalid_reasoning,duplicate_episode,impossible_timeline,ontology_violation,curriculum_violation\""
+metrics: "\"compute[8]: generation_speed,diversity,curriculum_coverage,reasoning_quality,engineering_realism,world_consistency,artifact_quality,replay_determinism\""
 success_metrics:
   deterministic_execution:
     minimum: 1.0

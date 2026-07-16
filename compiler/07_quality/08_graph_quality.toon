@@ -1,328 +1,36 @@
 graph_quality:
-
   metadata:
-
     id: QLT-008
-
     title: Graph Quality
-
     version: 2.0
-
     status: Stable
-
     owner: Quality Engine
-
-    depends_on:
-
-      - compiler/07_quality/07_curriculum_quality.toon
-      - compiler/01_ontology/19_dependency_graph.toon
-      - compiler/02_cognition/03_reasoning_graphs.toon
-
-    consumed_by:
-
-      - compiler/07_quality/09_quality_dashboard.toon
-      - compiler/07_quality/10_quality_pipeline.toon
-      - compiler/08_validation/05_graph_validation.toon
-
-    objective:
-
-      Evaluate structural integrity,
-      semantic consistency,
-      connectivity,
-      topology,
-      and educational usefulness
-      of every graph used by the compiler.
-
-
-################################################################################
-# PHILOSOPHY
-################################################################################
-
-philosophy:
-
-  everything_is_a_graph
-
-  graph_quality_affects_learning
-
-  topology_has_semantics
-
-  connectivity_enables_reasoning
-
-  deterministic_analysis
-
-  explainable_metrics
-
-  graph_native_compiler
-
-  reusable_knowledge
-
-
-################################################################################
-# INPUTS
-################################################################################
-
-inputs:
-
-  ontology_graph
-
-  reasoning_graph
-
-  repository_graph
-
-  curriculum_graph
-
-  dependency_graph
-
-  architecture_graph
-
-  engineering_graph
-
-  graph_history
-
-  benchmark_reports
-
-
-################################################################################
-# GRAPH DIMENSIONS
-################################################################################
-
-dimensions:
-
-  connectivity
-
-  reachability
-
-  consistency
-
-  topology
-
-  hierarchy
-
-  modularity
-
-  graph_density
-
-  graph_entropy
-
-  graph_stability
-
-  graph_reusability
-
-  graph_evolution
-
-  graph_explainability
-
-
-################################################################################
-# GRAPH ANALYSIS
-################################################################################
-
-analysis:
-
-  connectivity_analysis
-
-  shortest_path_analysis
-
-  cycle_analysis
-
-  hierarchy_analysis
-
-  centrality_analysis
-
-  clustering_analysis
-
-  graph_isomorphism
-
-  dependency_analysis
-
-  evolution_analysis
-
-  semantic_alignment
-
-
-################################################################################
-# QUALITY CHECKS
-################################################################################
-
-checks:
-
-  disconnected_components
-
-  unreachable_nodes
-
-  dependency_cycles
-
-  redundant_edges
-
-  missing_relationships
-
-  inconsistent_hierarchy
-
-  invalid_directionality
-
-  duplicate_subgraphs
-
-  weak_connectivity
-
-  unstable_topology
-
-
-################################################################################
-# GRAPH METRICS
-################################################################################
-
-metrics:
-
-  node_count
-
-  edge_count
-
-  average_degree
-
-  graph_density
-
-  average_path_length
-
-  clustering_coefficient
-
-  modularity
-
-  betweenness_centrality
-
-  graph_entropy
-
-  knowledge_connectivity
-
-  curriculum_connectivity
-
-  reasoning_connectivity
-
-
-################################################################################
-# SCORING
-################################################################################
-
-scoring:
-
-  structural_quality
-
-  semantic_quality
-
-  topology_quality
-
-  connectivity_quality
-
-  modularity_score
-
-  educational_connectivity
-
-  graph_health
-
-  graph_quality_score
-
-
-################################################################################
-# CONSTRAINTS
-################################################################################
-
-constraints:
-
-  deterministic
-
-  reproducible
-
-  explainable
-
-  benchmarkable
-
-  ontology_safe
-
-  curriculum_safe
-
-  graph_consistent
-
-
-################################################################################
-# VALIDATION
-################################################################################
-
-validation:
-
-  topology_validation
-
-  connectivity_validation
-
-  hierarchy_validation
-
-  benchmark_validation
-
-  consistency_validation
-
-  determinism_validation
-
-
-################################################################################
-# RANDOMIZATION
-################################################################################
-
+    depends_on[3]: "- compiler/07_quality/07_curriculum_quality.toon","- compiler/01_ontology/19_dependency_graph.toon","- compiler/02_cognition/03_reasoning_graphs.toon"
+    consumed_by[3]: "- compiler/07_quality/09_quality_dashboard.toon","- compiler/07_quality/10_quality_pipeline.toon","- compiler/08_validation/05_graph_validation.toon"
+    objective[6]: "Evaluate structural integrity,","semantic consistency,","connectivity,","topology,",and educational usefulness,of every graph used by the compiler.
+philosophy[8]: everything_is_a_graph,graph_quality_affects_learning,topology_has_semantics,connectivity_enables_reasoning,deterministic_analysis,explainable_metrics,graph_native_compiler,reusable_knowledge
+inputs[9]: ontology_graph,reasoning_graph,repository_graph,curriculum_graph,dependency_graph,architecture_graph,engineering_graph,graph_history,benchmark_reports
+dimensions[12]: connectivity,reachability,consistency,topology,hierarchy,modularity,graph_density,graph_entropy,graph_stability,graph_reusability,graph_evolution,graph_explainability
+analysis[10]: connectivity_analysis,shortest_path_analysis,cycle_analysis,hierarchy_analysis,centrality_analysis,clustering_analysis,graph_isomorphism,dependency_analysis,evolution_analysis,semantic_alignment
+checks[10]: disconnected_components,unreachable_nodes,dependency_cycles,redundant_edges,missing_relationships,inconsistent_hierarchy,invalid_directionality,duplicate_subgraphs,weak_connectivity,unstable_topology
+metrics[12]: node_count,edge_count,average_degree,graph_density,average_path_length,clustering_coefficient,modularity,betweenness_centrality,graph_entropy,knowledge_connectivity,curriculum_connectivity,reasoning_connectivity
+scoring[8]: structural_quality,semantic_quality,topology_quality,connectivity_quality,modularity_score,educational_connectivity,graph_health,graph_quality_score
+constraints[7]: deterministic,reproducible,explainable,benchmarkable,ontology_safe,curriculum_safe,graph_consistent
+validation[6]: topology_validation,connectivity_validation,hierarchy_validation,benchmark_validation,consistency_validation,determinism_validation
 randomization:
-
-  deterministic_seed:
-
-    true
-
-  reproducible:
-
-    true
-
-
-################################################################################
-# OUTPUTS
-################################################################################
-
-outputs:
-
-  graph_quality_report
-
-  topology_report
-
-  connectivity_report
-
-  graph_score
-
-  graph_statistics
-
-  optimization_targets
-
-  metadata
-
-
-################################################################################
-# SUCCESS METRICS
-################################################################################
-
+  deterministic_seed: true
+  reproducible: true
+outputs[7]: graph_quality_report,topology_report,connectivity_report,graph_score,graph_statistics,optimization_targets,metadata
 success_metrics:
-
   connectivity_quality:
-
     minimum: 0.99
-
   topology_quality:
-
     minimum: 0.99
-
   semantic_quality:
-
     minimum: 0.99
-
   graph_health:
-
     minimum: 0.99
-
   graph_reusability:
-
     minimum: 0.99
-
   determinism:
-
-    minimum: 1.00
+    minimum: 1.0

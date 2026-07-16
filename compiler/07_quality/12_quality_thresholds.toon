@@ -1,295 +1,35 @@
 quality_thresholds:
-
   metadata:
-
     id: QLT-013
-
     title: Quality Thresholds
-
     version: 2.0
-
     status: Stable
-
     owner: Quality Engine
-
-    depends_on:
-
-      - compiler/07_quality/10_quality_pipeline.toon
-      - compiler/07_quality/02_scoring_dimensions.toon
-      - compiler/00_core/07_global_constants.toon
-
-    consumed_by:
-
-      - compiler/07_quality/11_quality_reports.toon
-      - compiler/08_validation/01_validation_engine.toon
-      - compiler/09_optimization/01_dataset_optimizer.toon
-
-    objective:
-
-      Define, manage, and enforce quality
-      thresholds across every quality dimension
-      including minimum acceptance criteria,
-      warning boundaries, target scores,
-      and release gates that determine
-      whether dataset samples and releases
-      meet the required quality bar.
-
-
-################################################################################
-# PHILOSOPHY
-################################################################################
-
-philosophy:
-
-  thresholds_define_quality_bar
-
-  minimums_prevent_degradation
-
-  targets_drive_improvement
-
-  gates_enable_release_control
-
-  deterministic_threshold_evaluation
-
-  configurable_per_dimension
-
-  environment_aware_thresholds
-
-  continuously_improving_baselines
-
-
-################################################################################
-# INPUTS
-################################################################################
-
-inputs:
-
-  quality_scores
-
-  quality_dimension_definitions
-
-  threshold_configuration
-
-  release_gate_policies
-
-  baseline_statistics
-
-  historical_thresholds
-
-  environment_requirements
-
-
-################################################################################
-# THRESHOLD TYPES
-################################################################################
-
-types:
-
-  minimum_threshold
-
-  target_threshold
-
-  warning_threshold
-
-  critical_threshold
-
-  release_gate_threshold
-
-  degradation_threshold
-
-  improvement_threshold
-
-  statistical_threshold
-
-
-################################################################################
-# THRESHOLD DIMENSIONS
-################################################################################
-
-dimensions:
-
-  knowledge_density_threshold
-
-  reasoning_quality_threshold
-
-  engineering_quality_threshold
-
-  diversity_threshold
-
-  curriculum_quality_threshold
-
-  novelty_threshold
-
-  graph_quality_threshold
-
-  overall_quality_threshold
-
-
-################################################################################
-# RELEASE GATES
-################################################################################
-
-gates:
-
-  quality_gate
-
-  engineering_gate
-
-  reasoning_gate
-
-  diversity_gate
-
-  curriculum_gate
-
-  novelty_gate
-
-  determinism_gate
-
-  reproducibility_gate
-
-
-################################################################################
-# ANALYSIS
-################################################################################
-
-analysis:
-
-  threshold_compliance_analysis
-
-  gate_status_analysis
-
-  threshold_trend_analysis
-
-  degradation_detection
-
-  improvement_tracking
-
-  baseline_calibration
-
-  environmental_adjustment
-
-
-################################################################################
-# CONSTRAINTS
-################################################################################
-
-constraints:
-
-  deterministic
-
-  reproducible
-
-  configurable
-
-  dimension_aware
-
-  environment_adaptable
-
-  historically_tracked
-
-  explainable
-
-
-################################################################################
-# VALIDATION
-################################################################################
-
-validation:
-
-  threshold_compliance_validation
-
-  gate_status_validation
-
-  consistency_validation
-
-  baseline_validation
-
-  determinism_validation
-
-  reproducibility_validation
-
-
-################################################################################
-# RANDOMIZATION
-################################################################################
-
+    depends_on[3]: "- compiler/07_quality/10_quality_pipeline.toon","- compiler/07_quality/02_scoring_dimensions.toon","- compiler/00_core/07_global_constants.toon"
+    consumed_by[3]: "- compiler/07_quality/11_quality_reports.toon","- compiler/08_validation/01_validation_engine.toon","- compiler/09_optimization/01_dataset_optimizer.toon"
+    objective[7]: "Define, manage, and enforce quality",thresholds across every quality dimension,"including minimum acceptance criteria,","warning boundaries, target scores,",and release gates that determine,whether dataset samples and releases,meet the required quality bar.
+philosophy[8]: thresholds_define_quality_bar,minimums_prevent_degradation,targets_drive_improvement,gates_enable_release_control,deterministic_threshold_evaluation,configurable_per_dimension,environment_aware_thresholds,continuously_improving_baselines
+inputs[7]: quality_scores,quality_dimension_definitions,threshold_configuration,release_gate_policies,baseline_statistics,historical_thresholds,environment_requirements
+types[8]: minimum_threshold,target_threshold,warning_threshold,critical_threshold,release_gate_threshold,degradation_threshold,improvement_threshold,statistical_threshold
+dimensions[8]: knowledge_density_threshold,reasoning_quality_threshold,engineering_quality_threshold,diversity_threshold,curriculum_quality_threshold,novelty_threshold,graph_quality_threshold,overall_quality_threshold
+gates[8]: quality_gate,engineering_gate,reasoning_gate,diversity_gate,curriculum_gate,novelty_gate,determinism_gate,reproducibility_gate
+analysis[7]: threshold_compliance_analysis,gate_status_analysis,threshold_trend_analysis,degradation_detection,improvement_tracking,baseline_calibration,environmental_adjustment
+constraints[7]: deterministic,reproducible,configurable,dimension_aware,environment_adaptable,historically_tracked,explainable
+validation[6]: threshold_compliance_validation,gate_status_validation,consistency_validation,baseline_validation,determinism_validation,reproducibility_validation
 randomization:
-
-  deterministic_seed:
-
-    true
-
-  reproducible:
-
-    true
-
-
-################################################################################
-# OUTPUTS
-################################################################################
-
-outputs:
-
-  threshold_report
-
-  gate_status_report
-
-  compliance_matrix
-
-  baseline_calibration
-
-  threshold_violations
-
-  improvement_recommendations
-
-  metadata
-
-
-################################################################################
-# METRICS
-################################################################################
-
+  deterministic_seed: true
+  reproducible: true
+outputs[7]: threshold_report,gate_status_report,compliance_matrix,baseline_calibration,threshold_violations,improvement_recommendations,metadata
 metrics:
-
-  compute:
-
-    threshold_compliance_rate
-
-    gate_pass_rate
-
-    critical_violation_count
-
-    warning_count
-
-    baseline_deviation
-
-    threshold_accuracy
-
-    analysis_latency
-
-
-################################################################################
-# SUCCESS METRICS
-################################################################################
-
+  compute[7]: threshold_compliance_rate,gate_pass_rate,critical_violation_count,warning_count,baseline_deviation,threshold_accuracy,analysis_latency
 success_metrics:
-
   threshold_compliance_rate:
-
     minimum: 0.99
-
   gate_pass_rate:
-
     minimum: 0.99
-
   critical_violation_count:
-
     maximum: 0
-
   threshold_accuracy:
-
     minimum: 0.99
-
   determinism:
-
-    minimum: 1.00
+    minimum: 1.0

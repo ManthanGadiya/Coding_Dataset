@@ -1,278 +1,34 @@
 export_pipeline:
-
   metadata:
-
     id: SER-007
-
     title: Export Pipeline
-
     version: 2.0
-
     status: Stable
-
     owner: Serialization Engine
-
-    depends_on:
-
-      - compiler/10_serialization/06_token_compression.toon
-      - compiler/10_serialization/02_toon_compiler.toon
-      - compiler/10_serialization/05_graph_serializer.toon
-      - compiler/09_optimization/09_release_optimizer.toon
-      - compiler/09_optimization/06_balancing_optimizer.toon
-
-    consumed_by:
-
-      - compiler/10_serialization/08_release_format.toon
-      - compiler/10_serialization/09_dataset_manifest.toon
-      - compiler/10_serialization/10_export_targets.toon
-
-    objective:
-
-      Coordinate the complete export pipeline
-      that transforms the compiled, compressed,
-      and optimized dataset into final release
-      artifacts across all target formats and
-      distribution channels with full integrity
-      verification, metadata packaging, and
-      manifest generation.
-
-
-################################################################################
-# PHILOSOPHY
-################################################################################
-
-philosophy:
-
-  export_is_the_final_stage
-
-  format_should_not_limit_utility
-
-  integrity_must_be_verifiable
-
-  distribution_ready_output
-
-  deterministic_export
-
-  multi_format_by_default
-
-  parallel_export_when_possible
-
-  reproducible_releases
-
-
-################################################################################
-# INPUTS
-################################################################################
-
-inputs:
-
-  compiled_toon_dataset
-
-  compressed_dataset
-
-  optimized_release_manifest
-
-  format_configurations
-
-  distribution_targets
-
-  integrity_requirements
-
-  metadata_templates
-
-  release_version_info
-
-
-################################################################################
-# PIPELINE STAGES
-################################################################################
-
-stages:
-
-  load_compiled_dataset
-
-  select_target_formats
-
-  transform_per_format
-
-  package_metadata
-
-  generate_manifests
-
-  compute_integrity_checksums
-
-  assemble_release_bundle
-
-  validate_outputs
-
-  produce_reports
-
-
-################################################################################
-# EXPORT FORMATS
-################################################################################
-
-formats:
-
-  toon_canonical
-
-  jsonl_training
-
-  parquet_optimized
-
-  tokenized_sequences
-
-  graph_export
-
-  metadata_package
-
-  benchmark_evaluation_set
-
-  documentation_artifacts
-
-
-################################################################################
-# ANALYSIS
-################################################################################
-
-analysis:
-
-  format_coverage_analysis
-
-  size_analysis
-
-  integrity_verification
-
-  distribution_readiness
-
-  compatibility_check
-
-  documentation_completeness
-
-
-################################################################################
-# CONSTRAINTS
-################################################################################
-
-constraints:
-
-  deterministic
-
-  reproducible
-
-  format_compliant
-
-  integrity_verified
-
-  metadata_complete
-
-  distribution_ready
-
-  versioned
-
-
-################################################################################
-# VALIDATION
-################################################################################
-
-validation:
-
-  output_integrity_validation
-
-  format_compliance_validation
-
-  metadata_completeness_validation
-
-  cross_format_consistency_validation
-
-  determinism_validation
-
-  release_readiness_validation
-
-
-################################################################################
-# RANDOMIZATION
-################################################################################
-
+    depends_on[5]: "- compiler/10_serialization/06_token_compression.toon","- compiler/10_serialization/02_toon_compiler.toon","- compiler/10_serialization/05_graph_serializer.toon","- compiler/09_optimization/09_release_optimizer.toon","- compiler/09_optimization/06_balancing_optimizer.toon"
+    consumed_by[3]: "- compiler/10_serialization/08_release_format.toon","- compiler/10_serialization/09_dataset_manifest.toon","- compiler/10_serialization/10_export_targets.toon"
+    objective[7]: Coordinate the complete export pipeline,"that transforms the compiled, compressed,",and optimized dataset into final release,artifacts across all target formats and,distribution channels with full integrity,"verification, metadata packaging, and",manifest generation.
+philosophy[8]: export_is_the_final_stage,format_should_not_limit_utility,integrity_must_be_verifiable,distribution_ready_output,deterministic_export,multi_format_by_default,parallel_export_when_possible,reproducible_releases
+inputs[8]: compiled_toon_dataset,compressed_dataset,optimized_release_manifest,format_configurations,distribution_targets,integrity_requirements,metadata_templates,release_version_info
+stages[9]: load_compiled_dataset,select_target_formats,transform_per_format,package_metadata,generate_manifests,compute_integrity_checksums,assemble_release_bundle,validate_outputs,produce_reports
+formats[8]: toon_canonical,jsonl_training,parquet_optimized,tokenized_sequences,graph_export,metadata_package,benchmark_evaluation_set,documentation_artifacts
+analysis[6]: format_coverage_analysis,size_analysis,integrity_verification,distribution_readiness,compatibility_check,documentation_completeness
+constraints[7]: deterministic,reproducible,format_compliant,integrity_verified,metadata_complete,distribution_ready,versioned
+validation[6]: output_integrity_validation,format_compliance_validation,metadata_completeness_validation,cross_format_consistency_validation,determinism_validation,release_readiness_validation
 randomization:
-
-  deterministic_seed:
-
-    true
-
-  reproducible:
-
-    true
-
-
-################################################################################
-# OUTPUTS
-################################################################################
-
-outputs:
-
-  release_bundle
-
-  per_format_exports
-
-  integrity_checksums
-
-  metadata_package
-
-  release_manifest
-
-  export_report
-
-  validation_certificate
-
-  metadata
-
-
-################################################################################
-# METRICS
-################################################################################
-
+  deterministic_seed: true
+  reproducible: true
+outputs[8]: release_bundle,per_format_exports,integrity_checksums,metadata_package,release_manifest,export_report,validation_certificate,metadata
 metrics:
-
-  compute:
-
-    export_completeness
-
-    format_coverage
-
-    integrity_rate
-
-    export_throughput
-
-    cross_format_consistency
-
-    release_readiness
-
-    export_latency
-
-
-################################################################################
-# SUCCESS METRICS
-################################################################################
-
+  compute[7]: export_completeness,format_coverage,integrity_rate,export_throughput,cross_format_consistency,release_readiness,export_latency
 success_metrics:
-
   export_completeness:
-
-    minimum: 1.00
-
+    minimum: 1.0
   format_coverage:
-
-    minimum: 1.00
-
+    minimum: 1.0
   integrity_rate:
-
-    minimum: 1.00
-
+    minimum: 1.0
   cross_format_consistency:
-
-    minimum: 1.00
-
+    minimum: 1.0
   determinism:
-
-    minimum: 1.00
+    minimum: 1.0

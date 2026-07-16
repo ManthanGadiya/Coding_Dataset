@@ -1,15 +1,15 @@
-description: "transitions[6]: Recognition -> Understanding,Understanding -> Application,Application -> Integration,Integration -> System Design,System Design -> Production,Production -> Autonomous Engineering"
+description: "\"transitions[6]: Recognition -> Understanding,Understanding -> Application,Application -> Integration,Integration -> System Design,System Design -> Production,Production -> Autonomous Engineering\""
 difficulty_progression:
   metadata:
-    description: "depends_on[4]: compiler/03_curriculum/01_learning_order.toon,compiler/03_curriculum/02_skill_progression.toon,compiler/03_curriculum/03_domain_progression.toon,compiler/01_ontology/06_difficulty_model.toon consumed_by[4]: compiler/03_curriculum/06_sampling_strategy.toon,compiler/03_curriculum/07_dataset_balancing.toon,compiler/03_curriculum/09_curriculum_graph.toon,compiler/05_generation/19_dataset_builder.toon"
+    description: "\"depends_on[4]: compiler/03_curriculum/01_learning_order.toon,compiler/03_curriculum/02_skill_progression.toon,compiler/03_curriculum/03_domain_progression.toon,compiler/01_ontology/06_difficulty_model.toon consumed_by[4]: compiler/03_curriculum/06_sampling_strategy.toon,compiler/03_curriculum/07_dataset_balancing.toon,compiler/03_curriculum/09_curriculum_graph.toon,compiler/05_generation/19_dataset_builder.toon\""
     id: CURR-004
     title: Difficulty Progression
     version: 1.0
     status: Stable
     owner: Curriculum Engine
     objective: Progress engineering knowledge through measurable cognitive difficulty while minimizing catastrophic forgetting and maximizing long-term reasoning ability.
-"levels[7]":
-  description: "abilities[6]: planning,reflection,self critique,autonomous debugging,autonomous review,autonomous architecture"
+"\"levels[7]\"":
+  description: "\"abilities[6]: planning,reflection,self critique,autonomous debugging,autonomous review,autonomous architecture\""
   name: Autonomous Engineering
   objective: Perform long-horizon engineering tasks.
   exit_requirements:
@@ -36,14 +36,13 @@ dimensions:
   autonomy:
     description: Independence required.
     range: 1..10
-escalation[2]: "increase_only_when[4]: prerequisite_mastered,previous_level_completed,confidence_above_threshold,repeated_success","never_escalate_when[4]: repeated_failures,prerequisite_missing,unstable_reasoning,low_confidence"
 reinforcement:
   after_every_level:
     revisit_previous_levels: true
     minimum_previous_content: 0.3
     cumulative_review: true
     spaced_repetition: true
-failure_policy: "on_failure[5]: reduce_difficulty,identify_missing_prerequisites,generate_targeted_examples,reinforce_previous_level,reassess_before_progression"
+failure_policy: "\"on_failure[5]: reduce_difficulty,identify_missing_prerequisites,generate_targeted_examples,reinforce_previous_level,reassess_before_progression\""
 complexity_curve:
   recognition: low
   understanding: low
@@ -52,7 +51,7 @@ complexity_curve:
   system_design: high
   production: very_high
   autonomous_engineering: expert
-validation: "progression_must_be[6]: monotonic,prerequisite_consistent,measurable,reproducible,curriculum_aligned,ontology_consistent"
+validation: "\"progression_must_be[6]: monotonic,prerequisite_consistent,measurable,reproducible,curriculum_aligned,ontology_consistent\""
 success_metrics:
   mastery_rate:
     minimum: 0.9

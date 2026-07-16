@@ -1,20 +1,20 @@
-description: "principles[8]: curriculum_aligned,world_driven,deterministic,reproducible,engineering_realistic,competency_based,traceable,diverse sources[12]: feature_request,production_incident,technical_debt,customer_feedback,roadmap,architecture_review,code_review,security_review,performance_analysis,documentation_gap,research,maintenance task_types[14]: implement_feature,fix_bug,refactor_module,optimize_performance,write_tests,improve_documentation,review_pull_request,design_architecture,migrate_system,investigate_incident,improve_security,automate_process,update_dependencies,create_tooling attributes[13]: task_id,title,description,business_context,engineering_context,priority,estimated_effort,complexity,owner,repository,dependencies,acceptance_criteria,deadline context[11]: company,project,repository,engineer,role,sprint,milestone,technical_debt,active_incidents,customer_requests,architecture difficulty[5]: beginner,intermediate,advanced,expert,autonomous dependencies[6]: prerequisite_tasks,blocked_tasks,parallel_tasks,follow_up_tasks,architecture_dependencies,repository_dependencies acceptance[8]: functional_correctness,performance,reliability,maintainability,security,testing,documentation,deployment_ready outputs[6]: task_statement,business_goal,engineering_goal,required_skills,expected_artifacts,evaluation_targets"
+description: "\"principles[8]: curriculum_aligned,world_driven,deterministic,reproducible,engineering_realistic,competency_based,traceable,diverse sources[12]: feature_request,production_incident,technical_debt,customer_feedback,roadmap,architecture_review,code_review,security_review,performance_analysis,documentation_gap,research,maintenance task_types[14]: implement_feature,fix_bug,refactor_module,optimize_performance,write_tests,improve_documentation,review_pull_request,design_architecture,migrate_system,investigate_incident,improve_security,automate_process,update_dependencies,create_tooling attributes[13]: task_id,title,description,business_context,engineering_context,priority,estimated_effort,complexity,owner,repository,dependencies,acceptance_criteria,deadline context[11]: company,project,repository,engineer,role,sprint,milestone,technical_debt,active_incidents,customer_requests,architecture difficulty[5]: beginner,intermediate,advanced,expert,autonomous dependencies[6]: prerequisite_tasks,blocked_tasks,parallel_tasks,follow_up_tasks,architecture_dependencies,repository_dependencies acceptance[8]: functional_correctness,performance,reliability,maintainability,security,testing,documentation,deployment_ready outputs[6]: task_statement,business_goal,engineering_goal,required_skills,expected_artifacts,evaluation_targets\""
 event_generator:
   metadata:
-    description: "depends_on[4]: compiler/05_generation/02_episode_generator.toon,compiler/04_world/15_world_state.toon,compiler/03_curriculum/10_master_curriculum.toon,compiler/01_ontology/20_master_ontology.toon consumed_by[4]: compiler/05_generation/04_instruction_generator.toon,compiler/05_generation/05_reasoning_generator.toon,compiler/05_generation/07_requirement_generator.toon,compiler/05_generation/08_code_generator.toon"
+    description: "\"depends_on[4]: compiler/05_generation/02_episode_generator.toon,compiler/04_world/15_world_state.toon,compiler/03_curriculum/10_master_curriculum.toon,compiler/01_ontology/20_master_ontology.toon consumed_by[4]: compiler/05_generation/04_instruction_generator.toon,compiler/05_generation/05_reasoning_generator.toon,compiler/05_generation/07_requirement_generator.toon,compiler/05_generation/08_code_generator.toon\""
     id: GEN-003
     title: Event Generator
     version: 1.0
     status: Stable
     owner: Generation Engine
-    objective: "\"Generate realistic engineering tasks that align with the curriculum, world state, engineering context, and intended competency progression.\""
+    objective: "\"\\\"Generate realistic engineering tasks that align with the curriculum, world state, engineering context, and intended competency progression.\\\"\""
 randomization:
   deterministic_seed: true
   weighted_sampling: true
   curriculum_controlled: true
   reproducible: true
-validation: "reject_if[7]: missing_context,invalid_prerequisites,impossible_deadline,inconsistent_world_state,duplicate_task,unclear_acceptance_criteria,curriculum_violation"
-metrics: "compute[8]: engineering_realism,business_alignment,curriculum_alignment,diversity,task_complexity,dependency_depth,learning_value,traceability"
+validation: "\"reject_if[7]: missing_context,invalid_prerequisites,impossible_deadline,inconsistent_world_state,duplicate_task,unclear_acceptance_criteria,curriculum_violation\""
+metrics: "\"compute[8]: engineering_realism,business_alignment,curriculum_alignment,diversity,task_complexity,dependency_depth,learning_value,traceability\""
 success_metrics:
   curriculum_alignment:
     minimum: 1.0

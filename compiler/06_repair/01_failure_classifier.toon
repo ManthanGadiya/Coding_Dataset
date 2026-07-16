@@ -1,369 +1,38 @@
 failure_classifier:
-
   metadata:
-
     id: REP-001
-
     title: Failure Classifier
-
     version: 2.0
-
     status: Stable
-
     owner: Repair Engine
-
-    depends_on:
-
-      - compiler/05_generation/20_generation_pipeline.toon
-      - compiler/01_ontology/14_failure_types.toon
-      - compiler/02_cognition/13_error_patterns.toon
-      - compiler/02_cognition/09_uncertainty_model.toon
-      - compiler/02_cognition/10_reflection_model.toon
-
-    consumed_by:
-
-      - compiler/06_repair/02_structural_repair.toon
-      - compiler/06_repair/03_semantic_repair.toon
-      - compiler/06_repair/04_knowledge_repair.toon
-      - compiler/06_repair/05_reasoning_repair.toon
-
-    objective:
-
-      Detect, classify, prioritize, and explain every
-      structural, semantic, logical, architectural,
-      engineering, and curriculum failure before
-      repair begins.
-
-
-################################################################################
-# PHILOSOPHY
-################################################################################
-
-philosophy:
-
-  every_failure_has_a_cause
-
-  classify_before_fixing
-
-  preserve_valid_information
-
-  repair_only_the_minimum
-
-  deterministic_classification
-
-  failures_are_learning_signals
-
-  root_causes_over_symptoms
-
-  confidence_guided_analysis
-
-
-################################################################################
-# INPUTS
-################################################################################
-
-inputs:
-
-  dataset_sample
-
-  engineering_story
-
-  repository_state
-
-  architecture
-
-  implementation
-
-  reasoning_trace
-
-  curriculum_metadata
-
-  validation_metadata
-
-  engineering_memory
-
-
-################################################################################
-# FAILURE CATEGORIES
-################################################################################
-
-categories:
-
-  structural
-
-  semantic
-
-  reasoning
-
-  engineering
-
-  architectural
-
-  dependency
-
-  curriculum
-
-  consistency
-
-  completeness
-
-  factual
-
-  execution
-
-  documentation
-
-  metadata
-
-  serialization
-
-  optimization
-
-  security
-
-
-################################################################################
-# SEVERITY
-################################################################################
-
-severity:
-
-  informational
-
-  minor
-
-  moderate
-
-  major
-
-  critical
-
-  catastrophic
-
-
-################################################################################
-# DETECTION METHODS
-################################################################################
-
-detection:
-
-  schema_validation
-
-  graph_analysis
-
-  dependency_analysis
-
-  semantic_analysis
-
-  ontology_validation
-
-  reasoning_validation
-
-  architecture_validation
-
-  execution_validation
-
-  curriculum_validation
-
-  statistical_analysis
-
-
-################################################################################
-# FAILURE ATTRIBUTES
-################################################################################
-
-attributes:
-
-  identifier
-
-  category
-
-  severity
-
-  confidence
-
-  affected_nodes
-
-  affected_artifacts
-
-  probable_root_cause
-
-  downstream_impact
-
-  repair_priority
-
-  recoverability
-
-  reproducibility
-
-
-################################################################################
-# ROOT CAUSE ANALYSIS
-################################################################################
-
-root_cause:
-
-  originating_generator
-
-  dependency_chain
-
-  reasoning_breakpoint
-
-  architecture_violation
-
-  ontology_violation
-
-  curriculum_gap
-
-  engineering_violation
-
-  invalid_assumption
-
-  conflicting_constraints
-
-
-################################################################################
-# CLASSIFICATION OUTPUT
-################################################################################
-
-classification:
-
-  detected_failures
-
-  grouped_failures
-
-  dependency_clusters
-
-  repair_order
-
-  confidence_scores
-
-  explanation_graph
-
-
-################################################################################
-# PRIORITIZATION
-################################################################################
-
-prioritization:
-
-  catastrophic_first
-
-  dependency_aware
-
-  architecture_before_code
-
-  reasoning_before_generation
-
-  semantic_before_style
-
-  maximize_information_retention
-
-
-################################################################################
-# RANDOMIZATION
-################################################################################
-
+    depends_on[5]: "- compiler/05_generation/20_generation_pipeline.toon","- compiler/01_ontology/14_failure_types.toon","- compiler/02_cognition/13_error_patterns.toon","- compiler/02_cognition/09_uncertainty_model.toon","- compiler/02_cognition/10_reflection_model.toon"
+    consumed_by[4]: "- compiler/06_repair/02_structural_repair.toon","- compiler/06_repair/03_semantic_repair.toon","- compiler/06_repair/04_knowledge_repair.toon","- compiler/06_repair/05_reasoning_repair.toon"
+    objective[4]: "Detect, classify, prioritize, and explain every","structural, semantic, logical, architectural,","engineering, and curriculum failure before",repair begins.
+philosophy[8]: every_failure_has_a_cause,classify_before_fixing,preserve_valid_information,repair_only_the_minimum,deterministic_classification,failures_are_learning_signals,root_causes_over_symptoms,confidence_guided_analysis
+inputs[9]: dataset_sample,engineering_story,repository_state,architecture,implementation,reasoning_trace,curriculum_metadata,validation_metadata,engineering_memory
+categories[16]: structural,semantic,reasoning,engineering,architectural,dependency,curriculum,consistency,completeness,factual,execution,documentation,metadata,serialization,optimization,security
+severity[6]: informational,minor,moderate,major,critical,catastrophic
+detection[10]: schema_validation,graph_analysis,dependency_analysis,semantic_analysis,ontology_validation,reasoning_validation,architecture_validation,execution_validation,curriculum_validation,statistical_analysis
+attributes[11]: identifier,category,severity,confidence,affected_nodes,affected_artifacts,probable_root_cause,downstream_impact,repair_priority,recoverability,reproducibility
+root_cause[9]: originating_generator,dependency_chain,reasoning_breakpoint,architecture_violation,ontology_violation,curriculum_gap,engineering_violation,invalid_assumption,conflicting_constraints
+classification[6]: detected_failures,grouped_failures,dependency_clusters,repair_order,confidence_scores,explanation_graph
+prioritization[6]: catastrophic_first,dependency_aware,architecture_before_code,reasoning_before_generation,semantic_before_style,maximize_information_retention
 randomization:
-
-  deterministic_seed:
-
-    true
-
-  reproducible:
-
-    true
-
-
-################################################################################
-# VALIDATION
-################################################################################
-
+  deterministic_seed: true
+  reproducible: true
 validation:
-
-  reject_if:
-
-    unidentified_failure
-
-    ambiguous_root_cause
-
-    inconsistent_classification
-
-    circular_dependency
-
-    missing_explanation
-
-    non_deterministic_output
-
-
-################################################################################
-# OUTPUTS
-################################################################################
-
-outputs:
-
-  failure_report
-
-  repair_plan
-
-  explanation_graph
-
-  dependency_graph
-
-  repair_priority_queue
-
-  confidence_matrix
-
-  metadata
-
-
-################################################################################
-# METRICS
-################################################################################
-
+  reject_if[6]: unidentified_failure,ambiguous_root_cause,inconsistent_classification,circular_dependency,missing_explanation,non_deterministic_output
+outputs[7]: failure_report,repair_plan,explanation_graph,dependency_graph,repair_priority_queue,confidence_matrix,metadata
 metrics:
-
-  compute:
-
-    classification_accuracy
-
-    precision
-
-    recall
-
-    false_positive_rate
-
-    false_negative_rate
-
-    root_cause_accuracy
-
-    repair_readiness
-
-    determinism
-
-
-################################################################################
-# SUCCESS METRICS
-################################################################################
-
+  compute[8]: classification_accuracy,precision,recall,false_positive_rate,false_negative_rate,root_cause_accuracy,repair_readiness,determinism
 success_metrics:
-
   classification_accuracy:
-
     minimum: 0.995
-
   root_cause_accuracy:
-
     minimum: 0.99
-
   determinism:
-
-    minimum: 1.00
-
+    minimum: 1.0
   reproducibility:
-
-    minimum: 1.00
-
+    minimum: 1.0
   repair_readiness:
-
     minimum: 0.99

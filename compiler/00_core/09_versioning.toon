@@ -1,4 +1,4 @@
-description: "guarantees[5]: Every release is reproducible.,Every version is uniquely identifiable.,Every breaking change is documented.,Every migration path is defined.,Every historical version remains accessible."
+description: "\"guarantees[5]: Every release is reproducible.,Every version is uniquely identifiable.,Every breaking change is documented.,Every migration path is defined.,Every historical version remains accessible.\""
 spec:
   id: versioning
   version: 1.0.0
@@ -6,8 +6,8 @@ spec:
   priority: critical
   module: Core
   compiler_stage: Foundation
-  description: "\"Defines the versioning strategy for every component of the TOON Dataset Compiler. This specification guarantees reproducibility, backward compatibility, traceability, controlled evolution, and deterministic releases across the entire compiler ecosystem.\""
-purpose: "\"Establish one universal versioning system for compiler specifications, ontology, cognition, schemas, datasets, releases, Engineering Knowledge Records, generated worlds, and every compiler artifact.\""
+  description: "\"\\\"Defines the versioning strategy for every component of the TOON Dataset Compiler. This specification guarantees reproducibility, backward compatibility, traceability, controlled evolution, and deterministic releases across the entire compiler ecosystem.\\\"\""
+purpose: "\"\\\"Establish one universal versioning system for compiler specifications, ontology, cognition, schemas, datasets, releases, Engineering Knowledge Records, generated worlds, and every compiler artifact.\\\"\""
 version:
   format: MAJOR.MINOR.PATCH
   example: 3.14.7
@@ -18,27 +18,27 @@ semantic:
     meaning: Backward compatible feature additions.
   PATCH:
     meaning: Bug fixes and documentation improvements.
-objects: "\"Every object contains\"[5]: object_version,compiler_version,ontology_version,schema_version,release_version"
-compiler: "tracks[4]: compiler architecture,compiler passes,execution engine,pipeline"
-ontology: "increment_when[4]: taxonomy changes,capability changes,relationships change,ontology structure changes"
-dataset: "increment_when[3]: new release,regenerated dataset,significant knowledge expansion"
-schema: "increment_when[3]: metadata changes,EKR changes,TOON syntax changes"
+objects: "\"\\\"Every object contains\\\"[5]: object_version,compiler_version,ontology_version,schema_version,release_version\""
+compiler: "\"tracks[4]: compiler architecture,compiler passes,execution engine,pipeline\""
+ontology: "\"increment_when[4]: taxonomy changes,capability changes,relationships change,ontology structure changes\""
+dataset: "\"increment_when[3]: new release,regenerated dataset,significant knowledge expansion\""
+schema: "\"increment_when[3]: metadata changes,EKR changes,TOON syntax changes\""
 release:
   format: vMAJOR.MINOR.PATCH
 compatibility:
   backward: required
   forward: preferred
   breaking_changes: major_only
-migration: "every_major_change_requires[4]: migration_documentation,compatibility_report,validation_report,upgrade_path"
-changelog: "every_release_contains[7]: summary,added,changed,fixed,removed,deprecated,migration_notes"
+migration: "\"every_major_change_requires[4]: migration_documentation,compatibility_report,validation_report,upgrade_path\""
+changelog: "\"every_release_contains[7]: summary,added,changed,fixed,removed,deprecated,migration_notes\""
 deprecation:
-  description: "stages[7]: active,→,deprecated,→,legacy,→,archived"
+  description: "\"stages[7]: active,→,deprecated,→,legacy,→,archived\""
   rule: Never delete historical knowledge.
 identifier:
   format: <Component>@<Version>
 rollback:
   permitted: true
-audit: "every_change_records[5]: author,timestamp,reason,affected_modules,validation_status"
+audit: "\"every_change_records[5]: author,timestamp,reason,affected_modules,validation_status\""
 future:
   semantic_versioning: true
   distributed_releases: true

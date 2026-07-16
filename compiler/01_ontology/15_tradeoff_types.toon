@@ -1,4 +1,4 @@
-description: "guarantees[5]: Explicit Engineering Tradeoffs,Explainable Decisions,Context-Aware Optimization,Reusable Engineering Wisdom,Production-Oriented Reasoning"
+description: "\"guarantees[5]: Explicit Engineering Tradeoffs,Explainable Decisions,Context-Aware Optimization,Reusable Engineering Wisdom,Production-Oriented Reasoning\""
 spec:
   id: tradeoff_types
   version: 1.0.0
@@ -8,7 +8,7 @@ spec:
   compiler_stage: Knowledge Representation
   description: Defines the complete ontology of engineering tradeoffs. A tradeoff represents the balancing of competing engineering objectives under a specific set of constraints. Every significant engineering decision should identify the tradeoffs that influenced the chosen solution.
 purpose: Represent tradeoffs as first-class engineering knowledge objects that explain why one solution was selected over another.
-ekr: "\"Every Engineering Knowledge Record contains\"[5]: Competing Objectives,Tradeoff Analysis,Chosen Balance,Rejected Alternatives,Expected Consequences"
+ekr: "\"\\\"Every Engineering Knowledge Record contains\\\"[5]: Competing Objectives,Tradeoff Analysis,Chosen Balance,Rejected Alternatives,Expected Consequences\""
 examples:
   Example_01:
     Decision: Use Redis Cache

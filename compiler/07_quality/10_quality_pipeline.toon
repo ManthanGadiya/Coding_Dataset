@@ -1,389 +1,40 @@
 quality_pipeline:
-
   metadata:
-
     id: QLT-010
-
     title: Quality Pipeline
-
     version: 2.0
-
     status: Stable
-
     owner: Quality Engine
-
-    depends_on:
-
-      - compiler/07_quality/01_quality_engine.toon
-      - compiler/07_quality/02_quality_metrics.toon
-      - compiler/07_quality/03_knowledge_density.toon
-      - compiler/07_quality/04_reasoning_quality.toon
-      - compiler/07_quality/05_engineering_quality.toon
-      - compiler/07_quality/06_diversity_metrics.toon
-      - compiler/07_quality/07_curriculum_quality.toon
-      - compiler/07_quality/08_graph_quality.toon
-      - compiler/07_quality/09_quality_dashboard.toon
-
-    consumed_by:
-
-      - compiler/08_validation/01_validation_engine.toon
-      - compiler/09_optimization/01_optimizer.toon
-      - compiler/10_serialization/01_manifest.toon
-
-    objective:
-
-      Coordinate all quality evaluation
-      stages into a deterministic,
-      graph-aware,
-      benchmark-driven pipeline that
-      produces production-grade dataset
-      quality assessments.
-
-
-################################################################################
-# PHILOSOPHY
-################################################################################
-
-philosophy:
-
-  quality_is_multidimensional
-
-  measure_before_decide
-
-  deterministic_execution
-
-  graph_native
-
-  benchmark_everything
-
-  continuous_quality_improvement
-
-  engineering_first
-
-  explainable_quality
-
-
-################################################################################
-# PIPELINE STAGES
-################################################################################
-
-stages:
-
-  initialize
-
-  engineering_quality
-
-  knowledge_density
-
-  reasoning_quality
-
-  diversity_analysis
-
-  curriculum_quality
-
-  graph_quality
-
-  benchmark_comparison
-
-  dashboard_generation
-
-  release_decision
-
-
-################################################################################
-# EXECUTION MODEL
-################################################################################
-
-execution:
-
-  dependency_graph
-
-  topological_scheduler
-
-  deterministic_execution
-
-  checkpointing
-
-  resumable_execution
-
-  distributed_execution
-
-  cache_aware
-
-  incremental_evaluation
-
-  parallel_safe
-
-
-################################################################################
-# INPUTS
-################################################################################
-
-inputs:
-
-  repaired_dataset
-
-  repair_reports
-
-  engineering_graph
-
-  ontology_graph
-
-  curriculum_graph
-
-  repository_graph
-
-  reasoning_graph
-
-  benchmark_suite
-
-  release_configuration
-
-
-################################################################################
-# PIPELINE STATE
-################################################################################
-
-state:
-
-  initialized
-
-  evaluating
-
-  benchmarking
-
-  aggregating
-
-  reporting
-
-  completed
-
-  failed
-
-  resumed
-
-  released
-
-
-################################################################################
-# FAILURE HANDLING
-################################################################################
-
-failure_handling:
-
-  retry
-
-  rollback
-
-  checkpoint_restore
-
-  localized_evaluation
-
-  dependency_recompute
-
-  deterministic_replay
-
-  graceful_degradation
-
-
-################################################################################
-# OPTIMIZATION
-################################################################################
-
-optimization:
-
-  incremental_execution
-
-  graph_diff_execution
-
-  cache_reuse
-
-  selective_evaluation
-
-  dependency_pruning
-
-  parallel_execution
-
-  resource_balancing
-
-
-################################################################################
-# OBSERVABILITY
-################################################################################
-
-observability:
-
-  execution_trace
-
-  evaluation_trace
-
-  benchmark_trace
-
-  stage_timings
-
-  quality_statistics
-
-  resource_usage
-
-  quality_lineage
-
-  deterministic_hashes
-
-
-################################################################################
-# RELEASE GATES
-################################################################################
-
-release_gates:
-
-  engineering_threshold
-
-  reasoning_threshold
-
-  curriculum_threshold
-
-  graph_threshold
-
-  diversity_threshold
-
-  benchmark_threshold
-
-  determinism_threshold
-
-  reproducibility_threshold
-
-
-################################################################################
-# CONSTRAINTS
-################################################################################
-
-constraints:
-
-  deterministic
-
-  reproducible
-
-  explainable
-
-  benchmarkable
-
-  graph_consistent
-
-  curriculum_safe
-
-  engineering_first
-
-
-################################################################################
-# VALIDATION
-################################################################################
-
-validation:
-
-  pipeline_validation
-
-  benchmark_validation
-
-  stage_validation
-
-  consistency_validation
-
-  determinism_validation
-
-  release_validation
-
-
-################################################################################
-# RANDOMIZATION
-################################################################################
-
+    depends_on[9]: "- compiler/07_quality/01_quality_engine.toon","- compiler/07_quality/02_quality_metrics.toon","- compiler/07_quality/03_knowledge_density.toon","- compiler/07_quality/04_reasoning_quality.toon","- compiler/07_quality/05_engineering_quality.toon","- compiler/07_quality/06_diversity_metrics.toon","- compiler/07_quality/07_curriculum_quality.toon","- compiler/07_quality/08_graph_quality.toon","- compiler/07_quality/09_quality_dashboard.toon"
+    consumed_by[3]: "- compiler/08_validation/01_validation_engine.toon","- compiler/09_optimization/01_optimizer.toon","- compiler/10_serialization/01_manifest.toon"
+    objective[6]: Coordinate all quality evaluation,"stages into a deterministic,","graph-aware,",benchmark-driven pipeline that,produces production-grade dataset,quality assessments.
+philosophy[8]: quality_is_multidimensional,measure_before_decide,deterministic_execution,graph_native,benchmark_everything,continuous_quality_improvement,engineering_first,explainable_quality
+stages[10]: initialize,engineering_quality,knowledge_density,reasoning_quality,diversity_analysis,curriculum_quality,graph_quality,benchmark_comparison,dashboard_generation,release_decision
+execution[9]: dependency_graph,topological_scheduler,deterministic_execution,checkpointing,resumable_execution,distributed_execution,cache_aware,incremental_evaluation,parallel_safe
+inputs[9]: repaired_dataset,repair_reports,engineering_graph,ontology_graph,curriculum_graph,repository_graph,reasoning_graph,benchmark_suite,release_configuration
+state[9]: initialized,evaluating,benchmarking,aggregating,reporting,completed,failed,resumed,released
+failure_handling[7]: retry,rollback,checkpoint_restore,localized_evaluation,dependency_recompute,deterministic_replay,graceful_degradation
+optimization[7]: incremental_execution,graph_diff_execution,cache_reuse,selective_evaluation,dependency_pruning,parallel_execution,resource_balancing
+observability[8]: execution_trace,evaluation_trace,benchmark_trace,stage_timings,quality_statistics,resource_usage,quality_lineage,deterministic_hashes
+release_gates[8]: engineering_threshold,reasoning_threshold,curriculum_threshold,graph_threshold,diversity_threshold,benchmark_threshold,determinism_threshold,reproducibility_threshold
+constraints[7]: deterministic,reproducible,explainable,benchmarkable,graph_consistent,curriculum_safe,engineering_first
+validation[6]: pipeline_validation,benchmark_validation,stage_validation,consistency_validation,determinism_validation,release_validation
 randomization:
-
-  deterministic_seed:
-
-    true
-
-  reproducible:
-
-    true
-
-
-################################################################################
-# OUTPUTS
-################################################################################
-
-outputs:
-
-  quality_manifest
-
-  release_report
-
-  benchmark_report
-
-  dashboard_bundle
-
-  execution_graph
-
-  optimization_inputs
-
-  validation_inputs
-
-  metadata
-
-
-################################################################################
-# METRICS
-################################################################################
-
+  deterministic_seed: true
+  reproducible: true
+outputs[8]: quality_manifest,release_report,benchmark_report,dashboard_bundle,execution_graph,optimization_inputs,validation_inputs,metadata
 metrics:
-
-  compute:
-
-    overall_quality
-
-    release_readiness
-
-    benchmark_score
-
-    evaluation_latency
-
-    pipeline_efficiency
-
-    quality_growth
-
-    regression_rate
-
-    determinism_score
-
-    reproducibility_score
-
-
-################################################################################
-# SUCCESS METRICS
-################################################################################
-
+  compute[9]: overall_quality,release_readiness,benchmark_score,evaluation_latency,pipeline_efficiency,quality_growth,regression_rate,determinism_score,reproducibility_score
 success_metrics:
-
   overall_quality:
-
     minimum: 0.99
-
   release_readiness:
-
     minimum: 0.99
-
   benchmark_score:
-
     minimum: 0.99
-
   determinism:
-
-    minimum: 1.00
-
+    minimum: 1.0
   reproducibility:
-
-    minimum: 1.00
-
+    minimum: 1.0
   pipeline_efficiency:
-
     minimum: 0.99

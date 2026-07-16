@@ -1,4 +1,4 @@
-description: "guarantees[5]: Universal Representation,Graph Native Identity,Consistent Metadata,Deterministic Lifecycle,Unlimited Extensibility"
+description: "\"guarantees[5]: Universal Representation,Graph Native Identity,Consistent Metadata,Deterministic Lifecycle,Unlimited Extensibility\""
 spec:
   id: entity_model
   version: 1.0.0
@@ -6,9 +6,9 @@ spec:
   priority: highest
   module: Ontology
   compiler_stage: Knowledge Representation
-  description: "\"Defines the Universal Entity Model (UEM) used throughout the TOON Dataset Compiler. Every object inside the Engineering Universe is represented as an Entity with a shared identity, lifecycle, metadata, relationships and behavioral semantics.\""
+  description: "\"\\\"Defines the Universal Entity Model (UEM) used throughout the TOON Dataset Compiler. Every object inside the Engineering Universe is represented as an Entity with a shared identity, lifecycle, metadata, relationships and behavioral semantics.\\\"\""
 purpose: Provide one universal representation for every engineering object inside TOON.
-graph: "\"Every entity has\"[5]: unique identity,explicit type,metadata,relationships,lifecycle"
+graph: "\"\\\"Every entity has\\\"[5]: unique identity,explicit type,metadata,relationships,lifecycle\""
 examples:
   Example_01:
     Entity: Repository

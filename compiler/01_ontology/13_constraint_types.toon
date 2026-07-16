@@ -1,4 +1,4 @@
-description: "guarantees[5]: Explicit Constraints,Explainable Decisions,Context-Aware Engineering,Reproducible Design Choices,Traceable Impact"
+description: "\"guarantees[5]: Explicit Constraints,Explainable Decisions,Context-Aware Engineering,Reproducible Design Choices,Traceable Impact\""
 spec:
   id: constraint_types
   version: 1.0.0
@@ -6,9 +6,9 @@ spec:
   priority: highest
   module: Ontology
   compiler_stage: Knowledge Representation
-  description: "\"Defines the complete ontology of engineering constraints. Constraints represent the limitations, requirements, obligations and environmental conditions that influence engineering decisions. Every Engineering Knowledge Record shall identify, classify and reason about applicable constraints.\""
+  description: "\"\\\"Defines the complete ontology of engineering constraints. Constraints represent the limitations, requirements, obligations and environmental conditions that influence engineering decisions. Every Engineering Knowledge Record shall identify, classify and reason about applicable constraints.\\\"\""
 purpose: Represent engineering constraints as first-class knowledge objects that shape every engineering decision and solution.
-ekr: "\"Every Engineering Knowledge Record includes\"[4]: Active Constraints,Constraint Priority,Constraint Severity,Constraint Impact"
+ekr: "\"\\\"Every Engineering Knowledge Record includes\\\"[4]: Active Constraints,Constraint Priority,Constraint Severity,Constraint Impact\""
 examples:
   Example_01:
     Constraint: Memory Budget

@@ -1,3 +1,4 @@
+description: "metrics[6]: Learning Velocity,Concept Retention,Prerequisite Coverage,Mastery Rate,Transfer Success,Curriculum Completeness success[6]: Every learner,receives concepts,in an order that,\"maximizes understanding,\",retention and,engineering capability. guarantees[5]: Structured Progression,Stable Foundations,Progressive Complexity,Knowledge Transfer,Engineering Readiness"
 spec:
   id: learning_order
   version: 1.0.0
@@ -6,27 +7,8 @@ spec:
   module: Curriculum
   compiler_stage: Learning Sequence
   description: >
-purpose[5]: organize,sequence,prioritize,scaffold,engineering education.
-philosophy[9]: Learning is cumulative.,New knowledge,builds upon,existing knowledge.,Concepts should appear,only after prerequisites,are mastered.,Practice strengthens,understanding.
-pipeline[11]: Foundation,→,Core Concepts,→,Guided Practice,→,Independent Reasoning,→,Integration,→,Mastery
-stages[8]: Awareness,Recognition,Understanding,Application,Analysis,Synthesis,Evaluation,Mastery
-principles[7]: Concrete Before Abstract,Simple Before Complex,Local Before Global,Single Concept Before Combination,Theory Before Optimization,Reasoning Before Memorization,Fundamentals Before Frameworks
-levels[6]: Beginner,Elementary,Intermediate,Advanced,Expert,Principal
-foundation[6]: Variables,Data Types,Control Flow,Functions,Memory Basics,Basic Algorithms
-core[6]: Data Structures,Algorithms,Software Design,Debugging,Testing,Version Control
-advanced[6]: Operating Systems,Networking,Databases,Distributed Systems,Security,Compiler Design
-expert[6]: Architecture,Performance Engineering,Reliability,AI Engineering,Autonomous Systems,Large Scale Systems
-prerequisites[15]: Variables,→,Functions,Functions,→,Recursion,Arrays,→,Dynamic Programming,Threads,→,Concurrency,Networking,→,Distributed Systems
-introduction[4]: Introduce One Major Idea,Reinforce Immediately,Connect To Prior Knowledge,Demonstrate With Examples
-reinforcement[4]: Immediate Practice,Delayed Review,Cross Domain Application,Progressive Difficulty
-mastery[5]: Explain,Implement,Debug,Optimize,Teach
-transfer[4]: Same Domain,Similar Domain,Different Domain,Real Project
-failure[4]: Detect Weak Concepts,Revisit Prerequisites,Generate Simpler Examples,Increase Practice
-memory[4]: Track Learned Concepts,Track Weak Concepts,Track Mastered Skills,Track Forgotten Concepts
 ekr:
   description: Every Engineering Knowledge Record
-  stores[5]: Required Knowledge,Learning Stage,Difficulty,Prerequisites,Mastery Evidence
-validation[8]: Every concept,has prerequisites.,Every lesson,has objectives.,Every objective,is measurable.,Learning order,is acyclic.
 examples:
   Example_01:
     Learn: Arrays
@@ -40,9 +22,6 @@ examples:
   Example_04:
     Learn: Profiling
     Before: Performance Optimization
-metrics[6]: Learning Velocity,Concept Retention,Prerequisite Coverage,Mastery Rate,Transfer Success,Curriculum Completeness
-success[6]: Every learner,receives concepts,in an order that,"maximizes understanding,",retention and,engineering capability.
-guarantees[5]: Structured Progression,Stable Foundations,Progressive Complexity,Knowledge Transfer,Engineering Readiness
 future:
   adaptive_learning_paths: true
   personalized_curriculum: true

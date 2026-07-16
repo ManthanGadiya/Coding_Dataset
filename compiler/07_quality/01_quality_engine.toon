@@ -1,370 +1,39 @@
 quality_engine:
-
   metadata:
-
     id: QLT-001
-
     title: Quality Engine
-
     version: 2.0
-
     status: Stable
-
     owner: Quality Engine
-
-    depends_on:
-
-      - compiler/06_repair/15_repair_metrics.toon
-      - compiler/03_curriculum/10_master_curriculum.toon
-      - compiler/01_ontology/20_ontology_rules.toon
-
-    consumed_by:
-
-      - compiler/07_quality/02_quality_metrics.toon
-      - compiler/07_quality/03_knowledge_density.toon
-      - compiler/07_quality/04_reasoning_quality.toon
-      - compiler/08_validation/01_validation_engine.toon
-
-    objective:
-
-      Evaluate every repaired engineering sample
-      using deterministic, graph-aware,
-      curriculum-aware, engineering-aware,
-      and reasoning-aware quality analysis
-      before validation and optimization.
-
-
-################################################################################
-# PHILOSOPHY
-################################################################################
-
-philosophy:
-
-  quality_before_quantity
-
-  engineering_over_completion
-
-  reasoning_over_prediction
-
-  curriculum_over_randomness
-
-  graph_native_quality
-
-  deterministic_evaluation
-
-  measurable_quality
-
-  continuous_improvement
-
-
-################################################################################
-# INPUTS
-################################################################################
-
-inputs:
-
-  repaired_dataset
-
-  repair_metrics
-
-  engineering_graph
-
-  ontology_graph
-
-  curriculum_graph
-
-  repository_graph
-
-  reasoning_graph
-
-  architecture_graph
-
-  engineering_story
-
-  engineering_memory
-
-  validation_history
-
-
-################################################################################
-# QUALITY DIMENSIONS
-################################################################################
-
-dimensions:
-
-  correctness
-
-  engineering
-
-  reasoning
-
-  architecture
-
-  maintainability
-
-  scalability
-
-  observability
-
-  security
-
-  documentation
-
-  curriculum
-
-  diversity
-
-  confidence
-
-  graph_integrity
-
-  production_realism
-
-  educational_value
-
-
-################################################################################
-# QUALITY CHECKS
-################################################################################
-
-checks:
-
-  engineering_consistency
-
-  repository_consistency
-
-  ontology_consistency
-
-  curriculum_consistency
-
-  reasoning_consistency
-
-  graph_consistency
-
-  architecture_consistency
-
-  documentation_consistency
-
-  deployment_consistency
-
-  operational_readiness
-
-
-################################################################################
-# QUALITY ANALYSIS
-################################################################################
-
-analysis:
-
-  graph_analysis
-
-  semantic_analysis
-
-  engineering_analysis
-
-  curriculum_analysis
-
-  reasoning_analysis
-
-  statistical_analysis
-
-  benchmark_analysis
-
-  trend_analysis
-
-  longitudinal_analysis
-
-
-################################################################################
-# QUALITY SCORING
-################################################################################
-
-scoring:
-
-  weighted_score
-
-  capability_score
-
-  engineering_score
-
-  reasoning_score
-
-  architecture_score
-
-  curriculum_score
-
-  production_score
-
-  confidence_score
-
-  overall_quality
-
-
-################################################################################
-# QUALITY TIERS
-################################################################################
-
-tiers:
-
-  platinum
-
-  gold
-
-  silver
-
-  bronze
-
-  rejected
-
-
-################################################################################
-# DECISION POLICY
-################################################################################
-
-decisions:
-
-  accept
-
-  repair_again
-
-  regenerate
-
-  manual_review
-
-  reject
-
-
-################################################################################
-# CONSTRAINTS
-################################################################################
-
-constraints:
-
-  deterministic
-
-  reproducible
-
-  explainable
-
-  benchmarkable
-
-  graph_consistent
-
-  curriculum_safe
-
-  engineering_first
-
-
-################################################################################
-# VALIDATION
-################################################################################
-
-validation:
-
-  scoring_validation
-
-  benchmark_validation
-
-  consistency_validation
-
-  statistical_validation
-
-  determinism_validation
-
-  report_validation
-
-
-################################################################################
-# RANDOMIZATION
-################################################################################
-
+    depends_on[3]: "- compiler/06_repair/15_repair_metrics.toon","- compiler/03_curriculum/10_master_curriculum.toon","- compiler/01_ontology/20_ontology_rules.toon"
+    consumed_by[4]: "- compiler/07_quality/02_quality_metrics.toon","- compiler/07_quality/03_knowledge_density.toon","- compiler/07_quality/04_reasoning_quality.toon","- compiler/08_validation/01_validation_engine.toon"
+    objective[5]: Evaluate every repaired engineering sample,"using deterministic, graph-aware,","curriculum-aware, engineering-aware,",and reasoning-aware quality analysis,before validation and optimization.
+philosophy[8]: quality_before_quantity,engineering_over_completion,reasoning_over_prediction,curriculum_over_randomness,graph_native_quality,deterministic_evaluation,measurable_quality,continuous_improvement
+inputs[11]: repaired_dataset,repair_metrics,engineering_graph,ontology_graph,curriculum_graph,repository_graph,reasoning_graph,architecture_graph,engineering_story,engineering_memory,validation_history
+dimensions[15]: correctness,engineering,reasoning,architecture,maintainability,scalability,observability,security,documentation,curriculum,diversity,confidence,graph_integrity,production_realism,educational_value
+checks[10]: engineering_consistency,repository_consistency,ontology_consistency,curriculum_consistency,reasoning_consistency,graph_consistency,architecture_consistency,documentation_consistency,deployment_consistency,operational_readiness
+analysis[9]: graph_analysis,semantic_analysis,engineering_analysis,curriculum_analysis,reasoning_analysis,statistical_analysis,benchmark_analysis,trend_analysis,longitudinal_analysis
+scoring[9]: weighted_score,capability_score,engineering_score,reasoning_score,architecture_score,curriculum_score,production_score,confidence_score,overall_quality
+tiers[5]: platinum,gold,silver,bronze,rejected
+decisions[5]: accept,repair_again,regenerate,manual_review,reject
+constraints[7]: deterministic,reproducible,explainable,benchmarkable,graph_consistent,curriculum_safe,engineering_first
+validation[6]: scoring_validation,benchmark_validation,consistency_validation,statistical_validation,determinism_validation,report_validation
 randomization:
-
-  deterministic_seed:
-
-    true
-
-  reproducible:
-
-    true
-
-
-################################################################################
-# OUTPUTS
-################################################################################
-
-outputs:
-
-  quality_report
-
-  quality_score
-
-  quality_tier
-
-  improvement_requests
-
-  benchmark_report
-
-  acceptance_decision
-
-  optimization_inputs
-
-  metadata
-
-
-################################################################################
-# METRICS
-################################################################################
-
+  deterministic_seed: true
+  reproducible: true
+outputs[8]: quality_report,quality_score,quality_tier,improvement_requests,benchmark_report,acceptance_decision,optimization_inputs,metadata
 metrics:
-
-  compute:
-
-    overall_quality
-
-    engineering_quality
-
-    reasoning_quality
-
-    educational_value
-
-    curriculum_quality
-
-    graph_quality
-
-    production_similarity
-
-    acceptance_rate
-
-    improvement_potential
-
-
-################################################################################
-# SUCCESS METRICS
-################################################################################
-
+  compute[9]: overall_quality,engineering_quality,reasoning_quality,educational_value,curriculum_quality,graph_quality,production_similarity,acceptance_rate,improvement_potential
 success_metrics:
-
   determinism:
-
-    minimum: 1.00
-
+    minimum: 1.0
   reproducibility:
-
-    minimum: 1.00
-
+    minimum: 1.0
   engineering_quality:
-
     minimum: 0.99
-
   reasoning_quality:
-
     minimum: 0.99
-
   curriculum_quality:
-
     minimum: 0.99
-
   graph_quality:
-
     minimum: 0.99

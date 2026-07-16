@@ -1,4 +1,4 @@
-description: "guarantees[6]: No engineering knowledge is lost.,Every transformation is documented.,Every release is reproducible.,Every object is versioned.,Every update is auditable.,Every historical version remains accessible."
+description: "\"guarantees[6]: No engineering knowledge is lost.,Every transformation is documented.,Every release is reproducible.,Every object is versioned.,Every update is auditable.,Every historical version remains accessible.\""
 spec:
   id: dataset_lifecycle
   version: 1.0.0
@@ -6,11 +6,11 @@ spec:
   priority: critical
   module: Core
   compiler_stage: Foundation
-  description: "\"Defines the complete lifecycle of every engineering knowledge object managed by the TOON Dataset Compiler. Every object—from raw knowledge to released dataset—must pass through a deterministic, traceable, reproducible lifecycle. No object may bypass any mandatory stage.\""
-purpose: "\"Define how engineering knowledge is acquired, transformed, validated, maintained, evolved, versioned, archived and released throughout its entire existence.\""
+  description: "\"\\\"Defines the complete lifecycle of every engineering knowledge object managed by the TOON Dataset Compiler. Every object—from raw knowledge to released dataset—must pass through a deterministic, traceable, reproducible lifecycle. No object may bypass any mandatory stage.\\\"\""
+purpose: "\"\\\"Define how engineering knowledge is acquired, transformed, validated, maintained, evolved, versioned, archived and released throughout its entire existence.\\\"\""
 stages:
   Stage_00:
-    description: "inputs[7]: books,papers,documentation,RFCs,repositories,incidents,production systems"
+    description: "\"inputs[7]: books,papers,documentation,RFCs,repositories,incidents,production systems\""
     name: Discovery
     purpose: Identify engineering knowledge sources.
     outputs: candidate_sources
@@ -36,7 +36,7 @@ stages:
     outputs: knowledge_graph
   Stage_06:
     name: Cognition Enrichment
-    purpose: "\"Attach engineering reasoning, assumptions and tradeoffs.\""
+    purpose: "\"\\\"Attach engineering reasoning, assumptions and tradeoffs.\\\"\""
     outputs: reasoning_graph
   Stage_07:
     name: World Integration
@@ -90,21 +90,19 @@ stages:
     name: Evolution
     purpose: Update knowledge using new engineering information.
     outputs: next_generation_record
-versioning: "every_record[7]: unique_identifier,semantic_version,compiler_version,ontology_version,schema_version,generation_timestamp,modification_history"
-metadata: "preserve[7]: authorship,provenance,timestamps,compiler_version,source_reference,dependencies,quality_scores"
-updates[2]: "allowed[4]: repair,quality_improvement,ontology_expansion,metadata_updates","forbidden[3]: silent_modification,undocumented_changes,breaking_history"
-archive: "preserve[4]: all_versions,previous_graphs,deprecated_records,migration_history"
-deprecation[2]: "conditions[4]: obsolete_information,duplicated_knowledge,ontology_replacement,invalid_information","policy[3]: Never delete.,Mark deprecated.,Preserve history."
-regeneration: "triggers[5]: ontology_changes,compiler_updates,validation_failures,quality_improvements,reasoning_improvements"
+versioning: "\"every_record[7]: unique_identifier,semantic_version,compiler_version,ontology_version,schema_version,generation_timestamp,modification_history\""
+metadata: "\"preserve[7]: authorship,provenance,timestamps,compiler_version,source_reference,dependencies,quality_scores\""
+archive: "\"preserve[4]: all_versions,previous_graphs,deprecated_records,migration_history\""
+regeneration: "\"triggers[5]: ontology_changes,compiler_updates,validation_failures,quality_improvements,reasoning_improvements\""
 failure:
   parser: retry
   ontology: repair
   validation: reject
   optimization: retry
   serialization: regenerate
-gates: "\"Every stage must\"[5]: validate_inputs,validate_outputs,preserve_metadata,preserve_traceability,emit_metrics"
-audit: "every_record_must_store[7]: source,compiler_version,ontology_version,lifecycle_stage,validation_history,repair_history,optimization_history"
-success: "\"Every engineering object is\"[6]: traceable,reproducible,versioned,explainable,validated,evolvable"
+gates: "\"\\\"Every stage must\\\"[5]: validate_inputs,validate_outputs,preserve_metadata,preserve_traceability,emit_metrics\""
+audit: "\"every_record_must_store[7]: source,compiler_version,ontology_version,lifecycle_stage,validation_history,repair_history,optimization_history\""
+success: "\"\\\"Every engineering object is\\\"[6]: traceable,reproducible,versioned,explainable,validated,evolvable\""
 future:
   incremental_updates: true
   continuous_compilation: true

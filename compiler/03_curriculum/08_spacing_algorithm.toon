@@ -1,13 +1,13 @@
-description: "concept_states[7]: unseen,introduced,practiced,reinforced,integrated,mastered,maintained"
+description: "\"concept_states[7]: unseen,introduced,practiced,reinforced,integrated,mastered,maintained\""
 spacing_algorithm:
   metadata:
-    description: "depends_on[3]: compiler/03_curriculum/05_prerequisite_graph.toon,compiler/03_curriculum/06_sampling_strategy.toon,compiler/03_curriculum/07_dataset_balancing.toon consumed_by[4]: compiler/03_curriculum/09_curriculum_graph.toon,compiler/03_curriculum/10_master_curriculum.toon,compiler/05_generation/19_dataset_builder.toon,compiler/09_optimization/07_curriculum_optimizer.toon"
+    description: "\"depends_on[3]: compiler/03_curriculum/05_prerequisite_graph.toon,compiler/03_curriculum/06_sampling_strategy.toon,compiler/03_curriculum/07_dataset_balancing.toon consumed_by[4]: compiler/03_curriculum/09_curriculum_graph.toon,compiler/03_curriculum/10_master_curriculum.toon,compiler/05_generation/19_dataset_builder.toon,compiler/09_optimization/07_curriculum_optimizer.toon\""
     id: CURR-008
     title: Spacing Algorithm
     version: 1.0
     status: Stable
     owner: Curriculum Engine
-    objective: "\"Schedule concept reoccurrence to maximize long-term retention, transfer learning, reasoning stability, and engineering intuition.\""
+    objective: "\"\\\"Schedule concept reoccurrence to maximize long-term retention, transfer learning, reasoning stability, and engineering intuition.\\\"\""
 review_schedule:
   first_review:
     after_examples: 5
@@ -31,22 +31,21 @@ mastery_policy:
   forgotten:
     immediate_reinforcement: true
 interleaving:
-  description: "preferred_mix[5]: Algorithms + Debugging,Backend + Databases,Architecture + Testing,AI + Production,Agents + Reflection"
+  description: "\"preferred_mix[5]: Algorithms + Debugging,Backend + Databases,Architecture + Testing,AI + Production,Agents + Reflection\""
   enabled: true
   minimum_domains: 2
   maximum_same_domain_streak: 3
-context_variation[2]: "vary[8]: programming_language,framework,repository,company,architecture,operating_system,project_size,engineer_role","preserve[1]: underlying_concept"
 prerequisite_refresh:
   enabled: true
   before_new_domain: true
   before_higher_difficulty: true
   before_long_horizon_tasks: true
-failure_recovery: "on_repeated_failure[5]: revisit_prerequisites,reduce_difficulty,increase_spacing_density,generate_new_examples,vary_context"
+failure_recovery: "\"on_repeated_failure[5]: revisit_prerequisites,reduce_difficulty,increase_spacing_density,generate_new_examples,vary_context\""
 long_horizon:
-  description: "revisit[8]: architecture_patterns,debugging_patterns,engineering_tradeoffs,security,testing,production_incidents,optimization,decision_records"
+  description: "\"revisit[8]: architecture_patterns,debugging_patterns,engineering_tradeoffs,security,testing,production_incidents,optimization,decision_records\""
   minimum_gap: 500_examples
 forgetting:
-  description: "monitor[4]: confidence,success_rate,reasoning_quality,retrieval_accuracy"
+  description: "\"monitor[4]: confidence,success_rate,reasoning_quality,retrieval_accuracy\""
   trigger_refresh_if:
     confidence_drop: 0.15
     success_drop: 0.1
@@ -56,8 +55,8 @@ episodic:
   revisit_tradeoffs: true
   revisit_failures: true
   revisit_design_decisions: true
-validation: "reject_if[6]: excessive_repetition,concept_starvation,prerequisite_decay,spacing_violation,curriculum_break,reinforcement_gap"
-metrics: "measure[8]: retention_rate,retrieval_accuracy,reinforcement_density,prerequisite_health,transfer_efficiency,spacing_efficiency,catastrophic_forgetting,reasoning_stability"
+validation: "\"reject_if[6]: excessive_repetition,concept_starvation,prerequisite_decay,spacing_violation,curriculum_break,reinforcement_gap\""
+metrics: "\"measure[8]: retention_rate,retrieval_accuracy,reinforcement_density,prerequisite_health,transfer_efficiency,spacing_efficiency,catastrophic_forgetting,reasoning_stability\""
 success_metrics:
   retention_rate:
     minimum: 0.95

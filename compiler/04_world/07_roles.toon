@@ -1,35 +1,11 @@
-roles[18]: intern,junior_engineer,software_engineer,senior_engineer,staff_engineer,principal_engineer,distinguished_engineer,tech_lead,engineering_manager,architect,sre,devops_engineer,security_engineer,qa_engineer,product_manager,engineering_director,vp_engineering,cto
-principles[8]: "- responsibility_driven","- ownership_based","- authority_defined","- collaboration_first","- competency_aligned","- evolving","- reproducible","- realistic"
-responsibilities:
-  intern[4]: "- learn","- implement_small_tasks","- write_tests","- receive_reviews"
-  junior_engineer[4]: "- implement_features","- fix_bugs","- write_tests","- improve_documentation"
-  software_engineer[4]: "- own_features","- review_code","- optimize_modules","- collaborate_cross_team"
-  senior_engineer[4]: "- design_systems","- mentor_engineers","- architecture_reviews","- incident_response"
-  staff_engineer[3]: "- cross_team_architecture","- technical_strategy","- dependency_management"
-  principal_engineer[3]: "- organization_architecture","- technology_direction","- engineering_standards"
-  architect[3]: "- architecture_design","- architecture_reviews","- technology_selection"
-  tech_lead[4]: "- sprint_planning","- technical_decisions","- code_reviews","- unblock_team"
-  engineering_manager[4]: "- planning","- hiring","- performance","- roadmap_execution"
-  sre[4]: "- reliability","- monitoring","- automation","- incident_management"
-  security_engineer[4]: "- threat_modeling","- security_reviews","- compliance","- vulnerability_response"
-  qa_engineer[3]: "- testing_strategy","- automation","- release_validation"
-  product_manager[3]: "- requirements","- prioritization","- stakeholder_alignment"
-  cto[3]: "- engineering_vision","- organization_strategy","- technology_investment"
-authority[10]: architecture,hiring,releases,deployments,infrastructure,roadmap,security,production_incidents,technical_debt,dependency_selection
-ownership[10]: features,services,repositories,infrastructure,documentation,monitoring,deployment,customer_issues,architecture,technical_debt
-collaboration:
-  participates_in[8]: planning,standups,design_reviews,code_reviews,architecture_reviews,retrospectives,incident_reviews,release_planning
-  communicates_via[7]: pull_requests,issue_tracker,design_documents,architecture_records,chat,meetings,runbooks
+description: "authority[10]: architecture,hiring,releases,deployments,infrastructure,roadmap,security,production_incidents,technical_debt,dependency_selection ownership[10]: features,services,repositories,infrastructure,documentation,monitoring,deployment,customer_issues,architecture,technical_debt"
+responsibilities[14]: "intern[4]: \"- learn\",\"- implement_small_tasks\",\"- write_tests\",\"- receive_reviews\"","junior_engineer[4]: \"- implement_features\",\"- fix_bugs\",\"- write_tests\",\"- improve_documentation\"","software_engineer[4]: \"- own_features\",\"- review_code\",\"- optimize_modules\",\"- collaborate_cross_team\"","senior_engineer[4]: \"- design_systems\",\"- mentor_engineers\",\"- architecture_reviews\",\"- incident_response\"","staff_engineer[3]: \"- cross_team_architecture\",\"- technical_strategy\",\"- dependency_management\"","principal_engineer[3]: \"- organization_architecture\",\"- technology_direction\",\"- engineering_standards\"","architect[3]: \"- architecture_design\",\"- architecture_reviews\",\"- technology_selection\"","tech_lead[4]: \"- sprint_planning\",\"- technical_decisions\",\"- code_reviews\",\"- unblock_team\"","engineering_manager[4]: \"- planning\",\"- hiring\",\"- performance\",\"- roadmap_execution\"","sre[4]: \"- reliability\",\"- monitoring\",\"- automation\",\"- incident_management\"","security_engineer[4]: \"- threat_modeling\",\"- security_reviews\",\"- compliance\",\"- vulnerability_response\"","qa_engineer[3]: \"- testing_strategy\",\"- automation\",\"- release_validation\"","product_manager[3]: \"- requirements\",\"- prioritization\",\"- stakeholder_alignment\"","cto[3]: \"- engineering_vision\",\"- organization_strategy\",\"- technology_investment\""
+collaboration[2]: "participates_in[8]: planning,standups,design_reviews,code_reviews,architecture_reviews,retrospectives,incident_reviews,release_planning","communicates_via[7]: pull_requests,issue_tracker,design_documents,architecture_records,chat,meetings,runbooks"
 progression:
   description: intern -> junior_engineer -> software_engineer -> senior_engineer -> staff_engineer -> principal_engineer -> distinguished_engineer
-  leadership[6]: senior_engineer ->,tech_lead ->,engineering_manager ->,engineering_director ->,vp_engineering ->,cto
-behavior:
-  prioritize[7]: correctness,maintainability,scalability,reliability,security,business_value,customer_impact
-  evaluate[5]: tradeoffs,cost,performance,technical_debt,operational_risk
-validation:
-  reject_if[6]: undefined_role,missing_responsibilities,invalid_authority,inconsistent_progression,conflicting_ownership,impossible_decision_scope
-metrics:
-  compute[6]: ownership_clarity,authority_consistency,collaboration_density,decision_complexity,role_specialization,organizational_alignment
+behavior[2]: "prioritize[7]: correctness,maintainability,scalability,reliability,security,business_value,customer_impact","evaluate[5]: tradeoffs,cost,performance,technical_debt,operational_risk"
+validation: "reject_if[6]: undefined_role,missing_responsibilities,invalid_authority,inconsistent_progression,conflicting_ownership,impossible_decision_scope"
+metrics: "compute[6]: ownership_clarity,authority_consistency,collaboration_density,decision_complexity,role_specialization,organizational_alignment"
 success_metrics:
   role_consistency:
     minimum: 1.0

@@ -1,284 +1,34 @@
 optimizer_reports:
-
   metadata:
-
     id: OPT-010
-
     title: Optimizer Reports
-
     version: 2.0
-
     status: Stable
-
     owner: Optimization Engine
-
-    depends_on:
-
-      - compiler/09_optimization/09_release_optimizer.toon
-      - compiler/09_optimization/01_dataset_optimizer.toon
-      - compiler/09_optimization/02_token_optimizer.toon
-      - compiler/09_optimization/03_graph_optimizer.toon
-      - compiler/09_optimization/04_deduplication.toon
-      - compiler/09_optimization/05_compression.toon
-      - compiler/09_optimization/06_balancing_optimizer.toon
-      - compiler/09_optimization/07_curriculum_optimizer.toon
-      - compiler/09_optimization/08_sampling_optimizer.toon
-
-    consumed_by:
-
-      - compiler/10_serialization/09_dataset_manifest.toon
-      - compiler/10_serialization/10_export_targets.toon
-      - compiler/00_core/03_pipeline.toon
-
-    objective:
-
-      Aggregate, format, and produce all
-      optimization reports across every
-      optimization dimension including
-      token optimization, graph optimization,
-      deduplication, compression, balancing,
-      curriculum optimization, sampling
-      optimization, and release optimization.
-
-
-################################################################################
-# PHILOSOPHY
-################################################################################
-
-philosophy:
-
-  reports_complete_the_cycle
-
-  optimization_must_be_measured
-
-  every_transformation_is_traced
-
-  comparative_analysis_enables_improvement
-
-  deterministic_report_generation
-
-  multi_format_standardized
-
-  actionable_recommendations
-
-  audit_trail_preserved
-
-
-################################################################################
-# INPUTS
-################################################################################
-
-inputs:
-
-  dataset_optimizer_report
-
-  token_optimization_report
-
-  graph_optimization_report
-
-  deduplication_report
-
-  compression_report
-
-  balancing_report
-
-  curriculum_report
-
-  sampling_report
-
-  release_report
-
-  report_templates
-
-  comparison_baselines
-
-
-################################################################################
-# REPORT TYPES
-################################################################################
-
-types:
-
-  optimization_summary
-
-  per_dimension_report
-
-  comparative_analysis
-
-  efficiency_report
-
-  quality_impact_report
-
-  benchmark_comparison
-
-  release_readiness_report
-
-  audit_report
-
-
-################################################################################
-# ANALYSIS
-################################################################################
-
-analysis:
-
-  cross_dimension_analysis
-
-  efficiency_gain_aggregation
-
-  quality_impact_aggregation
-
-  benchmark_correlation
-
-  cost_benefit_analysis
-
-  regression_detection
-
-  improvement_trend_analysis
-
-
-################################################################################
-# OUTPUT FORMATS
-################################################################################
-
-formats:
-
-  toon_report
-
-  json_summary
-
-  structured_log
-
-  markdown_analysis
-
-  metric_timeseries
-
-  comparison_dashboard
-
-  audit_artifact
-
-
-################################################################################
-# CONSTRAINTS
-################################################################################
-
-constraints:
-
-  deterministic
-
-  reproducible
-
-  format_compliant
-
-  complete
-
-  auditable
-
-  cross_referenced
-
-  machine_readable
-
-
-################################################################################
-# VALIDATION
-################################################################################
-
-validation:
-
-  report_integrity_validation
-
-  cross_report_consistency
-
-  data_accuracy_validation
-
-  format_validation
-
-  determinism_validation
-
-  completeness_validation
-
-
-################################################################################
-# RANDOMIZATION
-################################################################################
-
+    depends_on[9]: "- compiler/09_optimization/09_release_optimizer.toon","- compiler/09_optimization/01_dataset_optimizer.toon","- compiler/09_optimization/02_token_optimizer.toon","- compiler/09_optimization/03_graph_optimizer.toon","- compiler/09_optimization/04_deduplication.toon","- compiler/09_optimization/05_compression.toon","- compiler/09_optimization/06_balancing_optimizer.toon","- compiler/09_optimization/07_curriculum_optimizer.toon","- compiler/09_optimization/08_sampling_optimizer.toon"
+    consumed_by[3]: "- compiler/10_serialization/09_dataset_manifest.toon","- compiler/10_serialization/10_export_targets.toon","- compiler/00_core/03_pipeline.toon"
+    objective[7]: "Aggregate, format, and produce all",optimization reports across every,optimization dimension including,"token optimization, graph optimization,","deduplication, compression, balancing,","curriculum optimization, sampling","optimization, and release optimization."
+philosophy[8]: reports_complete_the_cycle,optimization_must_be_measured,every_transformation_is_traced,comparative_analysis_enables_improvement,deterministic_report_generation,multi_format_standardized,actionable_recommendations,audit_trail_preserved
+inputs[11]: dataset_optimizer_report,token_optimization_report,graph_optimization_report,deduplication_report,compression_report,balancing_report,curriculum_report,sampling_report,release_report,report_templates,comparison_baselines
+types[8]: optimization_summary,per_dimension_report,comparative_analysis,efficiency_report,quality_impact_report,benchmark_comparison,release_readiness_report,audit_report
+analysis[7]: cross_dimension_analysis,efficiency_gain_aggregation,quality_impact_aggregation,benchmark_correlation,cost_benefit_analysis,regression_detection,improvement_trend_analysis
+formats[7]: toon_report,json_summary,structured_log,markdown_analysis,metric_timeseries,comparison_dashboard,audit_artifact
+constraints[7]: deterministic,reproducible,format_compliant,complete,auditable,cross_referenced,machine_readable
+validation[6]: report_integrity_validation,cross_report_consistency,data_accuracy_validation,format_validation,determinism_validation,completeness_validation
 randomization:
-
-  deterministic_seed:
-
-    true
-
-  reproducible:
-
-    true
-
-
-################################################################################
-# OUTPUTS
-################################################################################
-
-outputs:
-
-  optimization_report_bundle
-
-  executive_summary
-
-  per_dimension_reports
-
-  comparative_analysis
-
-  benchmark_comparison
-
-  audit_trail
-
-  serialization_inputs
-
-  metadata
-
-
-################################################################################
-# METRICS
-################################################################################
-
+  deterministic_seed: true
+  reproducible: true
+outputs[8]: optimization_report_bundle,executive_summary,per_dimension_reports,comparative_analysis,benchmark_comparison,audit_trail,serialization_inputs,metadata
 metrics:
-
-  compute:
-
-    report_completeness
-
-    cross_report_consistency
-
-    data_accuracy
-
-    format_compliance
-
-    audit_trail_completeness
-
-    report_generation_latency
-
-
-################################################################################
-# SUCCESS METRICS
-################################################################################
-
+  compute[6]: report_completeness,cross_report_consistency,data_accuracy,format_compliance,audit_trail_completeness,report_generation_latency
 success_metrics:
-
   report_completeness:
-
-    minimum: 1.00
-
+    minimum: 1.0
   cross_report_consistency:
-
-    minimum: 1.00
-
+    minimum: 1.0
   data_accuracy:
-
-    minimum: 1.00
-
+    minimum: 1.0
   format_compliance:
-
-    minimum: 1.00
-
+    minimum: 1.0
   determinism:
-
-    minimum: 1.00
+    minimum: 1.0

@@ -1,21 +1,21 @@
-description: "verification[9]: syntax,compilation,linting,formatting,architecture_rules,dependency_validation,security_checks,performance_checks,compatibility_checks outputs[6]: implementation,modified_files,dependency_changes,migration_notes,implementation_summary,validation_report"
+description: "\"verification[9]: syntax,compilation,linting,formatting,architecture_rules,dependency_validation,security_checks,performance_checks,compatibility_checks outputs[6]: implementation,modified_files,dependency_changes,migration_notes,implementation_summary,validation_report\""
 code_generator:
   metadata:
-    description: "depends_on[5]: compiler/05_generation/05_reasoning_generator.toon,compiler/05_generation/06_dialogue_generator.toon,compiler/05_generation/07_requirement_generator.toon,compiler/04_world/15_world_state.toon,compiler/01_ontology/20_master_ontology.toon consumed_by[5]: compiler/05_generation/09_bug_generator.toon,compiler/05_generation/10_test_generator.toon,compiler/05_generation/11_review_generator.toon,compiler/05_generation/12_documentation_generator.toon,compiler/05_generation/19_dataset_builder.toon"
+    description: "\"depends_on[5]: compiler/05_generation/05_reasoning_generator.toon,compiler/05_generation/06_dialogue_generator.toon,compiler/05_generation/07_requirement_generator.toon,compiler/04_world/15_world_state.toon,compiler/01_ontology/20_master_ontology.toon consumed_by[5]: compiler/05_generation/09_bug_generator.toon,compiler/05_generation/10_test_generator.toon,compiler/05_generation/11_review_generator.toon,compiler/05_generation/12_documentation_generator.toon,compiler/05_generation/19_dataset_builder.toon\""
     id: GEN-008
     title: Code Generator
     version: 2.0
     status: Stable
     owner: Generation Engine
-    objective: "\"Generate production-quality engineering artifacts that satisfy business requirements, engineering standards, repository conventions, architectural constraints, and long-term maintainability.\""
-evolution: "supports[7]: incremental_commits,pull_requests,review_feedback,refactoring,architecture_updates,technical_debt,future_extensions"
+    objective: "\"\\\"Generate production-quality engineering artifacts that satisfy business requirements, engineering standards, repository conventions, architectural constraints, and long-term maintainability.\\\"\""
+evolution: "\"supports[7]: incremental_commits,pull_requests,review_feedback,refactoring,architecture_updates,technical_debt,future_extensions\""
 randomization:
   deterministic_seed: true
   implementation_variants: enabled
   architecture_guided: true
   reproducible: true
-validation: "reject_if[7]: uncompilable,architecture_violation,dependency_cycle,security_issue,broken_api,failing_validation,curriculum_violation"
-metrics: "compute[9]: code_quality,maintainability,complexity,architecture_compliance,dependency_health,readability,correctness,extensibility,production_readiness"
+validation: "\"reject_if[7]: uncompilable,architecture_violation,dependency_cycle,security_issue,broken_api,failing_validation,curriculum_violation\""
+metrics: "\"compute[9]: code_quality,maintainability,complexity,architecture_compliance,dependency_health,readability,correctness,extensibility,production_readiness\""
 success_metrics:
   correctness:
     minimum: 0.99

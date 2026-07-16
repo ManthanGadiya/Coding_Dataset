@@ -1,20 +1,20 @@
-description: "outputs[8]: injected_bug,affected_files,reproduction_steps,expected_failure,debugging_metadata,root_cause,investigation_trace,validation_report"
+description: "\"outputs[8]: injected_bug,affected_files,reproduction_steps,expected_failure,debugging_metadata,root_cause,investigation_trace,validation_report\""
 bug_generator:
   metadata:
-    description: "depends_on[5]: compiler/05_generation/08_code_generator.toon,compiler/04_world/15_world_state.toon,compiler/01_ontology/14_failure_types.toon,compiler/02_cognition/13_error_patterns.toon,compiler/01_ontology/20_ontology_rules.toon consumed_by[4]: compiler/05_generation/10_test_generator.toon,compiler/05_generation/11_review_generator.toon,compiler/05_generation/18_failure_generator.toon,compiler/05_generation/19_dataset_builder.toon"
+    description: "\"depends_on[5]: compiler/05_generation/08_code_generator.toon,compiler/04_world/15_world_state.toon,compiler/01_ontology/14_failure_types.toon,compiler/02_cognition/13_error_patterns.toon,compiler/01_ontology/20_ontology_rules.toon consumed_by[4]: compiler/05_generation/10_test_generator.toon,compiler/05_generation/11_review_generator.toon,compiler/05_generation/18_failure_generator.toon,compiler/05_generation/19_dataset_builder.toon\""
     id: GEN-009
     title: Bug Generator
     version: 2.0
     status: Stable
     owner: Generation Engine
-    objective: "\"Generate realistic software defects that naturally emerge from engineering decisions, repository evolution, architectural tradeoffs, operational constraints, and human reasoning errors.\""
+    objective: "\"\\\"Generate realistic software defects that naturally emerge from engineering decisions, repository evolution, architectural tradeoffs, operational constraints, and human reasoning errors.\\\"\""
 randomization:
   deterministic_seed: true
   bug_location: guided
   severity_distribution: realistic
   repository_consistent: true
-validation: "reject_if[6]: impossible_failure,architecture_inconsistency,invalid_repository_state,unreproducible_bug,contradictory_logs,impossible_stacktrace"
-metrics: "compute[8]: realism,reproducibility,debugging_difficulty,engineering_plausibility,repository_consistency,root_cause_complexity,observability_quality,educational_value"
+validation: "\"reject_if[6]: impossible_failure,architecture_inconsistency,invalid_repository_state,unreproducible_bug,contradictory_logs,impossible_stacktrace\""
+metrics: "\"compute[8]: realism,reproducibility,debugging_difficulty,engineering_plausibility,repository_consistency,root_cause_complexity,observability_quality,educational_value\""
 success_metrics:
   reproducibility:
     minimum: 1.0

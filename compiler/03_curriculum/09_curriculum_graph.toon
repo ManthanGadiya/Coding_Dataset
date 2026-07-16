@@ -1,38 +1,37 @@
-description: "milestones[8]: Foundation Project,DSA Project,Backend API,Distributed System,Production Deployment,AI Application,Coding Agent,Autonomous Software Engineer"
+description: "\"milestones[8]: Foundation Project,DSA Project,Backend API,Distributed System,Production Deployment,AI Application,Coding Agent,Autonomous Software Engineer\""
 curriculum_graph:
   metadata:
-    description: "depends_on[8]: compiler/03_curriculum/01_learning_order.toon,compiler/03_curriculum/02_skill_progression.toon,compiler/03_curriculum/03_domain_progression.toon,compiler/03_curriculum/04_difficulty_progression.toon,compiler/03_curriculum/05_prerequisite_graph.toon,compiler/03_curriculum/06_sampling_strategy.toon,compiler/03_curriculum/07_dataset_balancing.toon,compiler/03_curriculum/08_spacing_algorithm.toon consumed_by[4]: compiler/03_curriculum/10_master_curriculum.toon,compiler/05_generation/19_dataset_builder.toon,compiler/08_validation/03_graph_validation.toon,compiler/09_optimization/07_curriculum_optimizer.toon"
+    description: "\"depends_on[8]: compiler/03_curriculum/01_learning_order.toon,compiler/03_curriculum/02_skill_progression.toon,compiler/03_curriculum/03_domain_progression.toon,compiler/03_curriculum/04_difficulty_progression.toon,compiler/03_curriculum/05_prerequisite_graph.toon,compiler/03_curriculum/06_sampling_strategy.toon,compiler/03_curriculum/07_dataset_balancing.toon,compiler/03_curriculum/08_spacing_algorithm.toon consumed_by[4]: compiler/03_curriculum/10_master_curriculum.toon,compiler/05_generation/19_dataset_builder.toon,compiler/08_validation/03_graph_validation.toon,compiler/09_optimization/07_curriculum_optimizer.toon\""
     id: CURR-009
     title: Curriculum Graph
     version: 1.0
     status: Stable
     owner: Curriculum Engine
-    objective: "\"Build a unified executable curriculum graph that governs progression, reinforcement, sampling, and curriculum traversal.\""
+    objective: "\"\\\"Build a unified executable curriculum graph that governs progression, reinforcement, sampling, and curriculum traversal.\\\"\""
 graph:
   type: Directed Acyclic Graph
   traversal: topological
   deterministic: true
   cyclic_edges: forbidden
 flow:
-  description: "\"Core Computer Science\": next[1]: Software Engineering \"Software Engineering\": next[2]: Backend Engineering,Frontend Engineering \"Backend Engineering\": next[3]: Databases,Networking,APIs"
-  Foundations: "next[1]: Core Computer Science"
-  Infrastructure: "next[1]: Cloud Engineering"
+  description: "\"\\\"Core Computer Science\\\": next[1]: Software Engineering \\\"Software Engineering\\\": next[2]: Backend Engineering,Frontend Engineering \\\"Backend Engineering\\\": next[3]: Databases,Networking,APIs\""
+  Foundations: "\"next[1]: Core Computer Science\""
+  Infrastructure: "\"next[1]: Cloud Engineering\""
 reinforcement:
-  description: "\"Programming Fundamentals\": revisit[3]: Debugging,Algorithms,Backend"
-  Algorithms: "revisit[2]: AI Engineering,Distributed Systems"
-  Testing: "revisit[1]: Production Engineering"
-  Security: "revisit[3]: Backend Engineering,Cloud Engineering,Production Engineering"
-  Architecture: "revisit[2]: Agent Engineering,Autonomous Engineering"
-mastery: "requires[6]: prerequisite_completion,assessment_success,reinforcement_complete,transfer_success,project_completion,reasoning_threshold"
+  description: "\"\\\"Programming Fundamentals\\\": revisit[3]: Debugging,Algorithms,Backend\""
+  Algorithms: "\"revisit[2]: AI Engineering,Distributed Systems\""
+  Testing: "\"revisit[1]: Production Engineering\""
+  Security: "\"revisit[3]: Backend Engineering,Cloud Engineering,Production Engineering\""
+  Architecture: "\"revisit[2]: Agent Engineering,Autonomous Engineering\""
+mastery: "\"requires[6]: prerequisite_completion,assessment_success,reinforcement_complete,transfer_success,project_completion,reasoning_threshold\""
 traversal:
   allow_parallel_learning: true
   maximum_parallel_domains: 2
   revisit_before_new_stage: true
   block_on_missing_prerequisites: true
   prioritize_transfer_learning: true
-optimization[2]: "minimize[3]: cognitive_load,context_switches,redundant_examples","maximize[4]: transfer_learning,retention,reasoning_growth,engineering_intuition"
-validation: "reject_if[6]: cyclic_dependency,unreachable_node,invalid_transition,skipped_prerequisite,orphan_node,disconnected_graph"
-metrics: "compute[9]: graph_depth,graph_width,traversal_cost,prerequisite_density,reinforcement_density,curriculum_efficiency,reasoning_growth_rate,transfer_score,mastery_rate"
+validation: "\"reject_if[6]: cyclic_dependency,unreachable_node,invalid_transition,skipped_prerequisite,orphan_node,disconnected_graph\""
+metrics: "\"compute[9]: graph_depth,graph_width,traversal_cost,prerequisite_density,reinforcement_density,curriculum_efficiency,reasoning_growth_rate,transfer_score,mastery_rate\""
 success_metrics:
   graph_validity:
     minimum: 1.0

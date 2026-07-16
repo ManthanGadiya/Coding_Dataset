@@ -1,355 +1,39 @@
 curriculum_repair:
-
   metadata:
-
     id: REP-008
-
     title: Curriculum Repair
-
     version: 2.0
-
     status: Stable
-
     owner: Repair Engine
-
-    depends_on:
-
-      - compiler/06_repair/07_graph_repair.toon
-      - compiler/03_curriculum/10_master_curriculum.toon
-      - compiler/03_curriculum/05_prerequisite_graph.toon
-      - compiler/03_curriculum/12_competency_matrix.toon
-
-    consumed_by:
-
-      - compiler/06_repair/09_diversity_repair.toon
-      - compiler/06_repair/14_repair_pipeline.toon
-
-    objective:
-
-      Repair curriculum sequencing, prerequisite
-      relationships, capability progression,
-      difficulty balance, and learning continuity
-      to maximize educational effectiveness.
-
-
-################################################################################
-# PHILOSOPHY
-################################################################################
-
-philosophy:
-
-  learning_is_progressive
-
-  prerequisites_before_mastery
-
-  spacing_improves_retention
-
-  diversity_prevents_overfitting
-
-  curriculum_is_a_graph
-
-  engineering_is_cumulative
-
-  competence_over_memorization
-
-  deterministic_curriculum
-
-
-################################################################################
-# INPUTS
-################################################################################
-
-inputs:
-
-  repaired_graphs
-
-  curriculum_graph
-
-  prerequisite_graph
-
-  competency_matrix
-
-  dataset_samples
-
-  capability_metadata
-
-  difficulty_metadata
-
-  learning_objectives
-
-  curriculum_statistics
-
-
-################################################################################
-# CURRICULUM FAILURES
-################################################################################
-
-repair_targets:
-
-  missing_prerequisite
-
-  prerequisite_cycle
-
-  invalid_learning_order
-
-  capability_gap
-
-  difficulty_spike
-
-  repeated_concepts
-
-  insufficient_spacing
-
-  curriculum_fragmentation
-
-  competency_imbalance
-
-  domain_imbalance
-
-  concept_isolation
-
-  objective_misalignment
-
-  excessive_redundancy
-
-  missing_review
-
-  missing_capstone
-
-
-################################################################################
-# CURRICULUM ANALYSIS
-################################################################################
-
-analysis:
-
-  prerequisite_validation
-
-  competency_analysis
-
-  capability_progression
-
-  spacing_analysis
-
-  diversity_analysis
-
-  domain_balance
-
-  difficulty_analysis
-
-  learning_path_analysis
-
-  objective_validation
-
-
-################################################################################
-# REPAIR OPERATIONS
-################################################################################
-
-operations:
-
-  reorder_samples
-
-  insert_prerequisites
-
-  adjust_difficulty
-
-  rebalance_domains
-
-  merge_redundancy
-
-  increase_spacing
-
-  reconnect_learning_paths
-
-  repair_competencies
-
-  update_curriculum_graph
-
-  regenerate_learning_sequence
-
-
-################################################################################
-# CURRICULUM DIMENSIONS
-################################################################################
-
-dimensions:
-
-  knowledge
-
-  reasoning
-
-  engineering
-
-  debugging
-
-  architecture
-
-  testing
-
-  deployment
-
-  optimization
-
-  collaboration
-
-  autonomous_agents
-
-
-################################################################################
-# LEARNING STRATEGIES
-################################################################################
-
-strategies:
-
-  spiral_learning
-
-  spaced_repetition
-
-  mastery_learning
-
-  competency_based
-
-  project_based
-
-  problem_based
-
-  retrieval_practice
-
-  interleaving
-
-
-################################################################################
-# CONSTRAINTS
-################################################################################
-
-constraints:
-
-  preserve_semantics
-
-  preserve_engineering_quality
-
-  preserve_repository_history
-
-  preserve_learning_objectives
-
-  deterministic
-
-  reproducible
-
-  prerequisite_safe
-
-
-################################################################################
-# VALIDATION
-################################################################################
-
-validation:
-
-  prerequisite_validation
-
-  competency_validation
-
-  spacing_validation
-
-  difficulty_validation
-
-  curriculum_graph_validation
-
-  objective_validation
-
-
-################################################################################
-# RANDOMIZATION
-################################################################################
-
+    depends_on[4]: "- compiler/06_repair/07_graph_repair.toon","- compiler/03_curriculum/10_master_curriculum.toon","- compiler/03_curriculum/05_prerequisite_graph.toon","- compiler/03_curriculum/12_competency_matrix.toon"
+    consumed_by[2]: "- compiler/06_repair/09_diversity_repair.toon","- compiler/06_repair/14_repair_pipeline.toon"
+    objective[4]: "Repair curriculum sequencing, prerequisite","relationships, capability progression,","difficulty balance, and learning continuity",to maximize educational effectiveness.
+philosophy[8]: learning_is_progressive,prerequisites_before_mastery,spacing_improves_retention,diversity_prevents_overfitting,curriculum_is_a_graph,engineering_is_cumulative,competence_over_memorization,deterministic_curriculum
+inputs[9]: repaired_graphs,curriculum_graph,prerequisite_graph,competency_matrix,dataset_samples,capability_metadata,difficulty_metadata,learning_objectives,curriculum_statistics
+repair_targets[15]: missing_prerequisite,prerequisite_cycle,invalid_learning_order,capability_gap,difficulty_spike,repeated_concepts,insufficient_spacing,curriculum_fragmentation,competency_imbalance,domain_imbalance,concept_isolation,objective_misalignment,excessive_redundancy,missing_review,missing_capstone
+analysis[9]: prerequisite_validation,competency_analysis,capability_progression,spacing_analysis,diversity_analysis,domain_balance,difficulty_analysis,learning_path_analysis,objective_validation
+operations[10]: reorder_samples,insert_prerequisites,adjust_difficulty,rebalance_domains,merge_redundancy,increase_spacing,reconnect_learning_paths,repair_competencies,update_curriculum_graph,regenerate_learning_sequence
+dimensions[10]: knowledge,reasoning,engineering,debugging,architecture,testing,deployment,optimization,collaboration,autonomous_agents
+strategies[8]: spiral_learning,spaced_repetition,mastery_learning,competency_based,project_based,problem_based,retrieval_practice,interleaving
+constraints[7]: preserve_semantics,preserve_engineering_quality,preserve_repository_history,preserve_learning_objectives,deterministic,reproducible,prerequisite_safe
+validation[6]: prerequisite_validation,competency_validation,spacing_validation,difficulty_validation,curriculum_graph_validation,objective_validation
 randomization:
-
-  deterministic_seed:
-
-    true
-
-  curriculum_sampling:
-
-    enabled
-
-  reproducible:
-
-    true
-
-
-################################################################################
-# OUTPUTS
-################################################################################
-
-outputs:
-
-  repaired_curriculum
-
-  curriculum_graph
-
-  competency_report
-
-  prerequisite_report
-
-  spacing_report
-
-  curriculum_diff
-
-  metadata
-
-
-################################################################################
-# METRICS
-################################################################################
-
+  deterministic_seed: true
+  curriculum_sampling: enabled
+  reproducible: true
+outputs[7]: repaired_curriculum,curriculum_graph,competency_report,prerequisite_report,spacing_report,curriculum_diff,metadata
 metrics:
-
-  compute:
-
-    curriculum_coherence
-
-    prerequisite_coverage
-
-    competency_progression
-
-    spacing_quality
-
-    difficulty_smoothness
-
-    capability_balance
-
-    educational_value
-
-    learning_efficiency
-
-
-################################################################################
-# SUCCESS METRICS
-################################################################################
-
+  compute[8]: curriculum_coherence,prerequisite_coverage,competency_progression,spacing_quality,difficulty_smoothness,capability_balance,educational_value,learning_efficiency
 success_metrics:
-
   curriculum_coherence:
-
     minimum: 0.995
-
   prerequisite_coverage:
-
-    minimum: 1.00
-
+    minimum: 1.0
   competency_progression:
-
     minimum: 0.99
-
   spacing_quality:
-
     minimum: 0.99
-
   educational_value:
-
     minimum: 0.99
-
   determinism:
-
-    minimum: 1.00
+    minimum: 1.0

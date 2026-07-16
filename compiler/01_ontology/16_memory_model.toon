@@ -1,4 +1,4 @@
-description: "success[2]: Engineering experience becomes reusable memory.,Memory accelerates future engineering decisions. guarantees[5]: Persistent Engineering Memory,Explainable Retrieval,Experience Reuse,Graph Native Storage,Lifelong Knowledge Growth"
+description: "\"success[2]: Engineering experience becomes reusable memory.,Memory accelerates future engineering decisions. guarantees[5]: Persistent Engineering Memory,Explainable Retrieval,Experience Reuse,Graph Native Storage,Lifelong Knowledge Growth\""
 spec:
   id: memory_model
   version: 1.0.0
@@ -6,10 +6,10 @@ spec:
   priority: highest
   module: Ontology
   compiler_stage: Knowledge Representation
-  description: "\"Defines the Engineering Memory Model used throughout the TOON Dataset Compiler. Memory represents accumulated engineering experience, enabling knowledge reuse, transfer learning, contextual reasoning and long-term engineering evolution. Every Engineering Knowledge Record contributes to one or more engineering memories.\""
-purpose: "\"Represent engineering memory as a persistent, structured, graph-native system that stores experiences instead of isolated facts.\""
-graph: "\"Every memory has\"[5]: Source Experience,Related Memories,Related EKRs,Related Capabilities,Related Domains"
-ekr: "\"Every Engineering Knowledge Record\"[4]: creates memory,updates memory,reinforces memory,references memory"
+  description: "\"\\\"Defines the Engineering Memory Model used throughout the TOON Dataset Compiler. Memory represents accumulated engineering experience, enabling knowledge reuse, transfer learning, contextual reasoning and long-term engineering evolution. Every Engineering Knowledge Record contributes to one or more engineering memories.\\\"\""
+purpose: "\"\\\"Represent engineering memory as a persistent, structured, graph-native system that stores experiences instead of isolated facts.\\\"\""
+graph: "\"\\\"Every memory has\\\"[5]: Source Experience,Related Memories,Related EKRs,Related Capabilities,Related Domains\""
+ekr: "\"\\\"Every Engineering Knowledge Record\\\"[4]: creates memory,updates memory,reinforces memory,references memory\""
 examples:
   Example_01:
     Experience: Memory Leak Incident

@@ -1,24 +1,23 @@
-description: "failure_conditions[8]: memorization_without_reasoning,inconsistent_decisions,weak_transfer_learning,inability_to_explain,architecture_failure,production_failure,repeated_debugging_failures,poor_tradeoff_reasoning"
+description: "\"failure_conditions[8]: memorization_without_reasoning,inconsistent_decisions,weak_transfer_learning,inability_to_explain,architecture_failure,production_failure,repeated_debugging_failures,poor_tradeoff_reasoning\""
 competency_matrix:
   metadata:
-    description: "depends_on[5]: compiler/03_curriculum/11_learning_objectives.toon,compiler/03_curriculum/10_master_curriculum.toon,compiler/02_cognition/15_cognitive_metrics.toon,compiler/01_ontology/02_capabilities.toon,compiler/01_ontology/06_difficulty_model.toon consumed_by[6]: compiler/07_quality/01_quality_engine.toon,compiler/07_quality/02_scoring_dimensions.toon,compiler/08_validation/04_reasoning_validation.toon,compiler/08_validation/09_dataset_validation.toon,compiler/08_validation/10_final_validation.toon,compiler/05_generation/19_dataset_builder.toon"
+    description: "\"depends_on[5]: compiler/03_curriculum/11_learning_objectives.toon,compiler/03_curriculum/10_master_curriculum.toon,compiler/02_cognition/15_cognitive_metrics.toon,compiler/01_ontology/02_capabilities.toon,compiler/01_ontology/06_difficulty_model.toon consumed_by[6]: compiler/07_quality/01_quality_engine.toon,compiler/07_quality/02_scoring_dimensions.toon,compiler/08_validation/04_reasoning_validation.toon,compiler/08_validation/09_dataset_validation.toon,compiler/08_validation/10_final_validation.toon,compiler/05_generation/19_dataset_builder.toon\""
     id: CURR-012
     title: Competency Matrix
     version: 1.0
     status: Stable
     owner: Curriculum Engine
-    objective: "\"Define measurable competency levels for every engineering capability to evaluate learning quality, reasoning ability, and autonomous engineering readiness.\""
-"levels[6]{level,name,description}"[6]: "0,Awareness,Recognizes concepts without practical application.","1,Understanding,Explains concepts and predicts simple behavior.","2,Practitioner,Applies concepts to solve engineering problems.","3,Advanced Engineer,Designs robust solutions and justifies tradeoffs.","4,Senior Engineer,\"Optimizes systems, mentors through reasoning, and evaluates multiple architectural alternatives.\"","5,Autonomous Engineer,\"Independently plans, builds, validates, debugs, reviews, and improves complex systems.\""
+    objective: "\"\\\"Define measurable competency levels for every engineering capability to evaluate learning quality, reasoning ability, and autonomous engineering readiness.\\\"\""
 domains:
-  programming: "competencies[5]: syntax,language_features,debugging,testing,optimization"
-  computer_science: "competencies[5]: algorithms,data_structures,complexity_analysis,graph_reasoning,dynamic_programming"
-  software_engineering: "competencies[5]: modularity,architecture,design_patterns,documentation,maintainability"
-  backend: "competencies[5]: apis,databases,authentication,scalability,concurrency"
-  production: "competencies[5]: deployment,monitoring,reliability,incident_response,observability"
-  ai_engineering: "competencies[6]: machine_learning,llm_engineering,rag,embeddings,evaluation,tool_use"
-  autonomous_engineering: "competencies[6]: planning,reflection,memory_management,self_critique,multi_agent_coordination,autonomous_debugging"
+  programming: "\"competencies[5]: syntax,language_features,debugging,testing,optimization\""
+  computer_science: "\"competencies[5]: algorithms,data_structures,complexity_analysis,graph_reasoning,dynamic_programming\""
+  software_engineering: "\"competencies[5]: modularity,architecture,design_patterns,documentation,maintainability\""
+  backend: "\"competencies[5]: apis,databases,authentication,scalability,concurrency\""
+  production: "\"competencies[5]: deployment,monitoring,reliability,incident_response,observability\""
+  ai_engineering: "\"competencies[6]: machine_learning,llm_engineering,rag,embeddings,evaluation,tool_use\""
+  autonomous_engineering: "\"competencies[6]: planning,reflection,memory_management,self_critique,multi_agent_coordination,autonomous_debugging\""
 evaluation:
-  every_competency: "measure[8]: conceptual_understanding,implementation_quality,reasoning_quality,explanation_quality,transfer_learning,production_readiness,autonomy,consistency"
+  every_competency: "\"measure[8]: conceptual_understanding,implementation_quality,reasoning_quality,explanation_quality,transfer_learning,production_readiness,autonomy,consistency\""
 proficiency:
   awareness:
     minimum_score: 0.3
@@ -32,7 +31,6 @@ proficiency:
     minimum_score: 0.93
   autonomous_engineer:
     minimum_score: 0.97
-validation[2]: "every_competency_must_be[6]: observable,measurable,reproducible,transferable,curriculum_aligned,ontology_consistent","reject_if[4]: undefined_competency,duplicate_competency,ambiguous_measurement,missing_evaluation_criteria"
 success_metrics:
   competency_coverage:
     minimum: 1.0

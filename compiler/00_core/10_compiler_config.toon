@@ -1,4 +1,4 @@
-description: "guarantees[7]: deterministic_execution,reproducible_outputs,explicit_reasoning,validated_dataset,optimized_dataset,explainable_generation,immutable_releases"
+description: "\"guarantees[7]: deterministic_execution,reproducible_outputs,explicit_reasoning,validated_dataset,optimized_dataset,explainable_generation,immutable_releases\""
 spec:
   id: compiler_config
   version: 1.0.0
@@ -6,8 +6,8 @@ spec:
   priority: critical
   module: Core
   compiler_stage: Initialization
-  description: "\"Defines the global configuration of the TOON Dataset Compiler. Every compiler execution, generation pass, validation pass, optimization pass and release process derives its behavior from this specification. This is the single source of truth for compiler runtime configuration.\""
-purpose: "\"Configure every aspect of compiler execution while maintaining deterministic, reproducible and platform-independent behavior.\""
+  description: "\"\\\"Defines the global configuration of the TOON Dataset Compiler. Every compiler execution, generation pass, validation pass, optimization pass and release process derives its behavior from this specification. This is the single source of truth for compiler runtime configuration.\\\"\""
+purpose: "\"\\\"Configure every aspect of compiler execution while maintaining deterministic, reproducible and platform-independent behavior.\\\"\""
 compiler:
   name: TOON Dataset Compiler
   codename: CAMera
@@ -18,9 +18,9 @@ compiler:
     explainable: true
     modular: true
     resumable: true
-execution: "modes[5]: development,testing,production,benchmark,research"
+execution: "\"modes[5]: development,testing,production,benchmark,research\""
 pipeline:
-  description: "execution[4]: sequential,parallel,distributed,incremental"
+  description: "\"execution[4]: sequential,parallel,distributed,incremental\""
   default: incremental
 passes:
   ingestion:

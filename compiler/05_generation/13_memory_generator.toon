@@ -1,19 +1,19 @@
-description: "outputs[6]: memory_records,knowledge_graph_updates,retrieval_index,repository_memory,historical_summary,validation_report"
+description: "\"outputs[6]: memory_records,knowledge_graph_updates,retrieval_index,repository_memory,historical_summary,validation_report\""
 memory_generator:
   metadata:
-    description: "depends_on[7]: compiler/05_generation/08_code_generator.toon,compiler/05_generation/09_bug_generator.toon,compiler/05_generation/10_test_generator.toon,compiler/05_generation/11_review_generator.toon,compiler/05_generation/12_documentation_generator.toon,compiler/01_ontology/16_memory_model.toon,compiler/04_world/15_world_state.toon consumed_by[3]: compiler/05_generation/14_artifact_generator.toon,compiler/05_generation/15_scenario_generator.toon,compiler/05_generation/19_dataset_builder.toon"
+    description: "\"depends_on[7]: compiler/05_generation/08_code_generator.toon,compiler/05_generation/09_bug_generator.toon,compiler/05_generation/10_test_generator.toon,compiler/05_generation/11_review_generator.toon,compiler/05_generation/12_documentation_generator.toon,compiler/01_ontology/16_memory_model.toon,compiler/04_world/15_world_state.toon consumed_by[3]: compiler/05_generation/14_artifact_generator.toon,compiler/05_generation/15_scenario_generator.toon,compiler/05_generation/19_dataset_builder.toon\""
     id: GEN-013
     title: Memory Generator
     version: 2.0
     status: Stable
     owner: Generation Engine
-    objective: "\"Generate persistent engineering memories that allow future reasoning, planning, debugging, architecture, and implementation decisions to remain historically consistent across repository evolution.\""
+    objective: "\"\\\"Generate persistent engineering memories that allow future reasoning, planning, debugging, architecture, and implementation decisions to remain historically consistent across repository evolution.\\\"\""
 randomization:
   deterministic_seed: true
   memory_sampling: adaptive
   historical_depth: variable
-validation: "reject_if[5]: contradictory_memory,impossible_timeline,broken_references,duplicate_history,missing_dependencies"
-metrics: "compute[6]: retrieval_accuracy,historical_consistency,compression_efficiency,causal_integrity,reasoning_value,long_term_usefulness"
+validation: "\"reject_if[5]: contradictory_memory,impossible_timeline,broken_references,duplicate_history,missing_dependencies\""
+metrics: "\"compute[6]: retrieval_accuracy,historical_consistency,compression_efficiency,causal_integrity,reasoning_value,long_term_usefulness\""
 success_metrics:
   historical_consistency:
     minimum: 1.0

@@ -1,4 +1,4 @@
-description: "guarantees[6]: Every compiler object has one identity.,Every object is traceable.,Every object is versioned.,Every object is reproducible.,Every object is auditable.,Every object is extensible."
+description: "\"guarantees[6]: Every compiler object has one identity.,Every object is traceable.,Every object is versioned.,Every object is reproducible.,Every object is auditable.,Every object is extensible.\""
 spec:
   id: metadata_spec
   version: 1.0.0
@@ -6,7 +6,7 @@ spec:
   priority: critical
   module: Core
   compiler_stage: Foundation
-  description: "\"Defines the canonical metadata specification for every object generated, processed, validated or released by the TOON Dataset Compiler. Every compiler object must implement this specification. Metadata guarantees identity, traceability, reproducibility, provenance and lifecycle management across the entire compiler.\""
+  description: "\"\\\"Defines the canonical metadata specification for every object generated, processed, validated or released by the TOON Dataset Compiler. Every compiler object must implement this specification. Metadata guarantees identity, traceability, reproducibility, provenance and lifecycle management across the entire compiler.\\\"\""
 purpose: Establish one universal metadata schema used by every compiler object regardless of type.
 metadata:
   identity:
@@ -21,10 +21,9 @@ metadata:
       required: true
     short_name:
       optional: true
-updates[2]: "mutable[6]: quality,lifecycle,optimization,validation,repair,tags","immutable[4]: id,uuid,provenance,creation_timestamp"
 identifier:
   format: <TYPE>-<DOMAIN>-<UUID>
-traceability: "\"Every object must trace back to\"[6]: Original Source,Compiler Pass,Ontology Node,Generator,Validation Report,Release Version"
+traceability: "\"\\\"Every object must trace back to\\\"[6]: Original Source,Compiler Pass,Ontology Node,Generator,Validation Report,Release Version\""
 future:
   backward_compatible: true
   schema_evolution: true

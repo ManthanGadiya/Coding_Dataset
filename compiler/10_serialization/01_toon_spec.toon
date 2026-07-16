@@ -1,301 +1,35 @@
 toon_spec:
-
   metadata:
-
     id: SER-001
-
     title: TOON Specification
-
     version: 2.0
-
     status: Stable
-
     owner: Serialization Engine
-
-    depends_on:
-
-      - compiler/08_validation/10_final_validation.toon
-      - compiler/00_core/08_metadata_spec.toon
-      - compiler/01_ontology/18_metadata_model.toon
-
-    consumed_by:
-
-      - compiler/10_serialization/02_toon_compiler.toon
-      - compiler/10_serialization/03_schema_mapper.toon
-      - compiler/10_serialization/10_export_targets.toon
-
-    objective:
-
-      Define the canonical TOON specification
-      including syntax, grammar, type system,
-      schema rules, serialization format,
-      versioning conventions, and compatibility
-      guarantees for the entire dataset compiler.
-
-
-################################################################################
-# PHILOSOPHY
-################################################################################
-
-philosophy:
-
-  spec_is_the_contract
-
-  format_follows_function
-
-  human_readable_by_default
-
-  machine_parseable_always
-
-  deterministic_serialization
-
-  versioned_evolution
-
-  backward_compatible_changes
-
-  self_describing_format
-
-
-################################################################################
-# INPUTS
-################################################################################
-
-inputs:
-
-  metadata_specification
-
-  ontology_definitions
-
-  serialization_requirements
-
-  format_constraints
-
-  versioning_policy
-
-  compatibility_requirements
-
-  export_target_definitions
-
-
-################################################################################
-# SPECIFICATION DIMENSIONS
-################################################################################
-
-dimensions:
-
-  syntax_grammar
-
-  type_system
-
-  schema_language
-
-  serialization_format
-
-  versioning_scheme
-
-  compatibility_rules
-
-  extension_mechanism
-
-  self_describing_metadata
-
-
-################################################################################
-# SYNTAX RULES
-################################################################################
-
-syntax:
-
-  indentation_based_structure
-
-  key_value_delimiter
-
-  list_notation
-
-  multiline_values
-
-  comments
-
-  identifiers
-
-  references
-
-  includes
-
-  annotations
-
-
-################################################################################
-# TYPE SYSTEM
-################################################################################
-
-types:
-
-  string
-
-  integer
-
-  float
-
-  boolean
-
-  timestamp
-
-  identifier
-
-  reference
-
-  enum
-
-  list
-
-  map
-
-  structure
-
-  any
-
-
-################################################################################
-# VERSIONING
-################################################################################
-
-versioning:
-
-  major_version_breaking
-
-  minor_version_backward_compatible
-
-  patch_version_bug_fixes
-
-  spec_evolution_process
-
-  deprecation_policy
-
-  migration_guides
-
-
-################################################################################
-# CONSTRAINTS
-################################################################################
-
-constraints:
-
-  deterministic_parsing
-
-  unambiguous_syntax
-
-  complete_specification
-
-  backward_compatible
-
-  forward_compatible_when_possible
-
-  self_validating
-
-  extensible
-
-
-################################################################################
-# VALIDATION
-################################################################################
-
-validation:
-
-  syntax_validation
-
-  type_validation
-
-  schema_compliance_validation
-
-  version_compatibility_validation
-
-  spec_completeness_validation
-
-  determinism_validation
-
-
-################################################################################
-# RANDOMIZATION
-################################################################################
-
+    depends_on[3]: "- compiler/08_validation/10_final_validation.toon","- compiler/00_core/08_metadata_spec.toon","- compiler/01_ontology/18_metadata_model.toon"
+    consumed_by[3]: "- compiler/10_serialization/02_toon_compiler.toon","- compiler/10_serialization/03_schema_mapper.toon","- compiler/10_serialization/10_export_targets.toon"
+    objective[5]: Define the canonical TOON specification,"including syntax, grammar, type system,","schema rules, serialization format,","versioning conventions, and compatibility",guarantees for the entire dataset compiler.
+philosophy[8]: spec_is_the_contract,format_follows_function,human_readable_by_default,machine_parseable_always,deterministic_serialization,versioned_evolution,backward_compatible_changes,self_describing_format
+inputs[7]: metadata_specification,ontology_definitions,serialization_requirements,format_constraints,versioning_policy,compatibility_requirements,export_target_definitions
+dimensions[8]: syntax_grammar,type_system,schema_language,serialization_format,versioning_scheme,compatibility_rules,extension_mechanism,self_describing_metadata
+syntax[9]: indentation_based_structure,key_value_delimiter,list_notation,multiline_values,comments,identifiers,references,includes,annotations
+types[12]: string,integer,float,boolean,timestamp,identifier,reference,enum,list,map,structure,any
+versioning[6]: major_version_breaking,minor_version_backward_compatible,patch_version_bug_fixes,spec_evolution_process,deprecation_policy,migration_guides
+constraints[7]: deterministic_parsing,unambiguous_syntax,complete_specification,backward_compatible,forward_compatible_when_possible,self_validating,extensible
+validation[6]: syntax_validation,type_validation,schema_compliance_validation,version_compatibility_validation,spec_completeness_validation,determinism_validation
 randomization:
-
-  deterministic_seed:
-
-    true
-
-  reproducible:
-
-    true
-
-
-################################################################################
-# OUTPUTS
-################################################################################
-
-outputs:
-
-  toon_specification
-
-  syntax_definition
-
-  type_system_definition
-
-  schema_language_definition
-
-  versioning_policy
-
-  compatibility_matrix
-
-  validation_rules
-
-  metadata
-
-
-################################################################################
-# METRICS
-################################################################################
-
+  deterministic_seed: true
+  reproducible: true
+outputs[8]: toon_specification,syntax_definition,type_system_definition,schema_language_definition,versioning_policy,compatibility_matrix,validation_rules,metadata
 metrics:
-
-  compute:
-
-    spec_completeness
-
-    syntax_unambiguity
-
-    type_coverage
-
-    version_compatibility
-
-    extension_readiness
-
-    specification_quality
-
-
-################################################################################
-# SUCCESS METRICS
-################################################################################
-
+  compute[6]: spec_completeness,syntax_unambiguity,type_coverage,version_compatibility,extension_readiness,specification_quality
 success_metrics:
-
   spec_completeness:
-
-    minimum: 1.00
-
+    minimum: 1.0
   syntax_unambiguity:
-
-    minimum: 1.00
-
+    minimum: 1.0
   type_coverage:
-
-    minimum: 1.00
-
+    minimum: 1.0
   version_compatibility:
-
-    minimum: 1.00
-
+    minimum: 1.0
   determinism:
-
-    minimum: 1.00
+    minimum: 1.0

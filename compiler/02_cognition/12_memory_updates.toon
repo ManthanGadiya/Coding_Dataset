@@ -1,3 +1,4 @@
+description: "metrics[6]: Memory Growth,Reinforcement Rate,Merge Rate,Conflict Rate,Replacement Rate,Knowledge Density success[6]: Engineering memory,continuously evolves,while preserving,\"provenance,\",correctness,and historical context. guarantees[5]: Immutable History,Continuous Evolution,Provenance Preservation,Evidence Based Updates,Graph Consistency"
 spec:
   id: memory_updates
   version: 1.0.0
@@ -6,44 +7,19 @@ spec:
   module: Cognition
   compiler_stage: Memory Evolution
   description: >
-purpose[6]: Update,consolidate,reinforce,reorganize,preserve,engineering memory.
-philosophy[6]: Memory evolves.,Knowledge never remains static.,Better evidence updates memory.,History is preserved.,"Learning changes memory,",not history.
-pipeline[15]: Experience,→,Reflection,→,Lesson,→,Memory Lookup,→,Conflict Detection,→,Update Strategy,→,Validation,→,Graph Update
-inputs[8]: Engineering Knowledge Record,Knowledge Atom,Reflection,Decision,Failure,Benchmark,Production Incident,User Feedback
-outputs[5]: Updated Memory,New Memory,Merged Memory,Archived Memory,Revised Memory
-operations[8]: Create,Reinforce,Modify,Merge,Split,Replace,Archive,Deprecate
-create[5]: New Concept,New Pattern,New Failure,New Heuristic,New Capability
-reinforce[4]: Repeated Success,Independent Validation,Production Success,Multiple Sources
-modify[4]: Better Evidence,Improved Explanation,Updated Constraint,New Tradeoff
-merge[4]: Duplicate Memories,Similar Lessons,Related Concepts,Equivalent Patterns
-split[3]: Overgeneralized Memory,Multiple Independent Concepts,Mixed Failure Modes
-replace[4]: Incorrect Model,Deprecated Practice,Superior Algorithm,Better Architecture
-archive[3]: Legacy Knowledge,Deprecated Technology,Obsolete Practices
-conflicts[4]: Contradictory Evidence,Duplicate Identity,Invalid Assumptions,Incompatible Versions
-resolution[4]: Prefer Stronger Evidence,Prefer Production Validation,Preserve Older Version,Escalate Conflict
-consolidation[5]: Compress,Link,Generalize,Specialize,Cross Reference
-graph[5]: Add Node,Remove Edge,Create Edge,Update Weight,Update Confidence
-versioning[4]: Immutable History,Incremental Versions,Parent References,Lineage Preservation
-confidence[4]: Increase,Decrease,Propagate,Recalculate
-learning[4]: Reinforce Capabilities,Update Mental Models,Improve Heuristics,Correct Misconceptions
-ekr[3]: Every Engineering Knowledge Record,generates one or more,Memory Update Operations.
-validation[4]: Every update has evidence.,Every modification preserves history.,Every replacement records rationale.,Every merge maintains provenance.
 examples:
   Example_01:
-    description: "Previous Memory: Global Lock New Lesson: Fine Grained Locking"
+    description: "\"Previous Memory: Global Lock New Lesson: Fine Grained Locking\""
     Operation: Replace
   Example_02:
-    description: "Repeated Incidents: Database Timeout"
+    description: "\"Repeated Incidents: Database Timeout\""
     Operation: Reinforce
   Example_03:
-    description: "Similar Lessons: Retry Strategy Exponential Backoff"
+    description: "\"Similar Lessons: Retry Strategy Exponential Backoff\""
     Operation: Merge
   Example_04:
     description: New Production Evidence
     Operation: Increase Confidence
-metrics[6]: Memory Growth,Reinforcement Rate,Merge Rate,Conflict Rate,Replacement Rate,Knowledge Density
-success[6]: Engineering memory,continuously evolves,while preserving,"provenance,",correctness,and historical context.
-guarantees[5]: Immutable History,Continuous Evolution,Provenance Preservation,Evidence Based Updates,Graph Consistency
 future:
   autonomous_memory_optimization: true
   semantic_memory_compression: true

@@ -1,267 +1,34 @@
 graph_serializer:
-
   metadata:
-
     id: SER-005
-
     title: Graph Serializer
-
     version: 2.0
-
     status: Stable
-
     owner: Serialization Engine
-
-    depends_on:
-
-      - compiler/10_serialization/04_reference_resolver.toon
-      - compiler/10_serialization/03_schema_mapper.toon
-      - compiler/09_optimization/03_graph_optimizer.toon
-
-    consumed_by:
-
-      - compiler/10_serialization/06_token_compression.toon
-      - compiler/10_serialization/07_export_pipeline.toon
-      - compiler/10_serialization/10_export_targets.toon
-
-    objective:
-
-      Serialize all graph structures (ontology,
-      reasoning, curriculum, dependency, repository)
-      into the canonical TOON graph representation
-      preserving full topology, node metadata,
-      edge semantics, and traversal capabilities
-      in the serialized output.
-
-
-################################################################################
-# PHILOSOPHY
-################################################################################
-
-philosophy:
-
-  graphs_serialize_as_graphs
-
-  topology_must_be_preserved
-
-  node_metadata_is_essential
-
-  edge_semantics_must_survive
-
-  deterministic_serialization
-
-  traversal_efficient_format
-
-  space_efficient_representation
-
-  reversible_serialization
-
-
-################################################################################
-# INPUTS
-################################################################################
-
-inputs:
-
-  ontology_graph
-
-  reasoning_graph
-
-  curriculum_graph
-
-  dependency_graph
-
-  repository_graph
-
-  architecture_graph
-
-  graph_serialization_configuration
-
-  format_preferences
-
-
-################################################################################
-# SERIALIZATION DIMENSIONS
-################################################################################
-
-dimensions:
-
-  node_serialization
-
-  edge_serialization
-
-  graph_topology
-
-  graph_metadata
-
-  subgraph_serialization
-
-  traversal_indexing
-
-  adjacency_representation
-
-  attribute_serialization
-
-
-################################################################################
-# SERIALIZATION STRATEGIES
-################################################################################
-
-strategies:
-
-  adjacency_list_serialization
-
-  node_list_with_edges
-
-  compressed_sparse_representation
-
-  indexed_graph_format
-
-  subgraph_bundling
-
-  attribute_inline_serialization
-
-  schema_driven_graph_serialization
-
-
-################################################################################
-# ANALYSIS
-################################################################################
-
-analysis:
-
-  graph_size_analysis
-
-  serialization_efficiency
-
-  traversal_cost_in_serialized_form
-
-  attribute_coverage
-
-  topology_preservation_verification
-
-
-################################################################################
-# CONSTRAINTS
-################################################################################
-
-constraints:
-
-  deterministic
-
-  reproducible
-
-  topology_preserving
-
-  metadata_complete
-
-  traversal_capable
-
-  space_efficient
-
-  reversible
-
-
-################################################################################
-# VALIDATION
-################################################################################
-
-validation:
-
-  topology_preservation_validation
-
-  metadata_completeness_validation
-
-  traversal_validation
-
-  serialization_validation
-
-  reversibility_validation
-
-  determinism_validation
-
-
-################################################################################
-# RANDOMIZATION
-################################################################################
-
+    depends_on[3]: "- compiler/10_serialization/04_reference_resolver.toon","- compiler/10_serialization/03_schema_mapper.toon","- compiler/09_optimization/03_graph_optimizer.toon"
+    consumed_by[3]: "- compiler/10_serialization/06_token_compression.toon","- compiler/10_serialization/07_export_pipeline.toon","- compiler/10_serialization/10_export_targets.toon"
+    objective[6]: "Serialize all graph structures (ontology,","reasoning, curriculum, dependency, repository)",into the canonical TOON graph representation,"preserving full topology, node metadata,","edge semantics, and traversal capabilities",in the serialized output.
+philosophy[8]: graphs_serialize_as_graphs,topology_must_be_preserved,node_metadata_is_essential,edge_semantics_must_survive,deterministic_serialization,traversal_efficient_format,space_efficient_representation,reversible_serialization
+inputs[8]: ontology_graph,reasoning_graph,curriculum_graph,dependency_graph,repository_graph,architecture_graph,graph_serialization_configuration,format_preferences
+dimensions[8]: node_serialization,edge_serialization,graph_topology,graph_metadata,subgraph_serialization,traversal_indexing,adjacency_representation,attribute_serialization
+strategies[7]: adjacency_list_serialization,node_list_with_edges,compressed_sparse_representation,indexed_graph_format,subgraph_bundling,attribute_inline_serialization,schema_driven_graph_serialization
+analysis[5]: graph_size_analysis,serialization_efficiency,traversal_cost_in_serialized_form,attribute_coverage,topology_preservation_verification
+constraints[7]: deterministic,reproducible,topology_preserving,metadata_complete,traversal_capable,space_efficient,reversible
+validation[6]: topology_preservation_validation,metadata_completeness_validation,traversal_validation,serialization_validation,reversibility_validation,determinism_validation
 randomization:
-
-  deterministic_seed:
-
-    true
-
-  reproducible:
-
-    true
-
-
-################################################################################
-# OUTPUTS
-################################################################################
-
-outputs:
-
-  serialized_graphs
-
-  graph_serialization_manifest
-
-  topology_report
-
-  metadata_report
-
-  traversal_index
-
-  serialization_statistics
-
-  metadata
-
-
-################################################################################
-# METRICS
-################################################################################
-
+  deterministic_seed: true
+  reproducible: true
+outputs[7]: serialized_graphs,graph_serialization_manifest,topology_report,metadata_report,traversal_index,serialization_statistics,metadata
 metrics:
-
-  compute:
-
-    graph_serialization_efficiency
-
-    node_coverage
-
-    edge_coverage
-
-    metadata_coverage
-
-    attribute_completeness
-
-    topology_preservation
-
-    serialization_latency
-
-
-################################################################################
-# SUCCESS METRICS
-################################################################################
-
+  compute[7]: graph_serialization_efficiency,node_coverage,edge_coverage,metadata_coverage,attribute_completeness,topology_preservation,serialization_latency
 success_metrics:
-
   topology_preservation:
-
-    minimum: 1.00
-
+    minimum: 1.0
   node_coverage:
-
-    minimum: 1.00
-
+    minimum: 1.0
   edge_coverage:
-
-    minimum: 1.00
-
+    minimum: 1.0
   metadata_coverage:
-
-    minimum: 1.00
-
+    minimum: 1.0
   determinism:
-
-    minimum: 1.00
+    minimum: 1.0

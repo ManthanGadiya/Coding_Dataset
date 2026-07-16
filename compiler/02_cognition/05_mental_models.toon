@@ -1,4 +1,4 @@
-description: "guarantees[5]: Explainable Intuition,Reusable Thinking,Predictive Engineering,Cross Domain Transfer,Structured Cognition"
+description: "\"guarantees[5]: Explainable Intuition,Reusable Thinking,Predictive Engineering,Cross Domain Transfer,Structured Cognition\""
 spec:
   id: mental_models
   version: 1.0.0
@@ -6,7 +6,7 @@ spec:
   priority: highest
   module: Cognition
   compiler_stage: Mental Reasoning
-  description: "\"Defines the Engineering Mental Model (EMM) framework used by the TOON Dataset Compiler. Mental Models are reusable internal representations that engineers apply to understand, predict, analyze and improve systems. They transform raw knowledge into practical engineering intuition.\""
+  description: "\"\\\"Defines the Engineering Mental Model (EMM) framework used by the TOON Dataset Compiler. Mental Models are reusable internal representations that engineers apply to understand, predict, analyze and improve systems. They transform raw knowledge into practical engineering intuition.\\\"\""
 purpose: Represent engineering intuition as reusable cognitive models.
 ekr: Every Engineering Knowledge Record references one or more Mental Models used during reasoning.
 examples:
@@ -25,7 +25,7 @@ examples:
   Example_05:
     Problem: Microservice Failure
     Model: Failure Domains
-success: "\"Engineers solve unfamiliar problems by selecting, applying and refining appropriate mental models.\""
+success: "\"\\\"Engineers solve unfamiliar problems by selecting, applying and refining appropriate mental models.\\\"\""
 future:
   adaptive_model_selection: true
   probabilistic_models: true

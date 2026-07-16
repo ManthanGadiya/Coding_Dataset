@@ -1,25 +1,25 @@
-description: "transitions[7]: Foundations -> Core Computer Science,Core Computer Science -> Software Engineering,Software Engineering -> Backend Engineering,Backend Engineering -> Infrastructure,Infrastructure -> Production Engineering,Production Engineering -> AI Engineering,AI Engineering -> Autonomous Engineering rules[8]: Never introduce a domain before its prerequisites.,Revisit earlier domains after every major tier.,Mix theory with implementation.,Generate cross-domain projects regularly.,Reinforce previously mastered domains.,Increase architectural complexity gradually.,Delay autonomous reasoning until production engineering is mastered.,Optimize for engineering intuition rather than memorization."
+description: "\"transitions[7]: Foundations -> Core Computer Science,Core Computer Science -> Software Engineering,Software Engineering -> Backend Engineering,Backend Engineering -> Infrastructure,Infrastructure -> Production Engineering,Production Engineering -> AI Engineering,AI Engineering -> Autonomous Engineering rules[8]: Never introduce a domain before its prerequisites.,Revisit earlier domains after every major tier.,Mix theory with implementation.,Generate cross-domain projects regularly.,Reinforce previously mastered domains.,Increase architectural complexity gradually.,Delay autonomous reasoning until production engineering is mastered.,Optimize for engineering intuition rather than memorization.\""
 domain_progression:
   metadata:
-    description: "depends_on[3]: compiler/01_ontology/04_domains.toon,compiler/03_curriculum/01_learning_order.toon,compiler/03_curriculum/02_skill_progression.toon consumed_by[4]: compiler/03_curriculum/04_difficulty_progression.toon,compiler/03_curriculum/09_curriculum_graph.toon,compiler/03_curriculum/10_master_curriculum.toon,compiler/05_generation/19_dataset_builder.toon"
+    description: "\"depends_on[3]: compiler/01_ontology/04_domains.toon,compiler/03_curriculum/01_learning_order.toon,compiler/03_curriculum/02_skill_progression.toon consumed_by[4]: compiler/03_curriculum/04_difficulty_progression.toon,compiler/03_curriculum/09_curriculum_graph.toon,compiler/03_curriculum/10_master_curriculum.toon,compiler/05_generation/19_dataset_builder.toon\""
     id: CURR-003
     title: Domain Progression
     version: 1.0
     status: Stable
     owner: Curriculum Engine
-    objective: "\"Learn engineering domains in an order that maximizes transfer learning, minimizes cognitive load, and progressively builds senior engineering intuition.\""
-"tiers[8]":
-  description: "domains[10]: Planning,Reflection,Memory,Self Critique,Tool Routing,Workflow Planning,Multi Agent Systems,Long Horizon Reasoning,Autonomous Debugging,Autonomous Review"
+    objective: "\"\\\"Learn engineering domains in an order that maximizes transfer learning, minimizes cognitive load, and progressively builds senior engineering intuition.\\\"\""
+"\"tiers[8]\"":
+  description: "\"domains[10]: Planning,Reflection,Memory,Self Critique,Tool Routing,Workflow Planning,Multi Agent Systems,Long Horizon Reasoning,Autonomous Debugging,Autonomous Review\""
   name: Autonomous Engineering
   purpose: Build self-improving coding agents.
   prerequisite: Infrastructure
   mastery: Senior AI Engineer
 reinforcement:
-  description: "\"Software Engineering\": reinforces[3]: Backend,Infrastructure,Production"
-  Algorithms: "reinforces[3]: Databases,Production,AI"
-  Backend: "reinforces[2]: AI Engineering,Distributed Systems"
-  Infrastructure: "reinforces[1]: Production"
-  Production: "reinforces[1]: Autonomous Engineering"
+  description: "\"\\\"Software Engineering\\\": reinforces[3]: Backend,Infrastructure,Production\""
+  Algorithms: "\"reinforces[3]: Databases,Production,AI\""
+  Backend: "\"reinforces[2]: AI Engineering,Distributed Systems\""
+  Infrastructure: "\"reinforces[1]: Production\""
+  Production: "\"reinforces[1]: Autonomous Engineering\""
 success_metrics:
   domain_mastery:
     minimum: 0.9

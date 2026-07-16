@@ -1,339 +1,37 @@
 graph_repair:
-
   metadata:
-
     id: REP-007
-
     title: Graph Repair
-
     version: 2.0
-
     status: Stable
-
     owner: Repair Engine
-
-    depends_on:
-
-      - compiler/06_repair/06_engineering_repair.toon
-      - compiler/01_ontology/19_dependency_graph.toon
-      - compiler/02_cognition/02_cognitive_graph.toon
-
-    consumed_by:
-
-      - compiler/06_repair/08_curriculum_repair.toon
-      - compiler/06_repair/09_diversity_repair.toon
-      - compiler/06_repair/14_repair_pipeline.toon
-
-    objective:
-
-      Repair graph topology, dependencies,
-      connectivity, reachability, causal links,
-      curriculum relationships, repository evolution,
-      and engineering knowledge graphs while
-      preserving deterministic semantics.
-
-
-################################################################################
-# PHILOSOPHY
-################################################################################
-
-philosophy:
-
-  everything_is_a_graph
-
-  preserve_connectivity
-
-  repair_not_replace
-
-  topology_before_statistics
-
-  deterministic_graphs
-
-  causal_integrity
-
-  engineering_memory_is_graph
-
-  graph_consistency_first
-
-
-################################################################################
-# INPUTS
-################################################################################
-
-inputs:
-
-  ontology_graph
-
-  curriculum_graph
-
-  reasoning_graph
-
-  dependency_graph
-
-  repository_graph
-
-  engineering_memory_graph
-
-  architecture_graph
-
-  world_graph
-
-  repaired_dataset
-
-  repair_log
-
-
-################################################################################
-# GRAPH FAILURES
-################################################################################
-
-repair_targets:
-
-  disconnected_component
-
-  orphan_subgraph
-
-  broken_edge
-
-  invalid_reference
-
-  dependency_cycle
-
-  unreachable_node
-
-  duplicate_subgraph
-
-  inconsistent_weights
-
-  invalid_direction
-
-  missing_path
-
-  inconsistent_hierarchy
-
-  graph_fragmentation
-
-  stale_edge
-
-  topology_violation
-
-  invalid_root
-
-
-################################################################################
-# GRAPH ANALYSIS
-################################################################################
-
-analysis:
-
-  connectivity_analysis
-
-  reachability_analysis
-
-  cycle_detection
-
-  shortest_path_analysis
-
-  centrality_analysis
-
-  dependency_analysis
-
-  graph_isomorphism
-
-  hierarchy_validation
-
-  causal_graph_validation
-
-  curriculum_graph_validation
-
-
-################################################################################
-# REPAIR OPERATIONS
-################################################################################
-
-operations:
-
-  reconnect_nodes
-
-  repair_edges
-
-  remove_cycles
-
-  merge_subgraphs
-
-  split_invalid_graph
-
-  normalize_relationships
-
-  restore_paths
-
-  regenerate_indices
-
-  rebalance_hierarchy
-
-  synchronize_references
-
-  repair_weights
-
-  canonicalize_graph
-
-
-################################################################################
-# GRAPH TYPES
-################################################################################
-
-graphs:
-
-  ontology
-
-  repository
-
-  curriculum
-
-  architecture
-
-  reasoning
-
-  dependency
-
-  knowledge
-
-  memory
-
-  production_history
-
-  engineering_story
-
-
-################################################################################
-# CONSTRAINTS
-################################################################################
-
-constraints:
-
-  preserve_semantics
-
-  preserve_reasoning
-
-  preserve_curriculum
-
-  preserve_repository_history
-
-  deterministic
-
-  reversible
-
-  acyclic_when_required
-
-
-################################################################################
-# VALIDATION
-################################################################################
-
-validation:
-
-  dag_validation
-
-  connectivity_validation
-
-  reachability_validation
-
-  topology_validation
-
-  hierarchy_validation
-
-  dependency_validation
-
-  graph_hash_validation
-
-
-################################################################################
-# RANDOMIZATION
-################################################################################
-
+    depends_on[3]: "- compiler/06_repair/06_engineering_repair.toon","- compiler/01_ontology/19_dependency_graph.toon","- compiler/02_cognition/02_cognitive_graph.toon"
+    consumed_by[3]: "- compiler/06_repair/08_curriculum_repair.toon","- compiler/06_repair/09_diversity_repair.toon","- compiler/06_repair/14_repair_pipeline.toon"
+    objective[5]: "Repair graph topology, dependencies,","connectivity, reachability, causal links,","curriculum relationships, repository evolution,",and engineering knowledge graphs while,preserving deterministic semantics.
+philosophy[8]: everything_is_a_graph,preserve_connectivity,repair_not_replace,topology_before_statistics,deterministic_graphs,causal_integrity,engineering_memory_is_graph,graph_consistency_first
+inputs[10]: ontology_graph,curriculum_graph,reasoning_graph,dependency_graph,repository_graph,engineering_memory_graph,architecture_graph,world_graph,repaired_dataset,repair_log
+repair_targets[15]: disconnected_component,orphan_subgraph,broken_edge,invalid_reference,dependency_cycle,unreachable_node,duplicate_subgraph,inconsistent_weights,invalid_direction,missing_path,inconsistent_hierarchy,graph_fragmentation,stale_edge,topology_violation,invalid_root
+analysis[10]: connectivity_analysis,reachability_analysis,cycle_detection,shortest_path_analysis,centrality_analysis,dependency_analysis,graph_isomorphism,hierarchy_validation,causal_graph_validation,curriculum_graph_validation
+operations[12]: reconnect_nodes,repair_edges,remove_cycles,merge_subgraphs,split_invalid_graph,normalize_relationships,restore_paths,regenerate_indices,rebalance_hierarchy,synchronize_references,repair_weights,canonicalize_graph
+graphs[10]: ontology,repository,curriculum,architecture,reasoning,dependency,knowledge,memory,production_history,engineering_story
+constraints[7]: preserve_semantics,preserve_reasoning,preserve_curriculum,preserve_repository_history,deterministic,reversible,acyclic_when_required
+validation[7]: dag_validation,connectivity_validation,reachability_validation,topology_validation,hierarchy_validation,dependency_validation,graph_hash_validation
 randomization:
-
-  deterministic_seed:
-
-    true
-
-  reproducible:
-
-    true
-
-
-################################################################################
-# OUTPUTS
-################################################################################
-
-outputs:
-
-  repaired_graphs
-
-  topology_diff
-
-  dependency_updates
-
-  graph_metrics
-
-  connectivity_report
-
-  repair_trace
-
-  metadata
-
-
-################################################################################
-# METRICS
-################################################################################
-
+  deterministic_seed: true
+  reproducible: true
+outputs[7]: repaired_graphs,topology_diff,dependency_updates,graph_metrics,connectivity_report,repair_trace,metadata
 metrics:
-
-  compute:
-
-    graph_connectivity
-
-    dependency_integrity
-
-    average_path_length
-
-    graph_density
-
-    hierarchy_quality
-
-    causal_integrity
-
-    curriculum_connectivity
-
-    repair_efficiency
-
-
-################################################################################
-# SUCCESS METRICS
-################################################################################
-
+  compute[8]: graph_connectivity,dependency_integrity,average_path_length,graph_density,hierarchy_quality,causal_integrity,curriculum_connectivity,repair_efficiency
 success_metrics:
-
   graph_connectivity:
-
-    minimum: 1.00
-
+    minimum: 1.0
   dependency_integrity:
-
-    minimum: 1.00
-
+    minimum: 1.0
   topology_consistency:
-
-    minimum: 1.00
-
+    minimum: 1.0
   causal_integrity:
-
     minimum: 0.99
-
   curriculum_connectivity:
-
     minimum: 0.99
-
   determinism:
-
-    minimum: 1.00
+    minimum: 1.0

@@ -1,4 +1,4 @@
-description: "guarantees[5]: Explainable reasoning.,Reusable reasoning.,Composable reasoning.,Cross-domain reasoning.,Traceable reasoning."
+description: "\"guarantees[5]: Explainable reasoning.,Reusable reasoning.,Composable reasoning.,Cross-domain reasoning.,Traceable reasoning.\""
 spec:
   id: reasoning_primitives
   version: 1.0.0
@@ -6,8 +6,8 @@ spec:
   priority: critical
   module: Ontology
   compiler_stage: Knowledge Representation
-  description: "\"Defines the primitive reasoning operations that compose all higher-level engineering thinking. Every engineering decision, debugging session, architectural discussion, optimization, review, implementation and research activity is expressed as combinations of these primitives.\""
-purpose: "\"Represent engineering reasoning as reusable, composable cognitive operations.\""
+  description: "\"\\\"Defines the primitive reasoning operations that compose all higher-level engineering thinking. Every engineering decision, debugging session, architectural discussion, optimization, review, implementation and research activity is expressed as combinations of these primitives.\\\"\""
+purpose: "\"\\\"Represent engineering reasoning as reusable, composable cognitive operations.\\\"\""
 primitives:
   Observe:
     purpose: Gather information.
@@ -49,7 +49,6 @@ primitives:
     purpose: Combine multiple ideas into one.
   Decompose:
     purpose: Break complex systems into manageable parts.
-composite[5]: "Debugging[9]: Observe,→,Hypothesize,→,Validate,→,Diagnose,→,Repair","Architecture[9]: Observe,→,Analyze,→,Compare,→,Tradeoff Analysis,→,Decide","\"Code Review\"[7]: Observe,→,Explain,→,Compare,→,Validate","\"Performance Optimization\"[7]: Measure,→,Analyze,→,Optimize,→,Benchmark","\"Incident Response\"[9]: Observe,→,Diagnose,→,Prioritize,→,Mitigate,→,Validate"
 success: Every Engineering Knowledge Record exercises reasoning rather than simple recall.
 future:
   reasoning_graphs: true

@@ -1,21 +1,21 @@
-description: "outputs[6]: requirement_document,acceptance_matrix,dependency_map,verification_plan,implementation_constraints,traceability_matrix"
+description: "\"outputs[6]: requirement_document,acceptance_matrix,dependency_map,verification_plan,implementation_constraints,traceability_matrix\""
 decision_generator:
   metadata:
-    description: "depends_on[4]: compiler/05_generation/03_event_generator.toon,compiler/05_generation/04_constraint_generator.toon,compiler/04_world/15_world_state.toon,compiler/01_ontology/20_master_ontology.toon consumed_by[4]: compiler/05_generation/08_code_generator.toon,compiler/05_generation/10_test_generator.toon,compiler/05_generation/12_documentation_generator.toon,compiler/05_generation/19_dataset_builder.toon"
+    description: "\"depends_on[4]: compiler/05_generation/03_event_generator.toon,compiler/05_generation/04_constraint_generator.toon,compiler/04_world/15_world_state.toon,compiler/01_ontology/20_master_ontology.toon consumed_by[4]: compiler/05_generation/08_code_generator.toon,compiler/05_generation/10_test_generator.toon,compiler/05_generation/12_documentation_generator.toon,compiler/05_generation/19_dataset_builder.toon\""
     id: GEN-007
     title: Decision Generator
     version: 1.0
     status: Stable
     owner: Generation Engine
-    objective: "\"Generate complete engineering requirements with business objectives, technical constraints, traceability, validation criteria, and implementation guidance.\""
-traceability: "links_to[7]: task,feature_request,customer_feedback,incident,architecture_decision,business_event,curriculum_node"
-validation: "reject_if[6]: ambiguous_requirement,conflicting_constraints,missing_acceptance_criteria,unverifiable_requirement,inconsistent_traceability,curriculum_violation"
+    objective: "\"\\\"Generate complete engineering requirements with business objectives, technical constraints, traceability, validation criteria, and implementation guidance.\\\"\""
+traceability: "\"links_to[7]: task,feature_request,customer_feedback,incident,architecture_decision,business_event,curriculum_node\""
+validation: "\"reject_if[6]: ambiguous_requirement,conflicting_constraints,missing_acceptance_criteria,unverifiable_requirement,inconsistent_traceability,curriculum_violation\""
 randomization:
   deterministic_seed: true
   template_variation: enabled
   domain_specific_requirements: enabled
   reproducible: true
-metrics: "compute[8]: completeness,clarity,testability,traceability,engineering_realism,business_alignment,ambiguity_score,implementation_readiness"
+metrics: "\"compute[8]: completeness,clarity,testability,traceability,engineering_realism,business_alignment,ambiguity_score,implementation_readiness\""
 success_metrics:
   completeness:
     minimum: 0.99

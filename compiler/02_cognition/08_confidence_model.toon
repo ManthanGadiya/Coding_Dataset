@@ -1,3 +1,4 @@
+description: "metrics[6]: Calibration Error,Average Confidence,Confidence Drift,Validation Success Rate,False High Confidence,False Low Confidence success[4]: Confidence accurately reflects,\"engineering certainty,\",\"evolves with evidence,\",and improves decision quality. guarantees[5]: Explicit Confidence,Explainable Confidence,Evidence Traceability,Confidence Calibration,Decision Reliability"
 spec:
   id: confidence_model
   version: 1.0.0
@@ -6,46 +7,24 @@ spec:
   module: Cognition
   compiler_stage: Confidence Estimation
   description: >
-purpose[6]: Estimate,propagate,calibrate,explain,confidence,throughout engineering cognition.
-philosophy[8]: Every statement,has uncertainty.,"Confidence is earned,",never assumed.,Confidence changes,as evidence changes.,High confidence,requires strong evidence.
-pipeline[13]: Observation,→,Evidence Collection,→,Confidence Initialization,→,Reasoning,→,Confidence Update,→,Decision,→,Reflection
-objects[8]: Observation,Knowledge Atom,Engineering Knowledge Record,Hypothesis,Decision,Tradeoff,Prediction,Recommendation
-levels[7]: Unknown,Very Low,Low,Medium,High,Very High,Proven
 scale:
   minimum: 0.0
   maximum: 1.0
-  interpretation[14]: 0.0,Unknown,0.2,Very Low,0.4,Low,0.6,Medium,0.8,High,0.95,Very High,1.0,Proven
-sources[8]: Direct Observation,Experimental Evidence,Formal Proof,Benchmark,Production Evidence,Documentation,Expert Consensus,Historical Memory
-increase[7]: Multiple Independent Sources,Successful Validation,Repeated Observation,Formal Verification,Benchmark Agreement,Production Success,Consistent Memory
-decrease[6]: Contradictory Evidence,Missing Information,Weak Assumptions,Limited Testing,Unknown Environment,Conflicting Results
-operations[6]: Initialize,Increase,Decrease,Stabilize,Normalize,Propagate
-propagation[5]: Child Confidence,Parent Confidence,Graph Confidence,Decision Confidence,Memory Confidence
-aggregation[5]: Minimum,Maximum,Average,Weighted Average,Bayesian Update
-thresholds[10]: 0.9,Autonomous Execution,0.75,Recommendation,0.5,Needs Validation,0.3,Investigation Required,below_0.30,Reject
-calibration[4]: Compare Prediction,Compare Outcome,Measure Error,Adjust Confidence
-decay[4]: Time,Technology Evolution,Environment Changes,Invalidated Assumptions
-recovery[4]: New Evidence,Successful Experiment,Independent Verification,Formal Proof
-memory[4]: Store Confidence,Retrieve Historical Confidence,Reinforce Reliable Knowledge,Reduce Unreliable Knowledge
 ekr:
   description: Every Engineering Knowledge Record
-  stores[5]: Observation Confidence,Evidence Confidence,Reasoning Confidence,Decision Confidence,Outcome Confidence
-validation[7]: Every confidence value,has evidence.,Every increase,has justification.,Every decrease,has explanation.,Confidence is reproducible.
 examples:
   Example_01:
+    description: "Evidence[3]: Heap Dump,Production Metrics,Leak Reproduction"
     Observation: Memory Leak
-    Evidence[3]: Heap Dump,Production Metrics,Leak Reproduction
     Confidence: Very High
   Example_02:
+    description: "Evidence[3]: Query Benchmark,Slow Query Log,CPU Metrics"
     Observation: Database Bottleneck
-    Evidence[3]: Query Benchmark,Slow Query Log,CPU Metrics
     Confidence: High
   Example_03:
+    description: "Evidence[2]: Intermittent Failure,No Reproduction"
     Observation: Race Condition
-    Evidence[2]: Intermittent Failure,No Reproduction
     Confidence: Low
-metrics[6]: Calibration Error,Average Confidence,Confidence Drift,Validation Success Rate,False High Confidence,False Low Confidence
-success[4]: Confidence accurately reflects,"engineering certainty,","evolves with evidence,",and improves decision quality.
-guarantees[5]: Explicit Confidence,Explainable Confidence,Evidence Traceability,Confidence Calibration,Decision Reliability
 future:
   bayesian_confidence: true
   graph_confidence_propagation: true

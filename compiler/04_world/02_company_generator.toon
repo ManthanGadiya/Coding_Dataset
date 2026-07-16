@@ -1,25 +1,23 @@
-description: "organization[10]: executive,product,engineering,infrastructure,security,qa,design,customer_success,support,research constraints[8]: budget,deadlines,regulations,compliance,hiring,customer_commitments,technical_debt,infrastructure_cost culture[8]: innovation,quality,speed,reliability,security,documentation,experimentation,learning"
+description: "\"organization[10]: executive,product,engineering,infrastructure,security,qa,design,customer_success,support,research constraints[8]: budget,deadlines,regulations,compliance,hiring,customer_commitments,technical_debt,infrastructure_cost culture[8]: innovation,quality,speed,reliability,security,documentation,experimentation,learning\""
 company_generator:
   metadata:
-    description: "depends_on[2]: compiler/04_world/01_world_generator.toon,compiler/01_ontology/17_entity_model.toon consumed_by[5]: compiler/04_world/03_repository_generator.toon,compiler/04_world/04_project_generator.toon,compiler/04_world/05_team_generator.toon,compiler/04_world/08_business_events.toon,compiler/04_world/14_company_growth.toon"
+    description: "\"depends_on[2]: compiler/04_world/01_world_generator.toon,compiler/01_ontology/17_entity_model.toon consumed_by[5]: compiler/04_world/03_repository_generator.toon,compiler/04_world/04_project_generator.toon,compiler/04_world/05_team_generator.toon,compiler/04_world/08_business_events.toon,compiler/04_world/14_company_growth.toon\""
     id: WORLD-002
     title: Company Generator
     version: 1.0
     status: Stable
     owner: World Engine
-    objective: "\"Generate realistic software companies with coherent business, engineering, financial, and organizational characteristics.\""
-engineering[4]: "architecture_style[6]: monolith,modular_monolith,microservices,event_driven,serverless,hybrid","deployment_model[4]: cloud,on_premise,hybrid,edge","engineering_maturity[4]: experimental,growing,mature,elite","testing_culture[4]: low,moderate,strong,rigorous"
-technology[3]: "languages[9]: C,C++,Rust,Go,Java,Kotlin,Python,JavaScript,TypeScript","databases[6]: PostgreSQL,MySQL,SQLite,MongoDB,Redis,Cassandra","infrastructure[7]: Docker,Kubernetes,Terraform,Kafka,RabbitMQ,Prometheus,Grafana"
+    objective: "\"\\\"Generate realistic software companies with coherent business, engineering, financial, and organizational characteristics.\\\"\""
 relationships:
-  description: "owns[5]: repositories,projects,teams,infrastructure,products employs[4]: engineers,managers,architects,researchers"
+  description: "\"owns[5]: repositories,projects,teams,infrastructure,products employs[4]: engineers,managers,architects,researchers\""
   serves: customers
 randomization:
   deterministic_seed: true
   weighted_generation: true
   reproducible: true
   diversity_bias: enabled
-validation: "reject_if[6]: missing_industry,invalid_employee_count,inconsistent_budget,impossible_growth,missing_departments,orphan_projects"
-metrics: "measure[6]: organizational_complexity,engineering_maturity,technology_diversity,business_realism,operational_scale,company_consistency"
+validation: "\"reject_if[6]: missing_industry,invalid_employee_count,inconsistent_budget,impossible_growth,missing_departments,orphan_projects\""
+metrics: "\"measure[6]: organizational_complexity,engineering_maturity,technology_diversity,business_realism,operational_scale,company_consistency\""
 success_metrics:
   realism:
     minimum: 0.95

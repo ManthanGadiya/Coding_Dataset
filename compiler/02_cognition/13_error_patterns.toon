@@ -1,3 +1,4 @@
+description: "metrics[6]: Error Frequency,Detection Accuracy,Prevention Rate,Mean Time To Detect,Mean Time To Recover,Repeat Error Rate success[6]: Engineering systems,recognize recurring,\"mistakes early,\",\"prevent repetition,\",and continuously,improve engineering quality. guarantees[5]: Explicit Error Knowledge,Root Cause Traceability,Preventive Engineering,Reusable Lessons,Continuous Quality Improvement"
 spec:
   id: error_patterns
   version: 1.0.0
@@ -6,31 +7,8 @@ spec:
   module: Cognition
   compiler_stage: Error Recognition
   description: >
-purpose[6]: Detect,classify,explain,predict,prevent,engineering mistakes.
-philosophy[6]: Errors repeat.,Mistakes have patterns.,Prevention is superior,to correction.,Every error teaches,reusable engineering knowledge.
-pipeline[11]: Observation,→,Pattern Recognition,→,Classification,→,Root Cause,→,Prevention,→,Learning
-categories[13]: Cognitive,Logical,Algorithmic,Implementation,Concurrency,Memory,Performance,Security,Architecture,Infrastructure,Configuration,Process,Organizational
-cognitive[6]: Confirmation Bias,Tunnel Vision,Overconfidence,Premature Optimization,Incorrect Assumptions,False Analogy
-logical[5]: Off By One,Infinite Loop,Incorrect Condition,Null Handling,State Violation
-algorithmic[5]: Wrong Complexity,Invalid Data Structure,Overflow,Underflow,Infinite Recursion
-implementation[6]: Resource Leak,Duplicate Logic,Hidden Coupling,Tight Coupling,Dead Code,Magic Numbers
-concurrency[5]: Race Condition,Deadlock,Starvation,Livelock,Atomicity Violation
-memory[4]: Store Pattern,Reinforce Pattern,Link Similar Errors,Retrieve Previous Cases
-performance[5]: N Plus One Query,Excessive Allocation,Cache Thrashing,Lock Contention,Busy Waiting
-security[6]: SQL Injection,Command Injection,Buffer Overflow,Weak Authentication,Missing Authorization,Secret Exposure
-architecture[5]: God Object,Circular Dependency,Shared Database,Chatty Services,Premature Microservices
-infrastructure[4]: Single Point Of Failure,Missing Backup,Misconfigured Network,Resource Exhaustion
-process[4]: Missing Tests,Missing Documentation,Manual Deployment,Poor Monitoring
-attributes[7]: identity,category,frequency,severity,detectability,reproducibility,impact
-causes[6]: Knowledge Gap,Wrong Mental Model,Incorrect Assumption,Missing Validation,Human Error,External Dependency
-detection[7]: Static Analysis,Dynamic Analysis,Testing,Benchmark,Monitoring,Code Review,Production Metrics
-prevention[6]: Better Design,Better Tests,Static Analysis,Documentation,Automation,Education
-recovery[5]: Patch,Refactor,Rollback,Redesign,Hotfix
-reasoning[4]: Pattern Matching,Analogical Reasoning,Root Cause Analysis,Counterfactual Reasoning
 ekr:
   description: Every Engineering Knowledge Record
-  records[5]: Error Pattern,Root Cause,Detection,Prevention,Lessons Learned
-validation[8]: Every error pattern,has evidence.,Every error,has prevention.,Every error,has recovery.,Every pattern,improves future reasoning.
 examples:
   Example_01:
     Pattern: N Plus One Query
@@ -48,9 +26,6 @@ examples:
     Pattern: God Object
     Detection: High Coupling Metrics
     Prevention: Component Decomposition
-metrics[6]: Error Frequency,Detection Accuracy,Prevention Rate,Mean Time To Detect,Mean Time To Recover,Repeat Error Rate
-success[6]: Engineering systems,recognize recurring,"mistakes early,","prevent repetition,",and continuously,improve engineering quality.
-guarantees[5]: Explicit Error Knowledge,Root Cause Traceability,Preventive Engineering,Reusable Lessons,Continuous Quality Improvement
 future:
   autonomous_pattern_discovery: true
   predictive_error_detection: true

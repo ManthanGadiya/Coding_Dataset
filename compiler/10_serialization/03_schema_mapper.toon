@@ -1,267 +1,34 @@
 schema_mapper:
-
   metadata:
-
     id: SER-003
-
     title: Schema Mapper
-
     version: 2.0
-
     status: Stable
-
     owner: Serialization Engine
-
-    depends_on:
-
-      - compiler/10_serialization/01_toon_spec.toon
-      - compiler/01_ontology/18_metadata_model.toon
-      - compiler/01_ontology/07_engineering_knowledge_record.toon
-
-    consumed_by:
-
-      - compiler/10_serialization/02_toon_compiler.toon
-      - compiler/10_serialization/05_graph_serializer.toon
-      - compiler/10_serialization/10_export_targets.toon
-
-    objective:
-
-      Define and apply schema mappings that
-      transform internal compiler data structures
-      (knowledge records, graph nodes, ontology
-      entities) into their corresponding TOON
-      representations according to the canonical
-      TOON schema specification.
-
-
-################################################################################
-# PHILOSOPHY
-################################################################################
-
-philosophy:
-
-  mapping_is_translation
-
-  schema_defines_structure
-
-  every_field_has_a_mapping
-
-  type_conversion_is_deterministic
-
-  lossless_transformation
-
-  graph_aware_mapping
-
-  explicit_mapping_rules
-
-  reversibility_supported
-
-
-################################################################################
-# INPUTS
-################################################################################
-
-inputs:
-
-  toon_specification
-
-  internal_schema_definitions
-
-  field_mapping_rules
-
-  type_conversion_table
-
-  structure_mapping_templates
-
-  metadata_mapping_rules
-
-  custom_mapping_overrides
-
-
-################################################################################
-# MAPPING DIMENSIONS
-################################################################################
-
-dimensions:
-
-  field_mapping
-
-  type_mapping
-
-  structure_mapping
-
-  metadata_mapping
-
-  graph_mapping
-
-  reference_mapping
-
-  enum_mapping
-
-  custom_mapping
-
-
-################################################################################
-# MAPPING RULES
-################################################################################
-
-rules:
-
-  every_internal_field_mapped
-
-  type_conversion_safe
-
-  structure_hierarchy_preserved
-
-  metadata_fully_mapped
-
-  graph_edges_mapped_to_references
-
-  references_mapped_to_identifiers
-
-  enums_mapped_by_value
-
-  custom_mappings_documented
-
-
-################################################################################
-# ANALYSIS
-################################################################################
-
-analysis:
-
-  mapping_coverage_analysis
-
-  type_conversion_safety
-
-  structure_compatibility
-
-  metadata_completeness
-
-  loss_analysis
-
-  reversibility_verification
-
-
-################################################################################
-# CONSTRAINTS
-################################################################################
-
-constraints:
-
-  deterministic
-
-  reproducible
-
-  lossless
-
-  completely_mapped
-
-  type_safe
-
-  structure_preserving
-
-  reversible
-
-
-################################################################################
-# VALIDATION
-################################################################################
-
-validation:
-
-  mapping_completeness_validation
-
-  type_conversion_validation
-
-  structure_preservation_validation
-
-  reversibility_validation
-
-  determinism_validation
-
-  consistency_validation
-
-
-################################################################################
-# RANDOMIZATION
-################################################################################
-
+    depends_on[3]: "- compiler/10_serialization/01_toon_spec.toon","- compiler/01_ontology/18_metadata_model.toon","- compiler/01_ontology/07_engineering_knowledge_record.toon"
+    consumed_by[3]: "- compiler/10_serialization/02_toon_compiler.toon","- compiler/10_serialization/05_graph_serializer.toon","- compiler/10_serialization/10_export_targets.toon"
+    objective[6]: Define and apply schema mappings that,transform internal compiler data structures,"(knowledge records, graph nodes, ontology",entities) into their corresponding TOON,representations according to the canonical,TOON schema specification.
+philosophy[8]: mapping_is_translation,schema_defines_structure,every_field_has_a_mapping,type_conversion_is_deterministic,lossless_transformation,graph_aware_mapping,explicit_mapping_rules,reversibility_supported
+inputs[7]: toon_specification,internal_schema_definitions,field_mapping_rules,type_conversion_table,structure_mapping_templates,metadata_mapping_rules,custom_mapping_overrides
+dimensions[8]: field_mapping,type_mapping,structure_mapping,metadata_mapping,graph_mapping,reference_mapping,enum_mapping,custom_mapping
+rules[8]: every_internal_field_mapped,type_conversion_safe,structure_hierarchy_preserved,metadata_fully_mapped,graph_edges_mapped_to_references,references_mapped_to_identifiers,enums_mapped_by_value,custom_mappings_documented
+analysis[6]: mapping_coverage_analysis,type_conversion_safety,structure_compatibility,metadata_completeness,loss_analysis,reversibility_verification
+constraints[7]: deterministic,reproducible,lossless,completely_mapped,type_safe,structure_preserving,reversible
+validation[6]: mapping_completeness_validation,type_conversion_validation,structure_preservation_validation,reversibility_validation,determinism_validation,consistency_validation
 randomization:
-
-  deterministic_seed:
-
-    true
-
-  reproducible:
-
-    true
-
-
-################################################################################
-# OUTPUTS
-################################################################################
-
-outputs:
-
-  schema_mappings
-
-  type_conversion_table
-
-  field_mapping_dictionary
-
-  structure_mapping_templates
-
-  mapping_coverage_report
-
-  mapping_audit_trail
-
-  metadata
-
-
-################################################################################
-# METRICS
-################################################################################
-
+  deterministic_seed: true
+  reproducible: true
+outputs[7]: schema_mappings,type_conversion_table,field_mapping_dictionary,structure_mapping_templates,mapping_coverage_report,mapping_audit_trail,metadata
 metrics:
-
-  compute:
-
-    mapping_coverage
-
-    type_conversion_accuracy
-
-    structure_preservation_rate
-
-    mapping_fidelity
-
-    reversibility_rate
-
-    mapping_latency
-
-
-################################################################################
-# SUCCESS METRICS
-################################################################################
-
+  compute[6]: mapping_coverage,type_conversion_accuracy,structure_preservation_rate,mapping_fidelity,reversibility_rate,mapping_latency
 success_metrics:
-
   mapping_coverage:
-
-    minimum: 1.00
-
+    minimum: 1.0
   type_conversion_accuracy:
-
-    minimum: 1.00
-
+    minimum: 1.0
   structure_preservation_rate:
-
-    minimum: 1.00
-
+    minimum: 1.0
   reversibility_rate:
-
     minimum: 0.99
-
   determinism:
-
-    minimum: 1.00
+    minimum: 1.0

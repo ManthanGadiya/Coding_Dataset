@@ -1,3 +1,4 @@
+description: "metrics[6]: Prediction Accuracy,False Positive Rate,False Negative Rate,Investigation Success,Engineering Value,Instinct Calibration success[5]: Engineering intuition,\"becomes explicit,\",\"explainable,\",measurable,and continuously refined. guarantees[5]: Explainable Intuition,Pattern Recognition,Early Risk Detection,Experience Transfer,Continuous Instinct Improvement"
 spec:
   id: engineering_instincts
   version: 1.0.0
@@ -6,31 +7,8 @@ spec:
   module: Cognition
   compiler_stage: Engineering Intuition
   description: >
-purpose[5]: Model,recognize,explain,refine,engineering intuition.
-philosophy[7]: Intuition is compressed experience.,Instinct is not magic.,Every instinct,originates from,repeated evidence.,Instinct proposes.,Reasoning verifies.
-pipeline[13]: Observation,→,Pattern Recognition,→,Instinct Trigger,→,Confidence Estimate,→,Reasoning,→,Validation,→,Memory Reinforcement
-inputs[8]: Observation,Code,Architecture,Metrics,Logs,Memory,Previous Incidents,Engineering Knowledge Records
-outputs[6]: Suspicion,Warning,Opportunity,Recommendation,Investigation,Engineering Question
-categories[8]: Complexity,Correctness,Performance,Reliability,Security,Scalability,Maintainability,Human
-complexity[6]: Too Many Layers,Excessive Abstraction,Hidden Coupling,Unnecessary Generalization,Large Functions,Large Classes
-correctness[5]: Missing Validation,Hidden Assumption,Undefined State,Missing Edge Case,Impossible Invariant
-performance[5]: Excessive Allocation,Unnecessary Copy,Cache Miss Risk,Synchronization Cost,Serialization Overhead
-reliability[5]: Single Point Of Failure,Missing Retry,Missing Timeout,Missing Monitoring,Cascading Failure
-security[5]: Excessive Privileges,Missing Authentication,Missing Authorization,Secret Exposure,Trust Boundary Violation
-scalability[5]: Global Lock,Centralized Component,Sequential Processing,Hot Partition,Resource Saturation
-maintainability[5]: Duplicate Logic,Tight Coupling,Poor Naming,Hidden Dependency,Fragile Interface
-human[5]: Bus Factor,Knowledge Silo,Difficult Onboarding,Communication Risk,Ownership Confusion
-attributes[7]: identity,category,trigger,confidence,urgency,evidence,explanation
-triggers[6]: Pattern Match,Metric Anomaly,Historical Similarity,Constraint Violation,Architecture Smell,Code Smell
-actions[7]: Ignore,Investigate,Benchmark,Review,Test,Refactor,Escalate
-confidence[4]: Weak,Moderate,Strong,Critical
-validation[6]: Static Analysis,Dynamic Analysis,Benchmark,Code Review,Production Evidence,Experiment
-memory[4]: Retrieve Similar Instinct,Reinforce Successful Instinct,Weaken Incorrect Instinct,Create New Instinct
-learning[4]: Successful Prediction,Failed Prediction,New Pattern,Better Heuristic
 ekr:
   description: Every Engineering Knowledge Record
-  stores[4]: Triggered Instincts,Validation,Outcome,Confidence Update
-rules[8]: Every instinct,has explanation.,Every instinct,is evidence-seeking.,Every instinct,is measurable.,Every instinct,can improve.
 examples:
   Example_01:
     Observation: Massive Singleton
@@ -47,9 +25,6 @@ examples:
   Example_05:
     Observation: Missing Timeout
     Instinct: Production Incident Risk
-metrics[6]: Prediction Accuracy,False Positive Rate,False Negative Rate,Investigation Success,Engineering Value,Instinct Calibration
-success[5]: Engineering intuition,"becomes explicit,","explainable,",measurable,and continuously refined.
-guarantees[5]: Explainable Intuition,Pattern Recognition,Early Risk Detection,Experience Transfer,Continuous Instinct Improvement
 future:
   instinct_graphs: true
   probabilistic_instincts: true

@@ -1,3 +1,4 @@
+description: "success[6]: Every engineering object is connected.,Every relationship is explicit.,Every graph is navigable.,Every concept is discoverable.,Every engineering experience contributes,to the global knowledge graph. guarantees[5]: Connected Engineering Universe,Explainable Relationships,Graph Native Knowledge,Deterministic Connectivity,Unlimited Graph Expansion"
 spec:
   id: relationships
   version: 1.0.0
@@ -6,43 +7,14 @@ spec:
   module: Ontology
   compiler_stage: Knowledge Representation
   description: >
-purpose[3]: Transform isolated engineering knowledge into a,connected engineering knowledge graph where every,object derives meaning through explicit relationships.
-philosophy[6]: Knowledge without relationships,is information.,Connected knowledge,becomes understanding.,Understanding connected over time,becomes engineering intelligence.
 graph:
   type: Directed Property Graph
   nodes: Engineering Objects
   edges: Typed Relationships
   properties: Allowed
-nodes[25]: Knowledge_Atom,Engineering_Knowledge_Record,Domain,Capability,Reasoning_Primitive,Engineering_World,Company,Repository,Team,Engineer,Project,Sprint,Feature,Architecture,Module,Component,Service,API,Database,Test,Benchmark,Incident,Decision,Lesson,Artifact
-categories[8]: Structural,Semantic,Temporal,Causal,Dependency,Capability,Educational,Operational
-structural[8]: parent_of,child_of,contains,belongs_to,composed_of,owns,extends,specializes
-semantic[8]: defines,describes,explains,represents,models,exemplifies,generalizes,abstracts
-dependency[7]: depends_on,requires,imports,references,links_to,derives_from,generated_from
-causal[7]: causes,caused_by,triggers,prevents,mitigates,enables,disables
-temporal[6]: precedes,follows,evolves_into,replaces,supersedes,deprecated_by
-engineering[9]: implements,validates,verifies,benchmarks,optimizes,secures,monitors,deploys,documents
-reasoning[8]: observes,infers,predicts,evaluates,compares,concludes,justifies,reflects_on
-capabilities[6]: teaches,strengthens,requires,reinforces,transfers_to,measures
-learning[5]: prerequisite_for,advanced_by,reviewed_by,explained_by,practiced_by
-failures[7]: introduces,fixes,detects,reproduces,diagnoses,resolves,prevents
-attributes[7]: direction,weight,confidence,strength,timestamp,evidence,explanation
-cardinality[4]: one_to_one,one_to_many,many_to_one,many_to_many
-constraints[6]: No orphan nodes.,Every node has at least one relationship.,Cyclic taxonomy forbidden.,Self references forbidden unless explicit.,Every relationship typed.,Every relationship directional.
-operations[8]: Traverse,Search,Expand,Collapse,Aggregate,Cluster,Rank,Filter
-queries[7]: Find Dependencies,Find Root Causes,Find Related Concepts,Find Prerequisites,Find Alternatives,Find Similar Incidents,Find Missing Knowledge
-metrics[7]: Connectivity,Density,Centrality,Reachability,Path Length,Component Count,Dependency Depth
-validation[10]: Every relationship,has source.,Every relationship,has destination.,Every relationship,has type.,Every relationship,has meaning.,Every relationship,is traceable.
-examples:
-  Example_01[5]: Mutex,→,protects,→,Critical Section
-  Example_02[5]: Deadlock,→,caused_by,→,Circular Wait
-  Example_03[5]: Cache,→,optimizes,→,Database Access
-  Example_04[5]: Benchmark,→,validates,→,Optimization
-  Example_05[5]: ADR,→,justifies,→,Architecture Decision
+examples[5]: "Example_01[5]: Mutex,→,protects,→,Critical Section","Example_02[5]: Deadlock,→,caused_by,→,Circular Wait","Example_03[5]: Cache,→,optimizes,→,Database Access","Example_04[5]: Benchmark,→,validates,→,Optimization","Example_05[5]: ADR,→,justifies,→,Architecture Decision"
 ekr:
   description: Every Engineering Knowledge Record
-  references[7]: Domains,Capabilities,Knowledge Atoms,Reasoning Primitives,Lessons,Artifacts,Related EKRs
-success[6]: Every engineering object is connected.,Every relationship is explicit.,Every graph is navigable.,Every concept is discoverable.,Every engineering experience contributes,to the global knowledge graph.
-guarantees[5]: Connected Engineering Universe,Explainable Relationships,Graph Native Knowledge,Deterministic Connectivity,Unlimited Graph Expansion
 future:
   weighted_edges: true
   probabilistic_relationships: true

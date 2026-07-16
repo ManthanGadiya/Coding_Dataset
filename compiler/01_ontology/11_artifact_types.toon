@@ -1,4 +1,4 @@
-description: "guarantees[5]: Universal Artifact Ontology,Explicit Ownership,Complete Lifecycle,Graph Native Relationships,Unlimited Extensibility"
+description: "\"guarantees[5]: Universal Artifact Ontology,Explicit Ownership,Complete Lifecycle,Graph Native Relationships,Unlimited Extensibility\""
 spec:
   id: artifact_types
   version: 1.0.0
@@ -7,8 +7,8 @@ spec:
   module: Ontology
   compiler_stage: Knowledge Representation
   description: Defines every engineering artifact that can exist within the TOON Engineering Universe. Artifacts are persistent outputs produced throughout the software engineering lifecycle. Every Engineering Knowledge Record references zero or more Engineering Artifacts.
-purpose: "\"Create a universal ontology for every artifact produced, modified, consumed or analyzed during software engineering.\""
-ekr: "\"Every Engineering Knowledge Record may\"[5]: produce artifacts,consume artifacts,modify artifacts,validate artifacts,document artifacts"
+purpose: "\"\\\"Create a universal ontology for every artifact produced, modified, consumed or analyzed during software engineering.\\\"\""
+ekr: "\"\\\"Every Engineering Knowledge Record may\\\"[5]: produce artifacts,consume artifacts,modify artifacts,validate artifacts,document artifacts\""
 success: Every engineering output is represented as an Engineering Artifact.
 future:
   artifact_templates: true

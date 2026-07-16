@@ -1,4 +1,4 @@
-description: "guarantees[5]: Composable Cognition,Explainable Thinking,Deterministic Execution,Traceable Reasoning,Reusable Cognitive Primitives"
+description: "\"guarantees[5]: Composable Cognition,Explainable Thinking,Deterministic Execution,Traceable Reasoning,Reusable Cognitive Primitives\""
 spec:
   id: atomic_operations
   version: 1.0.0
@@ -6,9 +6,8 @@ spec:
   priority: highest
   module: Cognition
   compiler_stage: Cognitive Foundation
-  description: "\"Defines the Atomic Cognitive Operations (ACO) that form the fundamental computational units of engineering thought. Every reasoning process, debugging session, architectural decision, code review and engineering judgement is composed from these primitive cognitive operations.\""
+  description: "\"\\\"Defines the Atomic Cognitive Operations (ACO) that form the fundamental computational units of engineering thought. Every reasoning process, debugging session, architectural decision, code review and engineering judgement is composed from these primitive cognitive operations.\\\"\""
 purpose: Define the smallest indivisible engineering thinking operations.
-examples[5]: "Example_01[3]: Observe,→,Detect Memory Leak","Example_02[3]: Compare,→,Two Locking Strategies","Example_03[3]: Infer,→,Root Cause From Evidence","Example_04[3]: Simulate,→,Cache Behaviour","Example_05[3]: Reflect,→,Generate Engineering Lesson"
 success: Every engineering reasoning process decomposes into atomic cognitive operations.
 future:
   parallel_cognition: true

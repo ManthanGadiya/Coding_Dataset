@@ -1,4 +1,4 @@
-description: "guarantees[5]: Explainable Decisions,Evidence-Based Decisions,Traceable History,Reproducible Reasoning,Continuous Evolution"
+description: "\"guarantees[5]: Explainable Decisions,Evidence-Based Decisions,Traceable History,Reproducible Reasoning,Continuous Evolution\""
 spec:
   id: decision_types
   version: 1.0.0
@@ -7,8 +7,8 @@ spec:
   module: Ontology
   compiler_stage: Knowledge Representation
   description: Defines the complete ontology of engineering decisions. Engineering is fundamentally a sequence of constrained decisions made under uncertainty. Every Engineering Knowledge Record shall contain one or more Decision Records.
-purpose: "\"Represent engineering decisions as structured, explainable, traceable knowledge objects.\""
-ekr: "\"Every Engineering Knowledge Record must include\"[5]: Decision Type,Decision Context,Decision Evidence,Decision Confidence,Decision Outcome"
+purpose: "\"\\\"Represent engineering decisions as structured, explainable, traceable knowledge objects.\\\"\""
+ekr: "\"\\\"Every Engineering Knowledge Record must include\\\"[5]: Decision Type,Decision Context,Decision Evidence,Decision Confidence,Decision Outcome\""
 success: Every engineering decision can be reconstructed from stored knowledge.
 future:
   decision_graphs: true

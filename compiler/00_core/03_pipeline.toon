@@ -1,4 +1,4 @@
-description: "metrics[9]: execution_time,memory_usage,graph_size,ontology_coverage,reasoning_depth,validation_rate,repair_rate,optimization_ratio,serialization_time depends_on[2]: 01_project_overview,02_design_principles produces[5]: Engineering_Knowledge_Records,Knowledge_Graphs,Engineering_Worlds,TOON_Dataset,Dataset_Metadata guarantees[6]: deterministic_execution,reproducible_outputs,validated_dataset,optimized_dataset,traceable_generation,explainable_pipeline"
+description: "\"metrics[9]: execution_time,memory_usage,graph_size,ontology_coverage,reasoning_depth,validation_rate,repair_rate,optimization_ratio,serialization_time depends_on[2]: 01_project_overview,02_design_principles produces[5]: Engineering_Knowledge_Records,Knowledge_Graphs,Engineering_Worlds,TOON_Dataset,Dataset_Metadata guarantees[6]: deterministic_execution,reproducible_outputs,validated_dataset,optimized_dataset,traceable_generation,explainable_pipeline\""
 spec:
   id: pipeline
   version: 1.0.0
@@ -6,18 +6,18 @@ spec:
   priority: highest
   module: Core
   compiler_stage: Execution
-  description: "\"Defines the complete execution pipeline of the TOON Dataset Compiler. Every piece of engineering knowledge follows this lifecycle from acquisition to final dataset release. The pipeline guarantees deterministic, reproducible, explainable, and quality-controlled compilation.\""
+  description: "\"\\\"Defines the complete execution pipeline of the TOON Dataset Compiler. Every piece of engineering knowledge follows this lifecycle from acquisition to final dataset release. The pipeline guarantees deterministic, reproducible, explainable, and quality-controlled compilation.\\\"\""
 overview:
-  purpose: "\"Transform heterogeneous engineering knowledge into structured, validated, optimized and serialized Engineering Knowledge Records.\""
-philosophy: "pipeline[21]: Acquire,→,Understand,→,Structure,→,Connect,→,Reason,→,Generate,→,Improve,→,Validate,→,Optimize,→,Serialize,→,Release"
+  purpose: "\"\\\"Transform heterogeneous engineering knowledge into structured, validated, optimized and serialized Engineering Knowledge Records.\\\"\""
+philosophy: "\"pipeline[21]: Acquire,→,Understand,→,Structure,→,Connect,→,Reason,→,Generate,→,Improve,→,Validate,→,Optimize,→,Serialize,→,Release\""
 stages:
   Stage_00:
-    description: "inputs[3]: configuration,compiler_version,ontology_version"
+    description: "\"inputs[3]: configuration,compiler_version,ontology_version\""
     name: Initialization
     objective: Initialize compiler environment.
     outputs: compiler_context
   Stage_01:
-    description: "inputs[8]: books,documentation,github,RFCs,papers,manuals,incidents,benchmarks"
+    description: "\"inputs[8]: books,documentation,github,RFCs,papers,manuals,incidents,benchmarks\""
     name: Knowledge Acquisition
     objective: Collect engineering knowledge.
     outputs: raw_knowledge

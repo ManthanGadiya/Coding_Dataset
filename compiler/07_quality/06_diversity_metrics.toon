@@ -1,349 +1,38 @@
 diversity_metrics:
-
   metadata:
-
     id: QLT-006
-
     title: Diversity Metrics
-
     version: 2.0
-
     status: Stable
-
     owner: Quality Engine
-
-    depends_on:
-
-      - compiler/07_quality/05_engineering_quality.toon
-      - compiler/03_curriculum/07_dataset_balancing.toon
-      - compiler/01_ontology/20_ontology_rules.toon
-
-    consumed_by:
-
-      - compiler/07_quality/07_curriculum_quality.toon
-      - compiler/07_quality/09_quality_dashboard.toon
-      - compiler/08_validation/06_diversity_validation.toon
-
-    objective:
-
-      Measure conceptual, architectural,
-      engineering, curriculum, and ecosystem
-      diversity to maximize generalization
-      while preserving realism and educational value.
-
-
-################################################################################
-# PHILOSOPHY
-################################################################################
-
-philosophy:
-
-  diversity_is_not_randomness
-
-  conceptual_diversity_over_surface_variation
-
-  realism_before_balance
-
-  coverage_over_frequency
-
-  engineering_has_multiple_solutions
-
-  deterministic_measurement
-
-  graph_native_analysis
-
-  diversity_improves_generalization
-
-
-################################################################################
-# INPUTS
-################################################################################
-
-inputs:
-
-  dataset
-
-  repository_graph
-
-  ontology_graph
-
-  curriculum_graph
-
-  reasoning_graph
-
-  architecture_graph
-
-  capability_matrix
-
-  distribution_statistics
-
-  benchmark_reports
-
-
-################################################################################
-# DIVERSITY DIMENSIONS
-################################################################################
-
-dimensions:
-
-  conceptual_diversity
-
-  reasoning_diversity
-
-  architectural_diversity
-
-  engineering_diversity
-
-  curriculum_diversity
-
-  ecosystem_diversity
-
-  organizational_diversity
-
-  temporal_diversity
-
-  failure_diversity
-
-  solution_diversity
-
-  domain_diversity
-
-  production_diversity
-
-
-################################################################################
-# ECOSYSTEM DIVERSITY
-################################################################################
-
-ecosystem:
-
-  programming_languages
-
-  frameworks
-
-  operating_systems
-
-  cloud_platforms
-
-  databases
-
-  build_systems
-
-  ci_cd_platforms
-
-  package_managers
-
-  deployment_models
-
-  infrastructure
-
-
-################################################################################
-# ENGINEERING DIVERSITY
-################################################################################
-
-engineering:
-
-  architectures
-
-  design_patterns
-
-  debugging_strategies
-
-  testing_strategies
-
-  deployment_strategies
-
-  monitoring_strategies
-
-  security_patterns
-
-  optimization_patterns
-
-  scalability_patterns
-
-  failure_patterns
-
-
-################################################################################
-# ANALYSIS
-################################################################################
-
-analysis:
-
-  entropy_analysis
-
-  graph_similarity
-
-  concept_similarity
-
-  capability_coverage
-
-  clustering_analysis
-
-  redundancy_detection
-
-  distribution_analysis
-
-  curriculum_balance
-
-  novelty_analysis
-
-
-################################################################################
-# SCORING
-################################################################################
-
-scoring:
-
-  shannon_entropy
-
-  concept_entropy
-
-  graph_entropy
-
-  capability_coverage
-
-  novelty_score
-
-  redundancy_penalty
-
-  curriculum_balance
-
-  diversity_score
-
-
-################################################################################
-# CONSTRAINTS
-################################################################################
-
-constraints:
-
-  deterministic
-
-  reproducible
-
-  statistically_valid
-
-  explainable
-
-  benchmarkable
-
-  curriculum_safe
-
-  graph_consistent
-
-
-################################################################################
-# VALIDATION
-################################################################################
-
-validation:
-
-  entropy_validation
-
-  coverage_validation
-
-  distribution_validation
-
-  benchmark_validation
-
-  graph_validation
-
-  determinism_validation
-
-
-################################################################################
-# RANDOMIZATION
-################################################################################
-
+    depends_on[3]: "- compiler/07_quality/05_engineering_quality.toon","- compiler/03_curriculum/07_dataset_balancing.toon","- compiler/01_ontology/20_ontology_rules.toon"
+    consumed_by[3]: "- compiler/07_quality/07_curriculum_quality.toon","- compiler/07_quality/09_quality_dashboard.toon","- compiler/08_validation/06_diversity_validation.toon"
+    objective[4]: "Measure conceptual, architectural,","engineering, curriculum, and ecosystem",diversity to maximize generalization,while preserving realism and educational value.
+philosophy[8]: diversity_is_not_randomness,conceptual_diversity_over_surface_variation,realism_before_balance,coverage_over_frequency,engineering_has_multiple_solutions,deterministic_measurement,graph_native_analysis,diversity_improves_generalization
+inputs[9]: dataset,repository_graph,ontology_graph,curriculum_graph,reasoning_graph,architecture_graph,capability_matrix,distribution_statistics,benchmark_reports
+dimensions[12]: conceptual_diversity,reasoning_diversity,architectural_diversity,engineering_diversity,curriculum_diversity,ecosystem_diversity,organizational_diversity,temporal_diversity,failure_diversity,solution_diversity,domain_diversity,production_diversity
+ecosystem[10]: programming_languages,frameworks,operating_systems,cloud_platforms,databases,build_systems,ci_cd_platforms,package_managers,deployment_models,infrastructure
+engineering[10]: architectures,design_patterns,debugging_strategies,testing_strategies,deployment_strategies,monitoring_strategies,security_patterns,optimization_patterns,scalability_patterns,failure_patterns
+analysis[9]: entropy_analysis,graph_similarity,concept_similarity,capability_coverage,clustering_analysis,redundancy_detection,distribution_analysis,curriculum_balance,novelty_analysis
+scoring[8]: shannon_entropy,concept_entropy,graph_entropy,capability_coverage,novelty_score,redundancy_penalty,curriculum_balance,diversity_score
+constraints[7]: deterministic,reproducible,statistically_valid,explainable,benchmarkable,curriculum_safe,graph_consistent
+validation[6]: entropy_validation,coverage_validation,distribution_validation,benchmark_validation,graph_validation,determinism_validation
 randomization:
-
-  deterministic_seed:
-
-    true
-
-  reproducible:
-
-    true
-
-
-################################################################################
-# OUTPUTS
-################################################################################
-
-outputs:
-
-  diversity_report
-
-  entropy_report
-
-  capability_coverage
-
-  redundancy_report
-
-  novelty_report
-
-  distribution_report
-
-  metadata
-
-
-################################################################################
-# METRICS
-################################################################################
-
+  deterministic_seed: true
+  reproducible: true
+outputs[7]: diversity_report,entropy_report,capability_coverage,redundancy_report,novelty_report,distribution_report,metadata
 metrics:
-
-  compute:
-
-    conceptual_entropy
-
-    reasoning_entropy
-
-    architecture_entropy
-
-    engineering_entropy
-
-    curriculum_entropy
-
-    ecosystem_entropy
-
-    redundancy_ratio
-
-    capability_coverage
-
-    novelty_score
-
-    generalization_score
-
-
-################################################################################
-# SUCCESS METRICS
-################################################################################
-
+  compute[10]: conceptual_entropy,reasoning_entropy,architecture_entropy,engineering_entropy,curriculum_entropy,ecosystem_entropy,redundancy_ratio,capability_coverage,novelty_score,generalization_score
 success_metrics:
-
   capability_coverage:
-
     minimum: 0.99
-
   conceptual_entropy:
-
     minimum: 0.99
-
   engineering_entropy:
-
     minimum: 0.99
-
   redundancy_ratio:
-
     maximum: 0.05
-
   generalization_score:
-
     minimum: 0.99
-
   determinism:
-
-    minimum: 1.00
+    minimum: 1.0

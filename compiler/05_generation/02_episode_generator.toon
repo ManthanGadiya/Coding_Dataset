@@ -1,21 +1,20 @@
-description: "lifecycle[6]: initialized,generated,validated,accepted,exported,archived"
+description: "\"lifecycle[6]: initialized,generated,validated,accepted,exported,archived\""
 episode_generator:
   metadata:
-    description: "depends_on[4]: compiler/05_generation/01_generation_engine.toon,compiler/03_curriculum/10_master_curriculum.toon,compiler/04_world/15_world_state.toon,compiler/02_cognition/16_master_cognition.toon consumed_by[4]: compiler/05_generation/03_task_generator.toon,compiler/05_generation/08_code_generator.toon,compiler/05_generation/15_scenario_generator.toon,compiler/05_generation/19_dataset_builder.toon"
+    description: "\"depends_on[4]: compiler/05_generation/01_generation_engine.toon,compiler/03_curriculum/10_master_curriculum.toon,compiler/04_world/15_world_state.toon,compiler/02_cognition/16_master_cognition.toon consumed_by[4]: compiler/05_generation/03_task_generator.toon,compiler/05_generation/08_code_generator.toon,compiler/05_generation/15_scenario_generator.toon,compiler/05_generation/19_dataset_builder.toon\""
     id: GEN-002
     title: Episode Generator
     version: 1.0
     status: Stable
     owner: Generation Engine
     objective: Generate complete engineering learning episodes that simulate realistic software development from problem identification through validation and world update.
-world[2]: "read[6]: repositories,engineers,incidents,projects,technical_debt,customer_feedback","write[7]: commits,pull_requests,releases,incidents,documentation,metrics,world_state"
 randomization:
   deterministic_seed: true
   weighted_sampling: true
   reproducible: true
   configurable_entropy: true
-validation: "reject_if[7]: missing_context,invalid_curriculum,inconsistent_world,duplicate_episode,incomplete_artifacts,invalid_reasoning,impossible_history"
-metrics: "compute[8]: curriculum_alignment,engineering_realism,reasoning_quality,artifact_completeness,world_consistency,replayability,educational_value,diversity"
+validation: "\"reject_if[7]: missing_context,invalid_curriculum,inconsistent_world,duplicate_episode,incomplete_artifacts,invalid_reasoning,impossible_history\""
+metrics: "\"compute[8]: curriculum_alignment,engineering_realism,reasoning_quality,artifact_completeness,world_consistency,replayability,educational_value,diversity\""
 success_metrics:
   curriculum_alignment:
     minimum: 1.0

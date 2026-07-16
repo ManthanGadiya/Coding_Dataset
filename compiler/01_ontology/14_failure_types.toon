@@ -1,4 +1,4 @@
-description: "guarantees[5]: Explicit Failure Taxonomy,Root Cause Preservation,Explainable Recovery,Reusable Postmortems,Production Realism"
+description: "\"guarantees[5]: Explicit Failure Taxonomy,Root Cause Preservation,Explainable Recovery,Reusable Postmortems,Production Realism\""
 spec:
   id: failure_types
   version: 1.0.0
@@ -6,9 +6,9 @@ spec:
   priority: highest
   module: Ontology
   compiler_stage: Knowledge Representation
-  description: "\"Defines the complete ontology of engineering failures. A failure represents the inability of a software system, process, component or engineering decision to satisfy its intended objectives under given conditions. Every Engineering Knowledge Record involving incidents, debugging, optimization or postmortem analysis shall classify failures using this ontology.\""
+  description: "\"\\\"Defines the complete ontology of engineering failures. A failure represents the inability of a software system, process, component or engineering decision to satisfy its intended objectives under given conditions. Every Engineering Knowledge Record involving incidents, debugging, optimization or postmortem analysis shall classify failures using this ontology.\\\"\""
 purpose: Represent failures as reusable engineering knowledge rather than isolated bugs.
-ekr: "\"Every failure record contains\"[7]: Trigger,Symptoms,Evidence,Root Cause,Mitigation,Recovery,Lessons Learned"
+ekr: "\"\\\"Every failure record contains\\\"[7]: Trigger,Symptoms,Evidence,Root Cause,Mitigation,Recovery,Lessons Learned\""
 examples:
   Example_01:
     Failure: Deadlock

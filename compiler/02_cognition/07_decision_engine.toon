@@ -1,3 +1,4 @@
+description: "metrics[6]: Decision Accuracy,Validation Success Rate,Average Confidence,Reversal Rate,Engineering Impact,Long Term Stability success[6]: Every engineering decision,\"is evidence-based,\",\"explainable,\",\"reproducible,\",\"measurable,\",and continuously improvable. guarantees[5]: Explainable Decisions,Explicit Tradeoffs,Risk Awareness,Evidence Traceability,Decision Reproducibility"
 spec:
   id: decision_engine
   version: 1.0.0
@@ -6,44 +7,17 @@ spec:
   module: Cognition
   compiler_stage: Decision Making
   description: >
-purpose[3]: "Produce explainable,",evidence-based engineering,decisions under uncertainty.
-philosophy[5]: Decisions are never guesses.,Every decision has context.,Every decision has evidence.,Every decision has tradeoffs.,Every decision has consequences.
-pipeline[19]: Objective,→,Context,→,Constraints,→,Evidence,→,Hypotheses,→,Alternatives,→,Tradeoff Analysis,→,Decision,→,Validation,→,Reflection
-inputs[10]: Engineering Goal,Context,Constraints,Requirements,Knowledge Atoms,Engineering Memory,Evidence,Hypotheses,Risk Analysis,Tradeoff Analysis
-outputs[6]: Engineering Decision,Architecture Decision,Design Choice,Optimization Strategy,Implementation Plan,Escalation
-types[10]: Architecture,Algorithm,Performance,Security,Infrastructure,Refactoring,Debugging,Operational,Research,Product
-attributes[8]: identity,objective,confidence,impact,reversibility,urgency,rationale,owner
-objectives[8]: Correctness,Reliability,Maintainability,Performance,Simplicity,Security,Scalability,Cost Efficiency
-strategies[6]: Rule Based,Constraint Driven,Evidence Maximization,Risk Minimization,Cost Optimization,Multi Objective Optimization
-alternatives[6]: Generate,Filter,Compare,Rank,Eliminate,Recommend
-tradeoffs[12]: Performance,↔,Maintainability,Security,↔,Usability,Simplicity,↔,Flexibility,Cost,↔,Reliability
-risk[6]: Technical,Operational,Security,Financial,Organizational,Unknown
-confidence[5]: Unknown,Low,Medium,High,Very High
-validation[6]: Benchmark,Test,Simulation,Static Analysis,Dynamic Analysis,Peer Review
-failure[5]: Missing Evidence,Contradictory Evidence,Unresolved Tradeoffs,Constraint Violation,Low Confidence
-escalation[4]: Human Review,Additional Research,More Experiments,Gather More Evidence
-memory[4]: Retrieve Similar Decisions,Retrieve Past Outcomes,Reinforce Successful Decisions,Avoid Previous Failures
-reasoning[6]: Deductive,Inductive,Abductive,Analogical,Counterfactual,Systems Thinking
-record[11]: Context,Objective,Constraints,Alternatives,Evidence,Risks,Tradeoffs,Decision,Confidence,Validation,Outcome
 ekr:
   description: Every Engineering Knowledge Record
-  stores[6]: Decision Context,Alternatives,Supporting Evidence,Confidence,Validation,Final Outcome
-rules[6]: Every decision has context.,Every decision has objective.,Every decision evaluates alternatives.,Every decision explains tradeoffs.,Every decision records confidence.,Every decision is reproducible.
 examples:
   Example_01:
     Problem: Slow Database
     Decision: Add Composite Index
-    Evidence[2]: Query Plan,Benchmark
   Example_02:
     Problem: Frequent API Failures
     Decision: Introduce Circuit Breaker
-    Evidence[2]: Incident History,Retry Analysis
   Example_03:
     Problem: Memory Leak
-    Decision[2]: Replace Shared Ownership,With Arena Allocation
-metrics[6]: Decision Accuracy,Validation Success Rate,Average Confidence,Reversal Rate,Engineering Impact,Long Term Stability
-success[6]: Every engineering decision,"is evidence-based,","explainable,","reproducible,","measurable,",and continuously improvable.
-guarantees[5]: Explainable Decisions,Explicit Tradeoffs,Risk Awareness,Evidence Traceability,Decision Reproducibility
 future:
   bayesian_decision_engine: true
   probabilistic_utilities: true

@@ -1,3 +1,4 @@
+description: "metrics[6]: Lessons Generated,Memory Updates,Reflection Depth,Improvement Rate,Repeated Mistakes,Prevented Failures guarantees[5]: Continuous Learning,Explicit Lessons,Memory Evolution,Engineering Improvement,Explainable Experience"
 spec:
   id: reflection_model
   version: 1.0.0
@@ -6,46 +7,21 @@ spec:
   module: Cognition
   compiler_stage: Reflective Cognition
   description: >
-purpose[5]: Learn,improve,generalize,preserve,engineering experience.
-philosophy[8]: Every decision,teaches something.,Every mistake,has value.,Reflection converts,experience into knowledge.,Expertise is accumulated,reflection.
-pipeline[13]: Outcome,→,Compare Expectation,→,Detect Differences,→,Root Cause Analysis,→,Lesson Extraction,→,Generalization,→,Memory Update
-inputs[8]: Engineering Decision,Implementation,Validation Results,Production Metrics,Benchmarks,Incidents,User Feedback,Code Reviews
-outputs[6]: Lesson,Best Practice,Anti Pattern,Updated Memory,Engineering Guideline,Knowledge Atom
-types[7]: Success Reflection,Failure Reflection,Performance Reflection,Security Reflection,Architecture Reflection,Process Reflection,Team Reflection
-questions[8]: What happened?,Why did it happen?,What assumptions failed?,What assumptions held?,What surprised us?,What would we change?,What should be reused?,What should be avoided?
-analysis[6]: Compare Prediction,Compare Outcome,Compare Alternatives,Measure Impact,Measure Cost,Measure Risk
-lessons[6]: Best Practice,Anti Pattern,Heuristic,Rule,Guideline,Design Principle
-generalization[5]: Local,Project,Domain,Cross Domain,Universal
-memory[5]: Reinforce,Correct,Merge,Replace,Archive
-biases[5]: Hindsight Bias,Confirmation Bias,Outcome Bias,Survivorship Bias,Anchoring Bias
-mitigation[5]: Evidence Review,Independent Analysis,Alternative Explanations,Counterfactual Thinking,Peer Review
-failure[5]: Root Cause,Trigger,Propagation,Recovery,Prevention
-success[3]: Every engineering activity,improves future engineering,through structured reflection.
-heuristics[5]: Prefer Simplicity,Measure Before Optimizing,Fail Fast,Validate Assumptions,Document Decisions
-integration[4]: Update Semantic Memory,Update Episodic Memory,Update Procedural Memory,Reinforce Mental Models
 ekr:
   description: Every Engineering Knowledge Record
-  stores[5]: Expected Outcome,Actual Outcome,Reflection,Lessons Learned,Memory Updates
-validation[8]: Every reflection,references evidence.,Every lesson,is actionable.,Every improvement,is justified.,Every reflection,updates engineering knowledge.
 examples:
   Example_01:
     Expected: Query Faster
     Actual: 45% Faster
-    Lesson[2]: Composite Index,Works Under This Workload
   Example_02:
     Expected: Better Scalability
     Actual: Operational Complexity Increased
-    Lesson[2]: Microservices,Were Premature
   Example_03:
     Expected: Memory Reduction
     Actual: Cache Thrashing
-    Lesson[2]: Working Set,Exceeded Cache Capacity
   Example_04:
     Expected: Faster Deployment
     Actual: Increased Rollbacks
-    Lesson[2]: Deployment Speed,Requires Better Validation
-metrics[6]: Lessons Generated,Memory Updates,Reflection Depth,Improvement Rate,Repeated Mistakes,Prevented Failures
-guarantees[5]: Continuous Learning,Explicit Lessons,Memory Evolution,Engineering Improvement,Explainable Experience
 future:
   autonomous_reflection: true
   lesson_graphs: true

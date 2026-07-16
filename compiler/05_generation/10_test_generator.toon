@@ -1,19 +1,19 @@
-description: "outputs[6]: generated_tests,fixtures,expected_results,coverage_report,regression_suite,validation_report"
+description: "\"outputs[6]: generated_tests,fixtures,expected_results,coverage_report,regression_suite,validation_report\""
 test_generator:
   metadata:
-    description: "depends_on[4]: compiler/05_generation/08_code_generator.toon,compiler/05_generation/09_bug_generator.toon,compiler/04_world/15_world_state.toon,compiler/01_ontology/20_ontology_rules.toon consumed_by[3]: compiler/05_generation/11_review_generator.toon,compiler/05_generation/12_documentation_generator.toon,compiler/05_generation/19_dataset_builder.toon"
+    description: "\"depends_on[4]: compiler/05_generation/08_code_generator.toon,compiler/05_generation/09_bug_generator.toon,compiler/04_world/15_world_state.toon,compiler/01_ontology/20_ontology_rules.toon consumed_by[3]: compiler/05_generation/11_review_generator.toon,compiler/05_generation/12_documentation_generator.toon,compiler/05_generation/19_dataset_builder.toon\""
     id: GEN-010
     title: Test Generator
     version: 2.0
     status: Stable
     owner: Generation Engine
-    objective: "\"Generate comprehensive production-quality testing artifacts that verify correctness, robustness, performance, security, compatibility, and long-term maintainability.\""
+    objective: "\"\\\"Generate comprehensive production-quality testing artifacts that verify correctness, robustness, performance, security, compatibility, and long-term maintainability.\\\"\""
 randomization:
   deterministic_seed: true
   edge_case_sampling: enabled
   mutation_targets: guided
-validation: "reject_if[6]: flaky,non_deterministic,impossible_assertion,invalid_fixture,broken_dependency,architecture_violation"
-metrics: "compute[7]: coverage_score,fault_detection_rate,mutation_score,regression_strength,maintainability,execution_efficiency,educational_value"
+validation: "\"reject_if[6]: flaky,non_deterministic,impossible_assertion,invalid_fixture,broken_dependency,architecture_violation\""
+metrics: "\"compute[7]: coverage_score,fault_detection_rate,mutation_score,regression_strength,maintainability,execution_efficiency,educational_value\""
 success_metrics:
   determinism:
     minimum: 1.0

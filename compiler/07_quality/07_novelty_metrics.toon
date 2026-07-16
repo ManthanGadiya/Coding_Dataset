@@ -1,267 +1,32 @@
 novelty_metrics:
-
   metadata:
-
     id: QLT-011
-
     title: Novelty Metrics
-
     version: 2.0
-
     status: Stable
-
     owner: Quality Engine
-
-    depends_on:
-
-      - compiler/07_quality/06_diversity_metrics.toon
-      - compiler/01_ontology/03_capability_graph.toon
-      - compiler/03_curriculum/07_dataset_balancing.toon
-
-    consumed_by:
-
-      - compiler/07_quality/11_quality_reports.toon
-      - compiler/07_quality/12_quality_thresholds.toon
-      - compiler/08_validation/09_dataset_validation.toon
-
-    objective:
-
-      Measure the novelty of every dataset
-      sample relative to existing knowledge
-      to ensure the dataset adds new
-      engineering concepts, reasoning
-      patterns, and problem-solving
-      approaches beyond redundancy.
-
-
-################################################################################
-# PHILOSOPHY
-################################################################################
-
-philosophy:
-
-  novelty_creates_capability
-
-  redundancy_wastes_capacity
-
-  measured_novelty_guides_curation
-
-  diversity_is_not_novelty
-
-  deterministic_novelty_measurement
-
-  graph_native_comparison
-
-  concept_level_analysis
-
-  benchmark_correlated
-
-
-################################################################################
-# INPUTS
-################################################################################
-
-inputs:
-
-  existing_dataset
-
-  new_samples
-
-  ontology_graph
-
-  capability_graph
-
-  reasoning_graph
-
-  novelty_thresholds
-
-  comparison_baselines
-
-  benchmark_suite
-
-
-################################################################################
-# NOVELTY DIMENSIONS
-################################################################################
-
-dimensions:
-
-  concept_novelty
-
-  reasoning_novelty
-
-  architectural_novelty
-
-  engineering_novelty
-
-  failure_novelty
-
-  solution_novelty
-
-  domain_novelty
-
-  pattern_novelty
-
-
-################################################################################
-# ANALYSIS
-################################################################################
-
-analysis:
-
-  concept_overlap_analysis
-
-  similarity_scoring
-
-  novelty_quantification
-
-  redundancy_detection
-
-  capability_gap_analysis
-
-  marginal_value_estimation
-
-  benchmark_impact_projection
-
-
-################################################################################
-# SCORING
-################################################################################
-
-scoring:
-
-  concept_novelty_score
-
-  reasoning_novelty_score
-
-  architectural_novelty_score
-
-  overall_novelty_score
-
-  marginal_capability_gain
-
-  redundancy_penalty
-
-  novelty_contribution
-
-
-################################################################################
-# CONSTRAINTS
-################################################################################
-
-constraints:
-
-  deterministic
-
-  reproducible
-
-  benchmark_correlated
-
-  ontology_aligned
-
-  graph_consistent
-
-  threshold_configurable
-
-  explainable
-
-
-################################################################################
-# VALIDATION
-################################################################################
-
-validation:
-
-  novelty_score_validation
-
-  similarity_validation
-
-  benchmark_correlation_validation
-
-  consistency_validation
-
-  determinism_validation
-
-  reproducibility_validation
-
-
-################################################################################
-# RANDOMIZATION
-################################################################################
-
+    depends_on[3]: "- compiler/07_quality/06_diversity_metrics.toon","- compiler/01_ontology/03_capability_graph.toon","- compiler/03_curriculum/07_dataset_balancing.toon"
+    consumed_by[3]: "- compiler/07_quality/11_quality_reports.toon","- compiler/07_quality/12_quality_thresholds.toon","- compiler/08_validation/09_dataset_validation.toon"
+    objective[6]: Measure the novelty of every dataset,sample relative to existing knowledge,to ensure the dataset adds new,"engineering concepts, reasoning","patterns, and problem-solving",approaches beyond redundancy.
+philosophy[8]: novelty_creates_capability,redundancy_wastes_capacity,measured_novelty_guides_curation,diversity_is_not_novelty,deterministic_novelty_measurement,graph_native_comparison,concept_level_analysis,benchmark_correlated
+inputs[8]: existing_dataset,new_samples,ontology_graph,capability_graph,reasoning_graph,novelty_thresholds,comparison_baselines,benchmark_suite
+dimensions[8]: concept_novelty,reasoning_novelty,architectural_novelty,engineering_novelty,failure_novelty,solution_novelty,domain_novelty,pattern_novelty
+analysis[7]: concept_overlap_analysis,similarity_scoring,novelty_quantification,redundancy_detection,capability_gap_analysis,marginal_value_estimation,benchmark_impact_projection
+scoring[7]: concept_novelty_score,reasoning_novelty_score,architectural_novelty_score,overall_novelty_score,marginal_capability_gain,redundancy_penalty,novelty_contribution
+constraints[7]: deterministic,reproducible,benchmark_correlated,ontology_aligned,graph_consistent,threshold_configurable,explainable
+validation[6]: novelty_score_validation,similarity_validation,benchmark_correlation_validation,consistency_validation,determinism_validation,reproducibility_validation
 randomization:
-
-  deterministic_seed:
-
-    true
-
-  reproducible:
-
-    true
-
-
-################################################################################
-# OUTPUTS
-################################################################################
-
-outputs:
-
-  novelty_report
-
-  novelty_scores
-
-  redundancy_report
-
-  capability_gap_analysis
-
-  marginal_value_estimates
-
-  curation_recommendations
-
-  metadata
-
-
-################################################################################
-# METRICS
-################################################################################
-
+  deterministic_seed: true
+  reproducible: true
+outputs[7]: novelty_report,novelty_scores,redundancy_report,capability_gap_analysis,marginal_value_estimates,curation_recommendations,metadata
 metrics:
-
-  compute:
-
-    average_novelty
-
-    concept_novelty_rate
-
-    reasoning_novelty_rate
-
-    redundancy_rate
-
-    capability_gap_fill_rate
-
-    novelty_contribution
-
-    analysis_latency
-
-
-################################################################################
-# SUCCESS METRICS
-################################################################################
-
+  compute[7]: average_novelty,concept_novelty_rate,reasoning_novelty_rate,redundancy_rate,capability_gap_fill_rate,novelty_contribution,analysis_latency
 success_metrics:
-
   average_novelty:
-
-    minimum: 0.70
-
+    minimum: 0.7
   capability_gap_fill_rate:
-
-    minimum: 0.80
-
+    minimum: 0.8
   redundancy_rate:
-
-    maximum: 0.10
-
+    maximum: 0.1
   determinism:
-
-    minimum: 1.00
+    minimum: 1.0

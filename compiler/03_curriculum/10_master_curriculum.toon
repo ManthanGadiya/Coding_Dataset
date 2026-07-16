@@ -1,14 +1,13 @@
-description: "outputs[8]: curriculum_graph,ordered_learning_path,prerequisite_map,sampling_policy,balancing_policy,spacing_schedule,mastery_targets,validation_constraints"
+description: "\"outputs[8]: curriculum_graph,ordered_learning_path,prerequisite_map,sampling_policy,balancing_policy,spacing_schedule,mastery_targets,validation_constraints\""
 master_curriculum:
   metadata:
-    description: "depends_on[9]: compiler/03_curriculum/01_learning_order.toon,compiler/03_curriculum/02_skill_progression.toon,compiler/03_curriculum/03_domain_progression.toon,compiler/03_curriculum/04_difficulty_progression.toon,compiler/03_curriculum/05_prerequisite_graph.toon,compiler/03_curriculum/06_sampling_strategy.toon,compiler/03_curriculum/07_dataset_balancing.toon,compiler/03_curriculum/08_spacing_algorithm.toon,compiler/03_curriculum/09_curriculum_graph.toon consumed_by[3]: compiler/05_generation/19_dataset_builder.toon,compiler/08_validation/09_dataset_validation.toon,compiler/09_optimization/07_curriculum_optimizer.toon"
+    description: "\"depends_on[9]: compiler/03_curriculum/01_learning_order.toon,compiler/03_curriculum/02_skill_progression.toon,compiler/03_curriculum/03_domain_progression.toon,compiler/03_curriculum/04_difficulty_progression.toon,compiler/03_curriculum/05_prerequisite_graph.toon,compiler/03_curriculum/06_sampling_strategy.toon,compiler/03_curriculum/07_dataset_balancing.toon,compiler/03_curriculum/08_spacing_algorithm.toon,compiler/03_curriculum/09_curriculum_graph.toon consumed_by[3]: compiler/05_generation/19_dataset_builder.toon,compiler/08_validation/09_dataset_validation.toon,compiler/09_optimization/07_curriculum_optimizer.toon\""
     id: CURR-010
     title: Master Curriculum
     version: 1.0
     status: Stable
     owner: Curriculum Engine
     objective: Produce the canonical executable curriculum used by every dataset generation pipeline.
-philosophy[2]: "maximize[5]: engineering_reasoning,transfer_learning,production_readiness,autonomous_problem_solving,long_term_retention","minimize[5]: memorization,redundant_examples,isolated_knowledge,curriculum_bias,catastrophic_forgetting"
 pipeline:
   step_01: learning_order
   step_02: skill_progression
@@ -22,7 +21,7 @@ pipeline:
   step_10: dataset_generation
 stages:
   stage:
-    description: "domains[5]: Autonomous Coding,Autonomous Review,Autonomous Debugging,Autonomous Architecture,Self Improvement"
+    description: "\"domains[5]: Autonomous Coding,Autonomous Review,Autonomous Debugging,Autonomous Architecture,Self Improvement\""
     id: STAGE-008
     name: Autonomous Engineering
     target_mastery: 0.84
@@ -34,9 +33,7 @@ constraints:
   spacing: mandatory
   adaptive_sampling: enabled
   deterministic_builds: enabled
-compiler_rules[2]: "always[6]: validate_prerequisites,validate_curriculum_graph,validate_balancing,validate_spacing,validate_sampling,validate_stage_completion","never[4]: skip_stage,violate_dependencies,exceed_complexity_budget,generate_duplicate_curricula"
-optimization[2]: "optimize_for[6]: engineering_intuition,reasoning_quality,production_capability,autonomous_capability,sample_efficiency,knowledge_density","avoid[5]: shallow_learning,overfitting,shortcut_learning,domain_collapse,curriculum_fragmentation"
-validation: "required[8]: prerequisite_graph_valid,curriculum_graph_valid,stage_order_valid,sampling_valid,balancing_valid,spacing_valid,deterministic_execution,reproducible_builds"
+validation: "\"required[8]: prerequisite_graph_valid,curriculum_graph_valid,stage_order_valid,sampling_valid,balancing_valid,spacing_valid,deterministic_execution,reproducible_builds\""
 success_metrics:
   curriculum_integrity:
     minimum: 1.0

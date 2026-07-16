@@ -1,3 +1,4 @@
+description: "metrics[6]: Skill Growth Rate,Mastery Percentage,Practice Coverage,Capability Score,Transfer Score,Engineering Maturity success[5]: Engineering skills,evolve systematically,from foundational competence,to expert judgment,through measurable progression. guarantees[5]: Progressive Skill Growth,Measurable Competence,Transferable Expertise,Lifelong Improvement,Engineering Readiness"
 spec:
   id: skill_progression
   version: 1.0.0
@@ -6,42 +7,15 @@ spec:
   module: Curriculum
   compiler_stage: Skill Development
   description: >
-purpose[5]: develop,assess,reinforce,evolve,engineering skills.
-philosophy[6]: Skills grow through practice.,Mastery requires repetition.,Complexity increases gradually.,Experience compounds.,Engineering maturity,develops over time.
-pipeline[11]: Learn,→,Practice,→,Apply,→,Improve,→,Generalize,→,Master
-levels[6]: Novice,Beginner,Intermediate,Advanced,Expert,Principal
-novice[4]: Follow Instructions,Recognize Syntax,Execute Examples,Learn Terminology
-beginner[4]: Modify Examples,Solve Simple Problems,Debug Basic Errors,Explain Concepts
-intermediate[4]: Build Projects,Optimize Code,Analyze Tradeoffs,Read Large Codebases
-advanced[4]: Design Systems,Mentor Others,Evaluate Architectures,Handle Production Issues
-expert[4]: Cross Domain Reasoning,Predict Failures,Optimize Organizations,Create New Patterns
-principal[4]: Engineering Vision,Technical Leadership,Organization Scale Design,Long Term Strategy
-categories[10]: Programming,Algorithms,Systems,Architecture,Debugging,Testing,Security,Performance,Communication,Leadership
-dimensions[7]: Knowledge,Reasoning,Execution,Communication,Decision Making,Independence,Adaptability
-capabilities[6]: Accuracy,Speed,Reliability,Complexity,Creativity,Explainability
-practice[5]: Guided,Independent,Collaborative,Project Based,Production Based
-mastery[6]: Explain,Implement,Debug,Optimize,Teach,Generalize
-regression[4]: Detect Skill Decay,Detect Forgotten Concepts,Reinforce Weak Skills,Schedule Review
-transfer[12]: Programming,→,Systems,Systems,→,Distributed Systems,Algorithms,→,AI,Security,→,Infrastructure
-evaluation[5]: Practical Tasks,Code Review,Architecture Review,Incident Handling,Design Interview
-memory[4]: Reinforce Successful Skills,Track Weak Skills,Record Milestones,Store Experience
 ekr:
   description: Every Engineering Knowledge Record
-  stores[4]: Skill Level,Required Competencies,Mastery Evidence,Capability Improvements
-validation[6]: Every skill,has measurable criteria.,Every level,builds upon previous levels.,Every progression,requires demonstrated capability.
 examples:
   Example_01:
     Skill: Debugging
-    Progression[7]: Read Stack Trace,→,Reproduce Bug,→,Root Cause Analysis,→,Prevent Recurrence
   Example_02:
     Skill: Architecture
-    Progression[7]: Understand Components,→,Design Modules,→,Design Systems,→,Optimize Organizations
   Example_03:
     Skill: Performance
-    Progression[7]: Measure,→,Profile,→,Optimize,→,Predict Bottlenecks
-metrics[6]: Skill Growth Rate,Mastery Percentage,Practice Coverage,Capability Score,Transfer Score,Engineering Maturity
-success[5]: Engineering skills,evolve systematically,from foundational competence,to expert judgment,through measurable progression.
-guarantees[5]: Progressive Skill Growth,Measurable Competence,Transferable Expertise,Lifelong Improvement,Engineering Readiness
 future:
   adaptive_skill_paths: true
   competency_prediction: true

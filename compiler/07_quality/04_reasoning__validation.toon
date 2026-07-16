@@ -1,360 +1,38 @@
 reasoning_quality:
-
   metadata:
-
     id: QLT-004
-
     title: Reasoning Quality
-
     version: 2.0
-
     status: Stable
-
     owner: Quality Engine
-
-    depends_on:
-
-      - compiler/07_quality/03_knowledge_density.toon
-      - compiler/02_cognition/03_reasoning_graphs.toon
-      - compiler/02_cognition/10_reflection_model.toon
-      - compiler/02_cognition/15_cognitive_metrics.toon
-
-    consumed_by:
-
-      - compiler/07_quality/05_engineering_quality.toon
-      - compiler/07_quality/09_quality_dashboard.toon
-      - compiler/08_validation/03_reasoning_validation.toon
-
-    objective:
-
-      Evaluate the quality, robustness,
-      completeness, and transferability
-      of engineering reasoning contained
-      within dataset samples.
-
-
-################################################################################
-# PHILOSOPHY
-################################################################################
-
-philosophy:
-
-  reasoning_over_answers
-
-  evidence_before_conclusions
-
-  assumptions_should_be_visible
-
-  tradeoffs_create_engineers
-
-  uncertainty_is_reasoning
-
-  explainability_matters
-
-  deterministic_evaluation
-
-  transferable_reasoning
-
-
-################################################################################
-# INPUTS
-################################################################################
-
-inputs:
-
-  reasoning_graph
-
-  engineering_story
-
-  engineering_dialogue
-
-  architecture
-
-  implementation
-
-  evidence_graph
-
-  confidence_graph
-
-  curriculum_graph
-
-  engineering_memory
-
-  benchmark_results
-
-
-################################################################################
-# REASONING DIMENSIONS
-################################################################################
-
-dimensions:
-
-  logical_consistency
-
-  causal_reasoning
-
-  evidence_quality
-
-  assumption_quality
-
-  hypothesis_quality
-
-  tradeoff_analysis
-
-  uncertainty_reasoning
-
-  abstraction_quality
-
-  decomposition_quality
-
-  transferability
-
-  explainability
-
-  reflection_quality
-
-
-################################################################################
-# REASONING COMPONENTS
-################################################################################
-
-components:
-
-  observations
-
-  assumptions
-
-  hypotheses
-
-  evidence
-
-  alternatives
-
-  constraints
-
-  tradeoffs
-
-  decisions
-
-  conclusions
-
-  confidence
-
-  reflection
-
-  lessons
-
-
-################################################################################
-# ANALYSIS
-################################################################################
-
-analysis:
-
-  reasoning_graph_analysis
-
-  causal_chain_analysis
-
-  assumption_validation
-
-  evidence_validation
-
-  hypothesis_validation
-
-  tradeoff_validation
-
-  abstraction_analysis
-
-  decomposition_analysis
-
-  reflection_analysis
-
-
-################################################################################
-# FAILURE PATTERNS
-################################################################################
-
-failures:
-
-  missing_reasoning
-
-  unsupported_claim
-
-  invalid_inference
-
-  skipped_steps
-
-  circular_reasoning
-
-  premature_conclusion
-
-  weak_evidence
-
-  ignored_constraints
-
-  false_tradeoff
-
-  poor_abstraction
-
-  confidence_mismatch
-
-  missing_reflection
-
-
-################################################################################
-# SCORING
-################################################################################
-
-scoring:
-
-  reasoning_depth
-
-  reasoning_completeness
-
-  reasoning_transferability
-
-  engineering_reasoning
-
-  evidence_strength
-
-  tradeoff_quality
-
-  reflection_score
-
-  confidence_alignment
-
-
-################################################################################
-# CONSTRAINTS
-################################################################################
-
-constraints:
-
-  deterministic
-
-  reproducible
-
-  explainable
-
-  benchmarkable
-
-  curriculum_safe
-
-  graph_consistent
-
-  evidence_based
-
-
-################################################################################
-# VALIDATION
-################################################################################
-
-validation:
-
-  logical_validation
-
-  evidence_validation
-
-  graph_validation
-
-  benchmark_validation
-
-  consistency_validation
-
-  determinism_validation
-
-
-################################################################################
-# RANDOMIZATION
-################################################################################
-
+    depends_on[4]: "- compiler/07_quality/03_knowledge_density.toon","- compiler/02_cognition/03_reasoning_graphs.toon","- compiler/02_cognition/10_reflection_model.toon","- compiler/02_cognition/15_cognitive_metrics.toon"
+    consumed_by[3]: "- compiler/07_quality/05_engineering_quality.toon","- compiler/07_quality/09_quality_dashboard.toon","- compiler/08_validation/03_reasoning_validation.toon"
+    objective[4]: "Evaluate the quality, robustness,","completeness, and transferability",of engineering reasoning contained,within dataset samples.
+philosophy[8]: reasoning_over_answers,evidence_before_conclusions,assumptions_should_be_visible,tradeoffs_create_engineers,uncertainty_is_reasoning,explainability_matters,deterministic_evaluation,transferable_reasoning
+inputs[10]: reasoning_graph,engineering_story,engineering_dialogue,architecture,implementation,evidence_graph,confidence_graph,curriculum_graph,engineering_memory,benchmark_results
+dimensions[12]: logical_consistency,causal_reasoning,evidence_quality,assumption_quality,hypothesis_quality,tradeoff_analysis,uncertainty_reasoning,abstraction_quality,decomposition_quality,transferability,explainability,reflection_quality
+components[12]: observations,assumptions,hypotheses,evidence,alternatives,constraints,tradeoffs,decisions,conclusions,confidence,reflection,lessons
+analysis[9]: reasoning_graph_analysis,causal_chain_analysis,assumption_validation,evidence_validation,hypothesis_validation,tradeoff_validation,abstraction_analysis,decomposition_analysis,reflection_analysis
+failures[12]: missing_reasoning,unsupported_claim,invalid_inference,skipped_steps,circular_reasoning,premature_conclusion,weak_evidence,ignored_constraints,false_tradeoff,poor_abstraction,confidence_mismatch,missing_reflection
+scoring[8]: reasoning_depth,reasoning_completeness,reasoning_transferability,engineering_reasoning,evidence_strength,tradeoff_quality,reflection_score,confidence_alignment
+constraints[7]: deterministic,reproducible,explainable,benchmarkable,curriculum_safe,graph_consistent,evidence_based
+validation[6]: logical_validation,evidence_validation,graph_validation,benchmark_validation,consistency_validation,determinism_validation
 randomization:
-
-  deterministic_seed:
-
-    true
-
-  reproducible:
-
-    true
-
-
-################################################################################
-# OUTPUTS
-################################################################################
-
-outputs:
-
-  reasoning_report
-
-  reasoning_score
-
-  reasoning_graph_metrics
-
-  evidence_report
-
-  tradeoff_report
-
-  transferability_report
-
-  metadata
-
-
-################################################################################
-# METRICS
-################################################################################
-
+  deterministic_seed: true
+  reproducible: true
+outputs[7]: reasoning_report,reasoning_score,reasoning_graph_metrics,evidence_report,tradeoff_report,transferability_report,metadata
 metrics:
-
-  compute:
-
-    reasoning_depth
-
-    reasoning_accuracy
-
-    evidence_quality
-
-    transferability
-
-    abstraction_quality
-
-    decomposition_quality
-
-    tradeoff_quality
-
-    reflection_quality
-
-    engineering_reasoning
-
-    confidence_alignment
-
-
-################################################################################
-# SUCCESS METRICS
-################################################################################
-
+  compute[10]: reasoning_depth,reasoning_accuracy,evidence_quality,transferability,abstraction_quality,decomposition_quality,tradeoff_quality,reflection_quality,engineering_reasoning,confidence_alignment
 success_metrics:
-
   reasoning_depth:
-
     minimum: 0.99
-
   reasoning_accuracy:
-
     minimum: 0.99
-
   evidence_quality:
-
     minimum: 0.99
-
   transferability:
-
     minimum: 0.99
-
   engineering_reasoning:
-
     minimum: 0.99
-
   determinism:
-
-    minimum: 1.00
+    minimum: 1.0

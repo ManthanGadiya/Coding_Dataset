@@ -1,348 +1,38 @@
 curriculum_quality:
-
   metadata:
-
     id: QLT-007
-
     title: Curriculum Quality
-
     version: 2.0
-
     status: Stable
-
     owner: Quality Engine
-
-    depends_on:
-
-      - compiler/07_quality/06_diversity_metrics.toon
-      - compiler/03_curriculum/10_master_curriculum.toon
-      - compiler/03_curriculum/05_prerequisite_graph.toon
-      - compiler/03_curriculum/12_competency_matrix.toon
-
-    consumed_by:
-
-      - compiler/07_quality/08_graph_quality.toon
-      - compiler/07_quality/09_quality_dashboard.toon
-      - compiler/08_validation/07_curriculum_validation.toon
-
-    objective:
-
-      Evaluate curriculum effectiveness,
-      prerequisite integrity,
-      competency progression,
-      learning continuity,
-      and long-term educational value
-      of the engineering dataset.
-
-
-################################################################################
-# PHILOSOPHY
-################################################################################
-
-philosophy:
-
-  learning_is_progressive
-
-  prerequisites_enable_mastery
-
-  curriculum_over_collection
-
-  spacing_improves_retention
-
-  competence_over_memorization
-
-  deterministic_evaluation
-
-  graph_native_learning
-
-  lifelong_learning
-
-
-################################################################################
-# INPUTS
-################################################################################
-
-inputs:
-
-  curriculum_graph
-
-  prerequisite_graph
-
-  competency_matrix
-
-  dataset
-
-  capability_metadata
-
-  learning_objectives
-
-  benchmark_reports
-
-  curriculum_statistics
-
-  engineering_memory
-
-
-################################################################################
-# CURRICULUM DIMENSIONS
-################################################################################
-
-dimensions:
-
-  prerequisite_quality
-
-  competency_progression
-
-  difficulty_progression
-
-  learning_continuity
-
-  concept_spacing
-
-  reinforcement_quality
-
-  transfer_learning
-
-  capability_balance
-
-  curriculum_completeness
-
-  educational_efficiency
-
-  mastery_support
-
-  capstone_quality
-
-
-################################################################################
-# ANALYSIS
-################################################################################
-
-analysis:
-
-  prerequisite_analysis
-
-  competency_analysis
-
-  spacing_analysis
-
-  progression_analysis
-
-  concept_dependency_analysis
-
-  curriculum_graph_analysis
-
-  transfer_analysis
-
-  reinforcement_analysis
-
-  learning_path_analysis
-
-
-################################################################################
-# QUALITY CHECKS
-################################################################################
-
-checks:
-
-  prerequisite_coverage
-
-  prerequisite_order
-
-  competency_alignment
-
-  difficulty_smoothness
-
-  spacing_effectiveness
-
-  redundancy_balance
-
-  concept_reuse
-
-  curriculum_completeness
-
-  objective_alignment
-
-  mastery_validation
-
-
-################################################################################
-# SCORING
-################################################################################
-
-scoring:
-
-  curriculum_score
-
-  prerequisite_score
-
-  competency_score
-
-  spacing_score
-
-  progression_score
-
-  transfer_score
-
-  reinforcement_score
-
-  educational_value
-
-
-################################################################################
-# LEARNING STRATEGIES
-################################################################################
-
-strategies:
-
-  mastery_learning
-
-  spiral_learning
-
-  spaced_repetition
-
-  retrieval_practice
-
-  project_based_learning
-
-  competency_based_learning
-
-  interleaving
-
-  adaptive_learning
-
-
-################################################################################
-# CONSTRAINTS
-################################################################################
-
-constraints:
-
-  deterministic
-
-  reproducible
-
-  explainable
-
-  curriculum_safe
-
-  graph_consistent
-
-  benchmarkable
-
-  educationally_valid
-
-
-################################################################################
-# VALIDATION
-################################################################################
-
-validation:
-
-  prerequisite_validation
-
-  competency_validation
-
-  spacing_validation
-
-  graph_validation
-
-  benchmark_validation
-
-  determinism_validation
-
-
-################################################################################
-# RANDOMIZATION
-################################################################################
-
+    depends_on[4]: "- compiler/07_quality/06_diversity_metrics.toon","- compiler/03_curriculum/10_master_curriculum.toon","- compiler/03_curriculum/05_prerequisite_graph.toon","- compiler/03_curriculum/12_competency_matrix.toon"
+    consumed_by[3]: "- compiler/07_quality/08_graph_quality.toon","- compiler/07_quality/09_quality_dashboard.toon","- compiler/08_validation/07_curriculum_validation.toon"
+    objective[6]: "Evaluate curriculum effectiveness,","prerequisite integrity,","competency progression,","learning continuity,",and long-term educational value,of the engineering dataset.
+philosophy[8]: learning_is_progressive,prerequisites_enable_mastery,curriculum_over_collection,spacing_improves_retention,competence_over_memorization,deterministic_evaluation,graph_native_learning,lifelong_learning
+inputs[9]: curriculum_graph,prerequisite_graph,competency_matrix,dataset,capability_metadata,learning_objectives,benchmark_reports,curriculum_statistics,engineering_memory
+dimensions[12]: prerequisite_quality,competency_progression,difficulty_progression,learning_continuity,concept_spacing,reinforcement_quality,transfer_learning,capability_balance,curriculum_completeness,educational_efficiency,mastery_support,capstone_quality
+analysis[9]: prerequisite_analysis,competency_analysis,spacing_analysis,progression_analysis,concept_dependency_analysis,curriculum_graph_analysis,transfer_analysis,reinforcement_analysis,learning_path_analysis
+checks[10]: prerequisite_coverage,prerequisite_order,competency_alignment,difficulty_smoothness,spacing_effectiveness,redundancy_balance,concept_reuse,curriculum_completeness,objective_alignment,mastery_validation
+scoring[8]: curriculum_score,prerequisite_score,competency_score,spacing_score,progression_score,transfer_score,reinforcement_score,educational_value
+strategies[8]: mastery_learning,spiral_learning,spaced_repetition,retrieval_practice,project_based_learning,competency_based_learning,interleaving,adaptive_learning
+constraints[7]: deterministic,reproducible,explainable,curriculum_safe,graph_consistent,benchmarkable,educationally_valid
+validation[6]: prerequisite_validation,competency_validation,spacing_validation,graph_validation,benchmark_validation,determinism_validation
 randomization:
-
-  deterministic_seed:
-
-    true
-
-  reproducible:
-
-    true
-
-
-################################################################################
-# OUTPUTS
-################################################################################
-
-outputs:
-
-  curriculum_report
-
-  competency_report
-
-  prerequisite_report
-
-  learning_path_report
-
-  progression_report
-
-  educational_score
-
-  metadata
-
-
-################################################################################
-# METRICS
-################################################################################
-
+  deterministic_seed: true
+  reproducible: true
+outputs[7]: curriculum_report,competency_report,prerequisite_report,learning_path_report,progression_report,educational_score,metadata
 metrics:
-
-  compute:
-
-    curriculum_quality
-
-    prerequisite_coverage
-
-    competency_growth
-
-    learning_efficiency
-
-    concept_retention
-
-    transferability
-
-    mastery_probability
-
-    curriculum_coherence
-
-    reinforcement_quality
-
-    educational_value
-
-
-################################################################################
-# SUCCESS METRICS
-################################################################################
-
+  compute[10]: curriculum_quality,prerequisite_coverage,competency_growth,learning_efficiency,concept_retention,transferability,mastery_probability,curriculum_coherence,reinforcement_quality,educational_value
 success_metrics:
-
   curriculum_quality:
-
     minimum: 0.99
-
   prerequisite_coverage:
-
-    minimum: 1.00
-
+    minimum: 1.0
   competency_growth:
-
     minimum: 0.99
-
   learning_efficiency:
-
     minimum: 0.99
-
   educational_value:
-
     minimum: 0.99
-
   determinism:
-
-    minimum: 1.00
+    minimum: 1.0

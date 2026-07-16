@@ -1,300 +1,35 @@
 consistency_validation:
-
   metadata:
-
     id: VAL-008
-
     title: Consistency Validation
-
     version: 2.0
-
     status: Stable
-
     owner: Validation Engine
-
-    depends_on:
-
-      - compiler/08_validation/02_schema_validation.toon
-      - compiler/08_validation/03_graph_validation.toon
-      - compiler/08_validation/04_reasoning_validation.toon
-      - compiler/08_validation/05_fact_validation.toon
-      - compiler/08_validation/06_execution_validation.toon
-      - compiler/08_validation/07_security_validation.toon
-
-    consumed_by:
-
-      - compiler/08_validation/09_dataset_validation.toon
-      - compiler/08_validation/10_final_validation.toon
-      - compiler/08_validation/11_validation_reports.toon
-
-    objective:
-
-      Validate cross-domain consistency across
-      all validation dimensions ensuring that
-      schema, graph, reasoning, fact, execution,
-      and security validations produce mutually
-      consistent results without contradiction.
-
-
-################################################################################
-# PHILOSOPHY
-################################################################################
-
-philosophy:
-
-  consistency_is_correctness
-
-  cross_domain_validation
-
-  contradictions_indicate_errors
-
-  agreement_is_confidence
-
-  deterministic_cross_referencing
-
-  holistic_validation
-
-  graph_native_consistency
-
-  explainable_disagreements
-
-
-################################################################################
-# INPUTS
-################################################################################
-
-inputs:
-
-  schema_validation_report
-
-  graph_validation_report
-
-  reasoning_validation_report
-
-  fact_validation_report
-
-  execution_validation_report
-
-  security_validation_report
-
-  consistency_rules
-
-  cross_reference_database
-
-
-################################################################################
-# CONSISTENCY DIMENSIONS
-################################################################################
-
-dimensions:
-
-  schema_graph_consistency
-
-  graph_reasoning_consistency
-
-  reasoning_fact_consistency
-
-  fact_execution_consistency
-
-  execution_security_consistency
-
-  security_schema_consistency
-
-  cross_domain_reference_consistency
-
-  temporal_consistency
-
-
-################################################################################
-# VALIDATION RULES
-################################################################################
-
-rules:
-
-  schema_matches_graph_ontology
-
-  graph_edges_match_reasoning_dependencies
-
-  reasoning_conclusions_match_facts
-
-  fact_claims_match_execution_outputs
-
-  execution_patterns_match_security_policies
-
-  security_constraints_match_schema_definitions
-
-  cross_references_resolve_correctly
-
-  temporal_ordering_consistent
-
-
-################################################################################
-# ANALYSIS
-################################################################################
-
-analysis:
-
-  cross_reference_analysis
-
-  contradiction_detection
-
-  consistency_scoring
-
-  gap_analysis
-
-  overlap_analysis
-
-  dependency_consistency
-
-  temporal_ordering_analysis
-
-
-################################################################################
-# FAILURE MODES
-################################################################################
-
-failures:
-
-  schema_graph_mismatch
-
-  graph_reasoning_mismatch
-
-  reasoning_fact_contradiction
-
-  fact_execution_mismatch
-
-  execution_security_conflict
-
-  security_schema_violation
-
-  cross_reference_break
-
-  temporal_inconsistency
-
-  duplicate_validation
-
-
-################################################################################
-# CONSTRAINTS
-################################################################################
-
-constraints:
-
-  deterministic
-
-  reproducible
-
-  cross_domain_validated
-
-  contradiction_free
-
-  reference_complete
-
-  temporally_ordered
-
-  explainable
-
-
-################################################################################
-# VALIDATION
-################################################################################
-
-validation:
-
-  cross_domain_validation
-
-  contradiction_validation
-
-  reference_validation
-
-  temporal_validation
-
-  gap_validation
-
-  determinism_validation
-
-
-################################################################################
-# RANDOMIZATION
-################################################################################
-
+    depends_on[6]: "- compiler/08_validation/02_schema_validation.toon","- compiler/08_validation/03_graph_validation.toon","- compiler/08_validation/04_reasoning_validation.toon","- compiler/08_validation/05_fact_validation.toon","- compiler/08_validation/06_execution_validation.toon","- compiler/08_validation/07_security_validation.toon"
+    consumed_by[3]: "- compiler/08_validation/09_dataset_validation.toon","- compiler/08_validation/10_final_validation.toon","- compiler/08_validation/11_validation_reports.toon"
+    objective[5]: Validate cross-domain consistency across,all validation dimensions ensuring that,"schema, graph, reasoning, fact, execution,",and security validations produce mutually,consistent results without contradiction.
+philosophy[8]: consistency_is_correctness,cross_domain_validation,contradictions_indicate_errors,agreement_is_confidence,deterministic_cross_referencing,holistic_validation,graph_native_consistency,explainable_disagreements
+inputs[8]: schema_validation_report,graph_validation_report,reasoning_validation_report,fact_validation_report,execution_validation_report,security_validation_report,consistency_rules,cross_reference_database
+dimensions[8]: schema_graph_consistency,graph_reasoning_consistency,reasoning_fact_consistency,fact_execution_consistency,execution_security_consistency,security_schema_consistency,cross_domain_reference_consistency,temporal_consistency
+rules[8]: schema_matches_graph_ontology,graph_edges_match_reasoning_dependencies,reasoning_conclusions_match_facts,fact_claims_match_execution_outputs,execution_patterns_match_security_policies,security_constraints_match_schema_definitions,cross_references_resolve_correctly,temporal_ordering_consistent
+analysis[7]: cross_reference_analysis,contradiction_detection,consistency_scoring,gap_analysis,overlap_analysis,dependency_consistency,temporal_ordering_analysis
+failures[9]: schema_graph_mismatch,graph_reasoning_mismatch,reasoning_fact_contradiction,fact_execution_mismatch,execution_security_conflict,security_schema_violation,cross_reference_break,temporal_inconsistency,duplicate_validation
+constraints[7]: deterministic,reproducible,cross_domain_validated,contradiction_free,reference_complete,temporally_ordered,explainable
+validation[6]: cross_domain_validation,contradiction_validation,reference_validation,temporal_validation,gap_validation,determinism_validation
 randomization:
-
-  deterministic_seed:
-
-    true
-
-  reproducible:
-
-    true
-
-
-################################################################################
-# OUTPUTS
-################################################################################
-
-outputs:
-
-  consistency_validation_report
-
-  cross_domain_consistency_score
-
-  contradiction_report
-
-  gap_analysis_report
-
-  cross_reference_report
-
-  temporal_consistency_report
-
-  metadata
-
-
-################################################################################
-# METRICS
-################################################################################
-
+  deterministic_seed: true
+  reproducible: true
+outputs[7]: consistency_validation_report,cross_domain_consistency_score,contradiction_report,gap_analysis_report,cross_reference_report,temporal_consistency_report,metadata
 metrics:
-
-  compute:
-
-    cross_domain_consistency
-
-    contradiction_rate
-
-    gap_coverage
-
-    reference_resolution_rate
-
-    temporal_consistency
-
-    validation_latency
-
-    overall_consistency_score
-
-
-################################################################################
-# SUCCESS METRICS
-################################################################################
-
+  compute[7]: cross_domain_consistency,contradiction_rate,gap_coverage,reference_resolution_rate,temporal_consistency,validation_latency,overall_consistency_score
 success_metrics:
-
   cross_domain_consistency:
-
-    minimum: 1.00
-
+    minimum: 1.0
   contradiction_rate:
-
-    maximum: 0.00
-
+    maximum: 0.0
   reference_resolution_rate:
-
-    minimum: 1.00
-
+    minimum: 1.0
   overall_consistency_score:
-
-    minimum: 1.00
-
+    minimum: 1.0
   determinism:
-
-    minimum: 1.00
+    minimum: 1.0

@@ -1,3 +1,4 @@
+description: "success[5]: Engineering cognition,\"becomes measurable,\",\"explainable,\",benchmarkable,and continuously improving. guarantees[5]: Quantifiable Cognition,Continuous Evaluation,Explainable Metrics,Reproducible Measurement,Capability Tracking"
 spec:
   id: cognitive_metrics
   version: 1.0.0
@@ -6,44 +7,17 @@ spec:
   module: Cognition
   compiler_stage: Cognitive Evaluation
   description: >
-purpose[6]: Measure,evaluate,benchmark,compare,optimize,engineering cognition.
-philosophy[6]: Good engineering,is measurable.,Better reasoning,produces better metrics.,Metrics guide,continuous improvement.
-pipeline[11]: Cognitive Process,→,Signal Collection,→,Metric Calculation,→,Evaluation,→,Feedback,→,Improvement
-categories[8]: Reasoning,Learning,Memory,Decision,Reflection,Prediction,Debugging,Architecture
-reasoning[7]: Reasoning Depth,Branch Count,Evidence Coverage,Assumption Count,Contradiction Detection,Reasoning Consistency,Proof Completeness
-learning[6]: Learning Rate,Knowledge Retention,Transfer Score,Generalization Score,Specialization Score,Capability Growth
-memory[6]: Recall Accuracy,Retrieval Speed,Reinforcement Rate,Consolidation Rate,Memory Density,Knowledge Reuse
-decision[6]: Decision Accuracy,Decision Confidence,Decision Stability,Reversal Rate,Tradeoff Quality,Alternative Coverage
-reflection[5]: Lesson Quality,Reflection Depth,Memory Updates,Improvement Rate,Repeated Mistakes
-prediction[4]: Prediction Accuracy,Calibration Error,Forecast Reliability,Confidence Calibration
-debugging[5]: Root Cause Accuracy,Time To Root Cause,Fix Success Rate,Regression Rate,False Diagnosis Rate
-architecture[5]: Tradeoff Quality,Scalability Score,Maintainability Score,Simplicity Score,Modularity Score
-global[6]: Cognitive Efficiency,Knowledge Density,Engineering Maturity,Adaptability,Explainability,Robustness
-scoring[5]: Numeric,Weighted,Percentile,Normalized,Relative
-aggregation[6]: Mean,Median,Maximum,Minimum,Weighted Average,Bayesian Aggregation
-benchmarks[5]: Historical Performance,Organization Standard,Industry Standard,Personal Best,Expert Baseline
-signals[6]: Strong Evidence,Weak Evidence,Missing Reasoning,High Confidence,Low Confidence,Contradiction
-failures[6]: Hallucination,Overconfidence,Shallow Reasoning,Missing Tradeoff,Missing Validation,Missing Reflection
-improvement[5]: Reinforce Strengths,Correct Weaknesses,Update Mental Models,Improve Memory,Improve Decision Quality
 ekr:
   description: Every Engineering Knowledge Record
-  records[5]: Reasoning Metrics,Learning Metrics,Decision Metrics,Reflection Metrics,Overall Cognitive Score
-validation[8]: Every metric,is measurable.,Every score,is reproducible.,Every benchmark,is documented.,Every improvement,is evidence-based.
 examples:
   Example_01:
     Task: Debug Memory Leak
-    Metrics[3]: Root Cause Accuracy,Time To Root Cause,Reflection Depth
   Example_02:
     Task: Design Cache Layer
-    Metrics[3]: Tradeoff Quality,Architecture Score,Decision Confidence
   Example_03:
     Task: Optimize Compiler
-    Metrics[3]: Prediction Accuracy,Performance Gain,Learning Transfer
   Example_04:
     Task: Production Incident
-    Metrics[3]: Recovery Time,Root Cause Accuracy,Memory Reinforcement
-success[5]: Engineering cognition,"becomes measurable,","explainable,",benchmarkable,and continuously improving.
-guarantees[5]: Quantifiable Cognition,Continuous Evaluation,Explainable Metrics,Reproducible Measurement,Capability Tracking
 future:
   autonomous_metric_generation: true
   adaptive_benchmarking: true

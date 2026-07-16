@@ -1,19 +1,19 @@
-description: "outputs[8]: generated_documents,api_reference,readme,deployment_docs,runbook,troubleshooting_guide,release_notes,validation_report"
+description: "\"outputs[8]: generated_documents,api_reference,readme,deployment_docs,runbook,troubleshooting_guide,release_notes,validation_report\""
 documentation_generator:
   metadata:
-    description: "depends_on[6]: compiler/05_generation/08_code_generator.toon,compiler/05_generation/09_bug_generator.toon,compiler/05_generation/10_test_generator.toon,compiler/05_generation/11_review_generator.toon,compiler/04_world/15_world_state.toon,compiler/01_ontology/20_ontology_rules.toon consumed_by[2]: compiler/05_generation/19_dataset_builder.toon,compiler/05_generation/20_generation_pipeline.toon"
+    description: "\"depends_on[6]: compiler/05_generation/08_code_generator.toon,compiler/05_generation/09_bug_generator.toon,compiler/05_generation/10_test_generator.toon,compiler/05_generation/11_review_generator.toon,compiler/04_world/15_world_state.toon,compiler/01_ontology/20_ontology_rules.toon consumed_by[2]: compiler/05_generation/19_dataset_builder.toon,compiler/05_generation/20_generation_pipeline.toon\""
     id: GEN-012
     title: Documentation Generator
     version: 2.0
     status: Stable
     owner: Generation Engine
-    objective: "\"Generate comprehensive engineering documentation that explains intent, architecture, implementation, operation, maintenance, deployment, and future evolution.\""
+    objective: "\"\\\"Generate comprehensive engineering documentation that explains intent, architecture, implementation, operation, maintenance, deployment, and future evolution.\\\"\""
 randomization:
   deterministic_seed: true
   documentation_style: adaptive
   audience_focus: enabled
-validation: "reject_if[6]: inconsistent_documentation,undocumented_public_api,contradictory_information,missing_required_sections,architecture_mismatch,outdated_examples"
-metrics: "compute[7]: completeness,clarity,technical_accuracy,consistency,maintainability,educational_value,operational_readiness"
+validation: "\"reject_if[6]: inconsistent_documentation,undocumented_public_api,contradictory_information,missing_required_sections,architecture_mismatch,outdated_examples\""
+metrics: "\"compute[7]: completeness,clarity,technical_accuracy,consistency,maintainability,educational_value,operational_readiness\""
 success_metrics:
   completeness:
     minimum: 0.99

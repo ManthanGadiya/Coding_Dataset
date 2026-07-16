@@ -1,270 +1,34 @@
 balancing_optimizer:
-
   metadata:
-
     id: OPT-006
-
     title: Balancing Optimizer
-
     version: 2.0
-
     status: Stable
-
     owner: Optimization Engine
-
-    depends_on:
-
-      - compiler/09_optimization/01_dataset_optimizer.toon
-      - compiler/09_optimization/04_deduplication.toon
-      - compiler/03_curriculum/07_dataset_balancing.toon
-
-    consumed_by:
-
-      - compiler/09_optimization/07_curriculum_optimizer.toon
-      - compiler/09_optimization/10_optimizer_reports.toon
-      - compiler/10_serialization/07_export_pipeline.toon
-
-    objective:
-
-      Optimize the distribution balance of
-      the dataset across all engineering
-      dimensions including capability,
-      domain, difficulty, reasoning type,
-      architecture pattern, and ecosystem
-      to maximize generalization while
-      preserving realism.
-
-
-################################################################################
-# PHILOSOPHY
-################################################################################
-
-philosophy:
-
-  balance_enables_generalization
-
-  imbalance_creates_bias
-
-  realism_before_perfect_balance
-
-  coverage_over_equalization
-
-  deterministic_balancing
-
-  graph_aware_distribution
-
-  statistically_principled
-
-  benchmark_validated_balance
-
-
-################################################################################
-# INPUTS
-################################################################################
-
-inputs:
-
-  deduplicated_dataset
-
-  capability_coverage_matrix
-
-  distribution_statistics
-
-  balance_targets
-
-  tolerance_thresholds
-
-  curriculum_graph
-
-  coverage_requirements
-
-  benchmark_suite
-
-
-################################################################################
-# BALANCE DIMENSIONS
-################################################################################
-
-dimensions:
-
-  capability_balance
-
-  domain_balance
-
-  difficulty_balance
-
-  reasoning_type_balance
-
-  architecture_balance
-
-  ecosystem_balance
-
-  engineering_pattern_balance
-
-  failure_type_balance
-
-
-################################################################################
-# BALANCING STRATEGIES
-################################################################################
-
-strategies:
-
-  undersampling_overrepresented
-
-  oversampling_underrepresented
-
-  synthetic_augmentation
-
-  curriculum_weighted_balancing
-
-  importance_sampling
-
-  stratified_preservation
-
-  coverage_driven_balancing
-
-
-################################################################################
-# ANALYSIS
-################################################################################
-
-analysis:
-
-  distribution_analysis
-
-  imbalance_quantification
-
-  coverage_gap_analysis
-
-  sampling_bias_analysis
-
-  augmentation_impact_analysis
-
-  benchmark_impact_projection
-
-
-################################################################################
-# CONSTRAINTS
-################################################################################
-
-constraints:
-
-  deterministic
-
-  reproducible
-
-  realism_preserving
-
-  coverage_maintained
-
-  quality_preserving
-
-  statistically_valid
-
-  benchmark_verified
-
-
-################################################################################
-# VALIDATION
-################################################################################
-
-validation:
-
-  balance_validation
-
-  distribution_validation
-
-  coverage_validation
-
-  quality_preservation_validation
-
-  benchmark_validation
-
-  determinism_validation
-
-
-################################################################################
-# RANDOMIZATION
-################################################################################
-
+    depends_on[3]: "- compiler/09_optimization/01_dataset_optimizer.toon","- compiler/09_optimization/04_deduplication.toon","- compiler/03_curriculum/07_dataset_balancing.toon"
+    consumed_by[3]: "- compiler/09_optimization/07_curriculum_optimizer.toon","- compiler/09_optimization/10_optimizer_reports.toon","- compiler/10_serialization/07_export_pipeline.toon"
+    objective[7]: Optimize the distribution balance of,the dataset across all engineering,"dimensions including capability,","domain, difficulty, reasoning type,","architecture pattern, and ecosystem",to maximize generalization while,preserving realism.
+philosophy[8]: balance_enables_generalization,imbalance_creates_bias,realism_before_perfect_balance,coverage_over_equalization,deterministic_balancing,graph_aware_distribution,statistically_principled,benchmark_validated_balance
+inputs[8]: deduplicated_dataset,capability_coverage_matrix,distribution_statistics,balance_targets,tolerance_thresholds,curriculum_graph,coverage_requirements,benchmark_suite
+dimensions[8]: capability_balance,domain_balance,difficulty_balance,reasoning_type_balance,architecture_balance,ecosystem_balance,engineering_pattern_balance,failure_type_balance
+strategies[7]: undersampling_overrepresented,oversampling_underrepresented,synthetic_augmentation,curriculum_weighted_balancing,importance_sampling,stratified_preservation,coverage_driven_balancing
+analysis[6]: distribution_analysis,imbalance_quantification,coverage_gap_analysis,sampling_bias_analysis,augmentation_impact_analysis,benchmark_impact_projection
+constraints[7]: deterministic,reproducible,realism_preserving,coverage_maintained,quality_preserving,statistically_valid,benchmark_verified
+validation[6]: balance_validation,distribution_validation,coverage_validation,quality_preservation_validation,benchmark_validation,determinism_validation
 randomization:
-
-  deterministic_seed:
-
-    true
-
-  reproducible:
-
-    true
-
-
-################################################################################
-# OUTPUTS
-################################################################################
-
-outputs:
-
-  balanced_dataset
-
-  balance_report
-
-  distribution_statistics
-
-  coverage_report
-
-  augmentation_report
-
-  benchmark_comparison
-
-  metadata
-
-
-################################################################################
-# METRICS
-################################################################################
-
+  deterministic_seed: true
+  reproducible: true
+outputs[7]: balanced_dataset,balance_report,distribution_statistics,coverage_report,augmentation_report,benchmark_comparison,metadata
 metrics:
-
-  compute:
-
-    distribution_balance_score
-
-    capability_coverage
-
-    domain_coverage
-
-    difficulty_distribution_quality
-
-    imbalance_reduction
-
-    quality_preservation
-
-    benchmark_impact
-
-
-################################################################################
-# SUCCESS METRICS
-################################################################################
-
+  compute[7]: distribution_balance_score,capability_coverage,domain_coverage,difficulty_distribution_quality,imbalance_reduction,quality_preservation,benchmark_impact
 success_metrics:
-
   distribution_balance_score:
-
     minimum: 0.97
-
   capability_coverage:
-
-    minimum: 1.00
-
+    minimum: 1.0
   imbalance_reduction:
-
-    minimum: 0.80
-
+    minimum: 0.8
   quality_preservation:
-
     minimum: 0.99
-
   determinism:
-
-    minimum: 1.00
+    minimum: 1.0

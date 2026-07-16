@@ -1,4 +1,4 @@
-description: "progression[19]: Observe,→,Understand,→,Explain,→,Apply,→,Analyze,→,Evaluate,→,Design,→,Optimize,→,Teach,→,Innovate dependencies[15]: Explain,→,Understand,Design,→,Analyze,Optimize,→,Measure,Debug,→,Analyze,Architect,→,Design validation[5]: measurable,observable,teachable,transferable,composable requirements[4]: primary_capability,secondary_capabilities,capability_level,prerequisite_capabilities success[2]: Every knowledge object teaches at least one engineering capability.,Every capability maps to measurable engineering behaviour. guarantees[6]: Language Independent,Framework Independent,Domain Independent,Technology Independent,Graph Native,Extensible"
+description: "\"progression[19]: Observe,→,Understand,→,Explain,→,Apply,→,Analyze,→,Evaluate,→,Design,→,Optimize,→,Teach,→,Innovate dependencies[15]: Explain,→,Understand,Design,→,Analyze,Optimize,→,Measure,Debug,→,Analyze,Architect,→,Design validation[5]: measurable,observable,teachable,transferable,composable requirements[4]: primary_capability,secondary_capabilities,capability_level,prerequisite_capabilities success[2]: Every knowledge object teaches at least one engineering capability.,Every capability maps to measurable engineering behaviour. guarantees[6]: Language Independent,Framework Independent,Domain Independent,Technology Independent,Graph Native,Extensible\""
 spec:
   id: capabilities
   version: 1.0.0
@@ -6,9 +6,8 @@ spec:
   priority: critical
   module: Ontology
   compiler_stage: Knowledge Representation
-  description: "\"Defines the complete Engineering Capability Ontology. Capabilities represent what an engineer can DO with knowledge. Every Engineering Knowledge Record, Engineering Episode, Artifact, Repository, and Engineering World must reference one or more capabilities. Capabilities are independent from programming languages, frameworks and technologies.\""
+  description: "\"\\\"Defines the complete Engineering Capability Ontology. Capabilities represent what an engineer can DO with knowledge. Every Engineering Knowledge Record, Engineering Episode, Artifact, Repository, and Engineering World must reference one or more capabilities. Capabilities are independent from programming languages, frameworks and technologies.\\\"\""
 purpose: Represent engineering competence rather than engineering information.
-capability_groups[9]: "Understanding[6]: Learn,Explain,Interpret,Classify,Summarize,Connect","Analysis[6]: Analyze,Compare,Evaluate,Investigate,Diagnose,Infer","Design[6]: Architect,Plan,Model,Decompose,Generalize,Abstract","Implementation[6]: Implement,Refactor,Integrate,Optimize,Extend,Automate","Validation[6]: Test,Verify,Benchmark,Measure,Inspect,Review","Debugging[6]: Reproduce,Isolate,Trace,Root Cause,Repair,Prevent","Systems[6]: Scale,Parallelize,Synchronize,Secure,Deploy,Observe","Collaboration[6]: Review,Document,Communicate,Estimate,Mentor,Negotiate","Learning[6]: Reflect,Improve,Adapt,Research,Experiment,Generalize"
 levels:
   L0: Awareness
   L1: Understanding

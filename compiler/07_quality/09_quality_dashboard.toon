@@ -1,372 +1,39 @@
 quality_dashboard:
-
   metadata:
-
     id: QLT-009
-
     title: Quality Dashboard
-
     version: 2.0
-
     status: Stable
-
     owner: Quality Engine
-
-    depends_on:
-
-      - compiler/07_quality/08_graph_quality.toon
-      - compiler/07_quality/02_quality_metrics.toon
-
-    consumed_by:
-
-      - compiler/07_quality/10_quality_pipeline.toon
-      - compiler/08_validation/01_validation_engine.toon
-      - compiler/09_optimization/01_optimizer.toon
-
-    objective:
-
-      Aggregate, visualize, analyze,
-      explain, and monitor every quality
-      dimension across the compiler while
-      enabling deterministic auditing,
-      benchmarking, and continuous improvement.
-
-
-################################################################################
-# PHILOSOPHY
-################################################################################
-
-philosophy:
-
-  observability_enables_improvement
-
-  dashboards_should_explain
-
-  metrics_require_context
-
-  trends_are_more_valuable_than_snapshots
-
-  engineering_is_measurable
-
-  deterministic_reporting
-
-  benchmark_everything
-
-  actionable_insights
-
-
-################################################################################
-# INPUTS
-################################################################################
-
-inputs:
-
-  quality_reports
-
-  engineering_reports
-
-  reasoning_reports
-
-  curriculum_reports
-
-  graph_reports
-
-  diversity_reports
-
-  repair_reports
-
-  benchmark_results
-
-  optimization_reports
-
-  historical_runs
-
-
-################################################################################
-# DASHBOARDS
-################################################################################
-
-dashboards:
-
-  executive_dashboard
-
-  engineering_dashboard
-
-  reasoning_dashboard
-
-  curriculum_dashboard
-
-  graph_dashboard
-
-  diversity_dashboard
-
-  repair_dashboard
-
-  optimization_dashboard
-
-  benchmark_dashboard
-
-  release_dashboard
-
-
-################################################################################
-# VISUALIZATIONS
-################################################################################
-
-visualizations:
-
-  trend_charts
-
-  radar_charts
-
-  capability_heatmaps
-
-  dependency_graphs
-
-  curriculum_graphs
-
-  quality_timelines
-
-  score_distributions
-
-  benchmark_comparisons
-
-  regression_views
-
-  topology_maps
-
-
-################################################################################
-# ANALYSIS
-################################################################################
-
-analysis:
-
-  trend_analysis
-
-  regression_detection
-
-  anomaly_detection
-
-  benchmark_analysis
-
-  capability_growth
-
-  quality_drift
-
-  release_comparison
-
-  historical_analysis
-
-  bottleneck_detection
-
-  root_cause_analysis
-
-
-################################################################################
-# ALERTS
-################################################################################
-
-alerts:
-
-  quality_regression
-
-  curriculum_gap
-
-  reasoning_degradation
-
-  engineering_drop
-
-  graph_fragmentation
-
-  diversity_loss
-
-  benchmark_failure
-
-  determinism_failure
-
-  release_blocker
-
-  critical_quality_failure
-
-
-################################################################################
-# REPORTS
-################################################################################
-
-reports:
-
-  executive_summary
-
-  engineering_summary
-
-  curriculum_summary
-
-  reasoning_summary
-
-  benchmark_summary
-
-  release_summary
-
-  optimization_summary
-
-  audit_report
-
-
-################################################################################
-# BENCHMARKING
-################################################################################
-
-benchmarks:
-
-  internal_baseline
-
-  previous_release
-
-  gold_standard
-
-  capability_targets
-
-  quality_targets
-
-  engineering_targets
-
-  curriculum_targets
-
-
-################################################################################
-# CONSTRAINTS
-################################################################################
-
-constraints:
-
-  deterministic
-
-  reproducible
-
-  explainable
-
-  benchmarkable
-
-  versioned
-
-  auditable
-
-  longitudinal
-
-
-################################################################################
-# VALIDATION
-################################################################################
-
-validation:
-
-  dashboard_validation
-
-  report_validation
-
-  benchmark_validation
-
-  visualization_validation
-
-  consistency_validation
-
-  determinism_validation
-
-
-################################################################################
-# RANDOMIZATION
-################################################################################
-
+    depends_on[2]: "- compiler/07_quality/08_graph_quality.toon","- compiler/07_quality/02_quality_metrics.toon"
+    consumed_by[3]: "- compiler/07_quality/10_quality_pipeline.toon","- compiler/08_validation/01_validation_engine.toon","- compiler/09_optimization/01_optimizer.toon"
+    objective[5]: "Aggregate, visualize, analyze,","explain, and monitor every quality",dimension across the compiler while,"enabling deterministic auditing,","benchmarking, and continuous improvement."
+philosophy[8]: observability_enables_improvement,dashboards_should_explain,metrics_require_context,trends_are_more_valuable_than_snapshots,engineering_is_measurable,deterministic_reporting,benchmark_everything,actionable_insights
+inputs[10]: quality_reports,engineering_reports,reasoning_reports,curriculum_reports,graph_reports,diversity_reports,repair_reports,benchmark_results,optimization_reports,historical_runs
+dashboards[10]: executive_dashboard,engineering_dashboard,reasoning_dashboard,curriculum_dashboard,graph_dashboard,diversity_dashboard,repair_dashboard,optimization_dashboard,benchmark_dashboard,release_dashboard
+visualizations[10]: trend_charts,radar_charts,capability_heatmaps,dependency_graphs,curriculum_graphs,quality_timelines,score_distributions,benchmark_comparisons,regression_views,topology_maps
+analysis[10]: trend_analysis,regression_detection,anomaly_detection,benchmark_analysis,capability_growth,quality_drift,release_comparison,historical_analysis,bottleneck_detection,root_cause_analysis
+alerts[10]: quality_regression,curriculum_gap,reasoning_degradation,engineering_drop,graph_fragmentation,diversity_loss,benchmark_failure,determinism_failure,release_blocker,critical_quality_failure
+reports[8]: executive_summary,engineering_summary,curriculum_summary,reasoning_summary,benchmark_summary,release_summary,optimization_summary,audit_report
+benchmarks[7]: internal_baseline,previous_release,gold_standard,capability_targets,quality_targets,engineering_targets,curriculum_targets
+constraints[7]: deterministic,reproducible,explainable,benchmarkable,versioned,auditable,longitudinal
+validation[6]: dashboard_validation,report_validation,benchmark_validation,visualization_validation,consistency_validation,determinism_validation
 randomization:
-
-  deterministic_seed:
-
-    true
-
-  reproducible:
-
-    true
-
-
-################################################################################
-# OUTPUTS
-################################################################################
-
-outputs:
-
-  dashboard_bundle
-
-  executive_report
-
-  benchmark_report
-
-  regression_report
-
-  trend_report
-
-  release_summary
-
-  audit_logs
-
-  metadata
-
-
-################################################################################
-# METRICS
-################################################################################
-
+  deterministic_seed: true
+  reproducible: true
+outputs[8]: dashboard_bundle,executive_report,benchmark_report,regression_report,trend_report,release_summary,audit_logs,metadata
 metrics:
-
-  compute:
-
-    quality_trend
-
-    capability_growth
-
-    regression_rate
-
-    benchmark_score
-
-    release_readiness
-
-    engineering_growth
-
-    curriculum_growth
-
-    reasoning_growth
-
-    graph_health
-
-    diversity_growth
-
-
-################################################################################
-# SUCCESS METRICS
-################################################################################
-
+  compute[10]: quality_trend,capability_growth,regression_rate,benchmark_score,release_readiness,engineering_growth,curriculum_growth,reasoning_growth,graph_health,diversity_growth
 success_metrics:
-
   dashboard_accuracy:
-
-    minimum: 1.00
-
+    minimum: 1.0
   report_consistency:
-
-    minimum: 1.00
-
+    minimum: 1.0
   benchmark_accuracy:
-
     minimum: 0.99
-
   regression_detection:
-
     minimum: 0.99
-
   determinism:
-
-    minimum: 1.00
-
+    minimum: 1.0
   auditability:
-
-    minimum: 1.00
+    minimum: 1.0

@@ -1,274 +1,34 @@
 graph_optimizer:
-
   metadata:
-
     id: OPT-003
-
     title: Graph Optimizer
-
     version: 2.0
-
     status: Stable
-
     owner: Optimization Engine
-
-    depends_on:
-
-      - compiler/09_optimization/01_dataset_optimizer.toon
-      - compiler/07_quality/08_graph_quality.toon
-      - compiler/01_ontology/19_dependency_graph.toon
-
-    consumed_by:
-
-      - compiler/09_optimization/05_compression.toon
-      - compiler/09_optimization/10_optimizer_reports.toon
-      - compiler/10_serialization/05_graph_serializer.toon
-
-    objective:
-
-      Optimize the structure, size, and
-      performance of every knowledge graph
-      in the compiler by removing redundant
-      nodes and edges, compressing sparse
-      subgraphs, normalizing topology, and
-      ensuring efficient graph traversal
-      without loss of semantic information.
-
-
-################################################################################
-# PHILOSOPHY
-################################################################################
-
-philosophy:
-
-  graphs_must_be_efficient
-
-  structure_enables_performance
-
-  redundancy_is_cost
-
-  connectivity_must_be_preserved
-
-  deterministic_graph_optimization
-
-  semantic_lossless_compression
-
-  traversal_optimized_topology
-
-  billion_node_scalable
-
-
-################################################################################
-# INPUTS
-################################################################################
-
-inputs:
-
-  ontology_graph
-
-  reasoning_graph
-
-  curriculum_graph
-
-  dependency_graph
-
-  repository_graph
-
-  architecture_graph
-
-  graph_optimization_configuration
-
-  traversal_patterns
-
-  performance_targets
-
-
-################################################################################
-# OPTIMIZATION DIMENSIONS
-################################################################################
-
-dimensions:
-
-  node_pruning
-
-  edge_pruning
-
-  subgraph_compression
-
-  topology_normalization
-
-  index_optimization
-
-  traversal_optimization
-
-  memory_layout
-
-  cache_optimization
-
-
-################################################################################
-# TRANSFORMATIONS
-################################################################################
-
-transformations:
-
-  remove_orphan_nodes
-
-  merge_redundant_nodes
-
-  remove_duplicate_edges
-
-  compress_sparse_subgraphs
-
-  normalize_directionality
-
-  optimize_node_labels
-
-  rebuild_adjacency_indices
-
-  reorder_for_cache_locality
-
-
-################################################################################
-# ANALYSIS
-################################################################################
-
-analysis:
-
-  graph_complexity_analysis
-
-  redundancy_analysis
-
-  traversal_cost_analysis
-
-  memory_footprint_analysis
-
-  cache_efficiency_analysis
-
-  compression_opportunity_analysis
-
-
-################################################################################
-# CONSTRAINTS
-################################################################################
-
-constraints:
-
-  deterministic
-
-  reproducible
-
-  semantically_lossless
-
-  connectivity_preserving
-
-  traversal_complete
-
-  benchmark_verified
-
-  scalable
-
-
-################################################################################
-# VALIDATION
-################################################################################
-
-validation:
-
-  structural_preservation_validation
-
-  connectivity_preservation_validation
-
-  semantic_preservation_validation
-
-  benchmark_validation
-
-  determinism_validation
-
-  performance_validation
-
-
-################################################################################
-# RANDOMIZATION
-################################################################################
-
+    depends_on[3]: "- compiler/09_optimization/01_dataset_optimizer.toon","- compiler/07_quality/08_graph_quality.toon","- compiler/01_ontology/19_dependency_graph.toon"
+    consumed_by[3]: "- compiler/09_optimization/05_compression.toon","- compiler/09_optimization/10_optimizer_reports.toon","- compiler/10_serialization/05_graph_serializer.toon"
+    objective[7]: "Optimize the structure, size, and",performance of every knowledge graph,in the compiler by removing redundant,"nodes and edges, compressing sparse","subgraphs, normalizing topology, and",ensuring efficient graph traversal,without loss of semantic information.
+philosophy[8]: graphs_must_be_efficient,structure_enables_performance,redundancy_is_cost,connectivity_must_be_preserved,deterministic_graph_optimization,semantic_lossless_compression,traversal_optimized_topology,billion_node_scalable
+inputs[9]: ontology_graph,reasoning_graph,curriculum_graph,dependency_graph,repository_graph,architecture_graph,graph_optimization_configuration,traversal_patterns,performance_targets
+dimensions[8]: node_pruning,edge_pruning,subgraph_compression,topology_normalization,index_optimization,traversal_optimization,memory_layout,cache_optimization
+transformations[8]: remove_orphan_nodes,merge_redundant_nodes,remove_duplicate_edges,compress_sparse_subgraphs,normalize_directionality,optimize_node_labels,rebuild_adjacency_indices,reorder_for_cache_locality
+analysis[6]: graph_complexity_analysis,redundancy_analysis,traversal_cost_analysis,memory_footprint_analysis,cache_efficiency_analysis,compression_opportunity_analysis
+constraints[7]: deterministic,reproducible,semantically_lossless,connectivity_preserving,traversal_complete,benchmark_verified,scalable
+validation[6]: structural_preservation_validation,connectivity_preservation_validation,semantic_preservation_validation,benchmark_validation,determinism_validation,performance_validation
 randomization:
-
-  deterministic_seed:
-
-    true
-
-  reproducible:
-
-    true
-
-
-################################################################################
-# OUTPUTS
-################################################################################
-
-outputs:
-
-  optimized_graphs
-
-  graph_optimization_report
-
-  compression_statistics
-
-  traversal_performance_report
-
-  memory_usage_report
-
-  semantic_preservation_certificate
-
-  metadata
-
-
-################################################################################
-# METRICS
-################################################################################
-
+  deterministic_seed: true
+  reproducible: true
+outputs[7]: optimized_graphs,graph_optimization_report,compression_statistics,traversal_performance_report,memory_usage_report,semantic_preservation_certificate,metadata
 metrics:
-
-  compute:
-
-    graph_size_reduction
-
-    traversal_cost_reduction
-
-    memory_footprint_reduction
-
-    semantic_preservation
-
-    connectivity_preservation
-
-    optimization_latency
-
-    cache_efficiency_gain
-
-
-################################################################################
-# SUCCESS METRICS
-################################################################################
-
+  compute[7]: graph_size_reduction,traversal_cost_reduction,memory_footprint_reduction,semantic_preservation,connectivity_preservation,optimization_latency,cache_efficiency_gain
 success_metrics:
-
   graph_size_reduction:
-
     minimum: 0.25
-
   semantic_preservation:
-
-    minimum: 1.00
-
+    minimum: 1.0
   connectivity_preservation:
-
-    minimum: 1.00
-
+    minimum: 1.0
   traversal_cost_reduction:
-
-    minimum: 0.30
-
+    minimum: 0.3
   determinism:
-
-    minimum: 1.00
+    minimum: 1.0

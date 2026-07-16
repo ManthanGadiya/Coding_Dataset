@@ -1,377 +1,39 @@
 diversity_repair:
-
   metadata:
-
     id: REP-009
-
     title: Diversity Repair
-
     version: 2.0
-
     status: Stable
-
     owner: Repair Engine
-
-    depends_on:
-
-      - compiler/06_repair/08_curriculum_repair.toon
-      - compiler/03_curriculum/07_dataset_balancing.toon
-      - compiler/07_quality/06_diversity_metrics.toon
-
-    consumed_by:
-
-      - compiler/06_repair/10_token_optimizer.toon
-      - compiler/06_repair/14_repair_pipeline.toon
-
-    objective:
-
-      Detect and repair diversity imbalances across
-      languages, architectures, repositories,
-      engineering practices, domains, organizations,
-      and reasoning styles while preserving realism
-      and curriculum integrity.
-
-
-################################################################################
-# PHILOSOPHY
-################################################################################
-
-philosophy:
-
-  diversity_prevents_overfitting
-
-  realism_before_randomness
-
-  balanced_datasets_generalize
-
-  engineering_has_many_solutions
-
-  multiple_architectures_are_valid
-
-  variety_without_noise
-
-  deterministic_diversity
-
-  coverage_over_frequency
-
-
-################################################################################
-# INPUTS
-################################################################################
-
-inputs:
-
-  repaired_curriculum
-
-  dataset_statistics
-
-  repository_graph
-
-  architecture_graph
-
-  capability_matrix
-
-  language_distribution
-
-  framework_distribution
-
-  domain_distribution
-
-  reasoning_distribution
-
-  organization_distribution
-
-
-################################################################################
-# DIVERSITY FAILURES
-################################################################################
-
-repair_targets:
-
-  language_bias
-
-  framework_bias
-
-  architecture_bias
-
-  repository_bias
-
-  domain_bias
-
-  reasoning_bias
-
-  company_bias
-
-  deployment_bias
-
-  testing_bias
-
-  debugging_bias
-
-  infrastructure_bias
-
-  cloud_bias
-
-  operating_system_bias
-
-  database_bias
-
-  design_pattern_bias
-
-  duplicate_scenarios
-
-  repetitive_failures
-
-  repetitive_solutions
-
-
-################################################################################
-# ANALYSIS
-################################################################################
-
-analysis:
-
-  distribution_analysis
-
-  entropy_analysis
-
-  coverage_analysis
-
-  clustering_analysis
-
-  redundancy_detection
-
-  capability_distribution
-
-  scenario_distribution
-
-  engineering_distribution
-
-  curriculum_distribution
-
-
-################################################################################
-# REPAIR OPERATIONS
-################################################################################
-
-operations:
-
-  rebalance_sampling
-
-  regenerate_samples
-
-  diversify_worlds
-
-  diversify_repositories
-
-  diversify_architectures
-
-  diversify_failures
-
-  diversify_reasoning
-
-  diversify_domains
-
-  diversify_languages
-
-  diversify_companies
-
-  diversify_engineering_styles
-
-
-################################################################################
-# DIVERSITY DIMENSIONS
-################################################################################
-
-dimensions:
-
-  programming_languages
-
-  paradigms
-
-  architectures
-
-  frameworks
-
-  operating_systems
-
-  cloud_providers
-
-  deployment_models
-
-  engineering_roles
-
-  company_sizes
-
-  industries
-
-  repository_histories
-
-  debugging_styles
-
-  testing_strategies
-
-  documentation_styles
-
-  ai_agent_behaviors
-
-
-################################################################################
-# BALANCING STRATEGIES
-################################################################################
-
-balancing:
-
-  entropy_maximization
-
-  capability_balancing
-
-  curriculum_constraints
-
-  domain_balancing
-
-  weighted_sampling
-
-  adaptive_sampling
-
-  graph_guided_sampling
-
-  coverage_guided_sampling
-
-
-################################################################################
-# CONSTRAINTS
-################################################################################
-
-constraints:
-
-  preserve_quality
-
-  preserve_curriculum
-
-  preserve_engineering_realism
-
-  preserve_dependencies
-
-  deterministic
-
-  reproducible
-
-  statistically_valid
-
-
-################################################################################
-# VALIDATION
-################################################################################
-
-validation:
-
-  diversity_validation
-
-  curriculum_validation
-
-  entropy_validation
-
-  redundancy_validation
-
-  coverage_validation
-
-  sampling_validation
-
-
-################################################################################
-# RANDOMIZATION
-################################################################################
-
+    depends_on[3]: "- compiler/06_repair/08_curriculum_repair.toon","- compiler/03_curriculum/07_dataset_balancing.toon","- compiler/07_quality/06_diversity_metrics.toon"
+    consumed_by[2]: "- compiler/06_repair/10_token_optimizer.toon","- compiler/06_repair/14_repair_pipeline.toon"
+    objective[5]: Detect and repair diversity imbalances across,"languages, architectures, repositories,","engineering practices, domains, organizations,",and reasoning styles while preserving realism,and curriculum integrity.
+philosophy[8]: diversity_prevents_overfitting,realism_before_randomness,balanced_datasets_generalize,engineering_has_many_solutions,multiple_architectures_are_valid,variety_without_noise,deterministic_diversity,coverage_over_frequency
+inputs[10]: repaired_curriculum,dataset_statistics,repository_graph,architecture_graph,capability_matrix,language_distribution,framework_distribution,domain_distribution,reasoning_distribution,organization_distribution
+repair_targets[18]: language_bias,framework_bias,architecture_bias,repository_bias,domain_bias,reasoning_bias,company_bias,deployment_bias,testing_bias,debugging_bias,infrastructure_bias,cloud_bias,operating_system_bias,database_bias,design_pattern_bias,duplicate_scenarios,repetitive_failures,repetitive_solutions
+analysis[9]: distribution_analysis,entropy_analysis,coverage_analysis,clustering_analysis,redundancy_detection,capability_distribution,scenario_distribution,engineering_distribution,curriculum_distribution
+operations[11]: rebalance_sampling,regenerate_samples,diversify_worlds,diversify_repositories,diversify_architectures,diversify_failures,diversify_reasoning,diversify_domains,diversify_languages,diversify_companies,diversify_engineering_styles
+dimensions[15]: programming_languages,paradigms,architectures,frameworks,operating_systems,cloud_providers,deployment_models,engineering_roles,company_sizes,industries,repository_histories,debugging_styles,testing_strategies,documentation_styles,ai_agent_behaviors
+balancing[8]: entropy_maximization,capability_balancing,curriculum_constraints,domain_balancing,weighted_sampling,adaptive_sampling,graph_guided_sampling,coverage_guided_sampling
+constraints[7]: preserve_quality,preserve_curriculum,preserve_engineering_realism,preserve_dependencies,deterministic,reproducible,statistically_valid
+validation[6]: diversity_validation,curriculum_validation,entropy_validation,redundancy_validation,coverage_validation,sampling_validation
 randomization:
-
-  deterministic_seed:
-
-    true
-
-  adaptive_sampling:
-
-    enabled
-
-  reproducible:
-
-    true
-
-
-################################################################################
-# OUTPUTS
-################################################################################
-
-outputs:
-
-  diversified_dataset
-
-  diversity_report
-
-  coverage_report
-
-  entropy_report
-
-  balancing_plan
-
-  repair_log
-
-  metadata
-
-
-################################################################################
-# METRICS
-################################################################################
-
+  deterministic_seed: true
+  adaptive_sampling: enabled
+  reproducible: true
+outputs[7]: diversified_dataset,diversity_report,coverage_report,entropy_report,balancing_plan,repair_log,metadata
 metrics:
-
-  compute:
-
-    shannon_entropy
-
-    capability_coverage
-
-    domain_coverage
-
-    architecture_coverage
-
-    repository_diversity
-
-    reasoning_diversity
-
-    engineering_diversity
-
-    redundancy_ratio
-
-    dataset_balance
-
-
-################################################################################
-# SUCCESS METRICS
-################################################################################
-
+  compute[9]: shannon_entropy,capability_coverage,domain_coverage,architecture_coverage,repository_diversity,reasoning_diversity,engineering_diversity,redundancy_ratio,dataset_balance
 success_metrics:
-
   redundancy_ratio:
-
     maximum: 0.05
-
   capability_coverage:
-
     minimum: 0.99
-
   engineering_diversity:
-
     minimum: 0.99
-
   architecture_coverage:
-
     minimum: 0.99
-
   curriculum_preservation:
-
     minimum: 0.99
-
   determinism:
-
-    minimum: 1.00
+    minimum: 1.0

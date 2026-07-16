@@ -1,4 +1,4 @@
-description: "guarantees[5]: Difficulty is multidimensional.,Difficulty is explainable.,Difficulty is reproducible.,Difficulty is measurable.,Difficulty evolves with knowledge."
+description: "\"guarantees[5]: Difficulty is multidimensional.,Difficulty is explainable.,Difficulty is reproducible.,Difficulty is measurable.,Difficulty evolves with knowledge.\""
 spec:
   id: difficulty_model
   version: 1.0.0
@@ -6,8 +6,8 @@ spec:
   priority: critical
   module: Ontology
   compiler_stage: Knowledge Representation
-  description: "\"Defines the multidimensional difficulty model used throughout the TOON Dataset Compiler. Difficulty is not determined by code size but by the engineering cognition required to understand, reason about, design, validate and evolve a system.\""
-purpose: "\"Represent engineering difficulty as a measurable, multidimensional property used by curriculum learning, dataset generation, benchmarking and model evaluation.\""
+  description: "\"\\\"Defines the multidimensional difficulty model used throughout the TOON Dataset Compiler. Difficulty is not determined by code size but by the engineering cognition required to understand, reason about, design, validate and evolve a system.\\\"\""
+purpose: "\"\\\"Represent engineering difficulty as a measurable, multidimensional property used by curriculum learning, dataset generation, benchmarking and model evaluation.\\\"\""
 dimensions:
   Knowledge:
     description: Amount of prerequisite knowledge.
@@ -44,7 +44,6 @@ levels:
     name: Expert
   D6:
     name: Research
-factors[2]: "increases[10]: Unknown Requirements,Concurrency,Distribution,Security,Scale,Production,Optimization,Legacy Code,Cross Domain Reasoning,Ambiguity","decreases[5]: Isolation,Complete Documentation,Small Scope,Deterministic Behaviour,Well Tested Code"
 examples:
   Example_1:
     task: Reverse Linked List
@@ -58,7 +57,7 @@ examples:
     task: Debug Kernel Deadlock
     difficulty: D6
     dominant_dimension: Reasoning
-success: "\"Difficulty predicts\"[4]: Learning Order,Dataset Progression,Competency Growth,Curriculum Placement"
+success: "\"\\\"Difficulty predicts\\\"[4]: Learning Order,Dataset Progression,Competency Growth,Curriculum Placement\""
 future:
   adaptive_difficulty: true
   personalized_curriculum: true

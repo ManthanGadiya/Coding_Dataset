@@ -1,7 +1,7 @@
-description: "failure_balance[10]: syntax_errors,logic_errors,architecture_failures,concurrency_failures,security_failures,performance_failures,deployment_failures,production_incidents,configuration_errors,dependency_failures"
+description: "\"failure_balance[10]: syntax_errors,logic_errors,architecture_failures,concurrency_failures,security_failures,performance_failures,deployment_failures,production_incidents,configuration_errors,dependency_failures\""
 dataset_balancing:
   metadata:
-    description: "depends_on[2]: compiler/03_curriculum/05_prerequisite_graph.toon,compiler/03_curriculum/06_sampling_strategy.toon consumed_by[4]: compiler/03_curriculum/08_spacing_algorithm.toon,compiler/03_curriculum/09_curriculum_graph.toon,compiler/05_generation/19_dataset_builder.toon,compiler/09_optimization/06_balancing_optimizer.toon"
+    description: "\"depends_on[2]: compiler/03_curriculum/05_prerequisite_graph.toon,compiler/03_curriculum/06_sampling_strategy.toon consumed_by[4]: compiler/03_curriculum/08_spacing_algorithm.toon,compiler/03_curriculum/09_curriculum_graph.toon,compiler/05_generation/19_dataset_builder.toon,compiler/09_optimization/06_balancing_optimizer.toon\""
     id: CURR-007
     title: Dataset Balancing
     version: 1.0
@@ -12,7 +12,7 @@ domain_balance:
   strategy: weighted_equilibrium
   maximum_difference: 0.05
 difficulty_balance:
-  description: "\"Autonomous Engineering\":"
+  description: "\"\\\"Autonomous Engineering\\\":\""
   Recognition:
     target: 0.12
   Understanding:
@@ -68,7 +68,6 @@ reasoning_balance:
     target: 0.1
   strategic:
     target: 0.1
-reweighting[2]: "increase_weight_if[4]: underrepresented,low_confidence,weak_transfer,insufficient_examples","decrease_weight_if[4]: oversampled,repetitive,highly_correlated,redundant"
 diversity_constraints:
   maximum_duplicate_similarity: 0.8
   minimum_domain_entropy: 0.95
@@ -76,10 +75,10 @@ diversity_constraints:
   minimum_framework_entropy: 0.9
   minimum_reasoning_entropy: 0.92
 drift_detection:
-  description: "monitor[6]: domain_distribution,difficulty_distribution,language_distribution,framework_distribution,task_distribution,reasoning_distribution"
+  description: "\"monitor[6]: domain_distribution,difficulty_distribution,language_distribution,framework_distribution,task_distribution,reasoning_distribution\""
   correction: automatic_reweighting
-validation: "reject_if[7]: excessive_domain_bias,language_monoculture,framework_monoculture,reasoning_imbalance,duplicate_clusters,distribution_drift,curriculum_violation"
-metrics: "compute[9]: domain_entropy,language_entropy,framework_entropy,reasoning_entropy,difficulty_entropy,task_entropy,dataset_gini_index,kl_divergence,js_divergence"
+validation: "\"reject_if[7]: excessive_domain_bias,language_monoculture,framework_monoculture,reasoning_imbalance,duplicate_clusters,distribution_drift,curriculum_violation\""
+metrics: "\"compute[9]: domain_entropy,language_entropy,framework_entropy,reasoning_entropy,difficulty_entropy,task_entropy,dataset_gini_index,kl_divergence,js_divergence\""
 success_metrics:
   domain_balance:
     minimum: 0.95

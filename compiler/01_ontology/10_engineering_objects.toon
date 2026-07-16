@@ -1,4 +1,4 @@
-description: "validation[5]: Every object has owner.,Every object has purpose.,Every object has lifecycle.,Every object has metadata.,Every object has explicit relationships. success[2]: Every engineering entity is represented as an Engineering Object.,Every object participates in the Engineering Knowledge Graph. guarantees[6]: Unified Engineering Object Model,Consistent Lifecycles,Explicit Ownership,Rich Relationships,Graph Native Representation,Unlimited Extensibility"
+description: "\"validation[5]: Every object has owner.,Every object has purpose.,Every object has lifecycle.,Every object has metadata.,Every object has explicit relationships. success[2]: Every engineering entity is represented as an Engineering Object.,Every object participates in the Engineering Knowledge Graph. guarantees[6]: Unified Engineering Object Model,Consistent Lifecycles,Explicit Ownership,Rich Relationships,Graph Native Representation,Unlimited Extensibility\""
 spec:
   id: engineering_objects
   version: 1.0.0
@@ -7,9 +7,8 @@ spec:
   module: Ontology
   compiler_stage: Knowledge Representation
   description: Defines every first-class object that exists within the TOON Engineering Universe. These objects represent the entities manipulated by engineers during software development and production operation. Every Engineering Knowledge Record references one or more Engineering Objects.
-purpose: "\"Create a realistic engineering world by defining every object, its lifecycle, properties, relationships and responsibilities.\""
-responsibilities: "\"Every object has\"[6]: Owner,Purpose,Constraints,Dependencies,Consumers,Producers"
-examples[5]: "Example_01[3]: Company,owns,Repository","Example_02[3]: Repository,contains,Service","Example_03[3]: Pull Request,modifies,Module","Example_04[3]: Incident,affects,Service","Example_05[3]: ADR,documents,Architecture Decision"
+purpose: "\"\\\"Create a realistic engineering world by defining every object, its lifecycle, properties, relationships and responsibilities.\\\"\""
+responsibilities: "\"\\\"Every object has\\\"[6]: Owner,Purpose,Constraints,Dependencies,Consumers,Producers\""
 future:
   object_inheritance: true
   object_templates: true

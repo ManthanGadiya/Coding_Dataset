@@ -1,305 +1,35 @@
 fact_validation:
-
   metadata:
-
     id: VAL-005
-
     title: Fact Validation
-
     version: 2.0
-
     status: Stable
-
     owner: Validation Engine
-
-    depends_on:
-
-      - compiler/08_validation/01_validation_engine.toon
-      - compiler/01_ontology/09_knowledge_atoms.toon
-      - compiler/01_ontology/20_ontology_rules.toon
-
-    consumed_by:
-
-      - compiler/08_validation/08_consistency_validation.toon
-      - compiler/08_validation/10_final_validation.toon
-      - compiler/08_validation/11_validation_reports.toon
-
-    objective:
-
-      Validate every factual claim contained
-      within engineering knowledge records
-      against the ontology, known constraints,
-      and cross-referenced evidence to ensure
-      factual accuracy and ontological correctness.
-
-
-################################################################################
-# PHILOSOPHY
-################################################################################
-
-philosophy:
-
-  facts_must_be_true
-
-  claims_require_evidence
-
-  ontology_defines_truth
-
-  unverifiable_is_uncertain
-
-  deterministic_fact_checking
-
-  cross_reference_before_acceptance
-
-  provenance_is_evidence
-
-  graph_native_verification
-
-
-################################################################################
-# INPUTS
-################################################################################
-
-inputs:
-
-  engineering_knowledge_records
-
-  ontology_graph
-
-  knowledge_atoms
-
-  fact_database
-
-  evidence_graph
-
-  provenance_records
-
-  fact_validation_rules
-
-  contradiction_database
-
-
-################################################################################
-# FACT TYPES
-################################################################################
-
-types:
-
-  ontological_fact
-
-  empirical_fact
-
-  definitional_fact
-
-  relational_fact
-
-  historical_fact
-
-  technical_fact
-
-  domain_fact
-
-  constraint_fact
-
-  derived_fact
-
-  inferred_fact
-
-
-################################################################################
-# VALIDATION RULES
-################################################################################
-
-rules:
-
-  fact_defined_in_ontology
-
-  fact_consistent_with_ontology
-
-  fact_has_evidence
-
-  fact_has_provenance
-
-  fact_is_current
-
-  fact_not_contradicted
-
-  fact_verifiable
-
-  fact_domain_correct
-
-  fact_constraint_satisfied
-
-
-################################################################################
-# ANALYSIS
-################################################################################
-
-analysis:
-
-  ontological_alignment
-
-  evidence_support_analysis
-
-  contradiction_detection
-
-  provenance_verification
-
-  staleness_detection
-
-  domain_correctness
-
-  constraint_satisfaction
-
-
-################################################################################
-# FAILURE MODES
-################################################################################
-
-failures:
-
-  fact_not_in_ontology
-
-  fact_contradicts_ontology
-
-  fact_missing_evidence
-
-  fact_missing_provenance
-
-  fact_stale_or_outdated
-
-  fact_contradicted_by_other_fact
-
-  fact_unverifiable
-
-  fact_wrong_domain
-
-  fact_violates_constraint
-
-
-################################################################################
-# CONSTRAINTS
-################################################################################
-
-constraints:
-
-  deterministic
-
-  reproducible
-
-  ontology_aligned
-
-  evidence_based
-
-  provenance_tracked
-
-  contradiction_free
-
-  verifiable
-
-
-################################################################################
-# VALIDATION
-################################################################################
-
-validation:
-
-  ontology_alignment_validation
-
-  evidence_validation
-
-  provenance_validation
-
-  contradiction_validation
-
-  staleness_validation
-
-  determinism_validation
-
-
-################################################################################
-# RANDOMIZATION
-################################################################################
-
+    depends_on[3]: "- compiler/08_validation/01_validation_engine.toon","- compiler/01_ontology/09_knowledge_atoms.toon","- compiler/01_ontology/20_ontology_rules.toon"
+    consumed_by[3]: "- compiler/08_validation/08_consistency_validation.toon","- compiler/08_validation/10_final_validation.toon","- compiler/08_validation/11_validation_reports.toon"
+    objective[5]: Validate every factual claim contained,within engineering knowledge records,"against the ontology, known constraints,",and cross-referenced evidence to ensure,factual accuracy and ontological correctness.
+philosophy[8]: facts_must_be_true,claims_require_evidence,ontology_defines_truth,unverifiable_is_uncertain,deterministic_fact_checking,cross_reference_before_acceptance,provenance_is_evidence,graph_native_verification
+inputs[8]: engineering_knowledge_records,ontology_graph,knowledge_atoms,fact_database,evidence_graph,provenance_records,fact_validation_rules,contradiction_database
+types[10]: ontological_fact,empirical_fact,definitional_fact,relational_fact,historical_fact,technical_fact,domain_fact,constraint_fact,derived_fact,inferred_fact
+rules[9]: fact_defined_in_ontology,fact_consistent_with_ontology,fact_has_evidence,fact_has_provenance,fact_is_current,fact_not_contradicted,fact_verifiable,fact_domain_correct,fact_constraint_satisfied
+analysis[7]: ontological_alignment,evidence_support_analysis,contradiction_detection,provenance_verification,staleness_detection,domain_correctness,constraint_satisfaction
+failures[9]: fact_not_in_ontology,fact_contradicts_ontology,fact_missing_evidence,fact_missing_provenance,fact_stale_or_outdated,fact_contradicted_by_other_fact,fact_unverifiable,fact_wrong_domain,fact_violates_constraint
+constraints[7]: deterministic,reproducible,ontology_aligned,evidence_based,provenance_tracked,contradiction_free,verifiable
+validation[6]: ontology_alignment_validation,evidence_validation,provenance_validation,contradiction_validation,staleness_validation,determinism_validation
 randomization:
-
-  deterministic_seed:
-
-    true
-
-  reproducible:
-
-    true
-
-
-################################################################################
-# OUTPUTS
-################################################################################
-
-outputs:
-
-  fact_validation_report
-
-  ontological_alignment_report
-
-  evidence_support_report
-
-  contradiction_report
-
-  provenance_report
-
-  fact_confidence_scores
-
-  metadata
-
-
-################################################################################
-# METRICS
-################################################################################
-
+  deterministic_seed: true
+  reproducible: true
+outputs[7]: fact_validation_report,ontological_alignment_report,evidence_support_report,contradiction_report,provenance_report,fact_confidence_scores,metadata
 metrics:
-
-  compute:
-
-    fact_accuracy_rate
-
-    ontological_alignment
-
-    evidence_coverage
-
-    provenance_completeness
-
-    contradiction_rate
-
-    verifiability_rate
-
-    validation_latency
-
-    fact_confidence
-
-
-################################################################################
-# SUCCESS METRICS
-################################################################################
-
+  compute[8]: fact_accuracy_rate,ontological_alignment,evidence_coverage,provenance_completeness,contradiction_rate,verifiability_rate,validation_latency,fact_confidence
 success_metrics:
-
   fact_accuracy_rate:
-
-    minimum: 1.00
-
+    minimum: 1.0
   ontological_alignment:
-
-    minimum: 1.00
-
+    minimum: 1.0
   evidence_coverage:
-
-    minimum: 1.00
-
+    minimum: 1.0
   contradiction_rate:
-
-    maximum: 0.00
-
+    maximum: 0.0
   determinism:
-
-    minimum: 1.00
+    minimum: 1.0

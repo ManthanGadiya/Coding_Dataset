@@ -1,4 +1,4 @@
-description: "guarantees[5]: Explainable Reasoning,Traceable Thinking,Memory Integration,Graph Execution,Deterministic Reconstruction"
+description: "\"guarantees[5]: Explainable Reasoning,Traceable Thinking,Memory Integration,Graph Execution,Deterministic Reconstruction\""
 spec:
   id: cognitive_graph
   version: 1.0.0
@@ -6,10 +6,9 @@ spec:
   priority: highest
   module: Cognition
   compiler_stage: Cognitive Representation
-  description: "\"Defines the Universal Cognitive Graph (UCG), the execution model of engineering reasoning. A Cognitive Graph represents thought as a directed, composable graph of cognitive operations connected through evidence, hypotheses, constraints, memories and decisions.\""
+  description: "\"\\\"Defines the Universal Cognitive Graph (UCG), the execution model of engineering reasoning. A Cognitive Graph represents thought as a directed, composable graph of cognitive operations connected through evidence, hypotheses, constraints, memories and decisions.\\\"\""
 purpose: Represent engineering thinking as an executable graph.
-examples[4]: "Example_01[9]: Observe,→,Retrieve Memory,→,Compare,→,Infer,→,Decision","Example_02[9]: Bug,→,Hypothesis A,→,Validation,→,Reject,→,Hypothesis B","Example_03[7]: Requirements,→,Architecture,→,Tradeoff,→,Decision","Example_04[7]: Performance Metric,→,Optimization,→,Benchmark,→,Reflection"
-success: "\"Every engineering thought is represented as a reusable, explainable cognitive graph.\""
+success: "\"\\\"Every engineering thought is represented as a reusable, explainable cognitive graph.\\\"\""
 future:
   probabilistic_graphs: true
   graph_embeddings: true

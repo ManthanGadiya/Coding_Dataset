@@ -1,360 +1,38 @@
 regeneration:
-
   metadata:
-
     id: REP-013
-
     title: Regeneration
-
     version: 2.0
-
     status: Stable
-
     owner: Repair Engine
-
-    depends_on:
-
-      - compiler/06_repair/12_self_critique.toon
-      - compiler/05_generation/20_generation_pipeline.toon
-      - compiler/02_cognition/10_reflection_model.toon
-      - compiler/02_cognition/11_learning_model.toon
-
-    consumed_by:
-
-      - compiler/06_repair/14_repair_pipeline.toon
-      - compiler/07_quality/01_quality_engine.toon
-
-    objective:
-
-      Regenerate only deficient engineering artifacts,
-      reasoning paths, documentation, or repository
-      components while preserving validated knowledge,
-      ensuring deterministic improvement and maximizing
-      engineering quality.
-
-
-################################################################################
-# PHILOSOPHY
-################################################################################
-
-philosophy:
-
-  regenerate_minimally
-
-  preserve_valid_information
-
-  deterministic_improvement
-
-  regeneration_is_guided
-
-  critique_drives_generation
-
-  evidence_before_change
-
-  engineering_over_recreation
-
-  incremental_refinement
-
-
-################################################################################
-# INPUTS
-################################################################################
-
-inputs:
-
-  critique_report
-
-  improvement_plan
-
-  prioritized_changes
-
-  repaired_dataset
-
-  reasoning_graph
-
-  engineering_story
-
-  architecture
-
-  repository_graph
-
-  engineering_memory
-
-  generation_metadata
-
-
-################################################################################
-# REGENERATION TARGETS
-################################################################################
-
-targets:
-
-  implementation
-
-  reasoning
-
-  architecture
-
-  documentation
-
-  tests
-
-  engineering_story
-
-  engineering_dialogue
-
-  deployment_plan
-
-  monitoring_plan
-
-  security_design
-
-  optimization_plan
-
-  curriculum_links
-
-  knowledge_graph
-
-  metadata
-
-  repository_snapshot
-
-
-################################################################################
-# REGENERATION TRIGGERS
-################################################################################
-
-triggers:
-
-  critical_failure
-
-  failed_validation
-
-  low_confidence
-
-  weak_reasoning
-
-  engineering_gap
-
-  curriculum_violation
-
-  diversity_gap
-
-  quality_threshold_failure
-
-  outdated_knowledge
-
-  architecture_violation
-
-
-################################################################################
-# REGENERATION STRATEGIES
-################################################################################
-
-strategies:
-
-  partial_regeneration
-
-  localized_regeneration
-
-  dependency_guided
-
-  graph_guided
-
-  curriculum_guided
-
-  architecture_guided
-
-  evidence_guided
-
-  confidence_guided
-
-  iterative_refinement
-
-  rollback_safe
-
-
-################################################################################
-# REGENERATION OPERATIONS
-################################################################################
-
-operations:
-
-  regenerate_node
-
-  regenerate_subgraph
-
-  regenerate_module
-
-  regenerate_reasoning
-
-  regenerate_documentation
-
-  regenerate_tests
-
-  regenerate_story
-
-  regenerate_metadata
-
-  merge_preserved_content
-
-  update_dependencies
-
-
-################################################################################
-# PRESERVATION RULES
-################################################################################
-
-preservation:
-
-  preserve_valid_reasoning
-
-  preserve_engineering_history
-
-  preserve_repository_identity
-
-  preserve_curriculum
-
-  preserve_verified_artifacts
-
-  preserve_graph_links
-
-  preserve_metadata
-
-  preserve_evidence
-
-
-################################################################################
-# CONSTRAINTS
-################################################################################
-
-constraints:
-
-  deterministic
-
-  reproducible
-
-  minimal_changes
-
-  preserve_quality
-
-  preserve_semantics
-
-  preserve_reasoning
-
-  preserve_history
-
-  reversible
-
-
-################################################################################
-# VALIDATION
-################################################################################
-
-validation:
-
-  regeneration_validation
-
-  semantic_validation
-
-  graph_validation
-
-  curriculum_validation
-
-  engineering_validation
-
-  determinism_validation
-
-
-################################################################################
-# RANDOMIZATION
-################################################################################
-
+    depends_on[4]: "- compiler/06_repair/12_self_critique.toon","- compiler/05_generation/20_generation_pipeline.toon","- compiler/02_cognition/10_reflection_model.toon","- compiler/02_cognition/11_learning_model.toon"
+    consumed_by[2]: "- compiler/06_repair/14_repair_pipeline.toon","- compiler/07_quality/01_quality_engine.toon"
+    objective[5]: "Regenerate only deficient engineering artifacts,","reasoning paths, documentation, or repository","components while preserving validated knowledge,",ensuring deterministic improvement and maximizing,engineering quality.
+philosophy[8]: regenerate_minimally,preserve_valid_information,deterministic_improvement,regeneration_is_guided,critique_drives_generation,evidence_before_change,engineering_over_recreation,incremental_refinement
+inputs[10]: critique_report,improvement_plan,prioritized_changes,repaired_dataset,reasoning_graph,engineering_story,architecture,repository_graph,engineering_memory,generation_metadata
+targets[15]: implementation,reasoning,architecture,documentation,tests,engineering_story,engineering_dialogue,deployment_plan,monitoring_plan,security_design,optimization_plan,curriculum_links,knowledge_graph,metadata,repository_snapshot
+triggers[10]: critical_failure,failed_validation,low_confidence,weak_reasoning,engineering_gap,curriculum_violation,diversity_gap,quality_threshold_failure,outdated_knowledge,architecture_violation
+strategies[10]: partial_regeneration,localized_regeneration,dependency_guided,graph_guided,curriculum_guided,architecture_guided,evidence_guided,confidence_guided,iterative_refinement,rollback_safe
+operations[10]: regenerate_node,regenerate_subgraph,regenerate_module,regenerate_reasoning,regenerate_documentation,regenerate_tests,regenerate_story,regenerate_metadata,merge_preserved_content,update_dependencies
+preservation[8]: preserve_valid_reasoning,preserve_engineering_history,preserve_repository_identity,preserve_curriculum,preserve_verified_artifacts,preserve_graph_links,preserve_metadata,preserve_evidence
+constraints[8]: deterministic,reproducible,minimal_changes,preserve_quality,preserve_semantics,preserve_reasoning,preserve_history,reversible
+validation[6]: regeneration_validation,semantic_validation,graph_validation,curriculum_validation,engineering_validation,determinism_validation
 randomization:
-
-  deterministic_seed:
-
-    true
-
-  reproducible:
-
-    true
-
-
-################################################################################
-# OUTPUTS
-################################################################################
-
-outputs:
-
-  regenerated_dataset
-
-  regeneration_report
-
-  regeneration_diff
-
-  preserved_artifacts
-
-  updated_graphs
-
-  updated_metadata
-
-  repair_history
-
-  metadata
-
-
-################################################################################
-# METRICS
-################################################################################
-
+  deterministic_seed: true
+  reproducible: true
+outputs[8]: regenerated_dataset,regeneration_report,regeneration_diff,preserved_artifacts,updated_graphs,updated_metadata,repair_history,metadata
 metrics:
-
-  compute:
-
-    regeneration_rate
-
-    preserved_information
-
-    improvement_gain
-
-    engineering_gain
-
-    regeneration_cost
-
-    graph_stability
-
-    curriculum_stability
-
-    deterministic_score
-
-
-################################################################################
-# SUCCESS METRICS
-################################################################################
-
+  compute[8]: regeneration_rate,preserved_information,improvement_gain,engineering_gain,regeneration_cost,graph_stability,curriculum_stability,deterministic_score
 success_metrics:
-
   preserved_information:
-
     minimum: 0.995
-
   improvement_gain:
-
     minimum: 0.99
-
   engineering_gain:
-
     minimum: 0.99
-
   regeneration_cost:
-
-    maximum: 0.10
-
+    maximum: 0.1
   graph_stability:
-
     minimum: 0.99
-
   determinism:
-
-    minimum: 1.00
+    minimum: 1.0

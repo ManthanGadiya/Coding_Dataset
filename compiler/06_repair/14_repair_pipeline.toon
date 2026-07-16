@@ -1,374 +1,39 @@
 repair_pipeline:
-
   metadata:
-
     id: REP-014
-
     title: Repair Pipeline
-
     version: 2.0
-
     status: Stable
-
     owner: Repair Engine
-
-    depends_on:
-
-      - compiler/06_repair/01_failure_classifier.toon
-      - compiler/06_repair/02_structural_repair.toon
-      - compiler/06_repair/03_semantic_repair.toon
-      - compiler/06_repair/04_knowledge_repair.toon
-      - compiler/06_repair/05_reasoning_repair.toon
-      - compiler/06_repair/06_engineering_repair.toon
-      - compiler/06_repair/07_graph_repair.toon
-      - compiler/06_repair/08_curriculum_repair.toon
-      - compiler/06_repair/09_diversity_repair.toon
-      - compiler/06_repair/10_token_optimizer.toon
-      - compiler/06_repair/11_confidence_repair.toon
-      - compiler/06_repair/12_self_critique.toon
-      - compiler/06_repair/13_regeneration.toon
-
-    consumed_by:
-
-      - compiler/07_quality/01_quality_engine.toon
-      - compiler/08_validation/01_validation_engine.toon
-
-    objective:
-
-      Coordinate every repair stage into a
-      deterministic, dependency-aware,
-      graph-native pipeline that transforms
-      generated engineering artifacts into
-      production-grade dataset samples.
-
-
-################################################################################
-# PHILOSOPHY
-################################################################################
-
-philosophy:
-
-  repair_is_iterative
-
-  preserve_before_replace
-
-  deterministic_execution
-
-  graph_native
-
-  evidence_driven
-
-  quality_before_acceptance
-
-  engineering_first
-
-  continuous_improvement
-
-
-################################################################################
-# PIPELINE STAGES
-################################################################################
-
-stages:
-
-  classify_failures
-
-  structural_repair
-
-  semantic_repair
-
-  knowledge_repair
-
-  reasoning_repair
-
-  engineering_repair
-
-  graph_repair
-
-  curriculum_repair
-
-  diversity_repair
-
-  token_optimization
-
-  confidence_repair
-
-  self_critique
-
-  targeted_regeneration
-
-  final_verification
-
-
-################################################################################
-# EXECUTION MODEL
-################################################################################
-
-execution:
-
-  dependency_graph
-
-  topological_scheduler
-
-  deterministic_execution
-
-  checkpointing
-
-  resumable_execution
-
-  distributed_execution
-
-  cache_aware
-
-  incremental_repair
-
-  parallel_safe
-
-
-################################################################################
-# INPUTS
-################################################################################
-
-inputs:
-
-  generated_dataset
-
-  repair_configuration
-
-  engineering_graph
-
-  ontology_graph
-
-  repository_graph
-
-  curriculum_graph
-
-  validation_reports
-
-  quality_reports
-
-  repair_history
-
-
-################################################################################
-# PIPELINE STATE
-################################################################################
-
-state:
-
-  initialized
-
-  classifying
-
-  repairing
-
-  regenerating
-
-  validating
-
-  completed
-
-  failed
-
-  rolled_back
-
-  resumed
-
-
-################################################################################
-# FAILURE HANDLING
-################################################################################
-
-failure_handling:
-
-  retry
-
-  rollback
-
-  checkpoint_restore
-
-  localized_regeneration
-
-  dependency_repair
-
-  pipeline_restart
-
-  deterministic_replay
-
-
-################################################################################
-# OPTIMIZATION
-################################################################################
-
-optimization:
-
-  incremental_execution
-
-  graph_diff_execution
-
-  cache_reuse
-
-  selective_validation
-
-  dependency_pruning
-
-  parallel_repairs
-
-  resource_balancing
-
-
-################################################################################
-# OBSERVABILITY
-################################################################################
-
-observability:
-
-  execution_trace
-
-  repair_trace
-
-  graph_lineage
-
-  stage_timings
-
-  repair_statistics
-
-  quality_tracking
-
-  resource_usage
-
-  deterministic_hashes
-
-
-################################################################################
-# CONSTRAINTS
-################################################################################
-
-constraints:
-
-  preserve_verified_information
-
-  deterministic
-
-  reproducible
-
-  reversible
-
-  dependency_safe
-
-  graph_consistent
-
-  curriculum_safe
-
-
-################################################################################
-# VALIDATION
-################################################################################
-
-validation:
-
-  stage_validation
-
-  pipeline_validation
-
-  graph_validation
-
-  curriculum_validation
-
-  engineering_validation
-
-  determinism_validation
-
-
-################################################################################
-# RANDOMIZATION
-################################################################################
-
+    depends_on[13]: "- compiler/06_repair/01_failure_classifier.toon","- compiler/06_repair/02_structural_repair.toon","- compiler/06_repair/03_semantic_repair.toon","- compiler/06_repair/04_knowledge_repair.toon","- compiler/06_repair/05_reasoning_repair.toon","- compiler/06_repair/06_engineering_repair.toon","- compiler/06_repair/07_graph_repair.toon","- compiler/06_repair/08_curriculum_repair.toon","- compiler/06_repair/09_diversity_repair.toon","- compiler/06_repair/10_token_optimizer.toon","- compiler/06_repair/11_confidence_repair.toon","- compiler/06_repair/12_self_critique.toon","- compiler/06_repair/13_regeneration.toon"
+    consumed_by[2]: "- compiler/07_quality/01_quality_engine.toon","- compiler/08_validation/01_validation_engine.toon"
+    objective[5]: Coordinate every repair stage into a,"deterministic, dependency-aware,",graph-native pipeline that transforms,generated engineering artifacts into,production-grade dataset samples.
+philosophy[8]: repair_is_iterative,preserve_before_replace,deterministic_execution,graph_native,evidence_driven,quality_before_acceptance,engineering_first,continuous_improvement
+stages[14]: classify_failures,structural_repair,semantic_repair,knowledge_repair,reasoning_repair,engineering_repair,graph_repair,curriculum_repair,diversity_repair,token_optimization,confidence_repair,self_critique,targeted_regeneration,final_verification
+execution[9]: dependency_graph,topological_scheduler,deterministic_execution,checkpointing,resumable_execution,distributed_execution,cache_aware,incremental_repair,parallel_safe
+inputs[9]: generated_dataset,repair_configuration,engineering_graph,ontology_graph,repository_graph,curriculum_graph,validation_reports,quality_reports,repair_history
+state[9]: initialized,classifying,repairing,regenerating,validating,completed,failed,rolled_back,resumed
+failure_handling[7]: retry,rollback,checkpoint_restore,localized_regeneration,dependency_repair,pipeline_restart,deterministic_replay
+optimization[7]: incremental_execution,graph_diff_execution,cache_reuse,selective_validation,dependency_pruning,parallel_repairs,resource_balancing
+observability[8]: execution_trace,repair_trace,graph_lineage,stage_timings,repair_statistics,quality_tracking,resource_usage,deterministic_hashes
+constraints[7]: preserve_verified_information,deterministic,reproducible,reversible,dependency_safe,graph_consistent,curriculum_safe
+validation[6]: stage_validation,pipeline_validation,graph_validation,curriculum_validation,engineering_validation,determinism_validation
 randomization:
-
-  deterministic_seed:
-
-    true
-
-  reproducible:
-
-    true
-
-
-################################################################################
-# OUTPUTS
-################################################################################
-
-outputs:
-
-  repaired_dataset
-
-  repair_manifest
-
-  execution_graph
-
-  repair_statistics
-
-  lineage_report
-
-  pipeline_logs
-
-  quality_inputs
-
-  metadata
-
-
-################################################################################
-# METRICS
-################################################################################
-
+  deterministic_seed: true
+  reproducible: true
+outputs[8]: repaired_dataset,repair_manifest,execution_graph,repair_statistics,lineage_report,pipeline_logs,quality_inputs,metadata
 metrics:
-
-  compute:
-
-    repair_success_rate
-
-    repair_latency
-
-    regeneration_rate
-
-    preserved_information
-
-    graph_integrity
-
-    engineering_quality_gain
-
-    curriculum_preservation
-
-    determinism_score
-
-
-################################################################################
-# SUCCESS METRICS
-################################################################################
-
+  compute[8]: repair_success_rate,repair_latency,regeneration_rate,preserved_information,graph_integrity,engineering_quality_gain,curriculum_preservation,determinism_score
 success_metrics:
-
   repair_success_rate:
-
     minimum: 0.999
-
   preserved_information:
-
     minimum: 0.995
-
   graph_integrity:
-
-    minimum: 1.00
-
+    minimum: 1.0
   engineering_quality_gain:
-
     minimum: 0.99
-
   curriculum_preservation:
-
     minimum: 0.99
-
   determinism:
-
-    minimum: 1.00
+    minimum: 1.0
