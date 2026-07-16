@@ -4,6 +4,25 @@ SemVer: MAJOR.MINOR.PATCH
 
 ---
 
+# [0.3.1] — 2026-07-16
+
+## Changed
+
+### Quality Engine Overhaul
+- **Content-aware scoring**: 10 dimensions rewritten to evaluate actual content substance, not just structural counts
+- **Real discrimination**: True Q3/Q4 distribution (84% Q3, 16% Q4) based on episode type richness
+- **Substance analysis**: Reasoning steps scored by domain terminology density, concrete details, and explanation quality
+- **Engineering quality**: Rewards decisions with alternatives and detailed outcomes; base penalty for non-decision types removed
+- **SourceAcquirer**: Three-tier acquisition (Firecrawl SDK → HTTP fallback → ingest file), fixes falsy `[]` bug in `acquire_all`
+
+## Added
+
+### Ingestion Tests (13 new tests, 83 total)
+- KnowledgeStore: save/get, search, random sampling, empty domain handling
+- AtomProcessor: atom creation, short-sentence skipping
+- Prebuilt atoms: content validation, domain coverage (≥10 domains)
+- SourceAcquirer: cache hit/miss, HTTP fallback, ingest file fallback, empty source list
+
 # [0.3.0] — 2026-07-16
 
 ## Added

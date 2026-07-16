@@ -212,14 +212,24 @@ Rather than maintaining static datasets, TOON aims to function as a continuously
 Current Version:
 
 ```
-v0.1 (Foundation)
+v0.3.1 (Quality Discrimination + Ingestion Tests)
 ```
 
 Development Stage:
 
 ```
-Architecture & Compiler Design
+Generative Dataset Production (v0.4 planning: 1M+ scale, benchmark suite)
 ```
+
+### Quality Profile (v0.3.1)
+
+| Metric | Value |
+|--------|-------|
+| Content-aware 10-dimension scoring | Q3 (84%) / Q4 (16%) discrimination |
+| Avg reasoning chains | 6-8 steps per EKR |
+| Knowledge atom coverage | 73 atoms, 15 domains |
+| Episode types | All 12 distributed evenly |
+| Test coverage | 83 tests, all passing |
 
 ---
 
