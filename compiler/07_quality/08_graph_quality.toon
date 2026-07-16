@@ -1,10 +1,10 @@
-diversity_metrics:
+graph_quality:
 
   metadata:
 
-    id: QLT-006
+    id: QLT-008
 
-    title: Diversity Metrics
+    title: Graph Quality
 
     version: 2.0
 
@@ -14,22 +14,24 @@ diversity_metrics:
 
     depends_on:
 
-      - compiler/07_quality/05_engineering_quality.toon
-      - compiler/03_curriculum/07_dataset_balancing.toon
-      - compiler/01_ontology/20_ontology_rules.toon
+      - compiler/07_quality/07_curriculum_quality.toon
+      - compiler/01_ontology/19_dependency_graph.toon
+      - compiler/02_cognition/03_reasoning_graphs.toon
 
     consumed_by:
 
-      - compiler/07_quality/07_curriculum_quality.toon
       - compiler/07_quality/09_quality_dashboard.toon
-      - compiler/08_validation/06_diversity_validation.toon
+      - compiler/07_quality/10_quality_pipeline.toon
+      - compiler/08_validation/05_graph_validation.toon
 
     objective:
 
-      Measure conceptual, architectural,
-      engineering, curriculum, and ecosystem
-      diversity to maximize generalization
-      while preserving realism and educational value.
+      Evaluate structural integrity,
+      semantic consistency,
+      connectivity,
+      topology,
+      and educational usefulness
+      of every graph used by the compiler.
 
 
 ################################################################################
@@ -38,21 +40,21 @@ diversity_metrics:
 
 philosophy:
 
-  diversity_is_not_randomness
+  everything_is_a_graph
 
-  conceptual_diversity_over_surface_variation
+  graph_quality_affects_learning
 
-  realism_before_balance
+  topology_has_semantics
 
-  coverage_over_frequency
+  connectivity_enables_reasoning
 
-  engineering_has_multiple_solutions
+  deterministic_analysis
 
-  deterministic_measurement
+  explainable_metrics
 
-  graph_native_analysis
+  graph_native_compiler
 
-  diversity_improves_generalization
+  reusable_knowledge
 
 
 ################################################################################
@@ -61,133 +63,139 @@ philosophy:
 
 inputs:
 
-  dataset
-
-  repository_graph
-
   ontology_graph
-
-  curriculum_graph
 
   reasoning_graph
 
+  repository_graph
+
+  curriculum_graph
+
+  dependency_graph
+
   architecture_graph
 
-  capability_matrix
+  engineering_graph
 
-  distribution_statistics
+  graph_history
 
   benchmark_reports
 
 
 ################################################################################
-# DIVERSITY DIMENSIONS
+# GRAPH DIMENSIONS
 ################################################################################
 
 dimensions:
 
-  conceptual_diversity
+  connectivity
 
-  reasoning_diversity
+  reachability
 
-  architectural_diversity
+  consistency
 
-  engineering_diversity
+  topology
 
-  curriculum_diversity
+  hierarchy
 
-  ecosystem_diversity
+  modularity
 
-  organizational_diversity
+  graph_density
 
-  temporal_diversity
+  graph_entropy
 
-  failure_diversity
+  graph_stability
 
-  solution_diversity
+  graph_reusability
 
-  domain_diversity
+  graph_evolution
 
-  production_diversity
-
-
-################################################################################
-# ECOSYSTEM DIVERSITY
-################################################################################
-
-ecosystem:
-
-  programming_languages
-
-  frameworks
-
-  operating_systems
-
-  cloud_platforms
-
-  databases
-
-  build_systems
-
-  ci_cd_platforms
-
-  package_managers
-
-  deployment_models
-
-  infrastructure
+  graph_explainability
 
 
 ################################################################################
-# ENGINEERING DIVERSITY
-################################################################################
-
-engineering:
-
-  architectures
-
-  design_patterns
-
-  debugging_strategies
-
-  testing_strategies
-
-  deployment_strategies
-
-  monitoring_strategies
-
-  security_patterns
-
-  optimization_patterns
-
-  scalability_patterns
-
-  failure_patterns
-
-
-################################################################################
-# ANALYSIS
+# GRAPH ANALYSIS
 ################################################################################
 
 analysis:
 
-  entropy_analysis
+  connectivity_analysis
 
-  graph_similarity
+  shortest_path_analysis
 
-  concept_similarity
+  cycle_analysis
 
-  capability_coverage
+  hierarchy_analysis
+
+  centrality_analysis
 
   clustering_analysis
 
-  redundancy_detection
+  graph_isomorphism
 
-  distribution_analysis
+  dependency_analysis
 
-  curriculum_balance
+  evolution_analysis
 
-  novelty_analysis
+  semantic_alignment
+
+
+################################################################################
+# QUALITY CHECKS
+################################################################################
+
+checks:
+
+  disconnected_components
+
+  unreachable_nodes
+
+  dependency_cycles
+
+  redundant_edges
+
+  missing_relationships
+
+  inconsistent_hierarchy
+
+  invalid_directionality
+
+  duplicate_subgraphs
+
+  weak_connectivity
+
+  unstable_topology
+
+
+################################################################################
+# GRAPH METRICS
+################################################################################
+
+metrics:
+
+  node_count
+
+  edge_count
+
+  average_degree
+
+  graph_density
+
+  average_path_length
+
+  clustering_coefficient
+
+  modularity
+
+  betweenness_centrality
+
+  graph_entropy
+
+  knowledge_connectivity
+
+  curriculum_connectivity
+
+  reasoning_connectivity
 
 
 ################################################################################
@@ -196,21 +204,21 @@ analysis:
 
 scoring:
 
-  shannon_entropy
+  structural_quality
 
-  concept_entropy
+  semantic_quality
 
-  graph_entropy
+  topology_quality
 
-  capability_coverage
+  connectivity_quality
 
-  novelty_score
+  modularity_score
 
-  redundancy_penalty
+  educational_connectivity
 
-  curriculum_balance
+  graph_health
 
-  diversity_score
+  graph_quality_score
 
 
 ################################################################################
@@ -223,11 +231,11 @@ constraints:
 
   reproducible
 
-  statistically_valid
-
   explainable
 
   benchmarkable
+
+  ontology_safe
 
   curriculum_safe
 
@@ -240,15 +248,15 @@ constraints:
 
 validation:
 
-  entropy_validation
+  topology_validation
 
-  coverage_validation
+  connectivity_validation
 
-  distribution_validation
+  hierarchy_validation
 
   benchmark_validation
 
-  graph_validation
+  consistency_validation
 
   determinism_validation
 
@@ -274,48 +282,19 @@ randomization:
 
 outputs:
 
-  diversity_report
+  graph_quality_report
 
-  entropy_report
+  topology_report
 
-  capability_coverage
+  connectivity_report
 
-  redundancy_report
+  graph_score
 
-  novelty_report
+  graph_statistics
 
-  distribution_report
+  optimization_targets
 
   metadata
-
-
-################################################################################
-# METRICS
-################################################################################
-
-metrics:
-
-  compute:
-
-    conceptual_entropy
-
-    reasoning_entropy
-
-    architecture_entropy
-
-    engineering_entropy
-
-    curriculum_entropy
-
-    ecosystem_entropy
-
-    redundancy_ratio
-
-    capability_coverage
-
-    novelty_score
-
-    generalization_score
 
 
 ################################################################################
@@ -324,23 +303,23 @@ metrics:
 
 success_metrics:
 
-  capability_coverage:
+  connectivity_quality:
 
     minimum: 0.99
 
-  conceptual_entropy:
+  topology_quality:
 
     minimum: 0.99
 
-  engineering_entropy:
+  semantic_quality:
 
     minimum: 0.99
 
-  redundancy_ratio:
+  graph_health:
 
-    maximum: 0.05
+    minimum: 0.99
 
-  generalization_score:
+  graph_reusability:
 
     minimum: 0.99
 

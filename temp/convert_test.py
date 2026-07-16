@@ -1,6 +1,6 @@
 import yaml, json, re, sys
 
-with open("compiler/00_core/01_project_overview.toon", "r", encoding="utf-8") as f:
+with open("../compiler/00_core/01_project_overview.toon", "r", encoding="utf-8") as f:
     raw = f.read()
 
 lines = raw.split("\n")

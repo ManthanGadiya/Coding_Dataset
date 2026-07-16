@@ -1,0 +1,322 @@
+token_optimizer:
+
+  metadata:
+
+    id: REP-010
+
+    title: Token Optimizer
+
+    version: 2.0
+
+    status: Stable
+
+    owner: Repair Engine
+
+    depends_on:
+
+      - compiler/06_repair/09_diversity_repair.toon
+      - compiler/07_quality/03_knowledge_density.toon
+      - compiler/10_serialization/06_token_compression.toon
+
+    consumed_by:
+
+      - compiler/06_repair/11_confidence_repair.toon
+      - compiler/09_optimization/02_token_optimizer.toon
+      - compiler/06_repair/14_repair_pipeline.toon
+
+    objective:
+
+      Optimize dataset representation to maximize
+      engineering knowledge density, reasoning value,
+      and curriculum efficiency while minimizing
+      unnecessary token usage.
+
+
+################################################################################
+# PHILOSOPHY
+################################################################################
+
+philosophy:
+
+  knowledge_per_token
+
+  preserve_semantics
+
+  preserve_reasoning
+
+  preserve_engineering_context
+
+  compression_without_loss
+
+  deterministic_optimization
+
+  readability_when_needed
+
+  efficiency_is_quality
+
+
+################################################################################
+# INPUTS
+################################################################################
+
+inputs:
+
+  diversified_dataset
+
+  engineering_graph
+
+  reasoning_graph
+
+  ontology_graph
+
+  curriculum_metadata
+
+  serialization_metadata
+
+  token_statistics
+
+
+################################################################################
+# TOKEN WASTE
+################################################################################
+
+repair_targets:
+
+  duplicated_information
+
+  verbose_descriptions
+
+  redundant_metadata
+
+  repeated_reasoning
+
+  repeated_documentation
+
+  repeated_examples
+
+  unnecessary_whitespace
+
+  repeated_identifiers
+
+  duplicate_graphs
+
+  duplicate_context
+
+  low_information_tokens
+
+  serialization_bloat
+
+  repeated_templates
+
+  repetitive_dialogues
+
+  redundant_comments
+
+
+################################################################################
+# ANALYSIS
+################################################################################
+
+analysis:
+
+  token_frequency
+
+  entropy_analysis
+
+  information_density
+
+  redundancy_detection
+
+  graph_similarity
+
+  semantic_similarity
+
+  curriculum_density
+
+  engineering_density
+
+  compression_gain
+
+
+################################################################################
+# OPTIMIZATION OPERATIONS
+################################################################################
+
+operations:
+
+  deduplicate
+
+  canonicalize
+
+  compress_metadata
+
+  compress_graphs
+
+  merge_equivalent_objects
+
+  remove_redundancy
+
+  normalize_identifiers
+
+  factor_common_patterns
+
+  optimize_templates
+
+  compress_serialization
+
+
+################################################################################
+# OPTIMIZATION STRATEGIES
+################################################################################
+
+strategies:
+
+  graph_factoring
+
+  dictionary_encoding
+
+  reference_reuse
+
+  template_reuse
+
+  semantic_deduplication
+
+  curriculum_aware_compression
+
+  ontology_guided_compression
+
+  incremental_compression
+
+
+################################################################################
+# CONSTRAINTS
+################################################################################
+
+constraints:
+
+  preserve_meaning
+
+  preserve_reasoning
+
+  preserve_curriculum
+
+  preserve_references
+
+  preserve_graphs
+
+  deterministic
+
+  reversible
+
+  lossless
+
+
+################################################################################
+# VALIDATION
+################################################################################
+
+validation:
+
+  semantic_equivalence
+
+  graph_equivalence
+
+  curriculum_equivalence
+
+  ontology_equivalence
+
+  serialization_validation
+
+  compression_validation
+
+
+################################################################################
+# RANDOMIZATION
+################################################################################
+
+randomization:
+
+  deterministic_seed:
+
+    true
+
+  reproducible:
+
+    true
+
+
+################################################################################
+# OUTPUTS
+################################################################################
+
+outputs:
+
+  optimized_dataset
+
+  compression_report
+
+  token_statistics
+
+  optimization_log
+
+  optimization_diff
+
+  serialization_updates
+
+  metadata
+
+
+################################################################################
+# METRICS
+################################################################################
+
+metrics:
+
+  compute:
+
+    token_reduction
+
+    knowledge_density
+
+    engineering_density
+
+    reasoning_density
+
+    compression_ratio
+
+    semantic_preservation
+
+    graph_preservation
+
+    curriculum_efficiency
+
+
+################################################################################
+# SUCCESS METRICS
+################################################################################
+
+success_metrics:
+
+  semantic_preservation:
+
+    minimum: 1.00
+
+  graph_preservation:
+
+    minimum: 1.00
+
+  curriculum_preservation:
+
+    minimum: 1.00
+
+  knowledge_density:
+
+    minimum: 0.99
+
+  compression_ratio:
+
+    minimum: 0.30
+
+  determinism:
+
+    minimum: 1.00

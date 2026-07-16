@@ -8,7 +8,7 @@ Clean all .toon files to be directly parseable as YAML:
 
 import re, os, sys
 
-COMPILER_DIR = "compiler"
+COMPILER_DIR = "../compiler"
 
 def strip_fences(lines):
     if lines and lines[0].strip() == "```toon":

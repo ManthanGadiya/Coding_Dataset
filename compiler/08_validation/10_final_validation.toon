@@ -1,0 +1,324 @@
+final_validation:
+
+  metadata:
+
+    id: VAL-010
+
+    title: Final Validation
+
+    version: 2.0
+
+    status: Stable
+
+    owner: Validation Engine
+
+    depends_on:
+
+      - compiler/08_validation/09_dataset_validation.toon
+      - compiler/08_validation/02_schema_validation.toon
+      - compiler/08_validation/03_graph_validation.toon
+      - compiler/08_validation/04_reasoning_validation.toon
+      - compiler/08_validation/05_fact_validation.toon
+      - compiler/08_validation/06_execution_validation.toon
+      - compiler/08_validation/07_security_validation.toon
+      - compiler/08_validation/08_consistency_validation.toon
+
+    consumed_by:
+
+      - compiler/08_validation/11_validation_reports.toon
+      - compiler/09_optimization/01_dataset_optimizer.toon
+      - compiler/10_serialization/01_toon_spec.toon
+
+    objective:
+
+      Aggregate all validation results into
+      a definitive acceptance decision for the
+      dataset release. Apply release gates,
+      verify determinism and reproducibility,
+      and produce the final validation verdict
+      that gates downstream optimization.
+
+
+################################################################################
+# PHILOSOPHY
+################################################################################
+
+philosophy:
+
+  validation_is_a_gate
+
+  acceptance_requires_certainty
+
+  no_compromise_on_correctness
+
+  evidence_before_release
+
+  deterministic_acceptance
+
+  auditable_decisions
+
+  graph_native_aggregation
+
+  explainable_verdicts
+
+
+################################################################################
+# INPUTS
+################################################################################
+
+inputs:
+
+  schema_validation_report
+
+  graph_validation_report
+
+  reasoning_validation_report
+
+  fact_validation_report
+
+  execution_validation_report
+
+  security_validation_report
+
+  consistency_validation_report
+
+  dataset_validation_report
+
+  release_gates_configuration
+
+  determinism_evidence
+
+  reproducibility_evidence
+
+
+################################################################################
+# ACCEPTANCE CRITERIA
+################################################################################
+
+criteria:
+
+  all_validation_passed
+
+  no_critical_failures
+
+  determinism_verified
+
+  reproducibility_verified
+
+  release_gates_satisfied
+
+  quality_thresholds_met
+
+  consistency_confirmed
+
+  completeness_confirmed
+
+
+################################################################################
+# VALIDATION RULES
+################################################################################
+
+rules:
+
+  every_validation_dimension_passed
+
+  zero_critical_failures_accepted
+
+  determinism_reproducible_across_runs
+
+  reproducibility_verified_across_environments
+
+  all_release_gates_open
+
+  quality_scores_above_minimum
+
+  cross_domain_consistency_confirmed
+
+  dataset_completeness_confirmed
+
+
+################################################################################
+# ANALYSIS
+################################################################################
+
+analysis:
+
+  final_aggregation
+
+  gate_status_analysis
+
+  failure_severity_analysis
+
+  determinism_verification
+
+  reproducibility_verification
+
+  release_readiness_analysis
+
+  risk_assessment
+
+
+################################################################################
+# DECISIONS
+################################################################################
+
+decisions:
+
+  release_approved
+
+  release_denied
+
+  conditional_release
+
+  repair_required
+
+  revalidation_required
+
+
+################################################################################
+# FAILURE MODES
+################################################################################
+
+failures:
+
+  validation_not_fully_passed
+
+  critical_failure_present
+
+  determinism_not_verified
+
+  reproducibility_not_verified
+
+  release_gate_closed
+
+  quality_below_threshold
+
+  consistency_not_confirmed
+
+
+################################################################################
+# CONSTRAINTS
+################################################################################
+
+constraints:
+
+  deterministic
+
+  reproducible
+
+  gate_controlled
+
+  auditable
+
+  explainable
+
+  irreversible
+
+  evidence_based
+
+
+################################################################################
+# VALIDATION
+################################################################################
+
+validation:
+
+  gate_validation
+
+  determinism_validation
+
+  reproducibility_validation
+
+  decision_validation
+
+  audit_validation
+
+  completeness_validation
+
+
+################################################################################
+# RANDOMIZATION
+################################################################################
+
+randomization:
+
+  deterministic_seed:
+
+    true
+
+  reproducible:
+
+    true
+
+
+################################################################################
+# OUTPUTS
+################################################################################
+
+outputs:
+
+  final_validation_report
+
+  acceptance_decision
+
+  release_gate_status
+
+  determinism_certificate
+
+  reproducibility_certificate
+
+  audit_trail
+
+  optimization_inputs
+
+  metadata
+
+
+################################################################################
+# METRICS
+################################################################################
+
+metrics:
+
+  compute:
+
+    overall_validation_score
+
+    release_readiness
+
+    determinism_confidence
+
+    reproducibility_confidence
+
+    gate_satisfaction_rate
+
+    decision_confidence
+
+    validation_latency
+
+
+################################################################################
+# SUCCESS METRICS
+################################################################################
+
+success_metrics:
+
+  overall_validation_score:
+
+    minimum: 1.00
+
+  release_readiness:
+
+    minimum: 1.00
+
+  determinism_confidence:
+
+    minimum: 1.00
+
+  reproducibility_confidence:
+
+    minimum: 1.00
+
+  gate_satisfaction_rate:
+
+    minimum: 1.00

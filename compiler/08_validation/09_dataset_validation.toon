@@ -1,0 +1,311 @@
+dataset_validation:
+
+  metadata:
+
+    id: VAL-009
+
+    title: Dataset Validation
+
+    version: 2.0
+
+    status: Stable
+
+    owner: Validation Engine
+
+    depends_on:
+
+      - compiler/08_validation/08_consistency_validation.toon
+      - compiler/07_quality/06_diversity_metrics.toon
+      - compiler/03_curriculum/07_dataset_balancing.toon
+
+    consumed_by:
+
+      - compiler/08_validation/10_final_validation.toon
+      - compiler/08_validation/11_validation_reports.toon
+      - compiler/09_optimization/01_dataset_optimizer.toon
+
+    objective:
+
+      Validate the completeness, balance,
+      coverage, and structural integrity
+      of the entire dataset as a unified
+      collection, ensuring fitness for
+      downstream training and evaluation.
+
+
+################################################################################
+# PHILOSOPHY
+################################################################################
+
+philosophy:
+
+  datasets_are_more_than_samples
+
+  collection_integrity_matters
+
+  balance_enables_generalization
+
+  coverage_defines_capability
+
+  deterministic_dataset_validation
+
+  statistical_rigor
+
+  graph_native_aggregation
+
+  fitness_for_training
+
+
+################################################################################
+# INPUTS
+################################################################################
+
+inputs:
+
+  validated_records
+
+  quality_manifest
+
+  diversity_report
+
+  curriculum_graph
+
+  capability_matrix
+
+  distribution_statistics
+
+  coverage_targets
+
+  balance_constraints
+
+  training_requirements
+
+
+################################################################################
+# VALIDATION DIMENSIONS
+################################################################################
+
+dimensions:
+
+  dataset_completeness
+
+  sample_validity
+
+  distribution_balance
+
+  capability_coverage
+
+  domain_coverage
+
+  difficulty_distribution
+
+  redundancy_ratio
+
+  size_constraints
+
+  statistical_properties
+
+
+################################################################################
+# VALIDATION RULES
+################################################################################
+
+rules:
+
+  all_samples_validated
+
+  no_duplicate_samples
+
+  distribution_within_tolerance
+
+  capability_coverage_met
+
+  domain_coverage_met
+
+  difficulty_range_complete
+
+  redundancy_below_threshold
+
+  dataset_size_within_bounds
+
+  statistical_distributions_valid
+
+
+################################################################################
+# ANALYSIS
+################################################################################
+
+analysis:
+
+  completeness_analysis
+
+  distribution_analysis
+
+  coverage_analysis
+
+  redundancy_detection
+
+  statistical_analysis
+
+  balance_analysis
+
+  gap_analysis
+
+  size_validation
+
+
+################################################################################
+# FAILURE MODES
+################################################################################
+
+failures:
+
+  incomplete_dataset
+
+  duplicate_sample
+
+  distribution_imbalance
+
+  coverage_gap
+
+  domain_missing
+
+  difficulty_gap
+
+  excessive_redundancy
+
+  size_constraint_violation
+
+  statistical_anomaly
+
+  balance_violation
+
+
+################################################################################
+# CONSTRAINTS
+################################################################################
+
+constraints:
+
+  deterministic
+
+  reproducible
+
+  statistically_valid
+
+  coverage_complete
+
+  balance_maintained
+
+  redundancy_controlled
+
+  size_bounded
+
+
+################################################################################
+# VALIDATION
+################################################################################
+
+validation:
+
+  completeness_validation
+
+  distribution_validation
+
+  coverage_validation
+
+  balance_validation
+
+  redundancy_validation
+
+  determinism_validation
+
+
+################################################################################
+# RANDOMIZATION
+################################################################################
+
+randomization:
+
+  deterministic_seed:
+
+    true
+
+  reproducible:
+
+    true
+
+
+################################################################################
+# OUTPUTS
+################################################################################
+
+outputs:
+
+  dataset_validation_report
+
+  completeness_report
+
+  distribution_report
+
+  coverage_report
+
+  balance_report
+
+  redundancy_report
+
+  statistical_summary
+
+  metadata
+
+
+################################################################################
+# METRICS
+################################################################################
+
+metrics:
+
+  compute:
+
+    dataset_completeness
+
+    distribution_balance
+
+    capability_coverage
+
+    domain_coverage
+
+    redundancy_ratio
+
+    statistical_validity
+
+    validation_latency
+
+    dataset_readiness
+
+
+################################################################################
+# SUCCESS METRICS
+################################################################################
+
+success_metrics:
+
+  dataset_completeness:
+
+    minimum: 1.00
+
+  distribution_balance:
+
+    minimum: 0.99
+
+  capability_coverage:
+
+    minimum: 1.00
+
+  redundancy_ratio:
+
+    maximum: 0.01
+
+  determinism:
+
+    minimum: 1.00

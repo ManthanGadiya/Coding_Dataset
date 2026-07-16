@@ -5,7 +5,7 @@ using the official toon_format library (toon-format/toon-python).
 
 import yaml, re, os, sys
 
-COMPILER_DIR = "compiler"
+COMPILER_DIR = "../compiler"
 
 _KEYWORD_VALUES = {"null": None, "true": True, "false": False, "yes": True, "no": False, "on": True, "off": False}
 _YAML_KEY_FIX = {None: "null", True: "true", False: "false"}

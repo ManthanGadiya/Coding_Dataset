@@ -1,0 +1,266 @@
+deduplication:
+
+  metadata:
+
+    id: OPT-004
+
+    title: Deduplication
+
+    version: 2.0
+
+    status: Stable
+
+    owner: Optimization Engine
+
+    depends_on:
+
+      - compiler/09_optimization/01_dataset_optimizer.toon
+      - compiler/07_quality/06_diversity_metrics.toon
+      - compiler/01_ontology/03_capability_graph.toon
+
+    consumed_by:
+
+      - compiler/09_optimization/05_compression.toon
+      - compiler/09_optimization/06_balancing_optimizer.toon
+      - compiler/09_optimization/10_optimizer_reports.toon
+
+    objective:
+
+      Identify and remove duplicate and
+      near-duplicate samples, knowledge
+      records, reasoning traces, and graph
+      sub-structures from the dataset while
+      preserving diversity, coverage, and
+      the most representative exemplar of
+      each unique engineering concept.
+
+
+################################################################################
+# PHILOSOPHY
+################################################################################
+
+philosophy:
+
+  duplicates_waste_capacity
+
+  near_duplicates_reduce_diversity
+
+  preservation_over_removal
+
+  best_exemplar_selection
+
+  deterministic_deduplication
+
+  semantic_similarity_detection
+
+  graph_native_comparison
+
+  coverage_preserving_dedup
+
+
+################################################################################
+# INPUTS
+################################################################################
+
+inputs:
+
+  validated_dataset
+
+  quality_manifest
+
+  similarity_thresholds
+
+  deduplication_strategy
+
+  coverage_requirements
+
+  capability_coverage_matrix
+
+  benchmark_suite
+
+
+################################################################################
+# SIMILARITY DOMAINS
+################################################################################
+
+domains:
+
+  exact_duplicate
+
+  semantic_duplicate
+
+  structural_duplicate
+
+  reasoning_duplicate
+
+  architectural_duplicate
+
+  conceptual_duplicate
+
+  near_duplicate
+
+
+################################################################################
+# DEDUPLICATION STRATEGIES
+################################################################################
+
+strategies:
+
+  exact_match_removal
+
+  fuzzy_match_removal
+
+  semantic_similarity_clustering
+
+  graph_isomorphism_detection
+
+  best_exemplar_selection
+
+  coverage_preserving_dedup
+
+  diversity_preserving_dedup
+
+
+################################################################################
+# ANALYSIS
+################################################################################
+
+analysis:
+
+  similarity_analysis
+
+  redundancy_quantification
+
+  coverage_impact_analysis
+
+  exemplar_quality_analysis
+
+  diversity_impact_analysis
+
+  benchmark_impact_projection
+
+
+################################################################################
+# CONSTRAINTS
+################################################################################
+
+constraints:
+
+  deterministic
+
+  reproducible
+
+  coverage_preserving
+
+  diversity_preserving
+
+  quality_aware
+
+  benchmark_verified
+
+  threshold_configurable
+
+
+################################################################################
+# VALIDATION
+################################################################################
+
+validation:
+
+  deduplication_validation
+
+  coverage_preservation_validation
+
+  diversity_preservation_validation
+
+  benchmark_validation
+
+  quality_validation
+
+  determinism_validation
+
+
+################################################################################
+# RANDOMIZATION
+################################################################################
+
+randomization:
+
+  deterministic_seed:
+
+    true
+
+  reproducible:
+
+    true
+
+
+################################################################################
+# OUTPUTS
+################################################################################
+
+outputs:
+
+  deduplicated_dataset
+
+  deduplication_report
+
+  similarity_analysis
+
+  coverage_report
+
+  exemplar_selection_justification
+
+  benchmark_comparison
+
+  metadata
+
+
+################################################################################
+# METRICS
+################################################################################
+
+metrics:
+
+  compute:
+
+    exact_duplicate_removal_rate
+
+    near_duplicate_removal_rate
+
+    coverage_preservation
+
+    diversity_preservation
+
+    exemplar_quality
+
+    benchmark_impact
+
+    optimization_latency
+
+
+################################################################################
+# SUCCESS METRICS
+################################################################################
+
+success_metrics:
+
+  exact_duplicate_removal_rate:
+
+    minimum: 1.00
+
+  near_duplicate_removal_rate:
+
+    minimum: 0.95
+
+  coverage_preservation:
+
+    minimum: 1.00
+
+  diversity_preservation:
+
+    minimum: 0.99
+
+  determinism:
+
+    minimum: 1.00

@@ -1,0 +1,322 @@
+schema_validation:
+
+  metadata:
+
+    id: VAL-002
+
+    title: Schema Validation
+
+    version: 2.0
+
+    status: Stable
+
+    owner: Validation Engine
+
+    depends_on:
+
+      - compiler/08_validation/01_validation_engine.toon
+      - compiler/01_ontology/18_metadata_model.toon
+      - compiler/01_ontology/07_engineering_knowledge_record.toon
+
+    consumed_by:
+
+      - compiler/08_validation/08_consistency_validation.toon
+      - compiler/08_validation/10_final_validation.toon
+      - compiler/08_validation/11_validation_reports.toon
+
+    objective:
+
+      Validate the structural schema of every
+      engineering knowledge record, ontology entity,
+      graph node, and dataset artifact against
+      the canonical TOON schema specification
+      to ensure structural integrity.
+
+
+################################################################################
+# PHILOSOPHY
+################################################################################
+
+philosophy:
+
+  structure_precedes_semantics
+
+  schema_enforces_contract
+
+  every_field_has_a_type
+
+  every_type_has_a_constraint
+
+  deterministic_validation
+
+  fail_fast_on_structure
+
+  explicit_before_implicit
+
+  graph_native_schemas
+
+
+################################################################################
+# INPUTS
+################################################################################
+
+inputs:
+
+  engineering_knowledge_records
+
+  ontology_graph
+
+  schema_definitions
+
+  type_system
+
+  constraint_definitions
+
+  validation_configuration
+
+
+################################################################################
+# SCHEMA DOMAINS
+################################################################################
+
+domains:
+
+  record_structure
+
+  field_types
+
+  required_fields
+
+  optional_fields
+
+  nested_structures
+
+  array_constraints
+
+  enum_values
+
+  reference_format
+
+  identifier_format
+
+  timestamp_format
+
+
+################################################################################
+# VALIDATION RULES
+################################################################################
+
+rules:
+
+  required_fields_present
+
+  field_types_match
+
+  nested_structure_valid
+
+  enum_values_valid
+
+  identifier_format_valid
+
+  reference_format_valid
+
+  array_constraints_satisfied
+
+  size_constraints_satisfied
+
+  pattern_constraints_satisfied
+
+  custom_constraints_satisfied
+
+
+################################################################################
+# ANALYSIS
+################################################################################
+
+analysis:
+
+  structural_analysis
+
+  field_coverage_analysis
+
+  type_compliance_analysis
+
+  constraint_satisfaction_analysis
+
+  schema_deviation_analysis
+
+  missing_field_analysis
+
+
+################################################################################
+# EXECUTION
+################################################################################
+
+execution:
+
+  field_by_field_validation
+
+  recursive_structure_validation
+
+  batch_validation
+
+  incremental_validation
+
+  schema_version_matching
+
+  deterministic_ordering
+
+  cache_aware_validation
+
+
+################################################################################
+# FAILURE MODES
+################################################################################
+
+failures:
+
+  missing_required_field
+
+  invalid_field_type
+
+  invalid_nested_structure
+
+  invalid_enum_value
+
+  malformed_identifier
+
+  unresolvable_reference
+
+  array_size_exceeded
+
+  pattern_mismatch
+
+  constraint_violation
+
+  schema_version_mismatch
+
+
+################################################################################
+# CONSTRAINTS
+################################################################################
+
+constraints:
+
+  deterministic
+
+  reproducible
+
+  version_aware
+
+  schema_compliant
+
+  field_exact
+
+  type_safe
+
+  reference_valid
+
+
+################################################################################
+# VALIDATION
+################################################################################
+
+validation:
+
+  rule_validation
+
+  schema_compliance_validation
+
+  type_validation
+
+  constraint_validation
+
+  reference_validation
+
+  determinism_validation
+
+
+################################################################################
+# RANDOMIZATION
+################################################################################
+
+randomization:
+
+  deterministic_seed:
+
+    true
+
+  reproducible:
+
+    true
+
+
+################################################################################
+# OUTPUTS
+################################################################################
+
+outputs:
+
+  schema_validation_report
+
+  structural_compliance_report
+
+  field_coverage_report
+
+  type_consistency_report
+
+  failure_details
+
+  validation_artifacts
+
+  metadata
+
+
+################################################################################
+# METRICS
+################################################################################
+
+metrics:
+
+  compute:
+
+    schema_compliance_rate
+
+    field_coverage
+
+    type_accuracy
+
+    constraint_satisfaction_rate
+
+    reference_resolution_rate
+
+    validation_latency
+
+    structural_integrity
+
+
+################################################################################
+# SUCCESS METRICS
+################################################################################
+
+success_metrics:
+
+  schema_compliance_rate:
+
+    minimum: 1.00
+
+  field_coverage:
+
+    minimum: 1.00
+
+  type_accuracy:
+
+    minimum: 1.00
+
+  structural_integrity:
+
+    minimum: 1.00
+
+  determinism:
+
+    minimum: 1.00

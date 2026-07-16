@@ -1,0 +1,379 @@
+engineering_repair:
+
+  metadata:
+
+    id: REP-006
+
+    title: Engineering Repair
+
+    version: 2.0
+
+    status: Stable
+
+    owner: Repair Engine
+
+    depends_on:
+
+      - compiler/06_repair/05_reasoning_repair.toon
+      - compiler/01_ontology/15_tradeoff_types.toon
+      - compiler/02_cognition/14_engineering_instincts.toon
+      - compiler/04_world/15_world_state.toon
+
+    consumed_by:
+
+      - compiler/06_repair/07_graph_repair.toon
+      - compiler/06_repair/08_curriculum_repair.toon
+      - compiler/06_repair/14_repair_pipeline.toon
+
+    objective:
+
+      Improve engineering quality by repairing
+      architectural weaknesses, maintainability issues,
+      scalability limitations, operational risks,
+      and software engineering anti-patterns while
+      preserving functional correctness.
+
+
+################################################################################
+# PHILOSOPHY
+################################################################################
+
+philosophy:
+
+  engineering_over_code
+
+  maintainability_before_cleverness
+
+  systems_over_functions
+
+  architecture_guides_implementation
+
+  technical_debt_is_real
+
+  observability_is_required
+
+  tradeoffs_are_explicit
+
+  deterministic_repairs
+
+
+################################################################################
+# INPUTS
+################################################################################
+
+inputs:
+
+  repaired_reasoning_graph
+
+  repository_state
+
+  architecture
+
+  implementation
+
+  engineering_story
+
+  engineering_dialogue
+
+  review_comments
+
+  deployment_history
+
+  engineering_memory
+
+  quality_metrics
+
+
+################################################################################
+# ENGINEERING FAILURES
+################################################################################
+
+repair_targets:
+
+  excessive_coupling
+
+  low_cohesion
+
+  architecture_violation
+
+  layering_violation
+
+  dependency_smell
+
+  duplicated_logic
+
+  code_smell
+
+  anti_pattern
+
+  maintainability_issue
+
+  scalability_issue
+
+  observability_gap
+
+  resilience_gap
+
+  security_weakness
+
+  testing_gap
+
+  documentation_gap
+
+  deployment_risk
+
+  technical_debt
+
+  ownership_confusion
+
+
+################################################################################
+# ENGINEERING ANALYSIS
+################################################################################
+
+analysis:
+
+  architecture_analysis
+
+  dependency_analysis
+
+  design_pattern_validation
+
+  maintainability_analysis
+
+  scalability_analysis
+
+  operational_analysis
+
+  security_analysis
+
+  observability_analysis
+
+  deployment_analysis
+
+  technical_debt_analysis
+
+
+################################################################################
+# REPAIR OPERATIONS
+################################################################################
+
+operations:
+
+  modularize
+
+  decouple_components
+
+  extract_interface
+
+  introduce_abstraction
+
+  eliminate_duplication
+
+  improve_observability
+
+  improve_resilience
+
+  strengthen_security
+
+  simplify_dependencies
+
+  improve_testability
+
+  reduce_complexity
+
+  optimize_ownership
+
+  update_documentation
+
+  reduce_technical_debt
+
+
+################################################################################
+# ENGINEERING PRINCIPLES
+################################################################################
+
+principles:
+
+  single_responsibility
+
+  open_closed
+
+  liskov_substitution
+
+  interface_segregation
+
+  dependency_inversion
+
+  separation_of_concerns
+
+  composition_over_inheritance
+
+  fail_fast
+
+  graceful_degradation
+
+  least_privilege
+
+  immutable_interfaces
+
+  explicit_dependencies
+
+
+################################################################################
+# TRADEOFF MODEL
+################################################################################
+
+tradeoffs:
+
+  performance_vs_readability
+
+  abstraction_vs_complexity
+
+  flexibility_vs_simplicity
+
+  latency_vs_cost
+
+  consistency_vs_availability
+
+  scalability_vs_operability
+
+  delivery_speed_vs_quality
+
+  innovation_vs_stability
+
+
+################################################################################
+# CONSTRAINTS
+################################################################################
+
+constraints:
+
+  preserve_functionality
+
+  preserve_semantics
+
+  preserve_reasoning
+
+  preserve_curriculum
+
+  preserve_repository_history
+
+  deterministic
+
+  reversible
+
+
+################################################################################
+# VALIDATION
+################################################################################
+
+validation:
+
+  architecture_validation
+
+  maintainability_validation
+
+  dependency_validation
+
+  observability_validation
+
+  security_validation
+
+  engineering_best_practices
+
+
+################################################################################
+# RANDOMIZATION
+################################################################################
+
+randomization:
+
+  deterministic_seed:
+
+    true
+
+  reproducible:
+
+    true
+
+
+################################################################################
+# OUTPUTS
+################################################################################
+
+outputs:
+
+  engineering_repaired_dataset
+
+  architecture_diff
+
+  engineering_report
+
+  technical_debt_report
+
+  maintainability_report
+
+  repair_log
+
+  metadata
+
+
+################################################################################
+# METRICS
+################################################################################
+
+metrics:
+
+  compute:
+
+    maintainability
+
+    modularity
+
+    coupling
+
+    cohesion
+
+    architectural_compliance
+
+    observability_score
+
+    resilience_score
+
+    technical_debt_score
+
+    engineering_quality
+
+    repair_efficiency
+
+
+################################################################################
+# SUCCESS METRICS
+################################################################################
+
+success_metrics:
+
+  engineering_quality:
+
+    minimum: 0.995
+
+  architectural_compliance:
+
+    minimum: 0.99
+
+  maintainability:
+
+    minimum: 0.99
+
+  technical_debt:
+
+    maximum: 0.05
+
+  observability:
+
+    minimum: 0.98
+
+  determinism:
+
+    minimum: 1.00

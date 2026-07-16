@@ -1,0 +1,333 @@
+reasoning_repair:
+
+  metadata:
+
+    id: REP-005
+
+    title: Reasoning Repair
+
+    version: 2.0
+
+    status: Stable
+
+    owner: Repair Engine
+
+    depends_on:
+
+      - compiler/06_repair/04_knowledge_repair.toon
+      - compiler/02_cognition/03_reasoning_graphs.toon
+      - compiler/02_cognition/06_hypothesis_engine.toon
+      - compiler/02_cognition/07_decision_engine.toon
+      - compiler/02_cognition/10_reflection_model.toon
+
+    consumed_by:
+
+      - compiler/06_repair/06_engineering_repair.toon
+      - compiler/06_repair/11_confidence_repair.toon
+      - compiler/06_repair/12_self_critique.toon
+      - compiler/06_repair/14_repair_pipeline.toon
+
+    objective:
+
+      Detect, diagnose, and repair flawed engineering
+      reasoning while preserving valid conclusions,
+      improving logical consistency, and strengthening
+      future reasoning capability.
+
+
+################################################################################
+# PHILOSOPHY
+################################################################################
+
+philosophy:
+
+  reasoning_before_answers
+
+  conclusions_require_evidence
+
+  repair_logic_not_results
+
+  uncertainty_is_information
+
+  every_decision_has_assumptions
+
+  engineering_requires_tradeoffs
+
+  reflection_improves_reasoning
+
+  deterministic_reasoning_repairs
+
+
+################################################################################
+# INPUTS
+################################################################################
+
+inputs:
+
+  repaired_knowledge_graph
+
+  reasoning_trace
+
+  decision_graph
+
+  engineering_story
+
+  engineering_dialogue
+
+  architecture
+
+  implementation
+
+  curriculum_node
+
+  engineering_memory
+
+  confidence_matrix
+
+
+################################################################################
+# REASONING FAILURES
+################################################################################
+
+repair_targets:
+
+  invalid_inference
+
+  missing_inference
+
+  unsupported_conclusion
+
+  circular_reasoning
+
+  inconsistent_assumptions
+
+  skipped_reasoning
+
+  premature_optimization
+
+  false_causality
+
+  incorrect_tradeoff
+
+  invalid_abstraction
+
+  incomplete_root_cause
+
+  contradictory_decisions
+
+  confidence_miscalibration
+
+  ignored_constraints
+
+  reasoning_dead_end
+
+
+################################################################################
+# ANALYSIS
+################################################################################
+
+analysis:
+
+  reasoning_graph_validation
+
+  hypothesis_validation
+
+  evidence_validation
+
+  assumption_analysis
+
+  constraint_analysis
+
+  decision_consistency
+
+  tradeoff_analysis
+
+  uncertainty_analysis
+
+  causal_analysis
+
+
+################################################################################
+# REPAIR OPERATIONS
+################################################################################
+
+operations:
+
+  reconstruct_reasoning
+
+  insert_missing_steps
+
+  replace_invalid_inference
+
+  repair_assumptions
+
+  rebalance_tradeoffs
+
+  calibrate_confidence
+
+  reconnect_reasoning_graph
+
+  validate_constraints
+
+  strengthen_evidence
+
+  preserve_valid_subgraphs
+
+
+################################################################################
+# REASONING GRAPH
+################################################################################
+
+reasoning_graph:
+
+  observations
+
+  assumptions
+
+  hypotheses
+
+  evidence
+
+  constraints
+
+  alternatives
+
+  tradeoffs
+
+  decisions
+
+  conclusions
+
+  confidence_updates
+
+
+################################################################################
+# CONSTRAINTS
+################################################################################
+
+constraints:
+
+  preserve_correct_conclusions
+
+  preserve_evidence
+
+  preserve_architecture
+
+  preserve_repository_context
+
+  deterministic
+
+  reversible
+
+  explainable
+
+
+################################################################################
+# VALIDATION
+################################################################################
+
+validation:
+
+  logical_consistency
+
+  evidence_consistency
+
+  assumption_validation
+
+  decision_validation
+
+  causal_validation
+
+  curriculum_alignment
+
+
+################################################################################
+# RANDOMIZATION
+################################################################################
+
+randomization:
+
+  deterministic_seed:
+
+    true
+
+  reproducible:
+
+    true
+
+
+################################################################################
+# OUTPUTS
+################################################################################
+
+outputs:
+
+  repaired_reasoning_graph
+
+  repaired_reasoning_trace
+
+  decision_updates
+
+  confidence_updates
+
+  explanation_report
+
+  reasoning_diff
+
+  metadata
+
+
+################################################################################
+# METRICS
+################################################################################
+
+metrics:
+
+  compute:
+
+    logical_consistency
+
+    reasoning_depth
+
+    evidence_quality
+
+    tradeoff_quality
+
+    confidence_calibration
+
+    causal_accuracy
+
+    engineering_reasoning_score
+
+    repair_efficiency
+
+
+################################################################################
+# SUCCESS METRICS
+################################################################################
+
+success_metrics:
+
+  logical_consistency:
+
+    minimum: 0.995
+
+  evidence_quality:
+
+    minimum: 0.99
+
+  confidence_calibration:
+
+    minimum: 0.99
+
+  engineering_reasoning:
+
+    minimum: 0.99
+
+  information_preservation:
+
+    minimum: 0.999
+
+  determinism:
+
+    minimum: 1.00

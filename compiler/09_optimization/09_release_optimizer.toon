@@ -1,0 +1,275 @@
+release_optimizer:
+
+  metadata:
+
+    id: OPT-009
+
+    title: Release Optimizer
+
+    version: 2.0
+
+    status: Stable
+
+    owner: Optimization Engine
+
+    depends_on:
+
+      - compiler/09_optimization/08_sampling_optimizer.toon
+      - compiler/09_optimization/05_compression.toon
+      - compiler/10_serialization/08_release_format.toon
+
+    consumed_by:
+
+      - compiler/09_optimization/10_optimizer_reports.toon
+      - compiler/10_serialization/07_export_pipeline.toon
+      - compiler/10_serialization/09_dataset_manifest.toon
+
+    objective:
+
+      Optimize the final dataset release
+      by selecting the optimal combination
+      of formats, compression levels,
+      shard sizes, metadata packaging,
+      and distribution structure for the
+      target training infrastructure while
+      maximizing usability and minimizing
+      storage and transfer costs.
+
+
+################################################################################
+# PHILOSOPHY
+################################################################################
+
+philosophy:
+
+  release_is_a_product
+
+  format_affects_utility
+
+  infrastructure_aware_packaging
+
+  sharding_enables_scale
+
+  deterministic_release_assembly
+
+  multi_format_support
+
+  storage_cost_optimization
+
+  transfer_efficiency
+
+
+################################################################################
+# INPUTS
+################################################################################
+
+inputs:
+
+  sampling_strategy
+
+  compressed_dataset
+
+  release_configuration
+
+  target_infrastructure_specs
+
+  format_constraints
+
+  sharding_requirements
+
+  metadata_requirements
+
+  storage_budget
+
+  transfer_budget
+
+
+################################################################################
+# OPTIMIZATION DIMENSIONS
+################################################################################
+
+dimensions:
+
+  format_selection
+
+  compression_level
+
+  shard_size
+
+  shard_count
+
+  metadata_packaging
+
+  distribution_structure
+
+  storage_efficiency
+
+  transfer_efficiency
+
+  infrastructure_compatibility
+
+
+################################################################################
+# STRATEGIES
+################################################################################
+
+strategies:
+
+  format_optimization
+
+  shard_size_optimization
+
+  parallel_shard_assembly
+
+  metadata_minimization
+
+  storage_tier_selection
+
+  transfer_protocol_optimization
+
+  checksum_integration
+
+
+################################################################################
+# ANALYSIS
+################################################################################
+
+analysis:
+
+  format_tradeoff_analysis
+
+  shard_efficiency_analysis
+
+  storage_cost_analysis
+
+  transfer_cost_analysis
+
+  infrastructure_compatibility_analysis
+
+  parallel_loading_efficiency
+
+
+################################################################################
+# CONSTRAINTS
+################################################################################
+
+constraints:
+
+  deterministic
+
+  reproducible
+
+  format_compliant
+
+  infrastructure_compatible
+
+  storage_budget_respected
+
+  transfer_budget_respected
+
+  integrity_verifiable
+
+
+################################################################################
+# VALIDATION
+################################################################################
+
+validation:
+
+  format_validation
+
+  shard_integrity_validation
+
+  storage_budget_validation
+
+  transfer_budget_validation
+
+  infrastructure_compatibility_validation
+
+  determinism_validation
+
+
+################################################################################
+# RANDOMIZATION
+################################################################################
+
+randomization:
+
+  deterministic_seed:
+
+    true
+
+  reproducible:
+
+    true
+
+
+################################################################################
+# OUTPUTS
+################################################################################
+
+outputs:
+
+  release_manifest
+
+  optimized_shards
+
+  storage_report
+
+  transfer_report
+
+  format_packages
+
+  integrity_checksums
+
+  metadata
+
+
+################################################################################
+# METRICS
+################################################################################
+
+metrics:
+
+  compute:
+
+    release_efficiency
+
+    storage_utilization
+
+    transfer_efficiency
+
+    shard_balance
+
+    format_coverage
+
+    infrastructure_compatibility
+
+    optimization_latency
+
+
+################################################################################
+# SUCCESS METRICS
+################################################################################
+
+success_metrics:
+
+  release_efficiency:
+
+    minimum: 0.95
+
+  storage_utilization:
+
+    minimum: 0.90
+
+  shard_balance:
+
+    minimum: 0.95
+
+  format_coverage:
+
+    minimum: 1.00
+
+  determinism:
+
+    minimum: 1.00

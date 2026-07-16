@@ -1,7 +1,7 @@
 import os
 import sys
 
-compiler_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "compiler")
+compiler_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "../compiler")
 
 if not os.path.isdir(compiler_dir):
     print(f"compiler directory not found at {compiler_dir}")

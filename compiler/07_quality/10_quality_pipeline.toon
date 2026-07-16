@@ -1,45 +1,43 @@
-repair_pipeline:
+quality_pipeline:
 
   metadata:
 
-    id: REP-014
+    id: QLT-010
 
-    title: Repair Pipeline
+    title: Quality Pipeline
 
     version: 2.0
 
     status: Stable
 
-    owner: Repair Engine
+    owner: Quality Engine
 
     depends_on:
 
-      - compiler/06_repair/01_failure_classifier.toon
-      - compiler/06_repair/02_structural_repair.toon
-      - compiler/06_repair/03_semantic_repair.toon
-      - compiler/06_repair/04_knowledge_repair.toon
-      - compiler/06_repair/05_reasoning_repair.toon
-      - compiler/06_repair/06_engineering_repair.toon
-      - compiler/06_repair/07_graph_repair.toon
-      - compiler/06_repair/08_curriculum_repair.toon
-      - compiler/06_repair/09_diversity_repair.toon
-      - compiler/06_repair/10_token_optimizer.toon
-      - compiler/06_repair/11_confidence_repair.toon
-      - compiler/06_repair/12_self_critique.toon
-      - compiler/06_repair/13_regeneration.toon
+      - compiler/07_quality/01_quality_engine.toon
+      - compiler/07_quality/02_quality_metrics.toon
+      - compiler/07_quality/03_knowledge_density.toon
+      - compiler/07_quality/04_reasoning_quality.toon
+      - compiler/07_quality/05_engineering_quality.toon
+      - compiler/07_quality/06_diversity_metrics.toon
+      - compiler/07_quality/07_curriculum_quality.toon
+      - compiler/07_quality/08_graph_quality.toon
+      - compiler/07_quality/09_quality_dashboard.toon
 
     consumed_by:
 
-      - compiler/07_quality/01_quality_engine.toon
       - compiler/08_validation/01_validation_engine.toon
+      - compiler/09_optimization/01_optimizer.toon
+      - compiler/10_serialization/01_manifest.toon
 
     objective:
 
-      Coordinate every repair stage into a
-      deterministic, dependency-aware,
-      graph-native pipeline that transforms
-      generated engineering artifacts into
-      production-grade dataset samples.
+      Coordinate all quality evaluation
+      stages into a deterministic,
+      graph-aware,
+      benchmark-driven pipeline that
+      produces production-grade dataset
+      quality assessments.
 
 
 ################################################################################
@@ -48,21 +46,21 @@ repair_pipeline:
 
 philosophy:
 
-  repair_is_iterative
+  quality_is_multidimensional
 
-  preserve_before_replace
+  measure_before_decide
 
   deterministic_execution
 
   graph_native
 
-  evidence_driven
+  benchmark_everything
 
-  quality_before_acceptance
+  continuous_quality_improvement
 
   engineering_first
 
-  continuous_improvement
+  explainable_quality
 
 
 ################################################################################
@@ -71,33 +69,25 @@ philosophy:
 
 stages:
 
-  classify_failures
+  initialize
 
-  structural_repair
+  engineering_quality
 
-  semantic_repair
+  knowledge_density
 
-  knowledge_repair
+  reasoning_quality
 
-  reasoning_repair
+  diversity_analysis
 
-  engineering_repair
+  curriculum_quality
 
-  graph_repair
+  graph_quality
 
-  curriculum_repair
+  benchmark_comparison
 
-  diversity_repair
+  dashboard_generation
 
-  token_optimization
-
-  confidence_repair
-
-  self_critique
-
-  targeted_regeneration
-
-  final_verification
+  release_decision
 
 
 ################################################################################
@@ -120,7 +110,7 @@ execution:
 
   cache_aware
 
-  incremental_repair
+  incremental_evaluation
 
   parallel_safe
 
@@ -131,23 +121,23 @@ execution:
 
 inputs:
 
-  generated_dataset
+  repaired_dataset
 
-  repair_configuration
+  repair_reports
 
   engineering_graph
 
   ontology_graph
 
-  repository_graph
-
   curriculum_graph
 
-  validation_reports
+  repository_graph
 
-  quality_reports
+  reasoning_graph
 
-  repair_history
+  benchmark_suite
+
+  release_configuration
 
 
 ################################################################################
@@ -158,21 +148,21 @@ state:
 
   initialized
 
-  classifying
+  evaluating
 
-  repairing
+  benchmarking
 
-  regenerating
+  aggregating
 
-  validating
+  reporting
 
   completed
 
   failed
 
-  rolled_back
-
   resumed
+
+  released
 
 
 ################################################################################
@@ -187,13 +177,13 @@ failure_handling:
 
   checkpoint_restore
 
-  localized_regeneration
+  localized_evaluation
 
-  dependency_repair
-
-  pipeline_restart
+  dependency_recompute
 
   deterministic_replay
+
+  graceful_degradation
 
 
 ################################################################################
@@ -208,11 +198,11 @@ optimization:
 
   cache_reuse
 
-  selective_validation
+  selective_evaluation
 
   dependency_pruning
 
-  parallel_repairs
+  parallel_execution
 
   resource_balancing
 
@@ -225,19 +215,42 @@ observability:
 
   execution_trace
 
-  repair_trace
+  evaluation_trace
 
-  graph_lineage
+  benchmark_trace
 
   stage_timings
 
-  repair_statistics
-
-  quality_tracking
+  quality_statistics
 
   resource_usage
 
+  quality_lineage
+
   deterministic_hashes
+
+
+################################################################################
+# RELEASE GATES
+################################################################################
+
+release_gates:
+
+  engineering_threshold
+
+  reasoning_threshold
+
+  curriculum_threshold
+
+  graph_threshold
+
+  diversity_threshold
+
+  benchmark_threshold
+
+  determinism_threshold
+
+  reproducibility_threshold
 
 
 ################################################################################
@@ -246,19 +259,19 @@ observability:
 
 constraints:
 
-  preserve_verified_information
-
   deterministic
 
   reproducible
 
-  reversible
+  explainable
 
-  dependency_safe
+  benchmarkable
 
   graph_consistent
 
   curriculum_safe
+
+  engineering_first
 
 
 ################################################################################
@@ -267,17 +280,17 @@ constraints:
 
 validation:
 
-  stage_validation
-
   pipeline_validation
 
-  graph_validation
+  benchmark_validation
 
-  curriculum_validation
+  stage_validation
 
-  engineering_validation
+  consistency_validation
 
   determinism_validation
+
+  release_validation
 
 
 ################################################################################
@@ -301,19 +314,19 @@ randomization:
 
 outputs:
 
-  repaired_dataset
+  quality_manifest
 
-  repair_manifest
+  release_report
+
+  benchmark_report
+
+  dashboard_bundle
 
   execution_graph
 
-  repair_statistics
+  optimization_inputs
 
-  lineage_report
-
-  pipeline_logs
-
-  quality_inputs
+  validation_inputs
 
   metadata
 
@@ -326,21 +339,23 @@ metrics:
 
   compute:
 
-    repair_success_rate
+    overall_quality
 
-    repair_latency
+    release_readiness
 
-    regeneration_rate
+    benchmark_score
 
-    preserved_information
+    evaluation_latency
 
-    graph_integrity
+    pipeline_efficiency
 
-    engineering_quality_gain
+    quality_growth
 
-    curriculum_preservation
+    regression_rate
 
     determinism_score
+
+    reproducibility_score
 
 
 ################################################################################
@@ -349,26 +364,26 @@ metrics:
 
 success_metrics:
 
-  repair_success_rate:
-
-    minimum: 0.999
-
-  preserved_information:
-
-    minimum: 0.995
-
-  graph_integrity:
-
-    minimum: 1.00
-
-  engineering_quality_gain:
+  overall_quality:
 
     minimum: 0.99
 
-  curriculum_preservation:
+  release_readiness:
+
+    minimum: 0.99
+
+  benchmark_score:
 
     minimum: 0.99
 
   determinism:
 
     minimum: 1.00
+
+  reproducibility:
+
+    minimum: 1.00
+
+  pipeline_efficiency:
+
+    minimum: 0.99

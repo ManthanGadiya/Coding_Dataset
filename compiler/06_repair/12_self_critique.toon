@@ -1,0 +1,360 @@
+self_critique:
+
+  metadata:
+
+    id: REP-012
+
+    title: Self Critique
+
+    version: 2.0
+
+    status: Stable
+
+    owner: Repair Engine
+
+    depends_on:
+
+      - compiler/06_repair/11_confidence_repair.toon
+      - compiler/02_cognition/10_reflection_model.toon
+      - compiler/02_cognition/11_learning_model.toon
+      - compiler/02_cognition/15_cognitive_metrics.toon
+
+    consumed_by:
+
+      - compiler/06_repair/13_regeneration.toon
+      - compiler/06_repair/14_repair_pipeline.toon
+
+    objective:
+
+      Critically evaluate generated engineering
+      artifacts, identify weaknesses, estimate
+      improvement opportunities, and produce
+      actionable self-feedback before regeneration
+      or acceptance.
+
+
+################################################################################
+# PHILOSOPHY
+################################################################################
+
+philosophy:
+
+  critique_before_acceptance
+
+  improvement_is_iterative
+
+  evidence_over_opinion
+
+  every_solution_has_tradeoffs
+
+  engineering_requires_reflection
+
+  critique_without_destroying
+
+  deterministic_reflection
+
+  learning_from_mistakes
+
+
+################################################################################
+# INPUTS
+################################################################################
+
+inputs:
+
+  calibrated_dataset
+
+  engineering_story
+
+  reasoning_graph
+
+  confidence_graph
+
+  architecture
+
+  implementation
+
+  tests
+
+  reviews
+
+  documentation
+
+  engineering_memory
+
+  quality_reports
+
+
+################################################################################
+# CRITIQUE TARGETS
+################################################################################
+
+critique_targets:
+
+  reasoning_quality
+
+  engineering_quality
+
+  architecture_quality
+
+  maintainability
+
+  readability
+
+  scalability
+
+  performance
+
+  security
+
+  observability
+
+  testing_quality
+
+  documentation_quality
+
+  deployment_readiness
+
+  curriculum_alignment
+
+  knowledge_density
+
+  confidence_calibration
+
+
+################################################################################
+# ANALYSIS
+################################################################################
+
+analysis:
+
+  strengths_analysis
+
+  weakness_analysis
+
+  tradeoff_analysis
+
+  alternative_analysis
+
+  evidence_analysis
+
+  assumption_analysis
+
+  risk_analysis
+
+  improvement_analysis
+
+  quality_gap_analysis
+
+
+################################################################################
+# CRITIQUE OPERATIONS
+################################################################################
+
+operations:
+
+  identify_strengths
+
+  identify_weaknesses
+
+  estimate_risk
+
+  suggest_improvements
+
+  rank_improvements
+
+  prioritize_changes
+
+  preserve_strengths
+
+  generate_feedback
+
+  recommend_regeneration
+
+  estimate_learning_gain
+
+
+################################################################################
+# CRITIQUE DIMENSIONS
+################################################################################
+
+dimensions:
+
+  correctness
+
+  engineering
+
+  architecture
+
+  reasoning
+
+  maintainability
+
+  operational_readiness
+
+  educational_value
+
+  production_realism
+
+  diversity
+
+  robustness
+
+
+################################################################################
+# FEEDBACK MODEL
+################################################################################
+
+feedback:
+
+  strengths
+
+  weaknesses
+
+  evidence
+
+  confidence
+
+  risks
+
+  opportunities
+
+  recommendations
+
+  priority
+
+  expected_gain
+
+  acceptance_decision
+
+
+################################################################################
+# CONSTRAINTS
+################################################################################
+
+constraints:
+
+  preserve_valid_information
+
+  evidence_required
+
+  deterministic
+
+  reproducible
+
+  explainable
+
+  actionable
+
+  measurable
+
+
+################################################################################
+# VALIDATION
+################################################################################
+
+validation:
+
+  critique_consistency
+
+  evidence_validation
+
+  recommendation_validation
+
+  priority_validation
+
+  confidence_validation
+
+  determinism_validation
+
+
+################################################################################
+# RANDOMIZATION
+################################################################################
+
+randomization:
+
+  deterministic_seed:
+
+    true
+
+  reproducible:
+
+    true
+
+
+################################################################################
+# OUTPUTS
+################################################################################
+
+outputs:
+
+  critique_report
+
+  improvement_plan
+
+  prioritized_changes
+
+  acceptance_recommendation
+
+  regeneration_request
+
+  learning_feedback
+
+  metadata
+
+
+################################################################################
+# METRICS
+################################################################################
+
+metrics:
+
+  compute:
+
+    critique_quality
+
+    evidence_quality
+
+    recommendation_quality
+
+    expected_learning_gain
+
+    engineering_insight
+
+    actionability
+
+    calibration_consistency
+
+    reflection_depth
+
+
+################################################################################
+# SUCCESS METRICS
+################################################################################
+
+success_metrics:
+
+  critique_quality:
+
+    minimum: 0.995
+
+  evidence_quality:
+
+    minimum: 0.99
+
+  actionability:
+
+    minimum: 0.99
+
+  engineering_insight:
+
+    minimum: 0.99
+
+  reflection_depth:
+
+    minimum: 0.99
+
+  determinism:
+
+    minimum: 1.00

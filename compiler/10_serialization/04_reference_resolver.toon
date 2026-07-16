@@ -1,0 +1,265 @@
+reference_resolver:
+
+  metadata:
+
+    id: SER-004
+
+    title: Reference Resolver
+
+    version: 2.0
+
+    status: Stable
+
+    owner: Serialization Engine
+
+    depends_on:
+
+      - compiler/10_serialization/01_toon_spec.toon
+      - compiler/01_ontology/08_relationships.toon
+      - compiler/01_ontology/19_dependency_graph.toon
+
+    consumed_by:
+
+      - compiler/10_serialization/02_toon_compiler.toon
+      - compiler/10_serialization/05_graph_serializer.toon
+      - compiler/10_serialization/10_export_targets.toon
+
+    objective:
+
+      Resolve all internal references between
+      knowledge records, graph nodes, ontology
+      entities, and metadata artifacts into
+      canonical TOON identifiers and cross-links
+      that are valid, consistent, and traversable
+      in the serialized output.
+
+
+################################################################################
+# PHILOSOPHY
+################################################################################
+
+philosophy:
+
+  references_must_resolve
+
+  dangling_references_are_failures
+
+  circular_references_must_be_handled
+
+  identifiers_must_be_unique
+
+  deterministic_resolution
+
+  graph_traversal_based
+
+  bidirectional_when_required
+
+  self_referencing_allowed
+
+
+################################################################################
+# INPUTS
+################################################################################
+
+inputs:
+
+  internal_reference_graph
+
+  identifier_registry
+
+  reference_type_definitions
+
+  resolution_strategy
+
+  circular_reference_policy
+
+  identifier_generation_rules
+
+  namespace_definitions
+
+
+################################################################################
+# REFERENCE TYPES
+################################################################################
+
+types:
+
+  internal_reference
+
+  external_reference
+
+  cross_document_reference
+
+  graph_edge_reference
+
+  parent_child_reference
+
+  dependency_reference
+
+  prerequisite_reference
+
+  provenance_reference
+
+
+################################################################################
+# RESOLUTION STRATEGIES
+################################################################################
+
+strategies:
+
+  direct_identifier_resolution
+
+  path_based_resolution
+
+  graph_traversal_resolution
+
+  namespace_qualified_resolution
+
+  deferred_resolution
+
+  lazy_resolution
+
+  bidirectional_link_creation
+
+
+################################################################################
+# ANALYSIS
+################################################################################
+
+analysis:
+
+  reference_coverage_analysis
+
+  dangling_reference_detection
+
+  circular_reference_detection
+
+  resolution_path_analysis
+
+  identifier_uniqueness_verification
+
+  namespace_compliance
+
+
+################################################################################
+# CONSTRAINTS
+################################################################################
+
+constraints:
+
+  deterministic
+
+  reproducible
+
+  completely_resolved
+
+  uniquely_identified
+
+  namespace_compliant
+
+  circularity_handled
+
+  bidirectional_consistency
+
+
+################################################################################
+# VALIDATION
+################################################################################
+
+validation:
+
+  resolution_completeness_validation
+
+  identifier_uniqueness_validation
+
+  circular_reference_validation
+
+  bidirectional_consistency_validation
+
+  namespace_validation
+
+  determinism_validation
+
+
+################################################################################
+# RANDOMIZATION
+################################################################################
+
+randomization:
+
+  deterministic_seed:
+
+    true
+
+  reproducible:
+
+    true
+
+
+################################################################################
+# OUTPUTS
+################################################################################
+
+outputs:
+
+  resolved_reference_graph
+
+  identifier_registry
+
+  cross_link_database
+
+  resolution_report
+
+  dangling_reference_report
+
+  circular_reference_report
+
+  metadata
+
+
+################################################################################
+# METRICS
+################################################################################
+
+metrics:
+
+  compute:
+
+    resolution_rate
+
+    identifier_uniqueness
+
+    dangling_reference_count
+
+    circular_reference_count
+
+    resolution_latency
+
+    bidirectional_consistency
+
+
+################################################################################
+# SUCCESS METRICS
+################################################################################
+
+success_metrics:
+
+  resolution_rate:
+
+    minimum: 1.00
+
+  identifier_uniqueness:
+
+    minimum: 1.00
+
+  dangling_reference_count:
+
+    maximum: 0
+
+  circular_reference_count:
+
+    maximum: 0
+
+  determinism:
+
+    minimum: 1.00

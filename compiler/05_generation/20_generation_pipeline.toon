@@ -1,0 +1,381 @@
+generation_pipeline:
+
+  metadata:
+
+    id: GEN-020
+
+    title: Generation Pipeline
+
+    version: 2.0
+
+    status: Stable
+
+    owner: Generation Engine
+
+    depends_on:
+
+      - compiler/05_generation/01_generation_engine.toon
+      - compiler/05_generation/02_episode_generator.toon
+      - compiler/05_generation/03_event_generator.toon
+      - compiler/05_generation/04_constraint_generator.toon
+      - compiler/05_generation/05_research_generator.toon
+      - compiler/05_generation/06_architecture_generator.toon
+      - compiler/05_generation/07_decision_generator.toon
+      - compiler/05_generation/08_code_generator.toon
+      - compiler/05_generation/09_bug_generator.toon
+      - compiler/05_generation/10_test_generator.toon
+      - compiler/05_generation/11_review_generator.toon
+      - compiler/05_generation/12_documentation_generator.toon
+      - compiler/05_generation/13_memory_generator.toon
+      - compiler/05_generation/14_artifact_generator.toon
+      - compiler/05_generation/15_scenario_generator.toon
+      - compiler/05_generation/16_story_generator.toon
+      - compiler/05_generation/17_dialog_generator.toon
+      - compiler/05_generation/18_failure_generator.toon
+      - compiler/05_generation/19_dataset_builder.toon
+
+    consumed_by:
+
+      - compiler/06_repair/01_failure_classifier.toon
+      - compiler/07_quality/01_quality_engine.toon
+      - compiler/08_validation/01_validation_engine.toon
+
+    objective:
+
+      Coordinate every generation module into a
+      deterministic, scalable, reproducible pipeline
+      capable of producing complete engineering datasets
+      for autonomous software engineering models.
+
+
+################################################################################
+# PHILOSOPHY
+################################################################################
+
+philosophy:
+
+  pipeline_over_scripts
+
+  deterministic_execution
+
+  engineering_first
+
+  reproducibility
+
+  modular_generation
+
+  curriculum_driven
+
+  graph_native
+
+  continuous_improvement
+
+
+################################################################################
+# PIPELINE STAGES
+################################################################################
+
+stages:
+
+  initialize_world
+
+  generate_episode
+
+  generate_events
+
+  generate_constraints
+
+  generate_research
+
+  generate_architecture
+
+  generate_decisions
+
+  generate_code
+
+  generate_bugs
+
+  generate_tests
+
+  generate_reviews
+
+  generate_documentation
+
+  generate_memory
+
+  generate_artifacts
+
+  generate_scenarios
+
+  generate_story
+
+  generate_dialog
+
+  generate_failures
+
+  build_dataset_sample
+
+  emit_pipeline_metadata
+
+
+################################################################################
+# EXECUTION MODEL
+################################################################################
+
+execution:
+
+  dependency_graph
+
+  topological_order
+
+  deterministic_scheduler
+
+  parallel_execution
+
+  checkpointing
+
+  resumable
+
+  distributed
+
+  cache_aware
+
+  incremental_generation
+
+
+################################################################################
+# PIPELINE INPUTS
+################################################################################
+
+inputs:
+
+  compiler_configuration
+
+  curriculum
+
+  world_seed
+
+  repository_seed
+
+  generation_seed
+
+  organization_seed
+
+  difficulty_target
+
+  capability_targets
+
+
+################################################################################
+# PIPELINE OUTPUTS
+################################################################################
+
+outputs:
+
+  dataset_samples
+
+  engineering_graph
+
+  repository_snapshots
+
+  curriculum_reports
+
+  metadata
+
+  generation_statistics
+
+  execution_logs
+
+  manifests
+
+
+################################################################################
+# PIPELINE STATE
+################################################################################
+
+state:
+
+  initialized
+
+  running
+
+  paused
+
+  resumed
+
+  completed
+
+  failed
+
+  repaired
+
+  validated
+
+  optimized
+
+  released
+
+
+################################################################################
+# FAILURE HANDLING
+################################################################################
+
+failure_handling:
+
+  retry
+
+  rollback
+
+  checkpoint_restore
+
+  regeneration
+
+  repair_pipeline
+
+  validation_retry
+
+  deterministic_replay
+
+
+################################################################################
+# PIPELINE OPTIMIZATION
+################################################################################
+
+optimization:
+
+  batch_generation
+
+  graph_reuse
+
+  cache_reuse
+
+  deduplication
+
+  workload_balancing
+
+  token_efficiency
+
+  curriculum_sampling
+
+  memory_compression
+
+
+################################################################################
+# OBSERVABILITY
+################################################################################
+
+observability:
+
+  metrics
+
+  tracing
+
+  execution_graph
+
+  stage_timings
+
+  resource_usage
+
+  error_tracking
+
+  quality_tracking
+
+  lineage_tracking
+
+
+################################################################################
+# VALIDATION
+################################################################################
+
+validation:
+
+  reject_if:
+
+    incomplete_pipeline
+
+    dependency_violation
+
+    inconsistent_state
+
+    unreproducible_output
+
+    failed_quality_gate
+
+    invalid_curriculum
+
+    invalid_dataset
+
+
+################################################################################
+# RANDOMIZATION
+################################################################################
+
+randomization:
+
+  deterministic_seed:
+
+    true
+
+  reproducible:
+
+    true
+
+  distributed_safe:
+
+    true
+
+
+################################################################################
+# METRICS
+################################################################################
+
+metrics:
+
+  compute:
+
+    throughput
+
+    latency
+
+    generation_quality
+
+    reproducibility
+
+    curriculum_coverage
+
+    engineering_density
+
+    resource_efficiency
+
+    pipeline_utilization
+
+
+################################################################################
+# SUCCESS METRICS
+################################################################################
+
+success_metrics:
+
+  reproducibility:
+
+    minimum: 1.00
+
+  determinism:
+
+    minimum: 1.00
+
+  pipeline_success_rate:
+
+    minimum: 0.999
+
+  curriculum_coverage:
+
+    minimum: 0.99
+
+  engineering_consistency:
+
+    minimum: 0.99
+
+  scalability:
+
+    minimum: 0.99

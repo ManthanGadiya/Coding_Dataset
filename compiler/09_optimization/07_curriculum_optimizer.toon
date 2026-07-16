@@ -1,0 +1,272 @@
+curriculum_optimizer:
+
+  metadata:
+
+    id: OPT-007
+
+    title: Curriculum Optimizer
+
+    version: 2.0
+
+    status: Stable
+
+    owner: Optimization Engine
+
+    depends_on:
+
+      - compiler/09_optimization/06_balancing_optimizer.toon
+      - compiler/03_curriculum/10_master_curriculum.toon
+      - compiler/03_curriculum/05_prerequisite_graph.toon
+
+    consumed_by:
+
+      - compiler/09_optimization/08_sampling_optimizer.toon
+      - compiler/09_optimization/10_optimizer_reports.toon
+      - compiler/10_serialization/07_export_pipeline.toon
+
+    objective:
+
+      Optimize the curriculum ordering,
+      prerequisite structure, difficulty
+      progression, spacing intervals, and
+      learning path efficiency of the
+      dataset to maximize educational
+      value and capability acquisition
+      during model training.
+
+
+################################################################################
+# PHILOSOPHY
+################################################################################
+
+philosophy:
+
+  curriculum_is_a_learning_path
+
+  order_affects_learning
+
+  prerequisites_unlock_mastery
+
+  spacing_improves_retention
+
+  deterministic_curriculum_optimization
+
+  graph_native_curriculum
+
+  competency_driven_ordering
+
+  benchmark_validated_progression
+
+
+################################################################################
+# INPUTS
+################################################################################
+
+inputs:
+
+  balanced_dataset
+
+  curriculum_graph
+
+  prerequisite_graph
+
+  competency_matrix
+
+  learning_objectives
+
+  difficulty_model
+
+  spacing_configuration
+
+  optimization_targets
+
+
+################################################################################
+# OPTIMIZATION DIMENSIONS
+################################################################################
+
+dimensions:
+
+  prerequisite_ordering
+
+  difficulty_progression
+
+  concept_spacing
+
+  interleaving_pattern
+
+  reinforcement_schedule
+
+  competency_alignment
+
+  learning_path_efficiency
+
+  curriculum_coverage
+
+
+################################################################################
+# OPTIMIZATION STRATEGIES
+################################################################################
+
+strategies:
+
+  prerequisite_aware_reordering
+
+  difficulty_smooth_progression
+
+  spaced_repetition_optimization
+
+  interleaved_practice_scheduling
+
+  mastery_based_path_generation
+
+  adaptive_difficulty_adjustment
+
+  curriculum_graph_pruning
+
+
+################################################################################
+# ANALYSIS
+################################################################################
+
+analysis:
+
+  prerequisite_coverage_analysis
+
+  difficulty_curve_analysis
+
+  spacing_effectiveness_analysis
+
+  learning_path_diversity
+
+  competency_growth_projection
+
+  curriculum_gap_analysis
+
+  redundancy_analysis
+
+
+################################################################################
+# CONSTRAINTS
+################################################################################
+
+constraints:
+
+  deterministic
+
+  reproducible
+
+  prerequisite_respecting
+
+  difficulty_monotonic
+
+  spacing_effective
+
+  competency_aligned
+
+  benchmark_verified
+
+
+################################################################################
+# VALIDATION
+################################################################################
+
+validation:
+
+  ordering_validation
+
+  prerequisite_validation
+
+  progression_validation
+
+  spacing_validation
+
+  competency_validation
+
+  determinism_validation
+
+
+################################################################################
+# RANDOMIZATION
+################################################################################
+
+randomization:
+
+  deterministic_seed:
+
+    true
+
+  reproducible:
+
+    true
+
+
+################################################################################
+# OUTPUTS
+################################################################################
+
+outputs:
+
+  curriculum_optimized_dataset
+
+  curriculum_report
+
+  ordering_manifest
+
+  progression_report
+
+  spacing_schedule
+
+  competency_growth_projection
+
+  metadata
+
+
+################################################################################
+# METRICS
+################################################################################
+
+metrics:
+
+  compute:
+
+    curriculum_efficiency
+
+    prerequisite_coverage
+
+    difficulty_smoothness
+
+    spacing_effectiveness
+
+    competency_growth_rate
+
+    learning_path_quality
+
+    optimization_latency
+
+
+################################################################################
+# SUCCESS METRICS
+################################################################################
+
+success_metrics:
+
+  curriculum_efficiency:
+
+    minimum: 0.95
+
+  prerequisite_coverage:
+
+    minimum: 1.00
+
+  difficulty_smoothness:
+
+    minimum: 0.97
+
+  competency_growth_rate:
+
+    minimum: 0.95
+
+  determinism:
+
+    minimum: 1.00

@@ -1,10 +1,10 @@
-diversity_metrics:
+curriculum_quality:
 
   metadata:
 
-    id: QLT-006
+    id: QLT-007
 
-    title: Diversity Metrics
+    title: Curriculum Quality
 
     version: 2.0
 
@@ -14,22 +14,25 @@ diversity_metrics:
 
     depends_on:
 
-      - compiler/07_quality/05_engineering_quality.toon
-      - compiler/03_curriculum/07_dataset_balancing.toon
-      - compiler/01_ontology/20_ontology_rules.toon
+      - compiler/07_quality/06_diversity_metrics.toon
+      - compiler/03_curriculum/10_master_curriculum.toon
+      - compiler/03_curriculum/05_prerequisite_graph.toon
+      - compiler/03_curriculum/12_competency_matrix.toon
 
     consumed_by:
 
-      - compiler/07_quality/07_curriculum_quality.toon
+      - compiler/07_quality/08_graph_quality.toon
       - compiler/07_quality/09_quality_dashboard.toon
-      - compiler/08_validation/06_diversity_validation.toon
+      - compiler/08_validation/07_curriculum_validation.toon
 
     objective:
 
-      Measure conceptual, architectural,
-      engineering, curriculum, and ecosystem
-      diversity to maximize generalization
-      while preserving realism and educational value.
+      Evaluate curriculum effectiveness,
+      prerequisite integrity,
+      competency progression,
+      learning continuity,
+      and long-term educational value
+      of the engineering dataset.
 
 
 ################################################################################
@@ -38,21 +41,21 @@ diversity_metrics:
 
 philosophy:
 
-  diversity_is_not_randomness
+  learning_is_progressive
 
-  conceptual_diversity_over_surface_variation
+  prerequisites_enable_mastery
 
-  realism_before_balance
+  curriculum_over_collection
 
-  coverage_over_frequency
+  spacing_improves_retention
 
-  engineering_has_multiple_solutions
+  competence_over_memorization
 
-  deterministic_measurement
+  deterministic_evaluation
 
-  graph_native_analysis
+  graph_native_learning
 
-  diversity_improves_generalization
+  lifelong_learning
 
 
 ################################################################################
@@ -61,108 +64,54 @@ philosophy:
 
 inputs:
 
-  dataset
-
-  repository_graph
-
-  ontology_graph
-
   curriculum_graph
 
-  reasoning_graph
+  prerequisite_graph
 
-  architecture_graph
+  competency_matrix
 
-  capability_matrix
+  dataset
 
-  distribution_statistics
+  capability_metadata
+
+  learning_objectives
 
   benchmark_reports
 
+  curriculum_statistics
+
+  engineering_memory
+
 
 ################################################################################
-# DIVERSITY DIMENSIONS
+# CURRICULUM DIMENSIONS
 ################################################################################
 
 dimensions:
 
-  conceptual_diversity
+  prerequisite_quality
 
-  reasoning_diversity
+  competency_progression
 
-  architectural_diversity
+  difficulty_progression
 
-  engineering_diversity
+  learning_continuity
 
-  curriculum_diversity
+  concept_spacing
 
-  ecosystem_diversity
+  reinforcement_quality
 
-  organizational_diversity
+  transfer_learning
 
-  temporal_diversity
+  capability_balance
 
-  failure_diversity
+  curriculum_completeness
 
-  solution_diversity
+  educational_efficiency
 
-  domain_diversity
+  mastery_support
 
-  production_diversity
-
-
-################################################################################
-# ECOSYSTEM DIVERSITY
-################################################################################
-
-ecosystem:
-
-  programming_languages
-
-  frameworks
-
-  operating_systems
-
-  cloud_platforms
-
-  databases
-
-  build_systems
-
-  ci_cd_platforms
-
-  package_managers
-
-  deployment_models
-
-  infrastructure
-
-
-################################################################################
-# ENGINEERING DIVERSITY
-################################################################################
-
-engineering:
-
-  architectures
-
-  design_patterns
-
-  debugging_strategies
-
-  testing_strategies
-
-  deployment_strategies
-
-  monitoring_strategies
-
-  security_patterns
-
-  optimization_patterns
-
-  scalability_patterns
-
-  failure_patterns
+  capstone_quality
 
 
 ################################################################################
@@ -171,23 +120,50 @@ engineering:
 
 analysis:
 
-  entropy_analysis
+  prerequisite_analysis
 
-  graph_similarity
+  competency_analysis
 
-  concept_similarity
+  spacing_analysis
 
-  capability_coverage
+  progression_analysis
 
-  clustering_analysis
+  concept_dependency_analysis
 
-  redundancy_detection
+  curriculum_graph_analysis
 
-  distribution_analysis
+  transfer_analysis
 
-  curriculum_balance
+  reinforcement_analysis
 
-  novelty_analysis
+  learning_path_analysis
+
+
+################################################################################
+# QUALITY CHECKS
+################################################################################
+
+checks:
+
+  prerequisite_coverage
+
+  prerequisite_order
+
+  competency_alignment
+
+  difficulty_smoothness
+
+  spacing_effectiveness
+
+  redundancy_balance
+
+  concept_reuse
+
+  curriculum_completeness
+
+  objective_alignment
+
+  mastery_validation
 
 
 ################################################################################
@@ -196,21 +172,44 @@ analysis:
 
 scoring:
 
-  shannon_entropy
+  curriculum_score
 
-  concept_entropy
+  prerequisite_score
 
-  graph_entropy
+  competency_score
 
-  capability_coverage
+  spacing_score
 
-  novelty_score
+  progression_score
 
-  redundancy_penalty
+  transfer_score
 
-  curriculum_balance
+  reinforcement_score
 
-  diversity_score
+  educational_value
+
+
+################################################################################
+# LEARNING STRATEGIES
+################################################################################
+
+strategies:
+
+  mastery_learning
+
+  spiral_learning
+
+  spaced_repetition
+
+  retrieval_practice
+
+  project_based_learning
+
+  competency_based_learning
+
+  interleaving
+
+  adaptive_learning
 
 
 ################################################################################
@@ -223,15 +222,15 @@ constraints:
 
   reproducible
 
-  statistically_valid
-
   explainable
-
-  benchmarkable
 
   curriculum_safe
 
   graph_consistent
+
+  benchmarkable
+
+  educationally_valid
 
 
 ################################################################################
@@ -240,15 +239,15 @@ constraints:
 
 validation:
 
-  entropy_validation
+  prerequisite_validation
 
-  coverage_validation
+  competency_validation
 
-  distribution_validation
-
-  benchmark_validation
+  spacing_validation
 
   graph_validation
+
+  benchmark_validation
 
   determinism_validation
 
@@ -274,17 +273,17 @@ randomization:
 
 outputs:
 
-  diversity_report
+  curriculum_report
 
-  entropy_report
+  competency_report
 
-  capability_coverage
+  prerequisite_report
 
-  redundancy_report
+  learning_path_report
 
-  novelty_report
+  progression_report
 
-  distribution_report
+  educational_score
 
   metadata
 
@@ -297,25 +296,25 @@ metrics:
 
   compute:
 
-    conceptual_entropy
+    curriculum_quality
 
-    reasoning_entropy
+    prerequisite_coverage
 
-    architecture_entropy
+    competency_growth
 
-    engineering_entropy
+    learning_efficiency
 
-    curriculum_entropy
+    concept_retention
 
-    ecosystem_entropy
+    transferability
 
-    redundancy_ratio
+    mastery_probability
 
-    capability_coverage
+    curriculum_coherence
 
-    novelty_score
+    reinforcement_quality
 
-    generalization_score
+    educational_value
 
 
 ################################################################################
@@ -324,23 +323,23 @@ metrics:
 
 success_metrics:
 
-  capability_coverage:
+  curriculum_quality:
 
     minimum: 0.99
 
-  conceptual_entropy:
+  prerequisite_coverage:
+
+    minimum: 1.00
+
+  competency_growth:
 
     minimum: 0.99
 
-  engineering_entropy:
+  learning_efficiency:
 
     minimum: 0.99
 
-  redundancy_ratio:
-
-    maximum: 0.05
-
-  generalization_score:
+  educational_value:
 
     minimum: 0.99
 

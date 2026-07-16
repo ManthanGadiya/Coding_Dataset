@@ -1,38 +1,35 @@
-repair_metrics:
+quality_dashboard:
 
   metadata:
 
-    id: REP-015
+    id: QLT-009
 
-    title: Repair Metrics
+    title: Quality Dashboard
 
     version: 2.0
 
     status: Stable
 
-    owner: Repair Engine
+    owner: Quality Engine
 
     depends_on:
 
-      - compiler/06_repair/14_repair_pipeline.toon
+      - compiler/07_quality/08_graph_quality.toon
       - compiler/07_quality/02_quality_metrics.toon
-      - compiler/08_validation/08_metric_validation.toon
 
     consumed_by:
 
-      - compiler/07_quality/01_quality_engine.toon
+      - compiler/07_quality/10_quality_pipeline.toon
+      - compiler/08_validation/01_validation_engine.toon
       - compiler/09_optimization/01_optimizer.toon
-      - compiler/10_serialization/01_manifest.toon
 
     objective:
 
-      Measure repair effectiveness,
-      engineering improvements,
-      curriculum preservation,
-      graph integrity,
-      determinism,
-      and long-term dataset evolution
-      using reproducible metrics.
+      Aggregate, visualize, analyze,
+      explain, and monitor every quality
+      dimension across the compiler while
+      enabling deterministic auditing,
+      benchmarking, and continuous improvement.
 
 
 ################################################################################
@@ -41,21 +38,21 @@ repair_metrics:
 
 philosophy:
 
-  measure_before_improve
+  observability_enables_improvement
 
-  metrics_drive_quality
+  dashboards_should_explain
 
-  engineering_quality_is_quantifiable
+  metrics_require_context
 
-  preserve_information
+  trends_are_more_valuable_than_snapshots
 
-  deterministic_measurement
+  engineering_is_measurable
 
-  reproducible_evaluation
+  deterministic_reporting
 
-  graph_native_metrics
+  benchmark_everything
 
-  longitudinal_tracking
+  actionable_insights
 
 
 ################################################################################
@@ -64,196 +61,177 @@ philosophy:
 
 inputs:
 
-  repaired_dataset
-
-  original_dataset
-
-  repair_manifest
-
-  repair_history
-
   quality_reports
 
-  validation_reports
+  engineering_reports
+
+  reasoning_reports
 
   curriculum_reports
 
   graph_reports
 
+  diversity_reports
+
+  repair_reports
+
+  benchmark_results
+
   optimization_reports
 
-
-################################################################################
-# METRIC CATEGORIES
-################################################################################
-
-categories:
-
-  repair_quality
-
-  engineering_quality
-
-  semantic_quality
-
-  reasoning_quality
-
-  graph_quality
-
-  curriculum_quality
-
-  diversity_quality
-
-  confidence_quality
-
-  optimization_quality
-
-  determinism
-
-  reproducibility
-
-  efficiency
+  historical_runs
 
 
 ################################################################################
-# REPAIR METRICS
+# DASHBOARDS
 ################################################################################
 
-repair:
+dashboards:
 
-  repaired_failures
+  executive_dashboard
 
-  unresolved_failures
+  engineering_dashboard
 
-  repair_precision
+  reasoning_dashboard
 
-  repair_recall
+  curriculum_dashboard
 
-  repair_accuracy
+  graph_dashboard
 
-  repair_cost
+  diversity_dashboard
 
-  repair_latency
+  repair_dashboard
 
-  regeneration_rate
+  optimization_dashboard
 
-  rollback_rate
+  benchmark_dashboard
 
-
-################################################################################
-# ENGINEERING METRICS
-################################################################################
-
-engineering:
-
-  maintainability
-
-  modularity
-
-  coupling
-
-  cohesion
-
-  architecture_compliance
-
-  observability
-
-  resilience
-
-  security
-
-  technical_debt
-
-  production_readiness
+  release_dashboard
 
 
 ################################################################################
-# KNOWLEDGE METRICS
+# VISUALIZATIONS
 ################################################################################
 
-knowledge:
+visualizations:
 
-  completeness
+  trend_charts
 
-  consistency
+  radar_charts
 
-  graph_connectivity
+  capability_heatmaps
 
-  ontology_alignment
+  dependency_graphs
 
-  evidence_quality
+  curriculum_graphs
 
-  reasoning_depth
+  quality_timelines
 
-  curriculum_alignment
+  score_distributions
 
-  knowledge_density
+  benchmark_comparisons
 
+  regression_views
 
-################################################################################
-# PIPELINE METRICS
-################################################################################
-
-pipeline:
-
-  execution_time
-
-  stage_latency
-
-  cache_hit_rate
-
-  incremental_repair_ratio
-
-  parallel_efficiency
-
-  checkpoint_reuse
-
-  resource_utilization
+  topology_maps
 
 
 ################################################################################
-# LONGITUDINAL METRICS
-################################################################################
-
-longitudinal:
-
-  quality_trend
-
-  repair_trend
-
-  recurring_failures
-
-  engineering_growth
-
-  curriculum_growth
-
-  diversity_growth
-
-  regression_rate
-
-  stability_index
-
-
-################################################################################
-# METRIC ANALYSIS
+# ANALYSIS
 ################################################################################
 
 analysis:
 
   trend_analysis
 
-  anomaly_detection
-
   regression_detection
 
-  benchmark_comparison
+  anomaly_detection
 
-  historical_comparison
+  benchmark_analysis
 
   capability_growth
 
-  graph_evolution
+  quality_drift
 
-  curriculum_evolution
+  release_comparison
+
+  historical_analysis
+
+  bottleneck_detection
+
+  root_cause_analysis
+
+
+################################################################################
+# ALERTS
+################################################################################
+
+alerts:
+
+  quality_regression
+
+  curriculum_gap
+
+  reasoning_degradation
+
+  engineering_drop
+
+  graph_fragmentation
+
+  diversity_loss
+
+  benchmark_failure
+
+  determinism_failure
+
+  release_blocker
+
+  critical_quality_failure
+
+
+################################################################################
+# REPORTS
+################################################################################
+
+reports:
+
+  executive_summary
+
+  engineering_summary
+
+  curriculum_summary
+
+  reasoning_summary
+
+  benchmark_summary
+
+  release_summary
+
+  optimization_summary
+
+  audit_report
+
+
+################################################################################
+# BENCHMARKING
+################################################################################
+
+benchmarks:
+
+  internal_baseline
+
+  previous_release
+
+  gold_standard
+
+  capability_targets
+
+  quality_targets
+
+  engineering_targets
+
+  curriculum_targets
 
 
 ################################################################################
@@ -266,15 +244,15 @@ constraints:
 
   reproducible
 
-  statistically_valid
-
-  comparable
-
   explainable
 
   benchmarkable
 
   versioned
+
+  auditable
+
+  longitudinal
 
 
 ################################################################################
@@ -283,17 +261,17 @@ constraints:
 
 validation:
 
-  metric_consistency
+  dashboard_validation
 
-  statistical_validation
+  report_validation
 
   benchmark_validation
 
-  trend_validation
+  visualization_validation
 
-  reproducibility_validation
+  consistency_validation
 
-  report_validation
+  determinism_validation
 
 
 ################################################################################
@@ -317,40 +295,50 @@ randomization:
 
 outputs:
 
-  repair_metrics
+  dashboard_bundle
 
-  engineering_scorecard
-
-  trend_report
+  executive_report
 
   benchmark_report
 
   regression_report
 
-  optimization_inputs
+  trend_report
 
-  quality_inputs
+  release_summary
+
+  audit_logs
 
   metadata
 
 
 ################################################################################
-# DASHBOARDS
+# METRICS
 ################################################################################
 
-dashboards:
+metrics:
 
-  repair_dashboard
+  compute:
 
-  engineering_dashboard
+    quality_trend
 
-  curriculum_dashboard
+    capability_growth
 
-  graph_dashboard
+    regression_rate
 
-  optimization_dashboard
+    benchmark_score
 
-  executive_summary
+    release_readiness
+
+    engineering_growth
+
+    curriculum_growth
+
+    reasoning_growth
+
+    graph_health
+
+    diversity_growth
 
 
 ################################################################################
@@ -359,26 +347,26 @@ dashboards:
 
 success_metrics:
 
-  metric_accuracy:
+  dashboard_accuracy:
 
-    minimum: 0.999
+    minimum: 1.00
+
+  report_consistency:
+
+    minimum: 1.00
+
+  benchmark_accuracy:
+
+    minimum: 0.99
+
+  regression_detection:
+
+    minimum: 0.99
 
   determinism:
 
     minimum: 1.00
 
-  reproducibility:
-
-    minimum: 1.00
-
-  statistical_validity:
-
-    minimum: 0.99
-
-  benchmark_consistency:
-
-    minimum: 0.99
-
-  reporting_completeness:
+  auditability:
 
     minimum: 1.00

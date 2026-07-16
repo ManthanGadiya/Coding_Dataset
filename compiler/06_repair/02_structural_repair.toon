@@ -1,0 +1,321 @@
+structural_repair:
+
+  metadata:
+
+    id: REP-002
+
+    title: Structural Repair
+
+    version: 2.0
+
+    status: Stable
+
+    owner: Repair Engine
+
+    depends_on:
+
+      - compiler/06_repair/01_failure_classifier.toon
+      - compiler/01_ontology/20_ontology_rules.toon
+      - compiler/08_validation/02_schema_validation.toon
+
+    consumed_by:
+
+      - compiler/06_repair/03_semantic_repair.toon
+      - compiler/06_repair/07_graph_repair.toon
+      - compiler/06_repair/14_repair_pipeline.toon
+
+    objective:
+
+      Repair every structural inconsistency while
+      preserving engineering intent, semantic meaning,
+      repository integrity, and deterministic generation.
+
+
+################################################################################
+# PHILOSOPHY
+################################################################################
+
+philosophy:
+
+  structure_before_semantics
+
+  preserve_information
+
+  deterministic_repairs
+
+  minimal_modification
+
+  graph_integrity
+
+  schema_consistency
+
+  reproducible_repairs
+
+  repair_not_regenerate
+
+
+################################################################################
+# INPUTS
+################################################################################
+
+inputs:
+
+  failure_report
+
+  dataset_sample
+
+  ontology_graph
+
+  repository_graph
+
+  dependency_graph
+
+  engineering_story
+
+  metadata
+
+  schema
+
+  repair_priority_queue
+
+
+################################################################################
+# STRUCTURAL FAILURES
+################################################################################
+
+repair_targets:
+
+  missing_node
+
+  duplicate_node
+
+  orphan_node
+
+  invalid_reference
+
+  broken_edge
+
+  invalid_identifier
+
+  schema_violation
+
+  missing_metadata
+
+  invalid_dependency
+
+  circular_reference
+
+  malformed_structure
+
+  serialization_error
+
+  incomplete_object
+
+  ordering_violation
+
+  invalid_hierarchy
+
+
+################################################################################
+# REPAIR OPERATIONS
+################################################################################
+
+operations:
+
+  insert_node
+
+  remove_duplicate
+
+  reconnect_edge
+
+  repair_reference
+
+  normalize_identifier
+
+  rebuild_metadata
+
+  reorder_elements
+
+  repair_hierarchy
+
+  merge_duplicates
+
+  split_invalid_node
+
+  regenerate_index
+
+  repair_manifest
+
+
+################################################################################
+# GRAPH REPAIR
+################################################################################
+
+graph:
+
+  node_validation
+
+  edge_validation
+
+  reachability
+
+  connectivity
+
+  dag_validation
+
+  dependency_restoration
+
+  cycle_breaking
+
+  topology_preservation
+
+
+################################################################################
+# REPAIR CONSTRAINTS
+################################################################################
+
+constraints:
+
+  preserve_semantics
+
+  preserve_history
+
+  preserve_references
+
+  preserve_curriculum
+
+  preserve_dependencies
+
+  deterministic
+
+  reversible
+
+
+################################################################################
+# REPAIR STRATEGIES
+################################################################################
+
+strategies:
+
+  local_repair
+
+  dependency_first
+
+  bottom_up
+
+  top_down
+
+  graph_guided
+
+  schema_guided
+
+  confidence_guided
+
+
+################################################################################
+# VALIDATION
+################################################################################
+
+validation:
+
+  schema_validation
+
+  graph_validation
+
+  dependency_validation
+
+  serialization_validation
+
+  identifier_validation
+
+  topology_validation
+
+
+################################################################################
+# RANDOMIZATION
+################################################################################
+
+randomization:
+
+  deterministic_seed:
+
+    true
+
+  reproducible:
+
+    true
+
+
+################################################################################
+# OUTPUTS
+################################################################################
+
+outputs:
+
+  repaired_dataset
+
+  repaired_graph
+
+  repair_log
+
+  repair_diff
+
+  repaired_metadata
+
+  structural_metrics
+
+
+################################################################################
+# METRICS
+################################################################################
+
+metrics:
+
+  compute:
+
+    repaired_nodes
+
+    repaired_edges
+
+    graph_consistency
+
+    schema_compliance
+
+    dependency_health
+
+    information_preservation
+
+    determinism
+
+    repair_efficiency
+
+
+################################################################################
+# SUCCESS METRICS
+################################################################################
+
+success_metrics:
+
+  schema_compliance:
+
+    minimum: 1.00
+
+  graph_consistency:
+
+    minimum: 1.00
+
+  dependency_integrity:
+
+    minimum: 1.00
+
+  information_preservation:
+
+    minimum: 0.999
+
+  determinism:
+
+    minimum: 1.00
+
+  repair_accuracy:
+
+    minimum: 0.99

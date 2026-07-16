@@ -1,0 +1,269 @@
+token_optimizer:
+
+  metadata:
+
+    id: OPT-002
+
+    title: Token Optimizer
+
+    version: 2.0
+
+    status: Stable
+
+    owner: Optimization Engine
+
+    depends_on:
+
+      - compiler/09_optimization/01_dataset_optimizer.toon
+      - compiler/10_serialization/06_token_compression.toon
+      - compiler/00_core/07_global_constants.toon
+
+    consumed_by:
+
+      - compiler/09_optimization/05_compression.toon
+      - compiler/09_optimization/10_optimizer_reports.toon
+      - compiler/10_serialization/06_token_compression.toon
+
+    objective:
+
+      Optimize token usage across the entire
+      dataset by reducing redundant tokens,
+      compressing verbose representations,
+      normalizing formatting, and eliminating
+      token waste while preserving semantic
+      content and engineering fidelity.
+
+
+################################################################################
+# PHILOSOPHY
+################################################################################
+
+philosophy:
+
+  every_token_has_value
+
+  efficiency_without_loss
+
+  semantic_preservation_is_required
+
+  compression_is_engineering
+
+  deterministic_token_optimization
+
+  reversible_when_possible
+
+  graph_aware_compression
+
+  benchmark_verified_efficiency
+
+
+################################################################################
+# INPUTS
+################################################################################
+
+inputs:
+
+  validated_dataset
+
+  token_budget
+
+  compression_targets
+
+  tokenizer_configuration
+
+  vocabulary_constraints
+
+  optimization_parameters
+
+  benchmark_suite
+
+
+################################################################################
+# OPTIMIZATION DIMENSIONS
+################################################################################
+
+dimensions:
+
+  redundant_token_removal
+
+  whitespace_normalization
+
+  formatting_standardization
+
+  identifier_shortening
+
+  comment_optimization
+
+  structure_normalization
+
+  graph_serialization_efficiency
+
+  cross_sample_token_sharing
+
+
+################################################################################
+# ANALYSIS
+################################################################################
+
+analysis:
+
+  token_usage_analysis
+
+  redundancy_detection
+
+  compression_opportunity_analysis
+
+  vocabulary_coverage_analysis
+
+  token_distribution_analysis
+
+  efficiency_gap_analysis
+
+
+################################################################################
+# TRANSFORMATIONS
+################################################################################
+
+transformations:
+
+  remove_redundant_tokens
+
+  normalize_whitespace
+
+  standardize_formatting
+
+  shorten_identifiers
+
+  optimize_comments
+
+  normalize_graph_serialization
+
+  eliminate_unused_imports
+
+  consolidate_repeated_patterns
+
+
+################################################################################
+# CONSTRAINTS
+################################################################################
+
+constraints:
+
+  deterministic
+
+  reproducible
+
+  semantically_lossless
+
+  benchmark_verified
+
+  reversibility_supported
+
+  tokenizer_aware
+
+  vocabulary_safe
+
+
+################################################################################
+# VALIDATION
+################################################################################
+
+validation:
+
+  token_count_validation
+
+  semantic_preservation_validation
+
+  benchmark_validation
+
+  reversibility_validation
+
+  determinism_validation
+
+  quality_preservation_validation
+
+
+################################################################################
+# RANDOMIZATION
+################################################################################
+
+randomization:
+
+  deterministic_seed:
+
+    true
+
+  reproducible:
+
+    true
+
+
+################################################################################
+# OUTPUTS
+################################################################################
+
+outputs:
+
+  token_optimized_dataset
+
+  token_optimization_report
+
+  compression_statistics
+
+  token_savings_report
+
+  semantic_preservation_certificate
+
+  benchmark_comparison
+
+  metadata
+
+
+################################################################################
+# METRICS
+################################################################################
+
+metrics:
+
+  compute:
+
+    token_reduction_ratio
+
+    semantic_preservation
+
+    compression_efficiency
+
+    vocabulary_coverage
+
+    benchmark_impact
+
+    optimization_latency
+
+    quality_preservation
+
+
+################################################################################
+# SUCCESS METRICS
+################################################################################
+
+success_metrics:
+
+  token_reduction_ratio:
+
+    minimum: 0.30
+
+  semantic_preservation:
+
+    minimum: 1.00
+
+  benchmark_impact:
+
+    maximum: 0.00
+
+  quality_preservation:
+
+    minimum: 0.99
+
+  determinism:
+
+    minimum: 1.00

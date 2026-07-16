@@ -1,0 +1,309 @@
+security_validation:
+
+  metadata:
+
+    id: VAL-007
+
+    title: Security Validation
+
+    version: 2.0
+
+    status: Stable
+
+    owner: Validation Engine
+
+    depends_on:
+
+      - compiler/08_validation/01_validation_engine.toon
+      - compiler/01_ontology/13_constraint_types.toon
+      - compiler/04_world/10_incident_generator.toon
+
+    consumed_by:
+
+      - compiler/08_validation/08_consistency_validation.toon
+      - compiler/08_validation/10_final_validation.toon
+      - compiler/08_validation/11_validation_reports.toon
+
+    objective:
+
+      Validate that generated code artifacts,
+      architecture decisions, and engineering
+      practices comply with security best
+      practices, common vulnerability prevention,
+      and organizational security policies.
+
+
+################################################################################
+# PHILOSOPHY
+################################################################################
+
+philosophy:
+
+  security_is_not_optional
+
+  vulnerabilities_have_consequences
+
+  prevention_over_detection
+
+  least_privilege_by_default
+
+  deterministic_security_analysis
+
+  defense_in_depth
+
+  fail_securely
+
+  audit_all_decisions
+
+
+################################################################################
+# INPUTS
+################################################################################
+
+inputs:
+
+  code_artifacts
+
+  architecture_decisions
+
+  dependency_graphs
+
+  security_policies
+
+  vulnerability_database
+
+  threat_models
+
+  compliance_requirements
+
+  incident_records
+
+
+################################################################################
+# SECURITY DOMAINS
+################################################################################
+
+domains:
+
+  input_validation
+
+  authentication
+
+  authorization
+
+  cryptography
+
+  secret_management
+
+  dependency_security
+
+  network_security
+
+  error_handling
+
+  logging_auditing
+
+  data_protection
+
+
+################################################################################
+# VALIDATION RULES
+################################################################################
+
+rules:
+
+  input_validated
+
+  authentication_implemented
+
+  authorization_enforced
+
+  cryptography_used_correctly
+
+  secrets_not_hardcoded
+
+  dependencies_vulnerability_free
+
+  network_access_minimized
+
+  errors_handled_securely
+
+  audit_logs_produced
+
+  data_encrypted_at_rest
+
+  data_encrypted_in_transit
+
+
+################################################################################
+# ANALYSIS
+################################################################################
+
+analysis:
+
+  vulnerability_scanning
+
+  dependency_audit
+
+  secret_detection
+
+  compliance_checking
+
+  threat_model_analysis
+
+  attack_surface_analysis
+
+  security_control_verification
+
+
+################################################################################
+# FAILURE MODES
+################################################################################
+
+failures:
+
+  vulnerable_dependency
+
+  hardcoded_secret
+
+  missing_authentication
+
+  broken_authorization
+
+  weak_cryptography
+
+  unvalidated_input
+
+  insecure_network_exposure
+
+  information_leakage
+
+  audit_log_missing
+
+  compliance_violation
+
+
+################################################################################
+# CONSTRAINTS
+################################################################################
+
+constraints:
+
+  deterministic
+
+  reproducible
+
+  policy_compliant
+
+  vulnerability_aware
+
+  audit_traced
+
+  least_privilege
+
+  fail_secure
+
+
+################################################################################
+# VALIDATION
+################################################################################
+
+validation:
+
+  vulnerability_validation
+
+  policy_compliance_validation
+
+  secret_detection_validation
+
+  dependency_audit_validation
+
+  threat_model_validation
+
+  determinism_validation
+
+
+################################################################################
+# RANDOMIZATION
+################################################################################
+
+randomization:
+
+  deterministic_seed:
+
+    true
+
+  reproducible:
+
+    true
+
+
+################################################################################
+# OUTPUTS
+################################################################################
+
+outputs:
+
+  security_validation_report
+
+  vulnerability_report
+
+  compliance_report
+
+  secret_detection_report
+
+  dependency_audit_report
+
+  threat_model_assessment
+
+  metadata
+
+
+################################################################################
+# METRICS
+################################################################################
+
+metrics:
+
+  compute:
+
+  vulnerability_count
+
+  compliance_rate
+
+  secret_exposure_count
+
+  dependency_vulnerability_count
+
+  security_control_coverage
+
+  validation_latency
+
+  security_score
+
+
+################################################################################
+# SUCCESS METRICS
+################################################################################
+
+success_metrics:
+
+  vulnerability_count:
+
+    maximum: 0
+
+  compliance_rate:
+
+    minimum: 1.00
+
+  secret_exposure_count:
+
+    maximum: 0
+
+  security_score:
+
+    minimum: 1.00
+
+  determinism:
+
+    minimum: 1.00

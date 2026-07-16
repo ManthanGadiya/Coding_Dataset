@@ -1,0 +1,268 @@
+sampling_optimizer:
+
+  metadata:
+
+    id: OPT-008
+
+    title: Sampling Optimizer
+
+    version: 2.0
+
+    status: Stable
+
+    owner: Optimization Engine
+
+    depends_on:
+
+      - compiler/09_optimization/07_curriculum_optimizer.toon
+      - compiler/09_optimization/05_compression.toon
+      - compiler/03_curriculum/06_sampling_strategy.toon
+
+    consumed_by:
+
+      - compiler/09_optimization/09_release_optimizer.toon
+      - compiler/09_optimization/10_optimizer_reports.toon
+      - compiler/10_serialization/08_release_format.toon
+
+    objective:
+
+      Optimize the sampling strategy for
+      the dataset by determining optimal
+      sample weights, selection probabilities,
+      stratified allocation, and curriculum-aware
+      sampling distributions that maximize
+      training efficiency and model capability
+      acquisition.
+
+
+################################################################################
+# PHILOSOPHY
+################################################################################
+
+philosophy:
+
+  sampling_is_a_strategy
+
+  not_all_samples_are_equal
+
+  weighting_enables_focus
+
+  curriculum_aware_sampling
+
+  deterministic_sampling
+
+  stratified_allocation
+
+  importance_weighted_selection
+
+  benchmark_validated_distribution
+
+
+################################################################################
+# INPUTS
+################################################################################
+
+inputs:
+
+  curriculum_optimized_dataset
+
+  sampling_strategy_configuration
+
+  capability_weights
+
+  difficulty_distribution
+
+  curriculum_importance_scores
+
+  benchmark_performance_history
+
+  training_objectives
+
+
+################################################################################
+# SAMPLING DIMENSIONS
+################################################################################
+
+dimensions:
+
+  sample_weighting
+
+  stratified_allocation
+
+  importance_sampling
+
+  curriculum_weighting
+
+  difficulty_balancing
+
+  novelty_weighting
+
+  diversity_weighting
+
+  quality_weighting
+
+
+################################################################################
+# SAMPLING STRATEGIES
+################################################################################
+
+strategies:
+
+  uniform_sampling
+
+  importance_weighted_sampling
+
+  curriculum_weighted_sampling
+
+  stratified_sampling
+
+  difficulty_proportional_sampling
+
+  quality_weighted_sampling
+
+  adaptive_sampling
+
+
+################################################################################
+# ANALYSIS
+################################################################################
+
+analysis:
+
+  weight_distribution_analysis
+
+  allocation_analysis
+
+  bias_detection
+
+  coverage_impact_analysis
+
+  efficiency_projection
+
+  benchmark_impact_projection
+
+
+################################################################################
+# CONSTRAINTS
+################################################################################
+
+constraints:
+
+  deterministic
+
+  reproducible
+
+  bias_minimized
+
+  coverage_preserving
+
+  curriculum_aware
+
+  benchmark_validated
+
+  quality_weighted
+
+
+################################################################################
+# VALIDATION
+################################################################################
+
+validation:
+
+  distribution_validation
+
+  bias_validation
+
+  coverage_validation
+
+  weight_consistency_validation
+
+  benchmark_validation
+
+  determinism_validation
+
+
+################################################################################
+# RANDOMIZATION
+################################################################################
+
+randomization:
+
+  deterministic_seed:
+
+    true
+
+  reproducible:
+
+    true
+
+
+################################################################################
+# OUTPUTS
+################################################################################
+
+outputs:
+
+  sampling_strategy
+
+  sample_weights
+
+  allocation_plan
+
+  distribution_report
+
+  weight_justification
+
+  benchmark_comparison
+
+  metadata
+
+
+################################################################################
+# METRICS
+################################################################################
+
+metrics:
+
+  compute:
+
+    sampling_efficiency
+
+    weight_quality
+
+    allocation_balance
+
+    bias_score
+
+    coverage_preservation
+
+    benchmark_projected_impact
+
+    optimization_latency
+
+
+################################################################################
+# SUCCESS METRICS
+################################################################################
+
+success_metrics:
+
+  sampling_efficiency:
+
+    minimum: 0.95
+
+  bias_score:
+
+    maximum: 0.02
+
+  coverage_preservation:
+
+    minimum: 1.00
+
+  benchmark_projected_impact:
+
+    minimum: 0.99
+
+  determinism:
+
+    minimum: 1.00

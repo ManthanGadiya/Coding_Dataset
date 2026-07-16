@@ -1,0 +1,265 @@
+dataset_manifest:
+
+  metadata:
+
+    id: SER-009
+
+    title: Dataset Manifest
+
+    version: 2.0
+
+    status: Stable
+
+    owner: Serialization Engine
+
+    depends_on:
+
+      - compiler/10_serialization/08_release_format.toon
+      - compiler/10_serialization/07_export_pipeline.toon
+      - compiler/09_optimization/09_release_optimizer.toon
+      - compiler/09_optimization/10_optimizer_reports.toon
+      - compiler/08_validation/11_validation_reports.toon
+
+    consumed_by:
+
+      - compiler/10_serialization/10_export_targets.toon
+      - compiler/00_core/06_dataset_lifecycle.toon
+      - compiler/00_core/03_pipeline.toon
+
+    objective:
+
+      Generate the canonical dataset manifest
+      that describes every aspect of the release
+      including composition, statistics, quality
+      scores, validation results, optimization
+      applied, format details, integrity hashes,
+      provenance, and usage instructions for
+      downstream training systems.
+
+
+################################################################################
+# PHILOSOPHY
+################################################################################
+
+philosophy:
+
+  manifest_is_the_source_of_truth
+
+  self_describing_releases
+
+  complete_provenance
+
+  actionable_metadata
+
+  deterministic_manifest_generation
+
+  machine_parsable
+
+  human_readable_summary
+
+  verifiable_content
+
+
+################################################################################
+# INPUTS
+################################################################################
+
+inputs:
+
+  release_bundle
+
+  quality_manifest
+
+  validation_reports
+
+  optimization_reports
+
+  pipeline_metadata
+
+  dataset_statistics
+
+  provenance_graph
+
+  configuration_snapshot
+
+  release_version_info
+
+
+################################################################################
+# MANIFEST SECTIONS
+################################################################################
+
+sections:
+
+  release_identity
+
+  dataset_composition
+
+  quality_summary
+
+  validation_summary
+
+  optimization_summary
+
+  format_inventory
+
+  integrity_checksums
+
+  provenance_trail
+
+  usage_guide
+
+  license_attribution
+
+
+################################################################################
+# MANIFEST CONTENT
+################################################################################
+
+content:
+
+  dataset_name_and_version
+
+  total_sample_count
+
+  total_token_count
+
+  distribution_statistics
+
+  capability_coverage
+
+  quality_scores
+
+  validation_results
+
+  optimization_applied
+
+  format_details
+
+  shard_inventory
+
+  checksum_manifest
+
+  provenance_chain
+
+  training_recommendations
+
+
+################################################################################
+# CONSTRAINTS
+################################################################################
+
+constraints:
+
+  deterministic
+
+  reproducible
+
+  complete
+
+  self_contained
+
+  verifiable
+
+  machine_readable
+
+  human_understandable
+
+
+################################################################################
+# VALIDATION
+################################################################################
+
+validation:
+
+  manifest_completeness_validation
+
+  data_accuracy_validation
+
+  cross_reference_validation
+
+  integrity_validation
+
+  determinism_validation
+
+  reproducibility_validation
+
+
+################################################################################
+# RANDOMIZATION
+################################################################################
+
+randomization:
+
+  deterministic_seed:
+
+    true
+
+  reproducible:
+
+    true
+
+
+################################################################################
+# OUTPUTS
+################################################################################
+
+outputs:
+
+  dataset_manifest
+
+  manifest_summary
+
+  integrity_certificate
+
+  provenance_document
+
+  usage_guide
+
+  metadata
+
+
+################################################################################
+# METRICS
+################################################################################
+
+metrics:
+
+  compute:
+
+    manifest_completeness
+
+    data_accuracy
+
+    cross_reference_consistency
+
+    self_contained_ratio
+
+    manifest_generation_latency
+
+
+################################################################################
+# SUCCESS METRICS
+################################################################################
+
+success_metrics:
+
+  manifest_completeness:
+
+    minimum: 1.00
+
+  data_accuracy:
+
+    minimum: 1.00
+
+  cross_reference_consistency:
+
+    minimum: 1.00
+
+  self_contained_ratio:
+
+    minimum: 1.00
+
+  determinism:
+
+    minimum: 1.00

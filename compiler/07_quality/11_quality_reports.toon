@@ -1,0 +1,284 @@
+quality_reports:
+
+  metadata:
+
+    id: QLT-012
+
+    title: Quality Reports
+
+    version: 2.0
+
+    status: Stable
+
+    owner: Quality Engine
+
+    depends_on:
+
+      - compiler/07_quality/10_quality_pipeline.toon
+      - compiler/07_quality/03_knowledge_density.toon
+      - compiler/07_quality/04_reasoning_quality.toon
+      - compiler/07_quality/05_engineering_quality.toon
+      - compiler/07_quality/06_diversity_metrics.toon
+      - compiler/07_quality/07_curriculum_quality.toon
+      - compiler/07_quality/07_novelty_metrics.toon
+      - compiler/07_quality/08_graph_quality.toon
+      - compiler/07_quality/09_quality_dashboard.toon
+      - compiler/07_quality/12_quality_thresholds.toon
+
+    consumed_by:
+
+      - compiler/08_validation/01_validation_engine.toon
+      - compiler/09_optimization/01_dataset_optimizer.toon
+      - compiler/10_serialization/09_dataset_manifest.toon
+
+    objective:
+
+      Aggregate all quality evaluation results
+      into standardized, multi-format reports
+      that provide actionable insights across
+      every quality dimension for downstream
+      validation, optimization, and release
+      management.
+
+
+################################################################################
+# PHILOSOPHY
+################################################################################
+
+philosophy:
+
+  reports_enable_action
+
+  quality_must_be_communicated
+
+  standardization_enables_automation
+
+  every_score_has_context
+
+  deterministic_report_generation
+
+  multi_format_by_default
+
+  machine_readable_core
+
+  human_readable_summary
+
+
+################################################################################
+# INPUTS
+################################################################################
+
+inputs:
+
+  quality_engine_report
+
+  knowledge_density_report
+
+  reasoning_quality_report
+
+  engineering_quality_report
+
+  diversity_report
+
+  curriculum_quality_report
+
+  novelty_report
+
+  graph_quality_report
+
+  quality_dashboard
+
+  quality_pipeline_report
+
+  threshold_results
+
+  report_templates
+
+
+################################################################################
+# REPORT TYPES
+################################################################################
+
+types:
+
+  executive_quality_summary
+
+  per_dimension_quality_report
+
+  comparative_quality_analysis
+
+  quality_trend_report
+
+  threshold_compliance_report
+
+  release_readiness_report
+
+  improvement_recommendation_report
+
+  audit_report
+
+
+################################################################################
+# OUTPUT FORMATS
+################################################################################
+
+formats:
+
+  toon_quality_report
+
+  json_quality_summary
+
+  structured_quality_log
+
+  markdown_quality_analysis
+
+  metric_timeseries
+
+  comparison_dashboard
+
+  audit_artifact
+
+
+################################################################################
+# ANALYSIS
+################################################################################
+
+analysis:
+
+  cross_dimension_analysis
+
+  trend_identification
+
+  anomaly_detection
+
+  regression_analysis
+
+  comparative_benchmarking
+
+  recommendation_generation
+
+
+################################################################################
+# CONSTRAINTS
+################################################################################
+
+constraints:
+
+  deterministic
+
+  reproducible
+
+  format_compliant
+
+  complete
+
+  auditable
+
+  cross_referenced
+
+  actionable
+
+
+################################################################################
+# VALIDATION
+################################################################################
+
+validation:
+
+  report_integrity_validation
+
+  cross_report_consistency
+
+  data_accuracy_validation
+
+  format_validation
+
+  determinism_validation
+
+  completeness_validation
+
+
+################################################################################
+# RANDOMIZATION
+################################################################################
+
+randomization:
+
+  deterministic_seed:
+
+    true
+
+  reproducible:
+
+    true
+
+
+################################################################################
+# OUTPUTS
+################################################################################
+
+outputs:
+
+  quality_report_bundle
+
+  executive_summary
+
+  per_dimension_reports
+
+  comparative_analysis
+
+  trend_report
+
+  threshold_compliance
+
+  audit_trail
+
+  metadata
+
+
+################################################################################
+# METRICS
+################################################################################
+
+metrics:
+
+  compute:
+
+    report_completeness
+
+    cross_report_consistency
+
+    data_accuracy
+
+    format_compliance
+
+    audit_trail_completeness
+
+    report_generation_latency
+
+
+################################################################################
+# SUCCESS METRICS
+################################################################################
+
+success_metrics:
+
+  report_completeness:
+
+    minimum: 1.00
+
+  cross_report_consistency:
+
+    minimum: 1.00
+
+  data_accuracy:
+
+    minimum: 1.00
+
+  format_compliance:
+
+    minimum: 1.00
+
+  determinism:
+
+    minimum: 1.00

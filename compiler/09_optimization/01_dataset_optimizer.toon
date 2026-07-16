@@ -1,0 +1,311 @@
+dataset_optimizer:
+
+  metadata:
+
+    id: OPT-001
+
+    title: Dataset Optimizer
+
+    version: 2.0
+
+    status: Stable
+
+    owner: Optimization Engine
+
+    depends_on:
+
+      - compiler/08_validation/10_final_validation.toon
+      - compiler/07_quality/10_quality_pipeline.toon
+      - compiler/03_curriculum/07_dataset_balancing.toon
+
+    consumed_by:
+
+      - compiler/09_optimization/02_token_optimizer.toon
+      - compiler/09_optimization/03_graph_optimizer.toon
+      - compiler/09_optimization/04_deduplication.toon
+      - compiler/09_optimization/06_balancing_optimizer.toon
+      - compiler/09_optimization/10_optimizer_reports.toon
+
+    objective:
+
+      Coordinate the end-to-end optimization
+      of the validated dataset by orchestrating
+      token optimization, graph optimization,
+      deduplication, balancing, compression,
+      curriculum optimization, sampling optimization,
+      and release optimization into a single
+      deterministic pipeline.
+
+
+################################################################################
+# PHILOSOPHY
+################################################################################
+
+philosophy:
+
+  optimization_is_iterative
+
+  quality_must_be_preserved
+
+  efficiency_enables_scale
+
+  every_token_has_cost
+
+  deterministic_optimization
+
+  graph_native_transformations
+
+  benchmark_confirmed_improvements
+
+  explainable_transformations
+
+
+################################################################################
+# INPUTS
+################################################################################
+
+inputs:
+
+  validated_dataset
+
+  validation_reports
+
+  quality_manifest
+
+  optimization_configuration
+
+  token_budget
+
+  compression_targets
+
+  balancing_requirements
+
+  curriculum_constraints
+
+  release_requirements
+
+  benchmark_suite
+
+
+################################################################################
+# OPTIMIZATION DIMENSIONS
+################################################################################
+
+dimensions:
+
+  token_efficiency
+
+  graph_efficiency
+
+  deduplication
+
+  dataset_balancing
+
+  compression_ratio
+
+  curriculum_quality
+
+  sampling_quality
+
+  release_optimization
+
+
+################################################################################
+# EXECUTION
+################################################################################
+
+execution:
+
+  dependency_graph
+
+  topological_optimization
+
+  deterministic_execution
+
+  incremental_optimization
+
+  cache_aware
+
+  checkpointing
+
+  resumable_execution
+
+  parallel_safe
+
+
+################################################################################
+# PIPELINE STAGES
+################################################################################
+
+stages:
+
+  initialize
+
+  deduplicate
+
+  balance
+
+  optimize_tokens
+
+  optimize_graph
+
+  optimize_curriculum
+
+  optimize_sampling
+
+  compress
+
+  optimize_release
+
+  generate_reports
+
+
+################################################################################
+# FAILURE HANDLING
+################################################################################
+
+failure_handling:
+
+  retry
+
+  rollback
+
+  checkpoint_restore
+
+  localized_optimization
+
+  deterministic_replay
+
+  graceful_degradation
+
+
+################################################################################
+# CONSTRAINTS
+################################################################################
+
+constraints:
+
+  deterministic
+
+  reproducible
+
+  quality_preserving
+
+  benchmark_verified
+
+  incrementally_applicable
+
+  cache_aware
+
+  resource_bounded
+
+
+################################################################################
+# VALIDATION
+################################################################################
+
+validation:
+
+  optimization_validation
+
+  quality_preservation_validation
+
+  benchmark_validation
+
+  consistency_validation
+
+  determinism_validation
+
+  reproducibility_validation
+
+
+################################################################################
+# RANDOMIZATION
+################################################################################
+
+randomization:
+
+  deterministic_seed:
+
+    true
+
+  reproducible:
+
+    true
+
+
+################################################################################
+# OUTPUTS
+################################################################################
+
+outputs:
+
+  optimized_dataset
+
+  optimization_manifest
+
+  optimization_reports
+
+  benchmark_comparisons
+
+  compression_report
+
+  execution_graph
+
+  downstream_inputs
+
+  metadata
+
+
+################################################################################
+# METRICS
+################################################################################
+
+metrics:
+
+  compute:
+
+    overall_efficiency
+
+    token_reduction
+
+    graph_reduction
+
+    deduplication_rate
+
+    balance_score
+
+    compression_ratio
+
+    curriculum_quality
+
+    optimization_latency
+
+    quality_preservation
+
+
+################################################################################
+# SUCCESS METRICS
+################################################################################
+
+success_metrics:
+
+  overall_efficiency:
+
+    minimum: 0.95
+
+  token_reduction:
+
+    minimum: 0.30
+
+  deduplication_rate:
+
+    minimum: 0.99
+
+  quality_preservation:
+
+    minimum: 0.99
+
+  determinism:
+
+    minimum: 1.00

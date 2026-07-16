@@ -1,0 +1,300 @@
+reasoning_validation:
+
+  metadata:
+
+    id: VAL-004
+
+    title: Reasoning Validation
+
+    version: 2.0
+
+    status: Stable
+
+    owner: Validation Engine
+
+    depends_on:
+
+      - compiler/08_validation/01_validation_engine.toon
+      - compiler/07_quality/04_reasoning_quality.toon
+      - compiler/02_cognition/03_reasoning_graphs.toon
+
+    consumed_by:
+
+      - compiler/08_validation/08_consistency_validation.toon
+      - compiler/08_validation/10_final_validation.toon
+      - compiler/08_validation/11_validation_reports.toon
+
+    objective:
+
+      Validate the logical consistency,
+      causal integrity, inference correctness,
+      and structural soundness of every reasoning
+      graph and reasoning trace in the dataset.
+
+
+################################################################################
+# PHILOSOPHY
+################################################################################
+
+philosophy:
+
+  reasoning_must_be_valid
+
+  logic_precedes_creativity
+
+  causality_is_invariant
+
+  inferences_require_support
+
+  deterministic_reasoning_validation
+
+  traceable_inference_chains
+
+  contradictions_are_failures
+
+  graph_native_reasoning
+
+
+################################################################################
+# INPUTS
+################################################################################
+
+inputs:
+
+  reasoning_graphs
+
+  reasoning_traces
+
+  causal_chains
+
+  inference_records
+
+  confidence_graphs
+
+  reflection_records
+
+  reasoning_validation_rules
+
+  logical_constraints
+
+
+################################################################################
+# REASONING PROPERTIES
+################################################################################
+
+properties:
+
+  logical_consistency
+
+  causal_validity
+
+  inference_support
+
+  premise_validity
+
+  conclusion_validity
+
+  contradiction_freedom
+
+  confidence_calibration
+
+  reflection_accuracy
+
+
+################################################################################
+# VALIDATION RULES
+################################################################################
+
+rules:
+
+  conclusions_follow_from_premises
+
+  causal_chains_are_contiguous
+
+  inferences_have_evidence
+
+  no_logical_contradictions
+
+  confidence_matches_evidence
+
+  reflection_is_accurate
+
+  reasoning_is_complete
+
+  no_circular_dependencies
+
+
+################################################################################
+# ANALYSIS
+################################################################################
+
+analysis:
+
+  logical_consistency_analysis
+
+  causal_chain_analysis
+
+  inference_validation
+
+  contradiction_detection
+
+  premise_support_analysis
+
+  confidence_calibration_analysis
+
+  reflection_accuracy_analysis
+
+  reasoning_completeness_analysis
+
+
+################################################################################
+# FAILURE MODES
+################################################################################
+
+failures:
+
+  logical_contradiction
+
+  unsupported_inference
+
+  broken_causal_chain
+
+  confidence_mismatch
+
+  reflection_error
+
+  missing_reasoning_step
+
+  circular_reasoning
+
+  invalid_premise
+
+  premature_conclusion
+
+  evidence_gap
+
+
+################################################################################
+# CONSTRAINTS
+################################################################################
+
+constraints:
+
+  deterministic
+
+  reproducible
+
+  logically_sound
+
+  causally_valid
+
+  evidence_required
+
+  contradiction_free
+
+  graph_consistent
+
+
+################################################################################
+# VALIDATION
+################################################################################
+
+validation:
+
+  logic_validation
+
+  causal_validation
+
+  inference_validation
+
+  evidence_validation
+
+  confidence_validation
+
+  determinism_validation
+
+
+################################################################################
+# RANDOMIZATION
+################################################################################
+
+randomization:
+
+  deterministic_seed:
+
+    true
+
+  reproducible:
+
+    true
+
+
+################################################################################
+# OUTPUTS
+################################################################################
+
+outputs:
+
+  reasoning_validation_report
+
+  logical_consistency_report
+
+  causal_integrity_report
+
+  inference_support_report
+
+  contradiction_report
+
+  confidence_calibration_report
+
+  metadata
+
+
+################################################################################
+# METRICS
+################################################################################
+
+metrics:
+
+  compute:
+
+    logical_consistency
+
+    causal_integrity
+
+    inference_support_rate
+
+    contradiction_rate
+
+    confidence_calibration_error
+
+    reasoning_completeness
+
+    validation_latency
+
+
+################################################################################
+# SUCCESS METRICS
+################################################################################
+
+success_metrics:
+
+  logical_consistency:
+
+    minimum: 1.00
+
+  causal_integrity:
+
+    minimum: 1.00
+
+  inference_support_rate:
+
+    minimum: 1.00
+
+  contradiction_rate:
+
+    maximum: 0.00
+
+  determinism:
+
+    minimum: 1.00

@@ -1,10 +1,10 @@
-diversity_metrics:
+reasoning_quality:
 
   metadata:
 
-    id: QLT-006
+    id: QLT-004
 
-    title: Diversity Metrics
+    title: Reasoning Quality
 
     version: 2.0
 
@@ -14,22 +14,23 @@ diversity_metrics:
 
     depends_on:
 
-      - compiler/07_quality/05_engineering_quality.toon
-      - compiler/03_curriculum/07_dataset_balancing.toon
-      - compiler/01_ontology/20_ontology_rules.toon
+      - compiler/07_quality/03_knowledge_density.toon
+      - compiler/02_cognition/03_reasoning_graphs.toon
+      - compiler/02_cognition/10_reflection_model.toon
+      - compiler/02_cognition/15_cognitive_metrics.toon
 
     consumed_by:
 
-      - compiler/07_quality/07_curriculum_quality.toon
+      - compiler/07_quality/05_engineering_quality.toon
       - compiler/07_quality/09_quality_dashboard.toon
-      - compiler/08_validation/06_diversity_validation.toon
+      - compiler/08_validation/03_reasoning_validation.toon
 
     objective:
 
-      Measure conceptual, architectural,
-      engineering, curriculum, and ecosystem
-      diversity to maximize generalization
-      while preserving realism and educational value.
+      Evaluate the quality, robustness,
+      completeness, and transferability
+      of engineering reasoning contained
+      within dataset samples.
 
 
 ################################################################################
@@ -38,21 +39,21 @@ diversity_metrics:
 
 philosophy:
 
-  diversity_is_not_randomness
+  reasoning_over_answers
 
-  conceptual_diversity_over_surface_variation
+  evidence_before_conclusions
 
-  realism_before_balance
+  assumptions_should_be_visible
 
-  coverage_over_frequency
+  tradeoffs_create_engineers
 
-  engineering_has_multiple_solutions
+  uncertainty_is_reasoning
 
-  deterministic_measurement
+  explainability_matters
 
-  graph_native_analysis
+  deterministic_evaluation
 
-  diversity_improves_generalization
+  transferable_reasoning
 
 
 ################################################################################
@@ -61,108 +62,87 @@ philosophy:
 
 inputs:
 
-  dataset
+  reasoning_graph
 
-  repository_graph
+  engineering_story
 
-  ontology_graph
+  engineering_dialogue
+
+  architecture
+
+  implementation
+
+  evidence_graph
+
+  confidence_graph
 
   curriculum_graph
 
-  reasoning_graph
+  engineering_memory
 
-  architecture_graph
-
-  capability_matrix
-
-  distribution_statistics
-
-  benchmark_reports
+  benchmark_results
 
 
 ################################################################################
-# DIVERSITY DIMENSIONS
+# REASONING DIMENSIONS
 ################################################################################
 
 dimensions:
 
-  conceptual_diversity
+  logical_consistency
 
-  reasoning_diversity
+  causal_reasoning
 
-  architectural_diversity
+  evidence_quality
 
-  engineering_diversity
+  assumption_quality
 
-  curriculum_diversity
+  hypothesis_quality
 
-  ecosystem_diversity
+  tradeoff_analysis
 
-  organizational_diversity
+  uncertainty_reasoning
 
-  temporal_diversity
+  abstraction_quality
 
-  failure_diversity
+  decomposition_quality
 
-  solution_diversity
+  transferability
 
-  domain_diversity
+  explainability
 
-  production_diversity
-
-
-################################################################################
-# ECOSYSTEM DIVERSITY
-################################################################################
-
-ecosystem:
-
-  programming_languages
-
-  frameworks
-
-  operating_systems
-
-  cloud_platforms
-
-  databases
-
-  build_systems
-
-  ci_cd_platforms
-
-  package_managers
-
-  deployment_models
-
-  infrastructure
+  reflection_quality
 
 
 ################################################################################
-# ENGINEERING DIVERSITY
+# REASONING COMPONENTS
 ################################################################################
 
-engineering:
+components:
 
-  architectures
+  observations
 
-  design_patterns
+  assumptions
 
-  debugging_strategies
+  hypotheses
 
-  testing_strategies
+  evidence
 
-  deployment_strategies
+  alternatives
 
-  monitoring_strategies
+  constraints
 
-  security_patterns
+  tradeoffs
 
-  optimization_patterns
+  decisions
 
-  scalability_patterns
+  conclusions
 
-  failure_patterns
+  confidence
+
+  reflection
+
+  lessons
 
 
 ################################################################################
@@ -171,23 +151,54 @@ engineering:
 
 analysis:
 
-  entropy_analysis
+  reasoning_graph_analysis
 
-  graph_similarity
+  causal_chain_analysis
 
-  concept_similarity
+  assumption_validation
 
-  capability_coverage
+  evidence_validation
 
-  clustering_analysis
+  hypothesis_validation
 
-  redundancy_detection
+  tradeoff_validation
 
-  distribution_analysis
+  abstraction_analysis
 
-  curriculum_balance
+  decomposition_analysis
 
-  novelty_analysis
+  reflection_analysis
+
+
+################################################################################
+# FAILURE PATTERNS
+################################################################################
+
+failures:
+
+  missing_reasoning
+
+  unsupported_claim
+
+  invalid_inference
+
+  skipped_steps
+
+  circular_reasoning
+
+  premature_conclusion
+
+  weak_evidence
+
+  ignored_constraints
+
+  false_tradeoff
+
+  poor_abstraction
+
+  confidence_mismatch
+
+  missing_reflection
 
 
 ################################################################################
@@ -196,21 +207,21 @@ analysis:
 
 scoring:
 
-  shannon_entropy
+  reasoning_depth
 
-  concept_entropy
+  reasoning_completeness
 
-  graph_entropy
+  reasoning_transferability
 
-  capability_coverage
+  engineering_reasoning
 
-  novelty_score
+  evidence_strength
 
-  redundancy_penalty
+  tradeoff_quality
 
-  curriculum_balance
+  reflection_score
 
-  diversity_score
+  confidence_alignment
 
 
 ################################################################################
@@ -223,8 +234,6 @@ constraints:
 
   reproducible
 
-  statistically_valid
-
   explainable
 
   benchmarkable
@@ -233,6 +242,8 @@ constraints:
 
   graph_consistent
 
+  evidence_based
+
 
 ################################################################################
 # VALIDATION
@@ -240,15 +251,15 @@ constraints:
 
 validation:
 
-  entropy_validation
+  logical_validation
 
-  coverage_validation
+  evidence_validation
 
-  distribution_validation
+  graph_validation
 
   benchmark_validation
 
-  graph_validation
+  consistency_validation
 
   determinism_validation
 
@@ -274,17 +285,17 @@ randomization:
 
 outputs:
 
-  diversity_report
+  reasoning_report
 
-  entropy_report
+  reasoning_score
 
-  capability_coverage
+  reasoning_graph_metrics
 
-  redundancy_report
+  evidence_report
 
-  novelty_report
+  tradeoff_report
 
-  distribution_report
+  transferability_report
 
   metadata
 
@@ -297,25 +308,25 @@ metrics:
 
   compute:
 
-    conceptual_entropy
+    reasoning_depth
 
-    reasoning_entropy
+    reasoning_accuracy
 
-    architecture_entropy
+    evidence_quality
 
-    engineering_entropy
+    transferability
 
-    curriculum_entropy
+    abstraction_quality
 
-    ecosystem_entropy
+    decomposition_quality
 
-    redundancy_ratio
+    tradeoff_quality
 
-    capability_coverage
+    reflection_quality
 
-    novelty_score
+    engineering_reasoning
 
-    generalization_score
+    confidence_alignment
 
 
 ################################################################################
@@ -324,23 +335,23 @@ metrics:
 
 success_metrics:
 
-  capability_coverage:
+  reasoning_depth:
 
     minimum: 0.99
 
-  conceptual_entropy:
+  reasoning_accuracy:
 
     minimum: 0.99
 
-  engineering_entropy:
+  evidence_quality:
 
     minimum: 0.99
 
-  redundancy_ratio:
+  transferability:
 
-    maximum: 0.05
+    minimum: 0.99
 
-  generalization_score:
+  engineering_reasoning:
 
     minimum: 0.99
 

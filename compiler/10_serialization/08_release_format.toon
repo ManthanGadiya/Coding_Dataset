@@ -1,0 +1,269 @@
+release_format:
+
+  metadata:
+
+    id: SER-008
+
+    title: Release Format
+
+    version: 2.0
+
+    status: Stable
+
+    owner: Serialization Engine
+
+    depends_on:
+
+      - compiler/10_serialization/07_export_pipeline.toon
+      - compiler/10_serialization/06_token_compression.toon
+      - compiler/09_optimization/08_sampling_optimizer.toon
+
+    consumed_by:
+
+      - compiler/10_serialization/09_dataset_manifest.toon
+      - compiler/10_serialization/10_export_targets.toon
+      - compiler/00_core/03_pipeline.toon
+
+    objective:
+
+      Define the canonical release format
+      for the compiled dataset including
+      directory structure, file naming,
+      shard organization, metadata layout,
+      integrity verification, and versioning
+      conventions for all distribution targets.
+
+
+################################################################################
+# PHILOSOPHY
+################################################################################
+
+philosophy:
+
+  release_is_a_product
+
+  structure_enables_usability
+
+  naming_conveys_meaning
+
+  sharding_enables_scale
+
+  deterministic_release_structure
+
+  self_describing_release
+
+  integrity_verified_content
+
+  version_tracked_releases
+
+
+################################################################################
+# INPUTS
+################################################################################
+
+inputs:
+
+  export_pipeline_output
+
+  release_version
+
+  distribution_requirements
+
+  storage_constraints
+
+  naming_conventions
+
+  sharding_policy
+
+  integrity_policy
+
+  metadata_requirements
+
+
+################################################################################
+# RELEASE STRUCTURE
+################################################################################
+
+structure:
+
+  root_manifest
+
+  dataset_directory
+
+  shard_directories
+
+  metadata_directory
+
+  graph_directory
+
+  benchmark_directory
+
+  documentation_directory
+
+  checksum_manifests
+
+
+################################################################################
+# NAMING CONVENTIONS
+################################################################################
+
+conventions:
+
+  dataset_name_standard
+
+  shard_naming_pattern
+
+  file_extension_mapping
+
+  version_embedding
+
+  timestamp_format
+
+  content_hash_inclusion
+
+  language_tag_convention
+
+
+################################################################################
+# SHARDING POLICY
+################################################################################
+
+sharding:
+
+  size_based_sharding
+
+  count_based_sharding
+
+  capability_based_sharding
+
+  domain_based_sharding
+
+  balanced_sharding
+
+  deterministic_shard_assignment
+
+  shard_reference_cross_links
+
+
+################################################################################
+# CONSTRAINTS
+################################################################################
+
+constraints:
+
+  deterministic
+
+  reproducible
+
+  self_describing
+
+  integrity_verified
+
+  versioned
+
+  scalable
+
+  storage_efficient
+
+
+################################################################################
+# VALIDATION
+################################################################################
+
+validation:
+
+  structure_validation
+
+  naming_validation
+
+  sharding_validation
+
+  integrity_validation
+
+  metadata_validation
+
+  determinism_validation
+
+
+################################################################################
+# RANDOMIZATION
+################################################################################
+
+randomization:
+
+  deterministic_seed:
+
+    true
+
+  reproducible:
+
+    true
+
+
+################################################################################
+# OUTPUTS
+################################################################################
+
+outputs:
+
+  release_format_specification
+
+  directory_templates
+
+  naming_guide
+
+  sharding_plan
+
+  integrity_verification_procedure
+
+  metadata_layout
+
+  metadata
+
+
+################################################################################
+# METRICS
+################################################################################
+
+metrics:
+
+  compute:
+
+    format_completeness
+
+    naming_consistency
+
+    shard_balance
+
+    metadata_coverage
+
+    self_description_completeness
+
+    integrity_verifiability
+
+
+################################################################################
+# SUCCESS METRICS
+################################################################################
+
+success_metrics:
+
+  format_completeness:
+
+    minimum: 1.00
+
+  naming_consistency:
+
+    minimum: 1.00
+
+  shard_balance:
+
+    minimum: 0.95
+
+  metadata_coverage:
+
+    minimum: 1.00
+
+  determinism:
+
+    minimum: 1.00

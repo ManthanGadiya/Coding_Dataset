@@ -1,0 +1,373 @@
+validation_engine:
+
+  metadata:
+
+    id: VAL-001
+
+    title: Validation Engine
+
+    version: 2.0
+
+    status: Stable
+
+    owner: Validation Engine
+
+    depends_on:
+
+      - compiler/07_quality/10_quality_pipeline.toon
+      - compiler/01_ontology/20_ontology_rules.toon
+      - compiler/06_repair/14_repair_pipeline.toon
+
+    consumed_by:
+
+      - compiler/08_validation/02_schema_validation.toon
+      - compiler/08_validation/03_reasoning_validation.toon
+      - compiler/08_validation/04_engineering_validation.toon
+      - compiler/08_validation/05_graph_validation.toon
+      - compiler/08_validation/06_diversity_validation.toon
+      - compiler/08_validation/07_curriculum_validation.toon
+      - compiler/08_validation/08_metric_validation.toon
+      - compiler/08_validation/09_validation_dashboard.toon
+      - compiler/08_validation/10_validation_pipeline.toon
+
+    objective:
+
+      Coordinate deterministic validation of
+      engineering datasets by verifying
+      structural correctness,
+      semantic consistency,
+      engineering constraints,
+      graph integrity,
+      curriculum validity,
+      reproducibility,
+      and formal acceptance criteria.
+
+
+################################################################################
+# PHILOSOPHY
+################################################################################
+
+philosophy:
+
+  trust_requires_validation
+
+  correctness_before_training
+
+  deterministic_validation
+
+  evidence_before_acceptance
+
+  constraints_define_truth
+
+  graph_native_validation
+
+  reproducibility_is_required
+
+  fail_fast
+
+
+################################################################################
+# INPUTS
+################################################################################
+
+inputs:
+
+  repaired_dataset
+
+  quality_manifest
+
+  engineering_graph
+
+  ontology_graph
+
+  reasoning_graph
+
+  curriculum_graph
+
+  repository_graph
+
+  architecture_graph
+
+  benchmark_reports
+
+  validation_configuration
+
+
+################################################################################
+# VALIDATION DOMAINS
+################################################################################
+
+domains:
+
+  schema
+
+  semantics
+
+  reasoning
+
+  engineering
+
+  graph
+
+  curriculum
+
+  diversity
+
+  metrics
+
+  reproducibility
+
+  determinism
+
+  security
+
+  serialization
+
+
+################################################################################
+# VALIDATION CHECKS
+################################################################################
+
+checks:
+
+  schema_integrity
+
+  ontology_consistency
+
+  reasoning_consistency
+
+  engineering_constraints
+
+  graph_connectivity
+
+  curriculum_validity
+
+  diversity_thresholds
+
+  metric_consistency
+
+  reproducibility
+
+  determinism
+
+  reference_integrity
+
+  dependency_integrity
+
+
+################################################################################
+# EXECUTION MODEL
+################################################################################
+
+execution:
+
+  dependency_graph
+
+  topological_execution
+
+  deterministic_scheduler
+
+  incremental_validation
+
+  cache_aware
+
+  checkpointing
+
+  resumable_execution
+
+  parallel_safe
+
+
+################################################################################
+# DECISION POLICY
+################################################################################
+
+decisions:
+
+  accept
+
+  repair_required
+
+  regenerate_required
+
+  manual_review
+
+  reject
+
+
+################################################################################
+# FAILURE HANDLING
+################################################################################
+
+failure_handling:
+
+  fail_fast
+
+  localized_validation
+
+  rollback
+
+  retry
+
+  deterministic_replay
+
+  repair_feedback
+
+  validation_trace
+
+
+################################################################################
+# OBSERVABILITY
+################################################################################
+
+observability:
+
+  validation_trace
+
+  execution_trace
+
+  rule_history
+
+  benchmark_trace
+
+  failure_statistics
+
+  validation_logs
+
+  deterministic_hashes
+
+  audit_history
+
+
+################################################################################
+# CONSTRAINTS
+################################################################################
+
+constraints:
+
+  deterministic
+
+  reproducible
+
+  explainable
+
+  benchmarkable
+
+  graph_consistent
+
+  curriculum_safe
+
+  ontology_safe
+
+  engineering_safe
+
+
+################################################################################
+# VALIDATION
+################################################################################
+
+validation:
+
+  rule_validation
+
+  consistency_validation
+
+  benchmark_validation
+
+  determinism_validation
+
+  reproducibility_validation
+
+  acceptance_validation
+
+
+################################################################################
+# RANDOMIZATION
+################################################################################
+
+randomization:
+
+  deterministic_seed:
+
+    true
+
+  reproducible:
+
+    true
+
+
+################################################################################
+# OUTPUTS
+################################################################################
+
+outputs:
+
+  validation_manifest
+
+  validation_report
+
+  acceptance_decision
+
+  failure_report
+
+  repair_requests
+
+  audit_log
+
+  metadata
+
+
+################################################################################
+# METRICS
+################################################################################
+
+metrics:
+
+  compute:
+
+    validation_success_rate
+
+    rule_coverage
+
+    invariant_coverage
+
+    validation_latency
+
+    determinism_score
+
+    reproducibility_score
+
+    acceptance_rate
+
+    validation_confidence
+
+
+################################################################################
+# SUCCESS METRICS
+################################################################################
+
+success_metrics:
+
+  validation_success_rate:
+
+    minimum: 0.999
+
+  rule_coverage:
+
+    minimum: 1.00
+
+  invariant_coverage:
+
+    minimum: 1.00
+
+  determinism:
+
+    minimum: 1.00
+
+  reproducibility:
+
+    minimum: 1.00
+
+  explainability:
+
+    minimum: 0.99
