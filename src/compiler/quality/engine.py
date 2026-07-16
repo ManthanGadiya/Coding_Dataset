@@ -1,8 +1,10 @@
-"""Quality engine — multi-dimensional scoring.
+"""Quality engine — multi-dimensional content-aware scoring.
 
 Source: compiler/07_quality/
+Produces a true Q0-Q5 distribution by scoring actual content substance.
 """
 
+import re
 from dataclasses import dataclass, field
 
 from compiler.core.constants import Quality
@@ -20,6 +22,16 @@ class QualityScore:
             "dimensions": self.dimensions,
             "details": self.details,
         }
+
+
+REASONING_OPS = [
+    "Observe", "Diagnose", "Hypothesize", "Validate", "Implement",
+    "Verify", "Reflect", "Detect", "Triage", "Mitigate", "Resolve",
+    "Document", "Prevent", "Measure", "Analyze", "Design", "Benchmark",
+    "Deploy", "Research", "Evaluate", "Decide", "Review", "Plan",
+    "Assess", "Prioritize", "Identify", "Reproduce", "Isolate",
+    "Context", "Explore", "Compare", "Propose",
+]
 
 
 class QualityEngine:
@@ -54,70 +66,197 @@ class QualityEngine:
 
         return QualityScore(overall=overall, dimensions=dims)
 
+    # ── helpers ──────────────────────────────────────────────────
+
+    @staticmethod
+    def _has_substance(text: str) -> float:
+        tokens = text.split()
+        domain_terms = [
+            "cluster", "database", "cache", "network", "api", "service",
+            "deploy", "config", "metric", "alert", "incident", "query",
+            "index", "shard", "replica", "latency", "throughput", "timeout",
+            "failover", "backup", "pipeline", "queue", "stream", "batch",
+        ]
+        if len(tokens) < 5:
+            return 0.0
+        content_len = min(1.0, len(tokens) / 15)
+        domain_hits = sum(1 for t in domain_terms if t in text.lower())
+        domain_bonus = min(0.5, domain_hits * 0.1)
+        return min(1.5, content_len + domain_bonus)
+
+    @staticmethod
+    def _avg_substance(items: list[dict], key: str = "content") -> float:
+        if not items:
+            return 0.0
+        scores = [QualityEngine._has_substance(i.get(key, "")) for i in items]
+        return sum(scores) / len(scores)
+
+    @staticmethod
+    def _concrete_detail_ratio(text: str) -> float:
+        numbers = len(re.findall(r'\d+', text))
+        tech = len(re.findall(r'\b[A-Z][A-Za-z0-9+/]{2,}\b', text))
+        return min(1.0, (numbers + tech * 0.5) / 10)
+
+    # ── dimension scorers ────────────────────────────────────────
+
+    def _score_knowledge_density(self, ekr: dict) -> float:
+        reasoning = ekr.get("reasoning", [])
+        decisions = ekr.get("decisions", [])
+        evidence = ekr.get("evidence", [])
+        atoms = ekr.get("knowledge_atoms", [])
+
+        reasoning_substance = self._avg_substance(reasoning)
+        atom_bonus = min(2.0, len(atoms) * 0.5)
+        ev_bonus = min(1.0, len(evidence) * 0.3)
+        decision_bonus = min(1.5, len(decisions) * 0.5)
+        ref_bonus = 0
+        for s in reasoning:
+            if "[Ref:" in s.get("content", ""):
+                ref_bonus = min(1.0, ref_bonus + 0.3)
+
+        base = reasoning_substance + atom_bonus + ev_bonus + decision_bonus + ref_bonus
+        return min(5.0, max(0.0, base))
+
+    def _score_reasoning_depth(self, ekr: dict) -> float:
+        reasoning = ekr.get("reasoning", [])
+        if not reasoning:
+            return 0.0
+        ops = [s.get("operation", "") for s in reasoning]
+        unique_ops = set(ops)
+        chain_len = len(reasoning)
+        substance = self._avg_substance(reasoning)
+
+        base = min(3.0, chain_len * 0.4)
+        variety_bonus = min(1.0, len(unique_ops) * 0.15)
+        depth_bonus = substance * 1.0
+        return min(5.0, base + variety_bonus + depth_bonus)
+
+    def _score_engineering_quality(self, ekr: dict) -> float:
+        decisions = ekr.get("decisions", [])
+        if not decisions:
+            return 0.5
+        alt_count = sum(1 for d in decisions if d.get("alternatives"))
+        reasoning_scores = [len(d.get("outcome", d.get("reasoning", ""))) for d in decisions]
+        avg_len = sum(reasoning_scores) / len(reasoning_scores) if reasoning_scores else 0
+
+        base = min(2.0, len(decisions) * 0.8)
+        alt_bonus = min(1.5, alt_count * 0.5)
+        detail_bonus = min(1.5, avg_len / 50)
+        return min(5.0, max(0.5, base + alt_bonus + detail_bonus))
+
+    def _score_diversity(self, ekr: dict) -> float:
+        reasoning = ekr.get("reasoning", [])
+        ops = set(s.get("operation", "") for s in reasoning)
+        evidence_types = set(e.get("type", "") for e in ekr.get("evidence", []))
+
+        op_div = min(2.5, len(ops) * 0.3)
+        ev_div = min(1.0, len(evidence_types) * 0.3)
+        has_decisions = 0.5 if ekr.get("decisions") else 0
+        has_tradeoffs = 0.5 if ekr.get("tradeoffs") else 0
+        domain_bonus = 0.5 if ekr.get("domain") else 0
+        return min(5.0, op_div + ev_div + has_decisions + has_tradeoffs + domain_bonus)
+
+    def _score_realism(self, ekr: dict) -> float:
+        reasoning = ekr.get("reasoning", [])
+        evidence = ekr.get("evidence", [])
+        all_text = " ".join(s.get("content", "") for s in reasoning)
+        all_text += " ".join(e.get("content", "") for e in evidence)
+
+        detail = self._concrete_detail_ratio(all_text)
+        ev_count = min(1.5, len(evidence) * 0.5)
+        subst = min(1.5, self._avg_substance(reasoning) * 0.8)
+        return min(5.0, detail + ev_count + subst + 0.5)
+
+    def _score_novelty(self, ekr: dict) -> float:
+        difficulty = ekr.get("difficulty", 1)
+        reasoning = ekr.get("reasoning", [])
+        ops = set(s.get("operation", "") for s in reasoning)
+
+        diff_bonus = min(2.0, difficulty * 0.5)
+        op_bonus = min(1.5, len(ops) * 0.15)
+        subst = min(1.5, self._avg_substance(reasoning))
+        return min(5.0, diff_bonus + op_bonus + subst)
+
+    def _score_educational_value(self, ekr: dict) -> float:
+        reasoning = ekr.get("reasoning", [])
+        decisions = ekr.get("decisions", [])
+        all_text = " ".join(s.get("content", "") for s in reasoning)
+        all_text += " ".join(d.get("outcome", d.get("reasoning", "")) for d in decisions)
+
+        subst = self._has_substance(all_text)
+        step_count = min(1.0, len(reasoning) * 0.15)
+        decision_count = min(1.0, len(decisions) * 0.4)
+
+        explainers = ["because", "therefore", "since", "leads to", "causes", "requires"]
+        explanation_score = sum(1 for e in explainers if e in all_text.lower()) * 0.3
+        explanation_bonus = min(1.5, explanation_score)
+        return min(5.0, max(0.5, subst + step_count + decision_count + explanation_bonus))
+
+    def _score_completeness(self, ekr: dict) -> float:
+        score = 0.5
+        if ekr.get("metadata"):
+            score += 0.5
+        if ekr.get("reasoning"):
+            score += 0.8
+        if ekr.get("decisions"):
+            score += 0.8
+        if ekr.get("evidence"):
+            score += 0.6
+        if ekr.get("knowledge_atoms"):
+            score += 0.6
+        if ekr.get("lifecycle"):
+            score += 0.4
+        if ekr.get("difficulty", 0) > 0:
+            score += 0.3
+        if ekr.get("domain", "") in ("", "GEN"):
+            score -= 0.5
+        return min(5.0, max(0.0, score))
+
+    def _score_consistency(self, ekr: dict) -> float:
+        meta = ekr.get("metadata", {})
+        domain = ekr.get("domain", "")
+        name = ekr.get("name", "")
+        reasoning = ekr.get("reasoning", [])
+
+        score = 2.0
+        if meta.get("domain") and domain and meta["domain"] == domain:
+            score += 1.0
+        if domain.lower() in name.lower():
+            score += 0.5
+        if len({s.get("operation", "") for s in reasoning}) >= 3:
+            score += 0.5
+        has_ref = any("[Ref:" in s.get("content", "") for s in reasoning)
+        if has_ref:
+            score += 0.5
+        return min(5.0, score)
+
+    def _score_coherence(self, ekr: dict) -> float:
+        reasoning = ekr.get("reasoning", [])
+        if not reasoning:
+            return 0.0
+
+        ops = [s.get("operation", "") for s in reasoning]
+        all_content = " ".join(s.get("content", "") for s in reasoning)
+        subst = self._has_substance(all_content)
+
+        flow = len([o for o in ops if o in REASONING_OPS]) / max(1, len(ops))
+        chain_bonus = min(1.5, len(reasoning) * 0.2)
+        return min(5.0, max(0.5, flow * 2.0 + chain_bonus + subst * 0.5))
+
     def _score_dimension(self, dim: str, ekr_dict: dict) -> float:
-        reasoning = ekr_dict.get("reasoning", [])
-        decisions = ekr_dict.get("decisions", [])
-        evidence = ekr_dict.get("evidence", [])
-        tradeoffs = ekr_dict.get("tradeoffs", [])
-        atoms = ekr_dict.get("knowledge_atoms", [])
-        difficulty = ekr_dict.get("difficulty", 1)
-        domain = ekr_dict.get("domain", "")
-
-        if dim == "reasoning_depth":
-            ops = set(s.get("operation", "") for s in reasoning)
-            base = min(5.0, len(reasoning))
-            bonus = 0.5 if len(ops) >= 5 else 0
-            return min(5.0, base + bonus)
-
-        if dim == "engineering_quality":
-            base = min(5.0, len(decisions) * 1.2)
-            if any(d.get("alternatives") for d in decisions):
-                base = min(5.0, base + 0.5)
-            return base
-
-        if dim == "knowledge_density":
-            return min(5.0, len(atoms) * 1.2 + len(evidence) * 0.3)
-
-        if dim == "completeness":
-            score = 2.0
-            if ekr_dict.get("metadata"):
-                score += 1.0
-            if reasoning:
-                score += 0.5
-            if decisions:
-                score += 0.5
-            if evidence:
-                score += 0.5
-            if atoms:
-                score += 0.5
-            return min(5.0, score)
-
-        if dim == "diversity":
-            ops = set(s.get("operation", "") for s in reasoning)
-            return min(5.0, len(ops) * 0.6 + 1.0)
-
-        if dim == "realism":
-            if evidence:
-                return min(5.0, len(evidence) * 0.8 + 2.0)
-            return 2.0
-
-        if dim == "novelty":
-            if difficulty >= 3:
-                return min(5.0, difficulty * 0.8 + 1.0)
-            return 2.0
-
-        if dim == "educational_value":
-            return min(5.0, len(reasoning) * 0.4 + len(decisions) * 0.5 + 1.0)
-
-        if dim == "consistency":
-            meta = ekr_dict.get("metadata", {})
-            if meta.get("domain") and domain and meta["domain"] == domain:
-                return 4.5
+        dispatch = {
+            "knowledge_density": self._score_knowledge_density,
+            "reasoning_depth": self._score_reasoning_depth,
+            "engineering_quality": self._score_engineering_quality,
+            "diversity": self._score_diversity,
+            "realism": self._score_realism,
+            "novelty": self._score_novelty,
+            "educational_value": self._score_educational_value,
+            "completeness": self._score_completeness,
+            "consistency": self._score_consistency,
+            "coherence": self._score_coherence,
+        }
+        scorer = dispatch.get(dim)
+        if scorer is None:
             return 3.0
-
-        if dim == "coherence":
-            if reasoning and decisions:
-                return 4.0
-            return 2.5
-
-        return 3.0
+        return scorer(ekr_dict)

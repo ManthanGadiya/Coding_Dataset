@@ -1,4 +1,4 @@
-"""Tests for cognition, curriculum, world, generation, repair, quality, validation, optimization, serialization."""
+"""Tests for all modules: cognition, curriculum, world, generation, repair, quality, validation, optimization, serialization, ingestion."""
 
 import sys
 from pathlib import Path
@@ -97,13 +97,28 @@ class TestQuality:
         from compiler.quality.engine import QualityEngine
         engine = QualityEngine()
         ekr_dict = {
-            "reasoning": [{"op": "a"}, {"op": "b"}, {"op": "c"}],
-            "decisions": [{"d": "a"}],
-            "knowledge_atoms": ["KA-1", "KA-2"],
-            "metadata": {"domain": "GEN"},
+            "reasoning": [
+                {"operation": "Observe", "content": "Detected increased database query latency across the cluster"},
+                {"operation": "Analyze", "content": "Examined slow query log and identified missing index on orders table"},
+                {"operation": "Implement", "content": "Created composite index on (customer_id, order_date) to optimize range queries"},
+            ],
+            "decisions": [
+                {"outcome": "chose B-tree index over hash index due to range query requirements", "alternatives": ["hash index", "full table scan"]},
+            ],
+            "knowledge_atoms": ["KA-001", "KA-042"],
+            "evidence": [
+                {"type": "metric", "content": "Query latency dropped from 2.5s to 40ms after index deployment"}
+            ],
+            "metadata": {"domain": "Databases"},
+            "domain": "Databases",
+            "difficulty": 3,
+            "lifecycle": "proposed",
+            "name": "Database query optimization",
         }
         score = engine.score(ekr_dict)
-        assert int(score.overall) >= 2
+        assert int(score.overall) >= 3
+        assert score.dimensions.get("coherence", 0) > 0
+        assert score.dimensions.get("knowledge_density", 0) > 0
 
 
 class TestValidation:
@@ -164,3 +179,148 @@ class TestSerialization:
         manifest = engine.make_manifest("test", "1.0.0", [{"id": "1"}])
         assert manifest.name == "test"
         assert manifest.record_count == 1
+
+
+class TestIngestion:
+    def test_knowledge_store_init(self, tmp_path):
+        from compiler.ingestion.atoms import KnowledgeStore
+        store = KnowledgeStore(path=tmp_path)
+        assert store.count() == 0
+
+    def test_knowledge_store_save_and_get(self, tmp_path):
+        from compiler.ingestion.atoms import KnowledgeStore, KnowledgeAtom
+        store = KnowledgeStore(path=tmp_path)
+        atoms = [
+            KnowledgeAtom("Databases", "indexing", "B-tree indexes speed lookups.", "https://example.com", "article"),
+            KnowledgeAtom("Databases", "sharding", "Horizontal sharding splits data.", "https://example.com", "article"),
+            KnowledgeAtom("Networking", "DNS", "DNS resolves domain names.", "https://example.com", "article"),
+        ]
+        store.save(atoms)
+        assert store.count() == 3
+        db_atoms = store.get("Databases")
+        assert len(db_atoms) == 2
+        net_atoms = store.get("Networking")
+        assert len(net_atoms) == 1
+        found = store.get("Databases", concept="index")
+        assert len(found) == 1
+
+    def test_knowledge_store_search(self, tmp_path):
+        from compiler.ingestion.atoms import KnowledgeStore, KnowledgeAtom
+        store = KnowledgeStore(path=tmp_path)
+        store.save([
+            KnowledgeAtom("Databases", "indexing", "B-tree indexes are fast.", "https://ex.com", "article"),
+            KnowledgeAtom("Databases", "caching", "Redis cache improves latency.", "https://ex.com", "article"),
+        ])
+        results = store.search("cache")
+        assert len(results) == 1
+        assert results[0].concept == "caching"
+
+    def test_knowledge_store_get_random(self, tmp_path):
+        import random
+        from compiler.ingestion.atoms import KnowledgeStore, KnowledgeAtom
+        store = KnowledgeStore(path=tmp_path)
+        store.save([
+            KnowledgeAtom("Databases", "a", "content a", "https://ex.com", "article"),
+            KnowledgeAtom("Databases", "b", "content b", "https://ex.com", "article"),
+            KnowledgeAtom("Databases", "c", "content c", "https://ex.com", "article"),
+        ])
+        rng = random.Random(42)
+        chosen = store.get_random(rng, "Databases", n=2)
+        assert len(chosen) == 2
+        assert all(a.domain == "Databases" for a in chosen)
+
+    def test_knowledge_store_get_random_empty_domain(self, tmp_path):
+        import random
+        from compiler.ingestion.atoms import KnowledgeStore
+        store = KnowledgeStore(path=tmp_path)
+        rng = random.Random(0)
+        assert store.get_random(rng, "Nonexistent", n=3) == []
+
+    def test_atom_processor_creates_atoms(self, tmp_path):
+        from compiler.ingestion.atoms import AtomProcessor
+        processor = AtomProcessor()
+        content = (
+            "Distributed systems use caching to reduce latency. "
+            "Database sharding improves write throughput. "
+            "Load balancing distributes traffic across servers. "
+            "Microservices architecture enables independent deployment."
+        )
+        atoms = processor.process(content, "https://ex.com", "Distributed_Systems", "article",
+                                   concepts=["caching", "sharding"])
+        assert len(atoms) >= 2
+        concepts_found = {a.concept for a in atoms}
+        assert "caching" in concepts_found or "sharding" in concepts_found
+
+    def test_atom_processor_skips_short_sentences(self, tmp_path):
+        from compiler.ingestion.atoms import AtomProcessor
+        processor = AtomProcessor()
+        content = "Short."
+        atoms = processor.process(content, "https://ex.com", "DevOps", "article", ["CI/CD"])
+        assert len(atoms) == 0
+
+    def test_prebuilt_atoms_have_content(self):
+        from compiler.ingestion.atoms import PREBUILT_ATOMS
+        assert len(PREBUILT_ATOMS) >= 70
+        for atom in PREBUILT_ATOMS:
+            assert len(atom.content) > 10
+            assert atom.source_url
+            assert atom.domain
+
+    def test_prebuilt_atoms_domain_coverage(self):
+        from compiler.ingestion.atoms import PREBUILT_ATOMS
+        domains = set(a.domain for a in PREBUILT_ATOMS)
+        assert len(domains) >= 10
+        for required in ("Distributed_Systems", "Software_Architecture", "Production_Engineering",
+                          "Databases", "Networking", "Performance"):
+            assert required in domains, f"Missing domain: {required}"
+
+    def test_source_acquirer_cache_hit(self, tmp_path):
+        import json
+        from compiler.ingestion.source import SourceAcquirer
+        acquirer = SourceAcquirer(cache_dir=tmp_path / "cache")
+        source_def = {"url": "https://example.com/test", "domain": "Databases", "type": "article", "concepts": ["sql"]}
+        import hashlib
+        cache_key = hashlib.md5(source_def["url"].encode()).hexdigest()
+        cache_file = tmp_path / "cache" / f"{cache_key}.json"
+        cache_file.parent.mkdir(parents=True, exist_ok=True)
+        cache_file.write_text(json.dumps({
+            "url": "https://example.com/test", "title": "Test",
+            "content": "Cached article about SQL databases",
+            "domain": "Databases", "source_type": "article",
+            "concepts": ["sql"],
+        }))
+        ks = acquirer.acquire(source_def)
+        assert ks is not None
+        assert "SQL" in ks.content
+
+    def test_source_acquirer_fallback_http(self, tmp_path):
+        from compiler.ingestion.source import SourceAcquirer
+        acquirer = SourceAcquirer(cache_dir=tmp_path / "cache", ingest_dir=tmp_path / "ingest")
+        source_def = {"url": "https://httpbin.org/html", "domain": "Networking", "type": "article", "concepts": ["HTTP"]}
+        ks = acquirer.acquire(source_def)
+        if ks is None:
+            pytest.skip("httpbin.org not reachable")
+        assert ks is not None
+        assert ks.domain == "Networking"
+
+    def test_source_acquirer_ingest_file_fallback(self, tmp_path):
+        from compiler.ingestion.source import SourceAcquirer
+        ingest_dir = tmp_path / "ingest"
+        ingest_dir.mkdir()
+        (ingest_dir / "example_com.txt").write_text("Fallback content about networks", encoding="utf-8")
+        acquirer = SourceAcquirer(cache_dir=tmp_path / "cache", ingest_dir=ingest_dir)
+        source_def = {"url": "https://example.com/networks", "domain": "Networking", "type": "article", "concepts": ["networks"]}
+        ks = acquirer.acquire(source_def)
+        assert ks is not None
+        assert "Fallback" in ks.content
+
+    def test_source_acquirer_acquire_all_empty(self, tmp_path):
+        from compiler.ingestion.source import SourceAcquirer
+        acquirer = SourceAcquirer(cache_dir=tmp_path / "cache")
+        kss = acquirer.acquire_all([])
+        assert kss == []
+        kss = acquirer.acquire_all([{
+            "url": "https://nonexistent.test/article",
+            "domain": "Testing", "type": "article", "concepts": ["test"],
+        }])
+        assert len(kss) == 0
