@@ -13,6 +13,7 @@ from typing import Any
 
 from compiler.core.constants import Difficulty, Quality, Confidence, Severity, Priority
 from compiler.ontology.ekr import EngineeringKnowledgeRecord
+from compiler.ingestion.atoms import KnowledgeStore
 
 
 class EpisodeType(Enum):
@@ -123,9 +124,10 @@ REASONING_CHAINS: dict[str, list[str]] = {
 
 
 class EpisodeGenerator:
-    def __init__(self, seed: int = 42):
+    def __init__(self, seed: int = 42, knowledge_store: KnowledgeStore | None = None):
         self.seed = seed
         self._rng = random.Random(seed)
+        self._knowledge = knowledge_store or KnowledgeStore()
 
     def generate(self, context: dict, episode_type: EpisodeType,
                  domain: str = "GEN") -> GenerationResult:
@@ -136,7 +138,8 @@ class EpisodeGenerator:
             domain=domain,
         )
 
-        concepts = DOMAIN_CONCEPTS.get(domain, ["General"])
+        concepts = list(DOMAIN_CONCEPTS.get(domain, ["General"]))
+        atoms = self._knowledge.get_random(self._rng, domain, 2)
         scenario = self._pick_scenario(episode_type, concepts)
         reasoning_chain = REASONING_CHAINS.get(episode_type.value, ["Observe", "Analyze"])
 
@@ -204,7 +207,8 @@ class EpisodeGenerator:
 
     def _reasoning_content(self, step: str, episode_type: EpisodeType,
                           domain: str, scenario: dict, concepts: list[str]) -> str:
-        contents = {
+        atom_ref = self._get_atom_content(domain)
+        base = {
             "Observe": f"In {domain}, observed {scenario.get('problem', 'unexpected behavior')}",
             "Diagnose": f"Analysis of {domain} system suggests {scenario.get('cause', 'root cause in system interaction')}",
             "Hypothesize": f"Hypothesis: {scenario.get('cause', 'underlying issue in component boundary')}",
@@ -238,4 +242,14 @@ class EpisodeGenerator:
             "Compare": f"Comparing approaches: {self._rng.choice(['performance', 'maintainability', 'cost'])} analysis",
             "Propose": f"Proposed solution addresses {scenario.get('problem', 'core engineering need')}",
         }
-        return contents.get(step, f"Engineering step {step} for {episode_type.value} in {domain}")
+        content = base.get(step, f"Engineering step {step} for {episode_type.value} in {domain}")
+        if atom_ref and self._rng.random() < 0.3:
+            content += f" [Ref: {atom_ref}]"
+        return content
+
+    def _get_atom_content(self, domain: str) -> str:
+        atoms = self._knowledge.get_random(self._rng, domain, 1)
+        if atoms:
+            a = atoms[0]
+            return f"{a.concept}: {a.content[:100]}"
+        return ""
