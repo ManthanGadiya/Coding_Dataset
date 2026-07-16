@@ -1,0 +1,29 @@
+# TOON Format Schema v2.0
+# Dataset serialization format
+
+TOON:
+  version: "2.0"
+  syntax:
+    - indentation_based
+    - key_value_delimiter: ": "
+    - list_notation: "- "
+    - comments: "#"
+    - multiline: quoted
+  types:
+    - string
+    - integer
+    - float
+    - boolean
+    - timestamp
+    - identifier
+    - reference
+    - enum
+    - list
+    - map
+    - structure
+    - any
+  constraints:
+    - deterministic_parsing
+    - backward_compatible
+    - self_validating
+    - extensible

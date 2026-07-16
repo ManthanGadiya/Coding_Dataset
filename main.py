@@ -1,16 +1,29 @@
-# This is a sample Python script.
+"""TOON Dataset Compiler — main entry point.
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+Usage: python main.py [config.json]
+       PYTHONPATH=src python main.py
+"""
+
+import sys
+from pathlib import Path
+
+# Ensure src/ is on the path
+_src = Path(__file__).parent / "src"
+if str(_src) not in sys.path:
+    sys.path.insert(0, str(_src))
+
+from compiler.core.config import CompilerConfig
+from compiler.core.pipeline import CompilerPipeline
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+def main() -> int:
+    config_path = Path(sys.argv[1]) if len(sys.argv) > 1 else None
+    config = CompilerConfig.load(config_path) if config_path else CompilerConfig.default()
+    pipeline = CompilerPipeline(config)
+    result = pipeline.run()
+    print(f"Compiler: {result.status}")
+    return 0 if result.success else 1
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+if __name__ == "__main__":
+    sys.exit(main())

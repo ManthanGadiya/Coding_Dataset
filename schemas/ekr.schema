@@ -1,0 +1,22 @@
+# EKR Schema v1.0
+# Canonical Engineering Knowledge Record
+
+EKR:
+  id: string          # EKR-<DOMAIN>-<UUID>
+  name: string
+  domain: string
+  difficulty: int     # 0-6
+  quality_score: int  # 0-5
+  confidence: int     # 0-4
+  metadata:
+    object_type: string
+    version: string
+    created_at: timestamp
+  reasoning: list     # ReasoningStep[]
+  decisions: list     # Decision[]
+  tradeoffs: list     # Tradeoff[]
+  evidence: list      # Evidence[]
+  knowledge_atoms: list[string]
+  parent_id: string?
+  child_ids: list[string]
+  related_ekr_ids: list[string]

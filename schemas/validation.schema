@@ -1,0 +1,28 @@
+# Validation Schema v1.0
+# Validation rules and domains
+
+Validation:
+  domains:
+    - schema
+    - graph
+    - reasoning
+    - fact
+    - execution
+    - security
+    - consistency
+    - dataset
+    - final
+  rules:
+    - schema: metadata_required
+    - schema: id_required
+    - graph: no_orphans
+    - graph: acyclic
+    - reasoning: non_empty
+    - reasoning: minimum_depth_2
+    - consistency: domain_match
+    - security: no_injection_patterns
+    - execution: syntactically_valid
+  acceptance:
+    - all_domains_pass: required
+    - warnings_allowed: true
+    - errors_forbidden: true

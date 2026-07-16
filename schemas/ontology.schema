@@ -1,0 +1,39 @@
+# Ontology Schema v1.0
+# Engineering knowledge ontology
+
+Ontology:
+  domains:
+    - name: string
+      purpose: string
+      concepts: list[string]
+      dependencies: list[string]
+  capability_levels:
+    - L0: Awareness
+    - L1: Comprehension
+    - L2: Application
+    - L3: Analysis
+    - L4: Synthesis
+    - L5: Evaluation
+    - L6: Innovation
+  difficulty_dimensions:
+    - Knowledge
+    - Reasoning
+    - Engineering
+    - Scale
+    - Uncertainty
+    - Time
+    - Interaction
+    - Failure
+    - Optimization
+    - Abstraction
+  relationship_types:
+    - depends_on
+    - enables
+    - requires
+    - extends
+    - specializes
+    - generalizes
+    - related_to
+    - validates
+    - conflicts_with
+    - composed_of

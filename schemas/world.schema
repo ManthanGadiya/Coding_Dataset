@@ -1,0 +1,30 @@
+# Engineering World Schema v1.0
+# Persistent engineering environments
+
+World:
+  name: string
+  id: string
+  timeline: timestamp
+  companies:
+    - name: string
+      industry: string
+      size: int
+      repositories:
+        - name: string
+          language: string
+          scale: string  # tiny|small|medium|large|monolith
+      teams:
+        - name: string
+          type: string
+          members:
+            - name: string
+              level: string  # intern|junior|mid|senior|staff|principal|distinguished
+              role: string
+  incidents:
+    - title: string
+      severity: int    # 0-4
+      status: string   # detected|analyzing|mitigated|resolved|prevented
+  features:
+    - title: string
+      priority: int    # 0-4
+      status: string   # submitted|approved|in_progress|completed|closed

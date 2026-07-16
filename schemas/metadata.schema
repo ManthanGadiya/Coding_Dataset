@@ -1,0 +1,18 @@
+# Metadata Schema v1.0
+# Universal metadata for all compiler objects
+
+Metadata:
+  id: string           # <TYPE>-<DOMAIN>-<UUID>
+  object_type: string
+  object_name: string
+  short_name: string?
+  domain: string
+  version: string
+  lifecycle_stage: string
+  compiler_version: string
+  ontology_version: string
+  schema_version: string
+  created_at: timestamp
+  updated_at: timestamp
+  provenance: list[string]
+  parent_id: string?

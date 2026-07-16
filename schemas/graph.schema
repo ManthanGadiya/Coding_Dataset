@@ -1,0 +1,19 @@
+# Knowledge Graph Schema v1.0
+# Directed Property Graph
+
+Graph:
+  type: MultiDiGraph
+  nodes:
+    - id: string
+      node_type: string
+      # additional properties per type
+  edges:
+    - source: string
+      target: string
+      type: string
+      weight: float?
+      metadata: dict?
+  constraints:
+    no_orphans: true
+    no_cycles: true
+    deterministic: true
