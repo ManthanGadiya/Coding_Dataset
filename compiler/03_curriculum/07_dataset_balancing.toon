@@ -1,477 +1,99 @@
+description: "failure_balance[10]: syntax_errors,logic_errors,architecture_failures,concurrency_failures,security_failures,performance_failures,deployment_failures,production_incidents,configuration_errors,dependency_failures"
 dataset_balancing:
-
   metadata:
-
+    description: "depends_on[2]: compiler/03_curriculum/05_prerequisite_graph.toon,compiler/03_curriculum/06_sampling_strategy.toon consumed_by[4]: compiler/03_curriculum/08_spacing_algorithm.toon,compiler/03_curriculum/09_curriculum_graph.toon,compiler/05_generation/19_dataset_builder.toon,compiler/09_optimization/06_balancing_optimizer.toon"
     id: CURR-007
-
     title: Dataset Balancing
-
     version: 1.0
-
     status: Stable
-
     owner: Curriculum Engine
-
-    depends_on:
-
-      - compiler/03_curriculum/05_prerequisite_graph.toon
-      - compiler/03_curriculum/06_sampling_strategy.toon
-
-    consumed_by:
-
-      - compiler/03_curriculum/08_spacing_algorithm.toon
-      - compiler/03_curriculum/09_curriculum_graph.toon
-      - compiler/05_generation/19_dataset_builder.toon
-      - compiler/09_optimization/06_balancing_optimizer.toon
-
-    objective:
-
-      Maintain statistical balance across every important
-      curriculum dimension while preserving natural diversity.
-
-
-################################################################################
-# BALANCING PRINCIPLES
-################################################################################
-
-principles:
-
-  - no_domain_dominance
-
-  - no_language_bias
-
-  - no_framework_bias
-
-  - no_company_bias
-
-  - no_region_bias
-
-  - no_difficulty_skew
-
-  - no_reasoning_skew
-
-  - reinforce_underrepresented_concepts
-
-  - maximize_generalization
-
-  - preserve_real_world_distribution
-
-
-################################################################################
-# DOMAIN BALANCING
-################################################################################
-
+    objective: Maintain statistical balance across every important curriculum dimension while preserving natural diversity.
 domain_balance:
-
-  strategy:
-
-    weighted_equilibrium
-
-  maximum_difference:
-
-    0.05
-
-  balancing_targets:
-
-    Programming Fundamentals
-
-    Algorithms
-
-    Data Structures
-
-    Software Engineering
-
-    Backend Engineering
-
-    Databases
-
-    Networking
-
-    Cloud Engineering
-
-    Distributed Systems
-
-    Production Engineering
-
-    AI Engineering
-
-    Agent Engineering
-
-    Autonomous Engineering
-
-
-################################################################################
-# DIFFICULTY BALANCING
-################################################################################
-
+  strategy: weighted_equilibrium
+  maximum_difference: 0.05
 difficulty_balance:
-
+  description: "\"Autonomous Engineering\":"
   Recognition:
-
     target: 0.12
-
   Understanding:
-
     target: 0.18
-
   Application:
-
     target: 0.25
-
   Integration:
-
-    target: 0.20
-
-  System Design:
-
-    target: 0.13
-
+    target: 0.2
+  target: 0.04
   Production:
-
     target: 0.08
-
-  Autonomous Engineering:
-
-    target: 0.04
-
-  tolerance:
-
-    0.02
-
-
-################################################################################
-# LANGUAGE BALANCING
-################################################################################
-
+  tolerance: 0.02
 language_balance:
-
-  minimum_languages:
-
-    25
-
-  avoid_dominance:
-
-    true
-
-  representative_languages:
-
-    - C
-    - C++
-    - Rust
-    - Go
-    - Python
-    - Java
-    - Kotlin
-    - JavaScript
-    - TypeScript
-    - Swift
-    - SQL
-    - Bash
-
-
-################################################################################
-# FRAMEWORK BALANCING
-################################################################################
-
+  minimum_languages: 25
+  avoid_dominance: true
 framework_balance:
-
-  avoid_vendor_lock:
-
-    true
-
+  avoid_vendor_lock: true
   framework_diversity:
-
     enabled: true
-
-  categories:
-
-    Frontend
-
-    Backend
-
-    Mobile
-
-    AI
-
-    DevOps
-
-    Testing
-
-    Database
-
-
-################################################################################
-# TASK BALANCING
-################################################################################
-
 task_balance:
-
   implementation:
-
     target: 0.22
-
   debugging:
-
     target: 0.18
-
   testing:
-
     target: 0.12
-
   architecture:
-
     target: 0.14
-
   optimization:
-
     target: 0.08
-
   documentation:
-
     target: 0.07
-
   code_review:
-
     target: 0.09
-
   research:
-
     target: 0.05
-
   production:
-
     target: 0.05
-
-
-################################################################################
-# REASONING BALANCING
-################################################################################
-
 reasoning_balance:
-
   deductive:
-
-    target: 0.20
-
+    target: 0.2
   inductive:
-
     target: 0.15
-
   abductive:
-
-    target: 0.10
-
+    target: 0.1
   causal:
-
     target: 0.15
-
   systems:
-
     target: 0.15
-
   probabilistic:
-
     target: 0.05
-
   architectural:
-
-    target: 0.10
-
+    target: 0.1
   strategic:
-
-    target: 0.10
-
-
-################################################################################
-# FAILURE BALANCING
-################################################################################
-
-failure_balance:
-
-  syntax_errors
-
-  logic_errors
-
-  architecture_failures
-
-  concurrency_failures
-
-  security_failures
-
-  performance_failures
-
-  deployment_failures
-
-  production_incidents
-
-  configuration_errors
-
-  dependency_failures
-
-
-################################################################################
-# SAMPLE REWEIGHTING
-################################################################################
-
-reweighting:
-
-  increase_weight_if:
-
-    - underrepresented
-
-    - low_confidence
-
-    - weak_transfer
-
-    - insufficient_examples
-
-  decrease_weight_if:
-
-    - oversampled
-
-    - repetitive
-
-    - highly_correlated
-
-    - redundant
-
-
-################################################################################
-# DIVERSITY CONSTRAINTS
-################################################################################
-
+    target: 0.1
+reweighting[2]: "increase_weight_if[4]: underrepresented,low_confidence,weak_transfer,insufficient_examples","decrease_weight_if[4]: oversampled,repetitive,highly_correlated,redundant"
 diversity_constraints:
-
-  maximum_duplicate_similarity:
-
-    0.80
-
-  minimum_domain_entropy:
-
-    0.95
-
-  minimum_language_entropy:
-
-    0.90
-
-  minimum_framework_entropy:
-
-    0.90
-
-  minimum_reasoning_entropy:
-
-    0.92
-
-
-################################################################################
-# DRIFT DETECTION
-################################################################################
-
+  maximum_duplicate_similarity: 0.8
+  minimum_domain_entropy: 0.95
+  minimum_language_entropy: 0.9
+  minimum_framework_entropy: 0.9
+  minimum_reasoning_entropy: 0.92
 drift_detection:
-
-  monitor:
-
-    domain_distribution
-
-    difficulty_distribution
-
-    language_distribution
-
-    framework_distribution
-
-    task_distribution
-
-    reasoning_distribution
-
-  correction:
-
-    automatic_reweighting
-
-
-################################################################################
-# VALIDATION
-################################################################################
-
-validation:
-
-  reject_if:
-
-    - excessive_domain_bias
-
-    - language_monoculture
-
-    - framework_monoculture
-
-    - reasoning_imbalance
-
-    - duplicate_clusters
-
-    - distribution_drift
-
-    - curriculum_violation
-
-
-################################################################################
-# METRICS
-################################################################################
-
-metrics:
-
-  compute:
-
-    domain_entropy
-
-    language_entropy
-
-    framework_entropy
-
-    reasoning_entropy
-
-    difficulty_entropy
-
-    task_entropy
-
-    dataset_gini_index
-
-    kl_divergence
-
-    js_divergence
-
-
-################################################################################
-# SUCCESS METRICS
-################################################################################
-
+  description: "monitor[6]: domain_distribution,difficulty_distribution,language_distribution,framework_distribution,task_distribution,reasoning_distribution"
+  correction: automatic_reweighting
+validation: "reject_if[7]: excessive_domain_bias,language_monoculture,framework_monoculture,reasoning_imbalance,duplicate_clusters,distribution_drift,curriculum_violation"
+metrics: "compute[9]: domain_entropy,language_entropy,framework_entropy,reasoning_entropy,difficulty_entropy,task_entropy,dataset_gini_index,kl_divergence,js_divergence"
 success_metrics:
-
   domain_balance:
-
     minimum: 0.95
-
   curriculum_balance:
-
     minimum: 0.98
-
   reasoning_balance:
-
     minimum: 0.95
-
   language_balance:
-
-    minimum: 0.90
-
+    minimum: 0.9
   framework_balance:
-
-    minimum: 0.90
-
+    minimum: 0.9
   duplicate_rate:
-
     maximum: 0.01
-
   drift_rate:
-
     maximum: 0.02
-
   dataset_entropy:
-
     minimum: 0.95

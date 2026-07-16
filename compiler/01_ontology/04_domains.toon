@@ -1,729 +1,80 @@
 spec:
-
   id: domains
-
   version: 1.0.0
-
   status: stable
-
   priority: critical
-
   module: Ontology
-
   compiler_stage: Knowledge Representation
-
   description: >
-    Defines the complete Engineering Domain Ontology.
-    Domains partition the engineering universe into coherent
-    knowledge ecosystems while preserving explicit relationships
-    between them.
-    Every Engineering Knowledge Record, Knowledge Atom,
-    Capability, Engineering Episode and Artifact belongs
-    to one primary domain and may reference multiple
-    secondary domains.
-
-###########################################################
-# PURPOSE
-###########################################################
-
-purpose:
-
-  Build a complete semantic map of software engineering.
-
-###########################################################
-# DOMAIN PHILOSOPHY
-###########################################################
-
-philosophy:
-
-  Domains are not folders.
-
-  Domains represent engineering ecosystems.
-
-  Every domain has:
-
-    Knowledge
-
-    Capabilities
-
-    Mental Models
-
-    Constraints
-
-    Artifacts
-
-    Tradeoffs
-
-    Failure Modes
-
-    Engineering Practices
-
-###########################################################
-# DOMAIN HIERARCHY
-###########################################################
-
-hierarchy:
-
-  Domain
-
-      →
-
-  Subdomain
-
-      →
-
-  Topic
-
-      →
-
-  Concept
-
-      →
-
-  Knowledge Atom
-
-###########################################################
-# DOMAIN DEFINITIONS
-###########################################################
-
+purpose: Build a complete semantic map of software engineering.
+philosophy[11]: Domains are not folders.,Domains represent engineering ecosystems.,"Every domain has:",Knowledge,Capabilities,Mental Models,Constraints,Artifacts,Tradeoffs,Failure Modes,Engineering Practices
+hierarchy[9]: Domain,→,Subdomain,→,Topic,→,Concept,→,Knowledge Atom
 domains:
-
-###########################################################
-
   Foundations:
-
-    purpose:
-
-      Mathematical and theoretical foundations
-      of computer science.
-
-    concepts:
-
-      Mathematics
-
-      Logic
-
-      Set Theory
-
-      Information Theory
-
-      Complexity Theory
-
-      Computation Theory
-
-###########################################################
-
+    purpose[2]: Mathematical and theoretical foundations,of computer science.
+    concepts[6]: Mathematics,Logic,Set Theory,Information Theory,Complexity Theory,Computation Theory
   Programming:
-
-    purpose:
-
-      Express computation using programming
-      languages.
-
-    concepts:
-
-      Syntax
-
-      Semantics
-
-      Type Systems
-
-      Variables
-
-      Functions
-
-      Memory Models
-
-      Modules
-
-      Packages
-
-###########################################################
-
+    purpose[2]: Express computation using programming,languages.
+    concepts[8]: Syntax,Semantics,Type Systems,Variables,Functions,Memory Models,Modules,Packages
   Algorithms:
-
-    purpose:
-
-      Efficient problem solving.
-
-    concepts:
-
-      Searching
-
-      Sorting
-
-      Dynamic Programming
-
-      Greedy
-
-      Graph Algorithms
-
-      String Algorithms
-
-      Approximation
-
-###########################################################
-
+    purpose: Efficient problem solving.
+    concepts[7]: Searching,Sorting,Dynamic Programming,Greedy,Graph Algorithms,String Algorithms,Approximation
   Data_Structures:
-
-    purpose:
-
-      Organize information efficiently.
-
-    concepts:
-
-      Arrays
-
-      Linked Lists
-
-      Trees
-
-      Graphs
-
-      Hash Tables
-
-      Heaps
-
-      Tries
-
-###########################################################
-
+    purpose: Organize information efficiently.
+    concepts[7]: Arrays,Linked Lists,Trees,Graphs,Hash Tables,Heaps,Tries
   Operating_Systems:
-
-    purpose:
-
-      Resource management and execution.
-
-    concepts:
-
-      Processes
-
-      Threads
-
-      Scheduling
-
-      Virtual Memory
-
-      Synchronization
-
-      Filesystems
-
-      IPC
-
-###########################################################
-
+    purpose: Resource management and execution.
+    concepts[7]: Processes,Threads,Scheduling,Virtual Memory,Synchronization,Filesystems,IPC
   Compilers:
-
-    purpose:
-
-      Translate and optimize programs.
-
-    concepts:
-
-      Lexing
-
-      Parsing
-
-      AST
-
-      Intermediate Representation
-
-      Optimization
-
-      Register Allocation
-
-      Linking
-
-###########################################################
-
+    purpose: Translate and optimize programs.
+    concepts[7]: Lexing,Parsing,AST,Intermediate Representation,Optimization,Register Allocation,Linking
   Networking:
-
-    purpose:
-
-      Communication between systems.
-
-    concepts:
-
-      TCP
-
-      UDP
-
-      HTTP
-
-      DNS
-
-      Routing
-
-      TLS
-
-      RPC
-
-###########################################################
-
+    purpose: Communication between systems.
+    concepts[7]: TCP,UDP,HTTP,DNS,Routing,TLS,RPC
   Databases:
-
-    purpose:
-
-      Persistent storage and retrieval.
-
-    concepts:
-
-      SQL
-
-      NoSQL
-
-      Transactions
-
-      ACID
-
-      CAP
-
-      Indexes
-
-      Query Planning
-
-###########################################################
-
+    purpose: Persistent storage and retrieval.
+    concepts[7]: SQL,NoSQL,Transactions,ACID,CAP,Indexes,Query Planning
   Distributed_Systems:
-
-    purpose:
-
-      Coordinate computation across machines.
-
-    concepts:
-
-      Consensus
-
-      Replication
-
-      Fault Tolerance
-
-      Distributed Storage
-
-      Messaging
-
-      Event Sourcing
-
-###########################################################
-
+    purpose: Coordinate computation across machines.
+    concepts[6]: Consensus,Replication,Fault Tolerance,Distributed Storage,Messaging,Event Sourcing
   Security:
-
-    purpose:
-
-      Protect confidentiality,
-      integrity and availability.
-
-    concepts:
-
-      Authentication
-
-      Authorization
-
-      Cryptography
-
-      Threat Modeling
-
-      Vulnerability Analysis
-
-      Secure Design
-
-###########################################################
-
+    purpose[2]: "Protect confidentiality,",integrity and availability.
+    concepts[6]: Authentication,Authorization,Cryptography,Threat Modeling,Vulnerability Analysis,Secure Design
   Software_Architecture:
-
-    purpose:
-
-      Design maintainable and scalable systems.
-
-    concepts:
-
-      Layers
-
-      Components
-
-      Microservices
-
-      Event Driven Architecture
-
-      CQRS
-
-      Design Patterns
-
-###########################################################
-
+    purpose: Design maintainable and scalable systems.
+    concepts[6]: Layers,Components,Microservices,Event Driven Architecture,CQRS,Design Patterns
   Testing:
-
-    purpose:
-
-      Verify engineering correctness.
-
-    concepts:
-
-      Unit Tests
-
-      Integration Tests
-
-      Property Tests
-
-      Fuzzing
-
-      Mutation Testing
-
-      Benchmarks
-
-###########################################################
-
+    purpose: Verify engineering correctness.
+    concepts[6]: Unit Tests,Integration Tests,Property Tests,Fuzzing,Mutation Testing,Benchmarks
   DevOps:
-
-    purpose:
-
-      Deliver reliable software continuously.
-
-    concepts:
-
-      CI
-
-      CD
-
-      Containers
-
-      Kubernetes
-
-      Infrastructure
-
-      Monitoring
-
-      Deployment
-
-###########################################################
-
+    purpose: Deliver reliable software continuously.
+    concepts[7]: CI,CD,Containers,Kubernetes,Infrastructure,Monitoring,Deployment
   Performance:
-
-    purpose:
-
-      Maximize efficiency.
-
-    concepts:
-
-      Profiling
-
-      Benchmarking
-
-      Optimization
-
-      Caching
-
-      SIMD
-
-      Parallelism
-
-###########################################################
-
+    purpose: Maximize efficiency.
+    concepts[6]: Profiling,Benchmarking,Optimization,Caching,SIMD,Parallelism
   Cloud:
-
-    purpose:
-
-      Distributed infrastructure.
-
-    concepts:
-
-      Compute
-
-      Storage
-
-      Networking
-
-      IAM
-
-      Serverless
-
-      Multi Cloud
-
-###########################################################
-
+    purpose: Distributed infrastructure.
+    concepts[6]: Compute,Storage,Networking,IAM,Serverless,Multi Cloud
   AI_Engineering:
-
-    purpose:
-
-      Engineering intelligent systems.
-
-    concepts:
-
-      ML
-
-      Deep Learning
-
-      LLMs
-
-      Agents
-
-      RAG
-
-      Fine Tuning
-
-      Evaluation
-
-###########################################################
-
+    purpose: Engineering intelligent systems.
+    concepts[7]: ML,Deep Learning,LLMs,Agents,RAG,Fine Tuning,Evaluation
   Human_Factors:
-
-    purpose:
-
-      Engineering through collaboration.
-
-    concepts:
-
-      Communication
-
-      Mentoring
-
-      Leadership
-
-      Documentation
-
-      Planning
-
-      Estimation
-
-###########################################################
-
+    purpose: Engineering through collaboration.
+    concepts[6]: Communication,Mentoring,Leadership,Documentation,Planning,Estimation
   Production_Engineering:
-
-    purpose:
-
-      Operate real-world software safely.
-
-    concepts:
-
-      Monitoring
-
-      Alerting
-
-      Incident Response
-
-      SRE
-
-      Reliability
-
-      Observability
-
-###########################################################
-# DOMAIN RELATIONSHIPS
-###########################################################
-
-relationships:
-
-  Programming
-
-      →
-
-  Compilers
-
-  Programming
-
-      →
-
-  Operating_Systems
-
-  Algorithms
-
-      →
-
-  Data_Structures
-
-  Operating_Systems
-
-      →
-
-  Distributed_Systems
-
-  Networking
-
-      →
-
-  Distributed_Systems
-
-  Databases
-
-      →
-
-  Distributed_Systems
-
-  Software_Architecture
-
-      →
-
-  DevOps
-
-  DevOps
-
-      →
-
-  Production_Engineering
-
-  AI_Engineering
-
-      →
-
-  Distributed_Systems
-
-  Performance
-
-      →
-
-  Operating_Systems
-
-###########################################################
-# CROSS DOMAIN CAPABILITIES
-###########################################################
-
-cross_domain:
-
-  Debugging
-
-  Optimization
-
-  Design
-
-  Architecture
-
-  Documentation
-
-  Testing
-
-  Review
-
-  Communication
-
-  Learning
-
-###########################################################
-# DOMAIN ATTRIBUTES
-###########################################################
-
-attributes:
-
-  maturity
-
-  complexity
-
-  abstraction_level
-
-  prerequisite_domains
-
-  engineering_density
-
-  reasoning_density
-
-###########################################################
-# DOMAIN DEPENDENCIES
-###########################################################
-
-dependencies:
-
-  Foundations
-
-      →
-
-  Programming
-
-      →
-
-  Algorithms
-
-      →
-
-  Data_Structures
-
-      →
-
-  Systems
-
-      →
-
-  Distributed Systems
-
-###########################################################
-# VALIDATION
-###########################################################
-
-validation:
-
-  every_domain_has_purpose
-
-  every_domain_has_concepts
-
-  every_domain_connected
-
-  no_duplicate_domains
-
-  explicit_dependencies
-
-###########################################################
-# EVERY DOMAIN DEFINES
-###########################################################
-
-requirements:
-
-  Purpose
-
-  Scope
-
-  Concepts
-
-  Capabilities
-
-  Constraints
-
-  Artifacts
-
-  Tradeoffs
-
-  Failure Modes
-
-  Related Domains
-
-###########################################################
-# SUCCESS
-###########################################################
-
-success:
-
-  Every engineering concept belongs to
-  exactly one primary domain.
-
-  Every domain forms a coherent ecosystem.
-
-  Cross-domain reasoning is explicit.
-
-###########################################################
-# GUARANTEES
-###########################################################
-
-guarantees:
-
-  Complete engineering coverage.
-
-  Domain independence.
-
-  Explicit relationships.
-
-  Extensible hierarchy.
-
-  Deterministic classification.
-
-###########################################################
-# FUTURE
-###########################################################
-
+    purpose: Operate real-world software safely.
+    concepts[6]: Monitoring,Alerting,Incident Response,SRE,Reliability,Observability
+relationships[30]: Programming,→,Compilers,Programming,→,Operating_Systems,Algorithms,→,Data_Structures,Operating_Systems,→,Distributed_Systems,Networking,→,Distributed_Systems,Databases,→,Distributed_Systems,Software_Architecture,→,DevOps,DevOps,→,Production_Engineering,AI_Engineering,→,Distributed_Systems,Performance,→,Operating_Systems
+cross_domain[9]: Debugging,Optimization,Design,Architecture,Documentation,Testing,Review,Communication,Learning
+attributes[6]: maturity,complexity,abstraction_level,prerequisite_domains,engineering_density,reasoning_density
+dependencies[11]: Foundations,→,Programming,→,Algorithms,→,Data_Structures,→,Systems,→,Distributed Systems
+validation[5]: every_domain_has_purpose,every_domain_has_concepts,every_domain_connected,no_duplicate_domains,explicit_dependencies
+requirements[9]: Purpose,Scope,Concepts,Capabilities,Constraints,Artifacts,Tradeoffs,Failure Modes,Related Domains
+success[4]: Every engineering concept belongs to,exactly one primary domain.,Every domain forms a coherent ecosystem.,Cross-domain reasoning is explicit.
+guarantees[5]: Complete engineering coverage.,Domain independence.,Explicit relationships.,Extensible hierarchy.,Deterministic classification.
 future:
-
   unlimited_domains: true
-
   evolving_relationships: true
-
   dynamic_dependencies: true
-
   graph_embeddings: true
-
   adaptive_curriculum: true

@@ -1,553 +1,59 @@
-```toon
+description: "guarantees[5]: Explainable reasoning.,Reusable reasoning.,Composable reasoning.,Cross-domain reasoning.,Traceable reasoning."
 spec:
-
   id: reasoning_primitives
-
   version: 1.0.0
-
   status: stable
-
   priority: critical
-
   module: Ontology
-
   compiler_stage: Knowledge Representation
-
-  description: >
-    Defines the primitive reasoning operations that compose all
-    higher-level engineering thinking.
-    Every engineering decision, debugging session,
-    architectural discussion, optimization, review,
-    implementation and research activity is expressed
-    as combinations of these primitives.
-
-###########################################################
-# PURPOSE
-###########################################################
-
-purpose:
-
-  Represent engineering reasoning as reusable,
-  composable cognitive operations.
-
-###########################################################
-# PHILOSOPHY
-###########################################################
-
-philosophy:
-
-  Engineers do not memorize solutions.
-
-  Engineers manipulate knowledge through reasoning.
-
-  Complex reasoning emerges from simple primitives.
-
-  Every Engineering Knowledge Record should
-  exercise one or more reasoning primitives.
-
-###########################################################
-# REASONING MODEL
-###########################################################
-
-model:
-
-  Observation
-
-      →
-
-  Interpretation
-
-      →
-
-  Analysis
-
-      →
-
-  Decision
-
-      →
-
-  Validation
-
-      →
-
-  Reflection
-
-###########################################################
-# REASONING PRIMITIVES
-###########################################################
-
+  description: "\"Defines the primitive reasoning operations that compose all higher-level engineering thinking. Every engineering decision, debugging session, architectural discussion, optimization, review, implementation and research activity is expressed as combinations of these primitives.\""
+purpose: "\"Represent engineering reasoning as reusable, composable cognitive operations.\""
 primitives:
-
-###########################################################
-
   Observe:
-
-    purpose:
-
-      Gather information.
-
-    examples:
-
-      Read logs
-
-      Inspect code
-
-      Examine metrics
-
-      Profile execution
-
-###########################################################
-
+    purpose: Gather information.
   Identify:
-
-    purpose:
-
-      Detect meaningful entities.
-
-    examples:
-
-      Bug
-
-      API
-
-      Race Condition
-
-      Memory Leak
-
-###########################################################
-
+    purpose: Detect meaningful entities.
   Classify:
-
-    purpose:
-
-      Categorize observations.
-
-###########################################################
-
+    purpose: Categorize observations.
   Compare:
-
-    purpose:
-
-      Find similarities and differences.
-
-###########################################################
-
+    purpose: Find similarities and differences.
   Relate:
-
-    purpose:
-
-      Connect concepts.
-
-###########################################################
-
+    purpose: Connect concepts.
   Infer:
-
-    purpose:
-
-      Derive conclusions from evidence.
-
-###########################################################
-
+    purpose: Derive conclusions from evidence.
   Predict:
-
-    purpose:
-
-      Estimate future behaviour.
-
-###########################################################
-
+    purpose: Estimate future behaviour.
   Hypothesize:
-
-    purpose:
-
-      Generate explanations.
-
-###########################################################
-
+    purpose: Generate explanations.
   Validate:
-
-    purpose:
-
-      Confirm or reject hypotheses.
-
-###########################################################
-
+    purpose: Confirm or reject hypotheses.
   Measure:
-
-    purpose:
-
-      Quantify behaviour.
-
-###########################################################
-
+    purpose: Quantify behaviour.
   Diagnose:
-
-    purpose:
-
-      Determine root causes.
-
-###########################################################
-
+    purpose: Determine root causes.
   Explain:
-
-    purpose:
-
-      Produce understandable reasoning.
-
-###########################################################
-
+    purpose: Produce understandable reasoning.
   Generalize:
-
-    purpose:
-
-      Create reusable knowledge.
-
-###########################################################
-
+    purpose: Create reusable knowledge.
   Specialize:
-
-    purpose:
-
-      Adapt general knowledge to
-      specific situations.
-
-###########################################################
-
+    purpose: Adapt general knowledge to specific situations.
   Optimize:
-
-    purpose:
-
-      Improve measurable outcomes.
-
-###########################################################
-
+    purpose: Improve measurable outcomes.
   Decide:
-
-    purpose:
-
-      Select an engineering action.
-
-###########################################################
-
+    purpose: Select an engineering action.
   Reflect:
-
-    purpose:
-
-      Learn from previous outcomes.
-
-###########################################################
-
+    purpose: Learn from previous outcomes.
   Transfer:
-
-    purpose:
-
-      Apply knowledge across domains.
-
-###########################################################
-
+    purpose: Apply knowledge across domains.
   Synthesize:
-
-    purpose:
-
-      Combine multiple ideas into one.
-
-###########################################################
-
+    purpose: Combine multiple ideas into one.
   Decompose:
-
-    purpose:
-
-      Break complex systems into manageable parts.
-
-###########################################################
-# COMPOSITE REASONING
-###########################################################
-
-composite:
-
-  Debugging:
-
-    Observe
-
-    →
-
-    Hypothesize
-
-    →
-
-    Validate
-
-    →
-
-    Diagnose
-
-    →
-
-    Repair
-
-###########################################################
-
-  Architecture:
-
-    Observe
-
-    →
-
-    Analyze
-
-    →
-
-    Compare
-
-    →
-
-    Tradeoff Analysis
-
-    →
-
-    Decide
-
-###########################################################
-
-  Code Review:
-
-    Observe
-
-    →
-
-    Explain
-
-    →
-
-    Compare
-
-    →
-
-    Validate
-
-###########################################################
-
-  Performance Optimization:
-
-    Measure
-
-    →
-
-    Analyze
-
-    →
-
-    Optimize
-
-    →
-
-    Benchmark
-
-###########################################################
-
-  Incident Response:
-
-    Observe
-
-    →
-
-    Diagnose
-
-    →
-
-    Prioritize
-
-    →
-
-    Mitigate
-
-    →
-
-    Validate
-
-###########################################################
-# META REASONING
-###########################################################
-
-meta:
-
-  Detect Assumptions
-
-  Estimate Confidence
-
-  Evaluate Evidence
-
-  Recognize Unknowns
-
-  Recognize Bias
-
-  Self Critique
-
-  Revise Reasoning
-
-  Explain Confidence
-
-###########################################################
-# REASONING ATTRIBUTES
-###########################################################
-
-attributes:
-
-  deterministic
-
-  probabilistic
-
-  deductive
-
-  inductive
-
-  abductive
-
-  causal
-
-  temporal
-
-  spatial
-
-###########################################################
-# EVIDENCE TYPES
-###########################################################
-
-evidence:
-
-  Source Code
-
-  Runtime Behaviour
-
-  Logs
-
-  Metrics
-
-  Benchmarks
-
-  Documentation
-
-  Tests
-
-  User Reports
-
-  Production Incidents
-
-###########################################################
-# CONFIDENCE
-###########################################################
-
-confidence:
-
-  Unknown
-
-  Low
-
-  Medium
-
-  High
-
-  Proven
-
-###########################################################
-# FAILURE MODES
-###########################################################
-
-failures:
-
-  Confirmation Bias
-
-  Overfitting
-
-  Circular Reasoning
-
-  Unsupported Assumptions
-
-  Premature Conclusions
-
-  Missing Evidence
-
-  False Correlation
-
-###########################################################
-# VALIDATION
-###########################################################
-
-validation:
-
-  Every reasoning chain
-  begins with evidence.
-
-  Every conclusion
-  has supporting reasoning.
-
-  Every decision
-  references tradeoffs.
-
-  Every optimization
-  references measurements.
-
-###########################################################
-# ENGINEERING RULES
-###########################################################
-
-rules:
-
-  Never optimize
-  before measuring.
-
-  Never conclude
-  without evidence.
-
-  Never assume
-  correctness.
-
-  Always validate
-  hypotheses.
-
-  Prefer explanation
-  over assertion.
-
-###########################################################
-# SUCCESS
-###########################################################
-
-success:
-
-  Every Engineering Knowledge Record
-  exercises reasoning rather than
-  simple recall.
-
-###########################################################
-# GUARANTEES
-###########################################################
-
-guarantees:
-
-  Explainable reasoning.
-
-  Reusable reasoning.
-
-  Composable reasoning.
-
-  Cross-domain reasoning.
-
-  Traceable reasoning.
-
-###########################################################
-# FUTURE
-###########################################################
-
+    purpose: Break complex systems into manageable parts.
+composite[5]: "Debugging[9]: Observe,→,Hypothesize,→,Validate,→,Diagnose,→,Repair","Architecture[9]: Observe,→,Analyze,→,Compare,→,Tradeoff Analysis,→,Decide","\"Code Review\"[7]: Observe,→,Explain,→,Compare,→,Validate","\"Performance Optimization\"[7]: Measure,→,Analyze,→,Optimize,→,Benchmark","\"Incident Response\"[9]: Observe,→,Diagnose,→,Prioritize,→,Mitigate,→,Validate"
+success: Every Engineering Knowledge Record exercises reasoning rather than simple recall.
 future:
-
   reasoning_graphs: true
-
   probabilistic_reasoning: true
-
   causal_models: true
-
   planning_models: true
-
   reflective_learning: true
-```

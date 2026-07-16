@@ -1,486 +1,97 @@
+description: "principles[9]: curriculum_aware,prerequisite_safe,diversity_first,reinforcement_learning,long_term_retention,reasoning_before_memorization,maximize_transfer_learning,deterministic_when_seeded,stochastic_when_training"
 sampling_strategy:
-
   metadata:
-
+    description: "depends_on[5]: compiler/03_curriculum/01_learning_order.toon,compiler/03_curriculum/02_skill_progression.toon,compiler/03_curriculum/03_domain_progression.toon,compiler/03_curriculum/04_difficulty_progression.toon,compiler/03_curriculum/05_prerequisite_graph.toon consumed_by[4]: compiler/03_curriculum/07_dataset_balancing.toon,compiler/03_curriculum/09_curriculum_graph.toon,compiler/05_generation/19_dataset_builder.toon,compiler/09_optimization/08_sampling_optimizer.toon"
     id: CURR-006
-
     title: Sampling Strategy
-
     version: 1.0
-
     status: Stable
-
     owner: Curriculum Engine
-
-    depends_on:
-
-      - compiler/03_curriculum/01_learning_order.toon
-      - compiler/03_curriculum/02_skill_progression.toon
-      - compiler/03_curriculum/03_domain_progression.toon
-      - compiler/03_curriculum/04_difficulty_progression.toon
-      - compiler/03_curriculum/05_prerequisite_graph.toon
-
-    consumed_by:
-
-      - compiler/03_curriculum/07_dataset_balancing.toon
-      - compiler/03_curriculum/09_curriculum_graph.toon
-      - compiler/05_generation/19_dataset_builder.toon
-      - compiler/09_optimization/08_sampling_optimizer.toon
-
-    objective:
-
-      Produce a curriculum-aware sampling policy that maximizes
-      reasoning ability, engineering intuition, diversity,
-      retention, and long-term generalization.
-
-
-################################################################################
-# CORE PRINCIPLES
-################################################################################
-
-principles:
-
-  - curriculum_aware
-
-  - prerequisite_safe
-
-  - diversity_first
-
-  - reinforcement_learning
-
-  - long_term_retention
-
-  - reasoning_before_memorization
-
-  - maximize_transfer_learning
-
-  - deterministic_when_seeded
-
-  - stochastic_when_training
-
-
-################################################################################
-# SAMPLING PHASES
-################################################################################
-
-phases:
-
-  - phase: Foundation
-
-    target_levels:
-
-      - Recognition
-      - Understanding
-
-    strategy:
-
-      weighted_random
-
-    emphasis:
-
-      - syntax
-      - concepts
-      - terminology
-
-  - phase: Skill Building
-
-    target_levels:
-
-      - Application
-      - Integration
-
-    strategy:
-
-      prerequisite_guided
-
-    emphasis:
-
-      - implementation
-      - debugging
-      - testing
-
-  - phase: Engineering
-
-    target_levels:
-
-      - System Design
-      - Production
-
-    strategy:
-
-      project_based
-
-    emphasis:
-
-      - architecture
-      - tradeoffs
-      - optimization
-
-  - phase: Autonomous
-
-    target_levels:
-
-      - Autonomous Engineering
-
-    strategy:
-
-      long_horizon_episode
-
-    emphasis:
-
-      - planning
-      - review
-      - memory
-      - autonomous_debugging
-
-
-################################################################################
-# SAMPLE TYPES
-################################################################################
-
+    objective: "\"Produce a curriculum-aware sampling policy that maximizes reasoning ability, engineering intuition, diversity, retention, and long-term generalization.\""
+"phases[4]":
+  description: "emphasis[3]: architecture,tradeoffs,optimization - phase: Autonomous target_levels[1]: Autonomous Engineering"
+  strategy: long_horizon_episode
 sample_types:
-
   knowledge_atom:
-
     weight: 0.08
-
   explanation:
-
-    weight: 0.10
-
+    weight: 0.1
   implementation:
-
     weight: 0.15
-
   debugging:
-
     weight: 0.14
-
   testing:
-
-    weight: 0.10
-
+    weight: 0.1
   code_review:
-
     weight: 0.08
-
   architecture:
-
     weight: 0.12
-
   optimization:
-
     weight: 0.07
-
   production_incident:
-
     weight: 0.06
-
   engineering_story:
-
     weight: 0.03
-
   research:
-
     weight: 0.03
-
   design_decision:
-
     weight: 0.04
-
-
-################################################################################
-# DOMAIN WEIGHTS
-################################################################################
-
 domain_weights:
-
-  Programming Fundamentals: 1.00
-
+  description: "\"Data Structures\": 0.95 \"Software Engineering\": 1.0 \"Backend Engineering\": 0.9"
   Algorithms: 0.95
-
-  Data Structures: 0.95
-
-  Software Engineering: 1.00
-
-  Backend Engineering: 0.90
-
-  Databases: 0.80
-
-  Networking: 0.70
-
-  Cloud Engineering: 0.65
-
-  Distributed Systems: 0.75
-
-  Production Engineering: 0.80
-
-  AI Engineering: 0.90
-
-  Agent Engineering: 0.95
-
-  Autonomous Engineering: 1.00
-
-
-################################################################################
-# DIFFICULTY MIX
-################################################################################
-
+  Databases: 0.8
+  Networking: 0.7
 difficulty_distribution:
-
+  description: "\"Autonomous Engineering\":"
   Recognition:
-
     target: 0.12
-
   Understanding:
-
     target: 0.18
-
   Application:
-
     target: 0.25
-
   Integration:
-
-    target: 0.20
-
-  System Design:
-
-    target: 0.13
-
+    target: 0.2
+  target: 0.04
   Production:
-
     target: 0.08
-
-  Autonomous Engineering:
-
-    target: 0.04
-
-
-################################################################################
-# DIVERSITY POLICY
-################################################################################
-
-diversity:
-
-  avoid:
-
-    - duplicate_examples
-
-    - repeated_projects
-
-    - repeated_bug_patterns
-
-    - repeated_framework_bias
-
-    - repeated_company_context
-
-  maximize:
-
-    - languages
-
-    - frameworks
-
-    - operating_systems
-
-    - repositories
-
-    - architectures
-
-    - industries
-
-    - engineering_roles
-
-
-################################################################################
-# REINFORCEMENT POLICY
-################################################################################
-
+diversity[2]: "avoid[5]: duplicate_examples,repeated_projects,repeated_bug_patterns,repeated_framework_bias,repeated_company_context","maximize[7]: languages,frameworks,operating_systems,repositories,architectures,industries,engineering_roles"
 reinforcement:
-
   revisit_interval:
-
     minimum_examples: 25
-
   spaced_repetition:
-
     enabled: true
-
   prerequisite_refresh:
-
     enabled: true
-
   forgotten_skill_boost:
-
     enabled: true
-
-
-################################################################################
-# ADAPTIVE SAMPLING
-################################################################################
-
-adaptive_sampling:
-
-  increase_probability_when:
-
-    - low_confidence
-
-    - repeated_failures
-
-    - weak_reasoning
-
-    - forgotten_skill
-
-  decrease_probability_when:
-
-    - mastered
-
-    - oversampled
-
-    - excessive_duplication
-
-
-################################################################################
-# NEGATIVE SAMPLING
-################################################################################
-
+adaptive_sampling[2]: "increase_probability_when[4]: low_confidence,repeated_failures,weak_reasoning,forgotten_skill","decrease_probability_when[3]: mastered,oversampled,excessive_duplication"
 negative_sampling:
-
-  include:
-
-    - buggy_code
-
-    - flawed_design
-
-    - incorrect_reasoning
-
-    - security_vulnerabilities
-
-    - performance_regressions
-
-    - architecture_smells
-
-  objective:
-
-    teach_detection_and_correction
-
-
-################################################################################
-# CROSS-DOMAIN SAMPLING
-################################################################################
-
+  description: "include[6]: buggy_code,flawed_design,incorrect_reasoning,security_vulnerabilities,performance_regressions,architecture_smells"
+  objective: teach_detection_and_correction
 cross_domain:
-
+  description: "preferred_domains[5]: Backend Engineering + Databases,Backend Engineering + AI Engineering,Distributed Systems + Production Engineering,AI Engineering + Agent Engineering,Software Engineering + Architecture"
   enabled: true
-
   minimum_domains: 2
-
-  preferred_domains:
-
-    - Backend Engineering + Databases
-
-    - Backend Engineering + AI Engineering
-
-    - Distributed Systems + Production Engineering
-
-    - AI Engineering + Agent Engineering
-
-    - Software Engineering + Architecture
-
   maximum_domains_per_sample: 5
-
-
-################################################################################
-# RANDOMIZATION
-################################################################################
-
 randomization:
-
   seedable: true
-
   deterministic_export: true
-
   stochastic_training: true
-
   shuffle_within_constraints: true
-
-
-################################################################################
-# VALIDATION
-################################################################################
-
-validation:
-
-  reject_if:
-
-    - prerequisite_violation
-
-    - duplicate_sample
-
-    - invalid_difficulty
-
-    - invalid_domain_transition
-
-    - excessive_bias
-
-    - insufficient_diversity
-
-
-################################################################################
-# METRICS
-################################################################################
-
-metrics:
-
-  measure:
-
-    - sample_entropy
-
-    - domain_entropy
-
-    - reasoning_entropy
-
-    - diversity_score
-
-    - prerequisite_coverage
-
-    - reinforcement_frequency
-
-    - duplication_rate
-
-    - transfer_learning_score
-
-
-################################################################################
-# SUCCESS METRICS
-################################################################################
-
+validation: "reject_if[6]: prerequisite_violation,duplicate_sample,invalid_difficulty,invalid_domain_transition,excessive_bias,insufficient_diversity"
+metrics: "measure[8]: sample_entropy,domain_entropy,reasoning_entropy,diversity_score,prerequisite_coverage,reinforcement_frequency,duplication_rate,transfer_learning_score"
 success_metrics:
-
   diversity_score:
-
     minimum: 0.95
-
   prerequisite_compliance:
-
-    minimum: 1.00
-
+    minimum: 1.0
   duplicate_rate:
-
     maximum: 0.01
-
   reinforcement_coverage:
-
-    minimum: 0.80
-
+    minimum: 0.8
   reasoning_sample_ratio:
-
     minimum: 0.65
-
   engineering_sample_ratio:
-
     minimum: 0.75
-
   curriculum_consistency:
-
     minimum: 0.99

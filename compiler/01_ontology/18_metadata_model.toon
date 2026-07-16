@@ -1,492 +1,52 @@
-```toon id="u7n5hr"
 spec:
-
   id: metadata_model
-
   version: 1.0.0
-
   status: stable
-
   priority: highest
-
   module: Ontology
-
   compiler_stage: Metadata
-
   description: >
-    Defines the Universal Metadata Model (UMM) for every object
-    generated, stored or processed by the TOON Dataset Compiler.
-    Metadata provides identity, provenance, lineage,
-    reproducibility, ownership and lifecycle information,
-    enabling deterministic compilation, auditing and evolution.
-
-###########################################################
-# PURPOSE
-###########################################################
-
-purpose:
-
-  Ensure every engineering object
-  is fully identifiable,
-  reproducible,
-  traceable,
-  auditable
-  and versioned.
-
-###########################################################
-# PHILOSOPHY
-###########################################################
-
-philosophy:
-
-  Metadata is engineering evidence.
-
-  Nothing exists without provenance.
-
-  Every object must explain itself.
-
-  Every object must be reproducible.
-
-###########################################################
-# METADATA MODEL
-###########################################################
-
-model:
-
-  Identity
-
-      →
-
-  Provenance
-
-      →
-
-  Ownership
-
-      →
-
-  Versioning
-
-      →
-
-  Lineage
-
-      →
-
-  Quality
-
-      →
-
-  Lifecycle
-
-###########################################################
-# REQUIRED METADATA
-###########################################################
-
-required:
-
-  identity
-
-  object_type
-
-  object_category
-
-  compiler_version
-
-  ontology_version
-
-  schema_version
-
-  creation_timestamp
-
-  owner
-
-  provenance
-
-  lifecycle_state
-
-###########################################################
-# IDENTITY
-###########################################################
-
-identity:
-
-  globally_unique_id
-
-  deterministic_id
-
-  immutable
-
-  human_readable_name
-
-  canonical_name
-
-###########################################################
-# PROVENANCE
-###########################################################
-
-provenance:
-
-  source
-
-  author
-
-  compiler
-
-  generation_pipeline
-
-  generator_version
-
-  evidence
-
-  references
-
-###########################################################
-# OWNERSHIP
-###########################################################
-
-ownership:
-
-  creator
-
-  maintainer
-
-  reviewer
-
-  organization
-
-###########################################################
-# VERSIONING
-###########################################################
-
-versioning:
-
-  object_version
-
-  compiler_version
-
-  ontology_version
-
-  schema_version
-
-  release_version
-
-###########################################################
-# LIFECYCLE
-###########################################################
-
-lifecycle:
-
-  created
-
-  modified
-
-  validated
-
-  released
-
-  deprecated
-
-  archived
-
-###########################################################
-# LINEAGE
-###########################################################
-
-lineage:
-
-  parent
-
-  children
-
-  ancestors
-
-  descendants
-
-  derived_from
-
-  generated_from
-
-###########################################################
-# QUALITY
-###########################################################
-
-quality:
-
-  confidence
-
-  completeness
-
-  consistency
-
-  correctness
-
-  validation_score
-
-  quality_score
-
-###########################################################
-# TRACEABILITY
-###########################################################
-
-traceability:
-
-  related_objects
-
-  related_ekrs
-
-  related_domains
-
-  related_capabilities
-
-  dependency_chain
-
-###########################################################
-# REPRODUCIBILITY
-###########################################################
-
-reproducibility:
-
-  deterministic
-
-  compiler_configuration
-
-  compiler_seed
-
-  pipeline_hash
-
-  configuration_hash
-
-###########################################################
-# AUDIT
-###########################################################
-
-audit:
-
-  created_by
-
-  modified_by
-
-  modification_reason
-
-  approval_status
-
-  validation_history
-
-###########################################################
-# SEARCH METADATA
-###########################################################
-
-search:
-
-  keywords
-
-  aliases
-
-  tags
-
-  labels
-
-  semantic_embedding
-
-###########################################################
-# PERFORMANCE
-###########################################################
-
-performance:
-
-  generation_time
-
-  validation_time
-
-  optimization_time
-
-  serialization_time
-
-###########################################################
-# RELATIONSHIPS
-###########################################################
-
-relationships:
-
-  references
-
-  linked_to
-
-  depends_on
-
-  supersedes
-
-  replaces
-
-###########################################################
-# INHERITANCE
-###########################################################
-
+purpose[6]: Ensure every engineering object,"is fully identifiable,","reproducible,","traceable,",auditable,and versioned.
+philosophy[4]: Metadata is engineering evidence.,Nothing exists without provenance.,Every object must explain itself.,Every object must be reproducible.
+model[13]: Identity,→,Provenance,→,Ownership,→,Versioning,→,Lineage,→,Quality,→,Lifecycle
+required[10]: identity,object_type,object_category,compiler_version,ontology_version,schema_version,creation_timestamp,owner,provenance,lifecycle_state
+identity[5]: globally_unique_id,deterministic_id,immutable,human_readable_name,canonical_name
+provenance[7]: source,author,compiler,generation_pipeline,generator_version,evidence,references
+ownership[4]: creator,maintainer,reviewer,organization
+versioning[5]: object_version,compiler_version,ontology_version,schema_version,release_version
+lifecycle[6]: created,modified,validated,released,deprecated,archived
+lineage[6]: parent,children,ancestors,descendants,derived_from,generated_from
+quality[6]: confidence,completeness,consistency,correctness,validation_score,quality_score
+traceability[5]: related_objects,related_ekrs,related_domains,related_capabilities,dependency_chain
+reproducibility[5]: deterministic,compiler_configuration,compiler_seed,pipeline_hash,configuration_hash
+audit[5]: created_by,modified_by,modification_reason,approval_status,validation_history
+search[5]: keywords,aliases,tags,labels,semantic_embedding
+performance[4]: generation_time,validation_time,optimization_time,serialization_time
+relationships[5]: references,linked_to,depends_on,supersedes,replaces
 inheritance:
-
-  child_objects
-
-    inherit:
-
-      compiler_version
-
-      ontology_version
-
-      provenance
-
-      quality
-
-###########################################################
-# INVARIANTS
-###########################################################
-
-invariants:
-
-  Identity never changes.
-
-  Provenance is append-only.
-
-  History cannot be removed.
-
-  Every version is preserved.
-
-###########################################################
-# EKR INTEGRATION
-###########################################################
-
-ekr:
-
-  Every Engineering Knowledge Record
-  inherits the Universal Metadata Model.
-
-###########################################################
-# VALIDATION
-###########################################################
-
-validation:
-
-  Every object has identity.
-
-  Every object has provenance.
-
-  Every object has version.
-
-  Every object has lifecycle.
-
-  Every object is traceable.
-
-###########################################################
-# ENGINEERING EXAMPLES
-###########################################################
-
+  description: child_objects
+  inherit[4]: compiler_version,ontology_version,provenance,quality
+invariants[4]: Identity never changes.,Provenance is append-only.,History cannot be removed.,Every version is preserved.
+ekr[2]: Every Engineering Knowledge Record,inherits the Universal Metadata Model.
+validation[5]: Every object has identity.,Every object has provenance.,Every object has version.,Every object has lifecycle.,Every object is traceable.
 examples:
-
-###########################################################
-
   Example_01:
-
-    Object:
-
-      Engineering Knowledge Record
-
-    Metadata:
-
-      Compiler Version
-
-      Ontology Version
-
-      Author
-
-      Timestamp
-
-###########################################################
-
+    Object: Engineering Knowledge Record
+    Metadata[4]: Compiler Version,Ontology Version,Author,Timestamp
   Example_02:
-
-    Object:
-
-      Repository
-
-    Metadata:
-
-      Owner
-
-      History
-
-      Releases
-
-###########################################################
-
+    Object: Repository
+    Metadata[3]: Owner,History,Releases
   Example_03:
-
-    Object:
-
-      Knowledge Atom
-
-    Metadata:
-
-      Provenance
-
-      Confidence
-
-      Validation
-
-###########################################################
-
+    Object: Knowledge Atom
+    Metadata[3]: Provenance,Confidence,Validation
   Example_04:
-
-    Object:
-
-      Architecture Decision
-
-    Metadata:
-
-      Reviewer
-
-      Approval
-
-      Revision History
-
-###########################################################
-# SUCCESS
-###########################################################
-
-success:
-
-  Every object can be uniquely
-  identified, reproduced,
-  audited and evolved.
-
-###########################################################
-# GUARANTEES
-###########################################################
-
-guarantees:
-
-  Deterministic Identity
-
-  Complete Provenance
-
-  Full Traceability
-
-  Version Preservation
-
-  Reproducible Compilation
-
-###########################################################
-# FUTURE
-###########################################################
-
+    Object: Architecture Decision
+    Metadata[3]: Reviewer,Approval,Revision History
+success[3]: Every object can be uniquely,"identified, reproduced,",audited and evolved.
+guarantees[5]: Deterministic Identity,Complete Provenance,Full Traceability,Version Preservation,Reproducible Compilation
 future:
-
   cryptographic_signatures: true
-
   distributed_metadata: true
-
   immutable_audit_logs: true
-
   semantic_search: true
-
   autonomous_metadata_generation: true
-```

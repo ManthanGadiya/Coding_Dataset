@@ -1,671 +1,78 @@
-```toon
+description: "immutable[5]: compiler_identity,ontology_identity,record_identity,version_history,provenance guarantees[5]: Every module references this specification.,No duplicated enumerations exist.,Constants remain backward compatible.,Compiler-wide terminology remains consistent.,Every identifier is globally unique."
 spec:
-
   id: global_constants
-
   version: 1.0.0
-
   status: stable
-
   priority: critical
-
   module: Core
-
   compiler_stage: Foundation
-
-  description: >
-    Defines every compiler-wide constant, enumeration,
-    identifier, priority, status, quality scale,
-    confidence scale, risk scale, difficulty level,
-    lifecycle state and global limits used by every
-    subsystem of the TOON Dataset Compiler.
-    No compiler module may redefine constants defined
-    in this specification.
-
-###########################################################
-# PURPOSE
-###########################################################
-
-purpose:
-
-  Provide a single immutable source of truth for all
-  compiler-wide constants to guarantee consistency,
-  reproducibility and interoperability.
-
-###########################################################
-# BOOLEAN
-###########################################################
-
-boolean:
-
-  true
-
-  false
-
-###########################################################
-# NULL VALUES
-###########################################################
-
-null:
-
-  null
-
-  unknown
-
-  unspecified
-
-  unavailable
-
-###########################################################
-# COMPILER STATUS
-###########################################################
-
-compiler_status:
-
-  planning
-
-  development
-
-  testing
-
-  stable
-
-  deprecated
-
-  archived
-
-###########################################################
-# RECORD STATUS
-###########################################################
-
-record_status:
-
-  draft
-
-  generated
-
-  reviewed
-
-  repaired
-
-  validated
-
-  optimized
-
-  released
-
-  deprecated
-
-  archived
-
-###########################################################
-# OBJECT TYPES
-###########################################################
-
-object_types:
-
-  Knowledge_Atom
-
-  Engineering_Knowledge_Record
-
-  Engineering_World
-
-  Engineering_Episode
-
-  Artifact
-
-  Decision
-
-  Lesson
-
-  Memory
-
-  Repository
-
-  Company
-
-  Team
-
-  Engineer
-
-###########################################################
-# PRIORITY SCALE
-###########################################################
-
+  description: "\"Defines every compiler-wide constant, enumeration, identifier, priority, status, quality scale, confidence scale, risk scale, difficulty level, lifecycle state and global limits used by every subsystem of the TOON Dataset Compiler. No compiler module may redefine constants defined in this specification.\""
+purpose: "\"Provide a single immutable source of truth for all compiler-wide constants to guarantee consistency, reproducibility and interoperability.\""
 priority:
-
-  P0:
-    Critical
-
-  P1:
-    High
-
-  P2:
-    Medium
-
-  P3:
-    Low
-
-  P4:
-    Optional
-
-###########################################################
-# SEVERITY SCALE
-###########################################################
-
+  P0: Critical
+  P1: High
+  P2: Medium
+  P3: Low
+  P4: Optional
 severity:
-
-  S0:
-    Catastrophic
-
-  S1:
-    Critical
-
-  S2:
-    Major
-
-  S3:
-    Minor
-
-  S4:
-    Informational
-
-###########################################################
-# RISK SCALE
-###########################################################
-
+  S0: Catastrophic
+  S1: Critical
+  S2: Major
+  S3: Minor
+  S4: Informational
 risk:
-
-  R0:
-    None
-
-  R1:
-    Low
-
-  R2:
-    Medium
-
-  R3:
-    High
-
-  R4:
-    Extreme
-
-###########################################################
-# CONFIDENCE SCALE
-###########################################################
-
+  R0: None
+  R1: Low
+  R2: Medium
+  R3: High
+  R4: Extreme
 confidence:
-
-  C0:
-    Unknown
-
-  C1:
-    Weak
-
-  C2:
-    Moderate
-
-  C3:
-    Strong
-
-  C4:
-    Proven
-
-###########################################################
-# QUALITY SCALE
-###########################################################
-
+  C0: Unknown
+  C1: Weak
+  C2: Moderate
+  C3: Strong
+  C4: Proven
 quality:
-
-  Q0:
-    Reject
-
-  Q1:
-    Poor
-
-  Q2:
-    Acceptable
-
-  Q3:
-    Good
-
-  Q4:
-    Excellent
-
-  Q5:
-    Gold
-
-###########################################################
-# COMPLEXITY SCALE
-###########################################################
-
+  Q0: Reject
+  Q1: Poor
+  Q2: Acceptable
+  Q3: Good
+  Q4: Excellent
+  Q5: Gold
 complexity:
-
-  X0:
-    Trivial
-
-  X1:
-    Simple
-
-  X2:
-    Moderate
-
-  X3:
-    Advanced
-
-  X4:
-    Expert
-
-###########################################################
-# DIFFICULTY SCALE
-###########################################################
-
+  X0: Trivial
+  X1: Simple
+  X2: Moderate
+  X3: Advanced
+  X4: Expert
 difficulty:
-
-  D0:
-    Beginner
-
-  D1:
-    Elementary
-
-  D2:
-    Intermediate
-
-  D3:
-    Advanced
-
-  D4:
-    Professional
-
-  D5:
-    Expert
-
-  D6:
-    Research
-
-###########################################################
-# KNOWLEDGE MATURITY
-###########################################################
-
-maturity:
-
-  experimental
-
-  emerging
-
-  stable
-
-  mature
-
-  legacy
-
-  obsolete
-
-###########################################################
-# COMPILER PASSES
-###########################################################
-
-passes:
-
-  ingestion
-
-  parsing
-
-  ontology
-
-  cognition
-
-  curriculum
-
-  world
-
-  generation
-
-  repair
-
-  quality
-
-  validation
-
-  optimization
-
-  serialization
-
-###########################################################
-# DATASET SPLITS
-###########################################################
-
-splits:
-
-  train
-
-  validation
-
-  test
-
-  benchmark
-
-###########################################################
-# OUTPUT FORMATS
-###########################################################
-
-formats:
-
-  toon
-
-  json
-
-  jsonl
-
-  parquet
-
-###########################################################
-# GRAPH TYPES
-###########################################################
-
-graphs:
-
-  ontology_graph
-
-  reasoning_graph
-
-  dependency_graph
-
-  capability_graph
-
-  curriculum_graph
-
-  knowledge_graph
-
-###########################################################
-# ENGINEERING DOMAINS
-###########################################################
-
-domains:
-
-  Programming
-
-  Algorithms
-
-  Data_Structures
-
-  Systems
-
-  Networking
-
-  Databases
-
-  Security
-
-  Operating_Systems
-
-  Compilers
-
-  Distributed_Systems
-
-  Cloud
-
-  DevOps
-
-  AI
-
-  Machine_Learning
-
-  Software_Architecture
-
-  Testing
-
-  Performance
-
-  Embedded
-
-  Robotics
-
-###########################################################
-# ARTIFACT TYPES
-###########################################################
-
-artifacts:
-
-  Source_Code
-
-  Documentation
-
-  Test
-
-  ADR
-
-  RFC
-
-  Design_Document
-
-  Benchmark
-
-  Incident_Report
-
-  Pull_Request
-
-  Issue
-
-  Review
-
-###########################################################
-# RELATIONSHIP TYPES
-###########################################################
-
-relationships:
-
-  depends_on
-
-  implements
-
-  extends
-
-  references
-
-  causes
-
-  solves
-
-  validates
-
-  generates
-
-  optimizes
-
-  replaces
-
-  requires
-
-###########################################################
-# LIFECYCLE STATES
-###########################################################
-
-lifecycle:
-
-  discovered
-
-  acquired
-
-  parsed
-
-  classified
-
-  mapped
-
-  connected
-
-  enriched
-
-  generated
-
-  reviewed
-
-  repaired
-
-  validated
-
-  optimized
-
-  serialized
-
-  released
-
-  monitored
-
-  evolved
-
-  archived
-
-###########################################################
-# QUALITY GATES
-###########################################################
-
-quality_gates:
-
-  structure
-
-  correctness
-
-  reasoning
-
-  engineering
-
-  consistency
-
-  diversity
-
-  completeness
-
-###########################################################
-# IDENTIFIER PREFIXES
-###########################################################
-
+  D0: Beginner
+  D1: Elementary
+  D2: Intermediate
+  D3: Advanced
+  D4: Professional
+  D5: Expert
+  D6: Research
 identifiers:
-
-  KA:
-    Knowledge_Atom
-
-  EKR:
-    Engineering_Knowledge_Record
-
-  EW:
-    Engineering_World
-
-  EE:
-    Engineering_Episode
-
-  CO:
-    Company
-
-  RP:
-    Repository
-
-  TM:
-    Team
-
-  EN:
-    Engineer
-
-  LS:
-    Lesson
-
-###########################################################
-# RESERVED KEYWORDS
-###########################################################
-
-reserved:
-
-  spec
-
-  id
-
-  version
-
-  module
-
-  description
-
-  inputs
-
-  outputs
-
-  rules
-
-  guarantees
-
-  future
-
-###########################################################
-# GLOBAL LIMITS
-###########################################################
-
+  KA: Knowledge_Atom
+  EKR: Engineering_Knowledge_Record
+  EW: Engineering_World
+  EE: Engineering_Episode
+  CO: Company
+  RP: Repository
+  TM: Team
+  EN: Engineer
+  LS: Lesson
 limits:
-
-  minimum_quality:
-    Q2
-
-  release_quality:
-    Q4
-
-  minimum_confidence:
-    C2
-
-  maximum_dependency_depth:
-    unlimited
-
-  graph_cycles:
-    forbidden
-
-  orphan_nodes:
-    forbidden
-
-###########################################################
-# IMMUTABLE CONSTANTS
-###########################################################
-
-immutable:
-
-  compiler_identity
-
-  ontology_identity
-
-  record_identity
-
-  version_history
-
-  provenance
-
-###########################################################
-# GUARANTEES
-###########################################################
-
-guarantees:
-
-  Every module references this specification.
-
-  No duplicated enumerations exist.
-
-  Constants remain backward compatible.
-
-  Compiler-wide terminology remains consistent.
-
-  Every identifier is globally unique.
-
-###########################################################
-# FUTURE COMPATIBILITY
-###########################################################
-
+  minimum_quality: Q2
+  release_quality: Q4
+  minimum_confidence: C2
+  maximum_dependency_depth: unlimited
+  graph_cycles: forbidden
+  orphan_nodes: forbidden
 future:
-
   extensible: true
-
   backward_compatible: true
-
   deterministic: true
-
   centralized: true
-
   immutable_core: true
-```

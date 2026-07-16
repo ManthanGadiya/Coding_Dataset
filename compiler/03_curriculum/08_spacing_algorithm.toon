@@ -1,365 +1,73 @@
+description: "concept_states[7]: unseen,introduced,practiced,reinforced,integrated,mastered,maintained"
 spacing_algorithm:
-
   metadata:
-
+    description: "depends_on[3]: compiler/03_curriculum/05_prerequisite_graph.toon,compiler/03_curriculum/06_sampling_strategy.toon,compiler/03_curriculum/07_dataset_balancing.toon consumed_by[4]: compiler/03_curriculum/09_curriculum_graph.toon,compiler/03_curriculum/10_master_curriculum.toon,compiler/05_generation/19_dataset_builder.toon,compiler/09_optimization/07_curriculum_optimizer.toon"
     id: CURR-008
-
     title: Spacing Algorithm
-
     version: 1.0
-
     status: Stable
-
     owner: Curriculum Engine
-
-    depends_on:
-
-      - compiler/03_curriculum/05_prerequisite_graph.toon
-      - compiler/03_curriculum/06_sampling_strategy.toon
-      - compiler/03_curriculum/07_dataset_balancing.toon
-
-    consumed_by:
-
-      - compiler/03_curriculum/09_curriculum_graph.toon
-      - compiler/03_curriculum/10_master_curriculum.toon
-      - compiler/05_generation/19_dataset_builder.toon
-      - compiler/09_optimization/07_curriculum_optimizer.toon
-
-    objective:
-
-      Schedule concept reoccurrence to maximize long-term retention,
-      transfer learning, reasoning stability, and engineering intuition.
-
-
-################################################################################
-# CORE PRINCIPLES
-################################################################################
-
-principles:
-
-  - spaced_repetition
-
-  - retrieval_practice
-
-  - prerequisite_refresh
-
-  - interleaving
-
-  - progressive_complexity
-
-  - context_variation
-
-  - transfer_learning
-
-  - forgetting_prevention
-
-  - lifelong_reinforcement
-
-
-################################################################################
-# REVIEW INTERVALS
-################################################################################
-
+    objective: "\"Schedule concept reoccurrence to maximize long-term retention, transfer learning, reasoning stability, and engineering intuition.\""
 review_schedule:
-
   first_review:
-
     after_examples: 5
-
   second_review:
-
     after_examples: 20
-
   third_review:
-
     after_examples: 75
-
   fourth_review:
-
     after_examples: 250
-
   fifth_review:
-
     after_examples: 1000
-
   maintenance:
-
     periodic: true
-
-
-################################################################################
-# CONCEPT STATES
-################################################################################
-
-concept_states:
-
-  unseen
-
-  introduced
-
-  practiced
-
-  reinforced
-
-  integrated
-
-  mastered
-
-  maintained
-
-
-################################################################################
-# SPACING BY MASTERY
-################################################################################
-
 mastery_policy:
-
   low_mastery:
-
     revisit_frequency: high
-
   medium_mastery:
-
     revisit_frequency: medium
-
   high_mastery:
-
     revisit_frequency: low
-
   forgotten:
-
     immediate_reinforcement: true
-
-
-################################################################################
-# INTERLEAVING
-################################################################################
-
 interleaving:
-
+  description: "preferred_mix[5]: Algorithms + Debugging,Backend + Databases,Architecture + Testing,AI + Production,Agents + Reflection"
   enabled: true
-
   minimum_domains: 2
-
-  preferred_mix:
-
-    - Algorithms + Debugging
-
-    - Backend + Databases
-
-    - Architecture + Testing
-
-    - AI + Production
-
-    - Agents + Reflection
-
   maximum_same_domain_streak: 3
-
-
-################################################################################
-# CONTEXT VARIATION
-################################################################################
-
-context_variation:
-
-  vary:
-
-    - programming_language
-
-    - framework
-
-    - repository
-
-    - company
-
-    - architecture
-
-    - operating_system
-
-    - project_size
-
-    - engineer_role
-
-  preserve:
-
-    - underlying_concept
-
-
-################################################################################
-# PREREQUISITE REFRESH
-################################################################################
-
+context_variation[2]: "vary[8]: programming_language,framework,repository,company,architecture,operating_system,project_size,engineer_role","preserve[1]: underlying_concept"
 prerequisite_refresh:
-
   enabled: true
-
   before_new_domain: true
-
   before_higher_difficulty: true
-
   before_long_horizon_tasks: true
-
-
-################################################################################
-# FAILURE RECOVERY
-################################################################################
-
-failure_recovery:
-
-  on_repeated_failure:
-
-    revisit_prerequisites
-
-    reduce_difficulty
-
-    increase_spacing_density
-
-    generate_new_examples
-
-    vary_context
-
-
-################################################################################
-# LONG HORIZON REINFORCEMENT
-################################################################################
-
+failure_recovery: "on_repeated_failure[5]: revisit_prerequisites,reduce_difficulty,increase_spacing_density,generate_new_examples,vary_context"
 long_horizon:
-
-  revisit:
-
-    - architecture_patterns
-
-    - debugging_patterns
-
-    - engineering_tradeoffs
-
-    - security
-
-    - testing
-
-    - production_incidents
-
-    - optimization
-
-    - decision_records
-
-  minimum_gap:
-
-    500_examples
-
-
-################################################################################
-# FORGETTING MODEL
-################################################################################
-
+  description: "revisit[8]: architecture_patterns,debugging_patterns,engineering_tradeoffs,security,testing,production_incidents,optimization,decision_records"
+  minimum_gap: 500_examples
 forgetting:
-
-  monitor:
-
-    confidence
-
-    success_rate
-
-    reasoning_quality
-
-    retrieval_accuracy
-
+  description: "monitor[4]: confidence,success_rate,reasoning_quality,retrieval_accuracy"
   trigger_refresh_if:
-
     confidence_drop: 0.15
-
-    success_drop: 0.10
-
-
-################################################################################
-# EPISODIC REINFORCEMENT
-################################################################################
-
+    success_drop: 0.1
 episodic:
-
   repeat_complete_projects: false
-
   revisit_lessons: true
-
   revisit_tradeoffs: true
-
   revisit_failures: true
-
   revisit_design_decisions: true
-
-
-################################################################################
-# VALIDATION
-################################################################################
-
-validation:
-
-  reject_if:
-
-    - excessive_repetition
-
-    - concept_starvation
-
-    - prerequisite_decay
-
-    - spacing_violation
-
-    - curriculum_break
-
-    - reinforcement_gap
-
-
-################################################################################
-# METRICS
-################################################################################
-
-metrics:
-
-  measure:
-
-    retention_rate
-
-    retrieval_accuracy
-
-    reinforcement_density
-
-    prerequisite_health
-
-    transfer_efficiency
-
-    spacing_efficiency
-
-    catastrophic_forgetting
-
-    reasoning_stability
-
-
-################################################################################
-# SUCCESS METRICS
-################################################################################
-
+validation: "reject_if[6]: excessive_repetition,concept_starvation,prerequisite_decay,spacing_violation,curriculum_break,reinforcement_gap"
+metrics: "measure[8]: retention_rate,retrieval_accuracy,reinforcement_density,prerequisite_health,transfer_efficiency,spacing_efficiency,catastrophic_forgetting,reasoning_stability"
 success_metrics:
-
   retention_rate:
-
     minimum: 0.95
-
   catastrophic_forgetting:
-
     maximum: 0.03
-
   reinforcement_coverage:
-
-    minimum: 0.90
-
+    minimum: 0.9
   transfer_learning:
-
-    minimum: 0.90
-
+    minimum: 0.9
   reasoning_stability:
-
     minimum: 0.92
-
   prerequisite_health:
-
     minimum: 0.98

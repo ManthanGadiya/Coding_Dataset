@@ -1,741 +1,113 @@
-```toon
+description: "guarantees[6]: No engineering knowledge is lost.,Every transformation is documented.,Every release is reproducible.,Every object is versioned.,Every update is auditable.,Every historical version remains accessible."
 spec:
-
   id: dataset_lifecycle
-
   version: 1.0.0
-
   status: stable
-
   priority: critical
-
   module: Core
-
   compiler_stage: Foundation
-
-  description: >
-    Defines the complete lifecycle of every engineering knowledge object
-    managed by the TOON Dataset Compiler. Every object—from raw knowledge
-    to released dataset—must pass through a deterministic, traceable,
-    reproducible lifecycle. No object may bypass any mandatory stage.
-
-###########################################################
-# PURPOSE
-###########################################################
-
-purpose:
-
-  Define how engineering knowledge is acquired,
-  transformed, validated, maintained,
-  evolved, versioned, archived and released
-  throughout its entire existence.
-
-###########################################################
-# LIFECYCLE PHILOSOPHY
-###########################################################
-
-philosophy:
-
-  Knowledge
-
-      →
-
-  Understanding
-
-      →
-
-  Structure
-
-      →
-
-  Engineering
-
-      →
-
-  Validation
-
-      →
-
-  Improvement
-
-      →
-
-  Publication
-
-      →
-
-  Evolution
-
-###########################################################
-# LIFECYCLE STAGES
-###########################################################
-
+  description: "\"Defines the complete lifecycle of every engineering knowledge object managed by the TOON Dataset Compiler. Every object—from raw knowledge to released dataset—must pass through a deterministic, traceable, reproducible lifecycle. No object may bypass any mandatory stage.\""
+purpose: "\"Define how engineering knowledge is acquired, transformed, validated, maintained, evolved, versioned, archived and released throughout its entire existence.\""
 stages:
-
-###########################################################
-
   Stage_00:
-
-    name:
-      Discovery
-
-    purpose:
-      Identify engineering knowledge sources.
-
-    inputs:
-
-      books
-
-      papers
-
-      documentation
-
-      RFCs
-
-      repositories
-
-      incidents
-
-      production systems
-
-    outputs:
-
-      candidate_sources
-
-###########################################################
-
+    description: "inputs[7]: books,papers,documentation,RFCs,repositories,incidents,production systems"
+    name: Discovery
+    purpose: Identify engineering knowledge sources.
+    outputs: candidate_sources
   Stage_01:
-
-    name:
-      Acquisition
-
-    purpose:
-      Acquire raw engineering knowledge.
-
-    outputs:
-
-      raw_knowledge
-
-###########################################################
-
+    name: Acquisition
+    purpose: Acquire raw engineering knowledge.
+    outputs: raw_knowledge
   Stage_02:
-
-    name:
-      Normalization
-
-    purpose:
-      Convert heterogeneous formats into
-      compiler-readable representations.
-
-    outputs:
-
-      normalized_knowledge
-
-###########################################################
-
+    name: Normalization
+    purpose: Convert heterogeneous formats into compiler-readable representations.
+    outputs: normalized_knowledge
   Stage_03:
-
-    name:
-      Classification
-
-    purpose:
-      Categorize knowledge according
-      to ontology domains.
-
-    outputs:
-
-      classified_knowledge
-
-###########################################################
-
+    name: Classification
+    purpose: Categorize knowledge according to ontology domains.
+    outputs: classified_knowledge
   Stage_04:
-
-    name:
-      Ontology Mapping
-
-    purpose:
-      Convert engineering concepts into
-      ontology entities.
-
-    outputs:
-
-      ontology_objects
-
-###########################################################
-
+    name: Ontology Mapping
+    purpose: Convert engineering concepts into ontology entities.
+    outputs: ontology_objects
   Stage_05:
-
-    name:
-      Relationship Construction
-
-    purpose:
-      Discover relationships between
-      engineering concepts.
-
-    outputs:
-
-      knowledge_graph
-
-###########################################################
-
+    name: Relationship Construction
+    purpose: Discover relationships between engineering concepts.
+    outputs: knowledge_graph
   Stage_06:
-
-    name:
-      Cognition Enrichment
-
-    purpose:
-      Attach engineering reasoning,
-      assumptions and tradeoffs.
-
-    outputs:
-
-      reasoning_graph
-
-###########################################################
-
+    name: Cognition Enrichment
+    purpose: "\"Attach engineering reasoning, assumptions and tradeoffs.\""
+    outputs: reasoning_graph
   Stage_07:
-
-    name:
-      World Integration
-
-    purpose:
-      Insert knowledge into persistent
-      engineering worlds.
-
-    outputs:
-
-      engineering_world
-
-###########################################################
-
+    name: World Integration
+    purpose: Insert knowledge into persistent engineering worlds.
+    outputs: engineering_world
   Stage_08:
-
-    name:
-      Episode Generation
-
-    purpose:
-      Generate engineering experiences.
-
-    outputs:
-
-      engineering_episode
-
-###########################################################
-
+    name: Episode Generation
+    purpose: Generate engineering experiences.
+    outputs: engineering_episode
   Stage_09:
-
-    name:
-      Engineering Knowledge Record Creation
-
-    purpose:
-      Produce canonical EKR.
-
-    outputs:
-
-      ekr
-
-###########################################################
-
+    name: Engineering Knowledge Record Creation
+    purpose: Produce canonical EKR.
+    outputs: ekr
   Stage_10:
-
-    name:
-      Internal Review
-
-    purpose:
-      Run automated compiler analysis.
-
-    outputs:
-
-      review_report
-
-###########################################################
-
+    name: Internal Review
+    purpose: Run automated compiler analysis.
+    outputs: review_report
   Stage_11:
-
-    name:
-      Repair
-
-    purpose:
-      Improve quality automatically.
-
-    outputs:
-
-      repaired_ekr
-
-###########################################################
-
+    name: Repair
+    purpose: Improve quality automatically.
+    outputs: repaired_ekr
   Stage_12:
-
-    name:
-      Validation
-
-    purpose:
-      Verify correctness.
-
-    outputs:
-
-      validated_ekr
-
-###########################################################
-
+    name: Validation
+    purpose: Verify correctness.
+    outputs: validated_ekr
   Stage_13:
-
-    name:
-      Quality Assessment
-
-    purpose:
-      Measure engineering quality.
-
-    outputs:
-
-      quality_score
-
-###########################################################
-
+    name: Quality Assessment
+    purpose: Measure engineering quality.
+    outputs: quality_score
   Stage_14:
-
-    name:
-      Optimization
-
-    purpose:
-      Remove redundancy and improve
-      learning efficiency.
-
-    outputs:
-
-      optimized_ekr
-
-###########################################################
-
+    name: Optimization
+    purpose: Remove redundancy and improve learning efficiency.
+    outputs: optimized_ekr
   Stage_15:
-
-    name:
-      Serialization
-
-    purpose:
-      Convert into TOON representation.
-
-    outputs:
-
-      toon_record
-
-###########################################################
-
+    name: Serialization
+    purpose: Convert into TOON representation.
+    outputs: toon_record
   Stage_16:
-
-    name:
-      Dataset Integration
-
-    purpose:
-      Merge into dataset graph.
-
-    outputs:
-
-      dataset_graph
-
-###########################################################
-
+    name: Dataset Integration
+    purpose: Merge into dataset graph.
+    outputs: dataset_graph
   Stage_17:
-
-    name:
-      Release
-
-    purpose:
-      Publish official dataset version.
-
-    outputs:
-
-      release_package
-
-###########################################################
-
+    name: Release
+    purpose: Publish official dataset version.
+    outputs: release_package
   Stage_18:
-
-    name:
-      Monitoring
-
-    purpose:
-      Continuously evaluate dataset
-      performance.
-
-    outputs:
-
-      telemetry
-
-###########################################################
-
+    name: Monitoring
+    purpose: Continuously evaluate dataset performance.
+    outputs: telemetry
   Stage_19:
-
-    name:
-      Evolution
-
-    purpose:
-      Update knowledge using new
-      engineering information.
-
-    outputs:
-
-      next_generation_record
-
-###########################################################
-# OBJECT STATES
-###########################################################
-
-states:
-
-  discovered
-
-  acquired
-
-  normalized
-
-  classified
-
-  mapped
-
-  connected
-
-  enriched
-
-  generated
-
-  reviewed
-
-  repaired
-
-  validated
-
-  optimized
-
-  serialized
-
-  integrated
-
-  released
-
-  monitored
-
-  evolved
-
-  archived
-
-###########################################################
-# STATE TRANSITIONS
-###########################################################
-
-transitions:
-
-  discovered
-
-      →
-
-  acquired
-
-      →
-
-  normalized
-
-      →
-
-  classified
-
-      →
-
-  mapped
-
-      →
-
-  connected
-
-      →
-
-  enriched
-
-      →
-
-  generated
-
-      →
-
-  repaired
-
-      →
-
-  validated
-
-      →
-
-  optimized
-
-      →
-
-  serialized
-
-      →
-
-  integrated
-
-      →
-
-  released
-
-###########################################################
-# VERSIONING
-###########################################################
-
-versioning:
-
-  every_record:
-
-    unique_identifier
-
-    semantic_version
-
-    compiler_version
-
-    ontology_version
-
-    schema_version
-
-    generation_timestamp
-
-    modification_history
-
-###########################################################
-# METADATA EVOLUTION
-###########################################################
-
-metadata:
-
-  preserve:
-
-    authorship
-
-    provenance
-
-    timestamps
-
-    compiler_version
-
-    source_reference
-
-    dependencies
-
-    quality_scores
-
-###########################################################
-# UPDATE POLICY
-###########################################################
-
-updates:
-
-  allowed:
-
-    repair
-
-    quality_improvement
-
-    ontology_expansion
-
-    metadata_updates
-
-  forbidden:
-
-    silent_modification
-
-    undocumented_changes
-
-    breaking_history
-
-###########################################################
-# IMMUTABILITY
-###########################################################
-
-immutable:
-
-  release_packages
-
-  historical_versions
-
-  source_provenance
-
-  compiler_history
-
-###########################################################
-# ARCHIVING
-###########################################################
-
-archive:
-
-  preserve:
-
-    all_versions
-
-    previous_graphs
-
-    deprecated_records
-
-    migration_history
-
-###########################################################
-# DEPRECATION
-###########################################################
-
-deprecation:
-
-  conditions:
-
-    obsolete_information
-
-    duplicated_knowledge
-
-    ontology_replacement
-
-    invalid_information
-
-  policy:
-
-    Never delete.
-
-    Mark deprecated.
-
-    Preserve history.
-
-###########################################################
-# REGENERATION
-###########################################################
-
-regeneration:
-
-  triggers:
-
-    ontology_changes
-
-    compiler_updates
-
-    validation_failures
-
-    quality_improvements
-
-    reasoning_improvements
-
-###########################################################
-# FAILURE RECOVERY
-###########################################################
-
+    name: Evolution
+    purpose: Update knowledge using new engineering information.
+    outputs: next_generation_record
+versioning: "every_record[7]: unique_identifier,semantic_version,compiler_version,ontology_version,schema_version,generation_timestamp,modification_history"
+metadata: "preserve[7]: authorship,provenance,timestamps,compiler_version,source_reference,dependencies,quality_scores"
+updates[2]: "allowed[4]: repair,quality_improvement,ontology_expansion,metadata_updates","forbidden[3]: silent_modification,undocumented_changes,breaking_history"
+archive: "preserve[4]: all_versions,previous_graphs,deprecated_records,migration_history"
+deprecation[2]: "conditions[4]: obsolete_information,duplicated_knowledge,ontology_replacement,invalid_information","policy[3]: Never delete.,Mark deprecated.,Preserve history."
+regeneration: "triggers[5]: ontology_changes,compiler_updates,validation_failures,quality_improvements,reasoning_improvements"
 failure:
-
-  parser:
-
-    retry
-
-  ontology:
-
-    repair
-
-  validation:
-
-    reject
-
-  optimization:
-
-    retry
-
-  serialization:
-
-    regenerate
-
-###########################################################
-# QUALITY GATES
-###########################################################
-
-gates:
-
-  Every stage must:
-
-    validate_inputs
-
-    validate_outputs
-
-    preserve_metadata
-
-    preserve_traceability
-
-    emit_metrics
-
-###########################################################
-# AUDITABILITY
-###########################################################
-
-audit:
-
-  every_record_must_store:
-
-    source
-
-    compiler_version
-
-    ontology_version
-
-    lifecycle_stage
-
-    validation_history
-
-    repair_history
-
-    optimization_history
-
-###########################################################
-# SUCCESS CRITERIA
-###########################################################
-
-success:
-
-  Every engineering object is:
-
-    traceable
-
-    reproducible
-
-    versioned
-
-    explainable
-
-    validated
-
-    evolvable
-
-###########################################################
-# GUARANTEES
-###########################################################
-
-guarantees:
-
-  No engineering knowledge is lost.
-
-  Every transformation is documented.
-
-  Every release is reproducible.
-
-  Every object is versioned.
-
-  Every update is auditable.
-
-  Every historical version remains accessible.
-
-###########################################################
-# FUTURE COMPATIBILITY
-###########################################################
-
+  parser: retry
+  ontology: repair
+  validation: reject
+  optimization: retry
+  serialization: regenerate
+gates: "\"Every stage must\"[5]: validate_inputs,validate_outputs,preserve_metadata,preserve_traceability,emit_metrics"
+audit: "every_record_must_store[7]: source,compiler_version,ontology_version,lifecycle_stage,validation_history,repair_history,optimization_history"
+success: "\"Every engineering object is\"[6]: traceable,reproducible,versioned,explainable,validated,evolvable"
 future:
-
   incremental_updates: true
-
   continuous_compilation: true
-
   distributed_generation: true
-
   autonomous_maintenance: true
-
   backward_compatible: true
-```

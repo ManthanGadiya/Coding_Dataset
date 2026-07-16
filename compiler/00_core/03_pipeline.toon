@@ -1,621 +1,110 @@
-```toon
+description: "metrics[9]: execution_time,memory_usage,graph_size,ontology_coverage,reasoning_depth,validation_rate,repair_rate,optimization_ratio,serialization_time depends_on[2]: 01_project_overview,02_design_principles produces[5]: Engineering_Knowledge_Records,Knowledge_Graphs,Engineering_Worlds,TOON_Dataset,Dataset_Metadata guarantees[6]: deterministic_execution,reproducible_outputs,validated_dataset,optimized_dataset,traceable_generation,explainable_pipeline"
 spec:
-
   id: pipeline
-
   version: 1.0.0
-
   status: stable
-
   priority: highest
-
   module: Core
-
   compiler_stage: Execution
-
-  description: >
-    Defines the complete execution pipeline of the TOON Dataset Compiler.
-    Every piece of engineering knowledge follows this lifecycle from
-    acquisition to final dataset release. The pipeline guarantees
-    deterministic, reproducible, explainable, and quality-controlled
-    compilation.
-
-###########################################################
-# OVERVIEW
-###########################################################
-
+  description: "\"Defines the complete execution pipeline of the TOON Dataset Compiler. Every piece of engineering knowledge follows this lifecycle from acquisition to final dataset release. The pipeline guarantees deterministic, reproducible, explainable, and quality-controlled compilation.\""
 overview:
-
-  purpose:
-    Transform heterogeneous engineering knowledge into structured,
-    validated, optimized and serialized Engineering Knowledge Records.
-
-  paradigm:
-
-    Compiler
-
-      →
-
-    Knowledge Graph
-
-      →
-
-    Engineering Intelligence
-
-###########################################################
-# PIPELINE PHILOSOPHY
-###########################################################
-
-philosophy:
-
-  pipeline:
-
-    Acquire
-
-      →
-
-    Understand
-
-      →
-
-    Structure
-
-      →
-
-    Connect
-
-      →
-
-    Reason
-
-      →
-
-    Generate
-
-      →
-
-    Improve
-
-      →
-
-    Validate
-
-      →
-
-    Optimize
-
-      →
-
-    Serialize
-
-      →
-
-    Release
-
-###########################################################
-# EXECUTION STAGES
-###########################################################
-
+  purpose: "\"Transform heterogeneous engineering knowledge into structured, validated, optimized and serialized Engineering Knowledge Records.\""
+philosophy: "pipeline[21]: Acquire,→,Understand,→,Structure,→,Connect,→,Reason,→,Generate,→,Improve,→,Validate,→,Optimize,→,Serialize,→,Release"
 stages:
-
-###########################################################
-
   Stage_00:
-
-    name:
-      Initialization
-
-    objective:
-      Initialize compiler environment.
-
-    inputs:
-
-      configuration
-
-      compiler_version
-
-      ontology_version
-
-    outputs:
-
-      compiler_context
-
-###########################################################
-
+    description: "inputs[3]: configuration,compiler_version,ontology_version"
+    name: Initialization
+    objective: Initialize compiler environment.
+    outputs: compiler_context
   Stage_01:
-
-    name:
-      Knowledge Acquisition
-
-    objective:
-      Collect engineering knowledge.
-
-    inputs:
-
-      books
-
-      documentation
-
-      github
-
-      RFCs
-
-      papers
-
-      manuals
-
-      incidents
-
-      benchmarks
-
-    outputs:
-
-      raw_knowledge
-
-###########################################################
-
+    description: "inputs[8]: books,documentation,github,RFCs,papers,manuals,incidents,benchmarks"
+    name: Knowledge Acquisition
+    objective: Collect engineering knowledge.
+    outputs: raw_knowledge
   Stage_02:
-
-    name:
-      Knowledge Parsing
-
-    objective:
-      Extract structured information.
-
-    outputs:
-
-      parsed_objects
-
-###########################################################
-
+    name: Knowledge Parsing
+    objective: Extract structured information.
+    outputs: parsed_objects
   Stage_03:
-
-    name:
-      Ontology Mapping
-
-    objective:
-      Map extracted knowledge into ontology.
-
-    outputs:
-
-      ontology_objects
-
-###########################################################
-
+    name: Ontology Mapping
+    objective: Map extracted knowledge into ontology.
+    outputs: ontology_objects
   Stage_04:
-
-    name:
-      Knowledge Graph Construction
-
-    objective:
-      Build relationships.
-
-    outputs:
-
-      knowledge_graph
-
-###########################################################
-
+    name: Knowledge Graph Construction
+    objective: Build relationships.
+    outputs: knowledge_graph
   Stage_05:
-
-    name:
-      Cognition Enrichment
-
-    objective:
-      Attach reasoning.
-
-    outputs:
-
-      reasoning_graph
-
-###########################################################
-
+    name: Cognition Enrichment
+    objective: Attach reasoning.
+    outputs: reasoning_graph
   Stage_06:
-
-    name:
-      Curriculum Planning
-
-    objective:
-      Organize learning progression.
-
-    outputs:
-
-      curriculum_graph
-
-###########################################################
-
+    name: Curriculum Planning
+    objective: Organize learning progression.
+    outputs: curriculum_graph
   Stage_07:
-
-    name:
-      World Generation
-
-    objective:
-      Create engineering environments.
-
-    outputs:
-
-      engineering_worlds
-
-###########################################################
-
+    name: World Generation
+    objective: Create engineering environments.
+    outputs: engineering_worlds
   Stage_08:
-
-    name:
-      Episode Generation
-
-    objective:
-      Produce Engineering Episodes.
-
-    outputs:
-
-      engineering_episodes
-
-###########################################################
-
+    name: Episode Generation
+    objective: Produce Engineering Episodes.
+    outputs: engineering_episodes
   Stage_09:
-
-    name:
-      Engineering Knowledge Record Generation
-
-    objective:
-      Produce canonical EKR objects.
-
-    outputs:
-
-      ekr_objects
-
-###########################################################
-
+    name: Engineering Knowledge Record Generation
+    objective: Produce canonical EKR objects.
+    outputs: ekr_objects
   Stage_10:
-
-    name:
-      Artifact Generation
-
-    objective:
-      Generate engineering artifacts.
-
-    outputs:
-
-      source_code
-
-      documentation
-
-      diagrams
-
-      ADRs
-
-      RFCs
-
-      benchmarks
-
-      tests
-
-###########################################################
-
+    name: Artifact Generation
+    objective: Generate engineering artifacts.
   Stage_11:
-
-    name:
-      Repair
-
-    objective:
-      Improve generated knowledge.
-
-    outputs:
-
-      repaired_ekrs
-
-###########################################################
-
+    name: Repair
+    objective: Improve generated knowledge.
+    outputs: repaired_ekrs
   Stage_12:
-
-    name:
-      Quality Analysis
-
-    objective:
-      Score every Engineering Knowledge Record.
-
-    outputs:
-
-      quality_scores
-
-###########################################################
-
+    name: Quality Analysis
+    objective: Score every Engineering Knowledge Record.
+    outputs: quality_scores
   Stage_13:
-
-    name:
-      Validation
-
-    objective:
-      Guarantee correctness.
-
-    outputs:
-
-      validated_ekrs
-
-###########################################################
-
+    name: Validation
+    objective: Guarantee correctness.
+    outputs: validated_ekrs
   Stage_14:
-
-    name:
-      Optimization
-
-    objective:
-      Produce efficient datasets.
-
-    outputs:
-
-      optimized_dataset
-
-###########################################################
-
+    name: Optimization
+    objective: Produce efficient datasets.
+    outputs: optimized_dataset
   Stage_15:
-
-    name:
-      Serialization
-
-    objective:
-      Convert internal representation into TOON.
-
-    outputs:
-
-      toon_dataset
-
-###########################################################
-
+    name: Serialization
+    objective: Convert internal representation into TOON.
+    outputs: toon_dataset
   Stage_16:
-
-    name:
-      Release
-
-    objective:
-      Publish dataset.
-
-    outputs:
-
-      release_package
-
-###########################################################
-# DATA FLOW
-###########################################################
-
-flow:
-
-  Raw_Knowledge
-
-    →
-
-  Parsed_Knowledge
-
-    →
-
-  Ontology
-
-    →
-
-  Knowledge_Graph
-
-    →
-
-  Reasoning_Graph
-
-    →
-
-  Curriculum
-
-    →
-
-  World
-
-    →
-
-  Episode
-
-    →
-
-  EKR
-
-    →
-
-  Artifacts
-
-    →
-
-  Repair
-
-    →
-
-  Quality
-
-    →
-
-  Validation
-
-    →
-
-  Optimization
-
-    →
-
-  TOON
-
-    →
-
-  Release
-
-###########################################################
-# PIPELINE PROPERTIES
-###########################################################
-
+    name: Release
+    objective: Publish dataset.
+    outputs: release_package
 properties:
-
   deterministic: true
-
   reproducible: true
-
   modular: true
-
   explainable: true
-
   resumable: true
-
   parallelizable: true
-
   graph_native: true
-
-###########################################################
-# EXECUTION RULES
-###########################################################
-
-rules:
-
-  Every stage has defined inputs.
-
-  Every stage has defined outputs.
-
-  No stage mutates previous stages.
-
-  Every stage logs execution.
-
-  Every stage validates inputs.
-
-  Every stage exposes metrics.
-
-  Every stage is independently testable.
-
-###########################################################
-# FAILURE HANDLING
-###########################################################
-
 failure_handling:
-
-  parser_failure:
-
-    stop
-
-  ontology_failure:
-
-    repair
-
-  graph_failure:
-
-    repair
-
-  generation_failure:
-
-    regenerate
-
-  validation_failure:
-
-    reject
-
-  optimization_failure:
-
-    retry
-
-###########################################################
-# PARALLEL EXECUTION
-###########################################################
-
+  parser_failure: stop
+  ontology_failure: repair
+  graph_failure: repair
+  generation_failure: regenerate
+  validation_failure: reject
+  optimization_failure: retry
 parallelization:
-
-  ontology:
-    supported
-
-  cognition:
-    supported
-
-  generation:
-    supported
-
-  validation:
-    supported
-
-  optimization:
-    supported
-
-###########################################################
-# PIPELINE METRICS
-###########################################################
-
-metrics:
-
-  execution_time
-
-  memory_usage
-
-  graph_size
-
-  ontology_coverage
-
-  reasoning_depth
-
-  validation_rate
-
-  repair_rate
-
-  optimization_ratio
-
-  serialization_time
-
-###########################################################
-# DEPENDENCIES
-###########################################################
-
-depends_on:
-
-  01_project_overview
-
-  02_design_principles
-
-###########################################################
-# PRODUCES
-###########################################################
-
-produces:
-
-  Engineering_Knowledge_Records
-
-  Knowledge_Graphs
-
-  Engineering_Worlds
-
-  TOON_Dataset
-
-  Dataset_Metadata
-
-###########################################################
-# GUARANTEES
-###########################################################
-
-guarantees:
-
-  deterministic_execution
-
-  reproducible_outputs
-
-  validated_dataset
-
-  optimized_dataset
-
-  traceable_generation
-
-  explainable_pipeline
-
-###########################################################
-# FUTURE COMPATIBILITY
-###########################################################
-
+  ontology: supported
+  cognition: supported
+  generation: supported
+  validation: supported
+  optimization: supported
 future:
-
   distributed_execution: true
-
   streaming_pipeline: true
-
   incremental_compilation: true
-
   plugin_stages: true
-
   cloud_execution: true
-
   autonomous_operation: true
-```

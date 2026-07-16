@@ -1,437 +1,51 @@
-```toon
+description: "lifecycle[10]: Acquire,Structure,Connect,Reason,Generate,Repair,Validate,Optimize,Serialize,Release"
 spec:
-
   id: project_overview
-
   version: 1.0.0
-
   status: stable
-
   priority: highest
-
   owner: CAMera
-
   module: Core
-
   compiler_stage: Initialization
-
-  description: >
-    Defines the purpose, scope, architecture, objectives and execution
-    model of the TOON Dataset Compiler. This file serves as the entry
-    point for every compiler component and every AI agent interacting
-    with the project.
-
-###########################################################
-# PROJECT
-###########################################################
-
+  description: "\"Defines the purpose, scope, architecture, objectives and execution model of the TOON Dataset Compiler. This file serves as the entry point for every compiler component and every AI agent interacting with the project.\""
 project:
-
-  name:
-    TOON Dataset Compiler
-
-  codename:
-    CAMera Dataset
-
-  type:
-    Engineering Knowledge Compiler
-
-  objective:
-    Build the world's highest-quality engineering dataset for
-    training autonomous coding models.
-
-###########################################################
-# MISSION
-###########################################################
-
+  name: TOON Dataset Compiler
+  codename: CAMera Dataset
+  type: Engineering Knowledge Compiler
+  objective: Build the world's highest-quality engineering dataset for training autonomous coding models.
 mission:
-
-  primary:
-    Represent software engineering knowledge as structured,
-    interconnected engineering knowledge rather than isolated text.
-
-  secondary:
-
-    - Improve engineering reasoning
-
-    - Improve architectural thinking
-
-    - Improve debugging capability
-
-    - Improve planning ability
-
-    - Improve production awareness
-
-    - Improve long-term software evolution understanding
-
-###########################################################
-# VISION
-###########################################################
-
+  primary: "\"Represent software engineering knowledge as structured, interconnected engineering knowledge rather than isolated text.\""
 vision:
-
-  short_term:
-
-    Build a compiler capable of generating
-    high-quality Engineering Knowledge Records.
-
-  medium_term:
-
-    Build a persistent engineering world capable
-    of producing realistic software engineering experiences.
-
-  long_term:
-
-    Build the world's best engineering dataset for
-    autonomous coding models.
-
-###########################################################
-# PHILOSOPHY
-###########################################################
-
+  short_term: Build a compiler capable of generating high-quality Engineering Knowledge Records.
+  medium_term: Build a persistent engineering world capable of producing realistic software engineering experiences.
+  long_term: Build the world's best engineering dataset for autonomous coding models.
 philosophy:
-
-  software_engineering:
-    Engineering > Programming
-
-  knowledge:
-    Structured > Unstructured
-
-  reasoning:
-    Explicit > Implicit
-
-  quality:
-    Better > Bigger
-
-  architecture:
-    Modular > Monolithic
-
-  datasets:
-    Living > Static
-
-###########################################################
-# CORE OBJECTIVES
-###########################################################
-
+  software_engineering: Engineering > Programming
+  knowledge: Structured > Unstructured
+  reasoning: Explicit > Implicit
+  quality: Better > Bigger
+  architecture: Modular > Monolithic
+  datasets: Living > Static
 objectives:
-
-  O1:
-    Build Engineering Ontology
-
-  O2:
-    Build Engineering Cognition
-
-  O3:
-    Build Persistent Engineering Worlds
-
-  O4:
-    Generate Engineering Knowledge Records
-
-  O5:
-    Validate Knowledge
-
-  O6:
-    Repair Low Quality Records
-
-  O7:
-    Optimize Dataset
-
-  O8:
-    Serialize into TOON
-
-###########################################################
-# INPUTS
-###########################################################
-
-inputs:
-
-  books
-
-  documentation
-
-  github
-
-  papers
-
-  RFCs
-
-  ADRs
-
-  issue_trackers
-
-  bug_reports
-
-  production_incidents
-
-  benchmarks
-
-  tutorials
-
-  manuals
-
-###########################################################
-# OUTPUTS
-###########################################################
-
-outputs:
-
-  toon
-
-  jsonl
-
-  parquet
-
-  knowledge_graph
-
-  metadata
-
-  dataset_release
-
-###########################################################
-# INTERNAL REPRESENTATION
-###########################################################
-
-internal_objects:
-
-  Knowledge_Atom
-
-  Engineering_Knowledge_Record
-
-  Engineering_World
-
-  Engineering_Episode
-
-  Artifact
-
-  Decision
-
-  Lesson
-
-  Memory
-
-###########################################################
-# PIPELINE
-###########################################################
-
-pipeline:
-
-  Ingestion
-
-  Ontology
-
-  Cognition
-
-  Curriculum
-
-  World
-
-  Generation
-
-  Repair
-
-  Quality
-
-  Validation
-
-  Optimization
-
-  Serialization
-
-  Release
-
-###########################################################
-# DESIGN PRINCIPLES
-###########################################################
-
-principles:
-
-  deterministic
-
-  reproducible
-
-  modular
-
-  graph_native
-
-  ontology_driven
-
-  capability_driven
-
-  reasoning_first
-
-  explainable
-
-  extensible
-
-  versioned
-
-###########################################################
-# NON-GOALS
-###########################################################
-
-non_goals:
-
-  Not a code generator
-
-  Not an IDE
-
-  Not an inference engine
-
-  Not a chatbot
-
-  Not a benchmark suite
-
-  Not a language model
-
-###########################################################
-# SUCCESS METRICS
-###########################################################
-
-success:
-
-  dataset_quality
-
-  engineering_density
-
-  reasoning_depth
-
-  ontology_coverage
-
-  graph_connectivity
-
-  educational_value
-
-  production_realism
-
-###########################################################
-# DEPENDENCIES
-###########################################################
-
-depends_on:
-
-  README
-
-  PHILOSOPHY
-
-  ARCHITECTURE
-
-  ROADMAP
-
-###########################################################
-# REQUIRED MODULES
-###########################################################
-
-compiler_modules:
-
-  00_core
-
-  01_ontology
-
-  02_cognition
-
-  03_curriculum
-
-  04_world
-
-  05_generation
-
-  06_repair
-
-  07_quality
-
-  08_validation
-
-  09_optimization
-
-  10_serialization
-
-###########################################################
-# ENGINEERING PRINCIPLES
-###########################################################
-
-engineering_principles:
-
-  Every decision has context.
-
-  Every solution has trade-offs.
-
-  Every architecture evolves.
-
-  Every bug has a cause.
-
-  Every lesson becomes knowledge.
-
-  Every record must be explainable.
-
-  Every graph must remain connected.
-
-  Every compiler stage must be deterministic.
-
-###########################################################
-# DATASET PHILOSOPHY
-###########################################################
-
+  O1: Build Engineering Ontology
+  O2: Build Engineering Cognition
+  O3: Build Persistent Engineering Worlds
+  O4: Generate Engineering Knowledge Records
+  O5: Validate Knowledge
+  O6: Repair Low Quality Records
+  O7: Optimize Dataset
+  O8: Serialize into TOON
 dataset:
-
-  representation:
-    Graph
-
-  generation:
-    Deterministic
-
-  quality:
-    Highest Possible
-
-  evolution:
-    Continuous
-
-  validation:
-    Mandatory
-
-  optimization:
-    Mandatory
-
-###########################################################
-# LIFECYCLE
-###########################################################
-
-lifecycle:
-
-  Acquire
-
-  Structure
-
-  Connect
-
-  Reason
-
-  Generate
-
-  Repair
-
-  Validate
-
-  Optimize
-
-  Serialize
-
-  Release
-
-###########################################################
-# FUTURE COMPATIBILITY
-###########################################################
-
+  representation: Graph
+  generation: Deterministic
+  quality: Highest Possible
+  evolution: Continuous
+  validation: Mandatory
+  optimization: Mandatory
 future:
-
   backward_compatible: true
-
   extensible: true
-
   deterministic: true
-
   versioned: true
-
   graph_based: true
-
   modular: true
-```
