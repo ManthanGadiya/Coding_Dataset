@@ -243,7 +243,7 @@ class EpisodeGenerator:
             "Propose": f"Proposed solution addresses {scenario.get('problem', 'core engineering need')}",
         }
         content = base.get(step, f"Engineering step {step} for {episode_type.value} in {domain}")
-        if atom_ref and self._rng.random() < 0.3:
+        if atom_ref and self._rng.random() < 0.4:
             content += f" [Ref: {atom_ref}]"
         return content
 

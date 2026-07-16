@@ -4,6 +4,36 @@ SemVer: MAJOR.MINOR.PATCH
 
 ---
 
+# [0.3.0] — 2026-07-16
+
+## Added
+
+### Real-World Knowledge Ingestion (Phase 5)
+- **KnowledgeAtoms**: 73 structured engineering knowledge atoms across 15 domains (Distributed_Systems, Software_Architecture, Production_Engineering, Databases, Networking, DevOps, Security, Performance, Testing, Cloud, Systems, AI_Engineering, Human_Factors, Foundations, Algorithms)
+- **KnowledgeStore**: Persistent on-disk store with domain-indexed retrieval, random sampling, and search
+- **SourceAcquirer**: Firecrawl-based web scraper for real engineering content (SRE book, design patterns catalog, incident postmortem guides, ADR standards, system design handbook)
+- **AtomProcessor**: Extracts structured atoms from scraped markdown content using technical keyword matching
+
+### Production Dataset
+- 100,000 EKRs generated at Q4+ (97.2% Q4, 2.8% Q5)
+- 199,644 knowledge atom references across 15 domains
+- 7-step average reasoning chains, 1.3 decisions, 2.5 evidence items per EKR
+- All 18 domains covered, all 12 episode types evenly distributed
+- 0 errors, 0 duplicates, 100% validation pass
+
+### Generation Engine Enhancements
+- Knowledge atom enrichment: 40% of reasoning steps include real-world engineering references
+- EpisodeGenerator wired to KnowledgeStore for domain-aware atom sampling
+- DatasetBuilder accepts external KnowledgeStore for reproducible builds
+
+## Changed
+- README updated to v0.3.0: new ingestion module, production dataset status
+- Atom reference probability increased from 30% to 40% for richer enrichment
+
+## Documentation
+- ROADMAP.md: v0.3 milestone marked complete
+- ingestion/ module: __init__.py, atoms.py, source.py with full docstrings
+
 # [0.2.0] — 2026-07-16
 
 ## Added
