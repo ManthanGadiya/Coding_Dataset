@@ -324,3 +324,260 @@ class TestIngestion:
             "domain": "Testing", "type": "article", "concepts": ["test"],
         }])
         assert len(kss) == 0
+
+
+class TestQ5Generation:
+    def test_q5_generates_q5_content(self):
+        from compiler.generation.engine import EpisodeGenerator, EpisodeType
+        gen = EpisodeGenerator()
+        result = gen.generate({"domain": "Databases"}, EpisodeType.PERFORMANCE_OPTIMIZATION, "Databases", quality_target="q5")
+        assert result.success
+        ekr = result.to_dict()["ekr"]
+        reasoning = ekr.get("reasoning", [])
+        decisions = ekr.get("decisions", [])
+        evidence = ekr.get("evidence", [])
+        assert len(reasoning) >= 8
+        assert len(decisions) >= 2
+        assert len(evidence) >= 2
+
+    def test_q5_has_deep_engineering_decisions(self):
+        from compiler.generation.engine import EpisodeGenerator, EpisodeType
+        gen = EpisodeGenerator()
+        result = gen.generate({"domain": "Networking"}, EpisodeType.INCIDENT_RESPONSE, "Networking", quality_target="q5")
+        ekr = result.to_dict()["ekr"]
+        decisions = ekr.get("decisions", [])
+        for d in decisions:
+            assert len(d.get("alternatives", [])) >= 3
+            assert d.get("outcome", "")
+
+    def test_q5_has_metrics_in_evidence(self):
+        from compiler.generation.engine import EpisodeGenerator, EpisodeType
+        import re
+        gen = EpisodeGenerator()
+        result = gen.generate({"domain": "Performance"}, EpisodeType.PERFORMANCE_OPTIMIZATION, "Performance", quality_target="q5")
+        ekr = result.to_dict()["ekr"]
+        evidence = ekr.get("evidence", [])
+        evidence_text = " ".join(e.get("content", "") for e in evidence)
+        has_number = bool(re.search(r'\d+\.?\d*', evidence_text))
+        assert has_number, "Q5 evidence should contain metrics/numbers"
+        assert any(e.get("type") in ("metric", "log", "observation", "measurement", "alert") for e in evidence)
+
+    def test_q5_tradeoffs_present(self):
+        from compiler.generation.engine import EpisodeGenerator, EpisodeType
+        gen = EpisodeGenerator()
+        result = gen.generate({"domain": "Software_Architecture"}, EpisodeType.ARCHITECTURE_DECISION, "Software_Architecture", quality_target="q5")
+        ekr = result.to_dict()["ekr"]
+        tradeoffs = ekr.get("tradeoffs", [])
+        assert len(tradeoffs) >= 1
+
+    def test_q5_across_all_deep_types(self):
+        from compiler.generation.engine import EpisodeGenerator, EpisodeType, DEEP_ENGINEERING_DECISIONS
+        gen = EpisodeGenerator()
+        deep_types = {EpisodeType(k) for k in DEEP_ENGINEERING_DECISIONS if hasattr(EpisodeType, k)}
+        for et in list(deep_types)[:3]:
+            result = gen.generate({"domain": "Systems"}, et, "Systems", quality_target="q5")
+            assert result.success
+            ekr = result.to_dict()["ekr"]
+            assert len(ekr.get("reasoning", [])) >= 8
+
+    def test_q5_quality_engine_confirms_q5(self):
+        from compiler.generation.engine import EpisodeGenerator, EpisodeType
+        from compiler.quality.engine import QualityEngine
+        gen = EpisodeGenerator()
+        quality = QualityEngine()
+        result = gen.generate({"domain": "Databases"}, EpisodeType.PERFORMANCE_OPTIMIZATION, "Databases", quality_target="q5")
+        ekr = result.to_dict()["ekr"]
+        score = quality.score(ekr)
+        assert int(score.overall) == 5
+
+    def test_q5_vs_standard_comparison(self):
+        from compiler.generation.engine import EpisodeGenerator, EpisodeType
+        from compiler.quality.engine import QualityEngine
+        gen = EpisodeGenerator(seed=42)
+        quality = QualityEngine()
+        std = gen.generate({"domain": "Databases"}, EpisodeType.PERFORMANCE_OPTIMIZATION, "Databases")
+        q5 = gen.generate({"domain": "Databases"}, EpisodeType.PERFORMANCE_OPTIMIZATION, "Databases", quality_target="q5")
+        std_ekr = std.to_dict()["ekr"]
+        q5_ekr = q5.to_dict()["ekr"]
+        assert len(q5_ekr.get("reasoning", [])) >= len(std_ekr.get("reasoning", []))
+        assert len(q5_ekr.get("decisions", [])) >= len(std_ekr.get("decisions", []))
+        std_score = quality.score(std_ekr)
+        q5_score = quality.score(q5_ekr)
+        assert int(q5_score.overall) >= int(std_score.overall)
+
+
+class TestSerializationRoundTrip:
+    def test_jsonl_round_trip(self, tmp_path):
+        from compiler.serialization.engine import SerializationEngine
+        import json
+        engine = SerializationEngine(tmp_path)
+        records = [
+            {"id": "1", "name": "test", "value": 42, "tags": ["a", "b"]},
+            {"id": "2", "name": "test2", "value": 99, "tags": []},
+        ]
+        out_path = tmp_path / "test.jsonl"
+        result = engine.to_jsonl(records, out_path.name)
+        assert result.success
+        loaded = [json.loads(line) for line in out_path.read_text().splitlines() if line.strip()]
+        assert len(loaded) == 2
+        assert loaded[0]["id"] == "1"
+        assert loaded[1]["value"] == 99
+
+    def test_jsonl_round_trip_ekr(self, tmp_path):
+        from compiler.generation.engine import EpisodeGenerator, EpisodeType
+        from compiler.serialization.engine import SerializationEngine
+        import json
+        gen = EpisodeGenerator()
+        se = SerializationEngine(tmp_path)
+        result = gen.generate({"domain": "Databases"}, EpisodeType.CODE_REVIEW, "Databases")
+        ekr = result.to_dict()["ekr"]
+        se.to_jsonl([ekr], "ekr.jsonl")
+        loaded = [json.loads(line) for line in (tmp_path / "ekr.jsonl").read_text().splitlines() if line.strip()]
+        assert len(loaded) == 1
+        assert loaded[0]["domain"] == "Databases"
+        assert len(loaded[0].get("reasoning", [])) > 0
+
+    def test_toon_round_trip(self, tmp_path):
+        from compiler.serialization.engine import SerializationEngine
+        engine = SerializationEngine(tmp_path)
+        records = [{"id": "1", "data": {"nested": "value"}}, {"id": "2", "data": None}]
+        result = engine.to_toon(records, "test.toon")
+        assert result.success
+        assert result.path.exists()
+        assert result.path.stat().st_size > 0
+
+    def test_toon_with_ekr(self, tmp_path):
+        from compiler.generation.engine import EpisodeGenerator, EpisodeType
+        from compiler.serialization.engine import SerializationEngine
+        gen = EpisodeGenerator()
+        se = SerializationEngine(tmp_path)
+        result = gen.generate({"domain": "Networking"}, EpisodeType.BUG_FIX, "Networking")
+        ekr = result.to_dict()["ekr"]
+        ser = se.to_toon([ekr], "networking_ekr.toon")
+        assert ser.success
+        assert ser.path.exists()
+
+    def test_manifest_matches_records(self):
+        from compiler.serialization.engine import SerializationEngine
+        se = SerializationEngine()
+        records = [{"id": "a"}, {"id": "b"}, {"id": "c"}]
+        m = se.make_manifest("test", "1.0.0", records)
+        assert m.record_count == 3
+        assert m.name == "test"
+        assert m.version == "1.0.0"
+
+    def test_serialize_empty_list(self, tmp_path):
+        from compiler.serialization.engine import SerializationEngine
+        se = SerializationEngine(tmp_path)
+        result = se.to_jsonl([], "empty.jsonl")
+        assert result.success
+        assert result.path.exists()
+        assert result.path.stat().st_size < 10
+
+
+class TestEdgeCasesAndStress:
+    def test_empty_ekr_quality_score(self):
+        from compiler.quality.engine import QualityEngine
+        qe = QualityEngine()
+        score = qe.score({})
+        assert int(score.overall) >= 0
+        assert score.dimensions.get("coherence", 0) >= 0
+
+    def test_ekr_with_no_reasoning(self):
+        from compiler.quality.engine import QualityEngine
+        qe = QualityEngine()
+        ekr = {"id": "no-reasoning", "domain": "Test", "reasoning": []}
+        score = qe.score(ekr)
+        assert int(score.overall) >= 0
+
+    def test_validation_empty_record(self):
+        from compiler.validation.engine import ValidationEngine
+        ve = ValidationEngine()
+        report = ve.validate({})
+        assert not report.all_passed
+        assert any(not r.passed for r in report.results)
+
+    def test_validation_none_record(self):
+        from compiler.validation.engine import ValidationEngine
+        ve = ValidationEngine()
+        report = ve.validate({})
+        assert not report.all_passed
+
+    def test_optimization_empty_list(self):
+        from compiler.optimization.engine import OptimizationEngine
+        oe = OptimizationEngine()
+        result = oe.optimize([])
+        assert result.original_size == 0
+        assert result.optimized_size == 0
+
+    def test_optimization_all_identical(self):
+        from compiler.optimization.engine import OptimizationEngine
+        oe = OptimizationEngine()
+        records = [{"id": "a", "reasoning": [{"x": 1}]}] * 10
+        result = oe.optimize(records)
+        assert result.optimized_size == 1
+        assert result.details["removed_duplicates"] == 9
+
+    def test_generate_stress_100(self):
+        from compiler.generation.engine import EpisodeGenerator, EpisodeType
+        gen = EpisodeGenerator(seed=0)
+        import random, time
+        rng = random.Random(0)
+        types = list(EpisodeType)
+        t0 = time.perf_counter()
+        successes = 0
+        for i in range(100):
+            d = rng.choice(["Systems", "Databases", "Networking", "Security", "Performance"])
+            et = rng.choice(types)
+            result = gen.generate({"domain": d}, et, d)
+            if result.success:
+                successes += 1
+        elapsed = time.perf_counter() - t0
+        print(f"  Stress: {successes}/100 succeeded in {elapsed:.1f}s ({successes/max(0.001, elapsed):.0f}/sec)")
+        assert successes >= 90
+
+    def test_generate_high_difficulty(self):
+        from compiler.generation.engine import EpisodeGenerator, EpisodeType
+        gen = EpisodeGenerator(seed=1)
+        result = gen.generate({"domain": "Distributed_Systems"}, EpisodeType.INCIDENT_RESPONSE, "Distributed_Systems", quality_target="q5")
+        assert result.success
+        ekr = result.to_dict()["ekr"]
+        assert ekr["difficulty"] == 5
+
+    def test_generate_all_episode_types(self):
+        from compiler.generation.engine import EpisodeGenerator, EpisodeType
+        gen = EpisodeGenerator(seed=42)
+        failed = []
+        for et in EpisodeType:
+            try:
+                result = gen.generate({"domain": "Systems"}, et, "Systems")
+                if not result.success:
+                    failed.append(et.value)
+            except Exception as e:
+                failed.append(f"{et.value}: {e}")
+        assert not failed, f"Failed types: {failed}"
+
+    def test_quality_engine_concurrent_parallel_safety(self):
+        from compiler.quality.engine import QualityEngine
+        qe = QualityEngine()
+        ekr = {
+            "reasoning": [{"operation": "Observe", "content": "test"}],
+            "decisions": [{"outcome": "chose A", "alternatives": ["B", "C"]}],
+            "knowledge_atoms": ["KA-001"],
+            "evidence": [{"type": "metric", "content": "99.9% uptime"}],
+        }
+        scores = [qe.score(ekr) for _ in range(10)]
+        unique = {int(s.overall) for s in scores}
+        assert len(unique) == 1
+
+    def test_tradeoffs_use_engineering_language(self):
+        from compiler.generation.engine import EpisodeGenerator, EpisodeType
+        gen = EpisodeGenerator()
+        result = gen.generate({"domain": "Cloud"}, EpisodeType.ARCHITECTURE_DECISION, "Cloud", quality_target="q5")
+        ekr = result.to_dict()["ekr"]
+        assert len(ekr.get("tradeoffs", [])) >= 1
+        for t in ekr.get("tradeoffs", []):
+            text = t.get("tradeoff", "") if isinstance(t, dict) else str(t)
+            assert len(text) > 10, f"Tradeoff too short: {text}"
+            assert "chose" in text.lower(), f"Tradeoff missing 'chose': {text[:80]}"
+
