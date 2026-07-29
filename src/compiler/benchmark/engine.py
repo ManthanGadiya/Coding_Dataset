@@ -85,12 +85,13 @@ class BenchmarkSuite:
         self.quality = QualityEngine()
 
     def run(self, num_ekrs: int = 1000, domains: list[str] | None = None,
+            types: list[EpisodeType] | None = None,
             seed: int = 42) -> BenchmarkReport:
         import random
         import time
         rng = random.Random(seed)
         report = BenchmarkReport(total_ekrs=num_ekrs)
-        types = list(EpisodeType)
+        types = types or list(EpisodeType)
 
         all_domains = domains or [
             "Systems", "Databases", "Architecture", "Networking", "DevOps",

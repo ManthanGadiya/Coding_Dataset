@@ -1,0 +1,46 @@
+{
+  "quality_distribution": {
+    "2": 658,
+    "3": 3543,
+    "4": 799
+  },
+  "domain_coverage": {
+    "AI_Engineering": 336,
+    "Production_Engineering": 331,
+    "DevOps": 329,
+    "Databases": 323,
+    "Systems": 314,
+    "Software_Architecture": 327,
+    "Testing": 335,
+    "Human_Factors": 365,
+    "Performance": 324,
+    "Security": 337,
+    "Distributed_Systems": 302,
+    "Foundations": 340,
+    "Algorithms": 327,
+    "Networking": 336,
+    "Cloud": 374
+  },
+  "episode_type_coverage": {
+    "feature_implementation": 432,
+    "incident_response": 398,
+    "code_review": 419,
+    "technical_debt": 446,
+    "planning": 412,
+    "bug_fix": 401,
+    "architecture_decision": 388,
+    "refactoring": 406,
+    "performance_optimization": 438,
+    "debugging_session": 389,
+    "documentation": 456,
+    "design_discussion": 415
+  },
+  "avg_reasoning_steps": 5.23,
+  "avg_decisions": 0.33,
+  "avg_evidence": 2.48,
+  "avg_atom_refs": 2.51,
+  "throughput_ekrs_per_sec": 2893.7,
+  "atom_ref_rate": 0.348,
+  "unique_operations": 48,
+  "total_ekrs": 5000
+}
