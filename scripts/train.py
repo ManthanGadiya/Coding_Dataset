@@ -60,11 +60,13 @@ def prepare_dataset(jsonl_path: str, output_dir: str, max_samples: int = 500_000
 
 def train(
     model_name: str = "HuggingFaceTB/SmolLM2-360M",
-    output_dir: str = "build/v0.4/model",
+    output_dir: str = "build/v0.5/model",
     data_dir: str = "build/v0.4/data",
     num_epochs: int = 1,
     batch_size: int = 4,
     max_length: int = 512,
+    learning_rate: float = 2e-4,
+    lora_r: int = 8,
 ):
     import torch
     from transformers import (
@@ -93,13 +95,13 @@ def train(
     tokenized = dataset.map(tokenize, batched=True, remove_columns=["text"])
 
     model = AutoModelForCausalLM.from_pretrained(
-        model_name, torch_dtype=torch.float16, device_map="auto",
+        model_name, dtype=torch.float16, device_map="auto",
     )
 
-    # LoRA for memory efficiency
     from peft import LoraConfig, get_peft_model, TaskType
     lora_config = LoraConfig(
-        r=8, lora_alpha=16, target_modules=["q_proj", "v_proj"],
+        r=lora_r, lora_alpha=lora_r * 2,
+        target_modules=["q_proj", "v_proj", "k_proj", "o_proj"],
         lora_dropout=0.05, bias="none", task_type=TaskType.CAUSAL_LM,
     )
     model = get_peft_model(model, lora_config)
@@ -110,17 +112,18 @@ def train(
         num_train_epochs=num_epochs,
         per_device_train_batch_size=batch_size,
         per_device_eval_batch_size=batch_size,
-        evaluation_strategy="steps",
+        eval_strategy="steps",
         eval_steps=500,
         save_steps=1000,
-        logging_steps=100,
-        learning_rate=2e-4,
+        logging_steps=50,
+        learning_rate=learning_rate,
         warmup_steps=100,
         fp16=True,
         report_to="none",
         save_total_limit=2,
         remove_unused_columns=False,
         dataloader_num_workers=0,
+        gradient_checkpointing=True,
     )
 
     collator = DataCollatorForLanguageModeling(tokenizer=tokenizer, mlm=False)
@@ -138,24 +141,41 @@ def train(
     tokenizer.save_pretrained(f"{output_dir}/final")
     print(f"Model saved to {output_dir}/final")
     eval_results = trainer.evaluate()
-    print(f"Eval perplexity: {torch.exp(torch.tensor(eval_results['eval_loss'])):.2f}")
+    ppl = torch.exp(torch.tensor(eval_results["eval_loss"])).item()
+    print(f"Eval perplexity: {ppl:.2f}")
 
 if __name__ == "__main__":
     import argparse
     parser = argparse.ArgumentParser()
-    parser.add_argument("--prepare", action="store_true", help="Prepare dataset from generated JSONL")
+    parser.add_argument("--prepare-from-jsonl", action="store_true", help="Prepare from existing JSONL")
+    parser.add_argument("--prepare-from-parquet", action="store_true", help="Prepare from parquet via prepare_train.py")
     parser.add_argument("--train", action="store_true", help="Run training")
     parser.add_argument("--jsonl", default="build/v0.4/dataset_1m.jsonl")
+    parser.add_argument("--parquet", default="release/v0.4/dataset_1m.parquet")
     parser.add_argument("--model", default="HuggingFaceTB/SmolLM2-360M")
     parser.add_argument("--samples", type=int, default=100_000)
     parser.add_argument("--epochs", type=int, default=1)
     parser.add_argument("--batch", type=int, default=4)
+    parser.add_argument("--lr", type=float, default=2e-4)
+    parser.add_argument("--lora-r", type=int, default=8)
+    parser.add_argument("--output", default="build/v0.5/model")
+    parser.add_argument("--data-dir", default="build/v0.4/data")
     args = parser.parse_args()
 
-    if args.prepare:
-        prepare_dataset(args.jsonl, "build/v0.4/data", max_samples=args.samples)
+    if args.prepare_from_parquet:
+        from prepare_train import main as prep
+        import sys
+        sys.argv = ["prepare_train.py",
+                     "--parquet", args.parquet,
+                     "--output", args.data_dir,
+                     "--samples", str(args.samples)]
+        prep()
+    if args.prepare_from_jsonl:
+        prepare_dataset(args.jsonl, args.data_dir, max_samples=args.samples)
     if args.train:
         train(
             model_name=args.model, num_epochs=args.epochs,
-            batch_size=args.batch,
+            batch_size=args.batch, data_dir=args.data_dir,
+            output_dir=args.output, learning_rate=args.lr,
+            lora_r=args.lora_r,
         )
