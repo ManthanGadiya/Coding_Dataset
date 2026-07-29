@@ -34,5 +34,86 @@
     "source_type": "pattern",
     "tags": [],
     "quality": 1.0
+  },
+  {
+    "domain": "DevOps",
+    "concept": "IaC",
+    "content": "Infrastructure as Code (IaC) manages cloud resources through declarative configuration files (Terraform, CloudFormation) that are version-controlled, reviewed, and applied via CI/CD pipelines.",
+    "source_url": "https://aws.amazon.com/architecture/well-architected/",
+    "source_type": "article",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "DevOps",
+    "concept": "GitOps",
+    "content": "GitOps uses Git as the single source of truth for declarative infrastructure and application configuration, with automated reconciliation ensuring the running state matches the repo.",
+    "source_url": "https://opentelemetry.io/docs/concepts/signals/traces/",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "DevOps",
+    "concept": "blue-green deployment",
+    "content": "Blue-green deployment runs two identical environments, switching traffic atomically to the new version after validation, enabling instant rollback by flipping traffic back.",
+    "source_url": "https://martinfowler.com/bliki/BlueGreenDeployment.html",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "DevOps",
+    "concept": "container orchestration",
+    "content": "Kubernetes automates container deployment scheduling, scaling, and healing using declarative manifests with desired state reconciliation, service discovery, and rolling update strategies.",
+    "source_url": "https://kubernetes.io/docs/concepts/overview/",
+    "source_type": "article",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "DevOps",
+    "concept": "Dockerfile best practices",
+    "content": "Docker image best practices include using multi-stage builds to minimize layers, distroless base images to reduce attack surface, and .dockerignore to exclude development dependencies from build context.",
+    "source_url": "https://docs.docker.com/develop/dev-best-practices/",
+    "source_type": "article",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "DevOps",
+    "concept": "service mesh",
+    "content": "Service mesh (Istio, Linkerd) offloads cross-cutting concerns like traffic routing, mTLS encryption, retry logic, and observability into a sidecar proxy layer without application changes.",
+    "source_url": "https://istio.io/latest/docs/concepts/what-is-istio/",
+    "source_type": "article",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "DevOps",
+    "concept": "artifact registry",
+    "content": "Software artifacts (container images, packages, binaries) should be stored in a secure registry with immutable tags, vulnerability scanning, and retention policies for compliance.",
+    "source_url": "https://sre.google/sre-book/release-engineering/",
+    "source_type": "sre",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "DevOps",
+    "concept": "progressive delivery",
+    "content": "Progressive delivery combines feature flags, canary releases, and ring-based deployment to gradually expose changes to increasing user segments while monitoring for regressions.",
+    "source_url": "https://sre.google/sre-book/release-engineering/",
+    "source_type": "sre",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "DevOps",
+    "concept": "self-service platform",
+    "content": "Platform engineering builds internal developer platforms with self-service capabilities for provisioning environments, deploying services, and accessing observability tooling through a unified API.",
+    "source_url": "https://sre.google/sre-book/service-best-practices/",
+    "source_type": "sre",
+    "tags": [],
+    "quality": 1.0
   }
 ]

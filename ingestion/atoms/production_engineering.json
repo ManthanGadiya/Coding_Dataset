@@ -142,5 +142,41 @@
     "source_type": "postmortem",
     "tags": [],
     "quality": 1.0
+  },
+  {
+    "domain": "Production_Engineering",
+    "concept": "change management",
+    "content": "Change management practices require all production changes to be reviewed, tested, and deployed through CI/CD with feature flags, gradual rollout, and automated rollback on metric degradation.",
+    "source_url": "https://sre.google/sre-book/service-best-practices/",
+    "source_type": "sre",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Production_Engineering",
+    "concept": "capacity planning methods",
+    "content": "Capacity planning uses demand forecasting based on historical growth curves, load testing to establish resource-per-request ratios, and buffer provisioning (N+1, N+2) for failure scenarios.",
+    "source_url": "https://sre.google/sre-book/service-best-practices/",
+    "source_type": "sre",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Production_Engineering",
+    "concept": "SLA vs SLO vs SLI",
+    "content": "SLA is the external commitment to customers, SLO is the internal target (typically stricter than SLA), and SLI is the actual measured performance metric against the objective.",
+    "source_url": "https://sre.google/sre-book/service-best-practices/",
+    "source_type": "sre",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Production_Engineering",
+    "concept": "observability signals",
+    "content": "Observability is built on three signals: metrics (aggregated numeric data), logs (structured event records), and traces (distributed request context), with each serving a distinct diagnostic purpose.",
+    "source_url": "https://opentelemetry.io/docs/concepts/signals/traces/",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
   }
 ]

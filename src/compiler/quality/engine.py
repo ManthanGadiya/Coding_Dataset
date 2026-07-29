@@ -76,6 +76,7 @@ class QualityEngine:
             "deploy", "config", "metric", "alert", "incident", "query",
             "index", "shard", "replica", "latency", "throughput", "timeout",
             "failover", "backup", "pipeline", "queue", "stream", "batch",
+            "monitor", "container", "orchestrator", "partition", "replication",
         ]
         if len(tokens) < 5:
             return 0.0
@@ -109,12 +110,13 @@ class QualityEngine:
         atom_bonus = min(2.0, len(atoms) * 0.5)
         ev_bonus = min(1.0, len(evidence) * 0.3)
         decision_bonus = min(1.5, len(decisions) * 0.5)
+        tradeoff_bonus = min(0.5, len(ekr.get("tradeoffs", [])) * 0.3)
         ref_bonus = 0
         for s in reasoning:
             if "[Ref:" in s.get("content", ""):
                 ref_bonus = min(1.0, ref_bonus + 0.3)
 
-        base = reasoning_substance + atom_bonus + ev_bonus + decision_bonus + ref_bonus
+        base = reasoning_substance + atom_bonus + ev_bonus + decision_bonus + tradeoff_bonus + ref_bonus
         return min(5.0, max(0.0, base))
 
     def _score_reasoning_depth(self, ekr: dict) -> float:
@@ -133,16 +135,24 @@ class QualityEngine:
 
     def _score_engineering_quality(self, ekr: dict) -> float:
         decisions = ekr.get("decisions", [])
+        evidence = ekr.get("evidence", [])
+        tradeoffs = ekr.get("tradeoffs", [])
+        reasoning = ekr.get("reasoning", [])
+
+        base = 0.5
         if not decisions:
-            return 0.5
+            return base  # no decisions = minimal engineering quality
+
         alt_count = sum(1 for d in decisions if d.get("alternatives"))
         reasoning_scores = [len(d.get("outcome", d.get("reasoning", ""))) for d in decisions]
         avg_len = sum(reasoning_scores) / len(reasoning_scores) if reasoning_scores else 0
 
-        base = min(2.0, len(decisions) * 0.8)
-        alt_bonus = min(1.5, alt_count * 0.5)
-        detail_bonus = min(1.5, avg_len / 50)
-        return min(5.0, max(0.5, base + alt_bonus + detail_bonus))
+        dec_score = min(2.5, len(decisions) * 0.8 + alt_count * 0.3 + avg_len / 80)
+        ev_base = min(0.5, len(evidence) * 0.15)
+        tradeoff_bonus = min(0.5, len(tradeoffs) * 0.2)
+        depth_bonus = min(0.5, len(reasoning) * 0.08)
+
+        return min(5.0, base + dec_score + ev_base + tradeoff_bonus + depth_bonus)
 
     def _score_diversity(self, ekr: dict) -> float:
         reasoning = ekr.get("reasoning", [])
@@ -165,32 +175,40 @@ class QualityEngine:
         detail = self._concrete_detail_ratio(all_text)
         ev_count = min(1.5, len(evidence) * 0.5)
         subst = min(1.5, self._avg_substance(reasoning) * 0.8)
-        return min(5.0, detail + ev_count + subst + 0.5)
+        ev_types = len(set(e.get("type", "") for e in evidence))
+        ev_variety = min(0.5, ev_types * 0.15)
+        return min(5.0, detail + ev_count + subst + ev_variety + 0.5)
 
     def _score_novelty(self, ekr: dict) -> float:
         difficulty = ekr.get("difficulty", 1)
         reasoning = ekr.get("reasoning", [])
         ops = set(s.get("operation", "") for s in reasoning)
+        tradeoffs = ekr.get("tradeoffs", [])
 
         diff_bonus = min(2.0, difficulty * 0.5)
+        if difficulty >= 5:
+            diff_bonus = min(2.5, diff_bonus + 0.5)
         op_bonus = min(1.5, len(ops) * 0.15)
         subst = min(1.5, self._avg_substance(reasoning))
-        return min(5.0, diff_bonus + op_bonus + subst)
+        tradeoff_bonus = min(0.5, len(tradeoffs) * 0.25)
+        return min(5.0, diff_bonus + op_bonus + subst + tradeoff_bonus)
 
     def _score_educational_value(self, ekr: dict) -> float:
         reasoning = ekr.get("reasoning", [])
         decisions = ekr.get("decisions", [])
+        tradeoffs = ekr.get("tradeoffs", [])
         all_text = " ".join(s.get("content", "") for s in reasoning)
         all_text += " ".join(d.get("outcome", d.get("reasoning", "")) for d in decisions)
 
         subst = self._has_substance(all_text)
         step_count = min(1.0, len(reasoning) * 0.15)
         decision_count = min(1.0, len(decisions) * 0.4)
+        tradeoff_bonus = min(0.5, len(tradeoffs) * 0.25)
 
         explainers = ["because", "therefore", "since", "leads to", "causes", "requires"]
         explanation_score = sum(1 for e in explainers if e in all_text.lower()) * 0.3
         explanation_bonus = min(1.5, explanation_score)
-        return min(5.0, max(0.5, subst + step_count + decision_count + explanation_bonus))
+        return min(5.0, max(0.5, subst + step_count + decision_count + tradeoff_bonus + explanation_bonus))
 
     def _score_completeness(self, ekr: dict) -> float:
         score = 0.5
@@ -208,6 +226,8 @@ class QualityEngine:
             score += 0.4
         if ekr.get("difficulty", 0) > 0:
             score += 0.3
+        if ekr.get("tradeoffs"):
+            score += 0.4
         if ekr.get("domain", "") in ("", "GEN"):
             score -= 0.5
         return min(5.0, max(0.0, score))
@@ -223,8 +243,11 @@ class QualityEngine:
             score += 1.0
         if domain.lower() in name.lower():
             score += 0.5
-        if len({s.get("operation", "") for s in reasoning}) >= 3:
-            score += 0.5
+        ops = {s.get("operation", "") for s in reasoning}
+        if len(ops) >= 5:
+            score += 0.8
+        elif len(ops) >= 3:
+            score += 0.4
         has_ref = any("[Ref:" in s.get("content", "") for s in reasoning)
         if has_ref:
             score += 0.5
@@ -240,7 +263,13 @@ class QualityEngine:
         subst = self._has_substance(all_content)
 
         flow = len([o for o in ops if o in REASONING_OPS]) / max(1, len(ops))
-        chain_bonus = min(1.5, len(reasoning) * 0.2)
+        chain_len = len(reasoning)
+        if chain_len >= 10:
+            chain_bonus = 2.0
+        elif chain_len >= 7:
+            chain_bonus = 1.5
+        else:
+            chain_bonus = min(1.5, chain_len * 0.2)
         return min(5.0, max(0.5, flow * 2.0 + chain_bonus + subst * 0.5))
 
     def _score_dimension(self, dim: str, ekr_dict: dict) -> float:

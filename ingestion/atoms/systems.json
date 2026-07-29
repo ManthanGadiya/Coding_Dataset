@@ -25,5 +25,59 @@
     "source_type": "pattern",
     "tags": [],
     "quality": 1.0
+  },
+  {
+    "domain": "Systems",
+    "concept": "scheduling algorithms",
+    "content": "Operating system scheduling algorithms (CFS, multi-level feedback queue, round-robin) balance throughput, fairness, and latency for mixed workloads on shared compute resources.",
+    "source_url": "https://sre.google/sre-book/service-best-practices/",
+    "source_type": "sre",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Systems",
+    "concept": "virtual memory",
+    "content": "Virtual memory abstracts physical RAM using page tables and TLB caching, enabling address space isolation between processes and overcommitting memory via paging to disk.",
+    "source_url": "https://dev.to/fahimulhaq/complete-guide-to-system-design-oc7",
+    "source_type": "article",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Systems",
+    "concept": "I/O models",
+    "content": "I/O models range from blocking (per-request thread) to non-blocking (select/poll/epoll) to asynchronous (io_uring, kqueue), each offering different latency and throughput characteristics for network services.",
+    "source_url": "https://sre.google/sre-book/service-best-practices/",
+    "source_type": "sre",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Systems",
+    "concept": "NUMA awareness",
+    "content": "Non-Uniform Memory Access (NUMA) architectures penalize cross-socket memory access; performance-critical applications should pin threads and allocate memory on the same NUMA node.",
+    "source_url": "https://dev.to/fahimulhaq/complete-guide-to-system-design-oc7",
+    "source_type": "article",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Systems",
+    "concept": "GC tuning",
+    "content": "Garbage collection tuning trades off pause time, throughput, and memory footprint; generational GC minimizes pauses by collecting young objects frequently and tenured space less often.",
+    "source_url": "https://sre.google/sre-book/service-best-practices/",
+    "source_type": "sre",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Systems",
+    "concept": "file system internals",
+    "content": "Modern file systems (ext4, XFS, Btrfs, ZFS) manage space allocation, journaling, copy-on-write, and checksumming, with performance characteristics that vary by workload pattern and storage media.",
+    "source_url": "https://sre.google/sre-book/service-best-practices/",
+    "source_type": "sre",
+    "tags": [],
+    "quality": 1.0
   }
 ]

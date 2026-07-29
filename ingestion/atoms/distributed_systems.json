@@ -70,5 +70,41 @@
     "source_type": "pattern",
     "tags": [],
     "quality": 1.0
+  },
+  {
+    "domain": "Distributed_Systems",
+    "concept": "two-phase commit",
+    "content": "Two-Phase Commit (2PC) coordinates distributed transactions across multiple nodes with a coordinator, but blocks on coordinator failure making it impractical for high-availability systems.",
+    "source_url": "https://martinfowler.com/articles/patterns-of-distributed-systems/",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Distributed_Systems",
+    "concept": "leader election",
+    "content": "Leader election protocols like Raft ensure cluster nodes agree on a single leader that coordinates state changes, preventing split-brain scenarios during network partitions.",
+    "source_url": "https://raft.github.io/",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Distributed_Systems",
+    "concept": "quorum reads and writes",
+    "content": "Quorum-based replication requires W+R > N (where N is replica count) to ensure read operations see the latest write, trading write latency for read consistency.",
+    "source_url": "https://www.allthingsdistributed.com/",
+    "source_type": "article",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Distributed_Systems",
+    "concept": "distributed tracing",
+    "content": "Distributed tracing uses correlation IDs and span contexts that propagate across service boundaries, enabling latency breakdown analysis for requests spanning dozens of microservices.",
+    "source_url": "https://opentelemetry.io/docs/concepts/signals/traces/",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
   }
 ]

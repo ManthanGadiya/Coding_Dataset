@@ -79,5 +79,50 @@
     "source_type": "article",
     "tags": [],
     "quality": 1.0
+  },
+  {
+    "domain": "Databases",
+    "concept": "query optimization",
+    "content": "Database query optimization uses EXPLAIN plans to identify full table scans, sequential scans, and missing indexes; most slow queries are fixed by adding composite indexes or rewriting joins.",
+    "source_url": "https://dev.to/fahimulhaq/complete-guide-to-system-design-oc7",
+    "source_type": "article",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Databases",
+    "concept": "database migrations",
+    "content": "Database migration tools (Alembic, Flyway) apply schema changes incrementally with version-controlled migration scripts, supporting rollback, dry-run validation, and zero-downtime migration patterns.",
+    "source_url": "https://martinfowler.com/articles/microservices.html",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Databases",
+    "concept": "time-series databases",
+    "content": "Time-series databases (InfluxDB, TimescaleDB) optimize for append-heavy write workloads with automatic retention policies, downsampling, and continuous aggregates for monitoring and observability data.",
+    "source_url": "https://sre.google/sre-book/service-best-practices/",
+    "source_type": "sre",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Databases",
+    "concept": "columnar storage",
+    "content": "Columnar storage (Parquet, ORC) stores data by column rather than row, enabling efficient compression (10x+) and fast analytical queries over subsets of columns in data warehouse workloads.",
+    "source_url": "https://dev.to/fahimulhaq/complete-guide-to-system-design-oc7",
+    "source_type": "article",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Databases",
+    "concept": "change data capture",
+    "content": "Change Data Capture (CDC) streams database changes to downstream consumers via transaction log tailing, enabling real-time synchronization between operational and analytical systems.",
+    "source_url": "https://martinfowler.com/articles/microservices.html",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
   }
 ]

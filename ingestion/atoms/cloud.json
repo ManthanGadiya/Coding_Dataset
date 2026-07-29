@@ -97,5 +97,50 @@
     "source_type": "article",
     "tags": [],
     "quality": 1.0
+  },
+  {
+    "domain": "Cloud",
+    "concept": "spot instances",
+    "content": "Spot instances offer 60-90% cost savings over on-demand pricing by using spare cloud capacity, requiring fault-tolerant workloads that can handle preemption with graceful shutdown.",
+    "source_url": "https://aws.amazon.com/architecture/well-architected/",
+    "source_type": "article",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Cloud",
+    "concept": "cloud cost allocation",
+    "content": "Cloud cost allocation uses tagging strategies to attribute spending to teams, projects, and environments, enabling showback/chargeback and identifying optimization opportunities.",
+    "source_url": "https://aws.amazon.com/architecture/well-architected/",
+    "source_type": "article",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Cloud",
+    "concept": "multi-cloud strategy",
+    "content": "Multi-cloud strategies reduce vendor lock-in but add complexity in networking, security, and operations; most organizations find single-cloud with multi-region simpler and more reliable.",
+    "source_url": "https://sre.google/sre-book/service-best-practices/",
+    "source_type": "sre",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Cloud",
+    "concept": "container vs serverless",
+    "content": "Containers are better for long-running stateful services with predictable resource profiles, while serverless functions excel at event-driven, bursty, or variable workloads with auto-scaling to zero.",
+    "source_url": "https://aws.amazon.com/architecture/well-architected/",
+    "source_type": "article",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Cloud",
+    "concept": "edge computing",
+    "content": "Edge computing moves computation closer to users by running workloads at CDN edge locations, reducing latency for real-time applications and processing data near its source.",
+    "source_url": "https://aws.amazon.com/architecture/well-architected/",
+    "source_type": "article",
+    "tags": [],
+    "quality": 1.0
   }
 ]

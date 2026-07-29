@@ -34,5 +34,86 @@
     "source_type": "article",
     "tags": [],
     "quality": 1.0
+  },
+  {
+    "domain": "Performance",
+    "concept": "lazy loading",
+    "content": "Lazy loading defers initialization of expensive resources until first use, reducing startup time and memory consumption at the cost of predictable latency spikes on first access.",
+    "source_url": "https://martinfowler.com/bliki/LazyLoad.html",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Performance",
+    "concept": "connection pooling",
+    "content": "Connection pooling maintains a cache of reusable TCP connections, avoiding the overhead of TLS handshake and connection establishment on each request to a database or service.",
+    "source_url": "https://github.com/Sairyss/system-design-patterns",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Performance",
+    "concept": "write-behind cache",
+    "content": "Write-behind caching acknowledges writes immediately and asynchronously persists to the backing store, improving write throughput but risking data loss on cache failure.",
+    "source_url": "https://github.com/Sairyss/system-design-patterns",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Performance",
+    "concept": "read-through cache",
+    "content": "Read-through caches sit between the application and database, lazily populating the cache on cache misses and serving subsequent reads from cache for sub-millisecond latency.",
+    "source_url": "https://github.com/Sairyss/system-design-patterns",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Performance",
+    "concept": "prefetching",
+    "content": "Prefetching predicts future data needs and loads them before they are requested, hiding latency at the cost of wasted bandwidth on incorrect predictions.",
+    "source_url": "https://dev.to/fahimulhaq/complete-guide-to-system-design-oc7",
+    "source_type": "article",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Performance",
+    "concept": "compression",
+    "content": "Data compression reduces transfer size and storage costs: gzip for text (typically 5-10x), columnar encoding for analytical data, and specialized codecs for specific data types.",
+    "source_url": "https://sre.google/sre-book/service-best-practices/",
+    "source_type": "sre",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Performance",
+    "concept": "connection multiplexing",
+    "content": "HTTP/2 and gRPC multiplex multiple request-response streams over a single TCP connection, eliminating head-of-line blocking and reducing connection overhead.",
+    "source_url": "https://grpc.io/docs/what-is-grpc/introduction/",
+    "source_type": "article",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Performance",
+    "concept": "request coalescing",
+    "content": "Request coalescing combines multiple concurrent requests for the same resource into a single backend request, reducing load on upstream services for cache stampede scenarios.",
+    "source_url": "https://sre.google/sre-book/service-best-practices/",
+    "source_type": "sre",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Performance",
+    "concept": "data locality",
+    "content": "Data locality places computation near the data it processes to reduce network transfer, critical for big data workloads where moving code is cheaper than moving terabytes.",
+    "source_url": "https://dev.to/fahimulhaq/complete-guide-to-system-design-oc7",
+    "source_type": "article",
+    "tags": [],
+    "quality": 1.0
   }
 ]

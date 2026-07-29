@@ -1,4 +1,4 @@
-"""Serialization engine — TOON format, JSONL export, manifests.
+"""Serialization engine — TOON format, JSONL, Parquet export, manifests.
 
 Source: compiler/10_serialization/
 """
@@ -8,6 +8,13 @@ from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
+
+try:
+    import pyarrow as pa
+    import pyarrow.parquet as pq
+    HAS_PARQUET = True
+except ImportError:
+    HAS_PARQUET = False
 
 
 TOON_TYPES = [
@@ -90,6 +97,53 @@ class SerializationEngine:
             lines.append("")
         path.write_text("\n".join(lines))
         return SerializationResult(format="toon", path=path, record_count=len(records))
+
+    def _flatten_record(self, r: dict) -> dict:
+        d = {
+            "id": r.get("id", ""),
+            "name": r.get("name", ""),
+            "type": r.get("type", ""),
+            "domain": r.get("domain", ""),
+            "difficulty": r.get("difficulty", 0),
+            "quality_score": r.get("quality_score", 0),
+            "confidence": r.get("confidence", 0),
+            "reasoning": json.dumps(r.get("reasoning", [])),
+            "decisions": json.dumps(r.get("decisions", [])),
+            "tradeoffs": json.dumps(r.get("tradeoffs", [])),
+            "evidence": json.dumps(r.get("evidence", [])),
+            "knowledge_atoms": json.dumps(r.get("knowledge_atoms", [])),
+            "tags": json.dumps(r.get("tags", [])),
+            "properties": json.dumps(r.get("properties", {})),
+        }
+        meta = r.get("metadata", {})
+        if isinstance(meta, dict):
+            d.update({
+                "metadata_id": meta.get("id", ""),
+                "metadata_object_type": meta.get("object_type", ""),
+                "metadata_object_name": meta.get("object_name", ""),
+                "metadata_version": meta.get("version", ""),
+                "metadata_lifecycle_stage": meta.get("lifecycle_stage", ""),
+                "metadata_created_at": meta.get("created_at", ""),
+                "metadata_updated_at": meta.get("updated_at", ""),
+            })
+        lifecycle = r.get("lifecycle", {})
+        if isinstance(lifecycle, dict):
+            d["lifecycle_stage"] = lifecycle.get("stage", "")
+        d["reasoning_count"] = len(r.get("reasoning", []))
+        d["decision_count"] = len(r.get("decisions", []))
+        d["evidence_count"] = len(r.get("evidence", []))
+        d["atom_count"] = len(r.get("knowledge_atoms", []))
+        return d
+
+    def to_parquet(self, records: list[dict], filename: str = "dataset.parquet") -> SerializationResult:
+        if not HAS_PARQUET:
+            return SerializationResult(format="parquet", path=Path(filename), record_count=0, success=False, error="pyarrow not installed")
+        path = self.output_dir / filename
+        path.parent.mkdir(parents=True, exist_ok=True)
+        flat = [self._flatten_record(r) for r in records]
+        table = pa.Table.from_pylist(flat)
+        pq.write_table(table, path)
+        return SerializationResult(format="parquet", path=path, record_count=len(records))
 
     def make_manifest(self, name: str, version: str, records: list[dict]) -> DatasetManifest:
         return DatasetManifest(name=name, version=version, record_count=len(records))

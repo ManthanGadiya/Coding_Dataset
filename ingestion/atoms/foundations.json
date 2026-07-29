@@ -16,5 +16,59 @@
     "source_type": "article",
     "tags": [],
     "quality": 1.0
+  },
+  {
+    "domain": "Foundations",
+    "concept": "idempotency",
+    "content": "Idempotency ensures that applying an operation multiple times produces the same result as once, enabling safe retry for network failures in distributed API design.",
+    "source_url": "https://martinfowler.com/articles/microservices.html",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Foundations",
+    "concept": "idempotency keys",
+    "content": "Idempotency keys allow clients to retry requests safely: the server uses a unique key to detect duplicate requests and returns the original response without re-executing the operation.",
+    "source_url": "https://stripe.com/docs/api/idempotent_requests",
+    "source_type": "article",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Foundations",
+    "concept": "idempotent consumer",
+    "content": "The idempotent consumer pattern ensures message processors handle duplicate messages safely by tracking processed message IDs in a deduplication store before processing each event.",
+    "source_url": "https://martinfowler.com/articles/microservices.html",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Foundations",
+    "concept": "backpressure",
+    "content": "Backpressure propagates capacity constraints upstream so that fast producers slow down when downstream consumers are overwhelmed, preventing unbounded queuing and out-of-memory failures.",
+    "source_url": "https://sre.google/sre-book/service-best-practices/",
+    "source_type": "sre",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Foundations",
+    "concept": "eventual consistency",
+    "content": "Eventual consistency guarantees that if no new updates are made, all replicas will converge to the same value over time; widely used in distributed systems where strong consistency is too expensive.",
+    "source_url": "https://dev.to/fahimulhaq/complete-guide-to-system-design-oc7",
+    "source_type": "article",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Foundations",
+    "concept": "immutability",
+    "content": "Immutable data structures prevent accidental mutation by creating new instances on modification, enabling safe concurrent access, simpler debugging, and reliable undo/history functionality.",
+    "source_url": "https://martinfowler.com/bliki/ImmutableServer.html",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
   }
 ]

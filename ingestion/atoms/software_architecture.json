@@ -241,5 +241,32 @@
     "source_type": "pattern",
     "tags": [],
     "quality": 1.0
+  },
+  {
+    "domain": "Software_Architecture",
+    "concept": "clean architecture",
+    "content": "Clean Architecture organizes code into concentric layers (entities, use cases, interface adapters, frameworks) with dependencies pointing inward, enabling testability and framework independence.",
+    "source_url": "https://martinfowler.com/bliki/CleanArchitecture.html",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Software_Architecture",
+    "concept": "dependency injection",
+    "content": "Dependency injection inverts control of dependency creation, enabling loose coupling, testability through mock injection, and configurable service composition via DI containers.",
+    "source_url": "https://martinfowler.com/articles/microservices.html",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Software_Architecture",
+    "concept": "hexagonal architecture",
+    "content": "Hexagonal (ports and adapters) architecture isolates core business logic from external concerns through port interfaces with adapter implementations, allowing the core to remain technology-agnostic.",
+    "source_url": "https://martinfowler.com/bliki/HexagonalArchitecture.html",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
   }
 ]

@@ -79,5 +79,50 @@
     "source_type": "article",
     "tags": [],
     "quality": 1.0
+  },
+  {
+    "domain": "AI_Engineering",
+    "concept": "model drift detection",
+    "content": "Model drift monitoring tracks input data distribution (data drift) and prediction accuracy (concept drift) using statistical tests like PSI and KS-test, triggering retraining when thresholds are exceeded.",
+    "source_url": "https://aws.amazon.com/what-is/agentic-ai/",
+    "source_type": "article",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "AI_Engineering",
+    "concept": "prompt engineering",
+    "content": "Prompt engineering techniques including few-shot examples, chain-of-thought reasoning, system prompts, and structured output formatting significantly improve LLM output quality and reliability.",
+    "source_url": "https://dev.to/fahimulhaq/complete-guide-to-system-design-oc7",
+    "source_type": "article",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "AI_Engineering",
+    "concept": "guardrails",
+    "content": "AI guardrails enforce output constraints through content filtering, topic restriction, factual consistency checking, and input/output validation to prevent harmful or incorrect model responses.",
+    "source_url": "https://aws.amazon.com/what-is/agentic-ai/",
+    "source_type": "article",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "AI_Engineering",
+    "concept": "LLM caching",
+    "content": "LLM response caching uses semantic similarity to serve cached results for semantically identical queries, reducing inference costs by 40-80% for production workloads with repetitive query patterns.",
+    "source_url": "https://dev.to/fahimulhaq/complete-guide-to-system-design-oc7",
+    "source_type": "article",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "AI_Engineering",
+    "concept": "AI safety evaluation",
+    "content": "AI safety evaluation includes red-teaming for adversarial inputs, bias testing across demographic groups, jailbreak resistance testing, and toxicity scoring before model deployment.",
+    "source_url": "https://aws.amazon.com/what-is/agentic-ai/",
+    "source_type": "article",
+    "tags": [],
+    "quality": 1.0
   }
 ]

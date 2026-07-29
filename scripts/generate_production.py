@@ -39,12 +39,16 @@ def main():
     checkpoint_dir.mkdir(parents=True, exist_ok=True)
     checkpoint_interval = 100_000
 
+    q5_ratio = 0.10  # 10% Q5
+
     gen_t0 = time.perf_counter()
     for i in range(target):
         d = rng.choice(all_domains)
         et = rng.choice(types)
         diff = rng.choice([1, 2, 3, 4, 5])
-        result = gen.generate({"domain": d, "difficulty": diff}, et, d)
+        is_q5 = rng.random() < q5_ratio
+        quality_target = "q5" if is_q5 else None
+        result = gen.generate({"domain": d, "difficulty": diff}, et, d, quality_target=quality_target)
         ekr = result.to_dict()["ekr"]
         score = quality.score(ekr)
         q = int(score.overall)

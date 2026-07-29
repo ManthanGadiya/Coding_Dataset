@@ -25,5 +25,59 @@
     "source_type": "sre",
     "tags": [],
     "quality": 1.0
+  },
+  {
+    "domain": "Human_Factors",
+    "concept": "code review culture",
+    "content": "Effective code review culture emphasizes learning over gatekeeping with small, frequent reviews under 400 lines, fast turnaround within 24 hours, and psychological safety for constructive feedback.",
+    "source_url": "https://sre.google/sre-book/service-best-practices/",
+    "source_type": "sre",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Human_Factors",
+    "concept": "incident communication",
+    "content": "Incident communication should use a structured status page template: what happened, impact, current action, next update time, with a dedicated incident commander managing external stakeholder updates.",
+    "source_url": "https://incident.io/blog/best-incident-postmortem-software-2026-guide",
+    "source_type": "postmortem",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Human_Factors",
+    "concept": "team topologies",
+    "content": "Team Topologies organizes teams into four types: stream-aligned, enabling, complicated-subsystem, and platform, with defined interaction modes of collaboration, X-as-a-Service, and facilitation.",
+    "source_url": "https://web.dev/performance-scoring/",
+    "source_type": "article",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Human_Factors",
+    "concept": "toil management",
+    "content": "SRE teams must measure and reduce toil \u2014 manual, repetitive, automatable operational work \u2014 targeting less than 50% time spent on operations to maintain engineering velocity.",
+    "source_url": "https://sre.google/sre-book/service-best-practices/",
+    "source_type": "sre",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Human_Factors",
+    "concept": "knowledge sharing",
+    "content": "Engineering knowledge sharing practices include RFCs for proposals, postmortems for incident learnings, tech talks for deep dives, and documentation-as-code for living system reference.",
+    "source_url": "https://sre.google/sre-book/service-best-practices/",
+    "source_type": "sre",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Human_Factors",
+    "concept": "on-call best practices",
+    "content": "On-call best practices include balanced rotations of 8+ engineers, alert quality review to eliminate false positives, automated runbooks for common scenarios, and post-incident follow-up SLA.",
+    "source_url": "https://incident.io/blog/best-incident-postmortem-software-2026-guide",
+    "source_type": "postmortem",
+    "tags": [],
+    "quality": 1.0
   }
 ]

@@ -34,5 +34,86 @@
     "source_type": "sre",
     "tags": [],
     "quality": 1.0
+  },
+  {
+    "domain": "Testing",
+    "concept": "unit testing",
+    "content": "Unit tests validate individual functions or methods in isolation, running in milliseconds per test. The test pyramid recommends many fast unit tests and fewer slow integration tests.",
+    "source_url": "https://martinfowler.com/articles/microservices.html",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Testing",
+    "concept": "integration testing",
+    "content": "Integration tests verify that service components work together correctly, testing database queries, API contracts, and message passing with real or containerized dependencies.",
+    "source_url": "https://sre.google/sre-book/testing-reliability/",
+    "source_type": "sre",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Testing",
+    "concept": "contract testing",
+    "content": "Contract testing validates that service interactions satisfy agreed-upon contracts using tools like Pact, running in CI to catch breaking changes before deployment.",
+    "source_url": "https://martinfowler.com/articles/microservices.html",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Testing",
+    "concept": "property-based testing",
+    "content": "Property-based testing (QuickCheck, Hypothesis) generates random inputs to test invariants and edge cases that example-based tests miss, uncovering bugs in boundary conditions.",
+    "source_url": "https://hypothesis.works/articles/what-is-property-based-testing/",
+    "source_type": "article",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Testing",
+    "concept": "fuzz testing",
+    "content": "Fuzz testing supplies malformed or unexpected inputs to find crashes, security vulnerabilities, and assertion failures, commonly integrated into CI for robustness validation.",
+    "source_url": "https://sre.google/sre-book/testing-reliability/",
+    "source_type": "sre",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Testing",
+    "concept": "smoke testing",
+    "content": "Smoke tests are lightweight sanity checks run immediately after deployment to verify the service starts, accepts traffic, and responds correctly before routing production traffic.",
+    "source_url": "https://sre.google/sre-book/service-best-practices/",
+    "source_type": "sre",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Testing",
+    "concept": "regression testing",
+    "content": "Regression test suites run after every code change to catch unintended behavioral changes, automatically selected and executed based on code coverage analysis of the diff.",
+    "source_url": "https://sre.google/sre-book/testing-reliability/",
+    "source_type": "sre",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Testing",
+    "concept": "A/B testing",
+    "content": "A/B testing in production compares two versions of a feature by routing real user traffic to each variant and measuring statistically significant differences in business metrics.",
+    "source_url": "https://martinfowler.com/articles/microservices.html",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Testing",
+    "concept": "test double",
+    "content": "Test doubles (mocks, stubs, fakes, and spies) replace real dependencies in tests, trading realism for determinism and speed, with the test double pattern varying by isolation scope.",
+    "source_url": "https://martinfowler.com/bliki/TestDouble.html",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
   }
 ]

@@ -16,5 +16,59 @@
     "source_type": "pattern",
     "tags": [],
     "quality": 1.0
+  },
+  {
+    "domain": "Algorithms",
+    "concept": "rate limiting algorithms",
+    "content": "Token bucket allows burst traffic up to a configured capacity, then refills at a fixed rate; leaky bucket smooths output to a constant rate; sliding window gives more precise time-based control.",
+    "source_url": "https://github.com/Sairyss/system-design-patterns",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Algorithms",
+    "concept": "bloom filters",
+    "content": "Bloom filters are space-efficient probabilistic data structures that test set membership with no false negatives and configurable false positive rate, used for caching and deduplication.",
+    "source_url": "https://github.com/Sairyss/system-design-patterns",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Algorithms",
+    "concept": "Merkle trees",
+    "content": "Merkle trees (hash trees) enable efficient verification of large data structures, used in Git (commit integrity), Cassandra (anti-entropy), and blockchain (transaction verification).",
+    "source_url": "https://dev.to/fahimulhaq/complete-guide-to-system-design-oc7",
+    "source_type": "article",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Algorithms",
+    "concept": "HLL",
+    "content": "HyperLogLog estimates cardinality of large datasets using minimal memory (1.5KB for billions of unique values), suitable for counting unique visitors, distinct IPs, or search terms.",
+    "source_url": "https://github.com/Sairyss/system-design-patterns",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Algorithms",
+    "concept": "count-min sketch",
+    "content": "Count-Min Sketch approximates frequency counts for streaming data with sublinear space, used for heavy hitters detection, hot key identification, and network traffic monitoring.",
+    "source_url": "https://sre.google/sre-book/service-best-practices/",
+    "source_type": "sre",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Algorithms",
+    "concept": "distributed lock",
+    "content": "Distributed locks using Redis (Redlock) or etcd prevent concurrent execution of critical sections across nodes, requiring careful handling of clock drift, lease expiry, and fencing tokens.",
+    "source_url": "https://martinfowler.com/articles/microservices.html",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
   }
 ]

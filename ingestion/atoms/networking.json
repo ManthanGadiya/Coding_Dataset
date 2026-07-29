@@ -61,5 +61,59 @@
     "source_type": "pattern",
     "tags": [],
     "quality": 1.0
+  },
+  {
+    "domain": "Networking",
+    "concept": "DNS resolution",
+    "content": "DNS resolution translates domain names to IP addresses using hierarchical caching resolvers, with TTL-based caching, round-robin for load distribution, and DNS-based failover for availability.",
+    "source_url": "https://sre.google/sre-book/service-best-practices/",
+    "source_type": "sre",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Networking",
+    "concept": "TCP vs UDP",
+    "content": "TCP provides reliable, ordered delivery with congestion control making it suitable for web APIs and databases; UDP trades reliability for low latency in real-time and streaming applications.",
+    "source_url": "https://dev.to/fahimulhaq/complete-guide-to-system-design-oc7",
+    "source_type": "article",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Networking",
+    "concept": "TLS termination",
+    "content": "TLS termination at the load balancer decrypts incoming HTTPS traffic, offloading CPU-intensive cryptographic operations from application servers and enabling centralized certificate management.",
+    "source_url": "https://aws.amazon.com/architecture/well-architected/",
+    "source_type": "article",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Networking",
+    "concept": "load balancer algorithms",
+    "content": "Load balancers use algorithms including round-robin, least connections, IP hash (sticky sessions), and weighted distribution, with layer 4 (TCP) or layer 7 (HTTP) routing modes.",
+    "source_url": "https://github.com/Sairyss/system-design-patterns",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Networking",
+    "concept": "service discovery",
+    "content": "Service discovery in dynamic environments uses DNS-based (CoreDNS), registry-based (Consul, etcd), or mesh-based (Istio) approaches for services to find each other without hardcoded addresses.",
+    "source_url": "https://kubernetes.io/docs/concepts/services-networking/service/",
+    "source_type": "article",
+    "tags": [],
+    "quality": 1.0
+  },
+  {
+    "domain": "Networking",
+    "concept": "WebSocket",
+    "content": "WebSocket provides full-duplex communication over a single TCP connection after an HTTP upgrade handshake, used for real-time features like live dashboards, chat, and collaborative editing.",
+    "source_url": "https://martinfowler.com/articles/microservices.html",
+    "source_type": "pattern",
+    "tags": [],
+    "quality": 1.0
   }
 ]
